@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eksponenttifunktio ja logaritmi käänteisfunktioina</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1e21;--muted:#5b6068;--card:#fff;--bd:#d0d4da;--exp:#1a5fb4;--log:#d9480f;--pt:#2b8a3e;--grid:#e6e8ec;--warn:#fff4d6;--warnbd:#e0b040}
+@media (prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8eaed;--muted:#a0a6ae;--card:#1e2126;--bd:#3a3f46;--exp:#6ea8fe;--log:#ff922b;--pt:#69db7c;--grid:#2a2e34;--warn:#3a3218;--warnbd:#8a6d1c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px}
+h1{font-size:1.4rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:.2em 0 .4em}
+p{margin:.3em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;margin:10px 0}
+canvas{width:100%;max-width:560px;height:auto;display:block;margin:0 auto;border-radius:6px;background:var(--card);touch-action:none;cursor:grab}
+.ctl{display:grid;gap:8px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.row label{min-width:5em}
+.row input[type=range]{flex:1 1 140px;min-width:120px}
+.val{font-variant-numeric:tabular-nums;min-width:4em;font-weight:600}
+button{font:inherit;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);cursor:pointer}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.read div{border:1px solid var(--bd);border-radius:8px;padding:6px 8px}
+.read b{display:block;font-size:1.1rem;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.read span{color:var(--muted);font-size:.85rem}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:10px;padding:10px;margin:10px 0}
+li{margin:.25em 0}
+footer{color:var(--muted);font-size:.85rem;margin:14px 0}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;margin-top:6px;justify-content:center}
+.lg i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;margin-right:4px}
+#msg{font-weight:600;margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Eksponenttifunktio ja logaritmi käänteisfunktioina</h1>
+<p>Funktiot y = aˣ ja y = log<sub>a</sub> x kumoavat toisensa: niiden kuvaajat ovat toistensa peilikuvia suoran y = x suhteen.</p>
+
+<div class="card">
+<canvas id="cv" width="560" height="560" role="img" aria-label="Eksponenttifunktion ja logaritmifunktion kuvaajat sekä suora y = x"></canvas>
+<div class="lg">
+<span><i style="background:var(--exp)"></i>y = aˣ</span>
+<span><i style="background:var(--log)"></i>y = log<sub>a</sub> x</span>
+<span><i style="background:var(--pt)"></i>piste P ja sen peilikuva Q</span>
+</div>
+<p style="text-align:center;font-size:.9rem;color:var(--muted)">Voit vetää pistettä P tai Q kuvassa.</p>
+</div>
+
+<div class="card ctl">
+<div class="row"><label for="a">Kantaluku a</label><input type="range" id="a" min="2" max="50" step="1" value="20"><span class="val" id="av"></span></div>
+<div class="row"><label for="x">Piste P: x</label><input type="range" id="x" min="-40" max="40" step="1" value="15"><span class="val" id="xv"></span></div>
+<div class="row"><button id="b2" type="button">a = 2</button><button id="b05" type="button">a = 0,5</button><button id="b10" type="button">a = 10</button><button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read">
+<div><span>Piste P (x; aˣ)</span><b id="rp"></b></div>
+<div><span>Piste Q (peilikuva, y = x)</span><b id="rq"></b></div>
+<div><span>Eksponentti</span><b id="re"></b></div>
+<div><span>Logaritmi</span><b id="rl"></b></div>
+</div>
+<p id="msg"></p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ol>
+<li>Vedä pistettä P eri kohtiin ja vertaa P:n ja Q:n koordinaatteja. Mikä yhteys niillä on?</li>
+<li>Muuta kantalukua a. Mitkä pisteet ovat kummallakin käyrällä kantaluvusta riippumatta? Mitä tapahtuu käyrille, kun a on pienempi kuin 1?</li>
+<li>Miksi logaritmifunktion kuvaaja on vain y-akselin oikealla puolella? Mitä se kertoo eksponenttifunktion arvoista?</li>
+</ol>
+</div>
+
+<div class="warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Logaritmi ei ole pelkkä laskusääntö. Luku log<sub>a</sub> y on se eksponentti, jolla a pitää korottaa, jotta saadaan y. Siksi logaritmi kumoaa eksponenttifunktion: siirry pisteestä P pisteeseen Q ja huomaa, että x ja y vaihtavat paikkaa. Kantaluku vaikuttaa käyrien jyrkkyyteen, ei niiden peilisuhteeseen.</p>
+</div>
+
+<footer>Taso: lukio, pitkä matematiikka · Käsite: eksponenttifunktio ja logaritmi käänteisfunktioina</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(i){return document.getElementById(i)};
+var cv=$("cv"),ctx=cv.getContext("2d");
+var LO=-6,HI=6;
+function fmt(v,d){if(!isFinite(v))return "ei määritelty";d=d==null?2:d;var s=v.toFixed(d);if(Number(s)===0)s=(0).toFixed(d);return s.replace(".",",").replace("-","−")}
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function A(){return parseInt($("a").value,10)/10}
+function X0(){return parseInt($("x").value,10)/10}
+function geom(){var W=cv.width,H=cv.height;return {W:W,H:H,X:function(x){return (x-LO)/(HI-LO)*W},Y:function(y){return H-(y-LO)/(HI-LO)*H},ix:function(px){return LO+px/W*(HI-LO)},iy:function(py){return LO+(H-py)/H*(HI-LO)}}}
+function draw(){
+ var a=A(),x0=X0(),g=geom(),W=g.W,H=g.H,X=g.X,Y=g.Y;
+ var valid=Math.abs(a-1)>1e-9;
+ ctx.clearRect(0,0,W,H);
+ ctx.font=Math.max(11,Math.round(W/46))+"px system-ui,sans-serif";
+ ctx.lineWidth=1;ctx.strokeStyle=css("--grid");ctx.fillStyle=css("--muted");
+ var k;
+ for(k=LO;k<=HI;k+=2){ctx.beginPath();ctx.moveTo(X(k),0);ctx.lineTo(X(k),H);ctx.stroke();ctx.beginPath();ctx.moveTo(0,Y(k));ctx.lineTo(W,Y(k));ctx.stroke();
+  if(k!==0){ctx.fillText(String(k).replace("-","−"),X(k)+3,Y(0)-4);ctx.fillText(String(k).replace("-","−"),X(0)+4,Y(k)-3)}}
+ ctx.strokeStyle=css("--muted");ctx.lineWidth=1.5;
+ ctx.beginPath();ctx.moveTo(0,Y(0));ctx.lineTo(W,Y(0));ctx.stroke();
+ ctx.beginPath();ctx.moveTo(X(0),0);ctx.lineTo(X(0),H);ctx.stroke();
+ // suora y = x
+ ctx.setLineDash([8,6]);ctx.strokeStyle=css("--fg");ctx.lineWidth=1.5;
+ ctx.beginPath();ctx.moveTo(X(LO),Y(LO));ctx.lineTo(X(HI),Y(HI));ctx.stroke();ctx.setLineDash([]);
+ ctx.fillStyle=css("--fg");ctx.fillText("y = x",X(4.3),Y(4.3)+18);
+ if(!valid){
+  $("rp").textContent="–";$("rq").textContent="–";$("re").textContent="–";$("rl").textContent="–";
+  $("msg").textContent="Kantaluku a = 1 ei kelpaa: 1ˣ = 1 kaikilla x, joten funktiolla ei ole käänteisfunktiota. Valitse toinen a.";
+  $("av").textContent=fmt(a,1);$("xv").textContent=fmt(x0,1);return;
+ }
+ function curve(col,swap){
+  ctx.strokeStyle=col;ctx.lineWidth=3;ctx.beginPath();var start=true;
+  for(var i=0;i<=600;i++){
+   var t=-8+16*i/600,v=Math.pow(a,t);
+   var px=swap?v:t,py=swap?t:v;
+   if(!isFinite(v)||Math.abs(v)>1e4){start=true;continue}
+   var sx=X(px),sy=Y(py);
+   if(start){ctx.moveTo(sx,sy);start=false}else ctx.lineTo(sx,sy)}
+  ctx.stroke()}
+ curve(css("--exp"),false);curve(css("--log"),true);
+ var y0=Math.pow(a,x0);
+ var inV=function(x,y){return x>=LO&&x<=HI&&y>=LO&&y<=HI};
+ // peilausjana P–Q
+ if(inV(x0,y0)||inV(y0,x0)){ctx.setLineDash([4,4]);ctx.strokeStyle=css("--pt");ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(X(x0),Y(y0));ctx.lineTo(X(y0),Y(x0));ctx.stroke();ctx.setLineDash([])}
+ function dot(x,y,col,lab){if(!inV(x,y))return;ctx.fillStyle=col;ctx.beginPath();ctx.arc(X(x),Y(y),Math.max(7,W/80),0,6.2832);ctx.fill();ctx.strokeStyle=css("--bg");ctx.lineWidth=2;ctx.stroke();ctx.fillStyle=css("--fg");ctx.fillText(lab,X(x)+9,Y(y)-9)}
+ dot(x0,y0,css("--exp"),"P");dot(y0,x0,css("--log"),"Q");
+ $("av").textContent=fmt(a,1);$("xv").textContent=fmt(x0,1);
+ $("rp").textContent="("+fmt(x0,1)+"; "+fmt(y0,3)+")";
+ $("rq").textContent="("+fmt(y0,3)+"; "+fmt(x0,1)+")";
+ $("re").textContent=fmt(a,1)+"^"+fmt(x0,1)+" = "+fmt(y0,3);
+ $("rl").textContent="log_"+fmt(a,1)+"("+fmt(y0,3)+") = "+fmt(Math.log(y0)/Math.log(a),1);
+ var out=(!inV(x0,y0)||!inV(y0,x0))?" Osa pisteistä on kuvan alueen ulkopuolella.":"";
+ $("msg").textContent=(a>1?"a > 1: molemmat kuvaajat ovat nousevia.":"0 < a < 1: molemmat kuvaajat ovat laskevia.")+out;
+}
+function fit(){var r=window.devicePixelRatio||1,w=cv.clientWidth;if(!w)return;cv.width=Math.round(w*r);cv.height=Math.round(w*r);draw()}
+// vetäminen
+var drag=null;
+function ptr(e){var b=cv.getBoundingClientRect();return {px:(e.clientX-b.left)/b.width*cv.width,py:(e.clientY-b.top)/b.height*cv.height}}
+cv.addEventListener("pointerdown",function(e){
+ var a=A(),x0=X0(),g=geom(),p=ptr(e),y0=Math.pow(a,x0);
+ if(Math.abs(a-1)<1e-9)return;
+ var dP=Math.hypot(g.X(x0)-p.px,g.Y(y0)-p.py),dQ=Math.hypot(g.X(y0)-p.px,g.Y(x0)-p.py),lim=cv.width/12;
+ if(Math.min(dP,dQ)>lim)return;
+ drag=dP<=dQ?"P":"Q";try{cv.setPointerCapture(e.pointerId)}catch(_){}
+ cv.style.cursor="grabbing";move(e);e.preventDefault()});
+function move(e){
+ if(!drag)return;var g=geom(),p=ptr(e);
+ var v=drag==="P"?g.ix(p.px):g.iy(p.py);
+ v=Math.max(-4,Math.min(4,Math.round(v*10)/10));
+ $("x").value=Math.round(v*10);draw()}
+cv.addEventListener("pointermove",move);
+function end(){drag=null;cv.style.cursor="grab"}
+cv.addEventListener("pointerup",end);cv.addEventListener("pointercancel",end);
+$("a").addEventListener("input",draw);$("x").addEventListener("input",draw);
+$("b2").addEventListener("click",function(){$("a").value=20;draw()});
+$("b05").addEventListener("click",function(){$("a").value=5;draw()});
+$("b10").addEventListener("click",function(){$("a").value=50;draw()});
+$("reset").addEventListener("click",function(){$("a").value=20;$("x").value=15;draw()});
+window.addEventListener("resize",fit);
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+fit();
+})();
+</script>
+</body>
+</html>
