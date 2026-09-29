@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paraabeli ja toisen asteen yhtälön juuret</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1e21;--muted:#5b6068;--card:#fff;--bd:#d0d4da;--curve:#1a5fb4;--root:#d9480f;--vtx:#2b8a3e;--grid:#e6e8ec;--warn:#fff4d6;--warnbd:#e0b040}
+@media (prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8eaed;--muted:#a0a6ae;--card:#1e2126;--bd:#3a3f46;--curve:#6ea8fe;--root:#ff922b;--vtx:#69db7c;--grid:#2a2e34;--warn:#3a3218;--warnbd:#8a6d1c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px}
+h1{font-size:1.4rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:.2em 0 .4em}
+p{margin:.3em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;margin:10px 0}
+canvas{width:100%;height:auto;display:block;border-radius:6px;background:var(--card)}
+.ctl{display:grid;gap:8px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.row label{min-width:5em}
+.row input[type=range]{flex:1 1 140px;min-width:120px}
+.val{font-variant-numeric:tabular-nums;min-width:4em;font-weight:600}
+button{font:inherit;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg);cursor:pointer}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.read div{border:1px solid var(--bd);border-radius:8px;padding:6px 8px}
+.read b{display:block;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.read span{color:var(--muted);font-size:.85rem}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:10px;padding:10px;margin:10px 0}
+li{margin:.25em 0}
+footer{color:var(--muted);font-size:.85rem;margin:14px 0}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;margin-top:4px}
+.lg i{display:inline-block;width:12px;height:12px;border-radius:50%;vertical-align:middle;margin-right:4px}
+#msg{font-weight:600;margin-top:8px}
+</style>
+</head>
+<body>
+<main>
+<h1>Paraabeli ja toisen asteen yhtälön juuret</h1>
+<p>Kertoimet a, b ja c määräävät paraabelin y = ax² + bx + c muodon; diskriminantti D kertoo, montako kertaa paraabeli leikkaa x-akselin.</p>
+
+<div class="card">
+<canvas id="cv" width="800" height="480" role="img" aria-label="Paraabelin kuvaaja, juuret ja huippu"></canvas>
+<div class="lg">
+<span><i style="background:var(--curve)"></i>y = ax² + bx + c</span>
+<span><i style="background:var(--root)"></i>juuret (y = 0)</span>
+<span><i style="background:var(--vtx)"></i>huippu</span>
+</div>
+</div>
+
+<div class="card ctl">
+<div class="row"><label for="a">a</label><input type="range" id="a" min="-30" max="30" step="1" value="10"><span class="val" id="av"></span></div>
+<div class="row"><label for="b">b</label><input type="range" id="b" min="-60" max="60" step="1" value="-20"><span class="val" id="bv"></span></div>
+<div class="row"><label for="c">c</label><input type="range" id="c" min="-60" max="60" step="1" value="-30"><span class="val" id="cv2"></span></div>
+<div class="row"><button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read">
+<div><span>Yhtälö</span><b id="eq"></b></div>
+<div><span>Diskriminantti D = b² − 4ac</span><b id="rd"></b></div>
+<div><span>Reaalijuurten määrä</span><b id="rn"></b></div>
+<div><span>Juuret x = (−b ± √D) / 2a</span><b id="rr"></b></div>
+<div><span>Huippu</span><b id="rv"></b></div>
+</div>
+<p id="msg"></p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ol>
+<li>Pidä a ja b paikallaan ja muuta vain c:tä. Milloin paraabeli leikkaa x-akselin kahdesti, milloin kerran ja milloin ei lainkaan? Mikä on D silloin?</li>
+<li>Etsi kertoimet, joilla paraabeli koskettaa x-akselia vain yhdessä pisteessä. Mitä huipun y-koordinaatille tapahtuu?</li>
+<li>Vaihda a:n merkki. Mikä muuttuu kuvaajassa ja mikä pysyy samana juurten lukumäärässä, kun D ei muutu?</li>
+</ol>
+</div>
+
+<div class="warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Toisen asteen yhtälöllä ei ole aina kaksi ratkaisua. Kun D &gt; 0, reaalijuuria on kaksi, kun D = 0, yksi, ja kun D &lt; 0, paraabeli ei leikkaa x-akselia eikä reaalijuuria ole. Siirrä c:tä ja katso, miten juuret yhtyvät ja katoavat.</p>
+</div>
+
+<footer>Taso: lukio, pitkä matematiikka · Käsite: toisen asteen yhtälö ja diskriminantti</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(i){return document.getElementById(i)};
+var cv=$("cv"),ctx=cv.getContext("2d");
+function fmt(v,d){if(!isFinite(v))return "ei määritelty";d=d==null?2:d;var s=v.toFixed(d);if(Number(s)===0)s=(0).toFixed(d);return s.replace(".",",").replace("-","−")}
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function sgn(v,d){return (v<0?"−":"+")+" "+fmt(Math.abs(v),d)}
+var XMIN=-8,XMAX=8,YMIN=-10,YMAX=10;
+function vals(){return {A:parseInt($("a").value,10),B:parseInt($("b").value,10),C:parseInt($("c").value,10)}}
+function draw(){
+ var v=vals(),a=v.A/10,b=v.B/10,c=v.C/10;
+ // diskriminantti tarkasti kokonaislukuina: D = (B² − 4AC)/100
+ var D100=v.B*v.B-4*v.A*v.C,D=D100/100;
+ var W=cv.width,H=cv.height;
+ function X(x){return (x-XMIN)/(XMAX-XMIN)*W}
+ function Y(y){return H-(y-YMIN)/(YMAX-YMIN)*H}
+ function f(x){return a*x*x+b*x+c}
+ ctx.clearRect(0,0,W,H);
+ var fs=Math.max(11,Math.round(W/50));
+ ctx.font=fs+"px system-ui,sans-serif";ctx.lineWidth=1;ctx.strokeStyle=css("--grid");ctx.fillStyle=css("--muted");
+ var gx,gy;
+ for(gx=XMIN;gx<=XMAX;gx+=2){ctx.beginPath();ctx.moveTo(X(gx),0);ctx.lineTo(X(gx),H);ctx.stroke();if(gx!==0)ctx.fillText(String(gx).replace("-","−"),X(gx)+3,Y(0)-4)}
+ for(gy=YMIN;gy<=YMAX;gy+=2){ctx.beginPath();ctx.moveTo(0,Y(gy));ctx.lineTo(W,Y(gy));ctx.stroke();if(gy!==0)ctx.fillText(String(gy).replace("-","−"),X(0)+4,Y(gy)-3)}
+ ctx.strokeStyle=css("--muted");ctx.lineWidth=1.5;
+ ctx.beginPath();ctx.moveTo(0,Y(0));ctx.lineTo(W,Y(0));ctx.stroke();
+ ctx.beginPath();ctx.moveTo(X(0),0);ctx.lineTo(X(0),H);ctx.stroke();
+ ctx.strokeStyle=css("--curve");ctx.lineWidth=3;ctx.beginPath();
+ for(var i=0;i<=400;i++){var x=XMIN+(XMAX-XMIN)*i/400,y=Math.max(-1000,Math.min(1000,f(x)));var px=X(x),py=Y(y);if(i===0)ctx.moveTo(px,py);else ctx.lineTo(px,py)}
+ ctx.stroke();
+ function dot(x,y,col){if(x<XMIN||x>XMAX||y<YMIN||y>YMAX)return;ctx.fillStyle=col;ctx.beginPath();ctx.arc(X(x),Y(y),Math.max(6,W/110),0,6.2832);ctx.fill();ctx.strokeStyle=css("--bg");ctx.lineWidth=2;ctx.stroke()}
+ var n,roots="",vtx="ei huippua",eq,msg,cnt;
+ eq="y = "+(v.A===0?"":fmt(a,1)+"x² ")+(v.A===0?fmt(b,1)+"x ":sgn(b,1)+"x ")+sgn(c,1);
+ if(v.A===0){
+  // ei paraabeli: suora bx + c
+  if(v.B===0){cnt=(v.C===0?"ääretön":"0");roots=v.C===0?"kaikki x":"ei juuria"}
+  else{var r=-c/b;cnt="1";roots="x = "+fmt(r,3);dot(r,0,css("--root"))}
+  n="a = 0";
+  msg="Kun a = 0, kuvaaja on suora eikä paraabeli, joten kyseessä ei ole toisen asteen yhtälö. Diskriminanttia ei käytetä.";
+  $("rd").textContent="ei käytössä";
+ }else{
+  $("rd").textContent=fmt(D,2);
+  var xv=-b/(2*a),yv=c-b*b/(4*a);
+  vtx="("+fmt(xv,2)+"; "+fmt(yv,2)+")";
+  dot(xv,yv,css("--vtx"));
+  if(D100>0){
+   var s=Math.sqrt(D),x1=(-b-s)/(2*a),x2=(-b+s)/(2*a);
+   var lo=Math.min(x1,x2),hi=Math.max(x1,x2);
+   cnt="2";roots="x₁ = "+fmt(lo,3)+"; x₂ = "+fmt(hi,3);dot(lo,0,css("--root"));dot(hi,0,css("--root"));
+   msg="D > 0: kaksi eri reaalijuurta, paraabeli leikkaa x-akselin kahdessa pisteessä.";
+  }else if(D100===0){
+   cnt="1";roots="x = "+fmt(-b/(2*a),3);dot(-b/(2*a),0,css("--root"));
+   msg="D = 0: yksi (kaksinkertainen) juuri, paraabeli koskettaa x-akselia huipussaan.";
+  }else{
+   cnt="0";roots="ei reaalijuuria";
+   msg="D < 0: ei reaalijuuria, paraabeli ei leikkaa x-akselia.";
+  }
+ }
+ $("av").textContent=fmt(a,1);$("bv").textContent=fmt(b,1);$("cv2").textContent=fmt(c,1);
+ $("eq").textContent=eq;$("rn").textContent=cnt;$("rr").textContent=roots;$("rv").textContent=vtx;$("msg").textContent=msg;
+}
+function fit(){var r=window.devicePixelRatio||1,w=cv.clientWidth;if(!w)return;cv.width=Math.round(w*r);cv.height=Math.round(w*0.6*r);draw()}
+["a","b","c"].forEach(function(i){$(i).addEventListener("input",draw)});
+$("reset").addEventListener("click",function(){$("a").value=10;$("b").value=-20;$("c").value=-30;draw()});
+window.addEventListener("resize",fit);
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+fit();
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Integraali pinta-alana (Riemannin summa)</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1c2330;--muted:#5b6577;--line:#d5dae3;--acc:#1f5fbf;--pos:rgba(31,95,191,.35);--neg:rgba(200,50,50,.38);--negs:#c83232;--curve:#111;--warn:#fff4d6;--warnb:#d9a400;--grid:#e6e9ef}
+@media (prefers-color-scheme:dark){:root{--bg:#12161d;--card:#1b212b;--fg:#e8ecf3;--muted:#a3adbf;--line:#39424f;--acc:#6ea8ff;--pos:rgba(110,168,255,.38);--neg:rgba(255,120,120,.4);--negs:#ff8080;--curve:#f2f2f2;--warn:#3a3218;--warnb:#c99a00;--grid:#272e3a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:12px}
+h1{font-size:1.35rem;margin:.3rem 0}
+h2{font-size:1.05rem;margin:.2rem 0 .4rem}
+p{margin:.3rem 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:10px 0}
+canvas{width:100%;height:auto;display:block;touch-action:none;border-radius:6px}
+.ctl{display:grid;grid-template-columns:1fr;gap:10px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+label{font-weight:600}
+select,button{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg)}
+button{cursor:pointer}
+input[type=range]{flex:1;min-width:140px}
+.val{font-variant-numeric:tabular-nums;min-width:3ch;font-weight:700}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg label{font-weight:400;border:1px solid var(--line);border-radius:6px;padding:5px 10px;cursor:pointer}
+.seg input{margin-right:4px}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.read div{border:1px solid var(--line);border-radius:8px;padding:6px 8px}
+.read small{display:block;color:var(--muted)}
+.read b{font-size:1.1rem;font-variant-numeric:tabular-nums}
+.warn{background:var(--warn);border-left:4px solid var(--warnb)}
+ol{margin:.3rem 0;padding-left:1.2rem}
+footer{color:var(--muted);font-size:.85rem;text-align:center;padding:8px 0 16px}
+.leg span{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:4px;border:1px solid var(--line)}
+</style>
+</head>
+<body>
+<main>
+<h1>Integraali pinta-alana (Riemannin summa)</h1>
+<p>Määrätty integraali on suorakaidesummien raja-arvo: mitä useampi ja kapeampi suorakaide, sitä lähempänä summa on integraalia.</p>
+
+<div class="card">
+<canvas id="cv" width="700" height="380" aria-label="Funktion kuvaaja ja Riemannin summan suorakaiteet"></canvas>
+<p class="leg"><span style="background:var(--pos)"></span>positiivinen osuus &nbsp; <span style="background:var(--neg)"></span>negatiivinen osuus (x-akselin alapuolella)</p>
+</div>
+
+<div class="card ctl">
+<div class="row"><label for="fn">Funktio</label>
+<select id="fn"></select></div>
+<div class="row"><label for="n">Suorakaiteiden lukumäärä n</label>
+<input type="range" id="n" min="1" max="200" step="1" value="4"><span class="val" id="nv">4</span></div>
+<div class="row"><label id="mlab">Korkeus otetaan</label>
+<div class="seg" role="radiogroup" aria-labelledby="mlab">
+<label><input type="radio" name="m" value="L" checked>vasemmasta reunasta</label>
+<label><input type="radio" name="m" value="R">oikeasta reunasta</label>
+<label><input type="radio" name="m" value="M">keskipisteestä</label></div></div>
+<div class="row"><button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read" aria-live="polite">
+<div><small>Väli [a, b]</small><b id="rI"></b></div>
+<div><small>Δx = (b − a)/n</small><b id="rDx"></b></div>
+<div><small>Riemannin summa</small><b id="rS"></b></div>
+<div><small>Tarkka integraali</small><b id="rE"></b></div>
+<div><small>Ero (summa − tarkka)</small><b id="rD"></b></div>
+<div><small>Pinta-alat yhteensä (itseisarvoina)</small><b id="rA"></b></div>
+</div>
+<p id="note" style="color:var(--muted);margin-top:8px"></p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ol>
+<li>Valitse f(x) = x² ja vasen reuna. Kasvata n:ää. Kumpaan suuntaan summa liikkuu ja mihin lukuun se näyttää asettuvan?</li>
+<li>Vaihda oikeaan reunaan ja keskipisteeseen samalla n:llä. Mikä tapa on tarkin ja miksi?</li>
+<li>Valitse f(x) = sin x välillä [0, 2π]. Mikä on summa, kun n on suuri? Vertaa lukemaa "pinta-alat yhteensä".</li>
+</ol>
+</div>
+
+<div class="card warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Integraali ei ole vain "derivoinnin käänteistoiminto": se on suorakaidesummien raja-arvo, eli pinta-alaan perustuva luku. Huomaa myös, että x-akselin alapuolella suorakaiteen korkeus f(x) on negatiivinen, joten se vähentää summaa. Pinta-ala itsessään ei ole negatiivinen, mutta integraali laskee alapuoliset osat miinusmerkkisinä.</p>
+</div>
+
+<footer>Taso: lukio, pitkä matematiikka · Käsite: määrätty integraali ja Riemannin summa</footer>
+</main>
+
+<script>
+(function(){
+"use strict";
+var PI=Math.PI;
+var FUNCS=[
+ {name:"f(x) = x², väli [0, 3]",f:function(x){return x*x},a:0,b:3,exact:9,ylo:-1,yhi:10,ticks:[0,1,2,3]},
+ {name:"f(x) = x² − 2, väli [0, 3]",f:function(x){return x*x-2},a:0,b:3,exact:3,ylo:-3,yhi:8,ticks:[0,1,2,3]},
+ {name:"f(x) = sin x, väli [0, π]",f:Math.sin,a:0,b:PI,exact:2,ylo:-1.5,yhi:1.5,ticks:[0,PI/2,PI],tl:["0","π/2","π"]},
+ {name:"f(x) = sin x, väli [0, 2π]",f:Math.sin,a:0,b:2*PI,exact:0,ylo:-1.5,yhi:1.5,ticks:[0,PI/2,PI,3*PI/2,2*PI],tl:["0","π/2","π","3π/2","2π"]},
+ {name:"f(x) = 1/x, väli [1, 4]",f:function(x){return 1/x},a:1,b:4,exact:Math.log(4),ylo:-.3,yhi:1.3,ticks:[1,2,3,4]}
+];
+var cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+var sel=document.getElementById("fn"),nEl=document.getElementById("n");
+FUNCS.forEach(function(F,i){var o=document.createElement("option");o.value=i;o.textContent=F.name;sel.appendChild(o)});
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function fmt(x,d){if(!isFinite(x))return "—";d=d==null?4:d;var s=x.toFixed(d);if(Math.abs(x)<Math.pow(10,-d)/2)s=(0).toFixed(d);return s.replace(".",",")}
+function method(){return document.querySelector('input[name=m]:checked').value}
+function calc(F,n,m){
+ var dx=(F.b-F.a)/n,S=0,A=0,i,x,y;
+ for(i=0;i<n;i++){
+  x=F.a+i*dx+(m==="L"?0:m==="R"?dx:dx/2);
+  y=F.f(x);S+=y*dx;A+=Math.abs(y)*dx;
+ }
+ return {dx:dx,S:S,A:A};
+}
+function draw(){
+ var F=FUNCS[sel.value],n=+nEl.value,m=method(),R=calc(F,n,m);
+ var W=cv.width,H=cv.height,L=56,Rr=W-16,T=14,B=H-38;
+ var xr=F.b-F.a,xm=xr*0.04,x0=F.a-xm,x1=F.b+xm;
+ function X(x){return L+(x-x0)/(x1-x0)*(Rr-L)}
+ function Y(y){return B-(y-F.ylo)/(F.yhi-F.ylo)*(B-T)}
+ ctx.clearRect(0,0,W,H);
+ ctx.font="20px system-ui,sans-serif";
+ var fg=css("--fg"),mu=css("--muted"),grid=css("--grid");
+ // ruudukko y
+ var step=(F.yhi-F.ylo)>8?2:((F.yhi-F.ylo)>3?1:0.5),y;
+ ctx.lineWidth=1;ctx.textAlign="right";ctx.textBaseline="middle";
+ for(y=Math.ceil(F.ylo/step)*step;y<=F.yhi+1e-9;y+=step){
+  ctx.strokeStyle=grid;ctx.beginPath();ctx.moveTo(L,Y(y));ctx.lineTo(Rr,Y(y));ctx.stroke();
+  ctx.fillStyle=mu;ctx.fillText(fmt(y,step<1?1:0),L-6,Y(y));
+ }
+ // suorakaiteet
+ var dx=R.dx,i,xa,xx,h,ny=css("--neg"),pp=css("--pos"),ns=css("--negs"),ac=css("--acc");
+ for(i=0;i<n;i++){
+  xa=F.a+i*dx;
+  xx=xa+(m==="L"?0:m==="R"?dx:dx/2);
+  h=F.f(xx);
+  ctx.fillStyle=h>=0?pp:ny;
+  ctx.fillRect(X(xa),Math.min(Y(0),Y(h)),X(xa+dx)-X(xa),Math.abs(Y(h)-Y(0)));
+  if(n<=60){ctx.strokeStyle=h>=0?ac:ns;ctx.lineWidth=1;ctx.strokeRect(X(xa),Math.min(Y(0),Y(h)),X(xa+dx)-X(xa),Math.abs(Y(h)-Y(0)));}
+  if(n<=20){ // näytteenottopiste
+   ctx.fillStyle=fg;ctx.beginPath();ctx.arc(X(xx),Y(h),3,0,2*PI);ctx.fill();
+  }
+ }
+ // akselit
+ ctx.strokeStyle=fg;ctx.lineWidth=1.5;
+ ctx.beginPath();ctx.moveTo(L,Y(0));ctx.lineTo(Rr,Y(0));ctx.stroke();
+ ctx.beginPath();ctx.moveTo(X(F.a<=0&&F.b>=0?0:x0),T);ctx.lineTo(X(F.a<=0&&F.b>=0?0:x0),B);ctx.stroke();
+ // x-tickit
+ ctx.textAlign="center";ctx.textBaseline="top";ctx.fillStyle=mu;
+ F.ticks.forEach(function(t,k){ctx.beginPath();ctx.moveTo(X(t),Y(0)-4);ctx.lineTo(X(t),Y(0)+4);ctx.stroke();
+  var lab=F.tl?F.tl[k]:String(t);ctx.fillText(lab,X(t),B+6)});
+ // käyrä
+ ctx.strokeStyle=css("--curve");ctx.lineWidth=2.5;ctx.beginPath();
+ var N=400,k,xv,yv,first=true;
+ for(k=0;k<=N;k++){xv=F.a+(F.b-F.a)*k/N;yv=F.f(xv);
+  if(first){ctx.moveTo(X(xv),Y(yv));first=false}else ctx.lineTo(X(xv),Y(yv));}
+ ctx.stroke();
+ // lukemat
+ var iv=F.tl?("["+F.tl[0]+", "+F.tl[F.tl.length-1]+"]"):("["+F.a+", "+F.b+"]");
+ document.getElementById("rI").textContent=iv;
+ document.getElementById("rDx").textContent=fmt(R.dx,4);
+ document.getElementById("rS").textContent=fmt(R.S,4);
+ document.getElementById("rE").textContent=fmt(F.exact,4);
+ var dd=R.S-F.exact;document.getElementById("rD").textContent=(Math.abs(dd)<0.00005?"":dd>0?"+":"−")+fmt(Math.abs(dd),4);
+ document.getElementById("rA").textContent=fmt(R.A,4);
+ document.getElementById("nv").textContent=n;
+ var note="";
+ if(F.exact===0)note="Tarkka integraali on nolla, koska positiivinen ja negatiivinen osa ovat yhtä suuret ja kumoavat toisensa.";
+ document.getElementById("note").textContent=note;
+}
+["input","change"].forEach(function(ev){
+ sel.addEventListener(ev,draw);nEl.addEventListener(ev,draw);
+});
+Array.prototype.forEach.call(document.querySelectorAll('input[name=m]'),function(r){r.addEventListener("change",draw)});
+document.getElementById("reset").addEventListener("click",function(){
+ sel.value=0;nEl.value=4;document.querySelector('input[name=m][value=L]').checked=true;draw();
+});
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+draw();
+window.__calc=function(i,n,m){return calc(FUNCS[i],n,m)};
+})();
+</script>
+</body>
+</html>

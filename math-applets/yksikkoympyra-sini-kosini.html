@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yksikköympyrä ja trigonometriset funktiot</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1e21;--muted:#5b6068;--card:#fff;--bd:#d0d4da;--sin:#1a5fb4;--cos:#d9480f;--pt:#2b8a3e;--grid:#e6e8ec;--warn:#fff4d6;--warnbd:#e0b040}
+@media (prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8eaed;--muted:#a0a6ae;--card:#1e2126;--bd:#3a3f46;--sin:#6ea8fe;--cos:#ff922b;--pt:#69db7c;--grid:#2a2e34;--warn:#3a3218;--warnbd:#8a6d1c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:900px;margin:0 auto;padding:12px}
+h1{font-size:1.4rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:.2em 0 .4em}
+p{margin:.3em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;margin:10px 0}
+canvas{width:100%;height:auto;display:block;touch-action:none;border-radius:6px;background:var(--card)}
+.ctl{display:grid;grid-template-columns:1fr;gap:8px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.row label{min-width:9em}
+.row input[type=range]{flex:1 1 140px;min-width:120px}
+.val{font-variant-numeric:tabular-nums;min-width:7em;font-weight:600}
+select,button{font:inherit;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg)}
+button{cursor:pointer}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.read div{border:1px solid var(--bd);border-radius:8px;padding:6px 8px}
+.read b{display:block;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.read span{color:var(--muted);font-size:.85rem}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:10px;padding:10px;margin:10px 0}
+li{margin:.25em 0}
+footer{color:var(--muted);font-size:.85rem;margin:14px 0}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;margin-top:4px}
+.lg i{display:inline-block;width:22px;height:0;border-top:3px solid;vertical-align:middle;margin-right:4px}
+</style>
+</head>
+<body>
+<main>
+<h1>Yksikköympyrä ja trigonometriset funktiot</h1>
+<p>Kulman θ sini ja kosini ovat yksikköympyrän pisteen y- ja x-koordinaatit; kuvaaja syntyy, kun kulma kasvaa.</p>
+
+<div class="card">
+<canvas id="cv" width="800" height="400" aria-label="Yksikköympyrä ja sini- ja kosinifunktion kuvaaja rinnakkain"></canvas>
+<div class="lg">
+<span><i style="border-color:var(--cos)"></i>cos θ (x-koordinaatti)</span>
+<span><i style="border-color:var(--sin)"></i>sin θ (y-koordinaatti)</span>
+<span>Voit vetää pistettä ympyrällä.</span>
+</div>
+</div>
+
+<div class="card ctl">
+<div class="row"><label for="ang">Kulma θ</label>
+<input type="range" id="ang" min="0" max="720" step="1" value="30"><span class="val" id="angv"></span></div>
+<div class="row"><label for="unit">Yksikkö</label>
+<select id="unit"><option value="deg">astetta (°)</option><option value="rad">radiaaneja (rad)</option></select>
+<label><input type="checkbox" id="ssin" checked> sin</label>
+<label><input type="checkbox" id="scos" checked> cos</label></div>
+<div class="row"><span>Pikavalinta:</span>
+<button type="button" data-a="30">30°</button><button type="button" data-a="90">90°</button><button type="button" data-a="150">150°</button><button type="button" data-a="210">210°</button><button type="button" data-a="330">330°</button><button type="button" data-a="390">390°</button>
+<button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read">
+<div><span>Kulma θ</span><b id="r0"></b></div>
+<div><span>cos θ (x)</span><b id="r1"></b></div>
+<div><span>sin θ (y)</span><b id="r2"></b></div>
+<div><span>cos² θ + sin² θ</span><b id="r3"></b></div>
+<div><span>Neljännes</span><b id="r4"></b></div>
+<div><span>Vastakulma (0°–90°)</span><b id="r5"></b></div>
+</div>
+<p id="frm" style="margin-top:8px"></p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ol>
+<li>Kasvata kulmaa 90°:sta 180°:een. Miten pisteen x- ja y-koordinaatti muuttuvat, ja mitä se tarkoittaa arvoille cos θ ja sin θ?</li>
+<li>Etsi kaksi eri kulmaa välillä 0°–360°, joilla sin θ = 0,5. Mitä yhteistä pisteillä ympyrällä on? Entä kulmilla, joilla cos θ = 0,5?</li>
+<li>Jatka kulmaa yli 360°. Mitä kuvaajille tapahtuu, ja kuinka monen asteen välein ne toistuvat?</li>
+</ol>
+</div>
+
+<div class="warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Sini ja kosini eivät ole vain suorakulmaisen kolmion sivusuhteita, jotka toimisivat kulmille alle 90°. Yksikköympyrällä hypotenuusa on aina 1, ja sin θ ja cos θ ovat pisteen koordinaatit. Vedä kulma yli 90°: kolmio kääntyy toiseen neljännekseen, mutta sin θ ja cos θ ovat edelleen määriteltyjä ja voivat olla negatiivisia. Kuvaaja jatkuu myös 360° jälkeen.</p>
+</div>
+
+<footer>Taso: lukio, pitkä matematiikka · Käsite: yksikköympyrä, sini ja kosini</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var $=function(i){return document.getElementById(i)};
+var cv=$("cv"),ctx=cv.getContext("2d");
+var A=30,RAD=Math.PI/180;
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function fmt(v,d){d=d==null?4:d;var s=v.toFixed(d);if(Number(s)===0)s=(0).toFixed(d);return s.replace(".",",").replace("-","−")}
+function tickRad(k){var m=["0","π/2","π","3π/2","2π","5π/2","3π","7π/2","4π"];return m[k]}
+function lay(){
+ var w=cv.width,h=cv.height,narrow=cv.clientWidth<600;
+ var L={w:w,h:h,narrow:narrow};
+ if(narrow){L.cx=w*0.5;L.cy=h*0.25;L.R=Math.min(w*0.3,h*0.2);L.gx0=w*0.1;L.gx1=w*0.96;L.gy=h*0.76;L.gr=Math.min(h*0.17,w*0.2)}
+ else{L.cx=w*0.22;L.cy=h*0.5;L.R=Math.min(w*0.17,h*0.36);L.gx0=w*0.5;L.gx1=w*0.97;L.gy=h*0.5;L.gr=L.R}
+ L.fs=Math.max(12,Math.round(w/44));
+ return L;
+}
+function draw(){
+ var L=lay(),W=L.w,H=L.h,cx=L.cx,cy=L.cy,R=L.R,fs=L.fs;
+ var cS=css("--sin"),cC=css("--cos"),cP=css("--pt"),cG=css("--grid"),cM=css("--muted"),cF=css("--fg"),cB=css("--card");
+ var t=A*RAD,c=Math.cos(t),s=Math.sin(t),px=cx+R*c,py=cy-R*s;
+ var showS=$("ssin").checked,showC=$("scos").checked,rad=$("unit").value==="rad";
+ ctx.clearRect(0,0,W,H);
+ ctx.font=fs+"px system-ui,sans-serif";
+ // circle grid
+ ctx.lineWidth=1;ctx.strokeStyle=cG;
+ ctx.beginPath();ctx.moveTo(cx-R*1.25,cy);ctx.lineTo(cx+R*1.25,cy);ctx.moveTo(cx,cy-R*1.25);ctx.lineTo(cx,cy+R*1.25);ctx.stroke();
+ ctx.strokeStyle=cM;ctx.lineWidth=1.5;
+ ctx.beginPath();ctx.arc(cx,cy,R,0,6.2832);ctx.stroke();
+ ctx.fillStyle=cM;
+ ctx.fillText("1",cx+R-fs*.3,cy+fs+3);ctx.fillText("−1",cx-R-fs*.3,cy+fs+3);ctx.fillText("1",cx+6,cy-R+fs*.9);ctx.fillText("−1",cx+6,cy+R-4);
+ ctx.fillText("x",cx+R*1.25-fs*.6,cy-6);ctx.fillText("y",cx-fs-2,cy-R*1.25+fs*.8);
+ // angle arc (spiral for second turn)
+ ctx.strokeStyle=cP;ctx.lineWidth=2.5;
+ ctx.beginPath();for(var i=0;i<=A;i+=2){var rr=R*(0.2+0.06*(i/360)),xx=cx+rr*Math.cos(i*RAD),yy=cy-rr*Math.sin(i*RAD);if(i===0)ctx.moveTo(xx,yy);else ctx.lineTo(xx,yy)}
+ ctx.stroke();
+ // triangle
+ ctx.lineWidth=3.5;
+ if(showC){ctx.strokeStyle=cC;ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(px,cy);ctx.stroke()}
+ if(showS){ctx.strokeStyle=cS;ctx.beginPath();ctx.moveTo(px,cy);ctx.lineTo(px,py);ctx.stroke()}
+ ctx.strokeStyle=cF;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(cx,cy);ctx.lineTo(px,py);ctx.stroke();
+ // point
+ ctx.fillStyle=cP;ctx.beginPath();ctx.arc(px,py,8,0,6.2832);ctx.fill();ctx.strokeStyle=cB;ctx.lineWidth=2;ctx.stroke();
+ ctx.fillStyle=cF;ctx.font="bold "+fs+"px system-ui,sans-serif";
+ ctx.fillText("P("+fmt(c,2)+"; "+fmt(s,2)+")",6,fs+4);
+ ctx.font=fs+"px system-ui,sans-serif";
+ // graph axes
+ var gx0=L.gx0,gx1=L.gx1,gy=L.gy,gr=L.gr;
+ function GX(a){return gx0+(gx1-gx0)*a/720}
+ function GY(v){return gy-gr*v}
+ ctx.strokeStyle=cG;ctx.lineWidth=1;
+ var step=L.narrow?180:90;
+ ctx.textAlign="center";
+ for(var a=0;a<=720;a+=90){ctx.strokeStyle=cG;ctx.beginPath();ctx.moveTo(GX(a),GY(1.25));ctx.lineTo(GX(a),GY(-1.25));ctx.stroke();
+  if(a%step===0){ctx.fillStyle=cM;ctx.fillText(rad?tickRad(a/90):String(a)+"°",GX(a),GY(-1.25)+fs+2)}}
+ ctx.textAlign="left";
+ [-1,-0.5,0.5,1].forEach(function(v){ctx.strokeStyle=cG;ctx.beginPath();ctx.moveTo(gx0,GY(v));ctx.lineTo(gx1,GY(v));ctx.stroke()});
+ ctx.fillStyle=cM;ctx.fillText("1",gx0-fs*1.1,GY(1)+fs*.35);ctx.fillText("−1",gx0-fs*1.6,GY(-1)+fs*.35);
+ ctx.strokeStyle=cM;ctx.lineWidth=1.5;ctx.beginPath();ctx.moveTo(gx0,gy);ctx.lineTo(gx1,gy);ctx.moveTo(gx0,GY(1.25));ctx.lineTo(gx0,GY(-1.25));ctx.stroke();
+ // curves: faint full, solid up to A
+ function curve(fn,col){
+  ctx.strokeStyle=col;ctx.lineWidth=2;ctx.globalAlpha=0.28;ctx.beginPath();
+  for(var a=0;a<=720;a+=3){var x=GX(a),y=GY(fn(a*RAD));if(a===0)ctx.moveTo(x,y);else ctx.lineTo(x,y)}ctx.stroke();ctx.globalAlpha=1;
+  ctx.lineWidth=3.5;ctx.beginPath();
+  for(var a2=0;a2<=A;a2+=1){var x2=GX(a2),y2=GY(fn(a2*RAD));if(a2===0)ctx.moveTo(x2,y2);else ctx.lineTo(x2,y2)}ctx.stroke();
+  var ex=GX(A),ey=GY(fn(A*RAD));ctx.fillStyle=col;ctx.beginPath();ctx.arc(ex,ey,6,0,6.2832);ctx.fill();ctx.strokeStyle=cB;ctx.lineWidth=2;ctx.stroke();
+ }
+ if(showC)curve(Math.cos,cC);
+ if(showS)curve(Math.sin,cS);
+ // marker line at A
+ ctx.strokeStyle=cP;ctx.lineWidth=1.5;ctx.setLineDash([5,5]);ctx.beginPath();ctx.moveTo(GX(A),GY(1.25));ctx.lineTo(GX(A),GY(-1.25));ctx.stroke();
+ // connector from circle to graph (wide layout, sin)
+ if(!L.narrow&&showS){ctx.strokeStyle=cS;ctx.beginPath();ctx.moveTo(px,py);ctx.lineTo(GX(A),GY(s));ctx.stroke()}
+ ctx.setLineDash([]);
+ ctx.fillStyle=cM;ctx.fillText("θ",gx1-fs*.6,gy+fs+2);
+ // readouts
+ var r=A%360,ref=r<=90?r:(r<=180?180-r:(r<=270?r-180:360-r));
+ var q=(A%90===0)?"akselilla":(["I","II","III","IV"][Math.floor((A%360)/90)]);
+ var aStr=rad?fmt(t,4)+" rad":fmt(A,0)+"°";
+ $("angv").textContent=aStr;
+ $("r0").textContent=rad?fmt(t,4)+" rad":fmt(A,0)+"° = "+fmt(t,3)+" rad";
+ $("r1").textContent=fmt(c);$("r2").textContent=fmt(s);
+ $("r3").textContent=fmt(c*c+s*s);
+ $("r4").textContent=q;
+ $("r5").textContent=rad?fmt(ref*RAD,4)+" rad":fmt(ref,0)+"°";
+ $("frm").textContent="x = cos θ = "+fmt(c)+", y = sin θ = "+fmt(s)+";  ("+fmt(c)+")² + ("+fmt(s)+")² = "+fmt(c*c+s*s);
+}
+function fit(){var r=window.devicePixelRatio||1,w=cv.clientWidth;if(!w)return;var narrow=w<600;cv.width=Math.round(w*r);cv.height=Math.round(w*(narrow?1.15:0.52)*r);draw()}
+function setA(v){A=Math.max(0,Math.min(720,Math.round(v)));$("ang").value=A;draw()}
+$("ang").addEventListener("input",function(){A=parseFloat(this.value);draw()});
+["unit","ssin","scos"].forEach(function(i){$(i).addEventListener("change",draw)});
+$("reset").addEventListener("click",function(){$("unit").value="deg";$("ssin").checked=true;$("scos").checked=true;setA(30)});
+Array.prototype.forEach.call(document.querySelectorAll("button[data-a]"),function(b){b.addEventListener("click",function(){setA(parseFloat(b.getAttribute("data-a")))})});
+// drag the point on the circle
+var drag=false;
+function mv(e){
+ var rc=cv.getBoundingClientRect(),k=cv.width/rc.width,L=lay();
+ var x=(e.clientX-rc.left)*k-L.cx,y=L.cy-(e.clientY-rc.top)*k;
+ if(x===0&&y===0)return;
+ var b=Math.atan2(y,x)/RAD;if(b<0)b+=360;
+ var best=b,bd=1e9;[b,b+360].forEach(function(cand){var d=Math.abs(cand-A);if(d<bd){bd=d;best=cand}});
+ setA(best);
+}
+cv.addEventListener("pointerdown",function(e){var rc=cv.getBoundingClientRect(),k=cv.width/rc.width,L=lay();
+ var x=(e.clientX-rc.left)*k,y=(e.clientY-rc.top)*k;
+ if(Math.hypot(x-L.cx,y-L.cy)>L.R*1.5)return;
+ drag=true;cv.setPointerCapture(e.pointerId);mv(e)});
+cv.addEventListener("pointermove",function(e){if(drag)mv(e)});
+cv.addEventListener("pointerup",function(){drag=false});
+cv.addEventListener("pointercancel",function(){drag=false});
+window.addEventListener("resize",fit);
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+fit();
+})();
+</script>
+</body>
+</html>

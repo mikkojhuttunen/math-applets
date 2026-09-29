@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Derivaatta tangentin kulmakertoimena</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1e21;--muted:#5b6068;--card:#fff;--bd:#d0d4da;--curve:#1a5fb4;--sec:#d9480f;--tan:#2b8a3e;--grid:#e6e8ec;--warn:#fff4d6;--warnbd:#e0b040;--acc:#1a5fb4}
+@media (prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8eaed;--muted:#a0a6ae;--card:#1e2126;--bd:#3a3f46;--curve:#6ea8fe;--sec:#ff922b;--tan:#69db7c;--grid:#2a2e34;--warn:#3a3218;--warnbd:#8a6d1c;--acc:#6ea8fe}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px}
+h1{font-size:1.4rem;margin:.2em 0}
+h2{font-size:1.05rem;margin:.2em 0 .4em}
+p{margin:.3em 0}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px;margin:10px 0}
+canvas{width:100%;height:auto;display:block;touch-action:none;border-radius:6px;background:var(--card)}
+.ctl{display:grid;grid-template-columns:1fr;gap:8px}
+.row{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.row label{min-width:9.5em}
+.row input[type=range]{flex:1 1 140px;min-width:120px}
+.val{font-variant-numeric:tabular-nums;min-width:6em;font-weight:600}
+select,button{font:inherit;padding:6px 10px;border:1px solid var(--bd);border-radius:6px;background:var(--card);color:var(--fg)}
+button{cursor:pointer}
+.read{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.read div{border:1px solid var(--bd);border-radius:8px;padding:6px 8px}
+.read b{display:block;font-size:1.15rem;font-variant-numeric:tabular-nums}
+.read span{color:var(--muted);font-size:.85rem}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.92rem}
+th,td{border-bottom:1px solid var(--bd);padding:3px 6px;text-align:right}
+th:first-child,td:first-child{text-align:left}
+.warn{background:var(--warn);border:1px solid var(--warnbd);border-radius:10px;padding:10px;margin:10px 0}
+li{margin:.25em 0}
+footer{color:var(--muted);font-size:.85rem;margin:14px 0}
+.lg{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:.88rem;margin-top:4px}
+.lg i{display:inline-block;width:22px;height:0;border-top:3px solid;vertical-align:middle;margin-right:4px}
+</style>
+</head>
+<body>
+<main>
+<h1>Derivaatta tangentin kulmakertoimena</h1>
+<p>Derivaatta pisteessä on sekantin kulmakertoimen raja-arvo, kun pisteiden väli h lähestyy nollaa.</p>
+
+<div class="card">
+<canvas id="cv" width="800" height="480" aria-label="Funktion kuvaaja, sekantti ja tangentti"></canvas>
+<div class="lg">
+<span><i style="border-color:var(--curve)"></i>f(x)</span>
+<span><i style="border-color:var(--sec)"></i>sekantti</span>
+<span><i style="border-color:var(--tan);border-top-style:dashed"></i>tangentti</span>
+</div>
+</div>
+
+<div class="card ctl">
+<div class="row"><label for="fn">Funktio</label>
+<select id="fn"></select></div>
+<div class="row"><label for="x0">Piste x₀</label>
+<input type="range" id="x0" min="-3" max="3" step="0.05" value="1"><span class="val" id="x0v"></span></div>
+<div class="row"><label for="hs">Väli h</label>
+<input type="range" id="hs" min="-3" max="0.7" step="0.01" value="0"><span class="val" id="hv"></span></div>
+<div class="row"><label><input type="checkbox" id="neg"> Toinen piste vasemmalla (h &lt; 0)</label>
+<button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read">
+<div><span>f(x₀)</span><b id="r0"></b></div>
+<div><span>f(x₀ + h)</span><b id="r1"></b></div>
+<div><span>Sekantin kulmakerroin Δy/Δx</span><b id="r2"></b></div>
+<div><span>Tangentin kulmakerroin f′(x₀)</span><b id="r3"></b></div>
+<div><span>Ero |sekantti − tangentti|</span><b id="r4"></b></div>
+</div>
+<p id="frm" style="margin-top:8px"></p>
+<table><thead><tr><th>h</th><th>(f(x₀+h) − f(x₀)) / h</th></tr></thead><tbody id="tb"></tbody></table>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ol>
+<li>Mitä tapahtuu sekantin kulmakertoimelle, kun h lähestyy nollaa? Kokeile eri funktioilla.</li>
+<li>Valitse f(x) = x² ja siirrä pistettä x₀. Millä x₀:n arvolla tangentti on vaakasuora? Mitä se kertoo funktion muutoksesta?</li>
+<li>Vertaa arvoja h &gt; 0 ja h &lt; 0. Saadaanko sama raja-arvo kummaltakin puolelta? Kokeile funktiota |x| pisteessä x₀ = 0.</li>
+</ol>
+</div>
+
+<div class="warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Derivaatta ei ole funktion arvo eikä funktion muutos, vaan <b>muutosnopeus</b>: muutoksen ja välin pituuden suhde. Vaihda funktiota ja siirrä pistettä: f(x₀) ja f′(x₀) ovat eri lukuja, ja f′(x₀) voi olla nolla vaikka f(x₀) ei ole, tai päinvastoin. Sekantin kulmakerroin on muutos jaettuna välillä h, ja derivaatta on tämän suhteen raja-arvo.</p>
+</div>
+
+<footer>Taso: lukio, pitkä matematiikka · Käsite: derivaatta ja raja-arvo</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var F={
+ "x²":{f:function(x){return x*x},d:function(x){return 2*x},t:"x²"},
+ "x³ − 3x":{f:function(x){return x*x*x-3*x},d:function(x){return 3*x*x-3},t:"x³ − 3x"},
+ "sin x":{f:function(x){return Math.sin(x)},d:function(x){return Math.cos(x)},t:"sin x"},
+ "eˣ":{f:function(x){return Math.exp(x)},d:function(x){return Math.exp(x)},t:"eˣ"},
+ "|x|":{f:function(x){return Math.abs(x)},d:function(x){return x>0?1:(x<0?-1:NaN)},t:"|x|"}
+};
+var cv=document.getElementById("cv"),ctx=cv.getContext("2d");
+var $=function(i){return document.getElementById(i)};
+var fnSel=$("fn");
+Object.keys(F).forEach(function(k){var o=document.createElement("option");o.value=k;o.textContent="f(x) = "+k;fnSel.appendChild(o)});
+function fmt(v,d){if(v===null||!isFinite(v))return "ei määritelty";d=d==null?4:d;var s=v.toFixed(d);if(s.indexOf("-")===0&&Number(s)===0)s=s.slice(1);return s.replace(".",",").replace("-","−")}
+function fmtg(v){if(!isFinite(v))return "ei määritelty";var a=Math.abs(v);if(a!==0&&(a<1e-4||a>=1e6))return v.toExponential(2).replace(".",",").replace("-","−");return fmt(v,a<0.1?6:4)}
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function getH(){var h=Math.pow(10,parseFloat($("hs").value));return $("neg").checked?-h:h}
+var XMIN=-4,XMAX=4;
+function yrange(f){var lo=Infinity,hi=-Infinity;for(var i=0;i<=200;i++){var x=XMIN+(XMAX-XMIN)*i/200,y=f(x);if(isFinite(y)){lo=Math.min(lo,y);hi=Math.max(hi,y)}}
+ lo=Math.max(lo,-8);hi=Math.min(hi,8);if(hi-lo<2){hi+=1;lo-=1}var p=(hi-lo)*.08;return [lo-p,hi+p]}
+function draw(){
+ var W=cv.width,H=cv.height,fo=F[fnSel.value],f=fo.f;
+ var x0=parseFloat($("x0").value),h=getH(),x1=x0+h;
+ var yr=yrange(f),YMIN=yr[0],YMAX=yr[1];
+ function X(x){return (x-XMIN)/(XMAX-XMIN)*W}
+ function Y(y){return H-(y-YMIN)/(YMAX-YMIN)*H}
+ ctx.clearRect(0,0,W,H);
+ ctx.lineWidth=1;ctx.strokeStyle=css("--grid");ctx.fillStyle=css("--muted");ctx.font="16px system-ui,sans-serif";
+ for(var gx=Math.ceil(XMIN);gx<=XMAX;gx++){ctx.beginPath();ctx.moveTo(X(gx),0);ctx.lineTo(X(gx),H);ctx.stroke();if(gx!==0)ctx.fillText(String(gx).replace("-","−"),X(gx)+3,Math.min(Math.max(Y(0)+16,16),H-4))}
+ var st=(YMAX-YMIN)>10?2:1;
+ for(var gy=Math.ceil(YMIN/st)*st;gy<=YMAX;gy+=st){ctx.beginPath();ctx.moveTo(0,Y(gy));ctx.lineTo(W,Y(gy));ctx.stroke();if(gy!==0)ctx.fillText(String(gy).replace("-","−"),Math.min(Math.max(X(0)+4,4),W-30),Y(gy)-3)}
+ ctx.strokeStyle=css("--muted");ctx.lineWidth=1.5;
+ if(YMIN<0&&YMAX>0){ctx.beginPath();ctx.moveTo(0,Y(0));ctx.lineTo(W,Y(0));ctx.stroke()}
+ ctx.beginPath();ctx.moveTo(X(0),0);ctx.lineTo(X(0),H);ctx.stroke();
+ // curve
+ ctx.strokeStyle=css("--curve");ctx.lineWidth=3;ctx.beginPath();var pen=false;
+ for(var i=0;i<=400;i++){var x=XMIN+(XMAX-XMIN)*i/400,y=f(x);if(!isFinite(y)){pen=false;continue}var px=X(x),py=Y(y);if(!pen){ctx.moveTo(px,py);pen=true}else ctx.lineTo(px,py)}
+ ctx.stroke();
+ var y0=f(x0),y1=f(x1),ms=(y1-y0)/h,md=fo.d(x0);
+ function line(m,col,dash,w){ctx.strokeStyle=col;ctx.lineWidth=w;ctx.setLineDash(dash);ctx.beginPath();ctx.moveTo(0,Y(y0+m*(XMIN-x0)));ctx.lineTo(W,Y(y0+m*(XMAX-x0)));ctx.stroke();ctx.setLineDash([])}
+ if(isFinite(md))line(md,css("--tan"),[10,7],2.5);
+ line(ms,css("--sec"),[],2.5);
+ // helper triangle
+ ctx.strokeStyle=css("--sec");ctx.lineWidth=1.5;ctx.setLineDash([4,4]);
+ ctx.beginPath();ctx.moveTo(X(x0),Y(y0));ctx.lineTo(X(x1),Y(y0));ctx.lineTo(X(x1),Y(y1));ctx.stroke();ctx.setLineDash([]);
+ function dot(x,y,c){ctx.fillStyle=c;ctx.beginPath();ctx.arc(X(x),Y(y),7,0,6.2832);ctx.fill();ctx.strokeStyle=css("--bg");ctx.lineWidth=2;ctx.stroke()}
+ dot(x1,y1,css("--sec"));dot(x0,y0,css("--curve"));
+ ctx.fillStyle=css("--fg");ctx.font="bold 16px system-ui,sans-serif";
+ ctx.fillText("Δx = h",Math.min(X((x0+x1)/2),W-60)-20,Math.min(Y(y0)+18,H-4));
+ // readouts
+ $("x0v").textContent=fmt(x0,2);
+ $("hv").textContent=fmtg(h);
+ $("r0").textContent=fmt(y0);$("r1").textContent=fmt(y1);
+ $("r2").textContent=fmtg(ms);$("r3").textContent=isFinite(md)?fmtg(md):"ei määritelty";
+ $("r4").textContent=isFinite(md)?fmtg(Math.abs(ms-md)):"–";
+ $("frm").textContent="Sekantin kulmakerroin = ("+fmt(y1)+" − "+fmt(y0)+") / "+fmtg(h)+" = "+fmtg(ms);
+ var tb="";[1,0.1,0.01,0.001].forEach(function(hh){var s=$("neg").checked?-hh:hh;tb+="<tr><td>"+fmtg(s)+"</td><td>"+fmtg((f(x0+s)-y0)/s)+"</td></tr>"});
+ tb+="<tr><td><b>h → 0</b></td><td><b>"+(isFinite(md)?fmtg(md):"ei määritelty")+"</b></td></tr>";
+ $("tb").innerHTML=tb;
+}
+function fit(){var r=window.devicePixelRatio||1,w=cv.clientWidth;if(!w)return;cv.width=Math.round(w*r);cv.height=Math.round(w*0.6*r);draw()}
+["fn","x0","hs","neg"].forEach(function(i){$(i).addEventListener("input",draw);$(i).addEventListener("change",draw)});
+$("reset").addEventListener("click",function(){fnSel.selectedIndex=0;$("x0").value=1;$("hs").value=0;$("neg").checked=false;draw()});
+// drag point on canvas
+var drag=false;
+function px(e){var r=cv.getBoundingClientRect();return (e.clientX-r.left)/r.width*(XMAX-XMIN)+XMIN}
+cv.addEventListener("pointerdown",function(e){drag=true;cv.setPointerCapture(e.pointerId);mv(e)});
+cv.addEventListener("pointermove",function(e){if(drag)mv(e)});
+cv.addEventListener("pointerup",function(){drag=false});
+cv.addEventListener("pointercancel",function(){drag=false});
+function mv(e){var x=Math.max(-3,Math.min(3,Math.round(px(e)*20)/20));$("x0").value=x;draw()}
+window.addEventListener("resize",fit);
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+fit();
+})();
+</script>
+</body>
+</html>
