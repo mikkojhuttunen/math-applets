@@ -1,0 +1,10 @@
+.DS_Store
+.cache/
+/FYS240_Optics_TGbot/
+/HTML_applets/
+/Laser_physics_bot/
+/physics-applets/
+/reports/
+/diff-bots.gitignore
+/diff-bots.js
+/student-llm-usage-limiter-system.docx

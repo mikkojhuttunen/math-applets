@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Suoran yhtälö ja kulmakerroin</title>
+<style>
+:root{--bg:#fff;--fg:#1c2330;--muted:#5a6475;--card:#f3f5f9;--line:#d5dae3;--accent:#1f6feb;--pos:#1a7f37;--neg:#c62828;--grid:#e3e7ee;--axis:#8a93a3}
+@media (prefers-color-scheme:dark){:root{--bg:#141922;--fg:#e8ecf3;--muted:#a3adbd;--card:#1d2431;--line:#39435a;--accent:#6aa5ff;--pos:#5fd07a;--neg:#ff7b72;--grid:#2a3242;--axis:#7d879a}}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:12px 14px 24px}
+h1{font-size:1.4rem;margin:.3rem 0}
+h2{font-size:1.05rem;margin:0 0 .4rem}
+p{margin:.3rem 0}
+.lead{color:var(--muted)}
+.plot{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:10px 0;touch-action:none}
+svg{display:block;width:100%;height:auto;touch-action:none}
+.ctrl{display:grid;grid-template-columns:auto 1fr auto;gap:8px 10px;align-items:center;margin:8px 0}
+.ctrl label{font-weight:600}
+.ctrl output{min-width:3.5em;text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;min-width:0;accent-color:var(--accent)}
+button{font:inherit;padding:6px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);cursor:pointer}
+.read{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+.eq{font-size:1.5rem;font-weight:700;text-align:center;margin:2px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:6px 12px}
+.grid div{font-variant-numeric:tabular-nums}
+.k{color:var(--accent);font-weight:700}.b{color:var(--pos);font-weight:700}
+.box{border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+.warn{border-left:4px solid var(--neg)}
+ul{margin:.3rem 0;padding-left:1.2rem}
+footer{color:var(--muted);font-size:.85rem;margin-top:14px}
+.msg{color:var(--neg);min-height:1.4em}
+</style>
+</head>
+<body>
+<main>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+<h1>Suoran yhtälö ja kulmakerroin</h1>
+<p class="lead">Suora y = kx + b: kulmakerroin k kertoo, kuinka paljon y muuttuu, kun x kasvaa yhdellä, ja b kertoo, missä suora leikkaa y-akselin.</p>
+
+<div class="plot"><svg id="svg" viewBox="0 0 520 520" role="img" aria-label="Suoran kuvaaja koordinaatistossa"></svg></div>
+<p class="lead" style="margin-top:-4px">Vedä suoran pisteitä A ja B (siirtyvät suoraa pitkin) tai vihreää pistettä y-akselilla (muuttaa arvoa b).</p>
+
+<div class="ctrl">
+<label for="k">k (kulmakerroin)</label><input id="k" type="range" min="-5" max="5" step="0.1" value="2"><output id="kv"></output>
+<label for="b">b (leikkauspiste)</label><input id="b" type="range" min="-5" max="5" step="0.1" value="1"><output id="bv"></output>
+</div>
+<button id="reset" type="button">Nollaa</button>
+
+<div class="read" aria-live="polite">
+<div class="eq" id="eq"></div>
+<div class="grid">
+<div>Δx = <span id="dx"></span></div>
+<div>Δy = <span id="dy"></span></div>
+<div><span class="k">k</span> = Δy / Δx = <span id="kk"></span></div>
+<div><span class="b">b</span> = y, kun x = 0: <span id="bb"></span></div>
+</div>
+<p id="trend" style="margin-top:8px"></p>
+<p class="msg" id="msg"></p>
+</div>
+
+<div class="box">
+<h2>Tutki itse</h2>
+<ul>
+<li>Aseta b = 2 ja muuta k:ta. Mikä pysyy samana ja mikä muuttuu suoralla?</li>
+<li>Aseta k = 1 ja muuta b:tä. Mihin suora liikkuu ja mihin se ei muutu?</li>
+<li>Vedä pisteitä A ja B kauemmas toisistaan. Muuttuuko Δx, Δy tai k?</li>
+<li>Mitä tapahtuu suoralle, kun k on negatiivinen? Entä kun k = 0?</li>
+</ul>
+</div>
+
+<div class="box warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Usein k ja b sekoitetaan keskenään, tai negatiivisen kulmakertoimen ajatellaan olevan „virhe“. Kokeile: b siirtää suoraa ylös tai alas mutta ei muuta sen jyrkkyyttä, k muuttaa jyrkkyyttä mutta leikkauspiste y-akselilla pysyy samana. Negatiivinen k on tavallinen suora, joka vain laskee oikealle mentäessä: y pienenee, kun x kasvaa.</p>
+</div>
+
+<footer>Taso: yläkoulu 7–9 · Käsite: suoran yhtälö y = kx + b, kulmakerroin ja leikkauspiste</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg",S=520,M=30,R=6,U=(S-2*M)/(2*R);
+var K0=2,B0=1,XA0=-2,XB0=1;
+var k=K0,b=B0,xa=XA0,xb=XB0;
+var svg=document.getElementById("svg");
+function X(x){return S/2+x*U}function Y(y){return S/2-y*U}
+function fmt(v,d){var r=Math.round(v*Math.pow(10,d))/Math.pow(10,d);if(r===0)r=0;return String(r.toFixed(d)).replace(".",",").replace("-","−")}
+function fmtT(v){var r=Math.round(v*1000)/1000;if(r===0)r=0;var s=String(r).replace(".",",").replace("-","−");return s}
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var i in a)e.setAttribute(i,a[i]);(p||svg).appendChild(e);return e}
+function txt(x,y,t,a,c){var e=el("text",a||{});e.setAttribute("x",x);e.setAttribute("y",y);if(c)e.setAttribute("fill",c);e.textContent=t;return e}
+function css(n){return getComputedStyle(document.documentElement).getPropertyValue(n).trim()}
+function clampX(x){return Math.max(-R,Math.min(R,x))}
+function draw(){
+ while(svg.firstChild)svg.removeChild(svg.firstChild);
+ var g=css("--grid"),ax=css("--axis"),fg=css("--fg"),ac=css("--accent"),ps=css("--pos"),ng=css("--neg");
+ for(var i=-R;i<=R;i++){
+  el("line",{x1:X(i),y1:Y(-R),x2:X(i),y2:Y(R),stroke:i===0?ax:g,"stroke-width":i===0?1.6:1});
+  el("line",{x1:X(-R),y1:Y(i),x2:X(R),y2:Y(i),stroke:i===0?ax:g,"stroke-width":i===0?1.6:1});
+  if(i!==0){
+   txt(X(i),Y(0)+14,String(i).replace("-","−"),{"text-anchor":"middle","font-size":11},ax);
+   txt(X(0)-5,Y(i)+4,String(i).replace("-","−"),{"text-anchor":"end","font-size":11},ax);
+  }
+ }
+ txt(X(R)-4,Y(0)-6,"x",{"text-anchor":"end","font-size":13,"font-style":"italic"},fg);
+ txt(X(0)+8,Y(R)+12,"y",{"font-size":13,"font-style":"italic"},fg);
+ // line clipped to view
+ var cp=el("clipPath",{id:"clip"});el("rect",{x:X(-R),y:Y(R),width:2*R*U,height:2*R*U},cp);
+ var ln=el("line",{x1:X(-R),y1:Y(k*-R+b),x2:X(R),y2:Y(k*R+b),stroke:ac,"stroke-width":3,"clip-path":"url(#clip)"});
+ // triangle
+ var ya=k*xa+b,yb=k*xb+b;
+ var lo=xa<=xb?[xa,ya]:[xb,yb],hi=xa<=xb?[xb,yb]:[xa,ya];
+ var cx=hi[0],cy=lo[1];
+ el("polyline",{points:[X(lo[0]),Y(lo[1]),X(cx),Y(cy),X(hi[0]),Y(hi[1])].join(","),fill:"none",stroke:fg,"stroke-width":1.5,"stroke-dasharray":"5 4"});
+ if(Math.abs(hi[0]-lo[0])>0.05){
+  txt((X(lo[0])+X(cx))/2,Y(cy)+(hi[1]>=lo[1]?16:-8),"Δx = "+fmt(hi[0]-lo[0],1),{"text-anchor":"middle","font-size":12},fg);
+ }
+ if(Math.abs(hi[1]-lo[1])>0.05){
+  txt(X(cx)+6,(Y(cy)+Y(hi[1]))/2+4,"Δy = "+fmt(hi[1]-lo[1],1),{"font-size":12},fg);
+ }
+ // points
+ pt(xa,ya,"A",ac,"a");pt(xb,yb,"B",ac,"bp");
+ // intercept
+ var inRange=Math.abs(b)<=R;
+ var iy=Math.max(-R,Math.min(R,b));
+ var c=el("circle",{cx:X(0),cy:Y(iy),r:9,fill:ps,stroke:fg,"stroke-width":1.5,"data-drag":"b",style:"cursor:ns-resize"});
+ txt(X(0)+13,Y(iy)-8,"b = "+fmt(b,1),{"font-size":12,"font-weight":700},ps);
+}
+function pt(x,y,label,col,id){
+ if(Math.abs(y)>R+0.001){ // out of view: clamp indicator
+ }
+ el("circle",{cx:X(x),cy:Y(Math.max(-R,Math.min(R,y))),r:9,fill:col,stroke:css("--bg"),"stroke-width":2,"data-drag":id,style:"cursor:ew-resize"});
+ txt(X(x)+12,Y(Math.max(-R,Math.min(R,y)))-10,label,{"font-size":13,"font-weight":700},css("--fg"));
+}
+function eqText(){
+ var ks=fmtT(k),bs=fmtT(Math.abs(b));
+ var t="y = ";
+ var kz=Math.abs(k)<1e-9,bz=Math.abs(b)<1e-9;
+ var kp;
+ if(kz)kp="";
+ else if(Math.abs(k-1)<1e-9)kp="x";
+ else if(Math.abs(k+1)<1e-9)kp="−x";
+ else kp=ks+"x";
+ if(kz&&bz)return "y = 0";
+ if(kz)return "y = "+fmtT(b);
+ if(bz)return t+kp;
+ return t+kp+(b<0?" − ":" + ")+bs;
+}
+function update(){
+ document.getElementById("kv").textContent=fmt(k,1);
+ document.getElementById("bv").textContent=fmt(b,1);
+ document.getElementById("eq").textContent=eqText();
+ var dx=xb-xa,dy=k*xb+b-(k*xa+b);
+ var msg=document.getElementById("msg");
+ document.getElementById("dx").textContent=fmt(dx,1);
+ document.getElementById("dy").textContent=fmt(dy,1);
+ if(Math.abs(dx)<0.05){document.getElementById("kk").textContent="ei voi laskea (Δx = 0)";msg.textContent="Pisteet A ja B ovat samassa kohdassa. Vedä toista pistettä, niin Δx ≠ 0.";}
+ else{document.getElementById("kk").textContent=fmt(dy/dx,1);msg.textContent="";}
+ document.getElementById("bb").textContent=fmt(b,1);
+ var tr;
+ if(Math.abs(k)<1e-9)tr="k = 0: suora on vaakasuora, y ei muutu, vaikka x kasvaa.";
+ else if(k>0)tr="k > 0: suora nousee oikealle mentäessä. Kun x kasvaa yhdellä, y kasvaa "+fmt(k,1)+".";
+ else tr="k < 0: suora laskee oikealle mentäessä. Kun x kasvaa yhdellä, y pienenee "+fmt(-k,1)+".";
+ document.getElementById("trend").textContent=tr;
+ draw();
+}
+// dragging
+var drag=null;
+function svgPt(e){
+ var r=svg.getBoundingClientRect(),s=S/r.width;
+ return {x:((e.clientX-r.left)*s-S/2)/U,y:-((e.clientY-r.top)*s-S/2)/U};
+}
+svg.addEventListener("pointerdown",function(e){
+ var t=e.target.getAttribute&&e.target.getAttribute("data-drag");
+ if(!t)return;drag=t;svg.setPointerCapture(e.pointerId);e.preventDefault();
+});
+svg.addEventListener("pointermove",function(e){
+ if(!drag)return;
+ var p=svgPt(e);
+ if(drag==="a"){xa=Math.round(clampX(p.x)*2)/2}
+ else if(drag==="bp"){xb=Math.round(clampX(p.x)*2)/2}
+ else if(drag==="b"){b=Math.max(-5,Math.min(5,Math.round(p.y*10)/10));document.getElementById("b").value=b}
+ update();
+});
+function end(){drag=null}
+svg.addEventListener("pointerup",end);svg.addEventListener("pointercancel",end);
+document.getElementById("k").addEventListener("input",function(e){k=parseFloat(e.target.value);update()});
+document.getElementById("b").addEventListener("input",function(e){b=parseFloat(e.target.value);update()});
+document.getElementById("reset").addEventListener("click",function(){
+ k=K0;b=B0;xa=XA0;xb=XB0;document.getElementById("k").value=k;document.getElementById("b").value=b;update();
+});
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+window.__applet={set:function(a,c,d,e){k=a;b=c;xa=d;xb=e;update()}};
+update();
+})();
+</script>
+</body>
+</html>

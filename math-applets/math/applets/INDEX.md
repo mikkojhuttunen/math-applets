@@ -4,6 +4,7 @@
 - [Murtolukujen yhteenlasku eri nimittäjillä](luokat-1-6/fraction_addition_applet.html) - luokat 5-6 - 2026-09-29
 
 ## Yläaste 7–9
+- [Suoran yhtälö ja kulmakerroin](yla-aste-7-9/suoran-yhtalo.html) - suoran yhtälö y = kx + b - 2026-09-29
 - [Prosenttimuutos käytännössä](yla-aste-7-9/prosenttimuutos.html) - prosenttilaskenta - 2026-09-29
 - [Kustannusvertailu: kaksi hinnoittelumallia](yla-aste-7-9/kustannusvertailu.html) - lineaarinen funktio, suorien leikkauspiste - 2026-09-29
 - [Sekoitusongelma: kaksi liuosta, yksi tavoite](yla-aste-7-9/sekoitusongelma.html) - yhtälöpari - 2026-09-29
