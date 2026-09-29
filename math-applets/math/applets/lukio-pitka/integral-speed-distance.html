@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Integrals in Action: From Speed to Distance</title>
+<style>
+  :root {
+    --bg: #f7f5f2;
+    --panel: #ffffff;
+    --ink: #1d1a17;
+    --ink-soft: #5a544c;
+    --accent: #b5502e;
+    --accent-soft: #e8caba;
+    --rect-fill: rgba(181, 80, 46, 0.28);
+    --rect-stroke: rgba(181, 80, 46, 0.75);
+    --curve: #2f5d50;
+    --grid: #d8d2c9;
+    --border: #e3ddd3;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17140f;
+      --panel: #211d17;
+      --ink: #f2ede4;
+      --ink-soft: #b8ae9f;
+      --accent: #e07a4d;
+      --accent-soft: #4a3226;
+      --rect-fill: rgba(224, 122, 77, 0.30);
+      --rect-stroke: rgba(224, 122, 77, 0.85);
+      --curve: #7fc8ab;
+      --grid: #3a352c;
+      --border: #35302710;
+      --border: #352f26;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #17140f;
+    --panel: #211d17;
+    --ink: #f2ede4;
+    --ink-soft: #b8ae9f;
+    --accent: #e07a4d;
+    --accent-soft: #4a3226;
+    --rect-fill: rgba(224, 122, 77, 0.30);
+    --rect-stroke: rgba(224, 122, 77, 0.85);
+    --curve: #7fc8ab;
+    --grid: #3a352c;
+    --border: #352f26;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    padding: 18px 16px 40px;
+  }
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.35rem;
+    margin: 4px 0 2px;
+    letter-spacing: -0.01em;
+  }
+  .subtitle {
+    color: var(--ink-soft);
+    font-size: 0.95rem;
+    margin: 0 0 18px;
+    line-height: 1.4;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .graph-scroll {
+    width: 100%;
+    overflow-x: auto;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 320px;
+  }
+  .controls {
+    display: grid;
+    gap: 14px;
+  }
+  .control-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .control-row label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+  }
+  .control-row label span.val {
+    color: var(--accent);
+    font-weight: 600;
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--accent);
+  }
+  .method-buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .method-buttons button {
+    flex: 1 1 auto;
+    min-width: 90px;
+    padding: 8px 10px;
+    border-radius: 9px;
+    border: 1px solid var(--border);
+    background: var(--panel);
+    color: var(--ink);
+    font-size: 0.85rem;
+    cursor: pointer;
+  }
+  .method-buttons button.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 14px;
+  }
+  .stat {
+    background: var(--accent-soft);
+    border-radius: 10px;
+    padding: 10px 8px;
+    text-align: center;
+  }
+  .stat .label {
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .stat .value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-top: 2px;
+  }
+  .explain {
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .explain b { color: var(--accent); }
+  .explain code {
+    background: var(--accent-soft);
+    padding: 1px 5px;
+    border-radius: 5px;
+    font-size: 0.85em;
+  }
+  footer {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.78rem;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="wrap">
+  <h1>From Speed to Distance: the Integral as Accumulation</h1>
+  <p class="subtitle">A car's speedometer reads v(t) in m/s. The integral of v(t) over time answers a very practical question: <b>how far did the car travel?</b> Drag the sliders to see how the sum of many thin rectangles (Riemann sum) converges to the exact distance — the definite integral.</p>
+
+  <div class="panel">
+    <div class="graph-scroll">
+      <svg id="graph" viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+
+  <div class="panel controls">
+    <div class="control-row">
+      <label>Upper time limit T (seconds) <span class="val" id="tVal">10.0</span></label>
+      <input type="range" id="tSlider" min="1" max="10" step="0.1" value="10">
+    </div>
+    <div class="control-row">
+      <label>Number of rectangles, n <span class="val" id="nVal">6</span></label>
+      <input type="range" id="nSlider" min="1" max="120" step="1" value="6">
+    </div>
+    <div class="control-row">
+      <label>Rectangle rule</label>
+      <div class="method-buttons">
+        <button data-method="left" class="active">Left sum</button>
+        <button data-method="mid">Midpoint</button>
+        <button data-method="right">Right sum</button>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="label">Riemann sum</div>
+        <div class="value" id="approxVal">— m</div>
+      </div>
+      <div class="stat">
+        <div class="label">Exact integral</div>
+        <div class="value" id="exactVal">— m</div>
+      </div>
+      <div class="stat">
+        <div class="label">Error</div>
+        <div class="value" id="errVal">—</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel explain">
+    <p><b>Why this is an integral.</b> Speed alone doesn't tell you distance — you need to accumulate it over time. Chopping the interval [0, T] into n thin slices of width Δt, each slice contributes roughly <code>v(t) · Δt</code> — the distance covered at (nearly) constant speed during that sliver. Adding up all the slivers gives the Riemann sum shown above.</p>
+    <p>As n grows, the rectangles hug the curve more tightly and the sum converges to the exact area under v(t): <code>∫₀ᵀ v(t) dt</code>. That limit — the exact, error-free distance — is what the integral computes directly, without ever chopping anything up.</p>
+    <p>The same idea works for <b>any</b> accumulation: flow rate integrated over time gives volume filled, power integrated over time gives energy used, population growth rate integrated gives total population change. Wherever a quantity is built up from a rate, an integral is the tool that adds it all together.</p>
+  </div>
+
+  <footer>Try dragging n down to 1–3 to see how rough the approximation is, then up past 80 to watch it lock onto the exact value.</footer>
+</div>
+
+<script>
+(function () {
+  function v(t) { return 5 + 4 * Math.sin(0.4 * t); }
+  function V(t) { return 5 * t - 10 * Math.cos(0.4 * t); } // antiderivative
+
+  var svgNS = "http://www.w3.org/2000/svg";
+  var svg = document.getElementById("graph");
+  var W = 700, H = 420;
+  var padL = 55, padR = 20, padT = 20, padB = 55;
+  var plotW = W - padL - padR, plotH = H - padT - padB;
+  var tMaxDomain = 10, vMaxDomain = 10;
+
+  function xPix(t) { return padL + (t / tMaxDomain) * plotW; }
+  function yPix(vv) { return padT + plotH - (vv / vMaxDomain) * plotH; }
+
+  var state = { T: 10, n: 6, method: "left" };
+
+  function el(tag, attrs) {
+    var e = document.createElementNS(svgNS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  function render() {
+    while (svg.firstChild) svg.removeChild(svg.firstChild);
+
+    var css = getComputedStyle(document.documentElement);
+    var gridColor = css.getPropertyValue('--grid').trim() || '#ddd';
+    var curveColor = css.getPropertyValue('--curve').trim() || '#2f5d50';
+    var inkColor = css.getPropertyValue('--ink-soft').trim() || '#666';
+    var inkColor2 = css.getPropertyValue('--ink').trim() || '#222';
+    var rectFill = css.getPropertyValue('--rect-fill').trim() || 'rgba(180,80,40,0.3)';
+    var rectStroke = css.getPropertyValue('--rect-stroke').trim() || 'rgba(180,80,40,0.8)';
+
+    // grid + axes
+    for (var gt = 0; gt <= tMaxDomain; gt += 2) {
+      svg.appendChild(el("line", { x1: xPix(gt), y1: padT, x2: xPix(gt), y2: padT + plotH, stroke: gridColor, "stroke-width": 1 }));
+      var lab = el("text", { x: xPix(gt), y: padT + plotH + 18, "font-size": "11", fill: inkColor, "text-anchor": "middle" });
+      lab.textContent = gt;
+      svg.appendChild(lab);
+    }
+    for (var gv = 0; gv <= vMaxDomain; gv += 2) {
+      svg.appendChild(el("line", { x1: padL, y1: yPix(gv), x2: padL + plotW, y2: yPix(gv), stroke: gridColor, "stroke-width": 1 }));
+      var labv = el("text", { x: padL - 8, y: yPix(gv) + 4, "font-size": "11", fill: inkColor, "text-anchor": "end" });
+      labv.textContent = gv;
+      svg.appendChild(labv);
+    }
+    var axisLabelX = el("text", { x: padL + plotW / 2, y: H - 8, "font-size": "12", fill: inkColor2, "text-anchor": "middle" });
+    axisLabelX.textContent = "time t (s)";
+    svg.appendChild(axisLabelX);
+    var axisLabelY = el("text", { x: 14, y: padT + plotH / 2, "font-size": "12", fill: inkColor2, "text-anchor": "middle", transform: "rotate(-90 14 " + (padT + plotH / 2) + ")" });
+    axisLabelY.textContent = "speed v (m/s)";
+    svg.appendChild(axisLabelY);
+
+    // rectangles
+    var n = state.n, T = state.T, dt = T / n;
+    var sum = 0;
+    for (var i = 0; i < n; i++) {
+      var t0 = i * dt, t1 = (i + 1) * dt;
+      var sampleT;
+      if (state.method === "left") sampleT = t0;
+      else if (state.method === "right") sampleT = t1;
+      else sampleT = (t0 + t1) / 2;
+      var h = v(sampleT);
+      sum += h * dt;
+      var rx = xPix(t0), rw = xPix(t1) - xPix(t0);
+      var ry = yPix(h), rh = yPix(0) - yPix(h);
+      svg.appendChild(el("rect", { x: rx, y: ry, width: Math.max(rw, 0.5), height: Math.max(rh, 0), fill: rectFill, stroke: rectStroke, "stroke-width": 1 }));
+    }
+
+    // curve (full domain, dimmed beyond T)
+    var pathFull = "";
+    var steps = 240;
+    for (var s = 0; s <= steps; s++) {
+      var t = (s / steps) * tMaxDomain;
+      var px = xPix(t), py = yPix(v(t));
+      pathFull += (s === 0 ? "M" : "L") + px + " " + py + " ";
+    }
+    svg.appendChild(el("path", { d: pathFull, fill: "none", stroke: curveColor, "stroke-width": 2.5, opacity: 0.95 }));
+
+    // T marker
+    svg.appendChild(el("line", { x1: xPix(T), y1: padT, x2: xPix(T), y2: padT + plotH, stroke: curveColor, "stroke-width": 1.4, "stroke-dasharray": "4,4", opacity: 0.6 }));
+
+    // exact value
+    var exact = V(T) - V(0);
+    var err = Math.abs(sum - exact);
+    var errPct = exact !== 0 ? (100 * err / exact) : 0;
+
+    document.getElementById("approxVal").textContent = sum.toFixed(2) + " m";
+    document.getElementById("exactVal").textContent = exact.toFixed(2) + " m";
+    document.getElementById("errVal").textContent = err.toFixed(2) + " m (" + errPct.toFixed(1) + "%)";
+  }
+
+  document.getElementById("tSlider").addEventListener("input", function (e) {
+    state.T = parseFloat(e.target.value);
+    document.getElementById("tVal").textContent = state.T.toFixed(1);
+    render();
+  });
+  document.getElementById("nSlider").addEventListener("input", function (e) {
+    state.n = parseInt(e.target.value, 10);
+    document.getElementById("nVal").textContent = state.n;
+    render();
+  });
+  var buttons = document.querySelectorAll(".method-buttons button");
+  buttons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      buttons.forEach(function (b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      state.method = btn.getAttribute("data-method");
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolikko ja noppa – tilastosovellus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F9FB;
+    --grid-line: #DCE6ED;
+    --ink: #17232C;
+    --ink-soft: #536270;
+    --empirical: #1F7A6C;
+    --theoretical: #B8860B;
+    --accent-warm: #C0392B;
+    --surface: #FFFFFF;
+    --border: #D7E0E6;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12181D;
+      --grid-line: #202B33;
+      --ink: #EBF1F4;
+      --ink-soft: #9FB0BA;
+      --empirical: #4FBBA6;
+      --theoretical: #E0B84D;
+      --accent-warm: #E1746A;
+      --surface: #1A222A;
+      --border: #2A353E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12181D;
+    --grid-line: #202B33;
+    --ink: #EBF1F4;
+    --ink-soft: #9FB0BA;
+    --empirical: #4FBBA6;
+    --theoretical: #E0B84D;
+    --accent-warm: #E1746A;
+    --surface: #1A222A;
+    --border: #2A353E;
+  }
+  * { box-sizing: border-box; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    min-height: 100%;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 100% 28px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 100%,
+      var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top, 0px) 20px calc(env(safe-area-inset-bottom, 0px) + 40px);
+  }
+  header { padding: 28px 0 18px; }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 46ch;
+  }
+
+  nav.tabs {
+    display: flex;
+    gap: 4px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  nav.tabs button {
+    appearance: none;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 6px;
+    margin-right: 14px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 15px;
+    color: var(--ink-soft);
+    cursor: pointer;
+  }
+  nav.tabs button.active {
+    color: var(--ink);
+    font-weight: 600;
+    border-bottom-color: var(--empirical);
+  }
+  nav.tabs button:hover { color: var(--ink); }
+
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  .panel > p.intro {
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.55;
+    margin: 0 0 18px;
+    max-width: 52ch;
+  }
+
+  .stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0 8px;
+  }
+
+  .coin {
+    width: 92px;
+    height: 92px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+  }
+  .coin.spin { animation: coinspin .55s ease-in-out; }
+  @keyframes coinspin {
+    0% { transform: rotateY(0) scale(1); }
+    50% { transform: rotateY(360deg) scale(1.05); }
+    100% { transform: rotateY(720deg) scale(1); }
+  }
+
+  .die {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+    background: var(--surface);
+    border: 2px solid var(--ink);
+    position: relative;
+  }
+  .die.spin { animation: dieshake .45s ease-in-out; }
+  @keyframes dieshake {
+    0%, 100% { transform: rotate(0deg); }
+    30% { transform: rotate(-10deg); }
+    65% { transform: rotate(8deg); }
+  }
+  .die__pips { position: absolute; inset: 0; }
+  .die__pip {
+    position: absolute;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: var(--ink);
+    transform: translate(-50%, -50%);
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    padding: 4px 0 22px;
+  }
+  .btn {
+    appearance: none;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 14px;
+    padding: 9px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .btn:hover { border-color: var(--empirical); }
+  .btn--ghost { color: var(--ink-soft); background: transparent; }
+
+  .stat-row {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    padding-bottom: 18px;
+    flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+  .stat__label { font-size: 13px; color: var(--ink-soft); }
+  .stat__value {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 21px;
+    font-weight: 600;
+  }
+  .stat__pct { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink-soft); }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 16px 14px;
+    margin-bottom: 16px;
+  }
+  .card h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 0 10px;
+  }
+  svg.chart { width: 100%; height: auto; display: block; overflow: visible; }
+  .bar { fill: var(--empirical); }
+  .expected-line { stroke: var(--theoretical); stroke-width: 2; stroke-dasharray: 4 3; }
+  .axis-label { font-family: 'IBM Plex Sans', sans-serif; font-size: 11px; fill: var(--ink-soft); }
+  .value-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; fill: var(--ink); }
+  .observed { fill: none; stroke: var(--empirical); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+
+  .legend { display: flex; gap: 18px; margin-top: 8px; font-size: 12px; color: var(--ink-soft); flex-wrap: wrap; }
+  .legend span.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .legend .swatch--observed { background: var(--empirical); }
+  .legend .swatch--expected { background: var(--theoretical); }
+
+  .caption { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin: 10px 0 0; }
+
+  .grid36-wrap { margin-top: 6px; }
+  .grid36 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    max-width: 280px;
+    margin: 12px auto 0;
+  }
+  .grid36__cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    color: var(--ink);
+  }
+  .grid36__cell.hit {
+    border: 2px solid var(--accent-warm);
+    font-weight: 700;
+  }
+
+  footer.hint {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 12px;
+    padding-top: 8px;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="page">
+
+  <header>
+    <h1>Kolikko ja noppa</h1>
+    <p>Heitä kolikkoa tai noppaa, ja katso miten havaittu osuus asettuu kohti teoreettista todennäköisyyttä sitä mukaa kun heittoja kertyy.</p>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-tab="coin">Kolikko</button>
+    <button class="tab" data-tab="die1">Yksi noppa</button>
+    <button class="tab" data-tab="dice2">Kaksi noppaa</button>
+    <button class="tab" data-tab="dice3">Kolme noppaa</button>
+  </nav>
+
+  <main>
+
+    <!-- COIN -->
+    <section class="panel active" id="panel-coin">
+      <p class="intro">Kolikossa on kaksi yhtä todennäköistä puolta. Mitä enemmän heittoja, sitä lähemmäs 50 % kruunan osuus asettuu.</p>
+
+      <div class="stage">
+        <div class="coin" id="coinVisual"><span id="coinFace">–</span></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" onclick="flipCoin(1)">Heitä 1</button>
+        <button class="btn" onclick="flipCoin(10)">Heitä 10</button>
+        <button class="btn" onclick="flipCoin(100)">Heitä 100</button>
+        <button class="btn btn--ghost" onclick="resetCoin()">Tyhjennä</button>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat__label">Kruunia</span>
+          <span class="stat__value" id="coinHeadsCount">0</span>
+          <span class="stat__pct" id="coinHeadsPct">–</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Klaavoja</span>
+          <span class="stat__value" id="coinTailsCount">0</span>
+          <span class="stat__pct" id="coinTailsPct">–</span>
+        </div>
+        <div class="stat">
+          <span class="stat__label">Heittoja yhteensä</span>
+          <span class="stat__value" id="coinTotal">0</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Jakauma</h2>
+        <svg class="chart" id="coinChart" viewBox="0 0 400 190"></svg>
+        <div class="legend">
+          <span><span class="swatch swatch--observed"></span>Havaittu määrä</span>
+          <span><span class="swatch swatch--expected"></span>Teoreettinen odotusarvo</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Kruunan osuus heittojen edetessä</h2>
+        <svg class="chart" id="coinLineChart" viewBox="0 0 380 140"></svg>
+        <p class="caption">Katkoviiva on teoreettinen osuus 50 %. Tämä on suurten lukujen laki: yksittäiset heitot vaihtelevat, mutta pitkä sarja asettuu kohti todennäköisyyttä.</p>
+      </div>
+    </section>
+
+    <!-- ONE DIE -->
+    <section class="panel" id="panel-die1">
+      <p class="intro">Nopassa on kuusi yhtä todennäköistä silmälukua. Jokaisen pitäisi pitkällä aikavälillä esiintyä noin 1/6 heitoista.</p>
+
+      <div class="stage">
+        <div class="die" id="die1Visual"><div class="die__pips" id="die1Pips"></div></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" onclick="rollDie(1)">Heitä 1</button>
+        <button class="btn" onclick="rollDie(10)">Heitä 10</button>
+        <button class="btn" onclick="rollDie(100)">Heitä 100</button>
+        <button class="btn btn--ghost" onclick="resetDie1()">Tyhjennä</button>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat__label">Heittoja yhteensä</span>
+          <span class="stat__value" id="die1Total">0</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Silmälukujen jakauma</h2>
+        <svg class="chart" id="die1Chart" viewBox="0 0 400 190"></svg>
+        <div class="legend">
+          <span><span class="swatch swatch--observed"></span>Havaittu määrä</span>
+          <span><span class="swatch swatch--expected"></span>Teoreettinen odotusarvo (1/6)</span>
+        </div>
+        <p class="caption">Pylväät harvoin osuvat täsmälleen katkoviivalle pienellä heittomäärällä — mitä enemmän heittoja, sitä lähemmäs ne asettuvat.</p>
+      </div>
+    </section>
+
+    <!-- TWO DICE -->
+    <section class="panel" id="panel-dice2">
+      <p class="intro">Kahden nopan summa ei jakaudu tasan: summia voi muodostua eri määrä tapoja, ja se näkyy jakauman muodossa.</p>
+
+      <div class="stage">
+        <div class="die" id="dice2VisualA"><div class="die__pips" id="dice2PipsA"></div></div>
+        <div class="die" id="dice2VisualB"><div class="die__pips" id="dice2PipsB"></div></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" onclick="rollDice2(1)">Heitä 1</button>
+        <button class="btn" onclick="rollDice2(10)">Heitä 10</button>
+        <button class="btn" onclick="rollDice2(100)">Heitä 100</button>
+        <button class="btn btn--ghost" onclick="resetDice2()">Tyhjennä</button>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat__label">Heittoja yhteensä</span>
+          <span class="stat__value" id="dice2Total">0</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Summan jakauma (2–12)</h2>
+        <svg class="chart" id="dice2Chart" viewBox="0 0 400 190"></svg>
+        <div class="legend">
+          <span><span class="swatch swatch--observed"></span>Havaittu määrä</span>
+          <span><span class="swatch swatch--expected"></span>Teoreettinen odotusarvo</span>
+        </div>
+        <p class="caption">Summa 7 voi syntyä kuudella eri parilla 36:sta (1+6, 2+5, 3+4, 4+3, 5+2, 6+1), joten se on todennäköisin. Summa 2 tai 12 syntyy vain yhdellä parilla.</p>
+      </div>
+
+      <div class="card grid36-wrap">
+        <h2>Kaikki 36 yhdistelmää</h2>
+        <p class="caption" style="margin-top:0;">Jokainen ruutu on yksi 36 yhtä todennäköisestä parista. Väri kertoo, kuinka moni pari tuottaa saman summan — tummempi väri, enemmän pareja. Kehystetty ruutu on viimeisin heitto.</p>
+        <div class="grid36" id="grid36"></div>
+      </div>
+    </section>
+
+    <!-- THREE DICE -->
+    <section class="panel" id="panel-dice3">
+      <p class="intro">Kolmen nopan summa keskittyy entistä voimakkaammin keskelle: ääripäät 3 ja 18 syntyvät vain yhdellä tavalla 216:sta.</p>
+
+      <div class="stage">
+        <div class="die" id="dice3VisualA"><div class="die__pips" id="dice3PipsA"></div></div>
+        <div class="die" id="dice3VisualB"><div class="die__pips" id="dice3PipsB"></div></div>
+        <div class="die" id="dice3VisualC"><div class="die__pips" id="dice3PipsC"></div></div>
+      </div>
+
+      <div class="controls">
+        <button class="btn" onclick="rollDice3(1)">Heitä 1</button>
+        <button class="btn" onclick="rollDice3(10)">Heitä 10</button>
+        <button class="btn" onclick="rollDice3(100)">Heitä 100</button>
+        <button class="btn btn--ghost" onclick="resetDice3()">Tyhjennä</button>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat">
+          <span class="stat__label">Heittoja yhteensä</span>
+          <span class="stat__value" id="dice3Total">0</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Summan jakauma (3–18)</h2>
+        <svg class="chart" id="dice3Chart" viewBox="0 0 400 190"></svg>
+        <div class="legend">
+          <span><span class="swatch swatch--observed"></span>Havaittu määrä</span>
+          <span><span class="swatch swatch--expected"></span>Teoreettinen odotusarvo</span>
+        </div>
+        <p class="caption">Summat 10 ja 11 ovat todennäköisimmät (27 tapaa 216:sta). Jakauma muistuttaa jo kellokäyrää, vaikka taustalla on vain kolme tasaista noppaa — tämä on keskeisen raja-arvolauseen alku.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="hint">Tehty suurten lukujen lain ja todennäköisyysjakaumien havainnollistamiseen.</footer>
+</div>
+
+<script>
+  // ---------- state ----------
+  const coin = { heads: 0, tails: 0, history: [] };
+  const die1 = { counts: [0,0,0,0,0,0] };
+  const dice2 = { counts: new Array(11).fill(0), lastA: 1, lastB: 1 };
+  const dice3 = { counts: new Array(16).fill(0), lastA: 1, lastB: 1, lastC: 1 };
+  const WAYS3 = new Array(16).fill(0);
+  for (let a = 1; a <= 6; a++) {
+    for (let b = 1; b <= 6; b++) {
+      for (let c = 1; c <= 6; c++) {
+        WAYS3[a + b + c - 3]++;
+      }
+    }
+  }
+
+  const PIPS = {
+    1: [[50,50]],
+    2: [[25,25],[75,75]],
+    3: [[25,25],[50,50],[75,75]],
+    4: [[25,25],[75,25],[25,75],[75,75]],
+    5: [[25,25],[75,25],[50,50],[25,75],[75,75]],
+    6: [[25,18],[75,18],[25,50],[75,50],[25,82],[75,82]]
+  };
+
+  function setDieFace(pipsEl, dieEl, face) {
+    pipsEl.innerHTML = PIPS[face].map(function(p) {
+      return '<span class="die__pip" style="left:' + p[0] + '%;top:' + p[1] + '%;"></span>';
+    }).join('');
+    dieEl.classList.remove('spin');
+    void dieEl.offsetWidth;
+    dieEl.classList.add('spin');
+  }
+
+  function fmtPct(part, total) {
+    if (!total) return '–';
+    return (Math.round((part / total) * 1000) / 10) + ' %';
+  }
+
+  // ---------- generic bar chart ----------
+  function renderBarChart(svg, data) {
+    const w = 400, h = 190;
+    const pad = { top: 12, right: 6, bottom: 30, left: 6 };
+    const plotW = w - pad.left - pad.right;
+    const plotH = h - pad.top - pad.bottom;
+    const n = data.length;
+    const gap = n > 8 ? 4 : 10;
+    const barW = (plotW - gap * (n - 1)) / n;
+    const maxVal = Math.max(1, ...data.map(function(d){ return Math.max(d.value, d.expected); }));
+    let out = '';
+    data.forEach(function(d, i) {
+      const x = pad.left + i * (barW + gap);
+      const barH = (d.value / maxVal) * plotH;
+      const y = pad.top + (plotH - barH);
+      const expY = pad.top + (plotH - (d.expected / maxVal) * plotH);
+      out += '<rect x="' + x.toFixed(1) + '" y="' + y.toFixed(1) + '" width="' + barW.toFixed(1) + '" height="' + Math.max(0,barH).toFixed(1) + '" rx="3" class="bar"></rect>';
+      out += '<line x1="' + (x - 2).toFixed(1) + '" y1="' + expY.toFixed(1) + '" x2="' + (x + barW + 2).toFixed(1) + '" y2="' + expY.toFixed(1) + '" class="expected-line"></line>';
+      out += '<text x="' + (x + barW/2).toFixed(1) + '" y="' + (h - 14) + '" text-anchor="middle" class="axis-label">' + d.label + '</text>';
+      if (d.value > 0) {
+        out += '<text x="' + (x + barW/2).toFixed(1) + '" y="' + Math.max(pad.top+10, y - 5).toFixed(1) + '" text-anchor="middle" class="value-label">' + d.value + '</text>';
+      }
+    });
+    svg.innerHTML = out;
+  }
+
+  // ---------- running-proportion line chart ----------
+  function renderLineChart(svg, history, expected) {
+    const w = 380, h = 140;
+    const pad = { top: 10, right: 8, bottom: 22, left: 26 };
+    const plotW = w - pad.left - pad.right;
+    const plotH = h - pad.top - pad.bottom;
+    if (history.length === 0) { svg.innerHTML = ''; return; }
+    let pts = history;
+    const maxPoints = 220;
+    if (pts.length > maxPoints) {
+      const step = pts.length / maxPoints;
+      const sampled = [];
+      for (let i = 0; i < maxPoints; i++) sampled.push(pts[Math.floor(i * step)]);
+      sampled.push(pts[pts.length - 1]);
+      pts = sampled;
+    }
+    const n = pts.length;
+    const xStep = n > 1 ? plotW / (n - 1) : 0;
+    let d = '';
+    pts.forEach(function(v, i) {
+      const x = pad.left + i * xStep;
+      const y = pad.top + (1 - v) * plotH;
+      d += (i === 0 ? 'M' : 'L') + x.toFixed(1) + ',' + y.toFixed(1) + ' ';
+    });
+    const expY = pad.top + (1 - expected) * plotH;
+    let out = '<line x1="' + pad.left + '" y1="' + expY.toFixed(1) + '" x2="' + (pad.left + plotW) + '" y2="' + expY.toFixed(1) + '" class="expected-line"></line>';
+    out += '<path d="' + d + '" class="observed"></path>';
+    out += '<text x="' + (pad.left - 5) + '" y="' + (pad.top + 4) + '" text-anchor="end" class="axis-label">1</text>';
+    out += '<text x="' + (pad.left - 5) + '" y="' + (pad.top + plotH + 2) + '" text-anchor="end" class="axis-label">0</text>';
+    out += '<text x="' + (pad.left + plotW) + '" y="' + (h - 4) + '" text-anchor="end" class="axis-label">' + history.length + ' heittoa</text>';
+    svg.innerHTML = out;
+  }
+
+  // ---------- coin ----------
+  function flipCoin(n) {
+    let lastHeads = true;
+    for (let i = 0; i < n; i++) {
+      const isHeads = Math.random() < 0.5;
+      lastHeads = isHeads;
+      if (isHeads) coin.heads++; else coin.tails++;
+      coin.history.push(coin.heads / (coin.heads + coin.tails));
+    }
+    const el = document.getElementById('coinVisual');
+    el.classList.remove('spin');
+    void el.offsetWidth;
+    el.classList.add('spin');
+    document.getElementById('coinFace').textContent = lastHeads ? 'KR' : 'KL';
+    renderCoin();
+  }
+  function resetCoin() {
+    coin.heads = 0; coin.tails = 0; coin.history = [];
+    document.getElementById('coinFace').textContent = '–';
+    renderCoin();
+  }
+  function renderCoin() {
+    const total = coin.heads + coin.tails;
+    document.getElementById('coinHeadsCount').textContent = coin.heads;
+    document.getElementById('coinTailsCount').textContent = coin.tails;
+    document.getElementById('coinHeadsPct').textContent = fmtPct(coin.heads, total);
+    document.getElementById('coinTailsPct').textContent = fmtPct(coin.tails, total);
+    document.getElementById('coinTotal').textContent = total;
+    renderBarChart(document.getElementById('coinChart'), [
+      { label: 'Kruuna', value: coin.heads, expected: total / 2 },
+      { label: 'Klaava', value: coin.tails, expected: total / 2 }
+    ]);
+    renderLineChart(document.getElementById('coinLineChart'), coin.history, 0.5);
+  }
+
+  // ---------- one die ----------
+  function rollDie(n) {
+    let last = 1;
+    for (let i = 0; i < n; i++) {
+      last = 1 + Math.floor(Math.random() * 6);
+      die1.counts[last - 1]++;
+    }
+    setDieFace(document.getElementById('die1Pips'), document.getElementById('die1Visual'), last);
+    renderDie1();
+  }
+  function resetDie1() {
+    die1.counts = [0,0,0,0,0,0];
+    renderDie1();
+  }
+  function renderDie1() {
+    const total = die1.counts.reduce(function(a,b){ return a+b; }, 0);
+    const expected = total / 6;
+    document.getElementById('die1Total').textContent = total;
+    renderBarChart(document.getElementById('die1Chart'), die1.counts.map(function(c,i){
+      return { label: String(i+1), value: c, expected: expected };
+    }));
+  }
+
+  // ---------- two dice ----------
+  function waysForSum(s) { return 6 - Math.abs(s - 7); }
+  function rollDice2(n) {
+    let a = 1, b = 1;
+    for (let i = 0; i < n; i++) {
+      a = 1 + Math.floor(Math.random() * 6);
+      b = 1 + Math.floor(Math.random() * 6);
+      dice2.counts[a + b - 2]++;
+    }
+    dice2.lastA = a; dice2.lastB = b;
+    setDieFace(document.getElementById('dice2PipsA'), document.getElementById('dice2VisualA'), a);
+    setDieFace(document.getElementById('dice2PipsB'), document.getElementById('dice2VisualB'), b);
+    renderDice2();
+  }
+  function resetDice2() {
+    dice2.counts = new Array(11).fill(0);
+    renderDice2();
+  }
+  function renderDice2() {
+    const total = dice2.counts.reduce(function(a,b){ return a+b; }, 0);
+    document.getElementById('dice2Total').textContent = total;
+    renderBarChart(document.getElementById('dice2Chart'), dice2.counts.map(function(c, idx) {
+      const sum = idx + 2;
+      return { label: String(sum), value: c, expected: total * (waysForSum(sum) / 36) };
+    }));
+    renderGrid36();
+  }
+  function renderGrid36() {
+    const el = document.getElementById('grid36');
+    let out = '';
+    for (let a = 1; a <= 6; a++) {
+      for (let b = 1; b <= 6; b++) {
+        const sum = a + b;
+        const freq = waysForSum(sum);
+        const opacity = 12 + freq * 14;
+        const isHit = (dice2.lastA === a && dice2.lastB === b);
+        out += '<div class="grid36__cell' + (isHit ? ' hit' : '') + '" style="background-color: color-mix(in srgb, var(--empirical) ' + opacity + '%, var(--surface));">' + sum + '</div>';
+      }
+    }
+    el.innerHTML = out;
+  }
+
+  // ---------- three dice ----------
+  function rollDice3(n) {
+    let a = 1, b = 1, c = 1;
+    for (let i = 0; i < n; i++) {
+      a = 1 + Math.floor(Math.random() * 6);
+      b = 1 + Math.floor(Math.random() * 6);
+      c = 1 + Math.floor(Math.random() * 6);
+      dice3.counts[a + b + c - 3]++;
+    }
+    dice3.lastA = a; dice3.lastB = b; dice3.lastC = c;
+    setDieFace(document.getElementById('dice3PipsA'), document.getElementById('dice3VisualA'), a);
+    setDieFace(document.getElementById('dice3PipsB'), document.getElementById('dice3VisualB'), b);
+    setDieFace(document.getElementById('dice3PipsC'), document.getElementById('dice3VisualC'), c);
+    renderDice3();
+  }
+  function resetDice3() {
+    dice3.counts = new Array(16).fill(0);
+    renderDice3();
+  }
+  function renderDice3() {
+    const total = dice3.counts.reduce(function(a,b){ return a+b; }, 0);
+    document.getElementById('dice3Total').textContent = total;
+    renderBarChart(document.getElementById('dice3Chart'), dice3.counts.map(function(c, idx) {
+      const sum = idx + 3;
+      return { label: String(sum), value: c, expected: total * (WAYS3[idx] / 216) };
+    }));
+  }
+
+  // ---------- tabs ----------
+  document.querySelectorAll('nav.tabs .tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('nav.tabs .tab').forEach(function(b){ b.classList.remove('active'); });
+      document.querySelectorAll('.panel').forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  // ---------- initial paint ----------
+  setDieFace(document.getElementById('die1Pips'), document.getElementById('die1Visual'), 1);
+  setDieFace(document.getElementById('dice2PipsA'), document.getElementById('dice2VisualA'), 1);
+  setDieFace(document.getElementById('dice2PipsB'), document.getElementById('dice2VisualB'), 1);
+  setDieFace(document.getElementById('dice3PipsA'), document.getElementById('dice3VisualA'), 1);
+  setDieFace(document.getElementById('dice3PipsB'), document.getElementById('dice3VisualB'), 1);
+  setDieFace(document.getElementById('dice3PipsC'), document.getElementById('dice3VisualC'), 1);
+  renderCoin();
+  renderDie1();
+  renderDice2();
+  renderDice3();
+</script>
+
+</body>
+</html>

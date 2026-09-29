@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Complex Plane Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBFAF5;
+    --bg-panel: #F1EFE6;
+    --ink: #20242C;
+    --ink-soft: #5B6270;
+    --line: #D7D2C2;
+    --grid: #E3DFD1;
+    --real: #C6372B;
+    --imag: #2456C7;
+    --z1: #0E7C74;
+    --z2: #B8630B;
+    --result: #7238A8;
+    --chip-bg: #FFFFFF;
+    --chip-border: #D7D2C2;
+    --radius: 10px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #191A16;
+      --bg-panel: #232420;
+      --ink: #ECE9DD;
+      --ink-soft: #A9A497;
+      --line: #3A3B34;
+      --grid: #2C2D27;
+      --real: #FF6B5C;
+      --imag: #6FA0FF;
+      --z1: #3FC7BB;
+      --z2: #E0993F;
+      --result: #B48CE0;
+      --chip-bg: #232420;
+      --chip-border: #3A3B34;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #191A16;
+    --bg-panel: #232420;
+    --ink: #ECE9DD;
+    --ink-soft: #A9A497;
+    --line: #3A3B34;
+    --grid: #2C2D27;
+    --real: #FF6B5C;
+    --imag: #6FA0FF;
+    --z1: #3FC7BB;
+    --z2: #E0993F;
+    --result: #B48CE0;
+    --chip-bg: #232420;
+    --chip-border: #3A3B34;
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    scroll-padding-top: env(safe-area-inset-top, 0px);
+  }
+  h1, h2, .serif { font-family: 'Literata', Georgia, 'Times New Roman', serif; }
+
+  .app {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 20px 48px;
+  }
+
+  header {
+    margin-bottom: 22px;
+  }
+  header h1 {
+    font-size: clamp(1.5rem, 3.2vw, 2.1rem);
+    font-weight: 600;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  header p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    max-width: 62ch;
+    line-height: 1.5;
+  }
+
+  .layout {
+    display: grid;
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px;
+  }
+
+  .section-title {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+    font-weight: 600;
+  }
+
+  .op-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .op-btn {
+    border: 1px solid var(--chip-border);
+    background: var(--chip-bg);
+    color: var(--ink);
+    border-radius: 8px;
+    padding: 9px 8px;
+    font-size: 0.92rem;
+    font-family: 'Literata', serif;
+    cursor: pointer;
+    transition: transform 0.12s ease, border-color 0.12s ease;
+  }
+  .op-btn:hover { border-color: var(--ink-soft); }
+  .op-btn:active { transform: scale(0.97); }
+  .op-btn.active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+  .op-btn:focus-visible, .toggle-chip:focus-visible, input:focus-visible {
+    outline: 2px solid var(--result);
+    outline-offset: 2px;
+  }
+
+  .num-block {
+    margin-bottom: 16px;
+    padding: 12px 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bg);
+  }
+  .num-block .label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+  }
+  .swatch {
+    width: 10px; height: 10px; border-radius: 50%;
+    display: inline-block;
+  }
+  .field {
+    display: grid;
+    grid-template-columns: 22px 1fr 52px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .field label { font-size: 0.85rem; color: var(--ink-soft); }
+  .field.re label { color: var(--real); font-weight: 600; }
+  .field.im label { color: var(--imag); font-weight: 600; }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--ink-soft);
+  }
+  input[type="number"] {
+    width: 100%;
+    background: var(--bg-panel);
+    border: 1px solid var(--chip-border);
+    color: var(--ink);
+    border-radius: 6px;
+    padding: 4px 6px;
+    font-size: 0.85rem;
+    font-family: inherit;
+  }
+  .scalar-block { opacity: 1; transition: opacity 0.15s ease; }
+  .scalar-block.disabled { opacity: 0.35; pointer-events: none; }
+
+  .toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .toggle-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid var(--chip-border);
+    background: var(--chip-bg);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 0.82rem;
+    cursor: pointer;
+    color: var(--ink-soft);
+    user-select: none;
+  }
+  .toggle-chip[data-on="true"] { color: var(--ink); border-color: var(--ink-soft); }
+  .toggle-chip .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--dotcolor, var(--ink-soft));
+    opacity: 0.35;
+  }
+  .toggle-chip[data-on="true"] .dot { opacity: 1; }
+
+  .plot-wrap {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 12px;
+  }
+  #plot {
+    width: 100%;
+    height: min(62vw, 460px);
+    display: block;
+    border-radius: 6px;
+    touch-action: none;
+    cursor: grab;
+  }
+
+  .math-panels {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 12px;
+  }
+  .math-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+  }
+  .math-card h3 {
+    margin: 0 0 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .math-line {
+    font-family: 'Literata', serif;
+    font-size: 1.02rem;
+    line-height: 1.7;
+    margin: 4px 0;
+  }
+  .math-sub {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .re-c { color: var(--real); font-weight: 600; }
+  .im-c { color: var(--imag); font-weight: 600; }
+  .r-c { color: var(--ink); font-weight: 600; }
+
+  .result-card { border-color: var(--result); }
+  .result-card h3 .swatch { background: var(--result); }
+
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 14px;
+  }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend .swatch2 { width: 14px; height: 3px; border-radius: 2px; display: inline-block; }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="app">
+  <header>
+    <h1>Complex Plane Explorer</h1>
+    <p>Drag the points on the plane or use the sliders to change <span class="serif" style="color:var(--z1)">z&#8321;</span> and <span class="serif" style="color:var(--z2)">z&#8322;</span>. Pick an operation to see the result plotted and worked out in both forms.</p>
+  </header>
+
+  <div class="layout">
+    <div class="panel" id="controls">
+      <p class="section-title">Operation</p>
+      <div class="op-row" id="opRow">
+        <button class="op-btn" data-op="add">z&#8321; + z&#8322;</button>
+        <button class="op-btn" data-op="sub">z&#8321; &minus; z&#8322;</button>
+        <button class="op-btn" data-op="mul">z&#8321; &times; z&#8322;</button>
+        <button class="op-btn" data-op="scalar">k &times; z&#8321;</button>
+      </div>
+
+      <p class="section-title">Numbers</p>
+      <div class="num-block">
+        <div class="label"><span class="swatch" style="background:var(--z1)"></span>z&#8321;</div>
+        <div class="field re">
+          <label>Re</label>
+          <input type="range" id="z1re" min="-6" max="6" step="0.1" value="2">
+          <input type="number" id="z1reN" min="-6" max="6" step="0.1" value="2">
+        </div>
+        <div class="field im">
+          <label>Im</label>
+          <input type="range" id="z1im" min="-6" max="6" step="0.1" value="1">
+          <input type="number" id="z1imN" min="-6" max="6" step="0.1" value="1">
+        </div>
+      </div>
+
+      <div class="num-block" id="z2block">
+        <div class="label"><span class="swatch" style="background:var(--z2)"></span>z&#8322;</div>
+        <div class="field re">
+          <label>Re</label>
+          <input type="range" id="z2re" min="-6" max="6" step="0.1" value="-1.5">
+          <input type="number" id="z2reN" min="-6" max="6" step="0.1" value="-1.5">
+        </div>
+        <div class="field im">
+          <label>Im</label>
+          <input type="range" id="z2im" min="-6" max="6" step="0.1" value="2.5">
+          <input type="number" id="z2imN" min="-6" max="6" step="0.1" value="2.5">
+        </div>
+      </div>
+
+      <div class="num-block scalar-block" id="scalarBlock">
+        <div class="label"><span class="swatch" style="background:var(--ink-soft)"></span>scalar k</div>
+        <div class="field re">
+          <label>k</label>
+          <input type="range" id="kval" min="-3" max="3" step="0.1" value="1.5">
+          <input type="number" id="kvalN" min="-3" max="3" step="0.1" value="1.5">
+        </div>
+      </div>
+
+      <p class="section-title">Show on plot</p>
+      <div class="toggles" id="toggleRow">
+        <span class="toggle-chip" data-key="z1" data-on="true" style="--dotcolor:var(--z1)"><span class="dot"></span>z&#8321;</span>
+        <span class="toggle-chip" data-key="z2" data-on="true" style="--dotcolor:var(--z2)"><span class="dot"></span>z&#8322;</span>
+        <span class="toggle-chip" data-key="result" data-on="true" style="--dotcolor:var(--result)"><span class="dot"></span>result</span>
+        <span class="toggle-chip" data-key="proj" data-on="true" style="--dotcolor:var(--ink-soft)"><span class="dot"></span>projections</span>
+        <span class="toggle-chip" data-key="polar" data-on="false" style="--dotcolor:var(--ink-soft)"><span class="dot"></span>angle arcs</span>
+      </div>
+    </div>
+
+    <div>
+      <div class="plot-wrap">
+        <canvas id="plot"></canvas>
+        <div class="legend">
+          <span><span class="swatch2" style="background:var(--real)"></span>real axis / real part</span>
+          <span><span class="swatch2" style="background:var(--imag)"></span>imaginary axis / imaginary part</span>
+        </div>
+      </div>
+
+      <div class="math-panels" id="mathPanels"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const state = {
+    z1: { re: 2, im: 1 },
+    z2: { re: -1.5, im: 2.5 },
+    k: 1.5,
+    op: 'add',
+    show: { z1: true, z2: true, result: true, proj: true, polar: false }
+  };
+
+  const $ = id => document.getElementById(id);
+  const canvas = $('plot');
+  const ctx = canvas.getContext('2d');
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  // ---------- math helpers ----------
+  function polarOf(z){
+    const r = Math.hypot(z.re, z.im);
+    const theta = Math.atan2(z.im, z.re); // radians
+    return { r, theta };
+  }
+  function fmt(n){
+    if (Math.abs(n) < 1e-9) n = 0;
+    return (Math.round(n * 100) / 100).toString();
+  }
+  function signed(n, unit){
+    const v = fmt(Math.abs(n));
+    const sign = n < 0 ? '&minus;' : '+';
+    return { sign, text: unit ? (v + unit) : v };
+  }
+
+  function computeResult(){
+    const { z1, z2, k, op } = state;
+    switch(op){
+      case 'add': return { re: z1.re + z2.re, im: z1.im + z2.im };
+      case 'sub': return { re: z1.re - z2.re, im: z1.im - z2.im };
+      case 'mul': return { re: z1.re*z2.re - z1.im*z2.im, im: z1.re*z2.im + z1.im*z2.re };
+      case 'scalar': return { re: k*z1.re, im: k*z1.im };
+    }
+  }
+
+  // ---------- canvas transform ----------
+  let W = 0, H = 0, dpr = 1, scale = 40, originX = 0, originY = 0;
+
+  function autoRange(){
+    const pts = [state.z1, state.z2, computeResult()];
+    let maxAbs = 3;
+    pts.forEach(p => { maxAbs = Math.max(maxAbs, Math.abs(p.re), Math.abs(p.im)); });
+    return Math.ceil(maxAbs * 1.35);
+  }
+
+  function resizeCanvas(){
+    const rect = canvas.getBoundingClientRect();
+    dpr = window.devicePixelRatio || 1;
+    W = rect.width; H = rect.height;
+    canvas.width = Math.round(W * dpr);
+    canvas.height = Math.round(H * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    originX = W / 2; originY = H / 2;
+    const range = autoRange();
+    scale = Math.min(W, H) / (2 * range);
+    draw();
+  }
+
+  function toPx(z){ return { x: originX + z.re * scale, y: originY - z.im * scale }; }
+  function toComplex(px, py){ return { re: (px - originX) / scale, im: (originY - py) / scale }; }
+
+  function drawArrow(from, to, color, width){
+    const dx = to.x - from.x, dy = to.y - from.y;
+    const len = Math.hypot(dx, dy);
+    if (len < 1) return;
+    const ux = dx/len, uy = dy/len;
+    const headLen = 10;
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.lineWidth = width || 2.4;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(from.x, from.y);
+    ctx.lineTo(to.x - ux*headLen*0.6, to.y - uy*headLen*0.6);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(to.x, to.y);
+    ctx.lineTo(to.x - headLen*ux + headLen*0.5*(-uy), to.y - headLen*uy + headLen*0.5*(ux));
+    ctx.lineTo(to.x - headLen*ux - headLen*0.5*(-uy), to.y - headLen*uy - headLen*0.5*(ux));
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  function labelParts(z, name, color){
+    const parts = [{ text: name + ' = ', color: color }];
+    parts.push({ text: fmt(z.re), color: cssVar('--real') });
+    parts.push({ text: z.im < 0 ? ' \u2212 ' : ' + ', color: cssVar('--ink-soft') });
+    parts.push({ text: fmt(Math.abs(z.im)) + 'i', color: cssVar('--imag') });
+    return parts;
+  }
+
+  function draw(){
+    const bg = cssVar('--bg-panel');
+    const grid = cssVar('--grid');
+    const real = cssVar('--real');
+    const imag = cssVar('--imag');
+    const inkSoft = cssVar('--ink-soft');
+    const ink = cssVar('--ink');
+
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = bg;
+    ctx.fillRect(0, 0, W, H);
+
+    const range = autoRange();
+
+    // grid
+    ctx.strokeStyle = grid;
+    ctx.lineWidth = 1;
+    for (let i = -range; i <= range; i++){
+      const p1 = toPx({ re: i, im: -range }), p2 = toPx({ re: i, im: range });
+      ctx.beginPath(); ctx.moveTo(p1.x, 0); ctx.lineTo(p1.x, H); ctx.stroke();
+      const q1 = toPx({ re: -range, im: i });
+      ctx.beginPath(); ctx.moveTo(0, q1.y); ctx.lineTo(W, q1.y); ctx.stroke();
+    }
+
+    // axes
+    ctx.lineWidth = 2;
+    ctx.strokeStyle = real;
+    ctx.beginPath(); ctx.moveTo(0, originY); ctx.lineTo(W, originY); ctx.stroke();
+    ctx.strokeStyle = imag;
+    ctx.beginPath(); ctx.moveTo(originX, 0); ctx.lineTo(originX, H); ctx.stroke();
+
+    // axis ticks / integers
+    ctx.font = '11px Inter, sans-serif';
+    ctx.fillStyle = inkSoft;
+    for (let i = -range; i <= range; i++){
+      if (i === 0) continue;
+      const p = toPx({ re: i, im: 0 });
+      if (i % 2 === 0) ctx.fillText(i.toString(), p.x - 4, originY + 14);
+      const q = toPx({ re: 0, im: i });
+      if (i % 2 === 0) ctx.fillText(i.toString(), originX + 6, q.y + 4);
+    }
+    ctx.fillStyle = real; ctx.font = '600 12px Inter, sans-serif';
+    ctx.fillText('Re', W - 22, originY - 8);
+    ctx.fillStyle = imag;
+    ctx.fillText('Im', originX + 8, 14);
+
+    const z1 = state.z1, z2 = state.z2, res = computeResult();
+
+    // projections
+    if (state.show.proj){
+      [ state.show.z1 && [z1, 0.85], state.show.z2 && [z2, 0.85], state.show.result && [res, 1] ]
+        .filter(Boolean)
+        .forEach(([z]) => {
+          const p = toPx(z);
+          ctx.setLineDash([4,4]);
+          ctx.lineWidth = 1.3;
+          ctx.strokeStyle = real;
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x, originY); ctx.stroke();
+          ctx.strokeStyle = imag;
+          ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(originX, p.y); ctx.stroke();
+          ctx.setLineDash([]);
+        });
+    }
+
+    // extension: z2 translated so it starts at the tip of z1 and lands on the result
+    // (shows the tip-to-tail construction behind addition/subtraction)
+    if (state.show.z1 && state.show.z2 && state.show.result && (state.op === 'add' || state.op === 'sub')){
+      const from = toPx(z1);
+      const to = toPx(res);
+      ctx.save();
+      ctx.globalAlpha = 0.3;
+      ctx.setLineDash([5, 5]);
+      ctx.strokeStyle = cssVar('--z2');
+      ctx.lineWidth = 1.8;
+      ctx.beginPath(); ctx.moveTo(from.x, from.y); ctx.lineTo(to.x, to.y); ctx.stroke();
+      ctx.restore();
+    }
+
+    // angle arcs (canvas y is flipped relative to math convention, so angle sign inverts)
+    if (state.show.polar){
+      [ state.show.z1 && [z1, cssVar('--z1'), 22], state.show.z2 && [z2, cssVar('--z2'), 30], state.show.result && [res, cssVar('--result'), 38] ]
+        .filter(Boolean)
+        .forEach(([z, color, rad]) => {
+          const { theta } = polarOf(z);
+          ctx.strokeStyle = color;
+          ctx.lineWidth = 1.6;
+          ctx.beginPath();
+          if (theta >= 0) ctx.arc(originX, originY, rad, -theta, 0, false);
+          else ctx.arc(originX, originY, rad, 0, -theta, true);
+          ctx.stroke();
+        });
+    }
+
+    // vectors: draw arrows + tip dots first, and collect where each label wants to sit
+    const labelDefs = [];
+    function addVector(z, name, color, lineWidth, dotR){
+      const p = toPx(z);
+      drawArrow({x: originX, y: originY}, p, color, lineWidth);
+      ctx.fillStyle = color;
+      ctx.beginPath(); ctx.arc(p.x, p.y, dotR, 0, 7); ctx.fill();
+      const len = Math.hypot(p.x - originX, p.y - originY) || 1;
+      labelDefs.push({ z, name, color, tip: p, dir: { x: (p.x - originX)/len, y: (p.y - originY)/len } });
+    }
+    if (state.show.z1) addVector(z1, 'z\u2081', cssVar('--z1'), 2.4, 3.5);
+    if (state.show.z2) addVector(z2, 'z\u2082', cssVar('--z2'), 2.4, 3.5);
+    if (state.show.result) addVector(res, opSymbol(), cssVar('--result'), 3, 4.2);
+
+    layoutAndDrawLabels(labelDefs);
+
+    // origin dot
+    ctx.fillStyle = ink;
+    ctx.beginPath(); ctx.arc(originX, originY, 2.5, 0, 7); ctx.fill();
+  }
+
+  // Places each vector's label just beyond its own arrowhead, continuing the
+  // vector's direction outward (so the label rarely sits on top of its own line),
+  // then runs a small AABB-separation pass so overlapping labels push apart —
+  // with a faint dotted leader line reconnecting a label to its point if it moved.
+  function layoutAndDrawLabels(labelDefs){
+    if (!labelDefs.length) return;
+    ctx.font = '600 13px Literata, Georgia, serif';
+    const lineH = 17;
+    const startOffset = 15;
+
+    const boxes = labelDefs.map(d => {
+      const parts = labelParts(d.z, d.name, d.color);
+      const w = parts.reduce((sum, p) => sum + ctx.measureText(p.text).width, 0);
+      const anchorX = d.tip.x + d.dir.x * startOffset;
+      const anchorY = d.tip.y + d.dir.y * startOffset;
+      const alignLeft = d.dir.x >= -0.05;
+      return {
+        parts, w, h: lineH,
+        x: alignLeft ? anchorX : anchorX - w,
+        y: anchorY - lineH / 2,
+        tip: d.tip,
+        origCx: anchorX, origCy: anchorY
+      };
+    });
+
+    // relax pairwise overlaps by nudging boxes apart along their shallower axis
+    const pad = 6;
+    for (let iter = 0; iter < 30; iter++){
+      let moved = false;
+      for (let i = 0; i < boxes.length; i++){
+        for (let j = i + 1; j < boxes.length; j++){
+          const a = boxes[i], b = boxes[j];
+          const ax0 = a.x - pad, ax1 = a.x + a.w + pad, ay0 = a.y - pad, ay1 = a.y + a.h + pad;
+          const bx0 = b.x - pad, bx1 = b.x + b.w + pad, by0 = b.y - pad, by1 = b.y + b.h + pad;
+          const ox = Math.min(ax1, bx1) - Math.max(ax0, bx0);
+          const oy = Math.min(ay1, by1) - Math.max(ay0, by0);
+          if (ox > 0 && oy > 0){
+            moved = true;
+            const acx = a.x + a.w/2, bcx = b.x + b.w/2, acy = a.y + a.h/2, bcy = b.y + b.h/2;
+            if (ox < oy){
+              const s = ox/2 + 0.5;
+              if (acx < bcx){ a.x -= s; b.x += s; } else { a.x += s; b.x -= s; }
+            } else {
+              const s = oy/2 + 0.5;
+              if (acy < bcy){ a.y -= s; b.y += s; } else { a.y += s; b.y -= s; }
+            }
+          }
+        }
+      }
+      if (!moved) break;
+    }
+
+    // keep every box within the canvas
+    boxes.forEach(b => {
+      b.x = Math.max(4, Math.min(W - b.w - 4, b.x));
+      b.y = Math.max(4, Math.min(H - b.h - 4, b.y));
+    });
+
+    boxes.forEach(b => {
+      const cx = b.x + b.w/2, cy = b.y + b.h/2;
+      if (Math.hypot(cx - b.origCx, cy - b.origCy) > 9){
+        ctx.save();
+        ctx.globalAlpha = 0.4;
+        ctx.setLineDash([2, 3]);
+        ctx.strokeStyle = cssVar('--ink-soft');
+        ctx.lineWidth = 1;
+        ctx.beginPath(); ctx.moveTo(b.tip.x, b.tip.y); ctx.lineTo(cx, cy); ctx.stroke();
+        ctx.restore();
+      }
+      let tx = b.x;
+      ctx.textBaseline = 'middle';
+      b.parts.forEach(p => {
+        ctx.fillStyle = p.color;
+        ctx.fillText(p.text, tx, cy);
+        tx += ctx.measureText(p.text).width;
+      });
+    });
+  }
+
+  function opSymbol(){
+    switch(state.op){
+      case 'add': return 'z\u2081+z\u2082';
+      case 'sub': return 'z\u2081\u2212z\u2082';
+      case 'mul': return 'z\u2081\u00d7z\u2082';
+      case 'scalar': return 'k\u00d7z\u2081';
+    }
+  }
+
+  // ---------- math panels ----------
+  function cartesianLine(z, name){
+    const im = signed(z.im, 'i');
+    return `<span class="serif">${name} = <span class="re-c">${fmt(z.re)}</span> ${im.sign} <span class="im-c">${im.text}</span></span>`;
+  }
+  function polarLine(z){
+    const { r, theta } = polarOf(z);
+    const deg = theta * 180 / Math.PI;
+    return `r = <span class="r-c">${fmt(r)}</span>, &theta; = <span class="r-c">${fmt(deg)}&deg;</span>
+      <div class="math-line" style="font-size:0.95rem">= ${fmt(r)}(cos ${fmt(deg)}&deg; + i&nbsp;sin ${fmt(deg)}&deg;) = ${fmt(r)}&middot;e<sup>i${fmt(theta)}</sup></div>`;
+  }
+
+  function renderMath(){
+    const z1 = state.z1, z2 = state.z2, res = computeResult();
+    const cards = [];
+
+    if (state.show.z1){
+      cards.push(`<div class="math-card"><h3><span class="swatch" style="background:var(--z1)"></span>z&#8321; &mdash; cartesian &amp; polar</h3>
+        <div class="math-line">${cartesianLine(z1, 'z\u2081')}</div>
+        <div class="math-sub">${polarLine(z1)}</div></div>`);
+    }
+    if (state.show.z2 && state.op !== 'scalar'){
+      cards.push(`<div class="math-card"><h3><span class="swatch" style="background:var(--z2)"></span>z&#8322; &mdash; cartesian &amp; polar</h3>
+        <div class="math-line">${cartesianLine(z2, 'z\u2082')}</div>
+        <div class="math-sub">${polarLine(z2)}</div></div>`);
+    }
+    if (state.op === 'scalar'){
+      cards.push(`<div class="math-card"><h3><span class="swatch" style="background:var(--ink-soft)"></span>scalar k</h3>
+        <div class="math-line serif">k = <span class="r-c">${fmt(state.k)}</span></div>
+        <div class="math-sub">Scalar multiplication scales the length of z&#8321; by |k| and, if k is negative, rotates it by 180&deg;.</div></div>`);
+    }
+
+    let opTitle, derivation;
+    const p1 = polarOf(z1), p2 = polarOf(z2), pr = polarOf(res);
+    if (state.op === 'add'){
+      opTitle = 'z&#8321; + z&#8322;';
+      derivation = `<div class="math-sub">Add real parts and imaginary parts separately: (${fmt(z1.re)} + ${fmt(z2.re)}) + (${fmt(z1.im)} + ${fmt(z2.im)})i</div>`;
+    } else if (state.op === 'sub'){
+      opTitle = 'z&#8321; &minus; z&#8322;';
+      derivation = `<div class="math-sub">Subtract real parts and imaginary parts separately: (${fmt(z1.re)} &minus; ${fmt(z2.re)}) + (${fmt(z1.im)} &minus; ${fmt(z2.im)})i</div>`;
+    } else if (state.op === 'mul'){
+      opTitle = 'z&#8321; &times; z&#8322;';
+      derivation = `<div class="math-sub">Cartesian: (a&#8321;a&#8322; &minus; b&#8321;b&#8322;) + (a&#8321;b&#8322; + a&#8322;b&#8321;)i<br>
+        Polar: multiply the moduli, add the angles &rarr; r = ${fmt(p1.r)}&times;${fmt(p2.r)} = ${fmt(p1.r*p2.r)}, &theta; = ${fmt(p1.theta*180/Math.PI)}&deg; + ${fmt(p2.theta*180/Math.PI)}&deg;</div>`;
+    } else {
+      opTitle = 'k &times; z&#8321;';
+      derivation = `<div class="math-sub">Scale both parts by k: (${fmt(state.k)}&times;${fmt(z1.re)}) + (${fmt(state.k)}&times;${fmt(z1.im)})i</div>`;
+    }
+
+    cards.push(`<div class="math-card result-card"><h3><span class="swatch"></span>Result &mdash; ${opTitle}</h3>
+      <div class="math-line">${cartesianLine(res, 'result')}</div>
+      <div class="math-sub">${polarLine(res)}</div>
+      ${derivation}</div>`);
+
+    $('mathPanels').innerHTML = cards.join('');
+  }
+
+  function renderAll(){ resizeCanvas(); renderMath(); }
+
+  // ---------- wiring ----------
+  function syncPair(rangeId, numId, obj, key){
+    const r = $(rangeId), n = $(numId);
+    function set(v){
+      v = Math.max(parseFloat(r.min), Math.min(parseFloat(r.max), v));
+      obj[key] = v;
+      r.value = v; n.value = v;
+      renderAll();
+    }
+    r.addEventListener('input', () => set(parseFloat(r.value)));
+    n.addEventListener('input', () => { if (n.value !== '' && !isNaN(parseFloat(n.value))) set(parseFloat(n.value)); });
+  }
+  syncPair('z1re','z1reN', state.z1, 're');
+  syncPair('z1im','z1imN', state.z1, 'im');
+  syncPair('z2re','z2reN', state.z2, 're');
+  syncPair('z2im','z2imN', state.z2, 'im');
+  syncPair('kval','kvalN', state, 'k');
+
+  document.querySelectorAll('.op-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.op = btn.dataset.op;
+      document.querySelectorAll('.op-btn').forEach(b => b.classList.toggle('active', b === btn));
+      $('scalarBlock').classList.toggle('disabled', state.op !== 'scalar');
+      $('z2block').style.opacity = state.op === 'scalar' ? 0.5 : 1;
+      renderAll();
+    });
+  });
+  document.querySelector('[data-op="add"]').classList.add('active');
+  $('scalarBlock').classList.add('disabled');
+
+  document.querySelectorAll('.toggle-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const key = chip.dataset.key;
+      state.show[key] = !state.show[key];
+      chip.dataset.on = state.show[key];
+      renderAll();
+    });
+  });
+
+  // dragging points on canvas
+  let dragging = null;
+  function nearest(px, py){
+    const targets = [ ['z1', state.z1], ['z2', state.z2] ];
+    let best = null, bestDist = 22;
+    targets.forEach(([key, z]) => {
+      const p = toPx(z);
+      const d = Math.hypot(p.x - px, p.y - py);
+      if (d < bestDist){ bestDist = d; best = key; }
+    });
+    return best;
+  }
+  function pointerPos(e){
+    const rect = canvas.getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
+  canvas.addEventListener('pointerdown', e => {
+    const pos = pointerPos(e);
+    dragging = nearest(pos.x, pos.y);
+    if (dragging){ canvas.setPointerCapture(e.pointerId); canvas.style.cursor = 'grabbing'; }
+  });
+  canvas.addEventListener('pointermove', e => {
+    if (!dragging) return;
+    const pos = pointerPos(e);
+    const c = toComplex(pos.x, pos.y);
+    const clamp = v => Math.max(-6, Math.min(6, Math.round(v*10)/10));
+    state[dragging].re = clamp(c.re);
+    state[dragging].im = clamp(c.im);
+    $(dragging+'re').value = state[dragging].re; $(dragging+'reN').value = state[dragging].re;
+    $(dragging+'im').value = state[dragging].im; $(dragging+'imN').value = state[dragging].im;
+    renderAll();
+  });
+  canvas.addEventListener('pointerup', () => { dragging = null; canvas.style.cursor = 'grab'; });
+  canvas.addEventListener('pointercancel', () => { dragging = null; canvas.style.cursor = 'grab'; });
+
+  window.addEventListener('resize', resizeCanvas);
+  new ResizeObserver(resizeCanvas).observe(canvas);
+
+  renderAll();
+})();
+</script>
+
+</body>
+</html>

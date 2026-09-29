@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kustannusvertailu — kaksi hinnoittelumallia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F5F0;
+    --panel: #FFFFFF;
+    --ink: #1B1F23;
+    --muted: #5B6560;
+    --line: #DADFD5;
+    --teal: #2B6777;
+    --teal-soft: #DCEAEC;
+    --rasp: #A5346B;
+    --rasp-soft: #F3DDE7;
+    --mustard: #C98A2C;
+    --bad: #B3402F;
+    --good: #2F7A4F;
+    --radius: 10px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181A; --panel: #1C2224; --ink: #ECEDE9; --muted: #9AA39B; --line: #2C3432;
+      --teal: #6FB6C4; --teal-soft: #1E3338; --rasp: #E28AB2; --rasp-soft: #3A2230;
+      --mustard: #E3B15C; --bad: #E3796A; --good: #6FCB92;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181A; --panel: #1C2224; --ink: #ECEDE9; --muted: #9AA39B; --line: #2C3432;
+    --teal: #6FB6C4; --teal-soft: #1E3338; --rasp: #E28AB2; --rasp-soft: #3A2230;
+    --mustard: #E3B15C; --bad: #E3796A; --good: #6FCB92;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 20px 60px; }
+  h1 {
+    font-family: "Newsreader", Georgia, serif; font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0 0 8px; letter-spacing: -0.01em;
+  }
+  .blurb { color: var(--muted); max-width: 64ch; font-size: 0.98rem; }
+  .grid { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 18px 18px 20px;
+  }
+  .panel + .panel { margin-top: 16px; }
+  .planhead { display:flex; align-items:center; gap:8px; font-weight:600; margin-bottom:12px; font-size: 0.95rem; }
+  .dot { width:10px; height:10px; border-radius:50%; }
+  .field { margin-bottom: 14px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label {
+    display: flex; justify-content: space-between; font-size: 0.86rem;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .field label .val { font-family: "Newsreader", serif; font-weight: 600; color: var(--ink); font-size: 0.94rem; }
+  input[type=range] { width: 100%; height: 20px; }
+  .rA { accent-color: var(--teal); }
+  .rB { accent-color: var(--rasp); }
+
+  .eqs {
+    font-family: "Newsreader", serif; font-size: 1.02rem;
+    background: var(--teal-soft); border-radius: var(--radius);
+    padding: 14px 16px; margin-top: 16px; display: grid; gap: 4px;
+  }
+  .eqs .note { font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+  .receipts { display:flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+  .receipt {
+    width: 190px; border: 1px dashed var(--line); border-radius: 8px;
+    padding: 14px; font-family: "IBM Plex Sans", monospace, sans-serif;
+  }
+  .receipt h3 { margin: 0 0 8px; font-family:"Newsreader",serif; font-size: 1.05rem; font-weight:600; }
+  .receipt .row { display:flex; justify-content:space-between; font-size: 0.86rem; margin-bottom: 4px; color: var(--muted); }
+  .receipt .total { border-top: 1px solid var(--line); margin-top: 8px; padding-top: 8px; font-weight: 600; color: var(--ink); display:flex; justify-content:space-between; }
+  .receipt.win { border-color: var(--good); background: color-mix(in srgb, var(--good) 8%, var(--panel)); }
+
+  .status { margin-top: 14px; padding: 10px 14px; border-radius: var(--radius); font-size: 0.92rem; border: 1px solid var(--line); }
+  .status.ok { border-color: var(--good); color: var(--good); background: color-mix(in srgb, var(--good) 10%, var(--panel)); }
+  .status.bad { border-color: var(--bad); color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, var(--panel)); }
+
+  details.steps { margin-top: 18px; }
+  details.steps summary { cursor: pointer; font-size: 0.92rem; color: var(--teal); font-weight: 500; }
+  .steps-body { margin-top: 12px; font-family: "Newsreader", serif; font-size: 1rem; display: grid; gap: 8px; }
+  .steps-body .tag { font-family: "IBM Plex Sans", sans-serif; font-size: 0.75rem; color: var(--muted); }
+
+  .graph-wrap { margin-top: 10px; overflow-x: auto; }
+  .legend { display: flex; gap: 16px; font-size: 0.8rem; color: var(--muted); margin-top: 8px; flex-wrap: wrap; }
+  .legend .line-sw { width: 14px; height: 2px; margin-right: 6px; display:inline-block; vertical-align: middle;}
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="wrap">
+  <header>
+    <h1>Kumpi kannattaa? Kaksi tulostuspalvelun hinnastoa</h1>
+    <p class="blurb">Kopiopisteessä on kaksi hinnastoa: toisessa maksat kiinteän kuukausimaksun ja pienemmän hinnan per tuloste, toisessa ei kiinteää maksua mutta hinta per tuloste on korkeampi. Kumpi hinnasto kannattaa — ja riippuuko se siitä, kuinka paljon tulostat? Etsi kohta, jossa molemmat maksavat saman verran.</p>
+  </header>
+
+  <div class="grid">
+    <div class="col-controls">
+      <div class="panel">
+        <div class="planhead"><span class="dot" style="background:var(--teal)"></span>Hinnasto A</div>
+        <div class="field">
+          <label><span>Kiinteä kuukausimaksu a</span><span class="val" id="v-a">8 €</span></label>
+          <input class="rA" type="range" id="a" min="0" max="40" step="1" value="8">
+        </div>
+        <div class="field">
+          <label><span>Hinta per tuloste b</span><span class="val" id="v-b">0.05 €</span></label>
+          <input class="rA" type="range" id="b" min="0" max="0.5" step="0.01" value="0.05">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="planhead"><span class="dot" style="background:var(--rasp)"></span>Hinnasto B</div>
+        <div class="field">
+          <label><span>Kiinteä kuukausimaksu p</span><span class="val" id="v-p">0 €</span></label>
+          <input class="rB" type="range" id="p" min="0" max="40" step="1" value="0">
+        </div>
+        <div class="field">
+          <label><span>Hinta per tuloste q</span><span class="val" id="v-q">0.15 €</span></label>
+          <input class="rB" type="range" id="q" min="0" max="0.5" step="0.01" value="0.15">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="field">
+          <label><span>Kuukauden tulostemäärä n (kokeiltavaksi)</span><span class="val" id="v-n">100 kpl</span></label>
+          <input type="range" id="n" min="0" max="500" step="5" value="100">
+        </div>
+        <div class="eqs" id="eqs"></div>
+      </div>
+    </div>
+
+    <div class="col-stage">
+      <div class="panel">
+        <div class="receipts">
+          <div class="receipt" id="rec-a">
+            <h3>Hinnasto A</h3>
+            <div class="row"><span>Kiinteä maksu</span><span id="ra-fixed">–</span></div>
+            <div class="row"><span id="ra-nlabel">n tulostetta</span><span id="ra-var">–</span></div>
+            <div class="total"><span>Yhteensä</span><span id="ra-total">–</span></div>
+          </div>
+          <div class="receipt" id="rec-b">
+            <h3>Hinnasto B</h3>
+            <div class="row"><span>Kiinteä maksu</span><span id="rb-fixed">–</span></div>
+            <div class="row"><span id="rb-nlabel">n tulostetta</span><span id="rb-var">–</span></div>
+            <div class="total"><span>Yhteensä</span><span id="rb-total">–</span></div>
+          </div>
+        </div>
+        <div class="status" id="status"></div>
+      </div>
+
+      <div class="panel">
+        <div class="graph-wrap">
+          <svg id="graph" viewBox="0 0 480 340" width="100%" height="300" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="legend">
+          <span><span class="line-sw" style="background:var(--teal)"></span>Hinnasto A: y = a + b·n</span>
+          <span><span class="line-sw" style="background:var(--rasp)"></span>Hinnasto B: y = p + q·n</span>
+          <span><span class="line-sw" style="background:var(--mustard)"></span>tasapistetulos</span>
+        </div>
+      </div>
+
+      <details class="steps">
+        <summary>Näytä ratkaisu vaiheittain (yhtälöiden yhdistäminen)</summary>
+        <div class="steps-body" id="steps"></div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const aEl=$('a'), bEl=$('b'), pEl=$('p'), qEl=$('q'), nEl=$('n');
+  const fmt = v => v.toFixed(2).replace('.', ',') + ' €';
+
+  function render(){
+    const a=+aEl.value, b=+bEl.value, p=+pEl.value, q=+qEl.value, n=+nEl.value;
+    $('v-a').textContent = a + ' €';
+    $('v-b').textContent = b.toFixed(2) + ' €';
+    $('v-p').textContent = p + ' €';
+    $('v-q').textContent = q.toFixed(2) + ' €';
+    $('v-n').textContent = n + ' kpl';
+
+    $('eqs').innerHTML =
+      `<div>y = ${a} + ${b.toFixed(2)}·n &nbsp; (Hinnasto A)</div>` +
+      `<div>y = ${p} + ${q.toFixed(2)}·n &nbsp; (Hinnasto B)</div>` +
+      `<div class="note">y = kuukauden kokonaiskustannus (€), n = tulostemäärä</div>`;
+
+    const costA = a + b*n, costB = p + q*n;
+    $('ra-fixed').textContent = fmt(a);
+    $('ra-nlabel').textContent = `${n} × ${b.toFixed(2)} €`;
+    $('ra-var').textContent = fmt(b*n);
+    $('ra-total').textContent = fmt(costA);
+    $('rb-fixed').textContent = fmt(p);
+    $('rb-nlabel').textContent = `${n} × ${q.toFixed(2)} €`;
+    $('rb-var').textContent = fmt(q*n);
+    $('rb-total').textContent = fmt(costB);
+
+    $('rec-a').classList.toggle('win', costA < costB);
+    $('rec-b').classList.toggle('win', costB < costA);
+
+    const status = $('status');
+    const denom = b - q;
+    let nStar = null, yStar = null;
+
+    if (Math.abs(denom) < 1e-9) {
+      if (Math.abs(a-p) < 1e-9) {
+        status.className = 'status ok';
+        status.textContent = 'Hinnastot ovat identtiset — sama kustannus riippumatta tulostemäärästä.';
+      } else {
+        status.className = 'status ok';
+        status.textContent = a < p
+          ? 'Tulostuskohtainen hinta on sama molemmissa, joten Hinnasto A on aina halvempi (pienempi kiinteä maksu).'
+          : 'Tulostuskohtainen hinta on sama molemmissa, joten Hinnasto B on aina halvempi (pienempi kiinteä maksu).';
+      }
+      $('steps').innerHTML = '<div>Kun per-tuloste-hinnat ovat yhtä suuret, suorat ovat yhdensuuntaiset eivätkä leikkaa — halvempi hinnasto pysyy samana kaikilla määrillä.</div>';
+    } else {
+      nStar = (p - a) / denom;
+      yStar = a + b*nStar;
+      if (nStar < 0) {
+        status.className = 'status ok';
+        status.textContent = costA < costB
+          ? 'Hinnasto A on halvempi kaikilla tulostemäärillä (tasapiste olisi negatiivisella määrällä, mikä ei ole mahdollista).'
+          : 'Hinnasto B on halvempi kaikilla tulostemäärillä (tasapiste olisi negatiivisella määrällä, mikä ei ole mahdollista).';
+      } else {
+        status.className = 'status ok';
+        status.textContent = `Tasapiste on ${nStar.toFixed(0)} tulosteen kohdalla (${fmt(yStar)}). Sen alle jäävillä määrillä ${(a>p? 'B':'A')} on halvempi, sen yli ${(a>p?'A':'B')} on halvempi.`;
+      }
+      $('steps').innerHTML = `
+        <div><span class="tag">1.</span> a + b·n = p + q·n</div>
+        <div><span class="tag">2.</span> b·n − q·n = p − a</div>
+        <div><span class="tag">3.</span> n(b − q) = p − a</div>
+        <div><span class="tag">4.</span> n = (p − a) / (b − q) = ${nStar.toFixed(2)}</div>
+        <div><span class="tag">5.</span> y = a + b·n = ${fmt(yStar)}</div>
+      `;
+    }
+
+    drawGraph(a,b,p,q,nStar,yStar);
+  }
+
+  function drawGraph(a,b,p,q,nStar,yStar){
+    const svg = $('graph');
+    const W=480, H=340, pad=46;
+    const maxN = 500;
+    const maxY = Math.max(a+b*maxN, p+q*maxN, (nStar&&yStar)?yStar*1.2:0, 10) * 1.1;
+    const sx = v => pad + (v/maxN)*(W-pad-16);
+    const sy = v => H-pad - (v/maxY)*(H-pad-16);
+
+    let s = `
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(maxN)}" y2="${sy(0)}" stroke="var(--line)" stroke-width="1.5"/>
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(0)}" y2="${sy(maxY)}" stroke="var(--line)" stroke-width="1.5"/>
+      <text x="${sx(maxN)-4}" y="${sy(0)+18}" font-size="11" fill="var(--muted)" text-anchor="end">n (tulostemäärä)</text>
+      <text x="${sx(0)-6}" y="${sy(maxY)+4}" font-size="11" fill="var(--muted)" text-anchor="end" transform="rotate(-90 ${sx(0)-6} ${sy(maxY)+4})">kustannus (€)</text>
+      <line x1="${sx(0)}" y1="${sy(a)}" x2="${sx(maxN)}" y2="${sy(a+b*maxN)}" stroke="var(--teal)" stroke-width="2.5"/>
+      <line x1="${sx(0)}" y1="${sy(p)}" x2="${sx(maxN)}" y2="${sy(p+q*maxN)}" stroke="var(--rasp)" stroke-width="2.5"/>
+    `;
+    if (nStar !== null && nStar >= 0 && nStar <= maxN) {
+      s += `<circle cx="${sx(nStar)}" cy="${sy(yStar)}" r="6" fill="var(--mustard)" stroke="var(--panel)" stroke-width="2"/>`;
+      s += `<text x="${sx(nStar)+10}" y="${sy(yStar)-8}" font-size="12" fill="var(--mustard)">(${nStar.toFixed(0)}, ${yStar.toFixed(2)})</text>`;
+    }
+    svg.innerHTML = s;
+  }
+
+  [aEl,bEl,pEl,qEl,nEl].forEach(el => el.addEventListener('input', render));
+  render();
+})();
+</script>
+
+</body>
+</html>

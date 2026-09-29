@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sekoitusongelma — kaksi liuosta, yksi tavoite</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F5F0;
+    --panel: #FFFFFF;
+    --ink: #1B1F23;
+    --muted: #5B6560;
+    --line: #DADFD5;
+    --teal: #2B6777;
+    --teal-soft: #DCEAEC;
+    --rasp: #A5346B;
+    --rasp-soft: #F3DDE7;
+    --mustard: #C98A2C;
+    --bad: #B3402F;
+    --good: #2F7A4F;
+    --radius: 10px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181A;
+      --panel: #1C2224;
+      --ink: #ECEDE9;
+      --muted: #9AA39B;
+      --line: #2C3432;
+      --teal: #6FB6C4;
+      --teal-soft: #1E3338;
+      --rasp: #E28AB2;
+      --rasp-soft: #3A2230;
+      --mustard: #E3B15C;
+      --bad: #E3796A;
+      --good: #6FCB92;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181A;
+    --panel: #1C2224;
+    --ink: #ECEDE9;
+    --muted: #9AA39B;
+    --line: #2C3432;
+    --teal: #6FB6C4;
+    --teal-soft: #1E3338;
+    --rasp: #E28AB2;
+    --rasp-soft: #3A2230;
+    --mustard: #E3B15C;
+    --bad: #E3796A;
+    --good: #6FCB92;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 20px 60px; }
+  header.top { margin-bottom: 22px; }
+  h1 {
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .blurb { color: var(--muted); max-width: 62ch; font-size: 0.98rem; }
+  .grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 18px 18px 20px;
+  }
+  .panel + .panel { margin-top: 16px; }
+  .field { margin-bottom: 16px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .field label .val {
+    font-family: "Newsreader", serif;
+    font-weight: 600;
+    color: var(--ink);
+    font-size: 0.95rem;
+  }
+  input[type=range] {
+    width: 100%;
+    accent-color: var(--teal);
+    height: 20px;
+  }
+  .swatch { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; }
+  .s-teal { background: var(--teal); }
+  .s-rasp { background: var(--rasp); }
+  .s-mustard { background: var(--mustard); }
+
+  .stage {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 26px;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 10px 6px 4px;
+  }
+  .beaker-col { text-align: center; width: 92px; }
+  .beaker {
+    position: relative;
+    width: 74px;
+    height: 150px;
+    margin: 0 auto 8px;
+    border: 2px solid var(--ink);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background: transparent;
+    overflow: hidden;
+  }
+  .beaker::before {
+    content: "";
+    position: absolute;
+    top: -2px; left: -10px; right: -10px;
+    height: 2px;
+    background: var(--ink);
+  }
+  .fill {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 0%;
+    transition: height 0.5s ease, background 0.5s ease;
+  }
+  .beaker-label { font-size: 0.78rem; color: var(--muted); }
+  .beaker-amt { font-family: "Newsreader", serif; font-weight: 600; font-size: 1rem; }
+  .plus, .eq { font-family: "Newsreader", serif; font-size: 1.6rem; color: var(--muted); align-self: center; padding-bottom: 46px; }
+
+  .eqs {
+    font-family: "Newsreader", serif;
+    font-size: 1.05rem;
+    background: var(--teal-soft);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin-top: 16px;
+    display: grid;
+    gap: 4px;
+  }
+  .eqs .note { font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+  .status {
+    margin-top: 14px;
+    padding: 10px 14px;
+    border-radius: var(--radius);
+    font-size: 0.92rem;
+    border: 1px solid var(--line);
+  }
+  .status.ok { border-color: var(--good); color: var(--good); background: color-mix(in srgb, var(--good) 10%, var(--panel)); }
+  .status.bad { border-color: var(--bad); color: var(--bad); background: color-mix(in srgb, var(--bad) 10%, var(--panel)); }
+
+  details.steps {
+    margin-top: 18px;
+  }
+  details.steps summary {
+    cursor: pointer;
+    font-size: 0.92rem;
+    color: var(--teal);
+    font-weight: 500;
+  }
+  .steps-body {
+    margin-top: 12px;
+    font-family: "Newsreader", serif;
+    font-size: 1rem;
+    display: grid;
+    gap: 8px;
+  }
+  .steps-body .line { padding-left: 2px; }
+  .steps-body .tag { font-family: "IBM Plex Sans", sans-serif; font-size: 0.75rem; color: var(--muted); }
+
+  svg text { font-family: "IBM Plex Sans", sans-serif; }
+  .graph-wrap { margin-top: 10px; overflow-x: auto; }
+  .legend { display: flex; gap: 16px; font-size: 0.8rem; color: var(--muted); margin-top: 8px; flex-wrap: wrap; }
+  .legend span { display: inline-flex; align-items: center; }
+  .legend .line-sw { width: 14px; height: 2px; margin-right: 6px; }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="wrap">
+  <header class="top">
+    <h1>Sekoitusongelma: kaksi liuosta, yksi tavoite</h1>
+    <p class="blurb">Laboratoriossa on kaksi valmista suolaliuosta eri pitoisuuksilla. Tehtävänä on sekoittaa niistä tietty määrä liuosta, jolla on tarkalleen haluttu pitoisuus. Kuinka paljon kumpaakin liuosta tarvitaan? Säädä liukusäätimiä ja katso, miten kaksi yhtälöä ratkaisevat tehtävän yhdessä.</p>
+  </header>
+
+  <div class="grid">
+    <div class="col-controls">
+      <div class="panel">
+        <div class="field">
+          <label><span><span class="swatch s-teal"></span>Liuos 1: pitoisuus c₁</span><span class="val" id="v-c1">10 %</span></label>
+          <input type="range" id="c1" min="0" max="100" step="1" value="10">
+        </div>
+        <div class="field">
+          <label><span><span class="swatch s-rasp"></span>Liuos 2: pitoisuus c₂</span><span class="val" id="v-c2">40 %</span></label>
+          <input type="range" id="c2" min="0" max="100" step="1" value="40">
+        </div>
+        <div class="field">
+          <label><span><span class="swatch s-mustard"></span>Tavoite: kokonaismäärä V</span><span class="val" id="v-V">500 ml</span></label>
+          <input type="range" id="V" min="100" max="1000" step="10" value="500">
+        </div>
+        <div class="field">
+          <label><span><span class="swatch s-mustard"></span>Tavoite: pitoisuus C</span><span class="val" id="v-C">25 %</span></label>
+          <input type="range" id="C" min="0" max="100" step="1" value="25">
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="eqs" id="eqs"></div>
+      </div>
+    </div>
+
+    <div class="col-stage">
+      <div class="panel">
+        <div class="stage">
+          <div class="beaker-col">
+            <div class="beaker"><div class="fill" id="fill1"></div></div>
+            <div class="beaker-label">Liuos 1</div>
+            <div class="beaker-amt" id="amt1">– ml</div>
+          </div>
+          <div class="plus">+</div>
+          <div class="beaker-col">
+            <div class="beaker"><div class="fill" id="fill2"></div></div>
+            <div class="beaker-label">Liuos 2</div>
+            <div class="beaker-amt" id="amt2">– ml</div>
+          </div>
+          <div class="eq">=</div>
+          <div class="beaker-col">
+            <div class="beaker"><div class="fill" id="fillT"></div></div>
+            <div class="beaker-label">Seos</div>
+            <div class="beaker-amt" id="amtT">– ml</div>
+          </div>
+        </div>
+        <div class="status" id="status"></div>
+      </div>
+
+      <div class="panel">
+        <div class="graph-wrap">
+          <svg id="graph" viewBox="0 0 480 340" width="100%" height="300" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="legend">
+          <span><span class="line-sw" style="background:var(--mustard)"></span>x + y = V (määräyhtälö)</span>
+          <span><span class="line-sw" style="background:var(--teal)"></span>c₁x + c₂y = C·V (pitoisuusyhtälö)</span>
+          <span><span class="line-sw" style="background:var(--rasp)"></span>ratkaisu (x, y)</span>
+        </div>
+      </div>
+
+      <details class="steps">
+        <summary>Näytä ratkaisu vaiheittain (sijoitusmenetelmä)</summary>
+        <div class="steps-body" id="steps"></div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const c1El = $('c1'), c2El = $('c2'), VEl = $('V'), CEl = $('C');
+
+  function mix(hexA, hexB, t){
+    const a = hexA.match(/\w\w/g).map(h=>parseInt(h,16));
+    const b = hexB.match(/\w\w/g).map(h=>parseInt(h,16));
+    const c = a.map((v,i)=>Math.round(v + (b[i]-v)*t));
+    return `rgb(${c[0]},${c[1]},${c[2]})`;
+  }
+  const TEAL = '2B6777', RASP = 'A5346B';
+
+  function render(){
+    const c1 = +c1El.value, c2 = +c2El.value, V = +VEl.value, C = +CEl.value;
+    $('v-c1').textContent = c1 + ' %';
+    $('v-c2').textContent = c2 + ' %';
+    $('v-V').textContent = V + ' ml';
+    $('v-C').textContent = C + ' %';
+
+    $('eqs').innerHTML =
+      `<div>x + y = ${V}</div>` +
+      `<div>${c1}x + ${c2}y = ${C}% · ${V}</div>` +
+      `<div class="note">x = liuoksen 1 määrä (ml), y = liuoksen 2 määrä (ml)</div>`;
+
+    const lo = Math.min(c1,c2), hi = Math.max(c1,c2);
+    const status = $('status');
+    const denom = (c2 - c1);
+
+    if (denom === 0) {
+      status.className = 'status bad';
+      status.textContent = 'Molemmilla liuoksilla on sama pitoisuus, joten yhtälöillä ei ole yksikäsitteistä ratkaisua — mikä tahansa seossuhde antaa saman pitoisuuden.';
+      setBeakers(null, null, null, null);
+      drawGraph(c1,c2,V,C,null,null,false);
+      $('steps').innerHTML = '<div class="line">Valitse liuoksille eri pitoisuudet, jotta tehtävällä on yksikäsitteinen ratkaisu.</div>';
+      return;
+    }
+
+    if (C < lo || C > hi) {
+      status.className = 'status bad';
+      status.textContent = `Tavoitepitoisuus ${C}\u00A0% ei ole saavutettavissa: se pitää olla välillä ${lo}\u2013${hi}\u00A0%, koska seoksen pitoisuus jää aina kahden lähtöpitoisuuden väliin.`;
+      setBeakers(null, null, null, V);
+      drawGraph(c1,c2,V,C,null,null,false);
+      $('steps').innerHTML = '<div class="line">Ratkaisu vaatisi negatiivisen tilavuuden, mikä ei ole fysikaalisesti mahdollista. Säädä tavoitepitoisuutta liuosten pitoisuuksien väliin.</div>';
+      return;
+    }
+
+    const x = V * (c2 - C) / denom;
+    const y = V - x;
+
+    status.className = 'status ok';
+    status.textContent = `Ratkaisu: ${x.toFixed(0)}\u00A0ml liuosta 1 ja ${y.toFixed(0)}\u00A0ml liuosta 2 antavat ${V}\u00A0ml seosta, jonka pitoisuus on tarkalleen ${C}\u00A0%.`;
+
+    setBeakers(x, y, mixColor(c1,c2,x,y,C), V);
+    drawGraph(c1,c2,V,C,x,y,true);
+
+    $('steps').innerHTML = `
+      <div class="line"><span class="tag">1.</span> x + y = ${V}  →  y = ${V} − x</div>
+      <div class="line"><span class="tag">2.</span> ${c1}x + ${c2}y = ${C}·${V}</div>
+      <div class="line"><span class="tag">3. sijoitus</span> ${c1}x + ${c2}(${V} − x) = ${(C*V/100).toFixed(1)}</div>
+      <div class="line"><span class="tag">4.</span> (${c1} − ${c2})x = ${(C*V/100).toFixed(1)} − ${c2}·${V}/100</div>
+      <div class="line"><span class="tag">5.</span> x = ${x.toFixed(1)} ml</div>
+      <div class="line"><span class="tag">6.</span> y = ${V} − ${x.toFixed(1)} = ${y.toFixed(1)} ml</div>
+    `;
+
+    function mixColor(c1,c2,x,y,C){
+      const t = x/(x+y);
+      return mix(TEAL, RASP, 1-t);
+    }
+  }
+
+  function setBeakers(x, y, mixCol, V){
+    const maxV = 1000;
+    if (x === null){
+      $('fill1').style.height = '0%';
+      $('fill2').style.height = '0%';
+      $('fillT').style.height = '0%';
+      $('amt1').textContent = '– ml';
+      $('amt2').textContent = '– ml';
+      $('amtT').textContent = (V||'–') + ' ml (tavoite)';
+      return;
+    }
+    $('fill1').style.height = Math.min(100, x/maxV*100) + '%';
+    $('fill1').style.background = `#${TEAL}`;
+    $('fill2').style.height = Math.min(100, y/maxV*100) + '%';
+    $('fill2').style.background = `#${RASP}`;
+    $('fillT').style.height = Math.min(100, (x+y)/maxV*100) + '%';
+    $('fillT').style.background = mixCol;
+    $('amt1').textContent = x.toFixed(0) + ' ml';
+    $('amt2').textContent = y.toFixed(0) + ' ml';
+    $('amtT').textContent = (x+y).toFixed(0) + ' ml';
+  }
+
+  function drawGraph(c1,c2,V,C,x,y,valid){
+    const svg = $('graph');
+    const W = 480, H = 340, pad = 42;
+    const maxAxis = V * 1.15;
+    const sx = v => pad + (v/maxAxis) * (W - pad - 16);
+    const sy = v => H - pad - (v/maxAxis) * (H - pad - 16);
+
+    function lineFromEq(a, b, c){
+      // a*X + b*Y = c  -> find two boundary points within [0,maxAxis]
+      const pts = [];
+      if (b !== 0) {
+        const y0 = c / b;
+        if (y0 >= 0 && y0 <= maxAxis) pts.push([0, y0]);
+        const yM = (c - a*maxAxis) / b;
+        if (yM >= 0 && yM <= maxAxis) pts.push([maxAxis, yM]);
+      }
+      if (a !== 0) {
+        const x0 = c / a;
+        if (x0 >= 0 && x0 <= maxAxis) pts.push([x0, 0]);
+        const xM = (c - b*maxAxis) / a;
+        if (xM >= 0 && xM <= maxAxis) pts.push([xM, maxAxis]);
+      }
+      return pts.slice(0,2);
+    }
+
+    const l1 = lineFromEq(1, 1, V);
+    const l2 = lineFromEq(c1, c2, C*V/100);
+
+    let svgContent = `
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(maxAxis)}" y2="${sy(0)}" stroke="var(--line)" stroke-width="1.5"/>
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(0)}" y2="${sy(maxAxis)}" stroke="var(--line)" stroke-width="1.5"/>
+      <text x="${sx(maxAxis)-4}" y="${sy(0)+18}" font-size="11" fill="var(--muted)" text-anchor="end">x (ml, liuos 1)</text>
+      <text x="${sx(0)-6}" y="${sy(maxAxis)+4}" font-size="11" fill="var(--muted)" text-anchor="end" transform="rotate(-90 ${sx(0)-6} ${sy(maxAxis)+4})">y (ml, liuos 2)</text>
+    `;
+
+    if (l1.length === 2) {
+      svgContent += `<line x1="${sx(l1[0][0])}" y1="${sy(l1[0][1])}" x2="${sx(l1[1][0])}" y2="${sy(l1[1][1])}" stroke="var(--mustard)" stroke-width="2.5"/>`;
+    }
+    if (l2.length === 2) {
+      svgContent += `<line x1="${sx(l2[0][0])}" y1="${sy(l2[0][1])}" x2="${sx(l2[1][0])}" y2="${sy(l2[1][1])}" stroke="var(--teal)" stroke-width="2.5"/>`;
+    }
+    if (valid && x !== null) {
+      svgContent += `<circle cx="${sx(x)}" cy="${sy(y)}" r="6" fill="var(--rasp)" stroke="var(--panel)" stroke-width="2"/>`;
+      svgContent += `<text x="${sx(x)+10}" y="${sy(y)-8}" font-size="12" fill="var(--rasp)">(${x.toFixed(0)}, ${y.toFixed(0)})</text>`;
+    }
+    svg.innerHTML = svgContent;
+    svg.style.setProperty('color', 'inherit');
+  }
+
+  [c1El,c2El,VEl,CEl].forEach(el => el.addEventListener('input', render));
+  render();
+})();
+</script>
+
+</body>
+</html>

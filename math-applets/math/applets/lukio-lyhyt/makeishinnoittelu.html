@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Makeisten hinnoittelu — voiton maksimointi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F6F5F0; --panel: #FFFFFF; --ink: #1B1F23; --muted: #5B6560; --line: #DADFD5;
+    --teal: #2B6777; --teal-soft: #DCEAEC; --rasp: #A5346B; --rasp-soft: #F3DDE7;
+    --mustard: #C98A2C; --bad: #B3402F; --good: #2F7A4F; --radius: 10px;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181A; --panel: #1C2224; --ink: #ECEDE9; --muted: #9AA39B; --line: #2C3432;
+      --teal: #6FB6C4; --teal-soft: #1E3338; --rasp: #E28AB2; --rasp-soft: #3A2230;
+      --mustard: #E3B15C; --bad: #E3796A; --good: #6FCB92;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181A; --panel: #1C2224; --ink: #ECEDE9; --muted: #9AA39B; --line: #2C3432;
+    --teal: #6FB6C4; --teal-soft: #1E3338; --rasp: #E28AB2; --rasp-soft: #3A2230;
+    --mustard: #E3B15C; --bad: #E3796A; --good: #6FCB92;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.5; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 28px 20px 60px; }
+  h1 {
+    font-family: "Newsreader", Georgia, serif; font-weight: 600;
+    font-size: clamp(1.6rem, 4vw, 2.3rem); margin: 0 0 8px; letter-spacing: -0.01em;
+  }
+  .blurb { color: var(--muted); max-width: 66ch; font-size: 0.98rem; }
+  .grid { display: grid; grid-template-columns: 300px 1fr; gap: 20px; align-items: start; }
+  @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 18px 18px 20px;
+  }
+  .panel + .panel { margin-top: 16px; }
+  .field { margin-bottom: 16px; }
+  .field:last-child { margin-bottom: 0; }
+  .field label {
+    display: flex; justify-content: space-between; font-size: 0.87rem;
+    color: var(--muted); margin-bottom: 6px;
+  }
+  .field label .val { font-family: "Newsreader", serif; font-weight: 600; color: var(--ink); font-size: 0.95rem; }
+  input[type=range] { width: 100%; height: 20px; }
+  .r-p { accent-color: var(--mustard); }
+  .r-other { accent-color: var(--teal); }
+
+  button.opt-btn {
+    width: 100%; margin-top: 4px; padding: 9px 10px;
+    border-radius: 8px; border: 1px solid var(--mustard);
+    background: transparent; color: var(--mustard);
+    font-family: "IBM Plex Sans", sans-serif; font-size: 0.85rem; font-weight: 600;
+    cursor: pointer;
+  }
+  button.opt-btn:hover { background: color-mix(in srgb, var(--mustard) 12%, transparent); }
+
+  .eqs {
+    font-family: "Newsreader", serif; font-size: 1.0rem;
+    background: var(--teal-soft); border-radius: var(--radius);
+    padding: 14px 16px; margin-top: 16px; display: grid; gap: 4px;
+  }
+  .eqs .note { font-family: "IBM Plex Sans", sans-serif; font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+
+  .receipts { display:flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .receipt {
+    width: 150px; border: 1px dashed var(--line); border-radius: 8px;
+    padding: 12px; font-family: "IBM Plex Sans", sans-serif; text-align: center;
+  }
+  .receipt .k { font-size: 0.76rem; color: var(--muted); margin-bottom: 3px; }
+  .receipt .v { font-family: "Newsreader", serif; font-weight: 600; font-size: 1.15rem; }
+  .receipt.profit { border-color: var(--good); background: color-mix(in srgb, var(--good) 8%, var(--panel)); }
+  .receipt.profit .v { color: var(--good); }
+  .receipt.loss { border-color: var(--bad); background: color-mix(in srgb, var(--bad) 8%, var(--panel)); }
+  .receipt.loss .v { color: var(--bad); }
+
+  .status { margin-top: 14px; padding: 10px 14px; border-radius: var(--radius); font-size: 0.92rem; border: 1px solid var(--line); }
+  .status.ok { border-color: var(--good); color: var(--good); background: color-mix(in srgb, var(--good) 10%, var(--panel)); }
+
+  details.steps { margin-top: 18px; }
+  details.steps summary { cursor: pointer; font-size: 0.92rem; color: var(--teal); font-weight: 500; }
+  .steps-body { margin-top: 12px; font-family: "Newsreader", serif; font-size: 1rem; display: grid; gap: 8px; }
+  .steps-body .tag { font-family: "IBM Plex Sans", sans-serif; font-size: 0.75rem; color: var(--muted); }
+
+  .graph-title { font-size: 0.82rem; color: var(--muted); margin: 0 0 4px 2px; }
+  .graph-wrap { margin-top: 4px; overflow-x: auto; }
+  .graph-wrap + .graph-title { margin-top: 18px; }
+  .legend { display: flex; gap: 16px; font-size: 0.8rem; color: var(--muted); margin-top: 6px; flex-wrap: wrap; }
+  .legend .line-sw { width: 14px; height: 2px; margin-right: 6px; display:inline-block; vertical-align: middle; }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="wrap">
+  <header>
+    <h1>Makeisten hinnoittelu: kun kalliimpi tuote myy vähemmän</h1>
+    <p class="blurb">Kioski myy karkkipussia. Kalliimmalla hinnalla kate per pussi on parempi, mutta pusseja myydään vähemmän — halvemmalla taas myydään enemmän, mutta katetta jää vähän. Jossain välissä on hinta, joka tuottaa parhaan kokonaisvoiton. Kysyntä on suoraviivainen, mutta voitto ei — siitä tulee optimointitehtävä.</p>
+  </header>
+
+  <div class="grid">
+    <div class="col-controls">
+      <div class="panel">
+        <div class="field">
+          <label><span>Kysyntä hinnalla 0 € (a)</span><span class="val" id="v-a">200 kpl</span></label>
+          <input class="r-other" type="range" id="a" min="20" max="400" step="5" value="200">
+        </div>
+        <div class="field">
+          <label><span>Hintaherkkyys (b, kpl vähemmän / +1 €)</span><span class="val" id="v-b">20 kpl</span></label>
+          <input class="r-other" type="range" id="b" min="2" max="60" step="1" value="20">
+        </div>
+        <div class="field">
+          <label><span>Hankintahinta per pussi (c)</span><span class="val" id="v-c">0,50 €</span></label>
+          <input class="r-other" type="range" id="c" min="0" max="5" step="0.1" value="0.5">
+        </div>
+      </div>
+      <div class="panel">
+        <div class="field">
+          <label><span>Myyntihinta p — kokeile itse</span><span class="val" id="v-p">1,50 €</span></label>
+          <input class="r-p" type="range" id="p" min="0" max="10" step="0.05" value="1.5">
+        </div>
+        <button class="opt-btn" id="jump-opt">Hypp\u00E4\u00e4 optimihintaan</button>
+      </div>
+      <div class="panel">
+        <div class="eqs" id="eqs"></div>
+      </div>
+    </div>
+
+    <div class="col-stage">
+      <div class="panel">
+        <div class="receipts">
+          <div class="receipt"><div class="k">Myynti (q)</div><div class="v" id="rq">–</div></div>
+          <div class="receipt"><div class="k">Kate / pussi</div><div class="v" id="rm">–</div></div>
+          <div class="receipt profit" id="rprofit-box"><div class="k">Kokonaisvoitto</div><div class="v" id="rprofit">–</div></div>
+        </div>
+        <div class="status ok" id="status"></div>
+      </div>
+
+      <div class="panel">
+        <div class="graph-title">Kysyntä: myyty määrä hinnan funktiona</div>
+        <div class="graph-wrap">
+          <svg id="graphDemand" viewBox="0 0 480 220" width="100%" height="190" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="legend">
+          <span><span class="line-sw" style="background:var(--teal)"></span>q = a − b·p</span>
+          <span><span class="line-sw" style="background:var(--mustard)"></span>valittu hinta p</span>
+        </div>
+
+        <div class="graph-title">Voitto hinnan funktiona (paraabeli)</div>
+        <div class="graph-wrap">
+          <svg id="graphProfit" viewBox="0 0 480 260" width="100%" height="220" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+        <div class="legend">
+          <span><span class="line-sw" style="background:var(--rasp)"></span>voitto(p) = (p−c)(a−b·p)</span>
+          <span><span class="line-sw" style="background:var(--mustard)"></span>huippu = paras hinta</span>
+        </div>
+      </div>
+
+      <details class="steps">
+        <summary>Näytä, miten paras hinta lasketaan</summary>
+        <div class="steps-body" id="steps"></div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const $ = id => document.getElementById(id);
+  const aEl=$('a'), bEl=$('b'), cEl=$('c'), pEl=$('p');
+  const eur = v => v.toFixed(2).replace('.', ',') + ' €';
+
+  function render(){
+    const a=+aEl.value, b=+bEl.value, c=+cEl.value, p=+pEl.value;
+    $('v-a').textContent = a + ' kpl';
+    $('v-b').textContent = b + ' kpl';
+    $('v-c').textContent = eur(c);
+    $('v-p').textContent = eur(p);
+
+    const q = Math.max(0, a - b*p);
+    const margin = p - c;
+    const profit = margin * q;
+
+    $('eqs').innerHTML =
+      `<div>q(p) = ${a} − ${b}·p &nbsp; (myyty määrä)</div>` +
+      `<div>voitto(p) = (p − ${c.toFixed(2)}) · (${a} − ${b}·p)</div>` +
+      `<div class="note">q = pusseja/päivä, p = myyntihinta €, c = hankintahinta €</div>`;
+
+    $('rq').textContent = q.toFixed(0) + ' kpl';
+    $('rm').textContent = eur(margin);
+    $('rprofit').textContent = eur(profit);
+    $('rprofit-box').className = 'receipt ' + (profit >= 0 ? 'profit' : 'loss');
+
+    const pStarRaw = (a/b + c) / 2;
+    const pStar = Math.max(0, pStarRaw);
+    const qStar = Math.max(0, a - b*pStar);
+    const profitStar = (pStar - c) * qStar;
+
+    const status = $('status');
+    status.textContent = `Paras hinta on noin ${eur(pStar)}: tällöin myydään ${qStar.toFixed(0)} pussia päivässä ja voitto on ${eur(profitStar)}.`;
+
+    const pZeroDemand = a/b;
+    $('steps').innerHTML = `
+      <div><span class="tag">1. Voitto on nolla kahdessa kohdassa</span></div>
+      <div>&nbsp;&nbsp;p = c = ${c.toFixed(2)} € (myydään omakustannushintaan, ei katetta)</div>
+      <div>&nbsp;&nbsp;p = a/b = ${pZeroDemand.toFixed(2)} € (hinta niin korkea, ettei kukaan osta: q = 0)</div>
+      <div><span class="tag">2. Paraabeli aukeaa alaspäin</span> → huippu on täsmälleen näiden kahden nollakohdan puolivälissä</div>
+      <div><span class="tag">3.</span> p* = (c + a/b) / 2 = (${c.toFixed(2)} + ${pZeroDemand.toFixed(2)}) / 2 = ${pStar.toFixed(2)} €</div>
+      <div><span class="tag">4.</span> q* = a − b·p* = ${qStar.toFixed(0)} kpl</div>
+      <div><span class="tag">5.</span> voitto* = (p* − c)·q* = ${eur(profitStar)}</div>
+    `;
+
+    drawDemand(a,b,p,q);
+    drawProfit(a,b,c,p,profit,pStar,profitStar);
+  }
+
+  function drawDemand(a,b,p,q){
+    const svg = $('graphDemand');
+    const W=480,H=220,pad=42;
+    const maxP = Math.max(a/b, p) * 1.15;
+    const maxQ = a * 1.1;
+    const sx = v => pad + (v/maxP)*(W-pad-14);
+    const sy = v => H-pad - (v/maxQ)*(H-pad-14);
+    const qAtMaxP = Math.max(0, a - b*maxP);
+
+    let s = `
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(maxP)}" y2="${sy(0)}" stroke="var(--line)" stroke-width="1.5"/>
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(0)}" y2="${sy(maxQ)}" stroke="var(--line)" stroke-width="1.5"/>
+      <text x="${sx(maxP)-4}" y="${sy(0)+18}" font-size="11" fill="var(--muted)" text-anchor="end">hinta p (€)</text>
+      <text x="${sx(0)-6}" y="14" font-size="11" fill="var(--muted)" text-anchor="start">q (kpl)</text>
+      <line x1="${sx(0)}" y1="${sy(a)}" x2="${sx(maxP)}" y2="${sy(qAtMaxP)}" stroke="var(--teal)" stroke-width="2.5"/>
+      <line x1="${sx(p)}" y1="${sy(0)}" x2="${sx(p)}" y2="${sy(q)}" stroke="var(--mustard)" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="${sx(p)}" cy="${sy(q)}" r="5" fill="var(--mustard)" stroke="var(--panel)" stroke-width="2"/>
+    `;
+    svg.innerHTML = s;
+  }
+
+  function drawProfit(a,b,c,p,profit,pStar,profitStar){
+    const svg = $('graphProfit');
+    const W=480,H=260,pad=46;
+    const maxP = Math.max(a/b, p) * 1.1;
+    const N = 60;
+    let maxY = 0, minY = 0;
+    const pts = [];
+    for (let i=0;i<=N;i++){
+      const pv = maxP * i/N;
+      const qv = Math.max(0, a - b*pv);
+      const pr = (pv - c) * qv;
+      pts.push([pv, pr]);
+      if (pr > maxY) maxY = pr;
+      if (pr < minY) minY = pr;
+    }
+    maxY *= 1.15;
+    minY = Math.min(minY*1.15, 0);
+    const sx = v => pad + (v/maxP)*(W-pad-14);
+    const sy = v => H-pad - ((v-minY)/(maxY-minY))*(H-pad-14);
+
+    let path = 'M ' + pts.map(([pv,pr]) => `${sx(pv).toFixed(1)},${sy(pr).toFixed(1)}`).join(' L ');
+
+    let s = `
+      <line x1="${sx(0)}" y1="${sy(0)}" x2="${sx(maxP)}" y2="${sy(0)}" stroke="var(--line)" stroke-width="1.5"/>
+      <line x1="${sx(0)}" y1="${sy(minY)}" x2="${sx(0)}" y2="${sy(maxY)}" stroke="var(--line)" stroke-width="1.5"/>
+      <text x="${sx(maxP)-4}" y="${sy(0)+18}" font-size="11" fill="var(--muted)" text-anchor="end">hinta p (€)</text>
+      <text x="${sx(0)-6}" y="14" font-size="11" fill="var(--muted)" text-anchor="start">voitto (€)</text>
+      <path d="${path}" fill="none" stroke="var(--rasp)" stroke-width="2.5"/>
+      <circle cx="${sx(pStar)}" cy="${sy(profitStar)}" r="6" fill="var(--mustard)" stroke="var(--panel)" stroke-width="2"/>
+      <line x1="${sx(p)}" y1="${sy(0)}" x2="${sx(p)}" y2="${sy(profit)}" stroke="var(--ink)" stroke-width="1" stroke-dasharray="3 3" opacity="0.5"/>
+      <circle cx="${sx(p)}" cy="${sy(profit)}" r="4.5" fill="var(--ink)" opacity="0.75"/>
+    `;
+    svg.innerHTML = s;
+  }
+
+  $('jump-opt').addEventListener('click', () => {
+    const a=+aEl.value, b=+bEl.value, c=+cEl.value;
+    const pStar = Math.max(0, Math.min(10, (a/b + c)/2));
+    pEl.value = pStar.toFixed(2);
+    render();
+  });
+
+  [aEl,bEl,cEl,pEl].forEach(el => el.addEventListener('input', render));
+  render();
+})();
+</script>
+
+</body>
+</html>

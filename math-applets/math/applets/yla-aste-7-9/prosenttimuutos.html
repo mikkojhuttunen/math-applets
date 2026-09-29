@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Prosenttimuutos käytännössä</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #FAF8F3;
+    --ink: #1E2A38;
+    --ink-soft: #56626F;
+    --grid-line: #DCD6C7;
+    --panel-bg: #FFFFFF;
+    --panel-border: #E4DFD2;
+    --increase: #E0593E;
+    --increase-soft: #F6D9CF;
+    --decrease: #2C7DA0;
+    --decrease-soft: #D6E7EE;
+    --neutral-fill: #C9C3B3;
+    --neutral-fill-dark: #A9A08A;
+    --accent-pp: #C8952E;
+    --shadow: 0 1px 2px rgba(30,42,56,0.06), 0 4px 14px rgba(30,42,56,0.05);
+    font-size: 16px;
+
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #171B20;
+      --ink: #EEEAE0;
+      --ink-soft: #A9AFB6;
+      --grid-line: #2E343B;
+      --panel-bg: #1D2229;
+      --panel-border: #2C323A;
+      --increase: #E77A62;
+      --increase-soft: #3A2620;
+      --decrease: #6FB4D6;
+      --decrease-soft: #1D323C;
+      --neutral-fill: #454C55;
+      --neutral-fill-dark: #565E68;
+      --accent-pp: #DCAB52;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #171B20;
+    --ink: #EEEAE0;
+    --ink-soft: #A9AFB6;
+    --grid-line: #2E343B;
+    --panel-bg: #1D2229;
+    --panel-border: #2C323A;
+    --increase: #E77A62;
+    --increase-soft: #3A2620;
+    --decrease: #6FB4D6;
+    --decrease-soft: #1D323C;
+    --neutral-fill: #454C55;
+    --neutral-fill-dark: #565E68;
+    --accent-pp: #DCAB52;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 4px 14px rgba(0,0,0,0.25);
+  }
+
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .app {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 28px 18px calc(40px + env(safe-area-inset-bottom, 0px));
+  }
+
+  header h1 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 1.65rem;
+    letter-spacing: -0.01em;
+    margin: 0 0 6px;
+  }
+  header p {
+    color: var(--ink-soft);
+    margin: 0 0 22px;
+    max-width: 46ch;
+  }
+
+  nav.tabs {
+    display: flex;
+    gap: 6px;
+    border-bottom: 1px solid var(--panel-border);
+    margin-bottom: 22px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  nav.tabs::-webkit-scrollbar { display: none; }
+  nav.tabs button {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink-soft);
+    padding: 10px 4px 12px;
+    margin-right: 18px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+  }
+  nav.tabs button:hover { color: var(--ink); }
+  nav.tabs button.active {
+    color: var(--ink);
+    border-bottom-color: var(--increase);
+  }
+  nav.tabs button:focus-visible,
+  select:focus-visible,
+  input[type="range"]:focus-visible {
+    outline: 2px solid var(--decrease);
+    outline-offset: 2px;
+  }
+
+  .panel { display: none; }
+  .panel.active { display: block; animation: fadein 0.25s ease; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) {
+    .panel.active { animation: none; }
+  }
+
+  .panel > h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    margin: 0 0 4px;
+  }
+  .panel > p.lead {
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+    max-width: 50ch;
+  }
+
+  .controls {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 16px 16px 14px;
+    box-shadow: var(--shadow);
+    margin-bottom: 16px;
+  }
+  .controls label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .controls label:last-child { margin-bottom: 0; }
+  .controls select {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 10px;
+    border-radius: 7px;
+    border: 1px solid var(--panel-border);
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+  }
+  .controls .value-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 6px;
+  }
+  .controls .value-line strong {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+    color: var(--ink);
+  }
+  input[type="range"] {
+    width: 100%;
+    accent-color: var(--decrease);
+    height: 22px;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .stat {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 9px;
+    padding: 10px 12px;
+  }
+  .stat span {
+    display: block;
+    font-size: 0.72rem;
+    color: var(--ink-soft);
+    margin-bottom: 3px;
+  }
+  .stat strong {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+  }
+  .stat.up strong { color: var(--increase); }
+  .stat.down strong { color: var(--decrease); }
+
+  .grid-wrap {
+    background: var(--panel-bg);
+    border: 1px solid var(--panel-border);
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: var(--shadow);
+    margin-bottom: 14px;
+  }
+  .grid-wrap .grid-label {
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 3px;
+  }
+  .sq {
+    aspect-ratio: 1;
+    border-radius: 2px;
+    min-width: 0;
+  }
+  .sq.kept { background: var(--neutral-fill); }
+  .sq.added { background: var(--increase); }
+  .sq.removed {
+    background: transparent;
+    border: 1.5px dashed var(--decrease);
+    opacity: 0.55;
+  }
+
+  .callout {
+    border-left: 3px solid var(--accent-pp);
+    background: var(--panel-bg);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 14px;
+    font-size: 0.9rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .callout strong { font-family: 'Space Grotesk', sans-serif; }
+
+  .flow {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .flow-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .flow-arrow {
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    padding: 2px 0 2px 4px;
+  }
+  .flow-grid-box { flex: 1; }
+
+  .numberline {
+    position: relative;
+    height: 64px;
+    margin: 26px 4px 10px;
+  }
+  .numberline .track {
+    position: absolute;
+    top: 28px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--grid-line);
+    border-radius: 2px;
+  }
+  .numberline .marker {
+    position: absolute;
+    top: 14px;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+  .numberline .marker .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-top: 4px;
+    border: 2px solid var(--paper);
+  }
+  .numberline .marker.from .dot { background: var(--decrease); }
+  .numberline .marker.to .dot { background: var(--increase); }
+  .numberline .bracket {
+    position: absolute;
+    top: 46px;
+    height: 14px;
+    border-left: 1.5px solid var(--accent-pp);
+    border-right: 1.5px solid var(--accent-pp);
+    border-bottom: 1.5px solid var(--accent-pp);
+  }
+  .numberline .bracket-label {
+    position: absolute;
+    top: 62px;
+    transform: translateX(-50%);
+    font-size: 0.76rem;
+    color: var(--accent-pp);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 22px;
+    height: 150px;
+    padding: 0 10px;
+    margin-bottom: 6px;
+  }
+  .bar-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    gap: 8px;
+  }
+  .bar-col .bar {
+    width: 56%;
+    border-radius: 6px 6px 2px 2px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.82rem;
+    color: #fff;
+    min-height: 20px;
+  }
+  .bar-col.from .bar { background: var(--decrease); }
+  .bar-col.to .bar { background: var(--increase); }
+  .bar-col span.caption {
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+    text-align: center;
+  }
+
+  footer {
+    margin-top: 28px;
+    font-size: 0.76rem;
+    color: var(--ink-soft);
+  }
+
+  @media (max-width: 380px) {
+    .stats { grid-template-columns: 1fr; }
+    .bars { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="app">
+
+  <header>
+    <h1>Prosenttimuutos käytännössä</h1>
+    <p>Kokeile liukusäätimillä ja katso, mitä prosentin nousu tai lasku oikeasti tarkoittaa — ja mihin useimmat menevät sudenkuoppaan.</p>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="active" data-panel="perus" role="tab" aria-selected="true">Kasvu ja väheneminen</button>
+    <button data-panel="paradoksi" role="tab" aria-selected="false">Nouseeko takaisin?</button>
+    <button data-panel="yksikko" role="tab" aria-selected="false">Yksikkö vai prosentti?</button>
+  </nav>
+
+  <!-- PANEL 1 -->
+  <section class="panel active" id="panel-perus">
+    <h2>Mitä "+20 %" oikeasti tekee?</h2>
+    <p class="lead">Jokainen ruutu kuvaa yhden prosentin alkuperäisestä arvosta. Muutos lasketaan aina alkuarvosta — ei koskaan uudesta arvosta.</p>
+
+    <div class="controls">
+      <label for="ctx1">Tilanne
+        <select id="ctx1">
+          <option value="€" data-noun="Hinta">Hinta (€)</option>
+          <option value=" opp." data-noun="Oppilasmäärä">Oppilasmäärä</option>
+          <option value=" km" data-noun="Matka">Matka (km)</option>
+        </select>
+      </label>
+      <label for="p1">
+        <span class="value-line">Muutos <strong id="p1-out">+20 %</strong></span>
+        <input type="range" id="p1" min="-80" max="150" step="5" value="20">
+      </label>
+    </div>
+
+    <div class="stats" id="stats1" aria-live="polite"></div>
+
+    <div class="grid-wrap">
+      <div class="grid-label" id="grid1-label">100 ruutua = alkuarvo</div>
+      <div class="grid" id="grid1"></div>
+    </div>
+
+    <div class="callout" id="note1"></div>
+  </section>
+
+  <!-- PANEL 2 -->
+  <section class="panel" id="panel-paradoksi">
+    <h2>Nousu ja lasku eivät kumoa toisiaan</h2>
+    <p class="lead">Hinta nousee X %, ja sitten laskee saman verran, X %. Palaako hinta ennalleen? Kokeile.</p>
+
+    <div class="controls">
+      <label for="p2">
+        <span class="value-line">Muutosprosentti <strong id="p2-out">20 %</strong></span>
+        <input type="range" id="p2" min="5" max="90" step="5" value="20">
+      </label>
+    </div>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-grid-box grid-wrap" style="margin-bottom:0;">
+          <div class="grid-label">Alkuhinta: <strong id="v0-out">100 €</strong></div>
+          <div class="grid" id="grid2a"></div>
+        </div>
+      </div>
+      <div class="flow-arrow" id="arrow-up">↓ nousee</div>
+      <div class="flow-step">
+        <div class="flow-grid-box grid-wrap" style="margin-bottom:0;">
+          <div class="grid-label">Hinta nousun jälkeen: <strong id="v1-out"></strong></div>
+          <div class="grid" id="grid2b"></div>
+        </div>
+      </div>
+      <div class="flow-arrow" id="arrow-down">↓ laskee saman verran</div>
+      <div class="flow-step">
+        <div class="flow-grid-box grid-wrap" style="margin-bottom:0;">
+          <div class="grid-label">Hinta laskun jälkeen: <strong id="v2-out"></strong></div>
+          <div class="grid" id="grid2c"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" id="note2" style="margin-top:14px;"></div>
+  </section>
+
+  <!-- PANEL 3 -->
+  <section class="panel" id="panel-yksikko">
+    <h2>Prosenttiyksikkö vai prosenttimuutos?</h2>
+    <p class="lead">Korko nousee 5 %:sta 7 %:iin. Onko muutos 2 % vai 40 %? Molemmat ovat oikein — ne vain vastaavat eri kysymykseen.</p>
+
+    <div class="controls">
+      <label for="pFrom">
+        <span class="value-line">Alkuperäinen korko <strong id="pFrom-out">5 %</strong></span>
+        <input type="range" id="pFrom" min="1" max="50" step="1" value="5">
+      </label>
+      <label for="pTo">
+        <span class="value-line">Uusi korko <strong id="pTo-out">7 %</strong></span>
+        <input type="range" id="pTo" min="1" max="50" step="1" value="7">
+      </label>
+    </div>
+
+    <div class="grid-wrap">
+      <div class="grid-label">Prosenttiyksikköero asteikolla 0–50 %</div>
+      <div class="numberline">
+        <div class="track"></div>
+        <div class="marker from" id="markFrom"><span id="markFrom-label"></span><span class="dot"></span></div>
+        <div class="marker to" id="markTo"><span id="markTo-label"></span><span class="dot"></span></div>
+        <div class="bracket" id="bracket"></div>
+        <div class="bracket-label" id="bracketLabel"></div>
+      </div>
+    </div>
+
+    <div class="grid-wrap">
+      <div class="grid-label">Suhteellinen muutos (uusi korko verrattuna vanhaan)</div>
+      <div class="bars">
+        <div class="bar-col from">
+          <div class="bar" id="barFrom" style="height:100%;"></div>
+          <span class="caption">Vanha korko</span>
+        </div>
+        <div class="bar-col to">
+          <div class="bar" id="barTo"></div>
+          <span class="caption" id="barTo-caption">Uusi korko</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout" id="note3"></div>
+  </section>
+
+  <footer>Peruslukumäärä ei muutu automaattisesti — se on aina se arvo, josta prosentti lasketaan.</footer>
+</div>
+
+<script>
+(function(){
+  // ---------- Tab navigation ----------
+  var tabButtons = document.querySelectorAll('nav.tabs button');
+  var panels = document.querySelectorAll('.panel');
+  tabButtons.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      tabButtons.forEach(function(b){ b.classList.remove('active'); b.setAttribute('aria-selected','false'); });
+      panels.forEach(function(p){ p.classList.remove('active'); });
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected','true');
+      document.getElementById('panel-' + btn.dataset.panel).classList.add('active');
+    });
+  });
+
+  function fmtNum(n, decimals){
+    decimals = (decimals === undefined) ? 0 : decimals;
+    return n.toLocaleString('fi-FI', {minimumFractionDigits: decimals, maximumFractionDigits: decimals});
+  }
+  function signed(n, decimals){
+    var s = fmtNum(Math.abs(n), decimals);
+    return (n >= 0 ? '+' : '\u2212') + s;
+  }
+
+  // ---------- Shared grid builder ----------
+  // base: reference (original) value shown as 100 unit squares
+  // current: the value being visualized against that base
+  function buildGrid(el, base, current){
+    el.innerHTML = '';
+    var b = Math.round(base);
+    var c = Math.round(current);
+    var total = Math.max(b, c);
+    var frag = document.createDocumentFragment();
+    for (var i = 1; i <= total; i++){
+      var sq = document.createElement('div');
+      if (c >= b){
+        sq.className = 'sq ' + (i <= b ? 'kept' : 'added');
+      } else {
+        sq.className = 'sq ' + (i <= c ? 'kept' : 'removed');
+      }
+      frag.appendChild(sq);
+    }
+    el.appendChild(frag);
+  }
+
+  // ================= PANEL 1 =================
+  var ctx1 = document.getElementById('ctx1');
+  var p1 = document.getElementById('p1');
+  var p1out = document.getElementById('p1-out');
+  var stats1 = document.getElementById('stats1');
+  var grid1 = document.getElementById('grid1');
+  var grid1Label = document.getElementById('grid1-label');
+  var note1 = document.getElementById('note1');
+
+  function update1(){
+    var unit = ctx1.value;
+    var noun = ctx1.options[ctx1.selectedIndex].dataset.noun;
+    var p = parseInt(p1.value, 10);
+    var base = 100;
+    var current = base * (1 + p/100);
+    var change = current - base;
+
+    p1out.textContent = signed(p, 0) + ' %';
+    grid1Label.textContent = '100 ruutua = alkuperäinen ' + noun.toLowerCase();
+
+    stats1.innerHTML =
+      '<div class="stat"><span>' + noun + ' alussa</span><strong>100' + unit + '</strong></div>' +
+      '<div class="stat ' + (p>=0?'up':'down') + '"><span>Muutos</span><strong>' + signed(p,0) + ' %</strong></div>' +
+      '<div class="stat ' + (p>=0?'up':'down') + '"><span>Muutoksen määrä</span><strong>' + signed(change,1) + unit + '</strong></div>' +
+      '<div class="stat"><span>' + noun + ' nyt</span><strong>' + fmtNum(current,1) + unit + '</strong></div>';
+
+    buildGrid(grid1, base, current);
+
+    if (p >= 0){
+      note1.innerHTML = '<strong>Huomaa:</strong> +' + p + ' % ei tarkoita "' + p + ' ' + noun.toLowerCase() + '" — se tarkoittaa ' + p + ' % lisää siitä, mitä oli alussa. Oranssit ruudut ovat se osa, joka tuli lisää.';
+    } else {
+      note1.innerHTML = '<strong>Huomaa:</strong> ' + p + ' % lasketaan alkuarvosta. Katkoviivalliset ruudut ovat se osa, joka hävisi — jäljelle jäi ' + fmtNum(current,1) + unit + '.';
+    }
+  }
+  ctx1.addEventListener('change', update1);
+  p1.addEventListener('input', update1);
+  update1();
+
+  // ================= PANEL 2 =================
+  var p2 = document.getElementById('p2');
+  var p2out = document.getElementById('p2-out');
+  var v0out = document.getElementById('v0-out');
+  var v1out = document.getElementById('v1-out');
+  var v2out = document.getElementById('v2-out');
+  var grid2a = document.getElementById('grid2a');
+  var grid2b = document.getElementById('grid2b');
+  var grid2c = document.getElementById('grid2c');
+  var note2 = document.getElementById('note2');
+  var arrowUp = document.getElementById('arrow-up');
+  var arrowDown = document.getElementById('arrow-down');
+
+  function update2(){
+    var p = parseInt(p2.value, 10);
+    var v0 = 100;
+    var v1 = v0 * (1 + p/100);
+    var v2 = v1 * (1 - p/100);
+    var lost = v0 - v2;
+    var qBack = p / (1 + p/100);
+
+    p2out.textContent = p + ' %';
+    v0out.textContent = fmtNum(v0,0) + ' €';
+    v1out.textContent = fmtNum(v1,1) + ' €';
+    v2out.textContent = fmtNum(v2,1) + ' €';
+    arrowUp.textContent = '\u2193 nousee ' + p + ' %';
+    arrowDown.textContent = '\u2193 laskee ' + p + ' %';
+
+    buildGrid(grid2a, v0, v0);
+    buildGrid(grid2b, v0, v1);
+    buildGrid(grid2c, v0, v2);
+
+    note2.innerHTML = '<strong>Lopputulos:</strong> hinta on nyt ' + fmtNum(lost,1) + ' € pienempi kuin alussa, vaikka nousu- ja lasku­prosentti olivat samat. Syy: lasku ' + p + ' % laskettiin isommasta luvusta (' + fmtNum(v1,1) + ' €) kuin nousu laskettiin alusta (100 €). Päästäkseen takaisin 100 euroon hinnan pitäisi laskea vain noin ' + fmtNum(qBack,1) + ' %, ei ' + p + ' %.';
+  }
+  p2.addEventListener('input', update2);
+  update2();
+
+  // ================= PANEL 3 =================
+  var pFrom = document.getElementById('pFrom');
+  var pTo = document.getElementById('pTo');
+  var pFromOut = document.getElementById('pFrom-out');
+  var pToOut = document.getElementById('pTo-out');
+  var markFrom = document.getElementById('markFrom');
+  var markTo = document.getElementById('markTo');
+  var markFromLabel = document.getElementById('markFrom-label');
+  var markToLabel = document.getElementById('markTo-label');
+  var bracket = document.getElementById('bracket');
+  var bracketLabel = document.getElementById('bracketLabel');
+  var barFrom = document.getElementById('barFrom');
+  var barTo = document.getElementById('barTo');
+  var barToCaption = document.getElementById('barTo-caption');
+  var note3 = document.getElementById('note3');
+  var SCALE_MAX = 50;
+
+  function update3(){
+    var from = parseInt(pFrom.value, 10);
+    var to = parseInt(pTo.value, 10);
+    var pp = to - from;
+    var relative = ((to - from) / from) * 100;
+
+    pFromOut.textContent = from + ' %';
+    pToOut.textContent = to + ' %';
+
+    var fromPct = (from / SCALE_MAX) * 100;
+    var toPct = (to / SCALE_MAX) * 100;
+    markFrom.style.left = fromPct + '%';
+    markTo.style.left = toPct + '%';
+    markFromLabel.textContent = from + ' %';
+    markToLabel.textContent = to + ' %';
+
+    var left = Math.min(fromPct, toPct);
+    var right = Math.max(fromPct, toPct);
+    bracket.style.left = left + '%';
+    bracket.style.width = Math.max(right - left, 0.5) + '%';
+    bracketLabel.style.left = ((left + right) / 2) + '%';
+    bracketLabel.textContent = signed(pp,0) + ' prosenttiyksikköä';
+
+    // relative bars, clamp visual ratio to keep bar readable, real number always shown
+    var ratio = to / from;
+    var visualRatio = Math.max(0.15, Math.min(ratio, 3));
+    barFrom.textContent = from + ' %';
+    barTo.style.height = (visualRatio * 100) + '%';
+    barTo.textContent = to + ' %';
+    barToCaption.textContent = 'Uusi korko (' + signed(relative,0) + ' %)';
+
+    note3.innerHTML = '<strong>Sama muutos, kaksi vastausta:</strong> korko nousi ' + Math.abs(pp) + ' prosenttiyksikköä (' + from + ' %:sta ' + to + ' %:iin), mutta suhteellisesti se on ' + fmtNum(Math.abs(relative),0) + ' % ' + (relative>=0?'enemmän':'vähemmän') + ' kuin ennen. Molemmat luvut ovat oikein — kysymys vain on, verrataanko asteikkoon vai alkuperäiseen arvoon.';
+  }
+  pFrom.addEventListener('input', update3);
+  pTo.addEventListener('input', update3);
+  update3();
+})();
+</script>
+
+</body>
+</html>

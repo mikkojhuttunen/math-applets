@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Heitä sikaa – todennäköisyyssovellus</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F9FB;
+    --grid-line: #DCE6ED;
+    --ink: #17232C;
+    --ink-soft: #536270;
+    --empirical: #1F7A6C;
+    --theoretical: #B8860B;
+    --accent-warm: #C0392B;
+    --surface: #FFFFFF;
+    --border: #D7E0E6;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #12181D;
+      --grid-line: #202B33;
+      --ink: #EBF1F4;
+      --ink-soft: #9FB0BA;
+      --empirical: #4FBBA6;
+      --theoretical: #E0B84D;
+      --accent-warm: #E1746A;
+      --surface: #1A222A;
+      --border: #2A353E;
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #12181D;
+    --grid-line: #202B33;
+    --ink: #EBF1F4;
+    --ink-soft: #9FB0BA;
+    --empirical: #4FBBA6;
+    --theoretical: #E0B84D;
+    --accent-warm: #E1746A;
+    --surface: #1A222A;
+    --border: #2A353E;
+  }
+  * { box-sizing: border-box; }
+  html { height: 100%; scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    margin: 0;
+    min-height: 100%;
+    background:
+      linear-gradient(var(--grid-line) 1px, transparent 1px) 0 0 / 100% 28px,
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px) 0 0 / 28px 100%,
+      var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif;
+  }
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: env(safe-area-inset-top, 0px) 20px calc(env(safe-area-inset-bottom, 0px) + 40px);
+  }
+  header { padding: 28px 0 18px; }
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 27px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  header p { margin: 0; color: var(--ink-soft); font-size: 15px; line-height: 1.5; max-width: 48ch; }
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 16px 14px;
+    margin-bottom: 16px;
+  }
+  .card h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 16px; margin: 0 0 12px; }
+
+  .stage { display: flex; justify-content: center; gap: 28px; padding: 6px 0 16px; }
+  .pig-mini { width: 84px; display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .pig-mini__stage { display: flex; align-items: center; justify-content: center; height: 56px; }
+  .pig-mini__stage.toss { animation: pigtoss .45s ease-in-out; }
+  @keyframes pigtoss {
+    0% { transform: translateY(0) scale(1); }
+    40% { transform: translateY(-10px) scale(1.08); }
+    100% { transform: translateY(0) scale(1); }
+  }
+  .pig-mini__emoji { font-size: 40px; display: inline-block; transition: transform .3s ease; }
+  .pig-mini__tag { font-size: 11.5px; color: var(--ink-soft); text-align: center; line-height: 1.3; min-height: 2.6em; }
+
+  #throwLabel { text-align: center; font-size: 14px; color: var(--ink-soft); margin: 0; }
+  #throwLabel strong { color: var(--ink); font-weight: 600; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; padding: 4px 0 16px; }
+  .btn {
+    appearance: none; border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; padding: 9px 15px; border-radius: 7px; cursor: pointer;
+  }
+  .btn:hover { border-color: var(--empirical); }
+  .btn--ghost { color: var(--ink-soft); background: transparent; }
+
+  .stat-row { display: flex; justify-content: center; gap: 28px; padding-bottom: 18px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; gap: 2px; align-items: center; }
+  .stat__label { font-size: 13px; color: var(--ink-soft); }
+  .stat__value { font-family: 'IBM Plex Mono', monospace; font-size: 21px; font-weight: 600; }
+
+  .pills { display: flex; flex-wrap: wrap; gap: 8px; }
+  .pill {
+    appearance: none; border: 1px solid var(--border); background: var(--surface); color: var(--ink);
+    font-family: 'IBM Plex Sans', sans-serif; font-size: 13px; padding: 7px 13px; border-radius: 999px; cursor: pointer;
+  }
+  .pill:hover { border-color: var(--empirical); }
+  .pill.selected { background: var(--empirical); border-color: var(--empirical); color: var(--surface); font-weight: 600; }
+
+  .detail-placeholder { color: var(--ink-soft); font-size: 14px; line-height: 1.5; }
+  .detail__head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 6px; flex-wrap: wrap; }
+  .detail__head h3 { font-family: 'Fraunces', serif; font-weight: 600; font-size: 17px; margin: 0; }
+  .detail__prob { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--theoretical); }
+  .detail__desc { font-size: 13px; color: var(--ink-soft); line-height: 1.5; margin: 0 0 12px; }
+  .detail__stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .detail__stat-label { font-size: 12px; color: var(--ink-soft); margin-bottom: 2px; }
+  .detail__stat-value { font-family: 'IBM Plex Mono', monospace; font-size: 14px; font-weight: 600; }
+
+  .row { padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .row:last-child { border-bottom: none; }
+  .row__top { display: flex; justify-content: space-between; align-items: baseline; font-size: 13px; margin-bottom: 6px; gap: 8px; }
+  .row__label { font-weight: 500; }
+  .row__nums { font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--ink-soft); text-align: right; white-space: nowrap; }
+  .row__track { position: relative; height: 14px; background: var(--paper); border: 1px solid var(--border); border-radius: 4px; }
+  .row__bar { position: absolute; left: 0; top: 0; bottom: 0; background: var(--empirical); border-radius: 4px 0 0 4px; }
+  .row__tick { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--theoretical); }
+  .row__bottom { display: flex; justify-content: flex-end; margin-top: 4px; }
+  .row__observed { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--ink-soft); }
+
+  .legend { display: flex; gap: 18px; margin-top: 10px; font-size: 12px; color: var(--ink-soft); flex-wrap: wrap; }
+  .legend span.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+  .legend .swatch--observed { background: var(--empirical); }
+  .legend .swatch--expected { background: var(--theoretical); }
+
+  .caption { font-size: 13px; color: var(--ink-soft); line-height: 1.55; margin: 10px 0 0; }
+  footer.hint { text-align: center; color: var(--ink-soft); font-size: 12px; padding-top: 8px; }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="page">
+
+  <header>
+    <h1>Heitä sikaa</h1>
+    <p>Heitä kahta possua ja vertaa, kuinka usein eri asennot ja yhdistelmät oikeasti syntyvät. Todennäköisyydet perustuvat pelin oikeisiin heittotilastoihin — possut eivät ole reiluja noppia.</p>
+  </header>
+
+  <div class="card">
+    <h2>Heitto</h2>
+    <div class="stage">
+      <div class="pig-mini">
+        <div class="pig-mini__stage" id="pigStageA"><span class="pig-mini__emoji" id="pigEmojiA">🐖</span></div>
+        <div class="pig-mini__tag" id="pigTagA">–</div>
+      </div>
+      <div class="pig-mini">
+        <div class="pig-mini__stage" id="pigStageB"><span class="pig-mini__emoji" id="pigEmojiB">🐖</span></div>
+        <div class="pig-mini__tag" id="pigTagB">–</div>
+      </div>
+    </div>
+    <p id="throwLabel">Heitä possut nähdäksesi tuloksen.</p>
+  </div>
+
+  <div class="controls">
+    <button class="btn" onclick="throwPigs(1)">Heitä 1</button>
+    <button class="btn" onclick="throwPigs(10)">Heitä 10</button>
+    <button class="btn" onclick="throwPigs(100)">Heitä 100</button>
+    <button class="btn" onclick="throwPigs(1000)">Heitä 1000</button>
+    <button class="btn btn--ghost" onclick="resetAll()">Tyhjennä</button>
+  </div>
+
+  <div class="stat-row">
+    <div class="stat">
+      <span class="stat__label">Heittoja yhteensä</span>
+      <span class="stat__value" id="totalThrows">0</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Heittotyypit</h2>
+    <div class="pills" id="pills"></div>
+  </div>
+
+  <div class="card" id="detailCard">
+    <h2>Valitun heiton tiedot</h2>
+    <div id="detailPanel" class="detail-placeholder">Valitse yllä heittotyyppi nähdäksesi kuvauksen ja tarkat luvut.</div>
+  </div>
+
+  <div class="card">
+    <h2>Kaikkien heittojen todennäköisyydet</h2>
+    <div id="rows"></div>
+    <div class="legend">
+      <span><span class="swatch swatch--expected"></span>Teoreettinen todennäköisyys (viiva)</span>
+      <span><span class="swatch swatch--observed"></span>Havaittu osuus tässä istunnossa (palkki)</span>
+    </div>
+    <p class="caption">Palkit ja viivat ovat logaritmisella asteikolla, koska todennäköisyydet vaihtelevat noin 29 %:sta alle 0,004 %:iin. Yksittäisen possun asentojen todennäköisyydet (kylki tyhjä 35,0 %, kylki pilkku 30,2 %, selkä 22,4 %, jalat 8,8 %, kärsä 3,0 %, korva 0,6 %) perustuvat John Kernin (2006) tilastoaineistoon 11 954 heitosta, ja kahden possun tulokset lasketaan tässä toisistaan riippumattomina.</p>
+  </div>
+
+  <footer class="hint">Yksi heitto = kaksi possua pudotettuna riippumatta toisistaan.</footer>
+</div>
+
+<script>
+  // ---------- pig position model ----------
+  const POS = [
+    { key: 'side_blank', label: 'Kylki (tyhjä)', p: 0.350, side: true, dot: false, score: 0, rot: 'rotate(90deg)' },
+    { key: 'side_dot',   label: 'Kylki (pilkku)', p: 0.302, side: true, dot: true,  score: 0, rot: 'rotate(90deg)' },
+    { key: 'razorback',  label: 'Selkä (Razorback)', p: 0.224, side: false, score: 5,  rot: 'rotate(180deg)' },
+    { key: 'trotter',    label: 'Jaloillaan (Trotter)', p: 0.088, side: false, score: 5,  rot: 'rotate(0deg)' },
+    { key: 'snouter',    label: 'Kärsällään (Snouter)', p: 0.030, side: false, score: 10, rot: 'rotate(-25deg)' },
+    { key: 'jowler',     label: 'Korvan varassa (Leaning Jowler)', p: 0.006, side: false, score: 15, rot: 'rotate(-55deg)' }
+  ];
+  const CUM = [];
+  (function(){ let acc = 0; POS.forEach(function(p){ acc += p.p; CUM.push(acc); }); })();
+
+  const LABELS = {
+    sider: 'Sivuttain (Sider)',
+    pigout: 'Sika ulos (Pig Out)',
+    razorback: 'Selkä (Razorback)',
+    trotter: 'Jaloillaan (Trotter)',
+    snouter: 'Kärsällään (Snouter)',
+    jowler: 'Korvan varassa (Leaning Jowler)',
+    mixed: 'Sekakombinaatio',
+    double_razorback: 'Tupla-Razorback',
+    double_trotter: 'Tupla-Trotter',
+    double_snouter: 'Tupla-Snouter',
+    double_jowler: 'Tupla-Leaning Jowler'
+  };
+  const DESC = {
+    sider: 'Molemmat possut kaatuvat kyljelleen samalla tavalla — molemmilla pilkku ylöspäin tai molemmilla alaspäin.',
+    pigout: 'Possut kaatuvat kyljelleen eri tavoin: toisella pilkku ylös, toisella alas. Vuoron pisteet nollautuvat ja vuoro päättyy.',
+    razorback: 'Toinen possu on kyljellään (0 pistettä), toinen lepää selällään.',
+    trotter: 'Toinen possu on kyljellään, toinen seisoo neljällä jalalla.',
+    snouter: 'Toinen possu on kyljellään, toinen nojaa kärsäänsä ja etujalkoihinsa.',
+    jowler: 'Toinen possu on kyljellään, toinen nojaa kärsän, korvan ja jalan varaan — harvinaisin yksittäisasento.',
+    mixed: 'Kumpikaan possu ei ole kyljellään, ja ne päätyvät kahteen eri asentoon — pisteet lasketaan yhteen (10–25 pistettä tilanteesta riippuen).',
+    double_razorback: 'Molemmat possut lepäävät selällään.',
+    double_trotter: 'Molemmat possut seisovat neljällä jalalla.',
+    double_snouter: 'Molemmat possut nojaavat kärsäänsä.',
+    double_jowler: 'Molemmat possut nojaavat kärsän ja korvan varaan — pelin harvinaisin ja arvokkain heitto.'
+  };
+  const POINTS_LABEL = {
+    sider: '1', pigout: '0 (vuoro päättyy)', razorback: '5', trotter: '5', snouter: '10', jowler: '15',
+    mixed: '10–25', double_razorback: '20', double_trotter: '20', double_snouter: '40', double_jowler: '60'
+  };
+  const EXAMPLE_EMOJI = {
+    sider: ['side_blank','side_blank'], pigout: ['side_blank','side_dot'],
+    razorback: ['side_blank','razorback'], trotter: ['side_blank','trotter'],
+    snouter: ['side_blank','snouter'], jowler: ['side_blank','jowler'],
+    mixed: ['razorback','trotter'], double_razorback: ['razorback','razorback'],
+    double_trotter: ['trotter','trotter'], double_snouter: ['snouter','snouter'], double_jowler: ['jowler','jowler']
+  };
+
+  function classifyThrow(a, b) {
+    if (a.side && b.side) {
+      if (a.dot === b.dot) return { cat: 'sider' };
+      return { cat: 'pigout' };
+    }
+    if (a.side !== b.side) {
+      const stand = a.side ? b : a;
+      return { cat: stand.key };
+    }
+    if (a.key === b.key) return { cat: 'double_' + a.key };
+    return { cat: 'mixed' };
+  }
+
+  // ---------- exact theoretical probabilities (36 combos) ----------
+  const THEORY = {};
+  POS.forEach(function(a){
+    POS.forEach(function(b){
+      const cat = classifyThrow(a, b).cat;
+      THEORY[cat] = (THEORY[cat] || 0) + a.p * b.p;
+    });
+  });
+  const CAT_ORDER = Object.keys(THEORY).sort(function(x,y){ return THEORY[y] - THEORY[x]; });
+
+  // ---------- state ----------
+  const state = { totalThrows: 0, counts: {}, selectedKey: null };
+  CAT_ORDER.forEach(function(k){ state.counts[k] = 0; });
+
+  function pickPos() {
+    const r = Math.random();
+    for (let i = 0; i < CUM.length; i++) if (r < CUM[i]) return POS[i];
+    return POS[POS.length - 1];
+  }
+  function fmtInt(n) { return n.toLocaleString('fi-FI'); }
+  function fmtPct(p) {
+    const pct = p * 100;
+    let s;
+    if (pct === 0) s = '0';
+    else if (pct >= 1) s = pct.toFixed(2);
+    else if (pct >= 0.01) s = pct.toFixed(4);
+    else s = pct.toFixed(6);
+    return s.replace('.', ',') + ' %';
+  }
+  function logPos(p) {
+    const lo = -5.5, hi = 0;
+    let v = Math.log10(Math.max(p, 1e-9));
+    v = Math.max(lo, Math.min(hi, v));
+    return ((v - lo) / (hi - lo)) * 100;
+  }
+
+  function throwPigs(n) {
+    let last = null;
+    for (let i = 0; i < n; i++) {
+      const a = pickPos(), b = pickPos();
+      const cat = classifyThrow(a, b).cat;
+      state.counts[cat]++;
+      state.totalThrows++;
+      last = { a: a, b: b, cat: cat };
+    }
+    renderThrow(last);
+    renderAll();
+  }
+  function resetAll() {
+    CAT_ORDER.forEach(function(k){ state.counts[k] = 0; });
+    state.totalThrows = 0;
+    document.getElementById('pigTagA').textContent = '–';
+    document.getElementById('pigTagB').textContent = '–';
+    document.getElementById('pigEmojiA').style.transform = 'rotate(0deg)';
+    document.getElementById('pigEmojiB').style.transform = 'rotate(0deg)';
+    document.getElementById('throwLabel').textContent = 'Heitä possut nähdäksesi tuloksen.';
+    renderAll();
+  }
+
+  function setPig(stageId, emojiId, tagId, pos) {
+    document.getElementById(emojiId).style.transform = pos.rot;
+    document.getElementById(tagId).textContent = pos.label;
+    const stage = document.getElementById(stageId);
+    stage.classList.remove('toss');
+    void stage.offsetWidth;
+    stage.classList.add('toss');
+  }
+  function renderThrow(last) {
+    setPig('pigStageA', 'pigEmojiA', 'pigTagA', last.a);
+    setPig('pigStageB', 'pigEmojiB', 'pigTagB', last.b);
+    const points = last.cat === 'mixed' ? (last.a.score + last.b.score) : null;
+    let text = '<strong>' + LABELS[last.cat] + '</strong>';
+    text += points !== null ? ' — ' + points + ' pistettä' : ' — ' + POINTS_LABEL[last.cat] + (last.cat === 'pigout' ? '' : ' pistettä');
+    document.getElementById('throwLabel').innerHTML = text;
+  }
+
+  function renderPills() {
+    document.getElementById('pills').innerHTML = CAT_ORDER.map(function(k){
+      return '<button class="pill' + (state.selectedKey === k ? ' selected' : '') + '" onclick="selectCat(\'' + k + '\')">' + LABELS[k] + '</button>';
+    }).join('');
+  }
+  function renderRows() {
+    document.getElementById('rows').innerHTML = CAT_ORDER.map(function(k){
+      const p = THEORY[k];
+      const observedCount = state.counts[k];
+      const observedP = state.totalThrows ? observedCount / state.totalThrows : 0;
+      const tickPos = logPos(p);
+      const barWidth = observedCount > 0 ? logPos(observedP) : 0;
+      return '<div class="row">' +
+        '<div class="row__top"><span class="row__label">' + LABELS[k] + '</span>' +
+        '<span class="row__nums">' + fmtPct(p) + '</span></div>' +
+        '<div class="row__track"><div class="row__bar" style="width:' + barWidth.toFixed(2) + '%"></div>' +
+        '<div class="row__tick" style="left:' + tickPos.toFixed(2) + '%"></div></div>' +
+        '<div class="row__bottom"><span class="row__observed">havaittu ' + fmtInt(observedCount) +
+        (state.totalThrows ? ' (' + fmtPct(observedP) + ')' : '') + '</span></div>' +
+        '</div>';
+    }).join('');
+  }
+  function renderDetail() {
+    const el = document.getElementById('detailPanel');
+    const k = state.selectedKey;
+    if (!k) {
+      el.className = 'detail-placeholder';
+      el.textContent = 'Valitse yllä heittotyyppi nähdäksesi kuvauksen ja tarkat luvut.';
+      return;
+    }
+    const p = THEORY[k];
+    const observedCount = state.counts[k];
+    const observedP = state.totalThrows ? observedCount / state.totalThrows : 0;
+    el.className = '';
+    el.innerHTML =
+      '<div class="detail__head"><h3>' + LABELS[k] + '</h3><span class="detail__prob">' + fmtPct(p) + '</span></div>' +
+      '<p class="detail__desc">' + DESC[k] + '</p>' +
+      '<div class="detail__stats">' +
+      '<div><div class="detail__stat-label">Pisteet</div><div class="detail__stat-value">' + POINTS_LABEL[k] + '</div></div>' +
+      '<div><div class="detail__stat-label">Keskimäärin</div><div class="detail__stat-value">1 / ' + fmtInt(Math.round(1/p)) + ' heittoa</div></div>' +
+      '<div><div class="detail__stat-label">Havaittu tässä istunnossa</div><div class="detail__stat-value">' + fmtInt(observedCount) + ' kpl</div></div>' +
+      '<div><div class="detail__stat-label">Havaittu osuus</div><div class="detail__stat-value">' + (state.totalThrows ? fmtPct(observedP) : '–') + '</div></div>' +
+      '</div>';
+  }
+  function selectCat(k) {
+    state.selectedKey = (state.selectedKey === k) ? null : k;
+    renderPills();
+    renderDetail();
+  }
+  function renderAll() {
+    document.getElementById('totalThrows').textContent = fmtInt(state.totalThrows);
+    renderPills();
+    renderRows();
+    renderDetail();
+  }
+
+  renderAll();
+</script>
+
+</body>
+</html>

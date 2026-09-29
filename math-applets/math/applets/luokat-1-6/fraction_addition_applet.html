@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adding fractions with different denominators</title>
+<style>
+  :root{
+    --paper:#fdfdfb;
+    --grid:#e4ecea;
+    --ink:#1c2b39;
+    --ink-soft:#5b6b78;
+    --line:#c9d6d3;
+    --teal:#146c63;
+    --teal-fill:#bcdbd6;
+    --rust:#b5502e;
+    --rust-fill:#f0cdbd;
+    --card:#ffffff;
+    --flash:#d98c2b;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color:var(--ink);
+    background-color:var(--paper);
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 28px 28px;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    padding: 32px 16px 64px;
+  }
+  .sheet{
+    width:100%;
+    max-width:600px;
+  }
+  h1{
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    font-weight:600;
+    font-size:26px;
+    line-height:1.3;
+    margin:0 0 6px;
+  }
+  .sub{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin:0 0 28px;
+    max-width:46ch;
+  }
+  .panel{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--ink);
+    border-radius:2px;
+    padding:24px 24px 28px;
+    margin-bottom:20px;
+  }
+  .input-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-bottom:4px;
+  }
+  .fraction-io{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
+  .fraction-io input{
+    width:56px;
+    text-align:center;
+    font-size:20px;
+    font-family: "Iowan Old Style", Georgia, serif;
+    color:var(--ink);
+    border:1px solid var(--line);
+    border-radius:4px;
+    padding:4px 0;
+    background:var(--paper);
+  }
+  .fraction-io input:focus{
+    outline:2px solid var(--teal);
+    outline-offset:1px;
+  }
+  .frac-rule{
+    width:56px;
+    height:2px;
+    background:var(--ink);
+    margin:6px 0;
+  }
+  .op-symbol{
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size:26px;
+    color:var(--ink-soft);
+    align-self:center;
+  }
+  .result-frac{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    align-self:center;
+    min-width:56px;
+  }
+  .result-frac .top, .result-frac .bottom{
+    font-family: "Iowan Old Style", Georgia, serif;
+    font-size:20px;
+  }
+  .result-frac .top{ }
+  .go-row{
+    display:flex;
+    justify-content:center;
+    margin-top:18px;
+  }
+  button{
+    font-family:inherit;
+    font-size:14px;
+    cursor:pointer;
+  }
+  #visualizeBtn{
+    background:var(--ink);
+    color:var(--paper);
+    border:none;
+    border-radius:4px;
+    padding:9px 22px;
+  }
+  #visualizeBtn:hover{ background:#0e1a24; }
+  #randomizeBtn{
+    background:none;
+    color:var(--ink);
+    border:1px solid var(--ink);
+    border-radius:4px;
+    padding:9px 22px;
+  }
+  #randomizeBtn:hover{ background:var(--ink); color:var(--paper); }
+  .options-row{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:14px;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .options-row label{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    cursor:pointer;
+  }
+  .options-row input[type="checkbox"]{
+    accent-color:var(--ink);
+    width:14px;
+    height:14px;
+  }
+  .error{
+    color:var(--rust);
+    font-size:13px;
+    text-align:center;
+    margin-top:10px;
+    min-height:16px;
+  }
+
+  /* progress made of a segmented fraction bar, echoing the visual itself */
+  .progress-bar{
+    display:flex;
+    height:8px;
+    border:1px solid var(--line);
+    border-radius:4px;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .progress-bar .seg{
+    flex:1;
+    background:var(--paper);
+    border-right:1px solid var(--line);
+  }
+  .progress-bar .seg:last-child{ border-right:none; }
+  .progress-bar .seg.done{ background:var(--ink-soft); }
+  .progress-bar .seg.current{ background:var(--ink); }
+
+  .step-label{
+    font-size:13px;
+    text-transform:none;
+    color:var(--ink-soft);
+    margin:0 0 14px;
+  }
+  .bar-row{
+    display:flex;
+    height:44px;
+    border:1px solid var(--ink);
+    border-radius:3px;
+    overflow:hidden;
+    margin-bottom:6px;
+  }
+  .bar-row .cell{
+    flex:1;
+    border-right:1px solid var(--ink);
+  }
+  .bar-row .cell:last-child{ border-right:none; }
+  .bar-row .cell.fill-a{ background:var(--teal-fill); }
+  .bar-row .cell.fill-b{ background:var(--rust-fill); }
+  .bar-row .cell.flash-anim{ animation: flashLine 0.7s ease-out; }
+  @keyframes flashLine{
+    0%{ border-right-color:var(--flash); box-shadow: inset 1px 0 0 var(--flash); }
+    100%{ border-right-color:var(--ink); box-shadow: inset 1px 0 0 transparent; }
+  }
+  .bar-caption{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0 0 20px;
+  }
+  .explain{
+    font-size:15px;
+    line-height:1.6;
+    margin:18px 0 0;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .explain b{ color:var(--ink); font-weight:600; }
+  .nav-row{
+    display:flex;
+    justify-content:space-between;
+    margin-top:22px;
+  }
+  .nav-row button{
+    background:none;
+    border:1px solid var(--ink);
+    color:var(--ink);
+    border-radius:4px;
+    padding:8px 18px;
+  }
+  .nav-row button:disabled{
+    opacity:0.35;
+    cursor:default;
+  }
+  .nav-row button:not(:disabled):hover{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .legend{
+    display:flex;
+    gap:18px;
+    font-size:13px;
+    color:var(--ink-soft);
+    margin-top:4px;
+  }
+  .legend span{ display:inline-flex; align-items:center; gap:6px; }
+  .swatch{ width:12px; height:12px; border-radius:2px; display:inline-block; border:1px solid var(--ink); }
+  .swatch.a{ background:var(--teal-fill); }
+  .swatch.b{ background:var(--rust-fill); }
+
+  @media (max-width: 420px){
+    h1{ font-size:22px; }
+    .panel{ padding:18px 16px 22px; }
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="sheet">
+  <h1>Adding fractions with different denominators</h1>
+  <p class="sub">Enter two fractions to see why you need a common denominator before adding &mdash; and watch the pieces get re-cut and combined.</p>
+
+  <div class="panel">
+    <div class="input-row">
+      <div class="fraction-io">
+        <input id="n1" type="text" inputmode="numeric" value="1" aria-label="First numerator">
+        <div class="frac-rule"></div>
+        <input id="d1" type="text" inputmode="numeric" value="3" aria-label="First denominator">
+      </div>
+      <span class="op-symbol">+</span>
+      <div class="fraction-io">
+        <input id="n2" type="text" inputmode="numeric" value="1" aria-label="Second numerator">
+        <div class="frac-rule"></div>
+        <input id="d2" type="text" inputmode="numeric" value="2" aria-label="Second denominator">
+      </div>
+      <span class="op-symbol">=</span>
+      <div class="result-frac">
+        <span class="top" id="resultTop">?</span>
+        <div class="frac-rule" id="resultRule" style="display:none;"></div>
+        <span class="bottom" id="resultBottom"></span>
+      </div>
+    </div>
+    <div class="go-row" style="gap:12px;">
+      <button id="visualizeBtn">Visualize</button>
+      <button id="randomizeBtn" type="button">New example</button>
+    </div>
+    <div class="options-row">
+      <label><input type="checkbox" id="simplifyToggle" checked>Simplify final answer</label>
+    </div>
+    <p class="error" id="errorMsg"></p>
+  </div>
+
+  <div class="panel" id="vizPanel" style="display:none;">
+    <div class="progress-bar" id="progressBar"></div>
+    <p class="step-label" id="stepLabel"></p>
+
+    <div id="stepContent"></div>
+
+    <div class="legend">
+      <span><span class="swatch a"></span><span id="legendA"></span></span>
+      <span><span class="swatch b"></span><span id="legendB"></span></span>
+    </div>
+
+    <p class="explain" id="explainText"></p>
+
+    <div class="options-row" style="margin-top:16px;">
+      <label><input type="checkbox" id="animToggle" checked>Animate line changes between steps</label>
+    </div>
+
+    <div class="nav-row">
+      <button id="prevBtn">Back</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function gcd(a,b){ return b === 0 ? a : gcd(b, a % b); }
+function lcm(a,b){ return (a*b)/gcd(a,b); }
+
+function makeBarRow(totalCells, filledStart, filledEnd){
+  // filledStart..filledEnd (exclusive) are colored 'a' (teal), everything before/after in that
+  // range handled by caller; here we just build one row given per-cell class assignment.
+  const row = document.createElement('div');
+  row.className = 'bar-row';
+  for(let i=0;i<totalCells;i++){
+    const cell = document.createElement('div');
+    cell.className = 'cell';
+    if(i < filledStart){
+      // no fill
+    } else if (i < filledEnd){
+      cell.classList.add('fill-a');
+    }
+    row.appendChild(cell);
+  }
+  return row;
+}
+
+function buildSequenceRows(lcmVal, sequenceColors){
+  // sequenceColors: array of 'a' | 'b' | '' covering the full combined sequence,
+  // wrapped into rows of length lcmVal.
+  const rows = [];
+  for(let offset=0; offset<sequenceColors.length; offset += lcmVal){
+    const rowClasses = sequenceColors.slice(offset, offset + lcmVal);
+    while(rowClasses.length < lcmVal) rowClasses.push('');
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    rowClasses.forEach(c => {
+      const cell = document.createElement('div');
+      cell.className = 'cell';
+      if(c === 'a') cell.classList.add('fill-a');
+      if(c === 'b') cell.classList.add('fill-b');
+      row.appendChild(cell);
+    });
+    rows.push(row);
+  }
+  return rows;
+}
+
+let state = null;
+let step = 0;
+let simplifyEnabled = true;
+let animEnabled = true;
+
+function parseAndValidate(){
+  const n1 = parseInt(document.getElementById('n1').value, 10);
+  const d1 = parseInt(document.getElementById('d1').value, 10);
+  const n2 = parseInt(document.getElementById('n2').value, 10);
+  const d2 = parseInt(document.getElementById('d2').value, 10);
+  const errBox = document.getElementById('errorMsg');
+  errBox.textContent = '';
+
+  if([n1,d1,n2,d2].some(v => !Number.isFinite(v))){
+    errBox.textContent = 'Enter whole numbers in every box.';
+    return null;
+  }
+  if(d1 <= 0 || d2 <= 0){
+    errBox.textContent = 'Denominators must be greater than zero.';
+    return null;
+  }
+  if(n1 < 0 || n2 < 0){
+    errBox.textContent = 'Use positive numerators.';
+    return null;
+  }
+  if(n1 > d1 * 4 || n2 > d2 * 4){
+    errBox.textContent = 'Try smaller numerators so the bars stay readable.';
+    return null;
+  }
+  const L = lcm(d1, d2);
+  if(L > 24){
+    errBox.textContent = 'That denominator pair makes bars too fine to read here \u2014 try smaller numbers (denominators up to about 12 work well).';
+    return null;
+  }
+  return {n1,d1,n2,d2,L};
+}
+
+function computeResult(s){
+  const scale1 = s.L / s.d1;
+  const scale2 = s.L / s.d2;
+  const newN1 = s.n1 * scale1;
+  const newN2 = s.n2 * scale2;
+  const sumNum = newN1 + newN2;
+  const g = gcd(sumNum, s.L) || 1;
+  return {
+    newN1, newN2, sumNum,
+    simplifiedNum: sumNum / g,
+    simplifiedDen: s.L / g
+  };
+}
+
+function updateResultPreview(){
+  const s = parseAndValidate();
+  const top = document.getElementById('resultTop');
+  const rule = document.getElementById('resultRule');
+  const bottom = document.getElementById('resultBottom');
+  if(!s){
+    top.textContent = '?';
+    rule.style.display = 'none';
+    bottom.textContent = '';
+    return;
+  }
+  const r = computeResult(s);
+  if(simplifyEnabled){
+    top.textContent = r.simplifiedNum;
+    bottom.textContent = r.simplifiedDen;
+  } else {
+    top.textContent = r.sumNum;
+    bottom.textContent = s.L;
+  }
+  rule.style.display = 'block';
+}
+
+function renderStep(){
+  const s = state;
+  const r = computeResult(s);
+  const content = document.getElementById('stepContent');
+  content.innerHTML = '';
+  document.getElementById('legendA').textContent = s.n1 + '/' + s.d1;
+  document.getElementById('legendB').textContent = s.n2 + '/' + s.d2;
+
+  const progressBar = document.getElementById('progressBar');
+  progressBar.innerHTML = '';
+  for(let i=0;i<3;i++){
+    const seg = document.createElement('div');
+    seg.className = 'seg' + (i < step ? ' done' : (i === step ? ' current' : ''));
+    progressBar.appendChild(seg);
+  }
+
+  const labels = [
+    'Step 1 \u00b7 different-sized pieces',
+    'Step 2 \u00b7 re-cut to a common denominator',
+    'Step 3 \u00b7 add the pieces'
+  ];
+  document.getElementById('stepLabel').textContent = labels[step];
+
+  if(step === 0){
+    content.appendChild(makeBarRow(s.d1, 0, s.n1));
+    const cap1 = document.createElement('p');
+    cap1.className = 'bar-caption';
+    cap1.textContent = s.n1 + '/' + s.d1 + ' shaded, cut into ' + s.d1 + ' equal piece' + (s.d1===1?'':'s') + '.';
+    content.appendChild(cap1);
+
+    const row2 = makeBarRow(s.d2, 0, s.n2);
+    row2.querySelectorAll('.fill-a').forEach(c => { c.classList.remove('fill-a'); c.classList.add('fill-b'); });
+    content.appendChild(row2);
+    const cap2 = document.createElement('p');
+    cap2.className = 'bar-caption';
+    cap2.textContent = s.n2 + '/' + s.d2 + ' shaded, cut into ' + s.d2 + ' equal piece' + (s.d2===1?'':'s') + '.';
+    content.appendChild(cap2);
+
+    document.getElementById('explainText').innerHTML =
+      'The two bars are the same length, but sliced into different numbers of pieces. ' +
+      'A third and a half are not the same size, so the shaded amounts can\u2019t be added directly yet.';
+  }
+
+  if(step === 1){
+    content.appendChild(makeBarRow(s.L, 0, r.newN1));
+    const cap1 = document.createElement('p');
+    cap1.className = 'bar-caption';
+    cap1.textContent = s.n1 + '/' + s.d1 + ' = ' + r.newN1 + '/' + s.L;
+    content.appendChild(cap1);
+
+    const row2 = makeBarRow(s.L, 0, r.newN2);
+    row2.querySelectorAll('.fill-a').forEach(c => { c.classList.remove('fill-a'); c.classList.add('fill-b'); });
+    content.appendChild(row2);
+    const cap2 = document.createElement('p');
+    cap2.className = 'bar-caption';
+    cap2.textContent = s.n2 + '/' + s.d2 + ' = ' + r.newN2 + '/' + s.L;
+    content.appendChild(cap2);
+
+    document.getElementById('explainText').innerHTML =
+      'Both bars are now cut into <b>' + s.L + '</b> equal pieces \u2014 the least common denominator. ' +
+      'The shaded amount hasn\u2019t changed, only how finely each bar is sliced. Now the pieces are the same size.';
+  }
+
+  if(step === 2){
+    const seq = [];
+    for(let i=0;i<r.newN1;i++) seq.push('a');
+    for(let i=0;i<r.newN2;i++) seq.push('b');
+    const rows = buildSequenceRows(s.L, seq);
+    rows.forEach(row => content.appendChild(row));
+    const finalNum = simplifyEnabled ? r.simplifiedNum : r.sumNum;
+    const finalDen = simplifyEnabled ? r.simplifiedDen : s.L;
+    const cap = document.createElement('p');
+    cap.className = 'bar-caption';
+    cap.textContent = r.newN1 + '/' + s.L + ' + ' + r.newN2 + '/' + s.L + ' = ' + r.sumNum + '/' + s.L +
+      (simplifyEnabled && r.simplifiedDen !== s.L ? '  =  ' + r.simplifiedNum + '/' + r.simplifiedDen : '');
+    content.appendChild(cap);
+
+    document.getElementById('explainText').innerHTML =
+      'With matching pieces, the shaded parts simply combine: ' +
+      s.n1 + '/' + s.d1 + ' + ' + s.n2 + '/' + s.d2 + ' = ' + finalNum + '/' + finalDen +
+      (simplifyEnabled && r.simplifiedDen !== s.L ? ' (simplified to lowest terms).' : '.');
+  }
+
+  if(animEnabled){
+    content.querySelectorAll('.cell').forEach(c => c.classList.add('flash-anim'));
+  }
+
+  document.getElementById('prevBtn').disabled = (step === 0);
+  document.getElementById('nextBtn').textContent = (step === 2 ? 'Done' : 'Next');
+  document.getElementById('nextBtn').disabled = (step === 2);
+}
+
+document.getElementById('visualizeBtn').addEventListener('click', () => {
+  const s = parseAndValidate();
+  if(!s) { document.getElementById('vizPanel').style.display = 'none'; return; }
+  state = s;
+  step = 0;
+  document.getElementById('vizPanel').style.display = 'block';
+  renderStep();
+});
+
+document.getElementById('prevBtn').addEventListener('click', () => {
+  if(step > 0){ step--; renderStep(); }
+});
+document.getElementById('nextBtn').addEventListener('click', () => {
+  if(step < 2){ step++; renderStep(); }
+});
+
+['n1','d1','n2','d2'].forEach(id => {
+  document.getElementById(id).addEventListener('input', updateResultPreview);
+});
+
+document.getElementById('simplifyToggle').addEventListener('change', (e) => {
+  simplifyEnabled = e.target.checked;
+  updateResultPreview();
+  if(state){ renderStep(); }
+});
+
+document.getElementById('animToggle').addEventListener('change', (e) => {
+  animEnabled = e.target.checked;
+});
+
+document.getElementById('randomizeBtn').addEventListener('click', () => {
+  let d1, d2, n1, n2, tries = 0;
+  do{
+    d1 = Math.floor(Math.random() * 8) + 2;   // 2..9
+    d2 = Math.floor(Math.random() * 8) + 2;   // 2..9
+    tries++;
+  } while ((d1 === d2 || lcm(d1, d2) > 12) && tries < 50);
+  n1 = Math.floor(Math.random() * (d1 - 1)) + 1;
+  n2 = Math.floor(Math.random() * (d2 - 1)) + 1;
+
+  document.getElementById('n1').value = n1;
+  document.getElementById('d1').value = d1;
+  document.getElementById('n2').value = n2;
+  document.getElementById('d2').value = d2;
+
+  updateResultPreview();
+  document.getElementById('visualizeBtn').click();
+});
+
+updateResultPreview();
+</script>
+
+</body>
+</html>

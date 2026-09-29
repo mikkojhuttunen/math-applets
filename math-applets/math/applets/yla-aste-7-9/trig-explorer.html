@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Trig Explorer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #EAF2F5;
+    --bg-panel: #F7FBFC;
+    --grid-line: rgba(22,50,79,0.10);
+    --grid-line-strong: rgba(22,50,79,0.18);
+    --ink: #16324F;
+    --ink-soft: #4C6B85;
+    --ink-faint: #7C93A6;
+    --border: rgba(22,50,79,0.16);
+    --border-strong: rgba(22,50,79,0.30);
+    --accent-cyan: #1F8FAE;
+    --accent-cyan-bright: #2FAFCF;
+    --sin: #D9782F;
+    --cos: #C0446B;
+    --tan: #2E9E6B;
+    --handle-fill: #FFFFFF;
+    --shadow: 0 1px 2px rgba(22,50,79,0.08), 0 6px 18px rgba(22,50,79,0.08);
+    --radius-s: 4px;
+    --radius-m: 8px;
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --bg: #0C2036;
+      --bg-panel: #102A45;
+      --grid-line: rgba(143,196,216,0.08);
+      --grid-line-strong: rgba(143,196,216,0.16);
+      --ink: #EAF4F8;
+      --ink-soft: #9FC0D4;
+      --ink-faint: #6D8CA3;
+      --border: rgba(143,196,216,0.16);
+      --border-strong: rgba(143,196,216,0.30);
+      --accent-cyan: #5ECBE8;
+      --accent-cyan-bright: #7FDCF2;
+      --sin: #F2A65C;
+      --cos: #F0708F;
+      --tan: #5FD69B;
+      --handle-fill: #0C2036;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0C2036;
+    --bg-panel: #102A45;
+    --grid-line: rgba(143,196,216,0.08);
+    --grid-line-strong: rgba(143,196,216,0.16);
+    --ink: #EAF4F8;
+    --ink-soft: #9FC0D4;
+    --ink-faint: #6D8CA3;
+    --border: rgba(143,196,216,0.16);
+    --border-strong: rgba(143,196,216,0.30);
+    --accent-cyan: #5ECBE8;
+    --accent-cyan-bright: #7FDCF2;
+    --sin: #F2A65C;
+    --cos: #F0708F;
+    --tan: #5FD69B;
+    --handle-fill: #0C2036;
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px rgba(0,0,0,0.35);
+  }
+
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--font-display);
+    -webkit-tap-highlight-color: transparent;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    padding-top: max(18px, env(safe-area-inset-top, 0px));
+    padding-bottom: max(28px, env(safe-area-inset-bottom, 0px));
+    padding-left: max(14px, env(safe-area-inset-left, 0px));
+    padding-right: max(14px, env(safe-area-inset-right, 0px));
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    min-height: 100%;
+  }
+
+  .wrap { max-width: 900px; margin: 0 auto; }
+
+  header { margin-bottom: 18px; }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--accent-cyan);
+    letter-spacing: 0.02em;
+    margin: 0 0 4px;
+  }
+  h1 {
+    font-size: clamp(24px, 6vw, 32px);
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: var(--ink-soft);
+    font-size: 14.5px;
+    line-height: 1.5;
+    margin: 0;
+    max-width: 62ch;
+  }
+
+  .controls {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    padding: 14px 16px;
+    margin: 18px 0;
+    box-shadow: var(--shadow);
+  }
+  .alpha-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .alpha-row .label {
+    font-size: 13px;
+    color: var(--ink-soft);
+  }
+  .alpha-readout {
+    font-family: var(--font-mono);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    font-variant-numeric: tabular-nums;
+  }
+  .alpha-readout .rad { color: var(--ink-faint); font-size: 13px; font-weight: 400; margin-left: 6px; }
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 28px;
+    background: transparent;
+    margin: 0;
+    touch-action: pan-y;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-cyan) var(--fill, 40%), var(--grid-line-strong) var(--fill, 40%));
+    border-radius: 2px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    margin-top: -8px;
+    border-radius: 50%;
+    background: var(--handle-fill);
+    border: 3px solid var(--accent-cyan);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  }
+  input[type="range"]::-moz-range-track {
+    height: 4px;
+    background: var(--grid-line-strong);
+    border-radius: 2px;
+  }
+  input[type="range"]::-moz-range-progress {
+    height: 4px;
+    background: var(--accent-cyan);
+    border-radius: 2px;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--handle-fill);
+    border: 3px solid var(--accent-cyan);
+  }
+
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .toggle-row .label { font-size: 13.5px; color: var(--ink); }
+  .toggle-row .hint { font-size: 12px; color: var(--ink-faint); display: block; margin-top: 1px; }
+  .switch {
+    position: relative;
+    width: 44px; height: 26px;
+    flex: 0 0 auto;
+  }
+  .switch input {
+    position: absolute; inset: 0; opacity: 0; margin: 0; cursor: pointer; z-index: 1;
+  }
+  .switch .track {
+    position: absolute; inset: 0;
+    background: var(--grid-line-strong);
+    border: 1px solid var(--border-strong);
+    border-radius: 999px;
+    transition: background 0.15s ease;
+  }
+  .switch .thumb {
+    position: absolute; top: 2px; left: 2px;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--handle-fill);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    transition: transform 0.18s cubic-bezier(.4,0,.2,1);
+  }
+  .switch input:checked ~ .track { background: var(--accent-cyan); border-color: var(--accent-cyan); }
+  .switch input:checked ~ .thumb { transform: translateX(18px); }
+  .switch input:focus-visible ~ .track { outline: 2px solid var(--accent-cyan); outline-offset: 2px; }
+
+  .panels {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 720px) {
+    .panels { grid-template-columns: 1fr 1fr; }
+  }
+
+  .panel {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: opacity 0.2s ease, max-height 0.25s ease;
+  }
+  .panel-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 14px 0;
+  }
+  .panel-title {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--ink-soft);
+    letter-spacing: 0.01em;
+  }
+  .panel-title b { color: var(--ink); font-weight: 600; }
+  .drag-hint {
+    font-size: 11px;
+    color: var(--ink-faint);
+    font-family: var(--font-mono);
+  }
+  svg.stage {
+    display: block;
+    width: 100%;
+    height: auto;
+    touch-action: none;
+  }
+  .handle-grab { cursor: grab; }
+  .handle-grab:active { cursor: grabbing; }
+
+  #circlePanel.hidden {
+    display: none;
+  }
+
+  .values {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  @media (max-width: 480px) {
+    .values { grid-template-columns: 1fr; }
+  }
+  .val-card {
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--card-accent, var(--accent-cyan));
+    border-radius: var(--radius-s);
+    padding: 10px 12px;
+    box-shadow: var(--shadow);
+  }
+  .val-card .name {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 3px;
+  }
+  .val-card .formula {
+    font-family: var(--font-mono);
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    margin-bottom: 5px;
+  }
+  .val-card .num {
+    font-family: var(--font-mono);
+    font-size: 19px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .arcus {
+    margin-top: 14px;
+    background: var(--bg-panel);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    padding: 14px 16px;
+    box-shadow: var(--shadow);
+  }
+  .arcus h2 {
+    font-size: 14px;
+    margin: 0 0 3px;
+    font-weight: 600;
+  }
+  .arcus .note {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+    line-height: 1.45;
+  }
+  .arc-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    padding: 7px 0;
+    border-top: 1px dashed var(--border);
+  }
+  .arc-row:first-of-type { border-top: none; }
+  .arc-row .eq { color: var(--ink); }
+  .arc-row .check { color: var(--tan); font-weight: 600; }
+
+  footer {
+    margin-top: 20px;
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    font-family: var(--font-mono);
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">∠ construction / 01</p>
+    <h1>Trig Explorer</h1>
+    <p class="sub">Drag the marked vertex on the triangle, or the point on the circle, to change the angle α. Watch sine, cosine and tangent update as live ratios — and their inverses recover α again.</p>
+  </header>
+
+  <div class="controls">
+    <div class="alpha-row">
+      <span class="label">angle α</span>
+      <span class="alpha-readout"><span id="alphaDeg">40.0°</span><span class="rad" id="alphaRad">(0.698 rad)</span></span>
+    </div>
+    <input type="range" id="alphaSlider" min="1" max="89" step="0.5" value="40">
+    <div class="toggle-row">
+      <span>
+        <span class="label">Unit circle</span>
+        <span class="hint">show the same angle on a circle of radius 1</span>
+      </span>
+      <label class="switch">
+        <input type="checkbox" id="circleToggle" checked>
+        <span class="track"></span>
+        <span class="thumb"></span>
+      </label>
+    </div>
+  </div>
+
+  <div class="panels">
+    <div class="panel" id="trianglePanel">
+      <div class="panel-head">
+        <span class="panel-title">right <b>triangle</b></span>
+        <span class="drag-hint">drag C</span>
+      </div>
+      <svg class="stage" id="triSvg" viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+
+    <div class="panel" id="circlePanel">
+      <div class="panel-head">
+        <span class="panel-title">unit <b>circle</b></span>
+        <span class="drag-hint">drag P</span>
+      </div>
+      <svg class="stage" id="circSvg" viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg"></svg>
+    </div>
+  </div>
+
+  <div class="values">
+    <div class="val-card" style="--card-accent: var(--sin)">
+      <div class="name">sine</div>
+      <div class="formula">sin α = opposite / hypotenuse</div>
+      <div class="num" id="sinVal">0.643</div>
+    </div>
+    <div class="val-card" style="--card-accent: var(--cos)">
+      <div class="name">cosine</div>
+      <div class="formula">cos α = adjacent / hypotenuse</div>
+      <div class="num" id="cosVal">0.766</div>
+    </div>
+    <div class="val-card" style="--card-accent: var(--tan)">
+      <div class="name">tangent</div>
+      <div class="formula">tan α = opposite / adjacent</div>
+      <div class="num" id="tanVal">0.839</div>
+    </div>
+  </div>
+
+  <div class="arcus">
+    <h2>the arcus (inverse) terms</h2>
+    <p class="note">arcsin, arccos and arctan run the ratio back to an angle. Feeding in the ratios above should hand α straight back:</p>
+    <div class="arc-row"><span class="eq" id="arcsinRow">arcsin(0.643) = 40.0°</span><span class="check">✓ = α</span></div>
+    <div class="arc-row"><span class="eq" id="arccosRow">arccos(0.766) = 40.0°</span><span class="check">✓ = α</span></div>
+    <div class="arc-row"><span class="eq" id="arctanRow">arctan(0.839) = 40.0°</span><span class="check">✓ = α</span></div>
+  </div>
+
+  <footer>drag the amber handles &middot; values recompute live</footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var state = {
+    alpha: 40 * Math.PI / 180,   // shared angle, radians
+    hyp: 170                      // triangle hypotenuse in px (independent of alpha; purely visual scale)
+  };
+
+  var DEG_MIN = 1, DEG_MAX = 89;
+  function clampAlphaRad(r){
+    var d = r * 180 / Math.PI;
+    d = Math.max(DEG_MIN, Math.min(DEG_MAX, d));
+    return d * Math.PI / 180;
+  }
+
+  // ---------- geometry ----------
+  var TRI_A = { x: 34, y: 206 };      // fixed vertex, angle alpha lives here
+  var TRI_XMAX = 278, TRI_YMIN = 16;  // bounds for C
+
+  function triPoints(){
+    var A = TRI_A;
+    var dx = state.hyp * Math.cos(state.alpha);
+    var dy = state.hyp * Math.sin(state.alpha);
+    var C = { x: A.x + dx, y: A.y - dy };
+    var B = { x: C.x, y: A.y };
+    return { A: A, B: B, C: C };
+  }
+
+  var CIRC_O = { x: 150, y: 205 };
+  var CIRC_R = 150;
+
+  function circPoints(){
+    var O = CIRC_O, R = CIRC_R;
+    var P = { x: O.x + R * Math.cos(state.alpha), y: O.y - R * Math.sin(state.alpha) };
+    var foot = { x: P.x, y: O.y };
+    var tanLen = Math.tan(state.alpha) * R;
+    var T = { x: O.x + R, y: O.y - Math.min(tanLen, 420) };
+    return { O: O, R: R, P: P, foot: foot, T: T };
+  }
+
+  // ---------- svg helpers ----------
+  var NS = "http://www.w3.org/2000/svg";
+  function svgEl(tag, attrs){
+    var el = document.createElementNS(NS, tag);
+    for (var k in attrs) el.setAttribute(k, attrs[k]);
+    return el;
+  }
+  function clearSvg(svg){ while (svg.firstChild) svg.removeChild(svg.firstChild); }
+
+  function styleVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  // ---------- render: triangle ----------
+  var triSvg = document.getElementById('triSvg');
+
+  function renderTriangle(){
+    clearSvg(triSvg);
+    var pts = triPoints();
+    var A = pts.A, B = pts.B, C = pts.C;
+    var ink = styleVar('--ink');
+    var inkSoft = styleVar('--ink-soft');
+    var inkFaint = styleVar('--ink-faint');
+    var sinC = styleVar('--sin');
+    var cosC = styleVar('--cos');
+    var accent = styleVar('--accent-cyan');
+    var border = styleVar('--border-strong');
+
+    // baseline guide
+    triSvg.appendChild(svgEl('line', { x1: 10, y1: A.y, x2: 292, y2: A.y, stroke: border, 'stroke-width': 1, 'stroke-dasharray': '2 4' }));
+
+    // opposite side (B-C) colored as sin
+    triSvg.appendChild(svgEl('line', { x1: B.x, y1: B.y, x2: C.x, y2: C.y, stroke: sinC, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
+    // adjacent side (A-B) colored as cos
+    triSvg.appendChild(svgEl('line', { x1: A.x, y1: A.y, x2: B.x, y2: B.y, stroke: cosC, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
+    // hypotenuse
+    triSvg.appendChild(svgEl('line', { x1: A.x, y1: A.y, x2: C.x, y2: C.y, stroke: ink, 'stroke-width': 2, 'stroke-linecap': 'round' }));
+
+    // right angle marker at B
+    var m = 12;
+    var rax = B.x, ray = B.y;
+    var square = [
+      [rax - m, ray], [rax - m, ray - m], [rax, ray - m]
+    ];
+    triSvg.appendChild(svgEl('polyline', {
+      points: square.map(function(p){ return p[0] + ',' + p[1]; }).join(' '),
+      fill: 'none', stroke: inkFaint, 'stroke-width': 1.4
+    }));
+
+    // angle arc at A
+    var arcR = 26;
+    var startX = A.x + arcR, startY = A.y;
+    var endX = A.x + arcR * Math.cos(state.alpha), endY = A.y - arcR * Math.sin(state.alpha);
+    var largeArc = 0;
+    triSvg.appendChild(svgEl('path', {
+      d: 'M ' + startX + ' ' + startY + ' A ' + arcR + ' ' + arcR + ' 0 ' + largeArc + ' 0 ' + endX + ' ' + endY,
+      fill: 'none', stroke: accent, 'stroke-width': 1.6
+    }));
+    var labelAngle = state.alpha / 2;
+    var lx = A.x + (arcR + 15) * Math.cos(labelAngle);
+    var ly = A.y - (arcR + 15) * Math.sin(labelAngle);
+    var alphaLabel = svgEl('text', { x: lx, y: ly, fill: accent, 'font-size': 14, 'font-family': 'var(--font-display)', 'font-weight': 600, 'text-anchor': 'middle', 'dominant-baseline': 'middle' });
+    alphaLabel.textContent = 'α';
+    triSvg.appendChild(alphaLabel);
+
+    // side labels
+    function sideLabel(x, y, text, color, anchor){
+      var t = svgEl('text', { x: x, y: y, fill: color, 'font-size': 11.5, 'font-family': 'var(--font-mono)', 'text-anchor': anchor || 'middle' });
+      t.textContent = text;
+      triSvg.appendChild(t);
+    }
+    sideLabel((A.x + B.x)/2, A.y + 16, 'adjacent', cosC);
+    var oppLabelX = B.x + (C.y < B.y - 40 ? 10 : 10);
+    var t2 = svgEl('text', { x: B.x + 10, y: (B.y + C.y)/2, fill: sinC, 'font-size': 11.5, 'font-family': 'var(--font-mono)', 'dominant-baseline': 'middle' });
+    t2.textContent = 'opposite';
+    triSvg.appendChild(t2);
+    var midHypX = (A.x + C.x)/2, midHypY = (A.y + C.y)/2;
+    var hypAngle = Math.atan2(-(C.y - A.y), C.x - A.x) * 180 / Math.PI;
+    var t3 = svgEl('text', { x: midHypX - 8, y: midHypY - 8, fill: ink, 'font-size': 11.5, 'font-family': 'var(--font-mono)', 'text-anchor': 'middle', transform: 'rotate(' + (-hypAngle) + ' ' + (midHypX-8) + ' ' + (midHypY-8) + ')' });
+    t3.textContent = 'hypotenuse';
+    triSvg.appendChild(t3);
+
+    // draggable handle at C
+    triSvg.appendChild(svgEl('circle', { cx: C.x, cy: C.y, r: 20, fill: 'transparent', 'data-handle': 'tri' }));
+    triSvg.appendChild(svgEl('circle', { cx: C.x, cy: C.y, r: 8, fill: styleVar('--handle-fill'), stroke: accent, 'stroke-width': 3, class: 'handle-grab', 'data-handle': 'tri' }));
+  }
+
+  // ---------- render: circle ----------
+  var circSvg = document.getElementById('circSvg');
+
+  function renderCircle(){
+    clearSvg(circSvg);
+    var pts = circPoints();
+    var O = pts.O, R = pts.R, P = pts.P, foot = pts.foot, T = pts.T;
+    var ink = styleVar('--ink');
+    var inkFaint = styleVar('--ink-faint');
+    var sinC = styleVar('--sin');
+    var cosC = styleVar('--cos');
+    var tanC = styleVar('--tan');
+    var accent = styleVar('--accent-cyan');
+    var border = styleVar('--border-strong');
+
+    // axes
+    circSvg.appendChild(svgEl('line', { x1: O.x - R - 14, y1: O.y, x2: O.x + R + 46, y2: O.y, stroke: border, 'stroke-width': 1 }));
+    circSvg.appendChild(svgEl('line', { x1: O.x, y1: O.y + 20, x2: O.x, y2: O.y - R - 20, stroke: border, 'stroke-width': 1 }));
+
+    // unit circle
+    circSvg.appendChild(svgEl('circle', { cx: O.x, cy: O.y, r: R, fill: 'none', stroke: inkFaint, 'stroke-width': 1.4 }));
+
+    // tangent guide line at x = R
+    circSvg.appendChild(svgEl('line', { x1: O.x + R, y1: O.y + 6, x2: O.x + R, y2: O.y - Math.min(Math.tan(state.alpha)*R, 420) - 6, stroke: border, 'stroke-width': 1, 'stroke-dasharray': '2 4' }));
+
+    // tangent segment (from circle edge on axis to T)
+    circSvg.appendChild(svgEl('line', { x1: O.x + R, y1: O.y, x2: T.x, y2: T.y, stroke: tanC, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
+
+    // sine drop
+    circSvg.appendChild(svgEl('line', { x1: P.x, y1: P.y, x2: foot.x, y2: foot.y, stroke: sinC, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
+    // cosine base
+    circSvg.appendChild(svgEl('line', { x1: O.x, y1: O.y, x2: foot.x, y2: foot.y, stroke: cosC, 'stroke-width': 2.5, 'stroke-linecap': 'round' }));
+    // radius
+    circSvg.appendChild(svgEl('line', { x1: O.x, y1: O.y, x2: P.x, y2: P.y, stroke: ink, 'stroke-width': 1.6 }));
+
+    // angle arc
+    var arcR = 22;
+    var sx = O.x + arcR, sy = O.y;
+    var ex = O.x + arcR * Math.cos(state.alpha), ey = O.y - arcR * Math.sin(state.alpha);
+    circSvg.appendChild(svgEl('path', { d: 'M ' + sx + ' ' + sy + ' A ' + arcR + ' ' + arcR + ' 0 0 0 ' + ex + ' ' + ey, fill: 'none', stroke: accent, 'stroke-width': 1.6 }));
+
+    // labels
+    function label(x,y,text,color,anchor,size){
+      var t = svgEl('text', { x:x, y:y, fill:color, 'font-size': size||11.5, 'font-family': 'var(--font-mono)', 'text-anchor': anchor||'middle' });
+      t.textContent = text;
+      circSvg.appendChild(t);
+    }
+    label(O.x + (arcR+14)*Math.cos(state.alpha/2), O.y - (arcR+14)*Math.sin(state.alpha/2), 'α', accent, 'middle', 14);
+    label((O.x+foot.x)/2, O.y + 16, 'cos α', cosC);
+    var sinLX = foot.x + 22;
+    var t2 = svgEl('text', { x: sinLX, y: (P.y+foot.y)/2, fill: sinC, 'font-size': 11.5, 'font-family': 'var(--font-mono)', 'dominant-baseline':'middle' });
+    t2.textContent = 'sin α';
+    circSvg.appendChild(t2);
+    label(T.x + 8, (T.y + O.y)/2, 'tan α', tanC, 'start');
+    label(O.x + R*0.5*Math.cos(state.alpha)*0.0 + O.x*0+ (O.x + R*Math.cos(state.alpha/2)*0.55), O.y - R*Math.sin(state.alpha/2)*0.55 - 8, '1', ink, 'middle', 11);
+
+    // draggable handle at P
+    circSvg.appendChild(svgEl('circle', { cx: P.x, cy: P.y, r: 20, fill: 'transparent', 'data-handle': 'circ' }));
+    circSvg.appendChild(svgEl('circle', { cx: P.x, cy: P.y, r: 8, fill: styleVar('--handle-fill'), stroke: accent, 'stroke-width': 3, class: 'handle-grab', 'data-handle': 'circ' }));
+  }
+
+  // ---------- values ----------
+  function fmt(n){ return n.toFixed(3); }
+  function fmtDeg(rad){ return (rad*180/Math.PI).toFixed(1) + '°'; }
+
+  function renderValues(){
+    var a = state.alpha;
+    var s = Math.sin(a), c = Math.cos(a), t = Math.tan(a);
+    document.getElementById('sinVal').textContent = fmt(s);
+    document.getElementById('cosVal').textContent = fmt(c);
+    document.getElementById('tanVal').textContent = fmt(t);
+
+    document.getElementById('alphaDeg').textContent = fmtDeg(a);
+    document.getElementById('alphaRad').textContent = '(' + a.toFixed(3) + ' rad)';
+
+    document.getElementById('arcsinRow').textContent = 'arcsin(' + fmt(s) + ') = ' + fmtDeg(Math.asin(s));
+    document.getElementById('arccosRow').textContent = 'arccos(' + fmt(c) + ') = ' + fmtDeg(Math.acos(c));
+    document.getElementById('arctanRow').textContent = 'arctan(' + fmt(t) + ') = ' + fmtDeg(Math.atan(t));
+
+    var slider = document.getElementById('alphaSlider');
+    var pct = ((a*180/Math.PI - DEG_MIN) / (DEG_MAX - DEG_MIN)) * 100;
+    slider.style.setProperty('--fill', pct + '%');
+  }
+
+  function renderAll(){
+    renderTriangle();
+    renderCircle();
+    renderValues();
+  }
+
+  // ---------- interaction ----------
+  function svgPoint(svg, evt){
+    var pt = svg.createSVGPoint();
+    pt.x = evt.clientX; pt.y = evt.clientY;
+    var ctm = svg.getScreenCTM();
+    if (!ctm) return { x: 0, y: 0 };
+    var inv = ctm.inverse();
+    var loc = pt.matrixTransform(inv);
+    return { x: loc.x, y: loc.y };
+  }
+
+  var activeDrag = null;
+
+  function onPointerDown(svg, kind){
+    return function(evt){
+      var target = evt.target;
+      if (!target.dataset || target.dataset.handle !== kind) return;
+      evt.preventDefault();
+      activeDrag = kind;
+      svg.setPointerCapture && target.setPointerCapture && target.setPointerCapture(evt.pointerId);
+      handleDragMove(svg, kind, evt);
+    };
+  }
+
+  function handleDragMove(svg, kind, evt){
+    var p = svgPoint(svg, evt);
+    if (kind === 'tri'){
+      var dx = p.x - TRI_A.x;
+      var dy = TRI_A.y - p.y;
+      dx = Math.max(15, Math.min(TRI_XMAX - TRI_A.x, dx));
+      dy = Math.max(15, Math.min(TRI_A.y - TRI_YMIN, dy));
+      state.alpha = clampAlphaRad(Math.atan2(dy, dx));
+      state.hyp = Math.max(60, Math.min(240, Math.hypot(dx, dy)));
+    } else {
+      var dx2 = p.x - CIRC_O.x;
+      var dy2 = CIRC_O.y - p.y;
+      var ang = Math.atan2(dy2, dx2);
+      state.alpha = clampAlphaRad(ang);
+    }
+    document.getElementById('alphaSlider').value = (state.alpha*180/Math.PI).toFixed(1);
+    renderAll();
+  }
+
+  function onPointerMove(evt){
+    if (!activeDrag) return;
+    var svg = activeDrag === 'tri' ? triSvg : circSvg;
+    handleDragMove(svg, activeDrag, evt);
+  }
+  function onPointerUp(){ activeDrag = null; }
+
+  triSvg.addEventListener('pointerdown', onPointerDown(triSvg, 'tri'));
+  circSvg.addEventListener('pointerdown', onPointerDown(circSvg, 'circ'));
+  window.addEventListener('pointermove', onPointerMove);
+  window.addEventListener('pointerup', onPointerUp);
+  window.addEventListener('pointercancel', onPointerUp);
+
+  document.getElementById('alphaSlider').addEventListener('input', function(evt){
+    var deg = parseFloat(evt.target.value);
+    state.alpha = deg * Math.PI / 180;
+    renderAll();
+  });
+
+  var circleToggle = document.getElementById('circleToggle');
+  var circlePanel = document.getElementById('circlePanel');
+  circleToggle.addEventListener('change', function(){
+    circlePanel.classList.toggle('hidden', !circleToggle.checked);
+  });
+
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', renderAll);
+  }
+  window.addEventListener('resize', renderAll);
+
+  renderAll();
+})();
+</script>
+
+</body>
+</html>

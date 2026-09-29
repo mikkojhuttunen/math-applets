@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vector Lab</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,680;1,9..144,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    box-sizing:border-box;
+    padding-top:env(safe-area-inset-top,0px);
+    padding-bottom:env(safe-area-inset-bottom,0px);
+    --bg:#f4f5f1;
+    --paper:#fbfbf8;
+    --grid:#cfd8de;
+    --grid-strong:#aebac2;
+    --ink:#1c2530;
+    --ink-soft:#5b6773;
+    --line:#c9cdc4;
+    --panel:#ffffff;
+    --accent-a:#1d6fa8;
+    --accent-a-soft:#d9ebf6;
+    --accent-b:#c4600f;
+    --accent-b-soft:#f6e4d3;
+    --accent-c:#8a3a8f;
+    --accent-c-soft:#efdcf1;
+    --accent-r:#1f8a4c;
+    --accent-r-soft:#dbeee1;
+    --shadow: 0 1px 0 rgba(28,37,48,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#0d1a22;
+      --paper:#0f222c;
+      --grid:#1e3947;
+      --grid-strong:#2c4f5f;
+      --ink:#e9eef1;
+      --ink-soft:#93a5ae;
+      --line:#25404c;
+      --panel:#12252f;
+      --accent-a:#6fd3ff;
+      --accent-a-soft:#123243;
+      --accent-b:#ffb25e;
+      --accent-b-soft:#3a2712;
+      --accent-c:#e38fe0;
+      --accent-c-soft:#341436;
+      --accent-r:#8fe3a8;
+      --accent-r-soft:#123320;
+      --shadow: 0 1px 0 rgba(0,0,0,.3);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#0d1a22;
+    --paper:#0f222c;
+    --grid:#1e3947;
+    --grid-strong:#2c4f5f;
+    --ink:#e9eef1;
+    --ink-soft:#93a5ae;
+    --line:#25404c;
+    --panel:#12252f;
+    --accent-a:#6fd3ff;
+    --accent-a-soft:#123243;
+    --accent-b:#ffb25e;
+    --accent-b-soft:#3a2712;
+    --accent-c:#e38fe0;
+    --accent-c-soft:#341436;
+    --accent-r:#8fe3a8;
+    --accent-r-soft:#123320;
+    --shadow: 0 1px 0 rgba(0,0,0,.3);
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);}
+  body{
+    font-family:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+    -webkit-font-smoothing:antialiased;
+    padding:18px 16px calc(24px + env(safe-area-inset-bottom,0px));
+    max-width:760px;
+    margin:0 auto;
+  }
+  h1,h2{font-family:"Fraunces", Georgia, serif; font-weight:680; letter-spacing:-0.01em; margin:0;}
+  header{padding:4px 0 18px 0; border-bottom:1px solid var(--line); margin-bottom:18px;}
+  header h1{font-size:28px; color:var(--ink);}
+  header p{margin:8px 0 0 0; color:var(--ink-soft); font-size:13px; line-height:1.5; max-width:56ch;}
+
+  nav.tabs{display:flex; gap:2px; border-bottom:1px solid var(--line); margin-bottom:14px;}
+  nav.tabs button{
+    flex:none; appearance:none; border:none; background:none; cursor:pointer;
+    font-family:"Fraunces", serif; font-weight:560; font-size:15px; color:var(--ink-soft);
+    padding:8px 14px 10px 14px; border-bottom:2px solid transparent; margin-bottom:-1px;
+  }
+  nav.tabs button.active{color:var(--ink); border-bottom-color:var(--accent-r);}
+
+  nav.op-tabs{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px;}
+  nav.op-tabs button{
+    appearance:none; cursor:pointer; font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:500;
+    color:var(--ink-soft); background:var(--panel); border:1px solid var(--line);
+    padding:6px 10px; border-radius:3px;
+  }
+  nav.op-tabs button.active{color:var(--ink); border-color:var(--accent-r); background:var(--accent-r-soft);}
+
+  .extra{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin-bottom:12px; font-size:12px; color:var(--ink-soft);}
+  .extra select{
+    font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--panel); color:var(--ink);
+    border:1px solid var(--line); border-radius:3px; padding:4px 6px;
+  }
+
+  .stage{
+    background:var(--paper); border:1px solid var(--line); border-radius:4px;
+    box-shadow:var(--shadow); margin-bottom:14px; overflow:hidden; position:relative;
+  }
+  .stage svg, .stage canvas{display:block; width:100%; height:auto; touch-action:none;}
+  .stage .hint{position:absolute; bottom:6px; right:8px; font-size:10px; color:var(--ink-soft); opacity:.7; pointer-events:none;}
+
+  .controls{display:flex; flex-direction:column; gap:10px; margin-bottom:16px;}
+  .vec-card{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:10px 12px;
+  }
+  .vec-card .row{display:flex; align-items:center; gap:10px; margin-bottom:2px;}
+  .vec-card .dot{width:9px; height:9px; border-radius:50%; flex:none;}
+  .vec-card .name{font-family:"Fraunces",serif; font-weight:560; font-size:14px;}
+  .vec-card .readout{margin-left:auto; font-size:11px; color:var(--ink-soft);}
+  .sliders{display:grid; grid-template-columns:1fr; gap:6px; margin-top:8px;}
+  .slider{display:flex; align-items:center; gap:8px; font-size:11px; color:var(--ink-soft);}
+  .slider label{width:54px; flex:none;}
+  .slider input[type=range]{flex:1; accent-color: var(--ink);}
+  .slider .val{width:56px; text-align:right; color:var(--ink); flex:none;}
+
+  .math{
+    background:var(--panel); border:1px solid var(--line); border-radius:4px; padding:14px 16px;
+  }
+  .math h3{font-family:"Fraunces",serif; font-size:14px; font-weight:560; margin:0 0 8px 0; color:var(--ink);}
+  .math .block{margin-bottom:14px; padding-left:12px; border-left:2px solid var(--line);}
+  .math .block:last-child{margin-bottom:0;}
+  .math .block h4{margin:0 0 6px 0; font-size:10.5px; letter-spacing:.03em; color:var(--ink-soft); font-weight:500; text-transform:none;}
+  .math .eqn{font-size:13px; line-height:1.9; color:var(--ink); word-break:break-word;}
+  .math .eqn .k{font-style:italic; font-family:"Fraunces",serif;}
+  .math .eqn sub{font-size:75%;}
+  .vecname{font-weight:600;}
+  .vecname.a{color:var(--accent-a);}
+  .vecname.b{color:var(--accent-b);}
+  .vecname.c{color:var(--accent-c);}
+  .vecname.r{color:var(--accent-r);}
+
+  footer{margin-top:18px; font-size:11px; color:var(--ink-soft); text-align:center;}
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div id="app">
+  <header>
+    <h1>Vector Lab</h1>
+    <p>Addition, scalar multiplication, the dot and cross products, and projection — dragged, sliders, worked out in Cartesian and polar/spherical form below the plot.</p>
+  </header>
+
+  <nav class="tabs" id="scenarioTabs">
+    <button class="active" data-scenario="d2">2D scenario</button>
+    <button data-scenario="d3">3D scenario</button>
+  </nav>
+
+  <div id="scene-d2" class="scene"></div>
+  <div id="scene-d3" class="scene" style="display:none"></div>
+
+  <footer>Drag the coloured handles on the plot, or use the sliders. Values in units, angles in degrees.</footer>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ---------- shared math helpers ---------- */
+const D2R = Math.PI/180, R2D = 180/Math.PI;
+function fmt(n){ if(Math.abs(n) < 1e-9) n = 0; return (Math.round(n*100)/100).toFixed(2); }
+function len2(v){ return Math.hypot(v.x, v.y); }
+function len3(v){ return Math.hypot(v.x, v.y, v.z); }
+function dot2(a,b){ return a.x*b.x + a.y*b.y; }
+function dot3(a,b){ return a.x*b.x + a.y*b.y + a.z*b.z; }
+function cross2(a,b){ return a.x*b.y - a.y*b.x; } // scalar (z-component)
+function cross3(a,b){ return {x:a.y*b.z-a.z*b.y, y:a.z*b.x-a.x*b.z, z:a.x*b.y-a.y*b.x}; }
+function scale2(v,k){ return {x:v.x*k, y:v.y*k}; }
+function scale3(v,k){ return {x:v.x*k, y:v.y*k, z:v.z*k}; }
+function add2(a,b){ return {x:a.x+b.x, y:a.y+b.y}; }
+function add3(a,b){ return {x:a.x+b.x, y:a.y+b.y, z:a.z+b.z}; }
+function clamp(v,lo,hi){ return Math.max(lo, Math.min(hi, v)); }
+
+const COLORS = { a:"var(--accent-a)", b:"var(--accent-b)", c:"var(--accent-c)", r:"var(--accent-r)" };
+
+/* =====================================================================
+   2D SCENARIO
+   ===================================================================== */
+const S2 = {
+  op: "add",
+  vectors: { a:{x:3,y:1}, b:{x:1,y:2.5}, c:{x:-1.5,y:0.5} },
+  k: 2, target: "a",
+  dotPair:"ab", crossPair:"ab",
+  projFrom:"a", projTo:"b"
+};
+
+const VB = 400, ORIGIN = 200, SCALE = 34; // px per unit
+function w2sx(x){ return ORIGIN + x*SCALE; }
+function w2sy(y){ return ORIGIN - y*SCALE; }
+function s2wx(sx){ return (sx-ORIGIN)/SCALE; }
+function s2wy(sy){ return (ORIGIN-sy)/SCALE; }
+
+function svgGrid(){
+  let s = "";
+  for(let i=-5;i<=5;i++){
+    const strong = i===0;
+    s += `<line x1="${w2sx(i)}" y1="0" x2="${w2sx(i)}" y2="${VB}" stroke="${strong?'var(--grid-strong)':'var(--grid)'}" stroke-width="${strong?1.4:1}"/>`;
+    s += `<line x1="0" y1="${w2sy(i)}" x2="${VB}" y2="${w2sy(i)}" stroke="${strong?'var(--grid-strong)':'var(--grid)'}" stroke-width="${strong?1.4:1}"/>`;
+  }
+  return s;
+}
+
+function arrowHead(tipX,tipY,angleRad,color){
+  const len=9, wid=6;
+  const ax = tipX - len*Math.cos(angleRad), ay = tipY + len*Math.sin(angleRad);
+  const p1x = ax - wid*Math.sin(angleRad), p1y = ay - wid*Math.cos(angleRad);
+  const p2x = ax + wid*Math.sin(angleRad), p2y = ay + wid*Math.cos(angleRad);
+  return `<polygon points="${tipX},${tipY} ${p1x},${p1y} ${p2x},${p2y}" fill="${color}"/>`;
+}
+
+function vecPath(fromW,toW,color,dashed,width){
+  const x1=w2sx(fromW.x), y1=w2sy(fromW.y), x2=w2sx(toW.x), y2=w2sy(toW.y);
+  const ang = Math.atan2(x2-x1, y2-y1); // screen-space angle helper for arrowhead
+  const angle = Math.atan2(-(y2-y1), x2-x1);
+  let s = `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${color}" stroke-width="${width||2.4}" ${dashed?'stroke-dasharray="5 4"':''} stroke-linecap="round"/>`;
+  if(!dashed) s += arrowHead(x2,y2, angle, color);
+  return s;
+}
+
+function handle(w,color,key){
+  return `<circle class="handle" data-vec="${key}" cx="${w2sx(w.x)}" cy="${w2sy(w.y)}" r="9" fill="${color}" stroke="var(--paper)" stroke-width="2" style="cursor:grab"/>`;
+}
+
+function label2(text,w,color,dx,dy){
+  return `<text x="${w2sx(w.x)+ (dx||6)}" y="${w2sy(w.y)+(dy||-6)}" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" fill="${color}">${text}</text>`;
+}
+
+function renderSVG2D(){
+  const V = S2.vectors;
+  let content = svgGrid();
+  const zero = {x:0,y:0};
+
+  if(S2.op === "add"){
+    const ab = add2(V.a,V.b);
+    const abc = add2(ab,V.c);
+    content += vecPath(V.a, ab, "var(--ink-soft)", true, 1.3);
+    content += vecPath(ab, abc, "var(--ink-soft)", true, 1.3);
+    content += vecPath(zero, abc, "var(--accent-r)", false, 3);
+    content += vecPath(zero, V.a, "var(--accent-a)", false);
+    content += vecPath(zero, V.b, "var(--accent-b)", false);
+    content += vecPath(zero, V.c, "var(--accent-c)", false);
+    content += label2("a+b+c", abc, "var(--accent-r)");
+    content += handle(V.a,"var(--accent-a)","a") + handle(V.b,"var(--accent-b)","b") + handle(V.c,"var(--accent-c)","c");
+  }
+  else if(S2.op === "scale"){
+    const t = V[S2.target];
+    const out = scale2(t, S2.k);
+    content += vecPath(zero, out, "var(--accent-r)", false, 3);
+    content += vecPath(zero, V.a, "var(--accent-a)", false);
+    content += vecPath(zero, V.b, "var(--accent-b)", false);
+    content += vecPath(zero, V.c, "var(--accent-c)", false);
+    content += label2(`${S2.k}${S2.target}`, out, "var(--accent-r)");
+    content += handle(V.a,"var(--accent-a)","a") + handle(V.b,"var(--accent-b)","b") + handle(V.c,"var(--accent-c)","c");
+  }
+  else if(S2.op === "dot"){
+    const [k1,k2] = [S2.dotPair[0], S2.dotPair[1]];
+    const u=V[k1], v=V[k2];
+    content += vecPath(zero,u,COLORS[k1],false);
+    content += vecPath(zero,v,COLORS[k2],false);
+    const other = ["a","b","c"].filter(k=>k!==k1&&k!==k2)[0];
+    content += vecPath(zero,V[other],COLORS[other],false,1.6);
+    // foot of perpendicular from u onto v (scalar projection visual)
+    const vlen2 = dot2(v,v);
+    const t = vlen2>1e-9 ? dot2(u,v)/vlen2 : 0;
+    const foot = scale2(v,t);
+    content += vecPath(u,foot,"var(--ink-soft)",true,1.3);
+    content += `<circle cx="${w2sx(foot.x)}" cy="${w2sy(foot.y)}" r="3" fill="var(--ink-soft)"/>`;
+    // angle arc
+    const a1 = Math.atan2(u.y,u.x), a2 = Math.atan2(v.y,v.x);
+    content += arcBetween(a1,a2);
+    content += handle(V.a,"var(--accent-a)","a") + handle(V.b,"var(--accent-b)","b") + handle(V.c,"var(--accent-c)","c");
+  }
+  else if(S2.op === "cross"){
+    const [k1,k2] = [S2.crossPair[0], S2.crossPair[1]];
+    const u=V[k1], v=V[k2];
+    const other = ["a","b","c"].filter(k=>k!==k1&&k!==k2)[0];
+    content += vecPath(zero,V[other],COLORS[other],false,1.6);
+    // shaded parallelogram
+    const p3 = add2(u,v);
+    content += `<polygon points="${w2sx(0)},${w2sy(0)} ${w2sx(u.x)},${w2sy(u.y)} ${w2sx(p3.x)},${w2sy(p3.y)} ${w2sx(v.x)},${w2sy(v.y)}" fill="var(--accent-r)" fill-opacity="0.14" stroke="var(--accent-r)" stroke-opacity="0.4" stroke-dasharray="4 3"/>`;
+    content += vecPath(zero,u,COLORS[k1],false);
+    content += vecPath(zero,v,COLORS[k2],false);
+    const cz = cross2(u,v);
+    const sym = cz>=0 ? "\u2299" : "\u2297"; // out / into page
+    content += `<text x="${w2sx((u.x+v.x)/2)}" y="${w2sy((u.y+v.y)/2)+4}" text-anchor="middle" font-size="20" fill="var(--accent-r)">${sym}</text>`;
+    content += handle(V.a,"var(--accent-a)","a") + handle(V.b,"var(--accent-b)","b") + handle(V.c,"var(--accent-c)","c");
+  }
+  else if(S2.op === "proj"){
+    const f = V[S2.projFrom], t = V[S2.projTo];
+    const other = ["a","b","c"].filter(k=>k!==S2.projFrom&&k!==S2.projTo)[0];
+    content += vecPath(zero,V[other],COLORS[other],false,1.6);
+    const tlen2 = dot2(t,t);
+    const s = tlen2>1e-9 ? dot2(f,t)/tlen2 : 0;
+    const proj = scale2(t,s);
+    // extend the "onto" line lightly
+    const tu = tlen2>1e-9 ? scale2(t, 6/Math.sqrt(tlen2)) : {x:0,y:0};
+    content += `<line x1="${w2sx(-tu.x)}" y1="${w2sy(-tu.y)}" x2="${w2sx(tu.x)}" y2="${w2sy(tu.y)}" stroke="var(--ink-soft)" stroke-width="1" stroke-dasharray="2 4" opacity="0.5"/>`;
+    content += vecPath(f,proj,"var(--ink-soft)",true,1.3);
+    content += vecPath(zero,proj,"var(--accent-r)",false,3.4);
+    content += vecPath(zero,f,COLORS[S2.projFrom],false);
+    content += vecPath(zero,t,COLORS[S2.projTo],false,false,1.6);
+    content += handle(V.a,"var(--accent-a)","a") + handle(V.b,"var(--accent-b)","b") + handle(V.c,"var(--accent-c)","c");
+  }
+
+  content += `<text x="8" y="16" font-size="11" fill="var(--ink-soft)" font-family="IBM Plex Mono, monospace">y</text>`;
+  content += `<text x="${VB-14}" y="${ORIGIN-6}" font-size="11" fill="var(--ink-soft)" font-family="IBM Plex Mono, monospace">x</text>`;
+
+  document.getElementById("svg2d").innerHTML = content;
+}
+
+function arcBetween(a1,a2){
+  const r = 26;
+  let d1=a1, d2=a2;
+  const x1 = ORIGIN + r*Math.cos(d1), y1 = ORIGIN - r*Math.sin(d1);
+  const x2 = ORIGIN + r*Math.cos(d2), y2 = ORIGIN - r*Math.sin(d2);
+  let diff = d2-d1;
+  while(diff> Math.PI) diff-=2*Math.PI;
+  while(diff< -Math.PI) diff+=2*Math.PI;
+  const large = Math.abs(diff)>Math.PI ? 1:0;
+  const sweep = diff<0 ? 1:0;
+  return `<path d="M ${x1} ${y1} A ${r} ${r} 0 ${large} ${sweep} ${x2} ${y2}" fill="none" stroke="var(--ink-soft)" stroke-width="1.3"/>`;
+}
+
+/* ---- 2D dragging ---- */
+function setupDrag2D(){
+  const svg = document.getElementById("svg2d");
+  let dragKey = null;
+  function ptFromEvent(evt){
+    const rect = svg.getBoundingClientRect();
+    const cx = (evt.touches? evt.touches[0].clientX : evt.clientX);
+    const cy = (evt.touches? evt.touches[0].clientY : evt.clientY);
+    const sx = (cx-rect.left) * (VB/rect.width);
+    const sy = (cy-rect.top) * (VB/rect.height);
+    return {x: s2wx(sx), y: s2wy(sy)};
+  }
+  svg.addEventListener("pointerdown", (e)=>{
+    const t = e.target;
+    if(t.classList && t.classList.contains("handle")){
+      dragKey = t.getAttribute("data-vec");
+      svg.setPointerCapture(e.pointerId);
+    }
+  });
+  svg.addEventListener("pointermove",(e)=>{
+    if(!dragKey) return;
+    const p = ptFromEvent(e);
+    S2.vectors[dragKey].x = clamp(Math.round(p.x*10)/10, -6, 6);
+    S2.vectors[dragKey].y = clamp(Math.round(p.y*10)/10, -6, 6);
+    renderAll2D();
+  });
+  ["pointerup","pointercancel","pointerleave"].forEach(ev=>svg.addEventListener(ev,()=>{dragKey=null;}));
+}
+
+/* ---- 2D controls (sliders) ---- */
+function polarOf2(v){
+  const r = len2(v);
+  let th = Math.atan2(v.y,v.x)*R2D;
+  return {r, th};
+}
+function vecFromPolar2(r,thDeg){
+  const th = thDeg*D2R;
+  return {x:r*Math.cos(th), y:r*Math.sin(th)};
+}
+
+function sliderRow(labelText,id,min,max,step,value,unit){
+  return `<div class="slider">
+    <label>${labelText}</label>
+    <input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${value}">
+    <span class="val" id="${id}-val">${fmt(value)}${unit||""}</span>
+  </div>`;
+}
+
+function vecCard2(key,name){
+  const v = S2.vectors[key];
+  const p = polarOf2(v);
+  return `<div class="vec-card">
+    <div class="row">
+      <span class="dot" style="background:${COLORS[key]}"></span>
+      <span class="name" style="color:${COLORS[key]}">${name}</span>
+      <span class="readout">(${fmt(v.x)}, ${fmt(v.y)})</span>
+    </div>
+    <div class="sliders">
+      ${sliderRow("|"+name+"|", "mag-"+key, 0, 6, 0.1, p.r,"")}
+      ${sliderRow("\u03b8 "+name, "ang-"+key, -180, 180, 1, p.th,"\u00b0")}
+    </div>
+  </div>`;
+}
+
+function renderControls2D(){
+  let html = vecCard2("a","a") + vecCard2("b","b") + vecCard2("c","c");
+  if(S2.op === "scale"){
+    html += `<div class="vec-card"><div class="row"><span class="name">scalar <span class="k">k</span></span><span class="readout" id="k-val2">${fmt(S2.k)}</span></div>
+    <div class="sliders">${sliderRow("k","kslider2",-3,3,0.1,S2.k,"")}</div></div>`;
+  }
+  document.getElementById("controls-d2").innerHTML = html;
+
+  ["a","b","c"].forEach(key=>{
+    document.getElementById("mag-"+key).addEventListener("input",(e)=>{
+      const p = polarOf2(S2.vectors[key]);
+      S2.vectors[key] = vecFromPolar2(parseFloat(e.target.value), p.th);
+      renderAll2D();
+    });
+    document.getElementById("ang-"+key).addEventListener("input",(e)=>{
+      const p = polarOf2(S2.vectors[key]);
+      S2.vectors[key] = vecFromPolar2(p.r, parseFloat(e.target.value));
+      renderAll2D();
+    });
+  });
+  if(S2.op==="scale"){
+    document.getElementById("kslider2").addEventListener("input",(e)=>{ S2.k = parseFloat(e.target.value); renderAll2D(); });
+  }
+}
+
+function renderExtra2D(){
+  let html = "";
+  if(S2.op==="scale"){
+    html = `<span>scale</span><select id="target2">${["a","b","c"].map(k=>`<option value="${k}" ${S2.target===k?"selected":""}>${k}</option>`).join("")}</select><span>by k</span>`;
+  } else if(S2.op==="dot"){
+    html = `<span>compute</span>${pairSelect("dotPair2",S2.dotPair)}`;
+  } else if(S2.op==="cross"){
+    html = `<span>compute</span>${pairSelect("crossPair2",S2.crossPair)}`;
+  } else if(S2.op==="proj"){
+    html = `<span>project</span>${vecSelect("projFrom2",S2.projFrom)}<span>onto</span>${vecSelect("projTo2",S2.projTo,S2.projFrom)}`;
+  }
+  document.getElementById("extra-d2").innerHTML = html;
+
+  if(S2.op==="scale") document.getElementById("target2").addEventListener("change",e=>{S2.target=e.target.value; renderAll2D();});
+  if(S2.op==="dot") document.getElementById("dotPair2").addEventListener("change",e=>{S2.dotPair=e.target.value; renderAll2D();});
+  if(S2.op==="cross") document.getElementById("crossPair2").addEventListener("change",e=>{S2.crossPair=e.target.value; renderAll2D();});
+  if(S2.op==="proj"){
+    document.getElementById("projFrom2").addEventListener("change",e=>{S2.projFrom=e.target.value; if(S2.projFrom===S2.projTo){S2.projTo=["a","b","c"].find(k=>k!==S2.projFrom);} renderAll2D();});
+    document.getElementById("projTo2").addEventListener("change",e=>{S2.projTo=e.target.value; renderAll2D();});
+  }
+}
+function pairSelect(id,val){
+  const opts = ["ab","ac","bc"];
+  const label = {ab:"a \u00b7 b / a \u00d7 b", ac:"a \u00b7 c / a \u00d7 c", bc:"b \u00b7 c / b \u00d7 c"};
+  return `<select id="${id}">${opts.map(o=>`<option value="${o}" ${val===o?"selected":""}>${o[0]} & ${o[1]}</option>`).join("")}</select>`;
+}
+function vecSelect(id,val,exclude){
+  return `<select id="${id}">${["a","b","c"].filter(k=>k!==exclude).map(k=>`<option value="${k}" ${val===k?"selected":""}>${k}</option>`).join("")}</select>`;
+}
+
+/* ---- 2D math panel ---- */
+function cartLine2(name,v){
+  return `<span class="vecname ${name}">${name}</span> = (${fmt(v.x)}, ${fmt(v.y)})`;
+}
+function polarLine2(name,v){
+  const p = polarOf2(v);
+  return `<span class="vecname ${name}">${name}</span> = ${fmt(p.r)}\u00b7(cos ${fmt(p.th)}\u00b0, sin ${fmt(p.th)}\u00b0)&nbsp; &nbsp;|<span class="vecname ${name}">${name}</span>| = ${fmt(p.r)}, \u03b8 = ${fmt(p.th)}\u00b0`;
+}
+
+function renderMath2D(){
+  const V = S2.vectors;
+  let cart = "", pol = "", res = "";
+  if(S2.op==="add"){
+    const sum = add2(add2(V.a,V.b),V.c);
+    cart = [cartLine2("a",V.a),cartLine2("b",V.b),cartLine2("c",V.c)].join("<br>");
+    pol = [polarLine2("a",V.a),polarLine2("b",V.b),polarLine2("c",V.c)].join("<br>");
+    const p = polarOf2(sum);
+    res = `<span class="vecname r">a+b+c</span> = (${fmt(V.a.x+V.b.x+V.c.x)}, ${fmt(V.a.y+V.b.y+V.c.y)})<br>
+    |<span class="vecname r">a+b+c</span>| = ${fmt(p.r)}, direction \u03b8 = ${fmt(p.th)}\u00b0 &nbsp;<span style="color:var(--ink-soft)">(components add; polar form has no simple closed form, so the resultant's own magnitude/angle is read off after adding components)</span>`;
+  } else if(S2.op==="scale"){
+    const t = V[S2.target], out = scale2(t,S2.k);
+    const p = polarOf2(t);
+    cart = cartLine2(S2.target,t);
+    pol = polarLine2(S2.target,t);
+    res = `k${S2.target} = ${fmt(S2.k)}\u00b7(${fmt(t.x)}, ${fmt(t.y)}) = (${fmt(out.x)}, ${fmt(out.y)})<br>
+    |k${S2.target}| = |k|\u00b7|${S2.target}| = ${fmt(Math.abs(S2.k))}\u00b7${fmt(p.r)} = ${fmt(Math.abs(S2.k)*p.r)}, \u03b8 = ${fmt(S2.k>=0?p.th:p.th+180)}\u00b0`;
+  } else if(S2.op==="dot"){
+    const k1=S2.dotPair[0],k2=S2.dotPair[1], u=V[k1], v=V[k2];
+    const d = dot2(u,v), pu=polarOf2(u), pv=polarOf2(v);
+    let dth = pv.th-pu.th; while(dth>180)dth-=360; while(dth<-180)dth+=360;
+    cart = [cartLine2(k1,u),cartLine2(k2,v)].join("<br>");
+    pol = [polarLine2(k1,u),polarLine2(k2,v)].join("<br>");
+    res = `${k1}\u00b7${k2} = ${k1}<sub>x</sub>${k2}<sub>x</sub> + ${k1}<sub>y</sub>${k2}<sub>y</sub> = ${fmt(u.x)}\u00b7${fmt(v.x)} + ${fmt(u.y)}\u00b7${fmt(v.y)} = ${fmt(d)}<br>
+    ${k1}\u00b7${k2} = |${k1}||${k2}|cos\u03b8 = ${fmt(pu.r)}\u00b7${fmt(pv.r)}\u00b7cos(${fmt(dth)}\u00b0) = ${fmt(d)}`;
+  } else if(S2.op==="cross"){
+    const k1=S2.crossPair[0],k2=S2.crossPair[1], u=V[k1], v=V[k2];
+    const cz = cross2(u,v), pu=polarOf2(u), pv=polarOf2(v);
+    let dth = pv.th-pu.th; while(dth>180)dth-=360; while(dth<-180)dth+=360;
+    cart = [cartLine2(k1,u),cartLine2(k2,v)].join("<br>");
+    pol = [polarLine2(k1,u),polarLine2(k2,v)].join("<br>");
+    res = `${k1}\u00d7${k2} (z-component) = ${k1}<sub>x</sub>${k2}<sub>y</sub> \u2212 ${k1}<sub>y</sub>${k2}<sub>x</sub> = ${fmt(u.x)}\u00b7${fmt(v.y)} \u2212 ${fmt(u.y)}\u00b7${fmt(v.x)} = ${fmt(cz)}<br>
+    |${k1}\u00d7${k2}| = |${k1}||${k2}|sin\u03b8 = ${fmt(pu.r)}\u00b7${fmt(pv.r)}\u00b7sin(${fmt(dth)}\u00b0) = ${fmt(Math.abs(cz))} &nbsp;(${cz>=0?"out of":"into"} the page)`;
+  } else if(S2.op==="proj"){
+    const f=S2.projFrom, t=S2.projTo, u=V[f], v=V[t];
+    const tlen2=dot2(v,v), s = tlen2>1e-9? dot2(u,v)/tlen2 : 0;
+    const proj = scale2(v,s);
+    const pu=polarOf2(u), pv=polarOf2(v);
+    let dth = pv.th-pu.th; while(dth>180)dth-=360; while(dth<-180)dth+=360;
+    cart = [cartLine2(f,u),cartLine2(t,v)].join("<br>");
+    pol = [polarLine2(f,u),polarLine2(t,v)].join("<br>");
+    res = `proj<sub>${t}</sub>${f} = (${f}\u00b7${t} / |${t}|\u00b2)\u00b7${t} = (${fmt(dot2(u,v))} / ${fmt(tlen2)})\u00b7${t} = (${fmt(proj.x)}, ${fmt(proj.y)})<br>
+    scalar component: |${f}|cos\u03b8 = ${fmt(pu.r)}\u00b7cos(${fmt(dth)}\u00b0) = ${fmt(pu.r*Math.cos(dth*D2R))}`;
+  }
+  document.getElementById("math-d2").innerHTML =
+    `<div class="block"><h4>Cartesian basis</h4><div class="eqn">${cart}</div></div>
+     <div class="block"><h4>Polar basis (r, \u03b8)</h4><div class="eqn">${pol}</div></div>
+     <div class="block"><h4>Result</h4><div class="eqn">${res}</div></div>`;
+}
+
+function renderAll2D(){ renderSVG2D(); syncControlValues2D(); renderMath2D(); }
+function syncControlValues2D(){
+  ["a","b","c"].forEach(key=>{
+    const p = polarOf2(S2.vectors[key]);
+    const mag = document.getElementById("mag-"+key), ang = document.getElementById("ang-"+key);
+    if(mag && document.activeElement!==mag) mag.value = p.r;
+    if(ang && document.activeElement!==ang) ang.value = p.th;
+    document.getElementById("mag-"+key+"-val").textContent = fmt(p.r);
+    document.getElementById("ang-"+key+"-val").textContent = fmt(p.th)+"\u00b0";
+  });
+  if(S2.op==="scale"){
+    document.getElementById("k-val2").textContent = fmt(S2.k);
+    document.getElementById("kslider2-val").textContent = fmt(S2.k);
+  }
+}
+
+function buildScene2D(){
+  const el = document.getElementById("scene-d2");
+  el.innerHTML = `
+    <nav class="op-tabs" id="optabs-d2"></nav>
+    <div class="extra" id="extra-d2"></div>
+    <div class="stage"><svg id="svg2d" viewBox="0 0 ${VB} ${VB}"></svg><div class="hint">drag the dots</div></div>
+    <div class="controls" id="controls-d2"></div>
+    <div class="math" id="math-d2"></div>
+  `;
+  buildOpTabs("optabs-d2", S2, ()=>{ renderExtra2D(); renderControls2D(); renderAll2D(); });
+  renderExtra2D();
+  renderControls2D();
+  renderAll2D();
+  setupDrag2D();
+}
+
+const OPS = [
+  {id:"add", label:"Addition"},
+  {id:"scale", label:"Scalar \u00d7"},
+  {id:"dot", label:"Dot product"},
+  {id:"cross", label:"Cross product"},
+  {id:"proj", label:"Projection"}
+];
+function buildOpTabs(elId, S, onChange){
+  const nav = document.getElementById(elId);
+  nav.innerHTML = OPS.map(o=>`<button data-op="${o.id}" class="${S.op===o.id?'active':''}">${o.label}</button>`).join("");
+  nav.querySelectorAll("button").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      S.op = btn.getAttribute("data-op");
+      nav.querySelectorAll("button").forEach(b=>b.classList.toggle("active", b===btn));
+      onChange();
+    });
+  });
+}
+
+/* =====================================================================
+   3D SCENARIO
+   ===================================================================== */
+const S3 = {
+  op:"add",
+  vectors: { a:{x:2,y:1,z:1.5}, b:{x:1,y:2,z:-1}, c:{x:-1.5,y:0.5,z:1} },
+  k:2, target:"a",
+  dotPair:"ab", crossPair:"ab",
+  projFrom:"a", projTo:"b",
+  yaw:-0.7, pitch:0.4
+};
+const SCALE3 = 42;
+let canvas3d, ctx3d, C3W=400, C3H=380;
+
+function project3(p){
+  const {yaw,pitch} = S3;
+  const x1 = p.x*Math.cos(yaw) + p.z*Math.sin(yaw);
+  const z1 = -p.x*Math.sin(yaw) + p.z*Math.cos(yaw);
+  const y2 = p.y*Math.cos(pitch) - z1*Math.sin(pitch);
+  const z2 = p.y*Math.sin(pitch) + z1*Math.cos(pitch);
+  const persp = 5/(5+z2);
+  const sx = C3W/2 + x1*SCALE3*persp;
+  const sy = C3H/2 - y2*SCALE3*persp + 10;
+  return {sx, sy, depth:z2, persp};
+}
+function screenDeltaToWorld(dsx,dsy){
+  const {yaw,pitch} = S3;
+  const dx2 = dsx/SCALE3, dy2 = -dsy/SCALE3;
+  const dx = Math.cos(yaw)*dx2 + Math.sin(yaw)*Math.sin(pitch)*dy2;
+  const dy = Math.cos(pitch)*dy2;
+  const dz = Math.sin(yaw)*dx2 - Math.cos(yaw)*Math.sin(pitch)*dy2;
+  return {x:dx,y:dy,z:dz};
+}
+
+function styleColor(varName){
+  return getComputedStyle(document.body).getPropertyValue(varName.replace("var(","").replace(")","")).trim() || varName;
+}
+function cssVar(v){ return getComputedStyle(document.body).getPropertyValue(v).trim(); }
+
+function drawArrow3(ctx, fromP, toP, color, dashed, width){
+  ctx.save();
+  ctx.strokeStyle = color; ctx.fillStyle = color;
+  ctx.lineWidth = width||2.4;
+  ctx.lineCap = "round";
+  if(dashed) ctx.setLineDash([5,4]); else ctx.setLineDash([]);
+  ctx.beginPath(); ctx.moveTo(fromP.sx,fromP.sy); ctx.lineTo(toP.sx,toP.sy); ctx.stroke();
+  if(!dashed){
+    const ang = Math.atan2(toP.sy-fromP.sy, toP.sx-fromP.sx);
+    const len=9, wid=5.5;
+    const bx = toP.sx - len*Math.cos(ang), by = toP.sy - len*Math.sin(ang);
+    const p1x = bx - wid*Math.sin(ang), p1y = by + wid*Math.cos(ang);
+    const p2x = bx + wid*Math.sin(ang), p2y = by - wid*Math.cos(ang);
+    ctx.setLineDash([]);
+    ctx.beginPath(); ctx.moveTo(toP.sx,toP.sy); ctx.lineTo(p1x,p1y); ctx.lineTo(p2x,p2y); ctx.closePath(); ctx.fill();
+  }
+  ctx.restore();
+}
+function drawAxes3(ctx){
+  const O = project3({x:0,y:0,z:0});
+  [["x",4,0,0],["y",0,4,0],["z",0,0,4]].forEach(([label,x,y,z])=>{
+    const P = project3({x,y,z});
+    ctx.save();
+    ctx.strokeStyle = cssVar("--grid-strong"); ctx.lineWidth=1; ctx.setLineDash([2,3]);
+    ctx.beginPath(); ctx.moveTo(O.sx,O.sy); ctx.lineTo(P.sx,P.sy); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = cssVar("--ink-soft"); ctx.font="11px 'IBM Plex Mono', monospace";
+    ctx.fillText(label, P.sx+4, P.sy+4);
+    ctx.restore();
+  });
+}
+function drawGridFloor3(ctx){
+  ctx.save();
+  ctx.strokeStyle = cssVar("--grid"); ctx.lineWidth=1;
+  for(let i=-3;i<=3;i++){
+    const p1 = project3({x:i,y:-3,z:0}), p2 = project3({x:i,y:3,z:0});
+    ctx.beginPath(); ctx.moveTo(p1.sx,p1.sy); ctx.lineTo(p2.sx,p2.sy); ctx.stroke();
+    const p3 = project3({x:-3,y:i,z:0}), p4 = project3({x:3,y:i,z:0});
+    ctx.beginPath(); ctx.moveTo(p3.sx,p3.sy); ctx.lineTo(p4.sx,p4.sy); ctx.stroke();
+  }
+  ctx.restore();
+}
+
+function renderCanvas3D(){
+  if(!ctx3d) return;
+  const dpr = window.devicePixelRatio||1;
+  ctx3d.save();
+  ctx3d.setTransform(dpr,0,0,dpr,0,0);
+  ctx3d.clearRect(0,0,C3W,C3H);
+  ctx3d.fillStyle = cssVar("--paper"); ctx3d.fillRect(0,0,C3W,C3H);
+  drawGridFloor3(ctx3d);
+  drawAxes3(ctx3d);
+
+  const V = S3.vectors;
+  const O = project3({x:0,y:0,z:0});
+  const colorA = cssVar("--accent-a"), colorB = cssVar("--accent-b"), colorC = cssVar("--accent-c"), colorR = cssVar("--accent-r"), soft = cssVar("--ink-soft");
+
+  function drawHandle(v,color,key){
+    const P = project3(v);
+    ctx3d.beginPath(); ctx3d.arc(P.sx,P.sy,8,0,7); ctx3d.fillStyle=color; ctx3d.fill();
+    ctx3d.lineWidth=2; ctx3d.strokeStyle=cssVar("--paper"); ctx3d.stroke();
+    handlePositions[key] = {sx:P.sx, sy:P.sy};
+  }
+  const handlePositions = {};
+
+  if(S3.op==="add"){
+    const ab = add3(V.a,V.b), abc = add3(ab,V.c);
+    drawArrow3(ctx3d, project3(V.a), project3(ab), soft, true, 1.3);
+    drawArrow3(ctx3d, project3(ab), project3(abc), soft, true, 1.3);
+    drawArrow3(ctx3d, O, project3(abc), colorR, false, 3);
+    drawArrow3(ctx3d, O, project3(V.a), colorA, false);
+    drawArrow3(ctx3d, O, project3(V.b), colorB, false);
+    drawArrow3(ctx3d, O, project3(V.c), colorC, false);
+    drawHandle(V.a,colorA,"a"); drawHandle(V.b,colorB,"b"); drawHandle(V.c,colorC,"c");
+  } else if(S3.op==="scale"){
+    const t=V[S3.target], out=scale3(t,S3.k);
+    drawArrow3(ctx3d, O, project3(out), colorR, false, 3);
+    drawArrow3(ctx3d, O, project3(V.a), colorA, false);
+    drawArrow3(ctx3d, O, project3(V.b), colorB, false);
+    drawArrow3(ctx3d, O, project3(V.c), colorC, false);
+    drawHandle(V.a,colorA,"a"); drawHandle(V.b,colorB,"b"); drawHandle(V.c,colorC,"c");
+  } else if(S3.op==="dot"){
+    const k1=S3.dotPair[0],k2=S3.dotPair[1], u=V[k1], v=V[k2];
+    const other = ["a","b","c"].filter(k=>k!==k1&&k!==k2)[0];
+    drawArrow3(ctx3d, O, project3(V[other]), {a:colorA,b:colorB,c:colorC}[other], false, 1.6);
+    const vlen2=dot3(v,v), t = vlen2>1e-9? dot3(u,v)/vlen2:0, foot=scale3(v,t);
+    drawArrow3(ctx3d, project3(u), project3(foot), soft, true, 1.3);
+    drawArrow3(ctx3d, O, project3(u), {a:colorA,b:colorB,c:colorC}[k1], false);
+    drawArrow3(ctx3d, O, project3(v), {a:colorA,b:colorB,c:colorC}[k2], false);
+    drawHandle(V.a,colorA,"a"); drawHandle(V.b,colorB,"b"); drawHandle(V.c,colorC,"c");
+  } else if(S3.op==="cross"){
+    const k1=S3.crossPair[0],k2=S3.crossPair[1], u=V[k1], v=V[k2];
+    const other = ["a","b","c"].filter(k=>k!==k1&&k!==k2)[0];
+    drawArrow3(ctx3d, O, project3(V[other]), {a:colorA,b:colorB,c:colorC}[other], false, 1.6);
+    const cr = cross3(u,v);
+    // parallelogram
+    const p3 = add3(u,v);
+    ctx3d.save(); ctx3d.fillStyle=colorR; ctx3d.globalAlpha=0.14;
+    const P0=O, P1=project3(u), P2=project3(p3), P3=project3(v);
+    ctx3d.beginPath(); ctx3d.moveTo(P0.sx,P0.sy); ctx3d.lineTo(P1.sx,P1.sy); ctx3d.lineTo(P2.sx,P2.sy); ctx3d.lineTo(P3.sx,P3.sy); ctx3d.closePath(); ctx3d.fill();
+    ctx3d.restore();
+    drawArrow3(ctx3d, O, project3(u), {a:colorA,b:colorB,c:colorC}[k1], false);
+    drawArrow3(ctx3d, O, project3(v), {a:colorA,b:colorB,c:colorC}[k2], false);
+    drawArrow3(ctx3d, O, project3(cr), colorR, false, 3);
+    drawHandle(V.a,colorA,"a"); drawHandle(V.b,colorB,"b"); drawHandle(V.c,colorC,"c");
+  } else if(S3.op==="proj"){
+    const f=S3.projFrom,t=S3.projTo,u=V[f],v=V[t];
+    const other = ["a","b","c"].filter(k=>k!==f&&k!==t)[0];
+    drawArrow3(ctx3d, O, project3(V[other]), {a:colorA,b:colorB,c:colorC}[other], false, 1.6);
+    const tlen2=dot3(v,v), s= tlen2>1e-9? dot3(u,v)/tlen2:0, proj=scale3(v,s);
+    const tu = tlen2>1e-9? scale3(v,6/Math.sqrt(tlen2)) : {x:0,y:0,z:0};
+    drawArrow3(ctx3d, project3(scale3(tu,-1)), project3(tu), soft, true, 1);
+    drawArrow3(ctx3d, project3(u), project3(proj), soft, true, 1.3);
+    drawArrow3(ctx3d, O, project3(proj), colorR, false, 3.4);
+    drawArrow3(ctx3d, O, project3(u), {a:colorA,b:colorB,c:colorC}[f], false);
+    drawArrow3(ctx3d, O, project3(v), {a:colorA,b:colorB,c:colorC}[t], false, 1.6);
+    drawHandle(V.a,colorA,"a"); drawHandle(V.b,colorB,"b"); drawHandle(V.c,colorC,"c");
+  }
+  ctx3d.restore();
+  canvas3d._handlePositions = handlePositions;
+}
+
+/* ---- 3D dragging (vector tips) + orbit (background) ---- */
+function setupDrag3D(){
+  canvas3d = document.getElementById("canvas3d");
+  ctx3d = canvas3d.getContext("2d");
+  function resize(){
+    const rect = canvas3d.getBoundingClientRect();
+    C3W = rect.width; C3H = rect.width*0.86;
+    const dpr = window.devicePixelRatio||1;
+    canvas3d.width = C3W*dpr; canvas3d.height = C3H*dpr;
+    canvas3d.style.height = C3H+"px";
+    renderCanvas3D();
+  }
+  window.addEventListener("resize", resize);
+  resize();
+
+  let mode=null, dragKey=null, last=null;
+  function localPos(e){
+    const rect = canvas3d.getBoundingClientRect();
+    const cx = (e.touches? e.touches[0].clientX : e.clientX);
+    const cy = (e.touches? e.touches[0].clientY : e.clientY);
+    return {x:(cx-rect.left), y:(cy-rect.top)};
+  }
+  canvas3d.addEventListener("pointerdown",(e)=>{
+    const p = localPos(e);
+    const hp = canvas3d._handlePositions||{};
+    let hit=null;
+    for(const k of ["a","b","c"]){
+      const hpos = hp[k];
+      if(hpos && Math.hypot(hpos.sx-p.x, hpos.sy-p.y) < 14){ hit=k; break; }
+    }
+    if(hit){ mode="vector"; dragKey=hit; } else { mode="orbit"; }
+    last = p;
+    canvas3d.setPointerCapture(e.pointerId);
+  });
+  canvas3d.addEventListener("pointermove",(e)=>{
+    if(!mode) return;
+    const p = localPos(e);
+    const dsx = p.x-last.x, dsy = p.y-last.y;
+    if(mode==="orbit"){
+      S3.yaw += dsx*0.008;
+      S3.pitch = clamp(S3.pitch + dsy*0.008, -1.3, 1.3);
+    } else if(mode==="vector"){
+      const d = screenDeltaToWorld(dsx,dsy);
+      S3.vectors[dragKey].x = clamp(Math.round((S3.vectors[dragKey].x+d.x)*10)/10,-5,5);
+      S3.vectors[dragKey].y = clamp(Math.round((S3.vectors[dragKey].y+d.y)*10)/10,-5,5);
+      S3.vectors[dragKey].z = clamp(Math.round((S3.vectors[dragKey].z+d.z)*10)/10,-5,5);
+    }
+    last = p;
+    renderAll3D();
+  });
+  ["pointerup","pointercancel","pointerleave"].forEach(ev=>canvas3d.addEventListener(ev,()=>{mode=null; dragKey=null;}));
+}
+
+/* ---- 3D controls ---- */
+function sphericalOf3(v){
+  const r = len3(v);
+  const theta = r>1e-9 ? Math.acos(clamp(v.z/r,-1,1))*R2D : 0; // polar angle from +z
+  const phi = Math.atan2(v.y,v.x)*R2D; // azimuth from +x in xy-plane
+  return {r, theta, phi};
+}
+function vecFromSpherical3(r,thetaDeg,phiDeg){
+  const th = thetaDeg*D2R, ph = phiDeg*D2R;
+  return {x:r*Math.sin(th)*Math.cos(ph), y:r*Math.sin(th)*Math.sin(ph), z:r*Math.cos(th)};
+}
+
+function vecCard3(key,name){
+  const v = S3.vectors[key];
+  const p = sphericalOf3(v);
+  return `<div class="vec-card">
+    <div class="row">
+      <span class="dot" style="background:${COLORS[key]}"></span>
+      <span class="name" style="color:${COLORS[key]}">${name}</span>
+      <span class="readout">(${fmt(v.x)}, ${fmt(v.y)}, ${fmt(v.z)})</span>
+    </div>
+    <div class="sliders">
+      ${sliderRow("|"+name+"|","mag3-"+key,0,5,0.1,p.r,"")}
+      ${sliderRow("\u03b8 "+name,"th3-"+key,0,180,1,p.theta,"\u00b0")}
+      ${sliderRow("\u03c6 "+name,"ph3-"+key,-180,180,1,p.phi,"\u00b0")}
+    </div>
+  </div>`;
+}
+
+function renderControls3D(){
+  let html = vecCard3("a","a") + vecCard3("b","b") + vecCard3("c","c");
+  if(S3.op==="scale"){
+    html += `<div class="vec-card"><div class="row"><span class="name">scalar <span class="k">k</span></span><span class="readout" id="k-val3">${fmt(S3.k)}</span></div>
+    <div class="sliders">${sliderRow("k","kslider3",-3,3,0.1,S3.k,"")}</div></div>`;
+  }
+  document.getElementById("controls-d3").innerHTML = html;
+
+  ["a","b","c"].forEach(key=>{
+    document.getElementById("mag3-"+key).addEventListener("input",(e)=>{
+      const p = sphericalOf3(S3.vectors[key]);
+      S3.vectors[key] = vecFromSpherical3(parseFloat(e.target.value), p.theta, p.phi);
+      renderAll3D();
+    });
+    document.getElementById("th3-"+key).addEventListener("input",(e)=>{
+      const p = sphericalOf3(S3.vectors[key]);
+      S3.vectors[key] = vecFromSpherical3(p.r, parseFloat(e.target.value), p.phi);
+      renderAll3D();
+    });
+    document.getElementById("ph3-"+key).addEventListener("input",(e)=>{
+      const p = sphericalOf3(S3.vectors[key]);
+      S3.vectors[key] = vecFromSpherical3(p.r, p.theta, parseFloat(e.target.value));
+      renderAll3D();
+    });
+  });
+  if(S3.op==="scale"){
+    document.getElementById("kslider3").addEventListener("input",(e)=>{ S3.k=parseFloat(e.target.value); renderAll3D(); });
+  }
+}
+
+function renderExtra3D(){
+  let html = "";
+  if(S3.op==="scale"){
+    html = `<span>scale</span><select id="target3">${["a","b","c"].map(k=>`<option value="${k}" ${S3.target===k?"selected":""}>${k}</option>`).join("")}</select><span>by k</span>`;
+  } else if(S3.op==="dot"){
+    html = `<span>compute</span>${pairSelect("dotPair3",S3.dotPair)}`;
+  } else if(S3.op==="cross"){
+    html = `<span>compute</span>${pairSelect("crossPair3",S3.crossPair)}`;
+  } else if(S3.op==="proj"){
+    html = `<span>project</span>${vecSelect("projFrom3",S3.projFrom)}<span>onto</span>${vecSelect("projTo3",S3.projTo,S3.projFrom)}`;
+  }
+  document.getElementById("extra-d3").innerHTML = html;
+  if(S3.op==="scale") document.getElementById("target3").addEventListener("change",e=>{S3.target=e.target.value; renderAll3D();});
+  if(S3.op==="dot") document.getElementById("dotPair3").addEventListener("change",e=>{S3.dotPair=e.target.value; renderAll3D();});
+  if(S3.op==="cross") document.getElementById("crossPair3").addEventListener("change",e=>{S3.crossPair=e.target.value; renderAll3D();});
+  if(S3.op==="proj"){
+    document.getElementById("projFrom3").addEventListener("change",e=>{S3.projFrom=e.target.value; if(S3.projFrom===S3.projTo){S3.projTo=["a","b","c"].find(k=>k!==S3.projFrom);} renderAll3D();});
+    document.getElementById("projTo3").addEventListener("change",e=>{S3.projTo=e.target.value; renderAll3D();});
+  }
+}
+
+/* ---- 3D math panel ---- */
+function cartLine3(name,v){ return `<span class="vecname ${name}">${name}</span> = (${fmt(v.x)}, ${fmt(v.y)}, ${fmt(v.z)})`; }
+function sphLine3(name,v){
+  const p = sphericalOf3(v);
+  return `<span class="vecname ${name}">${name}</span> = ${fmt(p.r)}\u00b7(sin\u03b8cos\u03c6, sin\u03b8sin\u03c6, cos\u03b8)&nbsp; &nbsp;|<span class="vecname ${name}">${name}</span>| = ${fmt(p.r)}, \u03b8 = ${fmt(p.theta)}\u00b0, \u03c6 = ${fmt(p.phi)}\u00b0`;
+}
+function angleBetween3(u,v){
+  const lu=len3(u), lv=len3(v);
+  if(lu<1e-9||lv<1e-9) return 0;
+  return Math.acos(clamp(dot3(u,v)/(lu*lv),-1,1))*R2D;
+}
+
+function renderMath3D(){
+  const V = S3.vectors;
+  let cart="", pol="", res="";
+  if(S3.op==="add"){
+    const sum = add3(add3(V.a,V.b),V.c);
+    cart = [cartLine3("a",V.a),cartLine3("b",V.b),cartLine3("c",V.c)].join("<br>");
+    pol = [sphLine3("a",V.a),sphLine3("b",V.b),sphLine3("c",V.c)].join("<br>");
+    const p = sphericalOf3(sum);
+    res = `<span class="vecname r">a+b+c</span> = (${fmt(sum.x)}, ${fmt(sum.y)}, ${fmt(sum.z)})<br>
+    |<span class="vecname r">a+b+c</span>| = ${fmt(p.r)}, \u03b8 = ${fmt(p.theta)}\u00b0, \u03c6 = ${fmt(p.phi)}\u00b0 &nbsp;<span style="color:var(--ink-soft)">(add in Cartesian, then convert the sum to spherical)</span>`;
+  } else if(S3.op==="scale"){
+    const t=V[S3.target], out=scale3(t,S3.k), p=sphericalOf3(t);
+    cart = cartLine3(S3.target,t);
+    pol = sphLine3(S3.target,t);
+    res = `k${S3.target} = ${fmt(S3.k)}\u00b7(${fmt(t.x)}, ${fmt(t.y)}, ${fmt(t.z)}) = (${fmt(out.x)}, ${fmt(out.y)}, ${fmt(out.z)})<br>
+    |k${S3.target}| = |k||${S3.target}| = ${fmt(Math.abs(S3.k))}\u00b7${fmt(p.r)} = ${fmt(Math.abs(S3.k)*p.r)}, \u03b8 unchanged, \u03c6 ${S3.k>=0?"unchanged":"+180\u00b0"}`;
+  } else if(S3.op==="dot"){
+    const k1=S3.dotPair[0],k2=S3.dotPair[1], u=V[k1],v=V[k2];
+    const d=dot3(u,v), ang=angleBetween3(u,v), ru=len3(u), rv=len3(v);
+    cart = [cartLine3(k1,u),cartLine3(k2,v)].join("<br>");
+    pol = [sphLine3(k1,u),sphLine3(k2,v)].join("<br>");
+    res = `${k1}\u00b7${k2} = ${k1}<sub>x</sub>${k2}<sub>x</sub>+${k1}<sub>y</sub>${k2}<sub>y</sub>+${k1}<sub>z</sub>${k2}<sub>z</sub> = ${fmt(u.x)}\u00b7${fmt(v.x)}+${fmt(u.y)}\u00b7${fmt(v.y)}+${fmt(u.z)}\u00b7${fmt(v.z)} = ${fmt(d)}<br>
+    ${k1}\u00b7${k2} = |${k1}||${k2}|cos\u03b8 = ${fmt(ru)}\u00b7${fmt(rv)}\u00b7cos(${fmt(ang)}\u00b0) = ${fmt(d)}`;
+  } else if(S3.op==="cross"){
+    const k1=S3.crossPair[0],k2=S3.crossPair[1], u=V[k1],v=V[k2];
+    const cr=cross3(u,v), ang=angleBetween3(u,v), ru=len3(u), rv=len3(v);
+    cart = [cartLine3(k1,u),cartLine3(k2,v)].join("<br>");
+    pol = [sphLine3(k1,u),sphLine3(k2,v)].join("<br>");
+    res = `${k1}\u00d7${k2} = (${k1}<sub>y</sub>${k2}<sub>z</sub>\u2212${k1}<sub>z</sub>${k2}<sub>y</sub>, ${k1}<sub>z</sub>${k2}<sub>x</sub>\u2212${k1}<sub>x</sub>${k2}<sub>z</sub>, ${k1}<sub>x</sub>${k2}<sub>y</sub>\u2212${k1}<sub>y</sub>${k2}<sub>x</sub>) = (${fmt(cr.x)}, ${fmt(cr.y)}, ${fmt(cr.z)})<br>
+    |${k1}\u00d7${k2}| = |${k1}||${k2}|sin\u03b8 = ${fmt(ru)}\u00b7${fmt(rv)}\u00b7sin(${fmt(ang)}\u00b0) = ${fmt(len3(cr))}, direction \u22a5 to both ${k1} and ${k2} (right-hand rule)`;
+  } else if(S3.op==="proj"){
+    const f=S3.projFrom,t=S3.projTo,u=V[f],v=V[t];
+    const tlen2=dot3(v,v), s=tlen2>1e-9? dot3(u,v)/tlen2:0, proj=scale3(v,s);
+    const ang=angleBetween3(u,v), ru=len3(u);
+    cart = [cartLine3(f,u),cartLine3(t,v)].join("<br>");
+    pol = [sphLine3(f,u),sphLine3(t,v)].join("<br>");
+    res = `proj<sub>${t}</sub>${f} = (${f}\u00b7${t} / |${t}|\u00b2)\u00b7${t} = (${fmt(dot3(u,v))} / ${fmt(tlen2)})\u00b7${t} = (${fmt(proj.x)}, ${fmt(proj.y)}, ${fmt(proj.z)})<br>
+    scalar component: |${f}|cos\u03b8 = ${fmt(ru)}\u00b7cos(${fmt(ang)}\u00b0) = ${fmt(ru*Math.cos(ang*D2R))}`;
+  }
+  document.getElementById("math-d3").innerHTML =
+    `<div class="block"><h4>Cartesian basis</h4><div class="eqn">${cart}</div></div>
+     <div class="block"><h4>Spherical basis (r, \u03b8, \u03c6)</h4><div class="eqn">${pol}</div></div>
+     <div class="block"><h4>Result</h4><div class="eqn">${res}</div></div>`;
+}
+
+function renderAll3D(){ renderCanvas3D(); syncControlValues3D(); renderMath3D(); }
+function syncControlValues3D(){
+  ["a","b","c"].forEach(key=>{
+    const p = sphericalOf3(S3.vectors[key]);
+    const mag=document.getElementById("mag3-"+key), th=document.getElementById("th3-"+key), ph=document.getElementById("ph3-"+key);
+    if(mag && document.activeElement!==mag) mag.value=p.r;
+    if(th && document.activeElement!==th) th.value=p.theta;
+    if(ph && document.activeElement!==ph) ph.value=p.phi;
+    document.getElementById("mag3-"+key+"-val").textContent = fmt(p.r);
+    document.getElementById("th3-"+key+"-val").textContent = fmt(p.theta)+"\u00b0";
+    document.getElementById("ph3-"+key+"-val").textContent = fmt(p.phi)+"\u00b0";
+  });
+  if(S3.op==="scale"){
+    document.getElementById("k-val3").textContent = fmt(S3.k);
+    document.getElementById("kslider3-val").textContent = fmt(S3.k);
+  }
+}
+
+function buildScene3D(){
+  const el = document.getElementById("scene-d3");
+  el.innerHTML = `
+    <nav class="op-tabs" id="optabs-d3"></nav>
+    <div class="extra" id="extra-d3"></div>
+    <div class="stage"><canvas id="canvas3d"></canvas><div class="hint">drag a dot to move it \u00b7 drag empty space to orbit</div></div>
+    <div class="controls" id="controls-d3"></div>
+    <div class="math" id="math-d3"></div>
+  `;
+  buildOpTabs("optabs-d3", S3, ()=>{ renderExtra3D(); renderControls3D(); renderAll3D(); });
+  renderExtra3D();
+  renderControls3D();
+  setupDrag3D();
+  renderAll3D();
+}
+
+/* ---- slider value live update (all inputs, generic) ---- */
+document.addEventListener("input",(e)=>{
+  if(e.target.matches('input[type=range]')){
+    const out = document.getElementById(e.target.id+"-val");
+    // value text is refreshed by the owning render call; this just gives immediate feedback pre-render
+  }
+});
+
+/* ---- top-level scenario tabs ---- */
+document.getElementById("scenarioTabs").addEventListener("click",(e)=>{
+  const btn = e.target.closest("button[data-scenario]");
+  if(!btn) return;
+  const which = btn.getAttribute("data-scenario");
+  document.querySelectorAll("#scenarioTabs button").forEach(b=>b.classList.toggle("active", b===btn));
+  document.getElementById("scene-d2").style.display = which==="d2" ? "" : "none";
+  document.getElementById("scene-d3").style.display = which==="d3" ? "" : "none";
+  if(which==="d3" && !canvas3d){ buildScene3D(); }
+  else if(which==="d3"){ renderAll3D(); }
+});
+
+buildScene2D();
+})();
+</script>
+
+</body>
+</html>

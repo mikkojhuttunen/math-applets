@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Derivatives, Visualized</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F4EC;
+    --surface:#FFFFFF;
+    --ink:#20283B;
+    --ink-soft:#4B5468;
+    --muted:#8A8474;
+    --grid:#E2DCC9;
+    --grid-strong:#C9C2AC;
+    --accent:#B9662F;
+    --accent-soft:#F0DFCB;
+    --curve:#20283B;
+    --d1:#C0392B;
+    --d2:#1D5FA8;
+    --tangent:#B9662F;
+    --shadow: 0 1px 2px rgba(32,40,59,0.06), 0 6px 20px rgba(32,40,59,0.06);
+    box-sizing:border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#171A20; --surface:#1F232B; --ink:#EDEAE1; --ink-soft:#C6C2B6; --muted:#8B8C8F;
+      --grid:#2B2F38; --grid-strong:#3A3F4A; --accent:#E1A165; --accent-soft:#3A2E20;
+      --curve:#EDEAE1; --d1:#E2685B; --d2:#6FA8E0; --tangent:#E1A165;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.25);
+    }
+  }
+  :root[data-theme="dark"]{
+      --bg:#171A20; --surface:#1F232B; --ink:#EDEAE1; --ink-soft:#C6C2B6; --muted:#8B8C8F;
+      --grid:#2B2F38; --grid-strong:#3A3F4A; --accent:#E1A165; --accent-soft:#3A2E20;
+      --curve:#EDEAE1; --d1:#E2685B; --d2:#6FA8E0; --tangent:#E1A165;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 6px 20px rgba(0,0,0,0.25);
+  }
+  html,body{ height:100%; margin:0; }
+  *{ box-sizing:border-box; }
+  body{
+    background:var(--bg); color:var(--ink);
+    font-family:'Inter',system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  #app{
+    min-height:100%; display:flex; flex-direction:column;
+    padding:20px 20px calc(20px + env(safe-area-inset-bottom,0px));
+    gap:16px; max-width:1220px; margin:0 auto;
+  }
+  header{ display:flex; flex-direction:column; gap:4px; padding-top:2px; }
+  h1{
+    font-family:'Fraunces',Georgia,serif; font-weight:600;
+    font-size:clamp(22px,3.4vw,30px); letter-spacing:-0.01em; margin:0; line-height:1.15;
+  }
+  .sub{ color:var(--ink-soft); font-size:14px; max-width:66ch; line-height:1.5; }
+  .layout{ display:flex; gap:16px; flex:1; min-height:0; }
+  @media (max-width: 780px){ .layout{ flex-direction:column; } }
+  aside.controls{
+    background:var(--surface); border:1px solid var(--grid); border-radius:14px;
+    padding:16px; width:290px; flex-shrink:0; display:flex; flex-direction:column;
+    gap:16px; box-shadow:var(--shadow); height:fit-content;
+    max-height:calc(100vh - 140px); overflow-y:auto;
+  }
+  @media (max-width: 780px){ aside.controls{ width:100%; max-height:none; } }
+  .group-label{ font-size:11px; color:var(--muted); font-weight:600; margin-bottom:8px; letter-spacing:0.02em; }
+  .fn-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+  button.fn-btn, button.ab-btn{
+    font-family:'IBM Plex Mono',monospace; font-size:14px; background:var(--bg);
+    border:1px solid var(--grid); color:var(--ink); border-radius:8px; padding:9px 4px;
+    cursor:pointer; transition:background .12s ease, border-color .12s ease, color .12s ease;
+  }
+  button.fn-btn:hover, button.ab-btn:hover{ border-color:var(--grid-strong); }
+  button.fn-btn.active{ background:var(--ink); color:var(--surface); border-color:var(--ink); }
+  button.ab-btn.active{ background:var(--accent); color:var(--surface); border-color:var(--accent); }
+  button.fn-btn:focus-visible, button.ab-btn:focus-visible, .toggle:focus-visible, input[type="range"]:focus-visible{
+    outline:2px solid var(--accent); outline-offset:2px;
+  }
+  .ab-block{ display:flex; flex-direction:column; gap:8px; }
+  .ab-row{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+  .ab-heading{ display:flex; justify-content:space-between; align-items:baseline; }
+  .ab-heading .group-label{ margin-bottom:0; }
+  .ab-formula{ font-family:'IBM Plex Mono',monospace; font-size:12px; color:var(--muted); }
+  .toggles{ display:flex; flex-direction:column; gap:8px; }
+  .toggle{
+    display:flex; align-items:center; gap:10px; cursor:pointer; padding:6px 8px;
+    border-radius:8px; border:1px solid transparent; background:transparent;
+    font-size:13.5px; color:var(--ink-soft); width:100%; text-align:left; font-family:inherit;
+  }
+  .toggle:hover{ background:var(--bg); }
+  .swatch{ width:22px; height:0; border-top-width:3px; border-top-style:solid; flex-shrink:0; }
+  .swatch.dashed{ border-top-style:dashed; }
+  .swatch.dotted{ border-top-style:dotted; border-top-width:4px; }
+  .switch{
+    margin-left:auto; width:32px; height:18px; border-radius:999px; background:var(--grid);
+    position:relative; flex-shrink:0; transition:background .15s ease;
+  }
+  .switch::after{
+    content:""; position:absolute; top:2px; left:2px; width:14px; height:14px; border-radius:50%;
+    background:var(--surface); box-shadow:0 1px 2px rgba(0,0,0,0.25); transition:transform .15s ease;
+  }
+  .toggle.on .switch{ background:var(--accent); }
+  .toggle.on .switch::after{ transform:translateX(14px); }
+  .toggle.on{ color:var(--ink); }
+  .slider-row{ display:flex; flex-direction:column; gap:8px; }
+  input[type="range"]{
+    -webkit-appearance:none; appearance:none; width:100%; height:4px; border-radius:2px;
+    background:var(--grid-strong); outline-offset:4px;
+  }
+  input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none; width:16px;height:16px;border-radius:50%; background:var(--accent);
+    cursor:pointer; border:2px solid var(--surface); box-shadow:0 0 0 1px var(--grid-strong);
+  }
+  input[type="range"]::-moz-range-thumb{
+    width:16px;height:16px;border-radius:50%; background:var(--accent); cursor:pointer;
+    border:2px solid var(--surface);
+  }
+  .box{
+    font-family:'IBM Plex Mono',monospace; font-size:13px; display:flex; flex-direction:column;
+    gap:7px; background:var(--bg); border-radius:10px; padding:12px; border:1px solid var(--grid);
+  }
+  .box .eq-row{ display:flex; gap:8px; align-items:baseline; }
+  .box .eq-tag{ width:28px; flex-shrink:0; font-weight:600; }
+  .box .eq-expr{ word-break:break-word; }
+  .readout .row{ display:flex; justify-content:space-between; gap:8px; }
+  .readout .row span:first-child{ color:var(--muted); }
+  .interp{
+    font-family:'Inter',sans-serif; font-size:12.5px; color:var(--ink-soft); line-height:1.45;
+    padding-top:4px; border-top:1px dashed var(--grid-strong); margin-top:2px;
+  }
+  .tip{
+    font-size:12px; color:var(--ink-soft); line-height:1.5; background:var(--accent-soft);
+    border-radius:10px; padding:10px 12px; border:1px solid var(--grid);
+  }
+  main.stage{
+    flex:1; background:var(--surface); border:1px solid var(--grid); border-radius:14px;
+    box-shadow:var(--shadow); min-height:380px; position:relative; overflow:hidden; touch-action:none;
+  }
+  canvas{ width:100%; height:100%; display:block; cursor:grab; }
+  canvas.pinching{ cursor:grabbing; }
+  .zoom-reset{
+    position:absolute; top:10px; right:10px; z-index:5;
+    font-family:'IBM Plex Mono',monospace; font-size:11px;
+    background:var(--surface); color:var(--ink-soft); border:1px solid var(--grid);
+    border-radius:8px; padding:6px 10px; cursor:pointer; box-shadow:var(--shadow);
+    opacity:0; pointer-events:none; transition:opacity .15s ease;
+  }
+  .zoom-reset.visible{ opacity:1; pointer-events:auto; }
+  .zoom-hint{
+    position:absolute; bottom:10px; left:50%; transform:translateX(-50%);
+    font-size:11px; color:var(--muted); background:var(--surface);
+    border:1px solid var(--grid); border-radius:999px; padding:4px 12px; z-index:5;
+    pointer-events:none; opacity:0.85;
+  }
+</style>
+</head>
+<body>
+<a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
+
+<div id="app">
+  <header>
+    <h1>Derivatives, visualized</h1>
+    <div class="sub">Drag the point along the curve. The height of the tangent's rise-over-run always matches the red f′(x) curve at that same x — that's the point of the dashed guide.</div>
+  </header>
+
+  <div class="layout">
+    <aside class="controls">
+      <div>
+        <div class="group-label">FUNCTION</div>
+        <div class="fn-grid" id="fnGrid"></div>
+      </div>
+
+      <div class="ab-block">
+        <div class="ab-heading"><div class="group-label">A &nbsp;(vertical scale)</div></div>
+        <div class="ab-row" id="aRow"></div>
+      </div>
+
+      <div class="ab-block">
+        <div class="ab-heading"><div class="group-label">B &nbsp;(inside the function)</div></div>
+        <div class="ab-row" id="bRow"></div>
+      </div>
+
+      <div class="slider-row">
+        <div class="ab-heading"><div class="group-label">C &nbsp;(shift: x → x+C)</div><span class="ab-formula" id="cLabel">C = 0</span></div>
+        <input type="range" id="cSlider" min="-5" max="5" value="0" step="1">
+        <div class="ab-formula" id="formulaLine">f(x) = A·f(B·(x+C))</div>
+      </div>
+
+      <div>
+        <div class="group-label">SHOW</div>
+        <div class="toggles">
+          <button class="toggle on" id="toggleD1" type="button">
+            <span class="swatch dashed" style="border-color:var(--d1)"></span>
+            <span>f′(x) &nbsp;first derivative</span>
+            <span class="switch"></span>
+          </button>
+          <button class="toggle on" id="toggleD2" type="button">
+            <span class="swatch dotted" style="border-color:var(--d2)"></span>
+            <span>f″(x) &nbsp;second derivative</span>
+            <span class="switch"></span>
+          </button>
+          <button class="toggle on" id="toggleTan" type="button">
+            <span class="swatch" style="border-color:var(--tangent)"></span>
+            <span>tangent + slope triangle</span>
+            <span class="switch"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="ab-block">
+        <div class="group-label">CONTROL POINT ON</div>
+        <div class="ab-row" id="modeRow" style="grid-template-columns:repeat(2,1fr);"></div>
+      </div>
+
+      <div class="slider-row">
+        <div class="group-label">POINT POSITION</div>
+        <input type="range" id="xSlider" min="0" max="1000" value="500" step="1">
+      </div>
+
+      <button class="ab-btn" id="snapCritical" type="button" style="width:100%;">Snap to nearest f′(x) = 0</button>
+
+      <div class="box" id="equations"></div>
+
+      <div class="box readout" id="readout"></div>
+
+      <div class="tip">The dashed vertical guide connects the point on f(x) to its matching height on f′(x) — that height <em>is</em> the tangent's slope, drawn as a rise-over-run triangle on the tangent line itself.</div>
+    </aside>
+
+    <main class="stage">
+      <canvas id="plot"></canvas>
+      <button class="zoom-reset" id="zoomReset" type="button">Reset zoom</button>
+      <div class="zoom-hint">pinch, or scroll, to zoom</div>
+    </main>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  const FUNCTIONS = [
+    { id:'x',    label:'x',    domain:[-6,6],  f:x=>x,        d1:x=>1,                          d2:x=>0,                          x0:2 },
+    { id:'x2',   label:'x²',   domain:[-4,4],  f:x=>x*x,      d1:x=>2*x,                        d2:x=>2,                          x0:1.5 },
+    { id:'x3',   label:'x³',   domain:[-2.6,2.6], f:x=>x*x*x, d1:x=>3*x*x,                      d2:x=>6*x,                        x0:1.2 },
+    { id:'sin',  label:'sin x',domain:[-2*Math.PI,2*Math.PI], f:Math.sin, d1:Math.cos, d2:x=>-Math.sin(x), x0:1.0, tickMode:'pi' },
+    { id:'cos',  label:'cos x',domain:[-2*Math.PI,2*Math.PI], f:Math.cos, d1:x=>-Math.sin(x), d2:x=>-Math.cos(x), x0:0.8, tickMode:'pi' },
+    { id:'exp',  label:'eˣ',   domain:[-3.2,2.3], f:Math.exp,  d1:Math.exp,                      d2:Math.exp,                      x0:1.3 },
+    { id:'inv',  label:'1/x',  domain:[-4,4],  f:x=>1/x,      d1:x=>-1/(x*x),                   d2:x=>2/(x*x*x),                  x0:1.0, excludeZero:true },
+    { id:'ln',   label:'ln x', domain:[0.04,6], f:Math.log,   d1:x=>1/x,                        d2:x=>-1/(x*x),                   x0:1.5, minX:0.02 },
+    { id:'sqrt', label:'√x',   domain:[0,6],   f:Math.sqrt,   d1:x=>1/(2*Math.sqrt(x)),         d2:x=>-1/(4*Math.pow(x,1.5)),     x0:1.5, minX:0.0001 },
+  ];
+  const A_VALUES = [1,2,3];
+  const B_VALUES = [1,2,3];
+
+  let current = FUNCTIONS[1];
+  let A = 1, B = 1, C = 0;
+  let x0 = current.x0;
+  let show1 = true, show2 = true, showTan = true;
+  let controlMode = 'f'; // 'f' or 'd1' — which curve the big draggable point is drawn on
+  let dragging = false;
+  let curYR = [-3,15];
+  let xScale = 1, yScale = 1;
+  let xCenter = 0, yCenter = 0;
+
+  const canvas = document.getElementById('plot');
+  const ctx = canvas.getContext('2d');
+  const stage = document.querySelector('main.stage');
+  const fnGrid = document.getElementById('fnGrid');
+  const aRow = document.getElementById('aRow');
+  const bRow = document.getElementById('bRow');
+  const slider = document.getElementById('xSlider');
+  const zoomResetBtn = document.getElementById('zoomReset');
+  const readout = document.getElementById('readout');
+  const equationsBox = document.getElementById('equations');
+
+  function css(v){ return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+
+  // ---------- scaled function/derivative evaluators: g(x) = A * f(B x) ----------
+  function gF(x){  return A * current.f(B*(x+C)); }
+  function gD1(x){ return A*B * current.d1(B*(x+C)); }
+  function gD2(x){ return A*B*B * current.d2(B*(x+C)); }
+
+  // ---------- symbolic equation builder ----------
+  function term(coef, varExpr){
+    if (coef === 0) return '0';
+    if (varExpr === '') return String(coef);
+    if (coef === 1) return varExpr;
+    if (coef === -1) return '-'+varExpr;
+    const dot = varExpr.charAt(0) === 'x' ? '' : '·';
+    return coef+dot+varExpr;
+  }
+  function fracExpr(numCoef, denomExpr, wrap){
+    if (numCoef === 0) return '0';
+    const sign = numCoef < 0 ? '-' : '';
+    const n = Math.abs(numCoef);
+    const numStr = n === 1 ? '1' : String(n);
+    return sign+numStr+'/'+(wrap ? '('+denomExpr+')' : denomExpr);
+  }
+
+  function innerExpr(){ // "x", "x+2", or "x-2"
+    if (C === 0) return 'x';
+    return 'x' + (C > 0 ? '+'+C : '-'+Math.abs(C));
+  }
+  function uExpr(){ // B·(x+C), simplified
+    const inner = innerExpr();
+    if (B === 1) return inner;
+    if (C === 0) return B+'x';
+    return B+'('+inner+')';
+  }
+  function uWrapExpr(){
+    if (B === 1 && C === 0) return 'x';
+    return '('+uExpr()+')';
+  }
+  function powExpr(n){ // (x+C) raised to n, as it appears multiplied by a coefficient
+    if (C === 0) return n===1?'x':n===2?'x²':'x³';
+    const base = '('+innerExpr()+')';
+    return base + (n===1?'':n===2?'²':'³');
+  }
+
+  function buildEquations(){
+    const u = uExpr();
+    const uWrap = uWrapExpr();
+    let fx, d1x, d2x;
+    switch(current.id){
+      case 'x':
+        fx  = term(A*B, powExpr(1));
+        d1x = String(A*B);
+        d2x = '0';
+        break;
+      case 'x2':
+        fx  = term(A*B*B, powExpr(2));
+        d1x = term(2*A*B*B, powExpr(1));
+        d2x = String(2*A*B*B);
+        break;
+      case 'x3':
+        fx  = term(A*Math.pow(B,3), powExpr(3));
+        d1x = term(3*A*Math.pow(B,3), powExpr(2));
+        d2x = term(6*A*Math.pow(B,3), powExpr(1));
+        break;
+      case 'sin':
+        fx  = term(A, 'sin('+u+')');
+        d1x = term(A*B, 'cos('+u+')');
+        d2x = term(-A*B*B, 'sin('+u+')');
+        break;
+      case 'cos':
+        fx  = term(A, 'cos('+u+')');
+        d1x = term(-A*B, 'sin('+u+')');
+        d2x = term(-A*B*B, 'cos('+u+')');
+        break;
+      case 'exp':{
+        const eArg = (B===1 && C===0) ? 'ˣ' : '^('+u+')';
+        fx  = term(A, 'e'+eArg);
+        d1x = term(A*B, 'e'+eArg);
+        d2x = term(A*B*B, 'e'+eArg);
+        break;
+      }
+      case 'inv':{
+        const denom = n => (B===1?'':String(B)) + powExpr(n);
+        fx  = fracExpr(A, denom(1), B!==1);
+        d1x = fracExpr(-A, denom(2), B!==1);
+        d2x = fracExpr(2*A, denom(3), B!==1);
+        break;
+      }
+      case 'ln':
+        fx  = term(A, 'ln('+u+')');
+        d1x = fracExpr(A, powExpr(1), false);
+        d2x = fracExpr(-A, powExpr(2), false);
+        break;
+      case 'sqrt':{
+        fx  = term(A, '\u221A('+u+')');
+        const d1den = '2\u221A('+u+')';
+        d1x = fracExpr(A*B, d1den, true);
+        const d2den = '4'+uWrap+'\u221A('+u+')';
+        d2x = fracExpr(-A*B*B, d2den, true);
+        break;
+      }
+    }
+    return { fx, d1x, d2x };
+  }
+
+  function renderEquations(){
+    const eq = buildEquations();
+    equationsBox.innerHTML =
+      '<div class="eq-row"><span class="eq-tag" style="color:'+css('--curve')+'">f</span><span class="eq-expr">f(x) = '+eq.fx+'</span></div>'+
+      '<div class="eq-row"><span class="eq-tag" style="color:'+css('--d1')+'">f′</span><span class="eq-expr">f′(x) = '+eq.d1x+'</span></div>'+
+      '<div class="eq-row"><span class="eq-tag" style="color:'+css('--d2')+'">f″</span><span class="eq-expr">f″(x) = '+eq.d2x+'</span></div>';
+  }
+
+  // ---------- build function buttons ----------
+  FUNCTIONS.forEach(fn=>{
+    const b = document.createElement('button');
+    b.className = 'fn-btn' + (fn.id===current.id ? ' active':'');
+    b.textContent = fn.label;
+    b.type = 'button';
+    b.addEventListener('click', ()=>{
+      current = fn;
+      x0 = clampToDomain(fn.x0 - C);
+      document.querySelectorAll('#fnGrid .fn-btn').forEach(el=>el.classList.remove('active'));
+      b.classList.add('active');
+      syncSlider();
+      updateView();
+      draw();
+    });
+    fnGrid.appendChild(b);
+  });
+
+  function buildABRow(container, values, getVal, setVal){
+    values.forEach(v=>{
+      const b = document.createElement('button');
+      b.className = 'ab-btn' + (v===getVal() ? ' active':'');
+      b.textContent = (v>0?'':'') + v;
+      b.type = 'button';
+      b.addEventListener('click', ()=>{
+        setVal(v);
+        container.querySelectorAll('.ab-btn').forEach(el=>el.classList.remove('active'));
+        b.classList.add('active');
+        updateView();
+        draw();
+      });
+      container.appendChild(b);
+    });
+  }
+  buildABRow(aRow, A_VALUES, ()=>A, v=>A=v);
+  buildABRow(bRow, B_VALUES, ()=>B, v=>B=v);
+
+  const cSlider = document.getElementById('cSlider');
+  const cLabel = document.getElementById('cLabel');
+  cSlider.addEventListener('input', ()=>{
+    C = parseInt(cSlider.value, 10);
+    cLabel.textContent = 'C = '+C;
+    x0 = clampToDomain(x0);
+    syncSlider();
+    updateView();
+    draw();
+  });
+
+  function wireToggle(id, getter, setter){
+    const el = document.getElementById(id);
+    el.classList.toggle('on', getter());
+    el.addEventListener('click', ()=>{
+      setter(!getter());
+      el.classList.toggle('on', getter());
+      draw();
+    });
+  }
+  wireToggle('toggleD1', ()=>show1, v=>show1=v);
+  wireToggle('toggleD2', ()=>show2, v=>show2=v);
+  wireToggle('toggleTan', ()=>showTan, v=>showTan=v);
+
+  // ---------- control-mode toggle: which curve the big draggable point sits on ----------
+  const modeRow = document.getElementById('modeRow');
+  const toggleD1El = document.getElementById('toggleD1');
+  const MODE_OPTIONS = [ {id:'f', label:'f(x)'}, {id:'d1', label:'f′(x)'} ];
+  MODE_OPTIONS.forEach(opt=>{
+    const b = document.createElement('button');
+    b.className = 'ab-btn' + (opt.id===controlMode ? ' active':'');
+    b.textContent = opt.label;
+    b.type = 'button';
+    b.addEventListener('click', ()=>{
+      controlMode = opt.id;
+      modeRow.querySelectorAll('.ab-btn').forEach(el=>el.classList.remove('active'));
+      b.classList.add('active');
+      if (controlMode==='d1' && !show1){ show1 = true; toggleD1El.classList.add('on'); }
+      draw();
+    });
+    modeRow.appendChild(b);
+  });
+
+  // ---------- find zeros of f'(x) and jump the point to the nearest one ----------
+  function safeEval(fn, x){ try { return fn(x); } catch(e){ return NaN; } }
+  function domainX(){ const [a,b] = current.domain; return [a-C, b-C]; }
+  function effMinX(){ return current.minX !== undefined ? current.minX - C : undefined; }
+
+  function findRoots(fn){
+    const [a,b] = domainX();
+    const eMinX = effMinX();
+    const lo = eMinX !== undefined ? Math.max(a, eMinX) : a;
+    const N = 700;
+    let roots = [];
+    let prevX = lo, prevY = safeEval(fn, prevX);
+    for (let i=1;i<=N;i++){
+      const x = lo + (b-lo)*i/N;
+      if (current.excludeZero && Math.abs(x+C) < 0.05){ prevX = x; prevY = NaN; continue; }
+      const y = safeEval(fn, x);
+      if (isFinite(prevY) && isFinite(y) && (prevY<0) !== (y<0)){
+        let loX=prevX, hiX=x, loY=prevY;
+        for (let k=0;k<30;k++){
+          const midX=(loX+hiX)/2, midY=safeEval(fn,midX);
+          if ((midY<0)===(loY<0)){ loX=midX; loY=midY; } else { hiX=midX; }
+        }
+        roots.push((loX+hiX)/2);
+      }
+      prevX=x; prevY=y;
+    }
+    return roots;
+  }
+  document.getElementById('snapCritical').addEventListener('click', ()=>{
+    const roots = findRoots(gD1);
+    if (!roots.length) return;
+    roots.sort((p,q)=>Math.abs(p-x0)-Math.abs(q-x0));
+    let target = roots[0];
+    if (Math.abs(target-x0) < 1e-3 && roots.length>1) target = roots[1];
+    x0 = clampToDomain(target);
+    syncSlider();
+    draw();
+  });
+
+  // ---------- slider <-> x0 ----------
+  function syncSlider(){
+    const [a,b] = domainX();
+    const t = (x0 - a) / (b - a);
+    slider.value = Math.round(t*1000);
+  }
+  slider.addEventListener('input', ()=>{
+    const [a,b] = domainX();
+    const t = slider.value/1000;
+    x0 = clampToDomain(a + t*(b-a));
+    draw();
+  });
+  syncSlider();
+
+  const ZOOM_MIN = 0.03, ZOOM_MAX = 15;
+  function clampScale(s){ return Math.max(ZOOM_MIN, Math.min(ZOOM_MAX, s)); }
+
+  let resetHideTimer = null;
+  function showResetIfZoomed(){
+    const zoomed = Math.abs(xScale-1) > 0.02 || Math.abs(yScale-1) > 0.02;
+    zoomResetBtn.classList.toggle('visible', zoomed);
+  }
+  zoomResetBtn.addEventListener('click', resetZoom);
+
+  function clampToDomain(x){
+    let [a,b] = domainX();
+    x = Math.max(a, Math.min(b, x));
+    if (current.excludeZero && Math.abs(x+C) < 0.12) x = (x+C) >= 0 ? (0.12-C) : (-0.12-C);
+    const eMinX = effMinX();
+    if (eMinX !== undefined && x < eMinX) x = eMinX;
+    return x;
+  }
+
+  // ---------- adaptive y-range (recomputed only when fn/A/B/C change) ----------
+  function updateView(){
+    const [a,b] = domainX();
+    const eMinX = effMinX();
+    const minX = eMinX !== undefined ? Math.max(a, eMinX) : a;
+    const N = 320;
+    let vals = [];
+    for (let i=0;i<=N;i++){
+      const x = minX + (b-minX)*i/N;
+      if (current.excludeZero && Math.abs(x+C) < 0.05) continue;
+      let y; try { y = gF(x); } catch(e){ y = NaN; }
+      if (isFinite(y)) vals.push(y);
+    }
+    if (!vals.length){ curYR = [-5,5]; return; }
+    vals.sort((p,q)=>p-q);
+    const lo = vals[Math.floor(vals.length*0.03)];
+    const hi = vals[Math.min(vals.length-1, Math.ceil(vals.length*0.97))];
+    let range = hi - lo;
+    if (range < 0.5) range = 0.5;
+    const pad = range * 0.22;
+    curYR = [lo - pad, hi + pad];
+    xCenter = (a+b)/2;
+    yCenter = (curYR[0]+curYR[1])/2;
+    renderEquations();
+  }
+
+  // ---------- canvas sizing ----------
+  let W=0,H=0,DPR=1;
+  function resize(){
+    const rect = stage.getBoundingClientRect();
+    DPR = Math.min(window.devicePixelRatio||1, 2);
+    W = Math.max(280, rect.width);
+    H = Math.max(260, rect.height);
+    canvas.width = Math.round(W*DPR);
+    canvas.height = Math.round(H*DPR);
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    draw();
+  }
+  new ResizeObserver(resize).observe(stage);
+  window.addEventListener('resize', resize);
+
+  // ---------- mapping ----------
+  const PAD = {l:46, r:18, t:18, b:34};
+  function xHalfBase(){ const [a,b] = current.domain; return (b-a)/2; }
+  function yHalfBase(){ return (curYR[1]-curYR[0])/2; }
+  function view(){
+    const xh = xHalfBase()*xScale;
+    const yh = yHalfBase()*yScale;
+    return { xmin:xCenter-xh, xmax:xCenter+xh, ymin:yCenter-yh, ymax:yCenter+yh };
+  }
+  function xToPx(x, v, pw){ return PAD.l + (x - v.xmin)/(v.xmax - v.xmin) * pw; }
+  function yToPx(y, v, ph){ return PAD.t + (v.ymax - y)/(v.ymax - v.ymin) * ph; }
+  function pxToX(px, v, pw){ return v.xmin + (px - PAD.l)/pw * (v.xmax - v.xmin); }
+
+  function niceStep(range, targetCount){
+    const raw = range/targetCount;
+    const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const norm = raw/mag;
+    let step;
+    if (norm < 1.5) step = 1; else if (norm < 3) step = 2; else if (norm < 7) step = 5; else step = 10;
+    return step*mag;
+  }
+  function piLabel(k){
+    if (k===0) return '0';
+    const sign = k<0 ? '-' : '';
+    const n = Math.abs(k);
+    if (n===2) return sign+'π';
+    if (n===4) return sign+'2π';
+    if (n%2===0) return sign+(n/2)+'π';
+    if (n===1) return sign+'π/2';
+    return sign+n+'π/2';
+  }
+  function fmt(v){
+    if (!isFinite(v)) return v>0 ? '+∞' : '−∞';
+    if (Math.abs(v) < 1e-9) return '0';
+    if (Math.abs(v) >= 1000) return v.toFixed(0);
+    if (Math.abs(v) >= 10) return v.toFixed(1);
+    return v.toFixed(2);
+  }
+  function sampleDomain(v){
+    let a = v.xmin, b = v.xmax;
+    const eMinX = effMinX();
+    if (eMinX !== undefined) a = Math.max(a, eMinX);
+    return [a,b];
+  }
+
+  function drawGrid(v, pw, ph){
+    ctx.strokeStyle = css('--grid');
+    ctx.lineWidth = 1;
+    ctx.fillStyle = css('--muted');
+    ctx.font = '11px IBM Plex Mono, monospace';
+
+    let xticks = [];
+    if (current.tickMode === 'pi'){
+      for (let k=-4;k<=4;k++){
+        const xv = k*(Math.PI/2);
+        if (xv>=v.xmin-0.001 && xv<=v.xmax+0.001) xticks.push({v:xv, label:piLabel(k)});
+      }
+    } else {
+      const step = niceStep(v.xmax-v.xmin, 6);
+      const start = Math.ceil(v.xmin/step)*step;
+      for (let xv=start; xv<=v.xmax+1e-9; xv+=step) xticks.push({v:xv, label:fmt(xv)});
+    }
+    xticks.forEach(t=>{
+      const px = xToPx(t.v, v, pw);
+      ctx.beginPath(); ctx.moveTo(px, PAD.t); ctx.lineTo(px, PAD.t+ph); ctx.stroke();
+      ctx.textAlign = 'center';
+      ctx.fillText(t.label, px, PAD.t+ph+16);
+    });
+
+    const ystep = niceStep(v.ymax-v.ymin, 6);
+    const ystart = Math.ceil(v.ymin/ystep)*ystep;
+    for (let yv=ystart; yv<=v.ymax+1e-9; yv+=ystep){
+      const py = yToPx(yv, v, ph);
+      ctx.beginPath(); ctx.moveTo(PAD.l, py); ctx.lineTo(PAD.l+pw, py); ctx.stroke();
+      ctx.textAlign = 'right';
+      ctx.fillText(fmt(yv), PAD.l-8, py+4);
+    }
+
+    ctx.strokeStyle = css('--grid-strong');
+    ctx.lineWidth = 1.4;
+    if (v.xmin<=0 && v.xmax>=0){
+      const px0 = xToPx(0,v,pw);
+      ctx.beginPath(); ctx.moveTo(px0, PAD.t); ctx.lineTo(px0, PAD.t+ph); ctx.stroke();
+    }
+    if (v.ymin<=0 && v.ymax>=0){
+      const py0 = yToPx(0,v,ph);
+      ctx.beginPath(); ctx.moveTo(PAD.l, py0); ctx.lineTo(PAD.l+pw, py0); ctx.stroke();
+    }
+  }
+
+  function drawCurve(fn, v, pw, ph, color, dash){
+    const [a,b] = sampleDomain(v);
+    const N = 480;
+    ctx.strokeStyle = color;
+    ctx.lineWidth = dash ? 2 : 2.2;
+    ctx.setLineDash(dash || []);
+    ctx.beginPath();
+    let started = false;
+    const yPad = (v.ymax-v.ymin)*0.35;
+    for (let i=0;i<=N;i++){
+      const x = a + (b-a)*i/N;
+      if (current.excludeZero && Math.abs(x+C) < 0.02){ started=false; continue; }
+      let y; try { y = fn(x); } catch(e){ y = NaN; }
+      if (!isFinite(y) || y > v.ymax+yPad || y < v.ymin-yPad){ started = false; continue; }
+      const px = xToPx(x, v, pw), py = yToPx(y, v, ph);
+      if (!started){ ctx.moveTo(px,py); started = true; } else ctx.lineTo(px,py);
+    }
+    ctx.stroke();
+    ctx.setLineDash([]);
+  }
+
+  // tangent line + rise/run slope triangle + connector to f'(x)
+  function drawTangentAndConnector(v, pw, ph){
+    const fx0 = gF(x0);
+    const slope = gD1(x0);
+    if (!isFinite(fx0) || !isFinite(slope)) return;
+
+    const span = (v.xmax - v.xmin) * 0.16;
+    const xa = x0 - span, xb = x0 + span;
+    const ya = fx0 + slope*(xa-x0), yb = fx0 + slope*(xb-x0);
+    ctx.strokeStyle = css('--tangent');
+    ctx.lineWidth = 2.4;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(xToPx(xa,v,pw), yToPx(ya,v,ph));
+    ctx.lineTo(xToPx(xb,v,pw), yToPx(yb,v,ph));
+    ctx.stroke();
+
+    // rise/run slope triangle anchored at the point, running to the right
+    const runPx = Math.min(60, pw*0.16);
+    const p0x = xToPx(x0,v,pw), p0y = yToPx(fx0,v,ph);
+    const p1x = p0x + runPx;
+    const dataRun = runPx / (pw/(v.xmax-v.xmin));
+    const riseVal = slope*dataRun;
+    const p1y = yToPx(fx0+riseVal, v, ph);
+
+    ctx.strokeStyle = css('--tangent');
+    ctx.lineWidth = 1.3;
+    ctx.setLineDash([3,3]);
+    ctx.beginPath();
+    ctx.moveTo(p0x,p0y); ctx.lineTo(p1x,p0y); // run
+    ctx.moveTo(p1x,p0y); ctx.lineTo(p1x,p1y); // rise
+    ctx.stroke();
+    ctx.setLineDash([]);
+
+    // dashed vertical guide linking the point on f to its value on f'(x)
+    if (show1){
+      const d1val = gD1(x0);
+      if (isFinite(d1val) && d1val >= v.ymin && d1val <= v.ymax){
+        const py1 = yToPx(d1val, v, ph);
+        ctx.strokeStyle = css('--ink-soft');
+        ctx.lineWidth = 1.1;
+        ctx.setLineDash([2,3]);
+        ctx.beginPath();
+        ctx.moveTo(p0x, p0y);
+        ctx.lineTo(p0x, py1);
+        ctx.stroke();
+        ctx.setLineDash([]);
+      }
+    }
+  }
+
+  function drawMarkers(v, pw, ph){
+    const items = [{key:'f', fn:gF, color:css('--curve'), label:'f'}];
+    if (show1) items.push({key:'d1', fn:gD1, color:css('--d1'), label:"f′"});
+    if (show2) items.push({key:'d2', fn:gD2, color:css('--d2'), label:'f″'});
+    items.forEach(it=>{
+      let y; try { y = it.fn(x0); } catch(e){ y = NaN; }
+      if (!isFinite(y) || y < v.ymin || y > v.ymax) return;
+      const px = xToPx(x0,v,pw), py = yToPx(y,v,ph);
+      const isPrimary = it.key === controlMode;
+      if (isPrimary){
+        ctx.strokeStyle = it.color;
+        ctx.lineWidth = 1.4;
+        ctx.globalAlpha = 0.35;
+        ctx.beginPath(); ctx.arc(px,py,10,0,Math.PI*2); ctx.stroke();
+        ctx.globalAlpha = 1;
+      }
+      ctx.fillStyle = it.color;
+      ctx.beginPath(); ctx.arc(px,py, isPrimary?7:5, 0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle = css('--surface'); ctx.lineWidth = isPrimary?2:1.6; ctx.stroke();
+      ctx.font = (isPrimary?'700 13px':'700 12px')+' IBM Plex Mono, monospace';
+      ctx.fillStyle = it.color;
+      const rightSide = px > PAD.l + pw*0.72;
+      ctx.textAlign = rightSide ? 'right' : 'left';
+      ctx.fillText(it.label, px + (rightSide? -11:11), py - (isPrimary?10:8));
+    });
+  }
+
+  function interpretation(d1v, d2v){
+    let parts = [];
+    if (!isFinite(d1v)) parts.push('the slope is undefined here');
+    else if (Math.abs(d1v) < 0.02) parts.push('the curve is momentarily flat — a critical point');
+    else parts.push(d1v>0 ? 'the curve is rising' : 'the curve is falling');
+    if (isFinite(d2v)){
+      if (Math.abs(d2v) < 0.02) parts.push('curvature is near zero, close to an inflection');
+      else parts.push(d2v>0 ? 'and curving upward (concave up)' : 'and curving downward (concave down)');
+    }
+    return parts.join(', ') + '.';
+  }
+
+  function updateReadout(){
+    const fx0 = gF(x0), d1v = gD1(x0), d2v = gD2(x0);
+    readout.innerHTML =
+      '<div class="row"><span>x</span><span>'+fmt(x0)+'</span></div>' +
+      '<div class="row"><span>f(x)</span><span>'+fmt(fx0)+'</span></div>' +
+      '<div class="row"><span>f′(x)</span><span style="color:'+css('--d1')+'">'+fmt(d1v)+'</span></div>' +
+      '<div class="row"><span>f″(x)</span><span style="color:'+css('--d2')+'">'+fmt(d2v)+'</span></div>' +
+      '<div class="interp">'+interpretation(d1v,d2v)+'</div>';
+  }
+
+  function draw(){
+    if (!W || !H) return;
+    ctx.clearRect(0,0,W,H);
+    const v = view();
+    const pw = W - PAD.l - PAD.r;
+    const ph = H - PAD.t - PAD.b;
+    drawGrid(v, pw, ph);
+    if (show2) drawCurve(gD2, v, pw, ph, css('--d2'), [2,3]);
+    if (show1) drawCurve(gD1, v, pw, ph, css('--d1'), [7,5]);
+    drawCurve(gF, v, pw, ph, css('--curve'), []);
+    if (showTan) drawTangentAndConnector(v, pw, ph);
+    drawMarkers(v, pw, ph);
+    updateReadout();
+  }
+
+  // ---------- pointer interaction: drag to move the point, pinch (two fingers) to zoom ----------
+  function setX0FromEvent(evt){
+    const rect = canvas.getBoundingClientRect();
+    const px = evt.clientX - rect.left;
+    const v = view();
+    const pw = W - PAD.l - PAD.r;
+    x0 = clampToDomain(pxToX(px, v, pw));
+    syncSlider();
+    draw();
+  }
+
+  const activePointers = new Map(); // pointerId -> {x,y} in client coords
+  let pinchStartDist = null;
+  let pinchStartXScale = 1, pinchStartYScale = 1;
+  let pinchAnchorX = 0, pinchAnchorY = 0; // data coords under the fingers, fixed for the gesture
+
+  function pointerDist(){
+    const pts = [...activePointers.values()];
+    return Math.hypot(pts[0].x-pts[1].x, pts[0].y-pts[1].y);
+  }
+  function pointerMidpoint(){
+    const pts = [...activePointers.values()];
+    return { x:(pts[0].x+pts[1].x)/2, y:(pts[0].y+pts[1].y)/2 };
+  }
+  function pxToData(px, py){
+    const pw = W - PAD.l - PAD.r, ph = H - PAD.t - PAD.b;
+    const v = view();
+    const t = (px - PAD.l) / pw, s = (py - PAD.t) / ph;
+    return {
+      x: v.xmin + t*(v.xmax - v.xmin),
+      y: v.ymax - s*(v.ymax - v.ymin)
+    };
+  }
+
+  // Single-point zoom (wheel): keeps the data point under the cursor fixed on screen.
+  function applyAnchoredZoom(px, py, newXScale, newYScale){
+    const pw = W - PAD.l - PAD.r, ph = H - PAD.t - PAD.b;
+    const t = (px - PAD.l) / pw, s = (py - PAD.t) / ph;
+    const data = pxToData(px, py);
+    xScale = newXScale; yScale = newYScale;
+    const xhNew = xHalfBase()*xScale, yhNew = yHalfBase()*yScale;
+    xCenter = data.x - xhNew*(2*t-1);
+    yCenter = data.y - yhNew*(1-2*s);
+  }
+
+  // Two-finger pinch: re-solves the center every frame so the SAME data point captured
+  // at gesture start (pinchAnchorX/Y) stays under the moving/spreading midpoint — this is
+  // what makes both zoom and drag-to-pan work from one gesture.
+  function applyPinchTransform(px, py, newXScale, newYScale){
+    const pw = W - PAD.l - PAD.r, ph = H - PAD.t - PAD.b;
+    const t = (px - PAD.l) / pw, s = (py - PAD.t) / ph;
+    xScale = newXScale; yScale = newYScale;
+    const xh = xHalfBase()*xScale, yh = yHalfBase()*yScale;
+    xCenter = pinchAnchorX - xh*(2*t-1);
+    yCenter = pinchAnchorY - yh*(1-2*s);
+  }
+
+  function resetZoom(){
+    xScale = 1; yScale = 1;
+    const [a,b] = domainX();
+    xCenter = (a+b)/2;
+    yCenter = (curYR[0]+curYR[1])/2;
+    showResetIfZoomed();
+    draw();
+  }
+
+  canvas.addEventListener('pointerdown', e=>{
+    canvas.setPointerCapture(e.pointerId);
+    activePointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
+    if (activePointers.size === 1){
+      dragging = true;
+      setX0FromEvent(e);
+    } else if (activePointers.size === 2){
+      dragging = false;
+      canvas.classList.add('pinching');
+      pinchStartDist = pointerDist();
+      pinchStartXScale = xScale;
+      pinchStartYScale = yScale;
+      const rect = canvas.getBoundingClientRect();
+      const mid = pointerMidpoint();
+      const anchor = pxToData(mid.x-rect.left, mid.y-rect.top);
+      pinchAnchorX = anchor.x; pinchAnchorY = anchor.y;
+    }
+  });
+
+  canvas.addEventListener('pointermove', e=>{
+    if (!activePointers.has(e.pointerId)) return;
+    activePointers.set(e.pointerId, {x:e.clientX, y:e.clientY});
+    if (activePointers.size >= 2 && pinchStartDist){
+      const rect = canvas.getBoundingClientRect();
+      const dist = pointerDist();
+      const ratio = dist / pinchStartDist;
+      const newXScale = clampScale(pinchStartXScale / ratio);
+      const newYScale = clampScale(pinchStartYScale / ratio);
+      const mid = pointerMidpoint();
+      applyPinchTransform(mid.x - rect.left, mid.y - rect.top, newXScale, newYScale);
+      showResetIfZoomed();
+      draw();
+    } else if (dragging){
+      setX0FromEvent(e);
+    }
+  });
+
+  function releasePointer(e){
+    activePointers.delete(e.pointerId);
+    if (activePointers.size < 2){
+      pinchStartDist = null;
+      canvas.classList.remove('pinching');
+    }
+    dragging = activePointers.size === 1;
+  }
+  canvas.addEventListener('pointerup', releasePointer);
+  canvas.addEventListener('pointercancel', releasePointer);
+  canvas.addEventListener('pointerleave', e=>{ if (activePointers.has(e.pointerId)) releasePointer(e); });
+
+  // trackpad pinch / mouse wheel zoom (desktop) — anchored at the cursor
+  canvas.addEventListener('wheel', e=>{
+    e.preventDefault();
+    const rect = canvas.getBoundingClientRect();
+    const factor = Math.exp(e.deltaY * 0.0015);
+    const newXScale = clampScale(xScale*factor);
+    const newYScale = clampScale(yScale*factor);
+    applyAnchoredZoom(e.clientX-rect.left, e.clientY-rect.top, newXScale, newYScale);
+    showResetIfZoomed();
+    draw();
+  }, { passive:false });
+
+  // double-click / double-tap resets zoom
+  canvas.addEventListener('dblclick', resetZoom);
+
+  updateView();
+  resize();
+})();
+</script>
+
+</body>
+</html>
