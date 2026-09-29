@@ -121,3 +121,103 @@ Pohja:
 - Tiedosto:
 - Valmistui:
 - Huomiot:
+
+## 11 Negatiiviset luvut lukusuoralla
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: negatiiviset luvut ovat lukusuoran pisteitä; yhteen- ja vähennyslasku siirtyminä, luvun vastaluku ja itseisarvo etäisyytenä nollasta
+- Yleinen virhekäsitys: −5 on suurempi kuin −2; negatiivisen luvun vähentäminen pienentää aina
+- Interaktio: luvun ja siirron vetäminen lukusuoralla, nuolet siirroille, vertailu (<, >) ja itseisarvo näkyvät
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S2.01. Sopii myös pikavisan pohjaksi (järjestä luvut, laske siirroilla).
+
+## 12 Murtoluvulla jakaminen alueina
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: jakolasku a : (1/n) kertoo, montako 1/n-osaa mahtuu lukuun a; siitä syntyy sääntö "kerro käänteisluvulla"
+- Yleinen virhekäsitys: jakaminen tekee aina pienemmäksi; murtoluvulla jaettaessa jaetaan osoittajat ja nimittäjät ristiin ilman merkitystä
+- Interaktio: jaettavan ja jakajan valinta, suorakaide- tai janamalli jaetaan osiin, laskuri näyttää montako jakajan kokoista osaa mahtuu
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S2.03.
+
+## 13 Yhtälö vaakana
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: yhtälön ratkaiseminen tasapainon säilyttämisenä: sama toimitus molemmille puolille
+- Yleinen virhekäsitys: termi "siirretään toiselle puolelle" ja merkki vaihtuu ilman ymmärrystä; toimitus tehdään vain toiselle puolelle
+- Interaktio: vaa'an kupeissa x-laatikoita ja punnuksia, oppija lisää/poistaa/jakaa molemmilta puolilta, vaaka kallistuu jos tasapaino rikkoutuu, yhtälö päivittyy symbolisena
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S3.05. Negatiiviset kertoimet voi toteuttaa ilmapalloina (vaihtoehtoinen tila).
+
+## 14 Yhtälöpari suorien leikkauspisteenä
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: yhtälöparin ratkaisu on piste, joka toteuttaa molemmat yhtälöt eli suorien leikkauspiste
+- Yleinen virhekäsitys: yhtälöparilla on aina täsmälleen yksi ratkaisu; ratkaisu on pelkkä x
+- Interaktio: kahden suoran k ja b liukusäätimillä, leikkauspiste ja sen koordinaatit, erikoistapaukset yhdensuuntaiset (ei ratkaisua) ja yhtyvät (äärettömästi ratkaisuja)
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S3.09. Jatkoa aiheelle 05 (suoran yhtälö).
+
+## 15 Yhdenmuotoisuus ja mittakaava (k, k², k³)
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: mittakaavassa k pituudet kertautuvat k:lla, pinta-alat k²:lla ja tilavuudet k³:lla
+- Yleinen virhekäsitys: kaksinkertainen pituus tarkoittaa kaksinkertaista pinta-alaa ja tilavuutta
+- Interaktio: mittakaavan k liukusäädin, kuvio ja kappale (esim. kuutio) skaalautuvat, pituus-, ala- ja tilavuussuhteet näkyvät rinnakkain, yksikköneliöt/-kuutiot laskettavissa
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S5.05.
+
+## 16 Trigonometria suorakulmaisessa kolmiossa
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: sin, cos ja tan ovat sivujen suhteita, jotka riippuvat vain kulmasta, eivät kolmion koosta
+- Yleinen virhekäsitys: vastainen ja viereinen kateetti sekoittuvat; suhde muuttuu kun kolmio suurenee
+- Interaktio: kulman ja kolmion koon säätö, sivut korostetaan valitun kulman mukaan, suhteet lasketaan elävästi
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S5.10. Linkittyy lukion aiheeseen 03 (yksikköympyrä).
+
+## 17 Kehä- ja keskuskulma sekä Thales
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: samaa kaarta vastaava kehäkulma on puolet keskuskulmasta; halkaisijaa vastaava kehäkulma on suora (Thaleen lause)
+- Yleinen virhekäsitys: kehäkulma muuttuu kun kärkeä siirretään kehällä; kehä- ja keskuskulma ovat yhtä suuret
+- Interaktio: kaaren päätepisteiden ja kehäkulman kärjen vetäminen ympyrällä, kulmat näkyvät asteina, pikavalinta "halkaisija"
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S5.11.
+
+## 18 Lieriön ja kartion tilavuus
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: V = A_p·h lieriölle ja V = A_p·h/3 kartiolle; samapohjainen ja -korkuinen kartio on kolmasosa lieriöstä
+- Yleinen virhekäsitys: kartion tilavuus on puolet lieriöstä; tilavuus kasvaa lineaarisesti säteen mukana
+- Interaktio: säteen ja korkeuden liukusäätimet, "kaada" kartiollinen vettä lieriöön animaationa, tilavuudet ja suhde näkyvät
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoite S5.13. Säteen vaikutus (r²) kytkee aiheeseen 15.
+
+## 19 Keskiarvo vs. mediaani
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: keskiarvo on tasapainopiste ja herkkä poikkeaville arvoille, mediaani on keskimmäinen arvo ja vakaa
+- Yleinen virhekäsitys: keskiarvo ja mediaani ovat aina lähes samat; keskiarvo on aina "tyypillinen" arvo
+- Interaktio: pisteiden vetäminen lukusuoralla (pistekaavio), yhden arvon vetäminen kauas, keskiarvo, mediaani ja tyyppiarvo päivittyvät
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoitteet S6.02–S6.03.
+
+## 20 Klassinen vs. tilastollinen todennäköisyys (simulaatio)
+- Tila: odottaa
+- Taso: yläkoulu 7-9
+- Tavoite: suhteellinen frekvenssi lähestyy klassista todennäköisyyttä toistojen määrän kasvaessa
+- Yleinen virhekäsitys: pienikin otos antaa tarkan todennäköisyyden; "nyt on kruunan vuoro" (pelurin harha)
+- Interaktio: kolikon/nopan/kahden nopan summan valinta, heittojen simulointi (1, 10, 100, 1000), frekvenssipylväät ja suhteellisen frekvenssin kuvaaja vs. klassinen arvo
+- Tiedosto:
+- Valmistui:
+- Huomiot: OPS-tavoitteet S6.06–S6.07.
