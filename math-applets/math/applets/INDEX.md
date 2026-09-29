@@ -1,6 +1,0 @@
-- [Derivaatta tangentin kulmakertoimena](derivaatta-tangentti/index.html) - lukio pitkä - 2026-09-29
-- [Integraali pinta-alana (Riemannin summa)](integraali-riemann/index.html) - lukio pitkä - 2026-09-29
-- [Yksikköympyrä ja trigonometriset funktiot](yksikkoympyra-trigonometria/index.html) - lukio pitkä - 2026-09-29
-- [Paraabeli ja toisen asteen yhtälön juuret](paraabeli-juuret/index.html) - lukio pitkä - 2026-09-29
-- [Suoran yhtälö ja kulmakerroin](suoran-yhtalo/suoran-yhtalo.html) - yläkoulu 7-9 - 2026-09-29
-- [Pythagoraan lause](pythagoras-neliot/pythagoras-neliot.html) - yläkoulu 7-9 - 2026-09-29

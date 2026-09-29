@@ -1,0 +1,8 @@
+- [Derivaatta tangentin kulmakertoimena](lukio-pitka/derivaatta-sekantti-tangentti.html) - lukio pitkä - 2026-09-29
+- [Integraali pinta-alana (Riemannin summa)](lukio-pitka/integraali-riemannin-summa.html) - lukio pitkä - 2026-09-29
+- [Yksikköympyrä ja trigonometriset funktiot](lukio-pitka/yksikkoympyra-sini-kosini.html) - lukio pitkä - 2026-09-29
+- [Paraabeli ja toisen asteen yhtälön juuret](lukio-pitka/paraabeli-toisen-asteen-juuret.html) - lukio pitkä - 2026-09-29
+- [Suoran yhtälö ja kulmakerroin](yla-aste-7-9/suoran-yhtalo.html) - yläkoulu 7-9 - 2026-09-29
+- [Pythagoraan lause](yla-aste-7-9/pythagoras-neliot.html) - yläkoulu 7-9 - 2026-09-29
+- [Eksponenttifunktio ja logaritmi käänteisfunktioina](lukio-pitka/eksponentti-logaritmi.html) - lukio pitkä - 2026-09-29
+- [Prosenttilaskenta ja kerroin](yla-aste-7-9/prosentti-kerroin.html) - yläkoulu 7-9 - 2026-09-29
