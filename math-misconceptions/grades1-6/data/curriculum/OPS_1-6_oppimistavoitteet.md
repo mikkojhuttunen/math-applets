@@ -284,7 +284,7 @@ Vuosiluokilla 1–2 tasoja ei ole. Käytä kahta merkintää: `V` (vahvistava, t
 | ID | Virhekäsitys |
 |---|---|
 | A12.S2.06, A36.S2.01 | Kaksinumeroinen luku luetaan kahtena erillisenä yksinumeroisena lukuna, ei kymmeninä ja ykkösinä |
-| A36.S2.04 | Pienempi numero vähennetään aina suuremmasta, riippumatta paikasta†: 302 − 148 = 246 (oikein 154) |
+| A36.S2.04 | Pienempi numero vähennetään aina suuremmasta, riippumatta paikasta: 453 − 127 = 334 (oikein 326) |
 | A12.S2.08, A36.S3.03 | "=" tarkoittaa "laske vastaus" ja on aina lopussa: 8 + 4 = □ + 5 vastataan 12 tai 17 (oikein 7) |
 | A12.S2.12, A36.S2.05 | Kertolasku on vain yhtä suurten ryhmien yhteenlasku |
 | A36.S2.07, S2.12, S2.14 | Kertolasku aina suurentaa ja jakolasku pienentää; jaettavan täytyy olla jakajaa suurempi: 6 : 0,5 = 3 (oikein 12) |
