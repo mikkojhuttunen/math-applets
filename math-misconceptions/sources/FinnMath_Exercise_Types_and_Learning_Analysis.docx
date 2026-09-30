@@ -1,0 +1,266 @@
+FinnMath App: Exercise Types and Learning from Student Responses
+
+20 September 2026
+
+## Purpose and design principles
+
+This document catalogues exercise types for the FinnMath app beyond multiple choice, groups them by how the answer is checked, and proposes how student responses can be mined to improve the app over time. Grouping by checking method matters because it decides how cheaply a new exercise can be generated on request.
+
+Four principles guide the selection:
+
+- **Code checks the answer wherever possible.** Answers computed by a symbolic checker are always correct and cost nothing per attempt; LLM calls are reserved for what code cannot judge.
+
+- **Every type has a compact template.** A new item can be produced from parameters, so a student asking for more exercises gets fresh ones instantly.
+
+- **Every wrong answer should carry information.** Item design should make a specific error identifiable, not just "incorrect". This is what makes the analysis in "Learning from student responses" possible.
+
+- **Prefer types that demand production or diagnosis over recognition.** Entering, ordering, spotting and constructing exercise different thinking than picking from four options.
+
+Content for the templates should come from the openly licensed Finnish sources already identified (Vapaa Matikka, Avoin matematiikka, AOE), so that solved examples can be reused without a licensing question.
+
+## Exercise type catalogue
+
+Fourteen non-multiple-choice types fall into three tiers by checking method. Tier 1 and 2 need no LLM at runtime.
+
+### Tier 1: deterministic check, template plus random numbers
+
+| **Type** | **What the student does** | **How it is checked** | **How new items are made** |
+| --- | --- | --- | --- |
+| Numeric or expression entry | Types an answer | Symbolic checker (mathjs or sympy) accepts any equivalent form | Template with random parameters; answer computed by code |
+| Fill in the missing step | Completes one blanked line in a worked solution | Equivalence to the removed line | Blank a different step of a stored solution |
+| Step ordering | Arranges shuffled solution lines in order | Compare with stored sequence (or accept any valid dependency order) | Shuffle any solved example |
+| Error spotting | Taps the faulty line in a worked solution | Compare with the injected error location | Inject an error of a known type into a correct solution |
+| Reverse problem | Writes an equation or expression with a given property, e.g. solution x = 3 | Substitution; many answers valid | Vary the target property and values |
+| Multi-select equivalence | Marks every expression equal to a given one | Symbolic comparison | Generate equivalent and near-miss forms by transformation rules |
+| Sorting or classifying | Drags items into categories (linear or quadratic, rational or irrational) | Category label per item | Sample items from labelled pools |
+| Matching | Pairs equations with graphs, or word problems with equations | Stored pairs | Generate a function and render its graph |
+
+### Tier 2: interactive or visual, still auto-checkable
+
+| **Type** | **What the student does** | **How it is checked** |
+| --- | --- | --- |
+| Graph interaction | Taps the zero, drags a line through points, moves a slider until a parabola fits a target | Geometric tolerance against the computed answer |
+| Number line and inequalities | Drags endpoints and toggles open or closed | Compare with the solution set |
+| Estimation | Gives a quick "about how much?" answer | Tolerance band around the true value |
+
+### Tier 3: needs LLM feedback
+
+These cost API tokens per attempt and are best used sparingly.
+
+- **Explain in your own words:** a short justification of why a step is valid or a claim is false.
+
+- **Photo of handwritten work:** the existing "right track / not quite" check, with no full solution revealed.
+
+- **True or false with justification:** the student judges a claim and defends the judgement.
+
+### Example: error spotting
+
+The injected-error mechanism is worth spelling out because it doubles as a diagnostic. Known error types include sign slip, forgotten inequality flip when multiplying by a negative, incorrect distribution, and dropped parentheses. Because the injected error type is stored with the item, a wrong tap already tells the system which kind of mistake the student failed to notice.
+
+## Auto-generating new exercises
+
+Three generation methods cover the catalogue, in order of preference.
+
+- **Parametrized templates.** One template with random parameters gives unlimited variants, and code computes the answer, so it is always correct. This is the workhorse for all Tier 1 and 2 types and costs no API tokens.
+
+- **LLM-generated variants.** When a student asks for "more like this", an LLM can write a new problem. Code or a second solver pass must verify the answer before the problem is shown, otherwise wrong answer keys reach students.
+
+- **Misconception-based distractors.** Wrong options (in remaining multiple-choice items, or as near-miss forms in multi-select) are built from known errors rather than random numbers, for example the result of forgetting to flip an inequality. Each distractor is tagged with the misconception it represents.
+
+A minimal item record should hold: the type, the template and its parameters, the computed answer, the solution steps, the concept and curriculum tags, and the misconception tag of every distractor or injected error. Tagging at creation time is what allows the analysis in "Learning from student responses" to run without extra work.
+
+## Recommended first version
+
+Start with three types: numeric or expression entry, error spotting, and step ordering. They differ most from multiple choice, are cheapest to generate, and share the same solved-example data, so one authoring effort feeds all three.
+
+| **Phase** | **Add** | **Reason** |
+| --- | --- | --- |
+| 1 | Numeric or expression entry, error spotting, step ordering | Cheapest, code-checked, reuse solved examples |
+| 2 | Fill in the missing step, multi-select equivalence, reverse problems | Same infrastructure, deeper diagnostic value |
+| 3 | Graph interaction, number line, matching, sorting | Needs interactive front-end components |
+| 4 | Explain in your own words, photo check | LLM cost per attempt; add once usage data shows where it is needed |
+
+Multiple choice stays available for quick checks, but with misconception-tagged distractors.
+
+## Learning from student responses
+
+The app can learn from usage at three levels: descriptive statistics (what is hard), diagnostic classification (why students err), and adaptive feedback loops (what the app does about it). Each level depends on logging the right data from the first day, because responses that were not recorded cannot be analysed later.
+
+### What to log
+
+| **Data** | **Example** | **Enables** |
+| --- | --- | --- |
+| Item metadata | Type, template, parameters, concept tags, curriculum tags | Grouping by concept and by parameter features |
+| Raw response | Typed expression, selected option, tapped line, ordering sequence, graph coordinates | Wrong-answer classification and clustering |
+| Correctness and error tag | Matched misconception label, or "unexplained" | Misconception frequencies |
+| Timing | Time to first input, total time | Hesitation and fluency signals |
+| Help-seeking | Hint requests, "show solution", skips, abandonment | Difficulty and frustration signals |
+| Sequence context | Attempt number, preceding items, session | Learning curves, retention, prerequisite analysis |
+| Free text and photos | Explanations, handwritten work, with LLM-assigned labels | Reasoning patterns beyond final answers |
+| Tutor chat questions | Topics students ask about | Demand signals independent of exercises |
+| Optional confidence rating | "How sure are you?" before submitting | Separating guesses from confident misconceptions |
+
+### Extracting misconceptions from responses
+
+Seven methods, ordered from cheapest and most reliable to most open-ended.
+
+- **Tag frequencies.** When distractors and injected errors carry misconception tags, counting which tag students choose is a direct measurement. No inference is needed.
+
+- **Buggy-rule matching for typed answers.** Keep a library of "buggy rules" such as dropping a sign, adding instead of multiplying, or not flipping an inequality. For each wrong entry, apply every buggy rule to the problem; if a rule reproduces the student's answer, tag the response with that rule. This is deterministic and works well with parametrized templates.
+
+- **Clustering the unexplained.** Wrong answers that no rule explains are grouped by normalized value within a template family. A cluster that recurs across many students is a candidate new misconception, and the instructor names it and, if possible, writes a new buggy rule.
+
+- **LLM-assisted diagnosis in batches.** Send an LLM the problem, the correct solution and a sample of wrong answers from one cluster, and ask for the likely reasoning error. Running this on clusters rather than individual responses keeps cost low, and a cheap model is likely sufficient. Outputs are proposals for human review, not facts.
+
+- **Error-position patterns.** In error-spotting and step-ordering items, record which line was wrongly tapped or which lines were swapped. Consistent confusion between two step types points to a specific conceptual gap.
+
+- **Explanation and photo analysis.** For Tier 3 responses, an LLM assigns reasoning labels (for example "procedural only", "correct idea, wrong notation"). Embedding-based clustering of the explanations can surface patterns nobody anticipated.
+
+- **Tutor chat mining.** The questions students type to the bot show which topics cause confusion outside structured exercises. Map each question to a concept tag and count.
+
+### Identifying difficult concepts
+
+- **Basic item statistics per concept.** Percent correct, median time, hint rate and abandonment rate, aggregated by concept tag. A concept that scores low on several signals at once is genuinely hard, not just badly worded.
+
+- **Item difficulty and student ability.** A simple item response model (Rasch) estimates a difficulty for each item and an ability for each student, so results are comparable across students who saw different items. Parametrized templates help because each template collects many responses. Expect to need on the order of hundreds of responses per item family before estimates stabilise.
+
+- **Parameter-feature analysis.** Because template parameters are known, correctness can be regressed on features such as negative coefficients, fractions or multi-step structure. This isolates which sub-skill drives the errors, for example that students solve linear equations fine unless the coefficient is a fraction.
+
+- **Prerequisite analysis.** With a concept graph (which topic depends on which), failures at concept B that correlate with failures at prerequisite A suggest A is the root cause. Knowledge-tracing models can track mastery per concept over time.
+
+- **Retention.** Revisiting a concept days later shows what was learned versus merely completed. Concepts with a sharp drop are candidates for spaced repetition.
+
+- **Item quality checks.** An item that even strong students fail often has an ambiguous statement or a wrong answer key. A low discrimination index flags these for review, so the analysis also cleans the content.
+
+### Closing the loop: how the app learns
+
+Analysis only matters if it changes what students see. The loop below keeps the instructor between the statistics and any change to the app.
+
+Each output of the loop is a concrete change:
+
+| **Action** | **What changes** | **Cost** |
+| --- | --- | --- |
+| Targeted exercise generation | When a misconception is frequent, generate items that inject that error or use it as a distractor | Template work only |
+| Adaptive item selection | Choose each student's next item to target their most frequent tags; schedule spaced revisits | Code only |
+| Misconception-specific feedback | Pre-written hint per tag, shown after a matching wrong answer | One-time writing per tag |
+| Tutor bot context | Add a short "common misconceptions in this topic" note to the cached course corpus so the bot anticipates them | Small token increase; update in weekly batches to limit cache rewrites |
+| Video and material linking | Map each misconception to a video or textbook section, using the existing lookup-table pattern | Lookup entries only |
+| Instructor dashboard | Top misconceptions, hardest concepts, suspect items, and unexplained clusters awaiting a name | Front-end work |
+| Content pipeline | Retire or rewrite flawed items; find gaps in the open-textbook material | Instructor time |
+
+### Guard rails for learning from usage
+
+- **Keep a human in the loop.** New misconception labels, buggy rules and changes to the tutor's notes are approved by the instructor. An LLM misdiagnosis that feeds back automatically would reinforce itself.
+
+- **Set minimum counts before acting.** Guesses and slips create noise; a pattern seen in a handful of responses should not change the app.
+
+- **Measure whether the changes help.** For each new feedback message or targeted exercise, compare next-attempt success and delayed retest results against a holdout group. This also produces the learning-outcome evidence the technical report noted is currently missing for funding applications.
+
+- **Watch for cohort effects.** One class's teacher emphasis or one school's schedule can look like a general misconception. Compare across groups before generalizing.
+
+- **Plan for the cold start.** With few users, statistics are unreliable. Seed the misconception library from the instructor's experience and published research on common algebra errors, then let data refine it.
+
+### Suggested implementation stages
+
+| **Stage** | **Capability** | **Depends on** |
+| --- | --- | --- |
+| 1 | Full response logging, tagged distractors and injected errors, simple counts per tag and concept | Item records with tags (section on auto-generation) |
+| 2 | Buggy-rule classifier for typed answers, parameter-feature analysis, first instructor dashboard | Stage 1 data from a real class |
+| 3 | Batch LLM labelling of unexplained clusters, with instructor review | Enough wrong answers per template family |
+| 4 | Rasch difficulty estimates, knowledge tracing, adaptive item selection | Hundreds of responses per item family |
+| 5 | Automated feedback experiments with holdout comparison | Stable stages 1 to 4 and an evaluation design |
+
+## Privacy, ethics and open questions
+
+Logging student responses turns the app into a data-processing system, and many users of a lukio or yläkoulu math tool will be minors. This is general information, not legal advice; the university's data protection officer should review the design before any student data is collected.
+
+- **Data minimisation.** Analysis rarely needs names. Use pseudonymous student IDs and keep identity data separate from response logs.
+
+- **Purpose and consent.** Decide early whether logs serve only product improvement or also research, since research use typically needs its own consent and possibly ethics review. Age thresholds for a minor's own consent under GDPR differ by country and should be checked for Finland.
+
+- **LLM calls.** Do not send identifying details to the API. Handwritten-work photos may show names, so consider cropping or discarding images after analysis.
+
+- **Retention.** Keep raw responses for a fixed period and retain only aggregated statistics afterwards.
+
+- **Use of the analysis.** Misconception and difficulty statistics should improve exercises and feedback, not label or rank individual students.
+
+### Open questions
+
+- Which concept taxonomy should tags follow: the national core curriculum structure, the chapter structure of the open textbooks, or a custom concept graph?
+
+- Who reviews new misconception candidates, and how much instructor time per week is realistic?
+
+- Will students use the app with accounts or anonymously, and how does that limit adaptive selection and retention analysis?
+
+- Should students see their own mastery and misconception summaries, and in what form?
+
+## Appendix: Example exercises (Grade 7)
+
+Four examples, one per exercise type, on Grade 7 topics. Each shows the student's view, the answer, and how the item is checked and generated.
+
+### Numeric entry: percentages
+
+**Prompt: **A jacket costs 80 €. The price goes up by 15 %. What is the new price?
+
+- **Answer:** 92 €, entered as a number.
+
+- **Recognised wrong answers:** 12 (gave only the change), 95 (added 15 as euros), 68 (subtracted instead of added).
+
+- **Generator:** price p and percentage r are random; the answer is p × (1 + r/100). Choosing p as a multiple of 20 and r as a multiple of 5 keeps the numbers clean.
+
+### Error spotting: linear equations
+
+**Prompt: **Tap the line that contains the mistake.
+
+- 5 − 2x = 11
+
+- −2x = 11 − 5
+
+- −2x = 6
+
+- x = 3
+
+- **Answer:** line 4, because dividing by −2 gives x = −3.
+
+- **Error type stored with the item:** sign slip when dividing by a negative number.
+
+- **Generator:** solve a random equation correctly, then alter one step using one of the stored error types.
+
+### Step ordering: algebraic expressions
+
+**Prompt: **Arrange the lines to simplify 2(x + 3) + 4x − 5.
+
+1   = 6x + 6 − 5
+
+2   = 2x + 6 + 4x − 5
+
+3   = 6x + 1
+
+4   2(x + 3) + 4x − 5
+
+Correct order:
+
+- **Answer:** lines 4, 2, 1, 3 (expand, combine the x terms, combine the constants).
+
+- **Diagnostic:** how a student misorders the lines shows which step they do not yet see as separate.
+
+- **Generator:** shuffle the lines of any stored worked solution.
+
+**Prototype: **a working version of this exercise is at [Step ordering prototype](https://claude.ai/artifact/BngH5P3L9yDcG1NPPx3JEu). Students tap lines into place, a wrong order returns a hint tied to a misconception tag, and “New exercise” generates a fresh variant from the template.
+
+### Multi-select equivalence: distributive law
+
+**Prompt: **Which expressions equal 3(x − 2)? Select all that apply.
+
+| **Option** | **Expression** | **Correct** | **Misconception it represents** |
+| --- | --- | --- | --- |
+| A | 3x − 6 | Yes | none |
+| B | 3x − 2 | No | multiplied only the first term |
+| C | 3x + 6 | No | sign error |
+| D | −6 + 3x | Yes | none (reordered) |
+
+- **Checker:** symbolic comparison of each option with the original expression.
+
+- **Distractors:** each wrong option is tagged with the misconception it represents, so a selection is directly informative.
+
+FinnMath App: Exercise Types and Learning from Student Responses  |  Page

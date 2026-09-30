@@ -8,3 +8,7 @@
 /diff-bots.gitignore
 /diff-bots.js
 /student-llm-usage-limiter-system.docx
+
+# math-misconceptions
+math-misconceptions/build/
+__pycache__/

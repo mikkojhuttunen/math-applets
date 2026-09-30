@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi."
+      },
+      "payload": {
+        "lines": [
+          "5 − 2x = 11",
+          "−2x = 11 − 5",
+          "−2x = 6",
+          "x = −3"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "−2x = 6",
+          "variable": "x",
+          "solutions": [
+            3
+          ],
+          "equivalents": [
+            "6 = −2x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "11 − 5 = 6"
+        ],
+        "final": "−2x = 6"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

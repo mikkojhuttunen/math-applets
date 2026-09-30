@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin 3(x − 2)? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "3(x − 2)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -1
+          ],
+          [
+            0
+          ],
+          [
+            4
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "3x − 2",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "c",
+            "text": "3x + 6",
+            "equivalent": false,
+            "misconception": "ALG-07"
+          },
+          {
+            "id": "d",
+            "text": "−6 + 3x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3(x − 2) = 3x − 6"
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

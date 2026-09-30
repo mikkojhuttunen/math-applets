@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit: sievennä 2(x + 3) + 4x − 5."
+      },
+      "payload": {
+        "lines": [
+          "2(x + 3) + 4x − 5",
+          "= 2x + 6 + 4x − 5",
+          "= 6x + 6 − 5",
+          "= 6x + 1"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Avaa sulut",
+          "Yhdistä x-termit",
+          "Yhdistä vakiot"
+        ],
+        "final": "6x + 1"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

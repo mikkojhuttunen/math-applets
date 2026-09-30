@@ -1,0 +1,74 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "P"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kumpi on suurempi: 0,45 vai 0,6?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,6",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "0,45",
+            "misconception": "NUM-01",
+            "feedback": "Pidempi desimaaliluku ei ole suurempi."
+          },
+          {
+            "id": "c",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Vertaa kymmenesosia: 4 ja 6."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,6 = 0,60 > 0,45"
+        ],
+        "final": "0,6"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

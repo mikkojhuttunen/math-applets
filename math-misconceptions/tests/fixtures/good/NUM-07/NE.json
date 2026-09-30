@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Purkissa on nyt 180 g, mikä on 20 % enemmän kuin viime vuonna. Paljonko purkissa oli viime vuonna (g)?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 150,
+          "tolerance": 0,
+          "unit": "g"
+        },
+        "wrong": [
+          {
+            "match": 144,
+            "misconception": "NUM-07",
+            "feedback": "180 g on uusi määrä, ei perusarvo."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,2 · x = 180",
+          "x = 150"
+        ],
+        "final": "150 g"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

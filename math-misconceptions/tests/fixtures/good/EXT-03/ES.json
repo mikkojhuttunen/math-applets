@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-03",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "3 − 2x > 11",
+          "−2x > 11 − 3",
+          "−2x > 8",
+          "x > −4"
+        ],
+        "error_line": 4,
+        "error_type": "inequality_not_flipped"
+      },
+      "solution": {
+        "steps": [
+          "−2x > 8",
+          "x < 8 / (−2) = −4"
+        ],
+        "final": "x < −4"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella jaettaessa epäyhtälömerkki kääntyy."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

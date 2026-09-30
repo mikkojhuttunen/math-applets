@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "5 − 2x = 11",
+          "−2x = 11 − 5",
+          "−2x = 6",
+          "x = −3"
+        ],
+        "error_line": 4,
+        "error_type": "sign_slip_negative_divisor"
+      },
+      "solution": {
+        "steps": [
+          "−2x = 6",
+          "x = 6 / (−2) = −3"
+        ],
+        "final": "x = −3"
+      },
+      "feedback": {
+        "correct": "Oikein: −2:lla jaettaessa merkki vaihtuu."
+      },
+      "provenance": {
+        "template": "fixture_demo",
+        "params": {
+          "demo": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}
