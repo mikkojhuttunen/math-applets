@@ -1,0 +1,323 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-02",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kaksoset ovat yhtä vanhoja. Toisen ikä on y = 7 vuotta, ja toisen ikää merkitään kirjaimella x. Kirjoita yhtälö, jonka ratkaisu on x = 7."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        },
+        "checks": {
+          "valid": [
+            "x = 7",
+            "x + 6 = 7 + 6",
+            "2x = 14"
+          ],
+          "invalid": [
+            "x = 8",
+            "x + 1 = 7",
+            "x − 1 = 7"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 7",
+          "x + 6 = 7 + 6"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
+      },
+      "provenance": {
+        "template": "alg02_rp",
+        "params": {
+          "p": 7,
+          "c": 6,
+          "form": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kolikoilla x ja y on sama arvo. Kolikon y arvo on 9 senttiä. Kirjoita yhtälö, jossa x on tuntematon ja jonka ratkaisu on x = 9."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "x + 6 = 15",
+            "9 = x",
+            "3x = 27"
+          ],
+          "invalid": [
+            "x + 6 = 9",
+            "x = 15",
+            "2x = 9"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 9",
+          "x + 6 = 9 + 6 = 15"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 9."
+      },
+      "provenance": {
+        "template": "alg02_rp",
+        "params": {
+          "p": 9,
+          "c": 6,
+          "form": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvut x ja y ovat yhtä suuret, ja y = 6. Täydennä yhtälö x + □ = 12 siten, että sen ratkaisu on x = 6. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        },
+        "checks": {
+          "valid": [
+            "x + 6 = 12",
+            "12 = x + 6"
+          ],
+          "invalid": [
+            "x + 7 = 12",
+            "x + 5 = 12",
+            "x + 12 = 12"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = 6",
+          "□ = 12 − 6 = 6",
+          "x + 6 = 12"
+        ],
+        "final": "x = 6"
+      },
+      "feedback": {
+        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 6."
+      },
+      "provenance": {
+        "template": "alg02_rp",
+        "params": {
+          "p": 6,
+          "c": 5,
+          "form": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvuille x ja y pätee x + y = 8 ja x = y. Kirjoita yhtälö pelkästään tuntemattomalle x siten, että sen ratkaisu on x = 4."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 4
+        },
+        "checks": {
+          "valid": [
+            "2x = 8",
+            "x + x = 8",
+            "x = 8 − x"
+          ],
+          "invalid": [
+            "x + 1 = 8",
+            "x = 8",
+            "3x = 8"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x + y = 8, y = x",
+          "x + x = 8",
+          "2x = 8, x = 4"
+        ],
+        "final": "x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 4."
+      },
+      "provenance": {
+        "template": "alg02_rp",
+        "params": {
+          "p": 4,
+          "c": 2,
+          "form": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvut x ja y ovat yhtä suuret, ja y = 5. Kirjoita yhtälö muotoa 3x − □ = 10, jonka ratkaisu on x = 5. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        },
+        "checks": {
+          "valid": [
+            "3x − 5 = 10",
+            "10 = 3x − 5"
+          ],
+          "invalid": [
+            "3x − 6 = 10",
+            "3x − 10 = 10",
+            "3x − 7 = 10"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3 · 5 = 15",
+          "□ = 15 − 10 = 5",
+          "3x − 5 = 10"
+        ],
+        "final": "x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 5."
+      },
+      "provenance": {
+        "template": "alg02_rp",
+        "params": {
+          "p": 5,
+          "c": 2,
+          "form": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

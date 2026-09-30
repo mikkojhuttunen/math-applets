@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 5 |
+| Runs completed | 6 |
 | Last run | 2026-09-30 |
-| Progress | 28 of 227 planned cells generated (3 cells have a hand-written seed example only) |
+| Progress | 34 of 227 planned cells generated (3 cells have a hand-written seed example only) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -133,9 +133,9 @@ Priority: 1 = evidence Strong, 2 = Moderate or curriculum-derived (`EXT`), 3 = L
 | PRO-01 | Illusion of linearity: area | Strong | 1 | S5.05 | S5.07 | T16, T18 | 8 | Applet gap (OPS §7): similarity and scale (k, k², k³). Same k² idea as OPS §6 (S5.05). |
 | PRO-02 | Illusion of linearity: volume | Strong | 1 | S5.05 | S5.13 | T16, T18 | 8 | Applet gap (OPS §7): similarity and scale (k, k², k³). |
 | FUN-02 | Slope–height confusion | Strong | 1 | S4.07 | S4.05 | T8, T15 | 9 |  |
-| ALG-02 | Different letters must differ in value | Moderate | 2 | S3.01 | - | T15 | 7 | Evidence rests on a study with unverified authors; check before use. |
-| ALG-04 | Conjoining terms | Moderate | 2 | S3.02 | - | T14 | 7 |  |
-| ALG-05 | Juxtaposition read as place value | Moderate | 2 | S3.01 | - | T15 | 7 |  |
+| ALG-02 | X | Moderate | 2 | S3.01 | - | T15 | X | Evidence rests on a study with unverified authors; check before use. |
+| ALG-04 | X | X | 2 | S3.02 | - | T14 | 7 |  |
+| ALG-05 | X | X | 2 | S3.01 | - | T15 | 7 |  |
 | ALG-07 | Sign errors and one-sided operations | Moderate | 2 | S3.05 | - | T14 | 7→8 | Applet gap (OPS §7): equation as a balance. Hand-written ES seed exists. |
 | ALG-08 | Distributive law applied to one term | Moderate | 2 | S3.02 | S3.04 | T14 | 7 | Hand-written seeds exist (SO prototype, ME example). |
 | ALG-09 | Square of a sum | Moderate | 2 | S3.04 | S3.03 | T14 | 8 |  |
@@ -198,9 +198,9 @@ Same row order as section 3.1. Columns are in phase order.
 | PRO-01 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | PRO-02 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | FUN-02 | X | X | - | - | - | - | - | - | - | - | o | - | o | - | - |
-| ALG-02 | o | - | - | - | - | - | o | - | - | - | - | - | o | o | - |
-| ALG-04 | o | o | o | - | - | o | - | o | - | - | - | - | - | - | - |
-| ALG-05 | o | o | - | - | - | o | - | - | - | - | - | - | - | - | - |
+| ALG-02 | X | - | - | - | - | - | X | - | - | - | - | - | o | o | - |
+| ALG-04 | X | X | o | - | - | o | - | o | - | - | - | - | - | - | - |
+| ALG-05 | X | X | - | - | - | o | - | - | - | - | - | - | - | - | - |
 | ALG-07 | o | o | s | o | o | - | o | - | - | - | - | - | o | - | o |
 | ALG-08 | o | o | o | s | o | s | o | - | - | - | - | - | - | - | - |
 | ALG-09 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | o |
@@ -268,6 +268,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-09-30 | PRO-02 | NE | PRO-02-NE-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-02/NE.json | Draft | Strong |
 | 2026-09-30 | FUN-02 | MC | FUN-02-MC-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-02/MC.json | Draft | Strong; graphs described by value tables and equations (no figure); item 5 asks for a justification |
 | 2026-09-30 | FUN-02 | NE | FUN-02-NE-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-02/NE.json | Draft | Strong; speed from two graph points |
+| 2026-09-30 | ALG-02 | MC | ALG-02-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-02/MC.json | Draft | Moderate; evidence rests on a study with unverified authors (check before use); item 4 asks for a justification |
+| 2026-09-30 | ALG-02 | RP | ALG-02-RP-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-02/RP.json | Draft | Moderate; evidence rests on a study with unverified authors (check before use); second letter given in words, equation written for x |
+| 2026-09-30 | ALG-04 | MC | ALG-04-MC-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/MC.json | Draft | Moderate; item 4 asks for a justification (substitution check) |
+| 2026-09-30 | ALG-04 | NE | ALG-04-NE-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/NE.json | Draft | Moderate |
+| 2026-09-30 | ALG-05 | MC | ALG-05-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/MC.json | Draft | Moderate; item 4 asks for a justification |
+| 2026-09-30 | ALG-05 | NE | ALG-05-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/NE.json | Draft | Moderate |
 
 ## 6. Curriculum coverage
 
