@@ -62,12 +62,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `tools/build_manifest.js` writes `data/manifest.json` (paths relative to `harjoittele/`, counts by status, goal and misconception; no timestamps, so it only changes when the banks change). `--check` exits 1 when stale. The 7-9 source files are wrappers `{schema_version, topic, type, items}`; their items carry Finnish feedback per wrong answer in `payload.wrong`, useful for W03/W06. Fixtures: 3 real 1-6 items (one set to `reviewed`) and 2 items from `generators/example_alg08_ne.py` (one set to `approved`). Current repo: 2 files, 40 items, all draft. 4 new tests, including one that fails when the manifest is out of date.
 
 ### W03 Item loader
-- State: todo
+- State: done
 - Needs: W02
 - What: `js/items.js` fetches the files in the manifest and turns both formats into one internal shape: `{id, source, gradeBand, goal, type, stem, answer, options, misconceptionAnswers, feedback, status}`. The 1-6 format is described in `math-misconceptions/grades1-6/exercises/grades1-6/README.md`, the 7-9 format in `math-misconceptions/schema/item.schema.json`. Unsupported types and items that need a figure are skipped and counted, never shown broken.
 - Test: fixtures of both formats, every real item loads or is counted as skipped.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.3.0
+- Notes: `js/items.js`: `loadItems(manifestUrl, {includeDrafts})` returns `{items, skipped, errors}`. Supported now: 1-6 `numeric_entry` and `choice`, 7-9 `NE` (answer kinds number, set, expression) and `MC`. Skipped with a reason: other types, items with `prompt.figure`, duplicate ids, a choice answer that is not exactly one option, and drafts unless `includeDrafts` (WD2). A file that fails to load is reported and the rest still load. 1-6 answers stay as typed text (`{kind: 'typed'}`) for W04 to parse; 1-6 misconception answers have `feedback: null` until W05 supplies the texts, while 7-9 items bring their own Finnish feedback. 7 new tests, including all 40 real items. Browser check: `loadItems` in Chromium against `python3 -m http.server` gives 40 items with drafts, 0 without.
 
 ### W04 Answer checking
 - State: todo
@@ -180,3 +180,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | WD1-WD3 | Accepted: no storage in v1, pupils see reviewed items only, folder `harjoittele/` |
 | 2026-09-30 | W01 | Skeleton, v0.1.0 |
 | 2026-09-30 | W02 | Manifest, v0.2.0: 2 files, 40 draft items |
+| 2026-09-30 | W03 | Item loader, v0.3.0: 40 items load, all draft |
