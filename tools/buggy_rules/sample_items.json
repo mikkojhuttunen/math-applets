@@ -1,0 +1,331 @@
+{
+  "numeric_entry_subtraction": [
+    {
+      "type": "numeric_entry",
+      "template": "sub_multidigit_v1",
+      "params": {
+        "minuend": 431,
+        "subtrahend": 254
+      },
+      "stem_fi": "Laske 431 − 254.",
+      "answer": "177",
+      "misconceptions": {
+        "NUM-10a": {
+          "answer": "223"
+        },
+        "NUM-10b": {
+          "answer": "133"
+        },
+        "NUM-10c": {
+          "answer": "287"
+        }
+      },
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    },
+    {
+      "type": "numeric_entry",
+      "template": "sub_multidigit_v1",
+      "params": {
+        "minuend": 534,
+        "subtrahend": 160
+      },
+      "stem_fi": "Laske 534 − 160.",
+      "answer": "374",
+      "misconceptions": {
+        "NUM-10a": {
+          "answer": "434"
+        },
+        "NUM-10b": {
+          "answer": "334"
+        },
+        "NUM-10c": {
+          "answer": "474"
+        }
+      },
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    },
+    {
+      "type": "numeric_entry",
+      "template": "sub_multidigit_v1",
+      "params": {
+        "minuend": 326,
+        "subtrahend": 147
+      },
+      "stem_fi": "Laske 326 − 147.",
+      "answer": "179",
+      "misconceptions": {
+        "NUM-10a": {
+          "answer": "221"
+        },
+        "NUM-10b": {
+          "answer": "131"
+        },
+        "NUM-10c": {
+          "answer": "289"
+        }
+      },
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    }
+  ],
+  "numeric_entry_fraction_add": [
+    {
+      "type": "numeric_entry",
+      "template": "frac_add_v1",
+      "params": {
+        "a": 2,
+        "b": 4,
+        "c": 2,
+        "d": 6
+      },
+      "stem_fi": "Laske 2/4 + 2/6. Vastaa murtolukuna.",
+      "answer": "5/6",
+      "misconceptions": {
+        "NUM-03": {
+          "answer": "2/5"
+        }
+      },
+      "workbook": [
+        "NUM-03"
+      ],
+      "curriculum": [
+        "A36.S2.12"
+      ]
+    },
+    {
+      "type": "numeric_entry",
+      "template": "frac_add_v1",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 1,
+        "d": 6
+      },
+      "stem_fi": "Laske 1/3 + 1/6. Vastaa murtolukuna.",
+      "answer": "1/2",
+      "misconceptions": {
+        "NUM-03": {
+          "answer": "2/9"
+        }
+      },
+      "workbook": [
+        "NUM-03"
+      ],
+      "curriculum": [
+        "A36.S2.12"
+      ]
+    },
+    {
+      "type": "numeric_entry",
+      "template": "frac_add_v1",
+      "params": {
+        "a": 1,
+        "b": 5,
+        "c": 5,
+        "d": 7
+      },
+      "stem_fi": "Laske 1/5 + 5/7. Vastaa murtolukuna.",
+      "answer": "32/35",
+      "misconceptions": {
+        "NUM-03": {
+          "answer": "1/2"
+        }
+      },
+      "workbook": [
+        "NUM-03"
+      ],
+      "curriculum": [
+        "A36.S2.12"
+      ]
+    }
+  ],
+  "error_spotting_subtraction": [
+    {
+      "type": "error_spotting",
+      "template": "sub_multidigit_err_v1",
+      "params": {
+        "minuend": 453,
+        "subtrahend": 127,
+        "rule": "NUM-10a"
+      },
+      "stem_fi": "Napauta rivi, jossa on virhe. Tehtävä: 453 − 127.",
+      "lines_fi": [
+        "Ykköset: 7 − 3 = 4.",
+        "Kymmenet: 5 − 2 = 3.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 334."
+      ],
+      "solution_lines_fi": [
+        "Ykköset: 3 − 7 ei onnistu, lainataan: 13 − 7 = 6.",
+        "Kymmenet: Lainattu kymmenen pois: 5 − 1 = 4. 4 − 2 = 2.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 326."
+      ],
+      "faulty_line": 0,
+      "error_tag": "NUM-10a",
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    },
+    {
+      "type": "error_spotting",
+      "template": "sub_multidigit_err_v1",
+      "params": {
+        "minuend": 453,
+        "subtrahend": 127,
+        "rule": "NUM-10b"
+      },
+      "stem_fi": "Napauta rivi, jossa on virhe. Tehtävä: 453 − 127.",
+      "lines_fi": [
+        "Ykköset: 7 − 3 = 4.",
+        "Kymmenet: Lainattu kymmenen pois: 5 − 1 = 4. 4 − 2 = 2.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 324."
+      ],
+      "solution_lines_fi": [
+        "Ykköset: 3 − 7 ei onnistu, lainataan: 13 − 7 = 6.",
+        "Kymmenet: Lainattu kymmenen pois: 5 − 1 = 4. 4 − 2 = 2.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 326."
+      ],
+      "faulty_line": 0,
+      "error_tag": "NUM-10b",
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    },
+    {
+      "type": "error_spotting",
+      "template": "sub_multidigit_err_v1",
+      "params": {
+        "minuend": 453,
+        "subtrahend": 127,
+        "rule": "NUM-10c"
+      },
+      "stem_fi": "Napauta rivi, jossa on virhe. Tehtävä: 453 − 127.",
+      "lines_fi": [
+        "Ykköset: 3 − 7 ei onnistu, lainataan: 13 − 7 = 6.",
+        "Kymmenet: 5 − 2 = 3.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 336."
+      ],
+      "solution_lines_fi": [
+        "Ykköset: 3 − 7 ei onnistu, lainataan: 13 − 7 = 6.",
+        "Kymmenet: Lainattu kymmenen pois: 5 − 1 = 4. 4 − 2 = 2.",
+        "Sadat: 4 − 1 = 3.",
+        "Vastaus: 326."
+      ],
+      "faulty_line": 1,
+      "error_tag": "NUM-10c",
+      "workbook": [
+        "NUM-10"
+      ],
+      "curriculum": [
+        "A36.S2.04"
+      ]
+    }
+  ],
+  "error_spotting_fraction_add": [
+    {
+      "type": "error_spotting",
+      "template": "frac_add_err_v1",
+      "params": {
+        "a": 1,
+        "b": 3,
+        "c": 1,
+        "d": 2
+      },
+      "stem_fi": "Napauta rivi, jossa on virhe.",
+      "lines_fi": [
+        "1/3 + 1/2",
+        "= (1 + 1)/(3 + 2)",
+        "= 2/5"
+      ],
+      "solution_lines_fi": [
+        "1/3 + 1/2",
+        "= 2/6 + 3/6",
+        "= 5/6"
+      ],
+      "faulty_line": 1,
+      "error_tag": "NUM-03",
+      "workbook": [
+        "NUM-03"
+      ],
+      "curriculum": [
+        "A36.S2.12"
+      ]
+    }
+  ],
+  "choice_fraction_compare": [
+    {
+      "type": "choice",
+      "template": "frac_compare_unit_v1",
+      "params": {
+        "b": 12,
+        "d": 10
+      },
+      "stem_fi": "Kumpi on suurempi?",
+      "options": [
+        "1/12",
+        "1/10"
+      ],
+      "answer": "1/10",
+      "misconceptions": {
+        "NUM-12": {
+          "answer": "1/12"
+        }
+      },
+      "workbook": [
+        "NUM-12"
+      ],
+      "curriculum": [
+        "A36.S2.11"
+      ]
+    },
+    {
+      "type": "choice",
+      "template": "frac_compare_unit_v1",
+      "params": {
+        "b": 8,
+        "d": 7
+      },
+      "stem_fi": "Kumpi on suurempi?",
+      "options": [
+        "1/8",
+        "1/7"
+      ],
+      "answer": "1/7",
+      "misconceptions": {
+        "NUM-12": {
+          "answer": "1/8"
+        }
+      },
+      "workbook": [
+        "NUM-12"
+      ],
+      "curriculum": [
+        "A36.S2.11"
+      ]
+    }
+  ]
+}
