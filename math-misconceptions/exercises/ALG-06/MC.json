@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-06",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Mikä luku kuuluu laatikkoon? 3 + 8 = □ + 4"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "15",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "11",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "7",
+            "misconception": null,
+            "feedback": "Oikein: puolten on oltava yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "1",
+            "misconception": null,
+            "feedback": "Tarkista: molempien puolten summan on oltava sama."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vasen puoli: 3 + 8 = 11",
+          "□ + 4 = 11",
+          "□ = 11 − 4 = 7"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_mc",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "c": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Mikä luku kuuluu laatikkoon? 5 + 9 = □ + 7"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "7",
+            "misconception": null,
+            "feedback": "Oikein: puolten on oltava yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "14",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "21",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "2",
+            "misconception": null,
+            "feedback": "Tarkista: molempien puolten summan on oltava sama."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vasen puoli: 5 + 9 = 14",
+          "□ + 7 = 14",
+          "□ = 14 − 7 = 7"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_mc",
+        "params": {
+          "a": 5,
+          "b": 9,
+          "c": 7
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Mikä luku kuuluu laatikkoon? 3 + □ = 7 + 6"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "13",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "16",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "10",
+            "misconception": null,
+            "feedback": "Oikein: puolten on oltava yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "4",
+            "misconception": null,
+            "feedback": "Tarkista: molempien puolten summan on oltava sama."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Oikea puoli: 7 + 6 = 13",
+          "3 + □ = 13",
+          "□ = 13 − 3 = 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_mc",
+        "params": {
+          "a": 7,
+          "b": 6,
+          "c": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Oppilas kirjoittaa: 4 + 8 = 12 + 2 = 14. Miksi merkintä on virheellinen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Merkintä on oikein: tulos kirjoitetaan aina yhtäsuuruusmerkin jälkeen",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "Yhtäsuuruusmerkkiä ei saa käyttää kahdesti",
+            "misconception": null,
+            "feedback": "Merkkiä saa käyttää monta kertaa, jos jokainen väite on tosi."
+          },
+          {
+            "id": "c",
+            "text": "4 + 8 ei ole yhtä suuri kuin 14, vaikka merkintä väittää niin",
+            "misconception": null,
+            "feedback": "Oikein: jokaisen '=' molempien puolten on oltava yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "Luvun 12 pitäisi olla suluissa",
+            "misconception": null,
+            "feedback": "Sulut eivät korjaa ongelmaa: väite on epätosi."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4 + 8 = 12 on tosi",
+          "12 + 2 = 14 on tosi",
+          "Ketjusta seuraisi 4 + 8 = 14, mutta 12 ≠ 14"
+        ],
+        "final": "Jokaisen yhtäsuuruusmerkin molempien puolten on oltava yhtä suuret"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_mc",
+        "params": {
+          "a": 4,
+          "b": 8,
+          "c": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Vaa'an vasemmassa kupissa on 7 kg:n ja 5 kg:n painot ja oikeassa kupissa 3 kg:n paino. Paljonko oikeaan kuppiin on lisättävä, jotta vaaka on tasapainossa? (7 + 5 = 3 + □)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "12 kg",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "9 kg",
+            "misconception": null,
+            "feedback": "Oikein: molempien kuppien painojen on oltava yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "15 kg",
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki ei tarkoita 'laske tulos tähän'. Se kertoo, että molemmat puolet ovat yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "3 kg",
+            "misconception": null,
+            "feedback": "Oikean kupin paino on jo annettu; kysytään lisäystä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vasen kuppi: 7 + 5 = 12 kg",
+          "Oikea kuppi: 3 + □ = 12",
+          "□ = 12 − 3 = 9"
+        ],
+        "final": "9 kg"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_mc",
+        "params": {
+          "a": 7,
+          "b": 5,
+          "c": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

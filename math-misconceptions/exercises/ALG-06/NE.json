@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-06",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä luku: 9 + 4 = □ + 8"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5
+        },
+        "wrong": [
+          {
+            "match": 13,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          },
+          {
+            "match": 21,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "9 + 4 = 13",
+          "□ + 8 = 13",
+          "□ = 13 − 8 = 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: puolten arvojen on oltava yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_ne",
+        "params": {
+          "a": 9,
+          "b": 4,
+          "c": 8,
+          "d": 3,
+          "form": "sum_left"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä luku: □ + 6 = 7 + 3"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": 10,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          },
+          {
+            "match": 16,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "7 + 3 = 10",
+          "□ + 6 = 10",
+          "□ = 10 − 6 = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: puolten arvojen on oltava yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_ne",
+        "params": {
+          "a": 7,
+          "b": 3,
+          "c": 6,
+          "d": 3,
+          "form": "box_left"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä luku: 9 + 3 = 6 + □"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": 12,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          },
+          {
+            "match": 18,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "9 + 3 = 12",
+          "6 + □ = 12",
+          "□ = 12 − 6 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: puolten arvojen on oltava yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_ne",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 6,
+          "d": 3,
+          "form": "box_last"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä luku: 9 − 3 = □ + 5"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": 6,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          },
+          {
+            "match": 11,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "9 − 3 = 6",
+          "□ + 5 = 6",
+          "□ = 6 − 5 = 1"
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: puolten arvojen on oltava yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_ne",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 8,
+          "d": 5,
+          "form": "minus"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Vaa'an vasemmassa kupissa on 8 kg:n ja 3 kg:n painot, oikeassa kupissa 5 kg:n paino. Montako kilogrammaa oikeaan kuppiin on lisättävä, jotta vaaka on tasapainossa?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": 11,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          },
+          {
+            "match": 16,
+            "misconception": "ALG-06",
+            "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Vasen kuppi: 8 + 3 = 11 kg",
+          "Oikea kuppi: 5 + □ = 11",
+          "□ = 11 − 5 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: puolten arvojen on oltava yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg06_ne",
+        "params": {
+          "a": 8,
+          "b": 3,
+          "c": 5,
+          "d": 4,
+          "form": "balance"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 0 |
-| Last run | never |
-| Progress | 0 of 227 planned cells generated (3 cells have a hand-written seed example only) |
+| Runs completed | 1 |
+| Last run | 2026-09-30 |
+| Progress | 6 of 227 planned cells generated (3 cells have a hand-written seed example only) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -187,9 +187,9 @@ Same row order as section 3.1. Columns are in phase order.
 
 | ID | MC | NE | ES | SO | FS | ME | RP | SC | MA | EST | GI | NL | EX | TF | PH |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| ALG-01 | o | o | - | - | - | - | - | - | o | - | - | - | o | o | - |
-| ALG-06 | o | o | o | - | - | - | o | o | - | - | - | - | - | o | - |
-| ALG-10 | o | - | - | - | - | - | o | - | o | - | - | - | o | - | - |
+| ALG-01 | X | X | - | - | - | - | - | - | o | - | - | - | o | o | - |
+| ALG-06 | X | X | o | - | - | - | o | o | - | - | - | - | - | o | - |
+| ALG-10 | X | - | - | - | - | - | X | - | o | - | - | - | o | - | - |
 | NUM-01 | o | o | - | - | - | - | - | o | - | - | - | o | o | - | - |
 | NUM-02 | o | o | - | - | - | - | - | o | - | - | - | o | o | - | - |
 | NUM-03 | o | o | o | - | o | o | - | - | - | o | - | - | - | - | - |
@@ -240,6 +240,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-09-20 | ALG-08 | SO | (seed) | - | S3.02 | docx appendix, [prototype](https://claude.ai/artifact/BngH5P3L9yDcG1NPPx3JEu) | Seed | Order lines to simplify 2(x + 3) + 4x - 5; prototype has a generator |
 | 2026-09-20 | ALG-08 | ME | (seed) | - | S3.02 | docx appendix | Seed | Which expressions equal 3(x - 2); distractors tagged |
 | 2026-09-20 | - | NE | (seed) | - | S2.10 | docx appendix | Seed | Jacket 80 € +15 %. Fits no topic exactly; NUM-07 and NUM-08 are the closest. Not counted in section 4 |
+| 2026-09-30 | ALG-01 | MC | ALG-01-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-01/MC.json | Draft | Strong; item 5 asks for a justification (T4) |
+| 2026-09-30 | ALG-01 | NE | ALG-01-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-01/NE.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | MC | ALG-06-MC-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/MC.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | NE | ALG-06-NE-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/NE.json | Draft | Strong |
+| 2026-09-30 | ALG-10 | MC | ALG-10-MC-001..005 | T, T, T, H, H | S1.04 (S3.05) | exercises/ALG-10/MC.json | Draft | Strong |
+| 2026-09-30 | ALG-10 | RP | ALG-10-RP-001..005 | T, T, T, H, K | S1.04 (S3.05) | exercises/ALG-10/RP.json | Draft | Strong |
 
 ## 6. Curriculum coverage
 
