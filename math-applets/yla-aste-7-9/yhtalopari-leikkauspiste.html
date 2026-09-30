@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yhtälöpari suorien leikkauspisteenä</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1c1e;--card:#fff;--line:#d0d0d5;--muted:#5b5b63;--c1:#1d5fd1;--c2:#c2410c;--ok:#0f7a3d;--warn:#8a5a00;--warnbg:#fff4d6;--pt:#111}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--fg:#ececf0;--card:#1e1e22;--line:#3a3a42;--muted:#a6a6b0;--c1:#6ea3ff;--c2:#ff9a5c;--ok:#4cd484;--warn:#ffd27a;--warnbg:#3a2f12;--pt:#fff}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:12px 16px 24px}
+h1{font-size:1.4rem;margin:.3em 0 .1em}
+h2{font-size:1.05rem;margin:0 0 .4em}
+p{margin:.3em 0}
+.lead{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:10px 0}
+svg{width:100%;height:auto;display:block;touch-action:none;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.row{display:grid;grid-template-columns:1fr;gap:6px;margin:6px 0}
+label{display:flex;justify-content:space-between;gap:8px;font-size:.95rem}
+input[type=range]{width:100%;margin:2px 0 6px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media (max-width:520px){.grid2{grid-template-columns:1fr}}
+.c1{color:var(--c1);font-weight:600}.c2{color:var(--c2);font-weight:600}
+.big{font-size:1.15rem;font-weight:700}
+.status{padding:8px 10px;border-radius:8px;background:var(--warnbg);color:var(--warn);margin-top:6px}
+.status.ok{background:transparent;color:var(--ok);padding:0}
+button{font:inherit;padding:6px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer}
+ul{margin:.3em 0;padding-left:1.2em}
+footer{color:var(--muted);font-size:.85rem;margin-top:14px}
+.mono{font-variant-numeric:tabular-nums}
+</style>
+</head>
+<body>
+<main>
+<h1>Yhtälöpari suorien leikkauspisteenä</h1>
+<p class="lead">Yhtälöparin ratkaisu on piste, joka toteuttaa molemmat yhtälöt: se on kahden suoran leikkauspiste.</p>
+
+<svg id="g" viewBox="0 0 400 400" role="img" aria-label="Kaksi suoraa koordinaatistossa ja niiden leikkauspiste"></svg>
+
+<div class="card">
+<div class="grid2">
+<div>
+<label><span class="c1">Suora 1: kulmakerroin k₁</span><span id="vk1" class="mono"></span></label>
+<input id="k1" type="range" min="-40" max="40" step="1" value="10" aria-label="Suoran 1 kulmakerroin">
+<label><span class="c1">Suora 1: vakiotermi b₁</span><span id="vb1" class="mono"></span></label>
+<input id="b1" type="range" min="-60" max="60" step="5" value="-20" aria-label="Suoran 1 vakiotermi">
+</div>
+<div>
+<label><span class="c2">Suora 2: kulmakerroin k₂</span><span id="vk2" class="mono"></span></label>
+<input id="k2" type="range" min="-40" max="40" step="1" value="-5" aria-label="Suoran 2 kulmakerroin">
+<label><span class="c2">Suora 2: vakiotermi b₂</span><span id="vb2" class="mono"></span></label>
+<input id="b2" type="range" min="-60" max="60" step="5" value="30" aria-label="Suoran 2 vakiotermi">
+</div>
+</div>
+<button id="reset" type="button">Nollaa</button>
+</div>
+
+<div class="card" aria-live="polite">
+<h2>Yhtälöpari</h2>
+<p class="big"><span class="c1" id="e1"></span></p>
+<p class="big"><span class="c2" id="e2"></span></p>
+<div id="res"></div>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ul>
+<li>Muuta vain toisen suoran kulmakerrointa. Kuinka monta ratkaisua yhtälöparilla voi olla, ja milloin?</li>
+<li>Säädä suorat niin, ettei niillä ole yhtään yhteistä pistettä. Mikä on suorien kulmakertoimien suhde ja mitä vakiotermeistä voi sanoa?</li>
+<li>Kun leikkauspiste on löytynyt, sijoita sen x-koordinaatti molempiin yhtälöihin. Mitä huomaat, ja miksi ratkaisussa tarvitaan sekä x että y?</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>Varo virhekäsitystä</h2>
+<p>”Yhtälöparilla on aina täsmälleen yksi ratkaisu, ja ratkaisu on pelkkä x.” Tarkista kuvasta: ratkaisu on <strong>lukupari (x; y)</strong>, ja suorien asennosta riippuu, onko ratkaisuja yksi, ei yhtään vai äärettömän monta.</p>
+</div>
+
+<footer>Taso: yläkoulu 7–9 · Käsite: yhtälöpari ja suorien leikkauspiste</footer>
+</main>
+<script>
+(function(){
+var NS='http://www.w3.org/2000/svg';
+var svg=document.getElementById('g');
+var W=400,PAD=24,R=8,S=(W-2*PAD)/(2*R); // x,y in [-8,8]
+function X(x){return PAD+(x+R)*S}
+function Y(y){return PAD+(R-y)*S}
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);(p||svg).appendChild(e);return e}
+var ids=['k1','b1','k2','b2'],inp={};
+ids.forEach(function(i){inp[i]=document.getElementById(i)});
+var defs={k1:10,b1:-20,k2:-5,b2:30};
+
+function fmt(v,d){ // v number, d decimals; comma, proper minus
+  var s=(Math.abs(v)<0.5*Math.pow(10,-d)?0:v).toFixed(d).replace('.',',');
+  return s.replace('-','−');
+}
+function fmtTenths(n){return fmt(n/10,1).replace(/,0$/,'')} // n integer tenths
+function eq(K,B){ // y = kx + b from tenths
+  var s='y = ';
+  if(K===0){return s+fmtTenths(B)}
+  var kt=(K===10)?'x':(K===-10)?'−x':fmtTenths(K)+'x';
+  s+=kt;
+  if(B>0)s+=' + '+fmtTenths(B); else if(B<0)s+=' − '+fmtTenths(-B);
+  return s;
+}
+// exact-ish formatting of a rational num/den
+function ratio(num,den){
+  if(den<0){num=-num;den=-den}
+  var exact=(Math.abs(num)*100)%den===0;
+  return {v:num/den,exact:exact};
+}
+function fr(r){return (r.exact?'':'≈ ')+fmt(r.v,2)}
+
+function draw(){
+  var K1=+inp.k1.value,B1=+inp.b1.value,K2=+inp.k2.value,B2=+inp.b2.value;
+  document.getElementById('vk1').textContent=fmtTenths(K1);
+  document.getElementById('vb1').textContent=fmtTenths(B1);
+  document.getElementById('vk2').textContent=fmtTenths(K2);
+  document.getElementById('vb2').textContent=fmtTenths(B2);
+  document.getElementById('e1').textContent='1)  '+eq(K1,B1);
+  document.getElementById('e2').textContent='2)  '+eq(K2,B2);
+  while(svg.firstChild)svg.removeChild(svg.firstChild);
+  var cs=getComputedStyle(document.documentElement);
+  var col=function(n){return cs.getPropertyValue(n).trim()};
+  var cp=el('clipPath',{id:'clip'});el('rect',{x:PAD,y:PAD,width:W-2*PAD,height:W-2*PAD},cp);
+  var i;
+  for(i=-R;i<=R;i++){
+    el('line',{x1:X(i),y1:PAD,x2:X(i),y2:W-PAD,stroke:col('--line'),'stroke-width':i===0?0:0.5});
+    el('line',{x1:PAD,y1:Y(i),x2:W-PAD,y2:Y(i),stroke:col('--line'),'stroke-width':i===0?0:0.5});
+  }
+  el('line',{x1:PAD,y1:Y(0),x2:W-PAD,y2:Y(0),stroke:col('--muted'),'stroke-width':1.3});
+  el('line',{x1:X(0),y1:PAD,x2:X(0),y2:W-PAD,stroke:col('--muted'),'stroke-width':1.3});
+  for(i=-R;i<=R;i+=2){
+    if(i===0)continue;
+    var t=el('text',{x:X(i),y:Y(0)+13,'text-anchor':'middle','font-size':10,fill:col('--muted')});t.textContent=String(i).replace('-','−');
+    var t2=el('text',{x:X(0)-5,y:Y(i)+3.5,'text-anchor':'end','font-size':10,fill:col('--muted')});t2.textContent=String(i).replace('-','−');
+  }
+  var tx=el('text',{x:W-PAD-2,y:Y(0)-5,'text-anchor':'end','font-size':11,fill:col('--muted')});tx.textContent='x';
+  var ty=el('text',{x:X(0)+6,y:PAD+11,'font-size':11,fill:col('--muted')});ty.textContent='y';
+  function line(K,B,c,w){
+    var k=K/10,b=B/10;
+    el('line',{x1:X(-R),y1:Y(k*-R+b),x2:X(R),y2:Y(k*R+b),stroke:c,'stroke-width':w,'stroke-linecap':'round','clip-path':'url(#clip)'});
+  }
+  var same=(K1===K2&&B1===B2);
+  if(same){line(K1,B1,col('--c1'),5);line(K2,B2,col('--c2'),2)}
+  else{line(K1,B1,col('--c1'),3);line(K2,B2,col('--c2'),3)}
+
+  var res=document.getElementById('res');
+  var html;
+  if(K1===K2){
+    if(B1===B2){
+      html='<div class="status">Suorat yhtyvät: yhtälöillä on ääretön määrä yhteisiä pisteitä, joten yhtälöparilla on äärettömän monta ratkaisua.</div>';
+    }else{
+      html='<div class="status">Suorat ovat yhdensuuntaiset: niillä ei ole yhteistä pistettä, joten yhtälöparilla ei ole ratkaisua.</div>';
+    }
+  }else{
+    var den=K1-K2;
+    var xr=ratio(B2-B1,den);          // x = (b2-b1)/(k1-k2)
+    var yr=ratio(K1*B2-K2*B1,10*den); // y = (k1 b2 - k2 b1)/(k1-k2)
+    var x=xr.v,y=yr.v;
+    var inside=Math.abs(x)<=R&&Math.abs(y)<=R;
+    if(inside){
+      el('line',{x1:X(x),y1:Y(y),x2:X(x),y2:Y(0),stroke:col('--pt'),'stroke-dasharray':'4 3','stroke-width':1});
+      el('line',{x1:X(x),y1:Y(y),x2:X(0),y2:Y(y),stroke:col('--pt'),'stroke-dasharray':'4 3','stroke-width':1});
+      el('circle',{cx:X(x),cy:Y(y),r:6,fill:col('--pt'),stroke:col('--card'),'stroke-width':2});
+    }
+    var y1=(K1*x+B1)/10,y2=(K2*x+B2)/10;
+    html='<p class="big">Ratkaisu: x '+(xr.exact?'=':'≈')+' '+fmt(x,2)+', y '+(yr.exact?'=':'≈')+' '+fmt(y,2)+'</p>'+
+      '<p>Leikkauspiste (x; y) '+(xr.exact&&yr.exact?'=':'≈')+' ('+fmt(x,2)+'; '+fmt(y,2)+')</p>'+
+      '<p class="mono">Tarkistus, kun x = '+fmt(x,2)+': <span class="c1">y₁ = '+fmt(y1,2)+'</span> ja <span class="c2">y₂ = '+fmt(y2,2)+'</span></p>'+
+      (inside?'':'<div class="status">Leikkauspiste on kuvan ulkopuolella (kuva näyttää välin −8…8), mutta ratkaisu on silti olemassa.</div>');
+  }
+  res.innerHTML=html;
+}
+ids.forEach(function(i){inp[i].addEventListener('input',draw)});
+document.getElementById('reset').addEventListener('click',function(){ids.forEach(function(i){inp[i].value=defs[i]});draw()});
+if(window.matchMedia)try{window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',draw)}catch(e){}
+draw();
+})();
+</script>
+</body>
+</html>

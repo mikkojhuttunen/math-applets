@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lieriön ja kartion tilavuus</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1c2330;--muted:#5a6475;--line:#d5d9e2;--acc:#1b6ec2;--water:#5aa7e6;--waterd:#3b86c8;--surf:#a9d3f5;--glass:rgba(120,140,170,.10);--cyl:#e07a2f;--con:#1b6ec2;--warn:#fff4d6;--warnb:#d9a516}
+@media (prefers-color-scheme:dark){:root{--bg:#12161d;--card:#1b212b;--fg:#e8ecf3;--muted:#a3adbd;--line:#333c4a;--acc:#6db3ff;--water:#3e86c6;--waterd:#2c68a0;--surf:#6fb0e8;--glass:rgba(255,255,255,.07);--cyl:#f0a060;--con:#6db3ff;--warn:#3a3116;--warnb:#a98511}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:0 0 8px}
+p{margin:0 0 8px}
+.lead{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+svg{width:100%;height:auto;display:block}
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;margin:6px 0}
+.ctl label{font-weight:600;min-width:6.2em}
+input[type=range]{flex:1 1 160px;min-width:0;accent-color:var(--acc)}
+output{font-weight:700;min-width:4.5em;font-variant-numeric:tabular-nums}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+button{font:inherit;padding:6px 14px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;cursor:pointer}
+button:disabled{opacity:.5;cursor:default}
+button.main{background:var(--acc);color:#fff;border-color:var(--acc)}
+@media (prefers-color-scheme:dark){button.main{color:#0b1220}}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:right;font-variant-numeric:tabular-nums}
+th:first-child,td:first-child{text-align:left}
+th{background:rgba(120,140,170,.15)}
+@media (max-width:480px){table{font-size:.8rem}th,td{padding:4px 4px}}
+.status{min-height:1.5em;font-weight:600}
+.warn{background:var(--warn);border:1px solid var(--warnb)}
+ul{margin:0;padding-left:1.2em}
+li{margin:4px 0}
+.cap{font-size:.9rem;color:var(--muted);text-align:center;margin:4px 0 0}
+footer{color:var(--muted);font-size:.85rem;margin:16px 0}
+.sw{display:inline-block;width:.9em;height:.9em;border-radius:2px;vertical-align:-1px;margin-right:4px}
+</style>
+</head>
+<body>
+<main>
+<h1>Lieriön ja kartion tilavuus</h1>
+<p class="lead">Lieriö ja kartio, joilla on sama pohja ja sama korkeus. Kaada kartiollinen vettä lieriöön ja katso, miten tilavuudet liittyvät toisiinsa.</p>
+
+<div class="card">
+  <svg id="scene" viewBox="0 0 400 260" role="img" aria-label="Kartio ja lieriö, joilla on sama säde ja korkeus. Kartion vesi kaadetaan lieriöön."></svg>
+  <p class="cap">Vasemmalla kartio (kärki alaspäin), oikealla lieriö. Mittakaava on sama molemmille.</p>
+  <div class="ctl">
+    <label for="r">Säde r</label>
+    <input type="range" id="r" min="1" max="5" step="0.5" value="3">
+    <output id="rout" for="r">3 cm</output>
+  </div>
+  <div class="ctl">
+    <label for="h">Korkeus h</label>
+    <input type="range" id="h" min="1" max="10" step="0.5" value="4">
+    <output id="hout" for="h">4 cm</output>
+  </div>
+  <div class="btns">
+    <button type="button" id="pour" class="main">Kaada kartiollinen vettä lieriöön</button>
+    <button type="button" id="empty">Tyhjennä lieriö</button>
+    <button type="button" id="reset">Nollaa</button>
+  </div>
+  <p class="status" id="status" role="status" aria-live="polite"></p>
+</div>
+
+<div class="card">
+  <h2>Lukemat</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Suure</th><th>Lasku</th><th>Arvo</th></tr></thead>
+    <tbody>
+      <tr><td>Pohjan ala A<sub>p</sub></td><td id="c1"></td><td id="v1"></td></tr>
+      <tr><td>Lieriön tilavuus</td><td id="c2"></td><td id="v2"></td></tr>
+      <tr><td>Kartion tilavuus</td><td id="c3"></td><td id="v3"></td></tr>
+      <tr><td>Kartio : lieriö</td><td id="c4"></td><td id="v4"></td></tr>
+      <tr><td>Vettä lieriössä</td><td id="c5"></td><td id="v5"></td></tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Tilavuus säteen funktiona (korkeus h pysyy samana)</h2>
+  <svg id="chart" viewBox="0 0 400 240" role="img" aria-label="Kuvaaja: lieriön ja kartion tilavuus säteen funktiona nykyisellä korkeudella"></svg>
+  <p class="cap"><span class="sw" style="background:var(--cyl)"></span>lieriö &nbsp; <span class="sw" style="background:var(--con)"></span>kartio &nbsp; Pisteet osoittavat valitun säteen.</p>
+</div>
+
+<div class="card">
+  <h2>Tutki itse</h2>
+  <ul>
+    <li>Kaada kartiollinen vettä lieriöön kolme kertaa. Mitä huomaat? Toistuuko sama, kun muutat sädettä ja korkeutta?</li>
+    <li>Kaksinkertaista säde r ja pidä korkeus samana. Mitä tapahtuu tilavuudelle? Entä kun kaksinkertaistat korkeuden h ja pidät säteen samana?</li>
+    <li>Aseta r = 3 cm ja h = 4 cm. Laske lieriön ja kartion tilavuus käsin ja vertaa lukemiin.</li>
+  </ul>
+</div>
+
+<div class="card warn">
+  <h2>Varo virhekäsitystä</h2>
+  <p>"Kartion tilavuus on puolet lieriön tilavuudesta" ja "tilavuus kasvaa säteen mukana tasaisesti". Vertaa, montako kartiollista vettä lieriö tarvitsee ja miltä tilavuuskuvaaja näyttää, kun r kasvaa.</p>
+</div>
+
+<footer>Yläkoulu 7-9 · Lieriön ja kartion tilavuus</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg";
+var rEl=document.getElementById("r"),hEl=document.getElementById("h");
+var scene=document.getElementById("scene"),chart=document.getElementById("chart");
+var pourBtn=document.getElementById("pour"),emptyBtn=document.getElementById("empty");
+var pours=0;       // valmiit kaatokerrat 0..3
+var q=1;           // kartion vesimäärä (osuus täydestä) 0..1
+var frac=0;        // lieriön täyttöaste 0..1
+var busy=false;
+var reduce=false;
+try{reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;}catch(e){}
+
+function fmt(x,d){
+  var s=(Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toFixed(d);
+  if(s.indexOf(".")>=0){s=s.replace(/0+$/,"").replace(/\.$/,"");}
+  return s.replace(".",",");
+}
+function fix(x,d){return (Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toFixed(d).replace(".",",");}
+function css(n){return "var(--"+n+")";}
+function el(name,attrs,parent){
+  var e=document.createElementNS(NS,name);
+  for(var a in attrs){e.setAttribute(a,attrs[a]);}
+  if(parent){parent.appendChild(e);}
+  return e;
+}
+function clear(s){while(s.firstChild){s.removeChild(s.firstChild);}}
+function txt(p,x,y,t,anchor,size,fill){
+  var e=el("text",{x:x,y:y,"text-anchor":anchor||"middle","font-size":size||12,fill:fill||css("fg")},p);
+  e.textContent=t;return e;
+}
+function vals(){
+  var r2=Math.round(parseFloat(rEl.value)*2);   // r kahdessa puolikkaassa
+  var h2=Math.round(parseFloat(hEl.value)*2);
+  var r=r2/2,h=h2/2;
+  var ap=Math.PI*r*r;
+  return {r:r,h:h,ap:ap,vl:ap*h,vk:ap*h/3};
+}
+
+function drawScene(v){
+  clear(scene);
+  var S=15,ry0=0.25;
+  var topY=62,cxC=95,cxL=300;
+  var rx=v.r*S,ry=rx*ry0,hp=v.h*S;
+  var botY=topY+hp;                       // lieriön pohja / kartion kärki
+  // Kartio (kärki alaspäin)
+  var g=el("g",{},scene);
+  el("path",{d:"M"+(cxC-rx)+","+topY+" L"+cxC+","+botY+" L"+(cxC+rx)+","+topY+" Z",fill:css("glass"),stroke:css("con"),"stroke-width":2,"stroke-linejoin":"round"},g);
+  var L=Math.pow(Math.max(q,0),1/3);
+  if(q>0.0005){
+    var wr=rx*L,wry=wr*ry0,wy=botY-hp*L;
+    el("path",{d:"M"+cxC+","+botY+" L"+(cxC-wr)+","+wy+" A"+wr+","+wry+" 0 0 0 "+(cxC+wr)+","+wy+" Z",fill:css("water")},g);
+    el("ellipse",{cx:cxC,cy:wy,rx:wr,ry:wry,fill:css("surf"),opacity:.9},g);
+  }
+  el("ellipse",{cx:cxC,cy:topY,rx:rx,ry:ry,fill:"none",stroke:css("con"),"stroke-width":2},g);
+  // Lieriö
+  var g2=el("g",{},scene);
+  el("path",{d:"M"+(cxL-rx)+","+topY+" L"+(cxL-rx)+","+botY+" A"+rx+","+ry+" 0 0 0 "+(cxL+rx)+","+botY+" L"+(cxL+rx)+","+topY+" Z",fill:css("glass")},g2);
+  if(frac>0.0005){
+    var wl=botY-hp*frac;
+    el("path",{d:"M"+(cxL-rx)+","+wl+" L"+(cxL-rx)+","+botY+" A"+rx+","+ry+" 0 0 0 "+(cxL+rx)+","+botY+" L"+(cxL+rx)+","+wl+" Z",fill:css("water")},g2);
+    el("ellipse",{cx:cxL,cy:wl,rx:rx,ry:ry,fill:css("surf"),opacity:.9},g2);
+  }
+  el("path",{d:"M"+(cxL-rx)+","+topY+" L"+(cxL-rx)+","+botY+" A"+rx+","+ry+" 0 0 0 "+(cxL+rx)+","+botY+" L"+(cxL+rx)+","+topY,fill:"none",stroke:css("cyl"),"stroke-width":2},g2);
+  el("ellipse",{cx:cxL,cy:topY,rx:rx,ry:ry,fill:"none",stroke:css("cyl"),"stroke-width":2},g2);
+  // Mitat
+  el("line",{x1:cxL+rx+8,y1:topY,x2:cxL+rx+8,y2:botY,stroke:css("muted"),"stroke-width":1},scene);
+  txt(scene,cxL+rx+12,(topY+botY)/2+4,"h = "+fmt(v.h,1)+" cm","start",12,css("muted"));
+  el("line",{x1:cxC,y1:topY,x2:cxC+rx,y2:topY,stroke:css("muted"),"stroke-width":1,"stroke-dasharray":"3 3"},scene);
+  txt(scene,cxC+rx/2,topY-ry-5,"r = "+fmt(v.r,1),"middle",12,css("muted"));
+  txt(scene,cxC,22,"Kartio","middle",14,css("con"));
+  txt(scene,cxL,22,"Lieriö","middle",14,css("cyl"));
+  // Nuoli
+  txt(scene,200,topY+hp/2+4,busy?"~~>":"→","middle",16,css("muted"));
+}
+
+function drawChart(v){
+  clear(chart);
+  var X0=48,X1=384,Y0=200,Y1=14,VMAX=800,RMAX=5;
+  function px(r){return X0+(X1-X0)*r/RMAX;}
+  function py(val){return Y0-(Y0-Y1)*val/VMAX;}
+  var i;
+  for(i=0;i<=4;i++){
+    var yv=i*200;
+    el("line",{x1:X0,y1:py(yv),x2:X1,y2:py(yv),stroke:css("line"),"stroke-width":1},chart);
+    txt(chart,X0-6,py(yv)+4,String(yv),"end",11,css("muted"));
+  }
+  for(i=0;i<=5;i++){
+    el("line",{x1:px(i),y1:Y0,x2:px(i),y2:Y0+4,stroke:css("muted"),"stroke-width":1},chart);
+    txt(chart,px(i),Y0+17,String(i),"middle",11,css("muted"));
+  }
+  el("line",{x1:X0,y1:Y0,x2:X1,y2:Y0,stroke:css("muted"),"stroke-width":1.2},chart);
+  el("line",{x1:X0,y1:Y0,x2:X0,y2:Y1,stroke:css("muted"),"stroke-width":1.2},chart);
+  txt(chart,(X0+X1)/2,Y0+34,"säde r (cm)","middle",12,css("muted"));
+  txt(chart,12,(Y0+Y1)/2,"V (cm³)","middle",12,css("muted")).setAttribute("transform","rotate(-90 12 "+((Y0+Y1)/2)+")");
+  function curve(f,color){
+    var pts=[],r;
+    for(r=0;r<=RMAX+1e-9;r+=0.1){
+      var val=f(r);
+      pts.push(px(r).toFixed(1)+","+Math.max(py(val),Y1-2).toFixed(1));
+    }
+    el("polyline",{points:pts.join(" "),fill:"none",stroke:css(color),"stroke-width":2.2,"stroke-linejoin":"round"},chart);
+  }
+  curve(function(r){return Math.PI*r*r*v.h;},"cyl");
+  curve(function(r){return Math.PI*r*r*v.h/3;},"con");
+  el("circle",{cx:px(v.r),cy:py(v.vl),r:5,fill:css("cyl"),stroke:css("card"),"stroke-width":1.5},chart);
+  el("circle",{cx:px(v.r),cy:py(v.vk),r:5,fill:css("con"),stroke:css("card"),"stroke-width":1.5},chart);
+  el("line",{x1:px(v.r),y1:py(v.vl),x2:px(v.r),y2:Y0,stroke:css("muted"),"stroke-width":1,"stroke-dasharray":"3 3"},chart);
+}
+
+function readouts(v){
+  var rs=fmt(v.r,1),hs=fmt(v.h,1);
+  document.getElementById("c1").textContent="π · "+rs+"²";
+  document.getElementById("v1").textContent=fix(v.ap,2)+" cm²";
+  document.getElementById("c2").textContent="Aₚ · h = "+fix(v.ap,2)+" · "+hs;
+  document.getElementById("v2").textContent=fix(v.vl,1)+" cm³";
+  document.getElementById("c3").textContent="Aₚ · h / 3";
+  document.getElementById("v3").textContent=fix(v.vk,1)+" cm³";
+  document.getElementById("c4").textContent="V(kartio) / V(lieriö)";
+  document.getElementById("v4").textContent="1 : 3";
+  var shown=frac*v.vl;
+  document.getElementById("c5").textContent="täyttöaste "+fix(frac*100,0)+" %";
+  document.getElementById("v5").textContent=fix(shown,1)+" cm³";
+}
+
+function statusText(){
+  var s;
+  if(busy){s="Kaadetaan…";}
+  else if(pours===0){s="Kartio on täynnä vettä, lieriö tyhjä.";}
+  else if(pours<3){s="Kaadettu "+pours+" kartiollista lieriöön.";}
+  else{s="Kaadettu 3 kartiollista. Lieriö on täynnä.";}
+  document.getElementById("status").textContent=s;
+  pourBtn.disabled=busy||pours>=3;
+  emptyBtn.disabled=busy||(pours===0);
+}
+
+function render(){
+  var v=vals();
+  document.getElementById("rout").textContent=fmt(v.r,1)+" cm";
+  document.getElementById("hout").textContent=fmt(v.h,1)+" cm";
+  drawScene(v);drawChart(v);readouts(v);statusText();
+}
+
+var raf=0;
+function pour(){
+  if(busy||pours>=3){return;}
+  if(reduce){
+    pours++;frac=pours/3;q=1;render();return;
+  }
+  busy=true;
+  var t0=null,dur=1500,start=pours;
+  function step(ts){
+    if(t0===null){t0=ts;}
+    var t=Math.min((ts-t0)/dur,1);
+    var e=t<0.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+    q=1-e;
+    frac=(start+e)/3;
+    if(t>=1){
+      busy=false;pours=start+1;q=1;frac=pours/3;
+      render();return;
+    }
+    render();
+    raf=requestAnimationFrame(step);
+  }
+  render();
+  raf=requestAnimationFrame(step);
+}
+function emptyCyl(){
+  if(busy){return;}
+  pours=0;frac=0;q=1;render();
+}
+function reset(){
+  if(raf){cancelAnimationFrame(raf);raf=0;}
+  busy=false;pours=0;frac=0;q=1;
+  rEl.value="3";hEl.value="4";
+  render();
+}
+rEl.addEventListener("input",render);
+hEl.addEventListener("input",render);
+pourBtn.addEventListener("click",pour);
+emptyBtn.addEventListener("click",emptyCyl);
+document.getElementById("reset").addEventListener("click",reset);
+render();
+})();
+</script>
+</body>
+</html>

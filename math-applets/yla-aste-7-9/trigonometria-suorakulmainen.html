@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trigonometria suorakulmaisessa kolmiossa</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1c2330;--muted:#5a6475;--line:#d5dae3;--acc:#1f6feb;--opp:#d9480f;--adj:#0b7a4b;--hyp:#6f42c1;--warn:#fff4d6;--warnb:#e0b84a;}
+@media (prefers-color-scheme:dark){:root{--bg:#12161d;--card:#1b212b;--fg:#e8ecf3;--muted:#a3adbd;--line:#333c4b;--acc:#5aa2ff;--opp:#ff8a4d;--adj:#4fd18f;--hyp:#b794f6;--warn:#3a3218;--warnb:#8a7327;}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:12px 12px 24px}
+h1{font-size:1.4rem;margin:8px 0 4px}
+h2{font-size:1.05rem;margin:0 0 6px}
+p{margin:0 0 8px}
+.lead{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+svg{width:100%;height:auto;display:block}
+.ctl{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:center;margin-bottom:10px}
+.ctl label{font-weight:600}
+.ctl output{font-variant-numeric:tabular-nums;font-weight:700}
+.ctl input[type=range]{grid-column:1 / -1;width:100%}
+fieldset{border:0;padding:0;margin:0 0 10px}
+legend{font-weight:600;padding:0;margin-bottom:4px}
+.radios label{display:inline-flex;align-items:center;gap:6px;margin-right:14px;min-height:36px}
+button{font:inherit;padding:8px 14px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;min-height:40px}
+button:hover{border-color:var(--acc)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:5px 6px;border-bottom:1px solid var(--line);font-size:.95rem}
+th{color:var(--muted);font-weight:600}
+.opp{color:var(--opp);font-weight:700}.adj{color:var(--adj);font-weight:700}.hyp{color:var(--hyp);font-weight:700}
+.warn{background:var(--warn);border:1px solid var(--warnb)}
+ul{margin:0;padding-left:20px}li{margin-bottom:4px}
+footer{color:var(--muted);font-size:.85rem;margin-top:12px}
+@media (max-width:420px){th,td{font-size:.85rem;padding:4px 3px}}
+</style>
+</head>
+<body>
+<main>
+<h1>Trigonometria suorakulmaisessa kolmiossa</h1>
+<p class="lead">Sinin, kosinin ja tangentin arvo on sivujen suhde, ja se riippuu vain kulmasta, ei kolmion koosta.</p>
+
+<div class="card">
+<svg id="kuva" viewBox="0 0 400 310" role="img" aria-label="Suorakulmainen kolmio, jonka sivut on väritetty valitun kulman mukaan"></svg>
+</div>
+
+<div class="card">
+<div class="ctl">
+<label for="kulma">Kulma A</label><output id="kulmaO"></output>
+<input type="range" id="kulma" min="5" max="85" step="1" value="35">
+</div>
+<div class="ctl">
+<label for="koko">Hypotenuusan pituus c</label><output id="kokoO"></output>
+<input type="range" id="koko" min="2" max="10" step="0.5" value="8">
+</div>
+<fieldset class="radios">
+<legend>Tarkasteltava kulma θ</legend>
+<label><input type="radio" name="teeta" value="A" checked> kulma A (vasen alakulma)</label>
+<label><input type="radio" name="teeta" value="B"> kulma B (yläkulma)</label>
+</fieldset>
+<button type="button" id="nollaa">Nollaa</button>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<table>
+<tr><th>Suure</th><th>Arvo</th></tr>
+<tr><td>Kulma θ</td><td id="rTheta"></td></tr>
+<tr><td><span class="opp">Vastainen kateetti</span></td><td id="rOpp"></td></tr>
+<tr><td><span class="adj">Viereinen kateetti</span></td><td id="rAdj"></td></tr>
+<tr><td><span class="hyp">Hypotenuusa</span></td><td id="rHyp"></td></tr>
+<tr><td>sin θ = vastainen / hypotenuusa</td><td id="rSin"></td></tr>
+<tr><td>cos θ = viereinen / hypotenuusa</td><td id="rCos"></td></tr>
+<tr><td>tan θ = vastainen / viereinen</td><td id="rTan"></td></tr>
+</table>
+<p style="margin-top:8px" class="lead" id="rLask"></p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ul>
+<li>Pidä kulma A ennallaan ja muuta hypotenuusan pituutta c. Mitkä lukemat muuttuvat ja mitkä eivät?</li>
+<li>Vaihda tarkasteltavaksi kulmaksi B. Mitkä sivut vaihtavat roolia? Mitä tapahtuu sinin ja kosinin arvoille?</li>
+<li>Etsi kulma A, jolla tan θ = 1. Miltä kolmio silloin näyttää ja miksi?</li>
+</ul>
+</div>
+
+<div class="card warn">
+<h2>Varo virhekäsitystä</h2>
+<p>Vastainen ja viereinen kateetti sekoittuvat helposti, ja monen mielestä suhde muuttuu, kun kolmio suurenee. Sivujen nimet riippuvat siitä, mitä kulmaa tarkastellaan: vaihda kulmaa A ja B ja seuraa värejä. Muuta sitten kokoa: sivut muuttuvat, mutta niiden suhteet eivät.</p>
+</div>
+
+<footer>Taso: yläkoulu 7-9 · Käsite: sini, kosini ja tangentti suorakulmaisessa kolmiossa</footer>
+</main>
+
+<script>
+(function(){
+var NS="http://www.w3.org/2000/svg";
+var el=function(id){return document.getElementById(id)};
+var svg=el("kuva");
+var S=24; // px / cm
+function f(x,d){var s=(Math.round(x*Math.pow(10,d))/Math.pow(10,d)).toFixed(d);if(s.indexOf("-0")===0&&parseFloat(s)===0)s=s.slice(1);return s.replace(".",",");}
+function fnum(x,d){return f(x,d)}
+function mk(name,attrs,text){var e=document.createElementNS(NS,name);for(var k in attrs)e.setAttribute(k,attrs[k]);if(text!==undefined)e.textContent=text;svg.appendChild(e);return e;}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim();}
+function state(){
+  var a=parseInt(el("kulma").value,10),c=parseFloat(el("koko").value);
+  var B=document.querySelector('input[name=teeta]:checked').value==="B";
+  var thetaDeg=B?90-a:a;
+  var rad=a*Math.PI/180;
+  var adjA=c*Math.cos(rad), oppA=c*Math.sin(rad); // A:n suhteen viereinen (vaaka) ja vastainen (pysty)
+  return {a:a,c:c,B:B,theta:thetaDeg,
+    opp:B?adjA:oppA, adj:B?oppA:adjA, horiz:adjA, vert:oppA};
+}
+function draw(){
+  var s=state();
+  while(svg.firstChild)svg.removeChild(svg.firstChild);
+  var cOpp=css("--opp"),cAdj=css("--adj"),cHyp=css("--hyp"),cFg=css("--fg"),cMut=css("--muted");
+  var ox=30,oy=270; // A
+  var w=s.horiz*S,h=s.vert*S;
+  var Ax=ox,Ay=oy,Cx=ox+w,Cy=oy,Bx=ox+w,By=oy-h;
+  // kolmion täyttö
+  mk("polygon",{points:Ax+","+Ay+" "+Cx+","+Cy+" "+Bx+","+By,fill:cMut,"fill-opacity":"0.08",stroke:"none"});
+  var horizCol=s.B?cOpp:cAdj, vertCol=s.B?cAdj:cOpp;
+  mk("line",{x1:Ax,y1:Ay,x2:Cx,y2:Cy,stroke:horizCol,"stroke-width":5,"stroke-linecap":"round"});
+  mk("line",{x1:Cx,y1:Cy,x2:Bx,y2:By,stroke:vertCol,"stroke-width":5,"stroke-linecap":"round"});
+  mk("line",{x1:Ax,y1:Ay,x2:Bx,y2:By,stroke:cHyp,"stroke-width":5,"stroke-linecap":"round"});
+  // suorakulman merkki
+  var q=Math.min(14,w*0.4,h*0.4);
+  if(q>3)mk("polyline",{points:(Cx-q)+","+Cy+" "+(Cx-q)+","+(Cy-q)+" "+Cx+","+(Cy-q),fill:"none",stroke:cFg,"stroke-width":1.5});
+  // kulmakaari valitulle kulmalle
+  var rr=Math.min(34,Math.max(16,w*0.35,0));
+  var aRad=s.a*Math.PI/180;
+  if(!s.B){
+    var r=Math.min(rr,w*0.6);
+    mk("path",{d:"M "+(Ax+r)+" "+Ay+" A "+r+" "+r+" 0 0 0 "+(Ax+r*Math.cos(aRad))+" "+(Ay-r*Math.sin(aRad)),fill:"none",stroke:cFg,"stroke-width":2});
+    mk("text",{x:Ax+r+6,y:Ay-4,fill:cFg,"font-size":14,"font-weight":"700"},"θ");
+  }else{
+    var r2=Math.min(30,h*0.5);
+    var ang=Math.PI/2+aRad; // suunta B:stä A:han (alas vasemmalle): kulma B = 90°-a
+    // suunnat B:stä: alas (C) = -90° ja A = 180°+ (90-a)... piirretään kaari SVG-koordinaateissa
+    var dx1=0,dy1=1; // alas kohti C
+    var dxA=(Ax-Bx),dyA=(Ay-By);var L=Math.sqrt(dxA*dxA+dyA*dyA);dxA/=L;dyA/=L;
+    mk("path",{d:"M "+(Bx+r2*dx1)+" "+(By+r2*dy1)+" A "+r2+" "+r2+" 0 0 1 "+(Bx+r2*dxA)+" "+(By+r2*dyA),fill:"none",stroke:cFg,"stroke-width":2});
+    mk("text",{x:Bx-r2-16,y:By+r2+14,fill:cFg,"font-size":14,"font-weight":"700"},"θ");
+  }
+  // kärkien nimet
+  mk("text",{x:Ax-16,y:Ay+16,fill:cMut,"font-size":13},"A");
+  mk("text",{x:Bx+6,y:By-4,fill:cMut,"font-size":13},"B");
+  mk("text",{x:Cx+6,y:Cy+16,fill:cMut,"font-size":13},"C");
+  // sivujen merkinnät
+  mk("text",{x:8,y:Ay+34,"text-anchor":"start",fill:horizCol,"font-size":13,"font-weight":"700"},(s.B?"vastainen ":"viereinen ")+f(s.horiz,2)+" cm");
+  var vy=(Cy+By)/2;
+  mk("text",{x:Cx+10,y:vy-2,fill:vertCol,"font-size":13,"font-weight":"700"},s.B?"viereinen":"vastainen");
+  mk("text",{x:Cx+10,y:vy+13,fill:vertCol,"font-size":13,"font-weight":"700"},f(s.vert,2)+" cm");
+  mk("text",{x:392,y:18,"text-anchor":"end",fill:cHyp,"font-size":13,"font-weight":"700"},"hypotenuusa "+f(s.c,2)+" cm");
+}
+function readouts(){
+  var s=state();
+  el("kulmaO").textContent=s.a+"°";
+  el("kokoO").textContent=f(s.c,1)+" cm";
+  el("rTheta").textContent=s.theta+"° (kulma "+(s.B?"B":"A")+")";
+  el("rOpp").textContent=f(s.opp,2)+" cm";
+  el("rAdj").textContent=f(s.adj,2)+" cm";
+  el("rHyp").textContent=f(s.c,2)+" cm";
+  var th=s.theta*Math.PI/180;
+  var sinv=s.opp/s.c,cosv=s.adj/s.c,tanv=s.opp/s.adj;
+  el("rSin").textContent=f(s.opp,2)+" / "+f(s.c,2)+" = "+f(sinv,3);
+  el("rCos").textContent=f(s.adj,2)+" / "+f(s.c,2)+" = "+f(cosv,3);
+  el("rTan").textContent=f(s.opp,2)+" / "+f(s.adj,2)+" = "+f(tanv,3);
+  el("rLask").textContent="Laskimen arvot kulmalle "+s.theta+"°: sin = "+f(Math.sin(th),3)+", cos = "+f(Math.cos(th),3)+", tan = "+f(Math.tan(th),3)+". Suhteet lasketaan tarkoista pituuksista, joten pyöristetyistä sivuista laskettu osamäärä voi poiketa viimeisellä desimaalilla.";
+}
+function upd(){readouts();draw();}
+["kulma","koko"].forEach(function(id){el(id).addEventListener("input",upd);});
+Array.prototype.forEach.call(document.querySelectorAll("input[name=teeta]"),function(r){r.addEventListener("change",upd);});
+el("nollaa").addEventListener("click",function(){el("kulma").value=35;el("koko").value=8;document.querySelector("input[name=teeta][value=A]").checked=true;upd();});
+window.matchMedia("(prefers-color-scheme:dark)").addEventListener("change",draw);
+upd();
+})();
+</script>
+</body>
+</html>

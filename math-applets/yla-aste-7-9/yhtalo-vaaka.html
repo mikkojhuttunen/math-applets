@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yhtälö vaakana</title>
+<style>
+:root{--bg:#fafaf7;--fg:#1d2330;--muted:#5a6273;--card:#fff;--line:#c9cdd6;--accent:#1f6feb;--accentbg:#dbe8ff;--wt:#4a5060;--wtfg:#fff;--bal:#d6336c;--ok:#2b8a3e;--warn:#c92a2a;--box:#eef1f6}
+@media (prefers-color-scheme:dark){:root{--bg:#14171f;--fg:#e8eaf0;--muted:#a3aabb;--card:#1d212c;--line:#3a4152;--accent:#6ea3ff;--accentbg:#22355e;--wt:#9aa3b8;--wtfg:#14171f;--bal:#f06595;--ok:#69db7c;--warn:#ff8787;--box:#262b38}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:1.5rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:0 0 6px}
+.lead{margin:0 0 12px;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:12px}
+svg{width:100%;height:auto;display:block}
+.eq{font-size:1.5rem;text-align:center;font-weight:600;margin:4px 0;overflow-wrap:anywhere}
+.status{text-align:center;margin:2px 0 4px;min-height:1.5em;font-weight:600}
+.status.ok{color:var(--ok)}.status.bad{color:var(--warn)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}
+fieldset{border:0;margin:0;padding:0}
+legend{font-weight:600;padding:0;margin-bottom:4px}
+label.opt{display:inline-flex;align-items:center;gap:4px;margin-right:12px;min-height:36px}
+button,select{font:inherit;color:var(--fg);background:var(--box);border:1px solid var(--line);border-radius:8px;padding:6px 12px;min-height:40px;cursor:pointer}
+button:hover:not(:disabled){border-color:var(--accent)}
+button:disabled{opacity:.4;cursor:not-allowed}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+button.op{min-width:64px;font-weight:600}
+.msg{min-height:1.5em;color:var(--muted);font-size:.95rem;margin:2px 0}
+ol.log{margin:4px 0 0;padding-left:22px;font-size:.95rem}
+ol.log:empty::before{content:"Ei vielä toimituksia.";color:var(--muted);margin-left:-22px}
+.warnbox{border-left:4px solid var(--bal);background:var(--box)}
+ul{margin:4px 0;padding-left:20px}
+footer{color:var(--muted);font-size:.85rem;margin-top:8px}
+.sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<main>
+<h1>Yhtälö vaakana</h1>
+<p class="lead">Yhtälö on tasapainossa oleva vaaka: kun teet saman toimituksen molemmille puolille, tasapaino säilyy. Laatikko <b>x</b> painaa saman verran kaikkialla, punnus <b>1</b> painaa yhden ja ilmapallo nostaa yhden verran.</p>
+
+<div class="card">
+<svg id="scale" viewBox="0 0 600 340" role="img" aria-labelledby="scaleTitle">
+<title id="scaleTitle">Vaaka, jonka kupeissa on x-laatikoita ja punnuksia</title>
+<g id="stand"></g><g id="beam"></g><g id="pans"></g>
+</svg>
+<div class="eq" id="eq" aria-live="polite"></div>
+<div class="status" id="status" aria-live="polite"></div>
+</div>
+
+<div class="card">
+<fieldset>
+<legend>Kumpaan puoleen toimitus tehdään?</legend>
+<label class="opt"><input type="radio" name="side" value="both" checked> Molemmille puolille</label>
+<label class="opt"><input type="radio" name="side" value="left"> Vain vasemmalle</label>
+<label class="opt"><input type="radio" name="side" value="right"> Vain oikealle</label>
+</fieldset>
+<div class="row" role="group" aria-label="Toimitukset">
+<button class="op" id="addOne">+ 1</button>
+<button class="op" id="subOne">− 1</button>
+<button class="op" id="addX">+ x</button>
+<button class="op" id="subX">− x</button>
+</div>
+<div class="row">
+<label for="div">Jaa luvulla</label>
+<select id="div"><option>2</option><option>3</option><option>4</option><option>5</option></select>
+<button class="op" id="doDiv">Jaa</button>
+</div>
+<div class="msg" id="msg" aria-live="polite"></div>
+<div class="row">
+<button id="undo">Kumoa</button>
+<button id="reset">Nollaa</button>
+<button id="next">Uusi tehtävä</button>
+</div>
+</div>
+
+<div class="card">
+<h2>Toimitukset</h2>
+<ol class="log" id="log"></ol>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ul>
+<li>Valitse "Vain vasemmalle" ja poista yksi punnus. Mitä vaaka tekee, ja miten saat tasapainon takaisin?</li>
+<li>Ratkaise ensimmäinen tehtävä pelkillä vaa'an toimituksilla. Mitä toimituksia tarvitset ja missä järjestyksessä?</li>
+<li>Kokeile jakaa, kun vain toinen puoli on jaollinen. Miksi jakaminen ei onnistu?</li>
+</ul>
+</div>
+
+<div class="card warnbox">
+<h2>Varo virhekäsitystä</h2>
+<p>"Termi siirretään toiselle puolelle ja merkki vaihtuu" ei ole taikasääntö. Kun vähennät saman asian <b>molemmilta</b> puolilta, se katoaa toiselta puolelta ja toiselle ilmestyy vastaluku. Kokeile: jos toimit vain toiselle puolelle, vaaka kallistuu eikä yhtälö enää päde.</p>
+</div>
+<footer>Taso: yläkoulu 7-9 · Käsite: yhtälön ratkaiseminen tasapainona</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg";
+var TASKS=[
+ {p:2,q:3,r:1,s:7,x:4},
+ {p:3,q:2,r:1,s:8,x:3},
+ {p:4,q:1,r:2,s:9,x:4},
+ {p:5,q:0,r:2,s:12,x:4},
+ {p:3,q:-4,r:1,s:0,x:2},
+ {p:2,q:6,r:4,s:-2,x:4}
+];
+var ti=0,X=TASKS[0].x,st,hist=[],logArr=[];
+var CX=300,CY=150,HALF=190,MAXU=28;
+function el(n,a,parent,txt){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(txt!==undefined)e.textContent=txt;if(parent)parent.appendChild(e);return e;}
+function $(id){return document.getElementById(id);}
+function fmt(n){return String(n).replace("-","−");}
+function expr(p,q){
+ var s="";
+ if(p>0)s=(p===1?"":String(p))+"x";
+ if(q!==0){
+  if(s==="")s=fmt(q);
+  else s+=(q>0?" + "+q:" − "+(-q));
+ }
+ return s===""?"0":s;
+}
+function val(p,q){return p*X+q;}
+function side(){var r=document.getElementsByName("side");for(var i=0;i<r.length;i++)if(r[i].checked)return r[i].value;return "both";}
+function load(i){
+ ti=i;var t=TASKS[i];X=t.x;st={p:t.p,q:t.q,r:t.r,s:t.s};hist=[];logArr=[];
+ $("msg").textContent="";render();
+}
+function snapshot(){hist.push({st:{p:st.p,q:st.q,r:st.r,s:st.s},log:logArr.slice()});}
+function names(){var m=side();return m==="both"?"molemmilta puolilta":(m==="left"?"vasemmalta puolelta":"oikealta puolelta");}
+function toNames(){var m=side();return m==="both"?"molemmille puolille":(m==="left"?"vain vasemmalle":"vain oikealle");}
+function apply(fn,text,check){
+ var m=side(),L=m!=="right",R=m!=="left";
+ var msg=check?check(L,R):"";
+ if(msg){$("msg").textContent=msg;return;}
+ snapshot();fn(L,R);logArr.push(text);$("msg").textContent="";render();
+}
+function unitsRow(g,cx,py,p,q,label){
+ var items=[],i;
+ for(i=0;i<p;i++)items.push("x");
+ var w=Math.abs(q),t=q>0?"w":"b",extra=0;
+ var room=Math.max(0,MAXU-p);
+ if(w>room){extra=w-room;w=room;}
+ for(i=0;i<w;i++)items.push(t);
+ var per=7,sz=18,gap=20,x0=cx-(per*gap)/2+(gap-sz)/2;
+ items.forEach(function(k,idx){
+  var c=idx%per,r=Math.floor(idx/per),x=x0+c*gap,y=py-3-sz-r*gap;
+  if(k==="x"){el("rect",{x:x,y:y,width:sz,height:sz,rx:3,fill:"var(--accentbg)",stroke:"var(--accent)","stroke-width":1.5},g);
+   el("text",{x:x+sz/2,y:y+sz-4,"text-anchor":"middle","font-size":14,"font-weight":700,fill:"var(--accent)"},g,"x");}
+  else if(k==="w"){el("rect",{x:x,y:y,width:sz,height:sz,rx:3,fill:"var(--wt)"},g);
+   el("text",{x:x+sz/2,y:y+sz-4,"text-anchor":"middle","font-size":13,"font-weight":700,fill:"var(--wtfg)"},g,"1");}
+  else{el("line",{x1:x+sz/2,y1:y+sz,x2:x+sz/2,y2:y+sz+4,stroke:"var(--bal)","stroke-width":1.5},g);
+   el("circle",{cx:x+sz/2,cy:y+sz/2,r:sz/2-1,fill:"var(--bal)",opacity:.85},g);}
+ });
+ var rows=Math.ceil(items.length/per);
+ if(extra>0)el("text",{x:cx,y:py-6-rows*gap-4,"text-anchor":"middle","font-size":13,fill:"var(--muted)"},g,"+ "+extra+(t==="w"?" punnusta":" ilmapalloa")+" lisää");
+ if(items.length===0)el("text",{x:cx,y:py-10,"text-anchor":"middle","font-size":13,fill:"var(--muted)"},g,"tyhjä");
+}
+function draw(){
+ var d=val(st.p,st.q)-val(st.r,st.s);
+ var ang=Math.max(-14,Math.min(14,d*1.6));
+ if(d!==0&&Math.abs(ang)<3)ang=ang>0?3:-3;
+ var th=ang*Math.PI/180;
+ var lx=CX-HALF*Math.cos(th),ly=CY+HALF*Math.sin(th),rx=CX+HALF*Math.cos(th),ry=CY-HALF*Math.sin(th);
+ var stand=$("stand");stand.textContent="";
+ el("polygon",{points:CX+","+(CY)+" "+(CX-40)+",318 "+(CX+40)+",318",fill:"var(--box)",stroke:"var(--line)","stroke-width":2},stand);
+ el("rect",{x:CX-70,y:318,width:140,height:10,rx:4,fill:"var(--line)"},stand);
+ var b=$("beam");b.textContent="";
+ el("line",{x1:lx,y1:ly,x2:rx,y2:ry,stroke:"var(--fg)","stroke-width":7,"stroke-linecap":"round"},b);
+ el("circle",{cx:CX,cy:CY,r:9,fill:"var(--accent)"},b);
+ var pans=$("pans");pans.textContent="";
+ [[lx,ly,st.p,st.q],[rx,ry,st.r,st.s]].forEach(function(e){
+  var g=el("g",{},pans),py=e[1]+110;
+  el("line",{x1:e[0],y1:e[1],x2:e[0]-72,y2:py,stroke:"var(--muted)","stroke-width":1.5,opacity:.6},g);
+  el("line",{x1:e[0],y1:e[1],x2:e[0]+72,y2:py,stroke:"var(--muted)","stroke-width":1.5,opacity:.6},g);
+  el("line",{x1:e[0]-76,y1:py,x2:e[0]+76,y2:py,stroke:"var(--fg)","stroke-width":5,"stroke-linecap":"round"},g);
+  unitsRow(g,e[0],py,e[2],e[3]);
+ });
+}
+function render(){
+ draw();
+ var bal=val(st.p,st.q)===val(st.r,st.s);
+ $("eq").textContent=expr(st.p,st.q)+(bal?" = ":" ≠ ")+expr(st.r,st.s);
+ var s=$("status");
+ if(bal){
+  var sol=null;
+  if(st.p===1&&st.q===0&&st.r===0)sol=st.s;
+  else if(st.p===0&&st.q===0&&st.r===1)sol=st.s===0?0:-st.s;
+  s.className="status ok";
+  s.textContent=sol!==null?"Ratkaisu: x = "+fmt(sol)+". Sijoita se alkuperäiseen yhtälöön ja tarkista.":"Vaaka on tasapainossa.";
+ }else{
+  var v=val(st.p,st.q)-val(st.r,st.s);
+  s.className="status bad";
+  s.textContent=(v>0?"Vasen puoli on painavampi.":"Oikea puoli on painavampi.")+" Yhtälö ei enää päde.";
+ }
+ var ol=$("log");ol.textContent="";
+ logArr.forEach(function(t){var li=document.createElement("li");li.textContent=t;ol.appendChild(li);});
+ $("undo").disabled=hist.length===0;
+ $("reset").disabled=hist.length===0;
+}
+$("addOne").onclick=function(){apply(function(L,R){if(L)st.q+=1;if(R)st.s+=1;},"Lisättiin 1 "+"("+toNames()+")");};
+$("subOne").onclick=function(){apply(function(L,R){if(L)st.q-=1;if(R)st.s-=1;},"Vähennettiin 1 ("+toNames()+")");};
+$("addX").onclick=function(){apply(function(L,R){if(L)st.p+=1;if(R)st.r+=1;},"Lisättiin x ("+toNames()+")",function(L,R){return (L&&st.p>=9)||(R&&st.r>=9)?"Laatikoita voi olla enintään 9 per puoli.":"";});};
+$("subX").onclick=function(){apply(function(L,R){if(L)st.p-=1;if(R)st.r-=1;},"Vähennettiin x ("+toNames()+")",function(L,R){return (L&&st.p<1)||(R&&st.r<1)?"Puolelta ei voi poistaa x-laatikkoa, jos siinä ei ole yhtään.":"";});};
+$("doDiv").onclick=function(){
+ var k=parseInt($("div").value,10);
+ apply(function(L,R){if(L){st.p/=k;st.q/=k;}if(R){st.r/=k;st.s/=k;}},"Jaettiin luvulla "+k+" ("+toNames()+")",function(L,R){
+  var bad=(L&&(st.p%k!==0||Math.abs(st.q)%k!==0))||(R&&(st.r%k!==0||Math.abs(st.s)%k!==0));
+  return bad?"Jakaminen ei onnistu: jokaisen valitun puolen kaikkien termien pitää olla jaollisia luvulla "+k+".":"";});
+};
+$("undo").onclick=function(){if(!hist.length)return;var h=hist.pop();st=h.st;logArr=h.log;$("msg").textContent="";render();};
+$("reset").onclick=function(){load(ti);};
+$("next").onclick=function(){load((ti+1)%TASKS.length);};
+load(0);
+window.__eq={get:function(){return {p:st.p,q:st.q,r:st.r,s:st.s,x:X};}};
+})();
+</script>
+</body>
+</html>

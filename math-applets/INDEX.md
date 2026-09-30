@@ -1,0 +1,18 @@
+- [Derivaatta tangentin kulmakertoimena](lukio-pitka/derivaatta-sekantti-tangentti.html) - lukio pitkä - 2026-09-29
+- [Integraali pinta-alana (Riemannin summa)](lukio-pitka/integraali-riemannin-summa.html) - lukio pitkä - 2026-09-29
+- [Yksikköympyrä ja trigonometriset funktiot](lukio-pitka/yksikkoympyra-sini-kosini.html) - lukio pitkä - 2026-09-29
+- [Paraabeli ja toisen asteen yhtälön juuret](lukio-pitka/paraabeli-toisen-asteen-juuret.html) - lukio pitkä - 2026-09-29
+- [Suoran yhtälö ja kulmakerroin](yla-aste-7-9/suoran-yhtalo.html) - yläkoulu 7-9 - 2026-09-29
+- [Pythagoraan lause](yla-aste-7-9/pythagoras-neliot.html) - yläkoulu 7-9 - 2026-09-29
+- [Eksponenttifunktio ja logaritmi käänteisfunktioina](lukio-pitka/eksponentti-logaritmi.html) - lukio pitkä - 2026-09-29
+- [Normaalijakauma ja keskihajonta](lukio-pitka/normaalijakauma-sigma.html) - lukio pitkä - 2026-09-29
+- [Prosenttilaskenta ja kerroin](yla-aste-7-9/prosentti-kerroin.html) - yläkoulu 7-9 - 2026-09-29
+- [Vektorien summa ja komponentit](lukio-pitka/vektorien-summa.html) - lukio pitkä - 2026-09-29
+- [Negatiiviset luvut lukusuoralla](yla-aste-7-9/negatiiviset-luvut-lukusuora.html) - yläkoulu 7-9 - 2026-09-29
+- [Murtoluvulla jakaminen alueina](yla-aste-7-9/jako-murtoluvulla.html) - yläkoulu 7-9 - 2026-09-29
+- [Yhtälö vaakana](yla-aste-7-9/yhtalo-vaaka.html) - yläkoulu 7-9 - 2026-09-30
+- [Yhtälöpari suorien leikkauspisteenä](yla-aste-7-9/yhtalopari-leikkauspiste.html) - yläkoulu 7-9 - 2026-09-30
+- [Yhdenmuotoisuus ja mittakaava (k, k², k³)](yla-aste-7-9/mittakaava-pituus-ala-tilavuus.html) - yläkoulu 7-9 - 2026-09-30
+- [Trigonometria suorakulmaisessa kolmiossa](yla-aste-7-9/trigonometria-suorakulmainen.html) - yläkoulu 7-9 - 2026-09-30
+- [Kehä- ja keskuskulma sekä Thales](yla-aste-7-9/kehakulma-thales.html) - yläkoulu 7-9 - 2026-09-30
+- [Lieriön ja kartion tilavuus](yla-aste-7-9/lierio-kartio-tilavuus.html) - yläkoulu 7-9 - 2026-09-30

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mittakaava: pituus, ala ja tilavuus</title>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--fg:#1c2330;--muted:#5a6475;--line:#d5d9e2;--acc:#1b6ec2;--sq:#cfe3f8;--sq2:#f7c9a8;--cu1:#b9d4ef;--cu2:#8fb8e0;--cu3:#6a9fd0;--o1:#f8d8bf;--o2:#efb98f;--o3:#e39c66;--grid:rgba(20,40,80,.35);--warn:#fff4d6;--warnb:#d9a516}
+@media (prefers-color-scheme:dark){:root{--bg:#12161d;--card:#1b212b;--fg:#e8ecf3;--muted:#a3adbd;--line:#333c4a;--acc:#6db3ff;--sq:#25476e;--sq2:#7a4a2a;--cu1:#2c5583;--cu2:#24476e;--cu3:#1c3a5a;--o1:#8a5230;--o2:#734327;--o3:#5c351e;--grid:rgba(255,255,255,.35);--warn:#3a3116;--warnb:#a98511}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:0 0 8px}
+p{margin:0 0 8px}
+.lead{color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+.panels{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:640px){.panels{grid-template-columns:1fr}}
+svg{width:100%;height:auto;display:block}
+.ctl{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.ctl label{font-weight:600}
+input[type=range]{flex:1 1 200px;min-width:0;accent-color:var(--acc)}
+output{font-weight:700;min-width:3.5em}
+button{font:inherit;padding:6px 14px;border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:8px;cursor:pointer}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.95rem}@media (max-width:480px){table{font-size:.8rem}th,td{padding:4px 4px}}
+th,td{border:1px solid var(--line);padding:6px 8px;text-align:right}
+th:first-child,td:first-child{text-align:left}
+th{background:rgba(120,140,170,.15)}
+.bar{display:flex;align-items:center;gap:8px;margin:4px 0}
+.bar .n{width:3.2em;font-weight:600}
+.bar .t{flex:1;background:rgba(120,140,170,.15);border-radius:4px;height:18px;overflow:hidden}
+.bar .f{height:100%;background:var(--acc);min-width:2px}
+.bar .v{width:5.5em;text-align:right;font-variant-numeric:tabular-nums}
+.warn{background:var(--warn);border:1px solid var(--warnb)}
+ul{margin:0;padding-left:1.2em}
+li{margin:4px 0}
+footer{color:var(--muted);font-size:.85rem;margin:16px 0}
+.cap{font-size:.9rem;color:var(--muted);text-align:center}
+</style>
+</head>
+<body>
+<main>
+<h1>Mittakaava: pituus, ala ja tilavuus</h1>
+<p class="lead">Kun kuvio suurennetaan mittakaavassa k, pituudet kertautuvat k:lla, mutta ala ja tilavuus kertautuvat eri tavalla. Muuta k:ta ja katso.</p>
+
+<div class="card">
+  <div class="ctl">
+    <label for="k">Mittakaava k</label>
+    <input type="range" id="k" min="0.5" max="4" step="0.5" value="2">
+    <output id="kout" for="k">2</output>
+    <button type="button" id="reset">Nollaa</button>
+  </div>
+</div>
+
+<div class="panels">
+  <div class="card">
+    <h2>Neliö: yksikköneliöt (1 cm²)</h2>
+    <svg id="sq" viewBox="0 0 400 230" role="img" aria-label="Alkuperäinen neliö ja suurennettu neliö yksikköruudukolla"></svg>
+    <p class="cap" id="sqcap"></p>
+  </div>
+  <div class="card">
+    <h2>Kuutio: yksikkökuutiot (1 cm³)</h2>
+    <svg id="cu" viewBox="0 0 400 290" role="img" aria-label="Alkuperäinen kuutio ja suurennettu kuutio yksikköruudukolla"></svg>
+    <p class="cap" id="cucap"></p>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Lukemat</h2>
+  <div class="tw">
+  <table>
+    <thead><tr><th>Suure</th><th>Ennen</th><th>Jälkeen</th><th>Kerroin</th></tr></thead>
+    <tbody>
+      <tr><td>Sivun pituus</td><td id="l0"></td><td id="l1"></td><td id="lk"></td></tr>
+      <tr><td>Neliön ala</td><td id="a0"></td><td id="a1"></td><td id="ak"></td></tr>
+      <tr><td>Kuution tilavuus</td><td id="v0"></td><td id="v1"></td><td id="vk"></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div style="margin-top:10px" aria-hidden="true">
+    <div class="bar"><span class="n">k</span><span class="t"><span class="f" id="b1" style="display:block"></span></span><span class="v" id="bv1"></span></div>
+    <div class="bar"><span class="n">k²</span><span class="t"><span class="f" id="b2" style="display:block"></span></span><span class="v" id="bv2"></span></div>
+    <div class="bar"><span class="n">k³</span><span class="t"><span class="f" id="b3" style="display:block"></span></span><span class="v" id="bv3"></span></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Tutki itse</h2>
+  <ul>
+    <li>Aseta k = 2. Montako alkuperäisen kokoista neliötä mahtuu suurennettuun neliöön? Entä montako alkuperäisen kokoista kuutiota mahtuu suurennettuun kuutioon?</li>
+    <li>Millä k:n arvolla neliön ala on 9-kertainen alkuperäiseen verrattuna? Mikä on silloin tilavuuden kerroin?</li>
+    <li>Aseta k = 0,5. Mitä tapahtuu pituudelle, alalle ja tilavuudelle? Ovatko ne kaikki "puolet" alkuperäisestä?</li>
+  </ul>
+</div>
+
+<div class="card warn">
+  <h2>Varo virhekäsitystä</h2>
+  <p>"Kaksinkertainen pituus tarkoittaa kaksinkertaista pinta-alaa ja tilavuutta." Aseta k = 2 ja vertaa kertoimia: pituuden kerroin on 2, mutta alan ja tilavuuden kertoimet ovat eri luvut. Katso myös, montako yksikköneliötä ja -kuutiota kuvaan tulee.</p>
+</div>
+
+<footer>Yläkoulu 7-9 · Yhdenmuotoisuus ja mittakaava (k, k², k³)</footer>
+</main>
+<script>
+(function(){
+"use strict";
+var SIDE=2;
+var NS="http://www.w3.org/2000/svg";
+var kEl=document.getElementById("k");
+function fmt(x,maxd){
+  var s=(Math.round(x*Math.pow(10,maxd))/Math.pow(10,maxd)).toFixed(maxd);
+  if(s.indexOf(".")>=0){s=s.replace(/0+$/,"").replace(/\.$/,"");}
+  return s.replace(".",",");
+}
+function css(n){return "var(--"+n+")";}
+function el(name,attrs,parent){
+  var e=document.createElementNS(NS,name);
+  for(var a in attrs){e.setAttribute(a,attrs[a]);}
+  if(parent){parent.appendChild(e);}
+  return e;
+}
+function line(p,x1,y1,x2,y2){
+  el("line",{x1:x1,y1:y1,x2:x2,y2:y2,stroke:css("grid"),"stroke-width":1},p);
+}
+function text(p,x,y,t,anchor){
+  var e=el("text",{x:x,y:y,"text-anchor":anchor||"middle","font-size":13,fill:css("fg")},p);
+  e.textContent=t;
+}
+function drawSquare(p,x,yBottom,n,u,fill){
+  var s=n*u,y=yBottom-s,i;
+  el("rect",{x:x,y:y,width:s,height:s,fill:css(fill),stroke:css("fg"),"stroke-width":1.5},p);
+  for(i=1;i<n;i++){line(p,x+i*u,y,x+i*u,y+s);line(p,x,y+i*u,x+s,y+i*u);}
+}
+function drawCube(p,x,yBottom,n,u,cols){
+  var dx=0.4*u,dy=0.3*u;
+  function P(a,b,c){return [x+a*u+c*dx,yBottom-b*u-c*dy];}
+  function poly(pts,fill){
+    el("polygon",{points:pts.map(function(q){return q[0]+","+q[1];}).join(" "),fill:css(fill),stroke:css("fg"),"stroke-width":1.5,"stroke-linejoin":"round"},p);
+  }
+  var i,a,b;
+  poly([P(0,0,0),P(n,0,0),P(n,n,0),P(0,n,0)],cols[0]);
+  poly([P(0,n,0),P(n,n,0),P(n,n,n),P(0,n,n)],cols[1]);
+  poly([P(n,0,0),P(n,0,n),P(n,n,n),P(n,n,0)],cols[2]);
+  for(i=1;i<n;i++){
+    a=P(i,0,0);b=P(i,n,0);line(p,a[0],a[1],b[0],b[1]);
+    a=P(0,i,0);b=P(n,i,0);line(p,a[0],a[1],b[0],b[1]);
+    a=P(i,n,0);b=P(i,n,n);line(p,a[0],a[1],b[0],b[1]);
+    a=P(0,n,i);b=P(n,n,i);line(p,a[0],a[1],b[0],b[1]);
+    a=P(n,i,0);b=P(n,i,n);line(p,a[0],a[1],b[0],b[1]);
+    a=P(n,0,i);b=P(n,n,i);line(p,a[0],a[1],b[0],b[1]);
+  }
+}
+function render(){
+  var k10=Math.round(parseFloat(kEl.value)*10);
+  var k=k10/10;
+  var n=SIDE*k10/10;
+  var area0=SIDE*SIDE,vol0=SIDE*SIDE*SIDE;
+  var area1=SIDE*SIDE*k10*k10/100,vol1=SIDE*SIDE*SIDE*k10*k10*k10/1000;
+  document.getElementById("kout").textContent=fmt(k,1);
+  document.getElementById("l0").textContent=fmt(SIDE,0)+" cm";
+  document.getElementById("l1").textContent=fmt(n,1)+" cm";
+  document.getElementById("lk").textContent="k = "+fmt(k,1);
+  document.getElementById("a0").textContent=fmt(area0,0)+" cm²";
+  document.getElementById("a1").textContent=fmt(area1,2)+" cm²";
+  document.getElementById("ak").textContent="k² = "+fmt(k*k,2);
+  document.getElementById("v0").textContent=fmt(vol0,0)+" cm³";
+  document.getElementById("v1").textContent=fmt(vol1,3)+" cm³";
+  document.getElementById("vk").textContent="k³ = "+fmt(k*k*k,3);
+  var k2=k10*k10/100,k3=k10*k10*k10/1000;
+  var vals=[k,k2,k3];
+  for(var i=0;i<3;i++){
+    document.getElementById("b"+(i+1)).style.width=Math.max(vals[i]/64*100,0.5)+"%";
+    document.getElementById("bv"+(i+1)).textContent=fmt(vals[i],3);
+  }
+  var sq=document.getElementById("sq");
+  while(sq.firstChild){sq.removeChild(sq.firstChild);}
+  var u=24;
+  var nn=Math.round(n);
+  if(n===Math.floor(n)){
+    drawSquare(sq,10,200,SIDE,u,"sq2");
+    drawSquare(sq,100,200,nn,u,"sq");
+  }else{
+    drawSquare(sq,10,200,SIDE,u,"sq2");
+    var s=n*u;
+    el("rect",{x:100,y:200-s,width:s,height:s,fill:css("sq"),stroke:css("fg"),"stroke-width":1.5},sq);
+    var j;
+    for(j=1;j<n;j++){line(sq,100+j*u,200-s,100+j*u,200);line(sq,100,200-j*u,100+s,200-j*u);}
+  }
+  text(sq,10+SIDE*u/2,218,"2 cm");
+  text(sq,100+n*u/2,218,fmt(n,1)+" cm");
+  var cu=document.getElementById("cu");
+  while(cu.firstChild){cu.removeChild(cu.firstChild);}
+  drawCube(cu,10,262,SIDE,u,["o1","o2","o3"]);
+  if(n===Math.floor(n)){
+    drawCube(cu,100,262,nn,u,["cu1","cu2","cu3"]);
+  }else{
+    drawCubeFrac(cu,100,262,n,u);
+  }
+  text(cu,10+SIDE*u/2,281,"2 cm");
+  text(cu,100+n*u/2,281,fmt(n,1)+" cm");
+  document.getElementById("sqcap").textContent="Alkuperäisessä on "+fmt(area0,0)+" yksikköneliötä, suurennoksessa "+fmt(area1,2)+" (ruudukossa "+fmt(n,1)+" × "+fmt(n,1)+").";
+  document.getElementById("cucap").textContent="Alkuperäisessä on "+fmt(vol0,0)+" yksikkökuutiota, suurennoksessa "+fmt(vol1,3)+".";
+}
+function drawCubeFrac(p,x,yBottom,n,u){
+  var dx=0.4*u,dy=0.3*u;
+  function P(a,b,c){return [x+a*u+c*dx,yBottom-b*u-c*dy];}
+  function poly(pts,fill){
+    el("polygon",{points:pts.map(function(q){return q[0]+","+q[1];}).join(" "),fill:css(fill),stroke:css("fg"),"stroke-width":1.5,"stroke-linejoin":"round"},p);
+  }
+  poly([P(0,0,0),P(n,0,0),P(n,n,0),P(0,n,0)],"cu1");
+  poly([P(0,n,0),P(n,n,0),P(n,n,n),P(0,n,n)],"cu2");
+  poly([P(n,0,0),P(n,0,n),P(n,n,n),P(n,n,0)],"cu3");
+  var i,a,b;
+  for(i=1;i<n;i++){
+    a=P(i,0,0);b=P(i,n,0);line(p,a[0],a[1],b[0],b[1]);
+    a=P(0,i,0);b=P(n,i,0);line(p,a[0],a[1],b[0],b[1]);
+    a=P(i,n,0);b=P(i,n,n);line(p,a[0],a[1],b[0],b[1]);
+    a=P(0,n,i);b=P(n,n,i);line(p,a[0],a[1],b[0],b[1]);
+    a=P(n,i,0);b=P(n,i,n);line(p,a[0],a[1],b[0],b[1]);
+    a=P(n,0,i);b=P(n,n,i);line(p,a[0],a[1],b[0],b[1]);
+  }
+}
+kEl.addEventListener("input",render);
+document.getElementById("reset").addEventListener("click",function(){kEl.value="2";render();});
+render();
+})();
+</script>
+</body>
+</html>
