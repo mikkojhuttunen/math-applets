@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Adding fractions with different denominators</title>
+<title>Murtolukujen yhteenlasku eri nimittäjillä</title>
 <style>
   :root{
     --paper:#fdfdfb;
@@ -263,21 +263,21 @@
 <a href="../index.html" style="display:inline-block;margin:14px 0 4px;font-size:0.82rem;color:inherit;opacity:0.7;text-decoration:underline;">&larr; Kaikki appletit</a>
 
 <div class="sheet">
-  <h1>Adding fractions with different denominators</h1>
-  <p class="sub">Enter two fractions to see why you need a common denominator before adding &mdash; and watch the pieces get re-cut and combined.</p>
+  <h1>Murtolukujen yhteenlasku eri nimittäjillä</h1>
+  <p class="sub">Kirjoita kaksi murtolukua ja katso, miksi ne pitää laventaa samannimisiksi ennen yhteenlaskua. Palat jaetaan uudelleen ja yhdistetään.</p>
 
   <div class="panel">
     <div class="input-row">
       <div class="fraction-io">
-        <input id="n1" type="text" inputmode="numeric" value="1" aria-label="First numerator">
+        <input id="n1" type="text" inputmode="numeric" value="1" aria-label="Ensimmäisen murtoluvun osoittaja">
         <div class="frac-rule"></div>
-        <input id="d1" type="text" inputmode="numeric" value="3" aria-label="First denominator">
+        <input id="d1" type="text" inputmode="numeric" value="3" aria-label="Ensimmäisen murtoluvun nimittäjä">
       </div>
       <span class="op-symbol">+</span>
       <div class="fraction-io">
-        <input id="n2" type="text" inputmode="numeric" value="1" aria-label="Second numerator">
+        <input id="n2" type="text" inputmode="numeric" value="1" aria-label="Toisen murtoluvun osoittaja">
         <div class="frac-rule"></div>
-        <input id="d2" type="text" inputmode="numeric" value="2" aria-label="Second denominator">
+        <input id="d2" type="text" inputmode="numeric" value="2" aria-label="Toisen murtoluvun nimittäjä">
       </div>
       <span class="op-symbol">=</span>
       <div class="result-frac">
@@ -287,11 +287,11 @@
       </div>
     </div>
     <div class="go-row" style="gap:12px;">
-      <button id="visualizeBtn">Visualize</button>
-      <button id="randomizeBtn" type="button">New example</button>
+      <button id="visualizeBtn">Näytä</button>
+      <button id="randomizeBtn" type="button">Uusi esimerkki</button>
     </div>
     <div class="options-row">
-      <label><input type="checkbox" id="simplifyToggle" checked>Simplify final answer</label>
+      <label><input type="checkbox" id="simplifyToggle" checked>Supista vastaus</label>
     </div>
     <p class="error" id="errorMsg"></p>
   </div>
@@ -310,12 +310,12 @@
     <p class="explain" id="explainText"></p>
 
     <div class="options-row" style="margin-top:16px;">
-      <label><input type="checkbox" id="animToggle" checked>Animate line changes between steps</label>
+      <label><input type="checkbox" id="animToggle" checked>Näytä muutokset animaationa</label>
     </div>
 
     <div class="nav-row">
-      <button id="prevBtn">Back</button>
-      <button id="nextBtn">Next</button>
+      <button id="prevBtn">Edellinen</button>
+      <button id="nextBtn">Seuraava</button>
     </div>
   </div>
 </div>
@@ -377,24 +377,24 @@ function parseAndValidate(){
   errBox.textContent = '';
 
   if([n1,d1,n2,d2].some(v => !Number.isFinite(v))){
-    errBox.textContent = 'Enter whole numbers in every box.';
+    errBox.textContent = 'Kirjoita jokaiseen ruutuun kokonaisluku.';
     return null;
   }
   if(d1 <= 0 || d2 <= 0){
-    errBox.textContent = 'Denominators must be greater than zero.';
+    errBox.textContent = 'Nimittäjän pitää olla suurempi kuin nolla.';
     return null;
   }
   if(n1 < 0 || n2 < 0){
-    errBox.textContent = 'Use positive numerators.';
+    errBox.textContent = 'Osoittaja ei voi olla negatiivinen.';
     return null;
   }
   if(n1 > d1 * 4 || n2 > d2 * 4){
-    errBox.textContent = 'Try smaller numerators so the bars stay readable.';
+    errBox.textContent = 'Kokeile pienempiä osoittajia, jotta palkit pysyvät selkeinä.';
     return null;
   }
   const L = lcm(d1, d2);
   if(L > 24){
-    errBox.textContent = 'That denominator pair makes bars too fine to read here \u2014 try smaller numbers (denominators up to about 12 work well).';
+    errBox.textContent = 'Näillä nimittäjillä palat jäisivät liian pieniksi. Kokeile pienempiä lukuja (nimittäjät noin 12:een asti toimivat hyvin).';
     return null;
   }
   return {n1,d1,n2,d2,L};
@@ -453,9 +453,9 @@ function renderStep(){
   }
 
   const labels = [
-    'Step 1 \u00b7 different-sized pieces',
-    'Step 2 \u00b7 re-cut to a common denominator',
-    'Step 3 \u00b7 add the pieces'
+    'Vaihe 1 \u00b7 erikokoiset palat',
+    'Vaihe 2 \u00b7 lavennetaan samannimisiksi',
+    'Vaihe 3 \u00b7 lasketaan palat yhteen'
   ];
   document.getElementById('stepLabel').textContent = labels[step];
 
@@ -463,7 +463,7 @@ function renderStep(){
     content.appendChild(makeBarRow(s.d1, 0, s.n1));
     const cap1 = document.createElement('p');
     cap1.className = 'bar-caption';
-    cap1.textContent = s.n1 + '/' + s.d1 + ' shaded, cut into ' + s.d1 + ' equal piece' + (s.d1===1?'':'s') + '.';
+    cap1.textContent = s.n1 + '/' + s.d1 + ' väritetty, palkki on jaettu ' + s.d1 + (s.d1===1?' osaan.':' yhtä suureen osaan.');
     content.appendChild(cap1);
 
     const row2 = makeBarRow(s.d2, 0, s.n2);
@@ -471,12 +471,14 @@ function renderStep(){
     content.appendChild(row2);
     const cap2 = document.createElement('p');
     cap2.className = 'bar-caption';
-    cap2.textContent = s.n2 + '/' + s.d2 + ' shaded, cut into ' + s.d2 + ' equal piece' + (s.d2===1?'':'s') + '.';
+    cap2.textContent = s.n2 + '/' + s.d2 + ' väritetty, palkki on jaettu ' + s.d2 + (s.d2===1?' osaan.':' yhtä suureen osaan.');
     content.appendChild(cap2);
 
     document.getElementById('explainText').innerHTML =
-      'The two bars are the same length, but sliced into different numbers of pieces. ' +
-      'A third and a half are not the same size, so the shaded amounts can\u2019t be added directly yet.';
+      (s.d1 === s.d2
+        ? 'Palkit ovat yhtä pitkiä ja jaettu yhtä moneen osaan, joten palat ovat jo samankokoisia.'
+        : 'Palkit ovat yhtä pitkiä, mutta ne on jaettu eri määrään osia. ' +
+          'Palat 1/' + s.d1 + ' ja 1/' + s.d2 + ' ovat erikokoisia, joten väritettyjä osia ei voi vielä laskea suoraan yhteen.');
   }
 
   if(step === 1){
@@ -495,8 +497,8 @@ function renderStep(){
     content.appendChild(cap2);
 
     document.getElementById('explainText').innerHTML =
-      'Both bars are now cut into <b>' + s.L + '</b> equal pieces \u2014 the least common denominator. ' +
-      'The shaded amount hasn\u2019t changed, only how finely each bar is sliced. Now the pieces are the same size.';
+      'Molemmat palkit on nyt jaettu <b>' + s.L + '</b> yhtä suureen osaan. ' + s.L + ' on pienin yhteinen nimittäjä. ' +
+      'Väritetyn osan määrä ei muuttunut, vain palojen koko. Nyt palat ovat samankokoisia.';
   }
 
   if(step === 2){
@@ -514,9 +516,9 @@ function renderStep(){
     content.appendChild(cap);
 
     document.getElementById('explainText').innerHTML =
-      'With matching pieces, the shaded parts simply combine: ' +
+      'Kun palat ovat samankokoisia, väritetyt osat voi yhdistää: ' +
       s.n1 + '/' + s.d1 + ' + ' + s.n2 + '/' + s.d2 + ' = ' + finalNum + '/' + finalDen +
-      (simplifyEnabled && r.simplifiedDen !== s.L ? ' (simplified to lowest terms).' : '.');
+      (simplifyEnabled && r.simplifiedDen !== s.L ? ' (supistettu).' : '.');
   }
 
   if(animEnabled){
@@ -524,7 +526,7 @@ function renderStep(){
   }
 
   document.getElementById('prevBtn').disabled = (step === 0);
-  document.getElementById('nextBtn').textContent = (step === 2 ? 'Done' : 'Next');
+  document.getElementById('nextBtn').textContent = (step === 2 ? 'Valmis' : 'Seuraava');
   document.getElementById('nextBtn').disabled = (step === 2);
 }
 

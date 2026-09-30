@@ -1,0 +1,163 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Avaa sulut ja sievennä: 5(x + 7)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "5x + 35",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "5x + 7",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin 5 kertoo myös sulun jälkimmäisen termin."
+          },
+          {
+            "match": "5x − 35",
+            "misconception": "ALG-07",
+            "feedback": "Tarkista jälkimmäisen termin merkki kertolaskun jälkeen."
+          }
+        ],
+        "input_hint": "Kirjoita esim. 2x + 6"
+      },
+      "solution": {
+        "steps": [
+          "5 · x + 5 · (7)",
+          "5x + 35"
+        ],
+        "final": "5x + 35"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "example_alg08_ne",
+        "params": {
+          "a": 5,
+          "b": 7,
+          "c": 1,
+          "sign": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-NE-002",
+      "type": "NE",
+      "status": "approved",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Avaa sulut ja sievennä: 8(x − 4)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "8x − 32",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "8x − 4",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin 8 kertoo myös sulun jälkimmäisen termin."
+          },
+          {
+            "match": "8x + 32",
+            "misconception": "ALG-07",
+            "feedback": "Tarkista jälkimmäisen termin merkki kertolaskun jälkeen."
+          }
+        ],
+        "input_hint": "Kirjoita esim. 2x + 6"
+      },
+      "solution": {
+        "steps": [
+          "8 · x + 8 · (-4)",
+          "8x − 32"
+        ],
+        "final": "8x − 32"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "example_alg08_ne",
+        "params": {
+          "a": 8,
+          "b": 4,
+          "c": 1,
+          "sign": -1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

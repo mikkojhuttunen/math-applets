@@ -1,0 +1,14 @@
+{
+  "name": "math-applets-telegram-bot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Telegram bot serving the math-applets material in Finnish. No AI calls.",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
