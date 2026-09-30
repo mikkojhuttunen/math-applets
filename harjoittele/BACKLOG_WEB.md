@@ -70,12 +70,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `js/items.js`: `loadItems(manifestUrl, {includeDrafts})` returns `{items, skipped, errors}`. Supported now: 1-6 `numeric_entry` and `choice`, 7-9 `NE` (answer kinds number, set, expression) and `MC`. Skipped with a reason: other types, items with `prompt.figure`, duplicate ids, a choice answer that is not exactly one option, and drafts unless `includeDrafts` (WD2). A file that fails to load is reported and the rest still load. 1-6 answers stay as typed text (`{kind: 'typed'}`) for W04 to parse; 1-6 misconception answers have `feedback: null` until W05 supplies the texts, while 7-9 items bring their own Finnish feedback. 7 new tests, including all 40 real items. Browser check: `loadItems` in Chromium against `python3 -m http.server` gives 40 items with drafts, 0 without.
 
 ### W04 Answer checking
-- State: todo
+- State: done
 - Needs: W01
 - What: `js/answers.js`: normalise a typed answer (spaces, decimal comma or point, U+2212 or hyphen minus, fractions `3/4`, mixed numbers `1 1/2`, trailing units) and compare with the item's answer: `correct`, `wrong` or `unreadable`. Must agree with the Python checkers (`math-misconceptions` schema and backlog section 1.3; `grades1-6/tools/exercise_pipeline/verify_items.py`). Taken over from bot task B05.
 - Test: table of inputs, plus every `answer` and every misconception answer in the real banks must parse.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.4.0
+- Notes: `js/answers.js`: `checkAnswer(item, typed)` and `checkChoice(item, optionId)` return `{result, misconception, feedback, ambiguous}`, like `classify()` in `buggy_rules.py` (one matching stored wrong answer gives its misconception, two or more give `ambiguous`). Numbers are exact BigInt fractions; `parseNumber` gives the same result as `buggy_rules.parse_answer` on 24 shared inputs (checked by running both), and also accepts thousands spaces (`1 000`) and known units (`5 cm`, `12 €`, `90°`; a list, so `2x` is not read as 2). Sets accept `2; −3`, `2 tai −3`, `x = 2, x = −3` (comma needs a following space, since `2,5` is a decimal). Expressions: a small parser (implicit multiplication, `²`, `·`, `÷`, single-letter variables) compared at the item's samples plus the extra points of `verify.py`'s POOL; at least 3 valid points needed. 12 new tests, including every answer and stored wrong answer of the 40 real items and the example generator's 7-9 items.
 
 ### W05 Misconception feedback texts
 - State: todo
@@ -181,3 +181,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | W01 | Skeleton, v0.1.0 |
 | 2026-09-30 | W02 | Manifest, v0.2.0: 2 files, 40 draft items |
 | 2026-09-30 | W03 | Item loader, v0.3.0: 40 items load, all draft |
+| 2026-09-30 | W04 | Answer checking, v0.4.0: agrees with parse_answer on 24 inputs |
