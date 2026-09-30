@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.6.0 (2026-09-30)
+
+- W06: practice round of five on `index.html`: number pad, two tries, misconception feedback, correct answer after the second try, summary. Draft preview with `?luonnokset=1`. `js/round.js`, `tools/browser_test.js`.
+
 ## 0.5.0 (2026-09-30)
 
 - W05: Finnish feedback texts for 54 misconceptions (`data/misconceptions_fi.json`, all draft), English reference extracted from the item bank (`tools/extract_misconceptions.py`), lookup in `js/misconceptions.js`.

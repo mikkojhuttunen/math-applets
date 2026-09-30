@@ -51,3 +51,54 @@ button {
   cursor: pointer;
 }
 footer { color: var(--dim); font-size: .85rem; margin-top: 32px; }
+
+.banner {
+  background: #fff4d6;
+  color: #5c4300;
+  border: 1px solid #e0b040;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: .9rem;
+}
+@media (prefers-color-scheme: dark) {
+  .banner { background: #3a3218; color: #f5dc9a; border-color: #8a6d1c; }
+}
+.meta { color: var(--dim); font-size: .8rem; margin: 4px 0; }
+.progress { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--dim); font-size: .9rem; }
+.dots { display: flex; gap: 6px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; border: 1px solid var(--line); }
+.dot.done { background: var(--dim); border-color: var(--dim); }
+.dot.now { background: var(--link); border-color: var(--link); }
+.stem { font-size: 1.6rem; font-weight: 600; margin: 16px 0; font-variant-numeric: tabular-nums; }
+.answer-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.answer {
+  flex: 1 1 160px;
+  min-width: 0;
+  font: inherit;
+  font-size: 1.4rem;
+  padding: 8px 12px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+}
+.answer:focus { outline: none; border-color: var(--link); }
+button.primary { background: var(--link); border-color: var(--link); color: #fff; font-weight: 600; }
+@media (prefers-color-scheme: dark) { button.primary { color: #16161a; } }
+button:disabled { opacity: .45; cursor: default; }
+.pad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 320px; margin: 12px 0; }
+.key { font-size: 1.3rem; min-height: 52px; padding: 0; }
+.options { display: grid; gap: 8px; }
+.option { text-align: left; font-size: 1.2rem; min-height: 52px; }
+.feedback { margin-top: 12px; }
+.msg { margin: 6px 0; }
+.msg.ok { color: var(--ok); font-weight: 600; }
+.msg.bad { border-left: 4px solid var(--bad); padding-left: 10px; }
+.msg.info { color: var(--dim); }
+.steps { margin: 6px 0; padding-left: 1.4rem; }
+.results { list-style: none; padding: 0; }
+.results li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+.results .mark { font-weight: 700; }
+.results .ok .mark { color: var(--ok); }
+.results .bad .mark { color: var(--bad); }
+h2 { font-size: 1.3rem; margin: 0 0 4px; }

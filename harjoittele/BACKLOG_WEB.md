@@ -22,7 +22,7 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 
 1. `cd harjoittele && npm test` passes offline (unit tests with `node:test`, no dependencies).
 2. The page works when served locally: `python3 -m http.server` from the repo root, then open `http://localhost:8000/harjoittele/`. (`file://` does not allow the data fetches.)
-3. The browser check (from W13 on) passes: no console errors, no requests to other origins, Finnish number format.
+3. The browser check passes: `NODE_PATH=$(npm root -g) node tools/browser_test.js` prints `BROWSER TEST OK` (no console errors, no requests to other origins, no `NaN`, no horizontal scroll). W13 turns it into a general page check and a CI workflow.
 4. The ground rules above still hold.
 5. `CHANGELOG.md` in this folder has a line for the change.
 
@@ -86,12 +86,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: Split in two files. `tools/extract_misconceptions.py` (standard library only, reads the xlsx as zip/XML) writes `data/misconceptions_source.json`: the English reference for 54 ids (42 from the xlsx sheet, 9 `EXT-` topics from section 3.2 of the 7-9 backlog, 3 sub-variants `NUM-10a`-`c` from `buggy_rules.RULES`). `data/misconceptions_fi.json` is written by hand: per id `name_fi`, `pupil` (what went wrong and one hint, never the answer, at most 220 characters), `teacher` (the typical error with the xlsx example, and a classroom idea), `applets` (existing applet paths) and `status: draft`. `js/misconceptions.js`: `feedbackFor()` falls back from a sub-variant to its parent and returns draft texts only with `includeDrafts`, like exercises under WD2. MEA-02 and EXT-07 describe the same error (noted in both teacher texts). Six new tests: same ids in both files, Finnish number format, lengths, applet paths exist, every misconception used by the banks has a text, source file up to date. **Teacher review needed:** set `status` to `reviewed` per entry; until then pupils see the general hint.
 
 ### W06 Practice round, typed answers
-- State: todo
+- State: done
 - Needs: W03, W04, W05, WD1, WD2
 - What: the practice page: a round of 5 items, a large answer field with an on-screen number pad for tablets, "Tarkista" button. A wrong answer that matches one of the item's misconception answers shows that misconception's feedback; any other wrong answer gets a general hint and a second try; after the second try the correct answer is shown. Summary at the end ("4/5 oikein") with "Uusi kierros". Nothing stored (WD1).
 - Test: browser test of a full round, including a misconception answer, an unreadable answer and the summary.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.6.0
+- Notes: `js/round.js` (pure, unit-tested) runs a round of 5: unreadable answers do not use a try; the first wrong answer shows the item's own feedback (7-9), else the misconception text from W05, else a general hint; the second wrong answer reveals the correct answer (and `solution.steps` when present); summary counts correct and first-try answers. Choice items already work through the same flow (buttons; a wrongly chosen option is disabled), so W07 only has to add shuffling and keyboard checks. `js/main.js` renders it: large answer field, on-screen number pad (0-9, `,`, `−`, `/`, space, delete, clear; `x ( ) +` added for expression answers; pad taps keep the cursor), Enter submits, feedback directly under the field so it stays visible on a 375 × 667 phone, `aria-live` feedback. DOM built with `textContent` only. Nothing stored. **Draft preview** `?luonnokset=1` (WD2): drafts and draft feedback texts, a yellow LUONNOS banner, item id and misconception id shown; without it pupils currently see "no reviewed exercises yet". Bug found by the browser test and fixed: after the second wrong answer `current()` returned null and the reveal crashed. Tests: 9 unit tests for the round; `tools/browser_test.js` (Playwright, run separately) plays a full draft round in Chromium at 360 px: unreadable answer, misconception answer, reveal, number-pad input with delete, Enter, summary 4/5, new round; plus pupil view, no console errors, no foreign requests, no NaN, no horizontal scroll, `lang="fi"`. Screenshots checked in light and dark.
 
 ### W07 Choice items
 - State: todo
@@ -183,3 +183,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | W03 | Item loader, v0.3.0: 40 items load, all draft |
 | 2026-09-30 | W04 | Answer checking, v0.4.0: agrees with parse_answer on 24 inputs |
 | 2026-09-30 | W05 | Finnish texts for 54 misconceptions, all draft, v0.5.0 |
+| 2026-09-30 | W06 | Practice round with number pad, draft preview, v0.6.0; browser test OK |

@@ -6,7 +6,7 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 
 | Path | Role |
 |---|---|
-| `index.html` | Practice page (pupils) |
+| `index.html` | Practice page (pupils); `?luonnokset=1` previews drafts |
 | `css/style.css` | Shared styles, light and dark |
 | `js/` | ES modules loaded directly by the browser, no build step |
 | `data/manifest.json` | List of exercise files and counts, built by `tools/build_manifest.js` |
@@ -26,7 +26,14 @@ cd ..
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000/harjoittele/`.
+Then open `http://localhost:8000/harjoittele/`. All exercises are drafts for now, so use `http://localhost:8000/harjoittele/?luonnokset=1` to try a round.
+
+Browser test (Chromium through Playwright, which is not a dependency of this folder):
+
+```
+cd harjoittele
+NODE_PATH=$(npm root -g) node tools/browser_test.js
+```
 
 ## Reviewing the Finnish feedback texts
 
