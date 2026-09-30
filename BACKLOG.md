@@ -83,14 +83,14 @@ Pohja:
 - Huomiot: Tarkistuslaskut (sovelluksen lukemat vs. käsin): (1) a = 3, b = 4, C = 90° → a² = 9, b² = 16, summa 25, c² = 25, c = 5. (2) a = 5, b = 8, C = 90° → 25 + 64 = 89 = c², c ≈ 9,43. Kulma ≠ 90° (kosinilause c² = a² + b² − 2ab·cos C): a = 5, b = 8, C = 60° → 89 − 40 = 49, c = 7 (a² + b² suurempi, erotus −40); C = 120° → 89 + 40 = 129, c ≈ 11,36 (c² suurempi, erotus +40). Ääritapaukset: a = b = 1, C = 30° → c² ≈ 0,27; a = b = 8, C = 150° → c² ≈ 238,85; ei konsolivirheitä; 360 px ja 1000 px leveällä näytöllä sekä vaaleassa että tummassa teemassa ei sivuttaisvieritystä (Chromium, kuvakaappaus katsottu 360 px). Sivut a ja b ovat välillä 1,0–8,0 (askel 0,1), kulma C välillä 30°–150° (askel 1°). Kolmion ja neliöiden mittakaava on kiinteä, joten neliöiden koko vastaa oikeita pituuksia säätäessä. Suora kulma tunnistetaan täsmälleen C = 90° (ei liukulukuvertailua). Tutki itse -vastaukset opettajalle: (1) Kun C = 90°, a² + b² = c² kaikilla a:n ja b:n arvoilla; neliöiden pinta-alojen summa täsmää aina. (2) Kun C < 90°, c² on pienempi kuin a² + b² (kolmio "sulkeutuu" nopeammin); kun C > 90°, c² on suurempi kuin a² + b². (3) Yhtälö a² + b² = c² pätee vain kulmalla C = 90°, koska c² = a² + b² − 2ab·cos C ja ab > 0, joten 2ab·cos C = 0 vain kun cos C = 0. Useampaa kulmaa ei löydy. Tarkistettava: appletissa ei väitetä mitään opetussuunnitelman sisällöistä; opettajan on arvioitava, onko kulman muuttaminen ja "ei suora kulma" -vertailu sopivassa kohdassa yläkoulun kurssia (kosinilausetta appletissa ei mainita, se on vain taustalaskenta). Kulma-alue 30°–150° on oma valinta. Pythagoraan lauseen käänteislause (jos a² + b² = c², kolmio on suorakulmainen) ei ole erikseen esillä. Testattu vain Chromiumilla, ei kosketuslaitteella; ei vedettäviä pisteitä, vain liukusäätimet.
 
 ## 07 Eksponenttifunktio ja logaritmi käänteisfunktioina
-- Tila: odottaa
+- Tila: valmis
 - Taso: lukio pitkä
 - Tavoite: a^x ja log_a x ovat peilikuvia suoran y = x suhteen
 - Yleinen virhekäsitys: logaritmi on "vain laskusääntö"; kantaluvun vaikutus
 - Interaktio: kantaluvun a valinta, pisteen vetäminen ja peilikuva
-- Tiedosto:
-- Valmistui:
-- Huomiot:
+- Tiedosto: lukio-pitka/eksponentti-logaritmi.html
+- Valmistui: 2026-09-29
+- Huomiot: Tehty ennen ajastettua putkea (commit 84e0408); tila ja tiedot kirjattu jälkikäteen 2026-09-30. Tarkistuslaskut (sovelluksen lukemat vs. käsin): a = 2, x = 1,5 → 2^1,5 = 2√2 ≈ 2,828, P(1,5; 2,828), Q(2,828; 1,5), log₂ 2,828 = 1,5. a = 0,5, x = −2 → 0,5^(−2) = 4, P(−2; 4), Q(4; −2), molemmat kuvaajat laskevia. a = 5, x = 0,5 → √5 ≈ 2,236. Sovelluksen lukemat samat. a = 1 → lukemat "–" ja selitys, ettei käänteisfunktiota ole. scripts/check_applet.js: CHECK OK (360 px ja 1000 px, vaalea ja tumma, säätimien ääripäät; Chromium). Kantaluku a ∈ [0,2; 5,0] askelin 0,1, x ∈ [−4; 4] askelin 0,1. VIRHE: pikavalinta "a = 10" asettaa a = 5,0 (liukusäätimen maksimi on 50 → 5,0), joten painikkeen teksti ei vastaa arvoa; korjaa joko painike (esim. "a = 5") tai laajenna säätimen aluetta. Tutki itse -vastaukset opettajalle: (1) P = (x; aˣ) ja Q = (aˣ; x): koordinaatit vaihtavat paikkaa, eli Q on P:n peilikuva suoran y = x suhteen. (2) Pisteet (0; 1) ja (1; a) ovat aina y = aˣ:llä, (1; 0) ja (a; 1) aina y = log_a x:llä; kun 0 < a < 1, molemmat kuvaajat ovat laskevia. (3) aˣ > 0 kaikilla x, joten log_a x on määritelty vain kun x > 0. Tarkistettava: Tutki itse -vastauksia ja kurssitasoa ei ole tarkistettu käsin sivulta; kosketuslaitteella ei testattu.
 
 ## 08 Normaalijakauma ja keskihajonta
 - Tila: odottaa
@@ -103,14 +103,14 @@ Pohja:
 - Huomiot:
 
 ## 09 Prosenttilaskenta ja kerroin
-- Tila: odottaa
+- Tila: valmis
 - Taso: yläkoulu 7-9
 - Tavoite: prosentin muutos kertoimena; peräkkäiset muutokset
 - Yleinen virhekäsitys: +20 % ja sitten -20 % palauttaa alkuarvon
 - Interaktio: alkuarvo ja muutokset liukusäätimillä, palkkikaavio ja kerroin näkyvät
-- Tiedosto:
-- Valmistui:
-- Huomiot:
+- Tiedosto: yla-aste-7-9/prosentti-kerroin.html
+- Valmistui: 2026-09-29
+- Huomiot: Tehty ennen ajastettua putkea (commit 9246732); tila ja tiedot kirjattu jälkikäteen 2026-09-30. Tarkistuslaskut (sovelluksen lukemat vs. käsin): 100, +20 %, −20 % → 100 · 1,20 = 120, 120 · 0,80 = 96, kokonaiskerroin 1,20 · 0,80 = 0,96 (ei 1,00). 250, −50 %, +100 % → 125, sitten 250, kerroin 0,50 · 2,00 = 1,00. 10, −90 %, −90 % → 1, sitten 0,10, kerroin 0,01. Sovelluksen lukemat samat. scripts/check_applet.js: CHECK OK (360 px ja 1000 px, vaalea ja tumma, säätimien ääripäät; Chromium). Alkuarvo 10–1000 askelin 10, muutokset −90 %…+100 % askelin 1 %. Tarkistettava: Tutki itse -vastauksia ei ole kirjattu; kosketuslaitteella ei testattu.
 
 ## 10 Vektorien summa ja komponentit
 - Tila: odottaa
