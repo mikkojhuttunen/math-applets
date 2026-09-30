@@ -128,6 +128,7 @@ class Fractions(unittest.TestCase):
             it = make_fraction_compare_item(rng)
             b, d = it["params"]["b"], it["params"]["d"]
             self.assertEqual(it["answer"], f"1/{min(b, d)}")
+            self.assertIn(f"1/{b}", it["stem_fi"])  # the stem names both fractions, so stems are unique
             self.assertEqual(classify(it, f"1/{max(b, d)}"), {"status": "matched", "rules": ["NUM-12"]})
 
 

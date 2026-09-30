@@ -1,0 +1,24 @@
+# Runs the unit tests and the exercise verifier on every pull request that touches exercises or tools.
+# Check that the action versions below are current before relying on them.
+name: verify-exercises
+on:
+  pull_request:
+    paths:
+      - "exercises/**"
+      - "tools/**"
+      - "data/curriculum/**"
+      - "BACKLOG_1-6.md"
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests, buggy rules
+        run: python -m unittest discover -s tools/buggy_rules
+      - name: Unit tests, exercise pipeline
+        run: python -m unittest discover -s tools/exercise_pipeline
+      - name: Verify every exercise file
+        run: python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"
