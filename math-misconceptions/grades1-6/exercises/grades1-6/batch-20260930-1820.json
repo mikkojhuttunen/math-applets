@@ -1,0 +1,502 @@
+[
+  {
+    "id": "A36.S2.04-sub-20260930-1820-001",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 916 − 140.",
+    "answer": "776",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "916 - 140",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "836"
+      },
+      "NUM-10b": {
+        "answer": "736"
+      },
+      "NUM-10c": {
+        "answer": "876"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-004",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 942 − 613.",
+    "answer": "329",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "942 - 613",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "331"
+      },
+      "NUM-10b": {
+        "answer": "321"
+      },
+      "NUM-10c": {
+        "answer": "339"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-007",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 791 − 245.",
+    "answer": "546",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "791 - 245",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "554"
+      },
+      "NUM-10b": {
+        "answer": "544"
+      },
+      "NUM-10c": {
+        "answer": "556"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-010",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 724 − 183.",
+    "answer": "541",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "724 - 183",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "661"
+      },
+      "NUM-10b": {
+        "answer": "561"
+      },
+      "NUM-10c": {
+        "answer": "641"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-013",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 848 − 455.",
+    "answer": "393",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "848 - 455",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "413"
+      },
+      "NUM-10b": {
+        "answer": "313"
+      },
+      "NUM-10c": {
+        "answer": "493"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-016",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 716 − 434.",
+    "answer": "282",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "716 - 434",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "322"
+      },
+      "NUM-10b": {
+        "answer": "222"
+      },
+      "NUM-10c": {
+        "answer": "382"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-019",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 520 − 447.",
+    "answer": "73",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "520 - 447",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "127"
+      },
+      "NUM-10b": {
+        "answer": "37"
+      },
+      "NUM-10c": {
+        "answer": "183"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-022",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 942 − 367.",
+    "answer": "575",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "942 - 367",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "625"
+      },
+      "NUM-10b": {
+        "answer": "535"
+      },
+      "NUM-10c": {
+        "answer": "685"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-025",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 947 − 353.",
+    "answer": "594",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "947 - 353",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "614"
+      },
+      "NUM-10b": {
+        "answer": "514"
+      },
+      "NUM-10c": {
+        "answer": "694"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-028",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 821 − 152.",
+    "answer": "669",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "821 - 152",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "731"
+      },
+      "NUM-10b": {
+        "answer": "641"
+      },
+      "NUM-10c": {
+        "answer": "779"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-031",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 465 − 291.",
+    "answer": "174",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "465 - 291",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "234"
+      },
+      "NUM-10b": {
+        "answer": "134"
+      },
+      "NUM-10c": {
+        "answer": "274"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-034",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 120 − 107.",
+    "answer": "13",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "120 - 107",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "27"
+      },
+      "NUM-10b": {
+        "answer": "17"
+      },
+      "NUM-10c": {
+        "answer": "23"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-037",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 844 − 295.",
+    "answer": "549",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "844 - 295",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "651"
+      },
+      "NUM-10b": {
+        "answer": "561"
+      },
+      "NUM-10c": {
+        "answer": "659"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-040",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 956 − 591.",
+    "answer": "365",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "956 - 591",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "445"
+      },
+      "NUM-10b": {
+        "answer": "345"
+      },
+      "NUM-10c": {
+        "answer": "465"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-043",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 206 − 136.",
+    "answer": "70",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "206 - 136",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "130"
+      },
+      "NUM-10b": {
+        "answer": "30"
+      },
+      "NUM-10c": {
+        "answer": "170"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-046",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 341 − 327.",
+    "answer": "14",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "341 - 327",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "26"
+      },
+      "NUM-10b": {
+        "answer": "16"
+      },
+      "NUM-10c": {
+        "answer": "24"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-049",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 753 − 157.",
+    "answer": "596",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "753 - 157",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "604"
+      },
+      "NUM-10b": {
+        "answer": "514"
+      },
+      "NUM-10c": {
+        "answer": "606"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-051",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 578 − 296.",
+    "answer": "282",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "578 - 296",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "322"
+      },
+      "NUM-10b": {
+        "answer": "222"
+      },
+      "NUM-10c": {
+        "answer": "382"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-054",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 800 − 290.",
+    "answer": "510",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "800 - 290",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "690"
+      },
+      "NUM-10b": {
+        "answer": "590"
+      },
+      "NUM-10c": {
+        "answer": "610"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-057",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 919 − 780.",
+    "answer": "139",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "919 - 780",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "279"
+      },
+      "NUM-10b": {
+        "answer": "179"
+      },
+      "NUM-10c": {
+        "answer": "239"
+      }
+    }
+  }
+]
