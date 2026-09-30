@@ -78,12 +78,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `js/answers.js`: `checkAnswer(item, typed)` and `checkChoice(item, optionId)` return `{result, misconception, feedback, ambiguous}`, like `classify()` in `buggy_rules.py` (one matching stored wrong answer gives its misconception, two or more give `ambiguous`). Numbers are exact BigInt fractions; `parseNumber` gives the same result as `buggy_rules.parse_answer` on 24 shared inputs (checked by running both), and also accepts thousands spaces (`1 000`) and known units (`5 cm`, `12 €`, `90°`; a list, so `2x` is not read as 2). Sets accept `2; −3`, `2 tai −3`, `x = 2, x = −3` (comma needs a following space, since `2,5` is a decimal). Expressions: a small parser (implicit multiplication, `²`, `·`, `÷`, single-letter variables) compared at the item's samples plus the extra points of `verify.py`'s POOL; at least 3 valid points needed. 12 new tests, including every answer and stored wrong answer of the 40 real items and the example generator's 7-9 items.
 
 ### W05 Misconception feedback texts
-- State: todo
+- State: done
 - Needs: W01
 - What: `tools/build_misconceptions.py` turns the `Misconceptions` sheet of `math-misconceptions/sources/math_misconceptions_item_bank.xlsx` and the sub-variants in `grades1-6/tools/buggy_rules/buggy_rules.py` (for example `NUM-10a`) into `data/misconceptions_fi.json`: id → short Finnish feedback for the pupil (what went wrong, one hint, no full solution) and a note for the teacher. The xlsx descriptions are in English, so the Finnish texts are written here and marked `draft` until the teacher reviews them. Taken over from bot task B06.
 - Test: every misconception id used in the banks has an entry.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.5.0
+- Notes: Split in two files. `tools/extract_misconceptions.py` (standard library only, reads the xlsx as zip/XML) writes `data/misconceptions_source.json`: the English reference for 54 ids (42 from the xlsx sheet, 9 `EXT-` topics from section 3.2 of the 7-9 backlog, 3 sub-variants `NUM-10a`-`c` from `buggy_rules.RULES`). `data/misconceptions_fi.json` is written by hand: per id `name_fi`, `pupil` (what went wrong and one hint, never the answer, at most 220 characters), `teacher` (the typical error with the xlsx example, and a classroom idea), `applets` (existing applet paths) and `status: draft`. `js/misconceptions.js`: `feedbackFor()` falls back from a sub-variant to its parent and returns draft texts only with `includeDrafts`, like exercises under WD2. MEA-02 and EXT-07 describe the same error (noted in both teacher texts). Six new tests: same ids in both files, Finnish number format, lengths, applet paths exist, every misconception used by the banks has a text, source file up to date. **Teacher review needed:** set `status` to `reviewed` per entry; until then pupils see the general hint.
 
 ### W06 Practice round, typed answers
 - State: todo
@@ -182,3 +182,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | W02 | Manifest, v0.2.0: 2 files, 40 draft items |
 | 2026-09-30 | W03 | Item loader, v0.3.0: 40 items load, all draft |
 | 2026-09-30 | W04 | Answer checking, v0.4.0: agrees with parse_answer on 24 inputs |
+| 2026-09-30 | W05 | Finnish texts for 54 misconceptions, all draft, v0.5.0 |

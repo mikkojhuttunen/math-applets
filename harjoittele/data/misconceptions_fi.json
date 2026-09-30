@@ -1,0 +1,397 @@
+{
+  "schema_version": 1,
+  "note": "Finnish feedback per misconception. pupil: shown after a wrong answer (what went wrong and one hint, never the answer). teacher: note for the teacher view. status: draft until the teacher reviews the text, then reviewed. English source: misconceptions_source.json.",
+  "misconceptions": {
+    "ALG-01": {
+      "name_fi": "Kirjain esineen nimenä",
+      "pupil": "Kirjain ei tarkoita esinettä vaan lukua. Esimerkiksi a voi olla omenoiden lukumäärä. Mieti, mitä luku a tarkoittaa tässä tehtävässä.",
+      "teacher": "Oppilas lukee kirjaimen esineen lyhenteeksi (a = omena) eikä lukumääräksi. Kysy, mitä luku a kertoo, ja sijoita a:n paikalle lukuja.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-02": {
+      "name_fi": "Eri kirjaimilla oltava eri arvot",
+      "pupil": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kokeile, voiko molempien kirjainten paikalle sijoittaa saman luvun niin, että yhtälö pitää paikkansa.",
+      "teacher": "Oppilas pitää kirjainta yhden luvun kiinteänä nimenä, joten kaksi kirjainta ei hänestä voi saada samaa arvoa. Näytä esimerkki, jossa c = d toteuttaa yhtälön c + d = 10.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-03": {
+      "name_fi": "Kirjaimen arvo aakkosjärjestyksestä",
+      "pupil": "Kirjaimen arvo ei tule sen paikasta aakkosissa. Kirjain on tuntematon luku, joka selviää yhtälöstä. Mikä luku kirjaimen paikalla tekee yhtälöstä totta?",
+      "teacher": "Oppilas antaa kirjaimelle arvon aakkosjärjestyksen mukaan (n = 14) eikä ratkaise yhtälöä. Korosta, että sama kirjain voi saada eri tehtävissä eri arvoja.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-04": {
+      "name_fi": "Termit yhdistetään väkisin yhdeksi",
+      "pupil": "Vain samanlaiset termit voi laskea yhteen. Kirjaintermi ja pelkkä luku ovat erilaisia, joten niitä ei voi yhdistää. Joskus lauseke on jo valmis.",
+      "teacher": "Oppilas kokee, ettei lauseke ole valmis ennen kuin se on yksi termi (3x + 8 → 11x). Tarkistus sijoittamalla: x = 2 antaa 14 ja 22.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-05": {
+      "name_fi": "2a luetaan kuin kaksinumeroinen luku",
+      "pupil": "2a tarkoittaa 2 · a eli kaksi kertaa a. Sijoita a:n arvo ja kerro.",
+      "teacher": "Oppilas lukee kertoimen ja kirjaimen kuin kymmenjärjestelmän numerot (a = 5 → 2a = 25). Kirjoita kertomerkki näkyviin: 2 · a.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-06": {
+      "name_fi": "Yhtäsuuruusmerkki luetaan ”vastaus tulee tähän”",
+      "pupil": "Yhtäsuuruusmerkki tarkoittaa, että molemmilla puolilla on yhtä paljon. Laske ensin vasen puoli. Mikä luku oikealla tekee siitä yhtä suuren?",
+      "teacher": "Oppilas lukee =-merkin kehotuksena kirjoittaa tulos (8 + 4 = □ + 5 → 12). Vaaka- eli tasapainomalli auttaa: kummallakin puolella on sama määrä.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-07": {
+      "name_fi": "Etumerkki ei vaihdu siirrossa",
+      "pupil": "Kun termi siirretään yhtälön toiselle puolelle, sen etumerkki vaihtuu. Voit myös tehdä saman laskutoimituksen yhtälön molemmille puolille. Tarkista lopuksi sijoittamalla.",
+      "teacher": "Oppilas siirtää termin vaihtamatta etumerkkiä tai tekee toimituksen vain toiselle puolelle (3x + 5 = 20 → 3x = 25). Ohjaa tekemään sama toimitus molemmille puolille ja tarkistamaan sijoittamalla.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-08": {
+      "name_fi": "Kerroin kertoo vain sulun ensimmäisen termin",
+      "pupil": "Sulun edessä oleva kerroin kertoo jokaisen sulun sisällä olevan termin, ei vain ensimmäistä.",
+      "teacher": "Osittelulakia sovelletaan vain ensimmäiseen termiin (2(x + 3) → 2x + 3). Pinta-alamalli: suorakulmio, jonka sivut ovat 2 ja x + 3.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-09": {
+      "name_fi": "Summan neliö ilman keskitermiä",
+      "pupil": "(a + b)² tarkoittaa (a + b)(a + b). Kerro jokainen termi jokaisella, niin saat myös keskimmäisen termin.",
+      "teacher": "Potenssi jaetaan summan yli samoin kuin (ab)² = a²b² (→ a² + b²). Neliön pinta-alamalli näyttää puuttuvat kaksi suorakulmiota. Lukuesimerkki: (2 + 3)² = 25, mutta 2² + 3² = 13.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-10": {
+      "name_fi": "Sanajärjestys siirretään suoraan yhtälöön",
+      "pupil": "Älä kirjoita kirjaimia lauseen sanajärjestyksessä. Keksi luvut, jotka sopivat tilanteeseen, ja tarkista, toteuttavatko ne yhtälösi.",
+      "teacher": "Oppilas siirtää sanojen järjestyksen suoraan symboleiksi (”6 kertaa enemmän opiskelijoita S kuin professoreita P” → 6S = P). Pyydä testaamaan yhtälöä keksityillä luvuilla, esimerkiksi P = 1.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-11": {
+      "name_fi": "Miinus vaikuttaa vain sulun ensimmäiseen termiin",
+      "pupil": "Sulun edessä oleva miinus vaihtaa sulun jokaisen termin etumerkin, ei vain ensimmäisen.",
+      "teacher": "Miinusmerkki kohdistetaan vain ensimmäiseen termiin (−(x − 3) → −x − 3). Tulkitse miinus kertoimeksi −1 ja käytä osittelulakia.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-12": {
+      "name_fi": "Negatiivisen luvun vähentäminen pienentää",
+      "pupil": "Negatiivisen luvun vähentäminen kasvattaa tulosta: vähentäminen ja miinusmerkki kumoavat toisensa, eli − (−2) on sama kuin + 2.",
+      "teacher": "Luonnollisten lukujen sääntö ”vähentäminen pienentää” siirretään negatiivisiin lukuihin (5 − (−2) → 3). Lukusuoralla vähentäminen on siirtymä vastakkaiseen suuntaan.",
+      "applets": [],
+      "status": "draft"
+    },
+    "ALG-13": {
+      "name_fi": "Laskun pitää olla ennen yhtäsuuruusmerkkiä",
+      "pupil": "Yhtäsuuruusmerkki ei tarkoita ”vastaus tulee tähän”. Se kertoo, että molemmilla puolilla on yhtä paljon, joten lasku voi olla kummalla puolella tahansa.",
+      "teacher": "Oppilas hyväksyy vain muodon ”lasku = vastaus”, joten 8 = 5 + 3 on hänestä väärin. Harjoittele yhtälöitä, joissa lasku on oikealla tai molemmilla puolilla.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-01": {
+      "name_fi": "Negatiivisen luvun neliö: −3² luetaan 9:ksi",
+      "pupil": "Potenssi lasketaan ennen miinusmerkkiä: −3² = −(3²). Vain sulkeissa oleva (−3)² tarkoittaa, että myös miinus korotetaan potenssiin.",
+      "teacher": "−3² luetaan (−3)²:ksi. Korosta laskujärjestystä: potenssi ensin, ja sulkeet merkitsevät, mikä on kantaluku.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-02": {
+      "name_fi": "Potenssi lasketaan kertolaskuna eksponentilla",
+      "pupil": "Potenssi on toistettu kertolasku: 2³ = 2 · 2 · 2. Kirjoita jono 2³, 2², 2¹ ja huomaa, että joka askeleella jaetaan kahdella. Jatka jonoa samalla säännöllä.",
+      "teacher": "Oppilas kertoo kantaluvun eksponentilla (2³ = 6) tai pitää a⁰ = 0 ja 2⁻¹ = −2. Jono 2³, 2², 2¹, 2⁰, 2⁻¹, jossa jaetaan joka kerta kahdella, perustelee säännöt.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-03": {
+      "name_fi": "Epäyhtälön suunta ei käänny",
+      "pupil": "Kun epäyhtälön molemmat puolet kerrotaan tai jaetaan negatiivisella luvulla, merkin suunta kääntyy. Tarkista kokeilemalla jotakin lukua vastauksestasi.",
+      "teacher": "Epäyhtälö ratkaistaan kuin yhtälö, eikä suunta käänny negatiivisella jaettaessa (−2x > 6 → x > −3). Testaa esimerkiksi x = 0 alkuperäiseen epäyhtälöön.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-04": {
+      "name_fi": "Yhtälöstä x² = 9 vain positiivinen ratkaisu",
+      "pupil": "Myös negatiivisen luvun neliö on positiivinen. Onko toinenkin luku, jonka neliö on sama? Yhtälöllä voi olla kaksi ratkaisua.",
+      "teacher": "Oppilas antaa vain positiivisen ratkaisun (x² = 9 → x = 3). Tarkista sijoittamalla x = −3.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-05": {
+      "name_fi": "Pythagoraan lause kaikille kolmioille",
+      "pupil": "Pythagoraan lause a² + b² = c² pätee vain suorakulmaisessa kolmiossa. Tarkista ensin, onko kolmiossa suora kulma.",
+      "teacher": "Lausetta käytetään kolmioon, jossa ei ole suoraa kulmaa. Käänteislause toimii suoran kulman testinä.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-06": {
+      "name_fi": "Sini pituutena, kateetit sekaisin",
+      "pupil": "Sini on kulman vastaisen kateetin ja hypotenuusan suhde. Se on pelkkä luku ilman yksikköä. Tarkista, kumpi kateetti on kulman vastainen.",
+      "teacher": "Sini tulkitaan pituudeksi, tai vastainen ja viereinen kateetti sekoittuvat. Merkitse kulma ja kateetit kuvaan ennen suhteen kirjoittamista.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-07": {
+      "name_fi": "Pinta-alayksiköt muunnetaan pituuden kertoimella",
+      "pupil": "Neliömetri on neliö, jonka sivu on 100 cm. Kuvittele se jaettuna senttimetrin ruutuihin. Montako ruutua on yhdessä rivissä, ja montako riviä on?",
+      "teacher": "Pituusyksiköiden kerroin siirretään pinta-alaan (1 m² = 100 cm²). Sama virhe kuin MEA-02. Piirrä neliömetri ja jaa se senttimetriruutuihin: 100 riviä ja 100 saraketta.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-08": {
+      "name_fi": "Mediaani järjestämättömästä aineistosta",
+      "pupil": "Mediaani on keskimmäinen luku, kun luvut on ensin järjestetty suuruusjärjestykseen. Järjestä luvut ja katso uudelleen.",
+      "teacher": "Mediaani luetaan järjestämättömän listan keskeltä, tai keskiarvoa pidetään aina tyypillisenä arvona. Harjoittele järjestämistä ja aineistoja, joissa on poikkeava arvo.",
+      "applets": [],
+      "status": "draft"
+    },
+    "EXT-09": {
+      "name_fi": "Kulmakerroin ja vakiotermi sekaisin",
+      "pupil": "Suoran y = kx + b kulmakerroin k on x:n kerroin. Vakiotermi b kertoo, missä suora leikkaa y-akselin. Kumpi luku on x:n edessä?",
+      "teacher": "Kulmakerroin ja vakiotermi sekoittuvat (y = 3x + 1 → vakiotermi 3), tai jyrkempää suoraa pidetään aina korkeampana.",
+      "applets": [
+        "yla-aste-7-9/suoran-yhtalo.html"
+      ],
+      "status": "draft"
+    },
+    "FUN-01": {
+      "name_fi": "Kuvaaja luetaan kuvana tilanteesta",
+      "pupil": "Kuvaaja ei ole kuva maisemasta. Lue akseleista, mitä kuvaaja näyttää, ja mieti, miten suure muuttuu tilanteen eri vaiheissa.",
+      "teacher": "Nopeus–aika-kuvaaja valitaan maiseman muodon perusteella. Pyydä kuvailemaan sanoin, miten nopeus muuttuu kussakin vaiheessa, ennen kuin kuvaaja valitaan.",
+      "applets": [],
+      "status": "draft"
+    },
+    "FUN-02": {
+      "name_fi": "Kuvaajan korkeus ja jyrkkyys sekaisin",
+      "pupil": "Matka–aika-kuvaajassa nopeus näkyy kuvaajan jyrkkyytenä, ei korkeutena. Kumpi kuvaaja nousee siinä kohdassa jyrkemmin?",
+      "teacher": "Kuvaajan korkeus (kuljettu matka) sekoitetaan kulmakertoimeen (nopeus). Vertaa, kuinka paljon matka kasvaa lyhyessä ajassa.",
+      "applets": [],
+      "status": "draft"
+    },
+    "FUN-03": {
+      "name_fi": "Kulmakerroin näkyvästä jyrkkyydestä",
+      "pupil": "Kulmakerroin lasketaan luvuista: kuinka paljon y muuttuu, kun x kasvaa yhdellä. Akselien mittakaava voi saada suoran näyttämään jyrkemmältä kuin se on.",
+      "teacher": "Kulmakerroin päätellään suoran näennäisestä jyrkkyydestä, vaikka akselien mittakaavat eroavat. Laske kulmakerroin kahden pisteen koordinaateista.",
+      "applets": [],
+      "status": "draft"
+    },
+    "FUN-04": {
+      "name_fi": "Funktion pitää muuttua tai sisältää x",
+      "pupil": "Funktio liittää jokaiseen x:n arvoon täsmälleen yhden y:n arvon. Sen ei tarvitse muuttua: y = 5 antaa jokaisella x:llä arvon 5.",
+      "teacher": "Vakiofunktiota ei hyväksytä funktioksi, koska kaavassa ei ole x:ää. Palaa määritelmään ja taulukoi arvoja.",
+      "applets": [],
+      "status": "draft"
+    },
+    "FUN-05": {
+      "name_fi": "Jokainen suora on verrannollisuus",
+      "pupil": "Vain origon kautta kulkeva suora on verrannollisuus. Kokeile: laske y kahdella x:n arvolla, joista toinen on toisen kaksinkertainen. Kaksinkertaistuiko y?",
+      "teacher": "Kaikkia lineaarisia funktioita pidetään suoraan verrannollisina. Vakiotermi b ≠ 0 rikkoo verrannollisuuden: y = 2x + 3 antaa x = 1 → 5 ja x = 2 → 7.",
+      "applets": [],
+      "status": "draft"
+    },
+    "GEO-01": {
+      "name_fi": "Vain tutun näköinen kolmio on kolmio",
+      "pupil": "Kolmio on jokainen suljettu kuvio, jolla on kolme suoraa sivua, vaikka se olisi vino tai kallellaan. Laske kuvion sivut.",
+      "teacher": "Kolmion käsite on sidottu tasakylkiseen, kanta alhaalla olevaan malliin. Näytä kolmioita eri asennoissa ja muodoissa ja tarkistuta ne määritelmän avulla.",
+      "applets": [],
+      "status": "draft"
+    },
+    "GEO-02": {
+      "name_fi": "Neliö ei ole suorakulmio",
+      "pupil": "Suorakulmiossa on neljä suoraa kulmaa. Onko neliössä neljä suoraa kulmaa? Jos on, neliö on myös suorakulmio.",
+      "teacher": "Kuviot luokitellaan ulkonäön perusteella erillisiksi eikä sisäkkäisiksi luokiksi. Vertaa ominaisuuslistoja: neliöllä on kaikki suorakulmion ominaisuudet.",
+      "applets": [],
+      "status": "draft"
+    },
+    "GEO-03": {
+      "name_fi": "Kulman suuruus kylkien pituudesta",
+      "pupil": "Kulman suuruus kertoo, kuinka paljon kyljet ovat auki toisistaan. Kylkien pituus ei vaikuta kulman suuruuteen.",
+      "teacher": "Kylkien piirretty pituus sekoitetaan kulman aukeamaan. Jatka lyhyitä kylkiä viivaimella tai vertaa kulmia asettamalla ne päällekkäin.",
+      "applets": [],
+      "status": "draft"
+    },
+    "MEA-01": {
+      "name_fi": "Ruudut lasketaan yhteen eikä riveinä",
+      "pupil": "Ruudut ovat riveissä, ja jokaisessa rivissä on yhtä monta ruutua. Montako riviä on ja montako ruutua yhdessä rivissä? Kertolasku kertoo, montako ruutua on kaikkiaan.",
+      "teacher": "Rivien ja sarakkeiden rakennetta ei nähdä, joten luvut lasketaan yhteen (3 riviä, 5 saraketta → 8). Piirrä rivit näkyviin ja laske rivi kerrallaan: 5 + 5 + 5.",
+      "applets": [],
+      "status": "draft"
+    },
+    "MEA-02": {
+      "name_fi": "Pinta-alayksiköt muunnetaan pituuden kertoimella",
+      "pupil": "Neliömetri on neliö, jonka sivu on 100 cm. Kuvittele se jaettuna senttimetrin ruutuihin. Montako ruutua on yhdessä rivissä, ja montako riviä on?",
+      "teacher": "Kerroin 1 m = 100 cm käytetään sellaisenaan pinta-alaan (1 m² = 100 cm²). Sama virhe kuin EXT-07. Piirrä neliömetri ruudukoksi.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-01": {
+      "name_fi": "Pidempi desimaaliluku on suurempi",
+      "pupil": "Desimaalilukuja verrataan kohta kohdalta vasemmalta alkaen: ensin kokonaiset, sitten kymmenesosat. Numeroiden määrä pilkun jälkeen ei kerro, kumpi on suurempi.",
+      "teacher": "Desimaaliosa luetaan kokonaislukuna (0,45 > 0,6, koska 45 > 6). Täydennä nollilla samanpituisiksi (0,45 ja 0,60) tai käytä lukusuoraa.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-02": {
+      "name_fi": "Lyhyempi desimaaliluku on suurempi",
+      "pupil": "Lisää lyhyemmän luvun loppuun nolla, niin molemmissa on yhtä monta desimaalia. Vertaa sitten. Nolla lopussa ei muuta luvun arvoa.",
+      "teacher": "Lyhyempää lukua pidetään suurempana, koska kymmenesosat ovat suurempia kuin sadasosat (0,4 > 0,45). Täydennä nollilla: 0,40 ja 0,45.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-03": {
+      "name_fi": "Osoittajat ja nimittäjät yhteen erikseen",
+      "pupil": "Nimittäjä kertoo osien koon, eikä se muutu yhteenlaskussa. Samannimisissä murtoluvuissa lasketaan yhteen vain osoittajat. Jos nimittäjät ovat eri, lavenna ensin samannimisiksi.",
+      "teacher": "Osoittajat ja nimittäjät lasketaan yhteen erikseen (1/8 + 1/8 → 2/16). Tarkistus: 2/16 = 1/8, eli summa olisi yhtä suuri kuin yhteenlaskettava.",
+      "applets": [
+        "luokat-1-6/fraction_addition_applet.html"
+      ],
+      "status": "draft"
+    },
+    "NUM-04": {
+      "name_fi": "Kertolasku suurentaa aina",
+      "pupil": "Kun kerrot luvulla, joka on pienempi kuin 1, tulo on pienempi kuin alkuperäinen luku. Esimerkiksi 0,5 kertaa luku on luvun puolikas.",
+      "teacher": "Kokemus ”kertolasku suurentaa” yleistetään desimaali- ja murtolukuihin. Arvioi ennen laskemista: onko kerroin suurempi vai pienempi kuin 1?",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-05": {
+      "name_fi": "Jakolasku pienentää aina",
+      "pupil": "Kun jaat luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Mieti, montako kertaa jakaja mahtuu jaettavaan.",
+      "teacher": "Jakolaskua pidetään aina pienentävänä, tai 0,5:llä jakaminen tulkitaan puolittamiseksi (8 : 0,5 → 4). Sisältöjako: montako puolikasta mahtuu kahdeksaan?",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-06": {
+      "name_fi": "Kahden desimaaliluvun välissä ei ole lukuja",
+      "pupil": "Kahden desimaaliluvun välissä on aina lisää lukuja. Lisää loppuun nolla: 0,30 ja 0,40. Nyt väliin mahtuu esimerkiksi 0,31, ja väleihin mahtuu aina uusia lukuja.",
+      "teacher": "Desimaalilukuja pidetään erillisinä kuten kokonaislukuja. Tarkenna lukusuoraa askel kerrallaan: kymmenesosat, sadasosat, tuhannesosat.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-07": {
+      "name_fi": "Prosentti otetaan väärästä perusarvosta",
+      "pupil": "Prosentit lasketaan siitä, mihin verrataan. Jos uusi määrä on 20 % suurempi, se on 120 % alkuperäisestä, ja alkuperäinen saadaan jakamalla uusi määrä 1,2:lla.",
+      "teacher": "Prosenttiosuus otetaan uudesta määrästä (180 g on 20 % enemmän → 180 − 36 = 144). Kerroinajattelu: alkuperäinen · 1,2 = 180.",
+      "applets": [
+        "yla-aste-7-9/prosentti-kerroin.html"
+      ],
+      "status": "draft"
+    },
+    "NUM-08": {
+      "name_fi": "Nousu ja lasku kumoavat toisensa",
+      "pupil": "Toinen prosenttimuutos lasketaan uudesta, jo muuttuneesta määrästä. Kerro muutoskertoimet: nousu 10 % on kerroin 1,1 ja lasku 10 % kerroin 0,9.",
+      "teacher": "Saman prosentin nousun ja laskun oletetaan kumoavan toisensa, vaikka 1,1 · 0,9 = 0,99. Kokeile lähtöarvolla 100.",
+      "applets": [
+        "yla-aste-7-9/prosenttimuutos.html",
+        "yla-aste-7-9/prosentti-kerroin.html"
+      ],
+      "status": "draft"
+    },
+    "NUM-09": {
+      "name_fi": "Numerot luetaan ilman paikka-arvoa",
+      "pupil": "Numeron arvo riippuu sen paikasta luvussa. Onko numero ykkösten, kymmenten vai satojen paikalla? Satojen paikalla oleva 7 tarkoittaa seitsemää sataa.",
+      "teacher": "Moninumeroinen luku käsitellään erillisinä numeroina (luvussa 706 numeron 7 arvo on oppilaasta 7). Käytä satalevyjä, kymppitankoja ja ykköskuutioita sekä paikkajärjestelmätaulukkoa.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-10": {
+      "name_fi": "Vähennetään pienempi numero suuremmasta",
+      "pupil": "Jokaisessa sarakkeessa vähennetään alempi numero ylemmästä, ei toisin päin. Jos ylempi numero on pienempi, lainaa kymmenen vasemmalla olevasta sarakkeesta.",
+      "teacher": "Sarakkeessa, jossa ylempi numero on pienempi, vähennetään pienempi suuremmasta eikä lainata (453 − 127 → 334). Muunnelmat NUM-10a–c. Vaihda kymppitanko kymmeneksi ykköskuutioksi.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-10a": {
+      "name_fi": "Ei lainausta: pienempi numero suuremmasta",
+      "pupil": "Jossakin sarakkeessa ylempi numero on pienempi kuin alempi. Silloin ei vähennetä pienempää suuremmasta, vaan lainataan kymmenen vasemmalla olevasta sarakkeesta.",
+      "teacher": "Pienempi numero vähennetään suuremmasta eikä lainata lainkaan (453 − 127 → 334).",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-10b": {
+      "name_fi": "Laina vähennetty, mutta kymmen jäi lisäämättä",
+      "pupil": "Muistit pienentää vasemmalla olevaa numeroa yhdellä, mutta lainattu kymmenen jäi lisäämättä. Lisää kymmenen ylempään numeroon ja vähennä alempi numero siitä.",
+      "teacher": "Seuraava numero pienennetään yhdellä, mutta sarakkeessa vähennetään silti pienempi suuremmasta (453 − 127 → 324).",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-10c": {
+      "name_fi": "Kymmen lisätty, mutta laina jäi vähentämättä",
+      "pupil": "Lisäsit sarakkeeseen kymmenen oikein, mutta vasemmalla oleva numero jäi pienentämättä. Kun lainaat kymmenen, seuraavan sarakkeen ylempi numero pienenee yhdellä.",
+      "teacher": "Lainaus tehdään sarakkeessa (13 − 7), mutta seuraavaa numeroa ei pienennetä yhdellä (453 − 127 → 336).",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-11": {
+      "name_fi": "Kerroin alle 1 johtaa jakolaskuun",
+      "pupil": "Kertolasku sopii myös silloin, kun toinen luku on pienempi kuin 1. Arvioi ensin: pitäisikö vastauksen olla suurempi vai pienempi kuin lähtöluku?",
+      "teacher": "Kertolasku nähdään vain toistettuna yhteenlaskuna, joten alle 1:n kerroin tuntuu vaativan jakolaskua (0,5 m, 4 €/m → 4 : 0,5 = 8 €). Taulukoi hinta pituuksille 3 m, 2 m, 1 m ja 0,5 m.",
+      "applets": [],
+      "status": "draft"
+    },
+    "NUM-12": {
+      "name_fi": "Suurempi nimittäjä, suurempi murtoluku",
+      "pupil": "Nimittäjä kertoo, moneenko yhtä suureen osaan kokonainen on jaettu. Mitä useampaan osaan jaetaan, sitä pienempiä osat ovat.",
+      "teacher": "Kokonaislukujen järjestys siirretään nimittäjiin (1/8 > 1/4, koska 8 > 4). Pizza- tai palkkimalli näyttää osien koon.",
+      "applets": [
+        "luokat-1-6/fraction_addition_applet.html"
+      ],
+      "status": "draft"
+    },
+    "NUM-13": {
+      "name_fi": "Kymmenellä kertominen lisää nollan",
+      "pupil": "Kun luku kerrotaan kymmenellä, jokainen numero siirtyy yhden paikan vasemmalle. Desimaaliluvun loppuun lisätty nolla ei muuta luvun arvoa.",
+      "teacher": "Sääntö ”lisää nolla” sovelletaan kirjoitettuihin numeroihin (3,5 · 10 → 3,50). Paikkajärjestelmätaulukossa numerot siirtyvät ja pilkku pysyy paikallaan.",
+      "applets": [],
+      "status": "draft"
+    },
+    "PRB-01": {
+      "name_fi": "Pelurin harhaluulo",
+      "pupil": "Kolikko tai noppa ei muista aiempia heittoja. Jokaisella heitolla todennäköisyys on sama kuin ennenkin.",
+      "teacher": "Aiempien tulosten uskotaan vaikuttavan seuraavaan (neljä kruunaa peräkkäin, joten nyt olisi klaavan vuoro). Toista kokeita ja tarkastele pitkiä sarjoja.",
+      "applets": [
+        "yla-aste-7-9/kolikko-ja-noppa.html"
+      ],
+      "status": "draft"
+    },
+    "PRB-02": {
+      "name_fi": "Enemmän suotuisia, suurempi todennäköisyys",
+      "pupil": "Todennäköisyys riippuu osuudesta, ei lukumäärästä. Laske kummastakin purkista, kuinka suuri osa kuulista on mustia.",
+      "teacher": "Absoluuttista määrää käytetään osuuden sijaan (6/8 ja 3/4). Kirjoita osuudet murtolukuina ja supista.",
+      "applets": [],
+      "status": "draft"
+    },
+    "PRO-01": {
+      "name_fi": "Lineaarisuusharha: pinta-ala",
+      "pupil": "Kun neliön sivu kaksinkertaistuu, pinta-ala ei kaksinkertaistu. Piirrä: montako alkuperäistä neliötä mahtuu uuteen neliöön?",
+      "teacher": "Verrannollisuutta käytetään, vaikka riippuvuus on neliöllinen: mittakaava k, pinta-ala k². Piirrä tai laske ruutuina.",
+      "applets": [],
+      "status": "draft"
+    },
+    "PRO-02": {
+      "name_fi": "Lineaarisuusharha: tilavuus",
+      "pupil": "Kun kuution särmä kaksinkertaistuu, kuutio kasvaa kaikkiin kolmeen suuntaan. Montako alkuperäistä kuutiota mahtuu uuteen?",
+      "teacher": "Verrannollisuutta käytetään kuutiolliseen riippuvuuteen: mittakaava k, tilavuus k³. Rakenna palikoista 2 · 2 · 2 -kuutio.",
+      "applets": [],
+      "status": "draft"
+    },
+    "PRO-03": {
+      "name_fi": "Sama piiri, sama pinta-ala",
+      "pupil": "Samanpituinen piiri ei tarkoita samaa pinta-alaa. Laske kummankin kuvion pinta-ala erikseen.",
+      "teacher": "Intuitiivinen sääntö ”sama piiri, sama ala”. Rakenna ruutupaperille eri suorakulmioita, joilla on sama piiri.",
+      "applets": [],
+      "status": "draft"
+    },
+    "PRO-04": {
+      "name_fi": "Suurempi piiri, suurempi pinta-ala",
+      "pupil": "Pidempi piiri ei aina tarkoita suurempaa pinta-alaa. Kapea ja pitkä kuvio voi olla pinta-alaltaan pieni. Laske pinta-alat ennen vertailua.",
+      "teacher": "Intuitiivinen sääntö ”enemmän piiriä, enemmän alaa”. Vastaesimerkki: 10 cm · 1 cm (piiri 22 cm, ala 10 cm²) ja 4 cm · 4 cm (piiri 16 cm, ala 16 cm²).",
+      "applets": [],
+      "status": "draft"
+    }
+  }
+}

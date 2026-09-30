@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.5.0 (2026-09-30)
+
+- W05: Finnish feedback texts for 54 misconceptions (`data/misconceptions_fi.json`, all draft), English reference extracted from the item bank (`tools/extract_misconceptions.py`), lookup in `js/misconceptions.js`.
+
 ## 0.4.0 (2026-09-30)
 
 - W04: `js/answers.js` checks typed answers (numbers, fractions, sets, expressions) and choices, and finds the misconception behind a stored wrong answer.

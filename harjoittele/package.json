@@ -1,6 +1,6 @@
 {
   "name": "math-applets-harjoittele",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "description": "Static practice pages for the math-applets exercise banks. No server, no AI, nothing stored.",
   "type": "module",
