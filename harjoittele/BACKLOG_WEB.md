@@ -54,12 +54,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `index.html` shows a placeholder until W06. `js/format.js` has `formatNumber()` for later pages; a helper that rewrote decimals in whole texts was dropped because it turned ids such as `A36.S2.04` into `A36.S2,04`, and the bank texts are already in Finnish format. Checked: `npm test` (2 tests), and Playwright against `python3 -m http.server` at 360 px width: status text rendered, no console errors, no requests to other origins, no horizontal scroll.
 
 ### W02 Data manifest
-- State: todo
+- State: done
 - Needs: W01
 - What: GitHub Pages cannot list folders, so the page needs a list of exercise files. `tools/build_manifest.js` reads `math-misconceptions/grades1-6/exercises/grades1-6/batch-*.json` and `math-misconceptions/exercises/*/*.json` (the 7-9 source files; `math-misconceptions/build/` is git-ignored and not published) and writes `harjoittele/data/manifest.json`: file paths, item counts by status, goal and misconception. A test fails when the manifest is out of date, so a new batch reminds whoever merges it to rebuild.
 - Test: manifest from fixtures; staleness test against the real repo.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.2.0
+- Notes: `tools/build_manifest.js` writes `data/manifest.json` (paths relative to `harjoittele/`, counts by status, goal and misconception; no timestamps, so it only changes when the banks change). `--check` exits 1 when stale. The 7-9 source files are wrappers `{schema_version, topic, type, items}`; their items carry Finnish feedback per wrong answer in `payload.wrong`, useful for W03/W06. Fixtures: 3 real 1-6 items (one set to `reviewed`) and 2 items from `generators/example_alg08_ne.py` (one set to `approved`). Current repo: 2 files, 40 items, all draft. 4 new tests, including one that fails when the manifest is out of date.
 
 ### W03 Item loader
 - State: todo
@@ -179,3 +179,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | backlog | Created; Telegram bot paused at B01 |
 | 2026-09-30 | WD1-WD3 | Accepted: no storage in v1, pupils see reviewed items only, folder `harjoittele/` |
 | 2026-09-30 | W01 | Skeleton, v0.1.0 |
+| 2026-09-30 | W02 | Manifest, v0.2.0: 2 files, 40 draft items |
