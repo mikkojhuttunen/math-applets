@@ -7,7 +7,7 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | # | Goal | Item bank id | Type and how it is checked | Target | Have | Status | Notes |
 |---|---|---|---|---|---|---|---|
 | 1 | A36.S2.04 | NUM-10 | numeric_entry, `from_buggy_rules.py` (template `sub_multidigit_v1`) | 40 | 40 | done | Use only items where `is_diagnostic_subtraction` holds. Wrong answers NUM-10a/b/c. |
-| 2 | A36.S2.12 | NUM-03 | numeric_entry, `from_buggy_rules.py` (template `frac_add_v1`) | 40 | 0 | in progress | Answer as a fraction. |
+| 2 | A36.S2.12 | NUM-03 | numeric_entry, `from_buggy_rules.py` (template `frac_add_v1`) | 40 | 20 | in progress | Answer as a fraction. |
 | 3 | A36.S2.11 | NUM-12 | choice, `from_buggy_rules.py` (template `frac_compare_unit_v1`) | 20 | 0 | in progress | Choice items overstate errors; keep for quick checks. |
 | 4 | A12.S2.08 | ALG-06, ALG-13 | numeric_entry with `answer_expr`, or choice true/false | 30 | 0 | todo | For example `8 + 4 = □ + 5` (answer 7, expr `8 + 4 - 5`); `8 = 5 + 3` true or false. |
 | 5 | A12.S2.06 | NUM-09 | numeric_entry with `answer_expr` | 30 | 0 | todo | Value of a digit in a number, for example 706 gives 700 (expr `7 * 100`). |
