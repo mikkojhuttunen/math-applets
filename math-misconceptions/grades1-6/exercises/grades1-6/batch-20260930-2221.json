@@ -1,0 +1,472 @@
+[
+  {
+    "id": "A12.S2.08-eq-20260930-2221-001",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 8 + 4 = □ + 5",
+    "answer": "7",
+    "answer_expr": "8 + 4 - 5",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12",
+        "answer_expr": "8 + 4"
+      },
+      "ALG-06b": {
+        "answer": "17",
+        "answer_expr": "8 + 4 + 5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-002",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 6 + 5 = □ + 4",
+    "answer": "7",
+    "answer_expr": "6 + 5 - 4",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11",
+        "answer_expr": "6 + 5"
+      },
+      "ALG-06b": {
+        "answer": "15",
+        "answer_expr": "6 + 5 + 4"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-003",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 7 + 3 = □ + 6",
+    "answer": "4",
+    "answer_expr": "7 + 3 - 6",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "10",
+        "answer_expr": "7 + 3"
+      },
+      "ALG-06b": {
+        "answer": "16",
+        "answer_expr": "7 + 3 + 6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-004",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 9 + 5 = □ + 8",
+    "answer": "6",
+    "answer_expr": "9 + 5 - 8",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "14",
+        "answer_expr": "9 + 5"
+      },
+      "ALG-06b": {
+        "answer": "22",
+        "answer_expr": "9 + 5 + 8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-005",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 5 + 6 = □ + 7",
+    "answer": "4",
+    "answer_expr": "5 + 6 - 7",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11",
+        "answer_expr": "5 + 6"
+      },
+      "ALG-06b": {
+        "answer": "18",
+        "answer_expr": "5 + 6 + 7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-006",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 4 + 9 = □ + 6",
+    "answer": "7",
+    "answer_expr": "4 + 9 - 6",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13",
+        "answer_expr": "4 + 9"
+      },
+      "ALG-06b": {
+        "answer": "19",
+        "answer_expr": "4 + 9 + 6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-007",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 3 + 8 = □ + 5",
+    "answer": "6",
+    "answer_expr": "3 + 8 - 5",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11",
+        "answer_expr": "3 + 8"
+      },
+      "ALG-06b": {
+        "answer": "16",
+        "answer_expr": "3 + 8 + 5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-008",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: 10 + 4 = □ + 9",
+    "answer": "5",
+    "answer_expr": "10 + 4 - 9",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "14",
+        "answer_expr": "10 + 4"
+      },
+      "ALG-06b": {
+        "answer": "23",
+        "answer_expr": "10 + 4 + 9"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-009",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 8 = 6 + 7",
+    "answer": "5",
+    "answer_expr": "6 + 7 - 8",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13",
+        "answer_expr": "6 + 7"
+      },
+      "ALG-06b": {
+        "answer": "21",
+        "answer_expr": "6 + 7 + 8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-010",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 7 = 9 + 3",
+    "answer": "5",
+    "answer_expr": "9 + 3 - 7",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12",
+        "answer_expr": "9 + 3"
+      },
+      "ALG-06b": {
+        "answer": "19",
+        "answer_expr": "9 + 3 + 7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-011",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 4 = 5 + 8",
+    "answer": "9",
+    "answer_expr": "5 + 8 - 4",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13",
+        "answer_expr": "5 + 8"
+      },
+      "ALG-06b": {
+        "answer": "17",
+        "answer_expr": "5 + 8 + 4"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-012",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 9 = 7 + 6",
+    "answer": "4",
+    "answer_expr": "7 + 6 - 9",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13",
+        "answer_expr": "7 + 6"
+      },
+      "ALG-06b": {
+        "answer": "22",
+        "answer_expr": "7 + 6 + 9"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-013",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 5 = 4 + 7",
+    "answer": "6",
+    "answer_expr": "4 + 7 - 5",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11",
+        "answer_expr": "4 + 7"
+      },
+      "ALG-06b": {
+        "answer": "16",
+        "answer_expr": "4 + 7 + 5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-014",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 10 = 8 + 8",
+    "answer": "6",
+    "answer_expr": "8 + 8 - 10",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "16",
+        "answer_expr": "8 + 8"
+      },
+      "ALG-06b": {
+        "answer": "26",
+        "answer_expr": "8 + 8 + 10"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-015",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Täydennä luku: □ + 6 = 2 + 9",
+    "answer": "5",
+    "answer_expr": "2 + 9 - 6",
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11",
+        "answer_expr": "2 + 9"
+      },
+      "ALG-06b": {
+        "answer": "17",
+        "answer_expr": "2 + 9 + 6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-016",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: 8 = 5 + 3?",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "ALG-13"
+    ],
+    "misconceptions": {
+      "ALG-13": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-017",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: 9 = 4 + 5?",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "ALG-13"
+    ],
+    "misconceptions": {
+      "ALG-13": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-018",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: 7 = 2 + 5?",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "ALG-13"
+    ],
+    "misconceptions": {
+      "ALG-13": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-019",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: 6 = 1 + 5?",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "ALG-13"
+    ],
+    "misconceptions": {
+      "ALG-13": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eq-20260930-2221-020",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: 10 = 6 + 4?",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "ALG-13"
+    ],
+    "misconceptions": {
+      "ALG-13": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]
