@@ -1,0 +1,333 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-06",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä yhtälö 9 + 5 = x + □ siten, että sen ratkaisu on x = 10. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 10
+        },
+        "checks": {
+          "valid": [
+            "9 + 5 = x + 4",
+            "x + 4 = 9 + 5"
+          ],
+          "invalid": [
+            "9 + 5 = x",
+            "9 + 5 = x + 5",
+            "9 + 5 = x − 4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 5 = 14",
+          "x = 10, joten □ = 14 − 10 = 4",
+          "9 + 5 = x + 4"
+        ],
+        "final": "x = 10"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_rp",
+        "params": {
+          "a": 9,
+          "b": 5,
+          "c": 4,
+          "d": 3,
+          "form": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä yhtälö x + □ = 9 + 4 siten, että sen ratkaisu on x = 6. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        },
+        "checks": {
+          "valid": [
+            "x + 7 = 9 + 4",
+            "9 + 4 = x + 7"
+          ],
+          "invalid": [
+            "x = 9 + 4",
+            "x + 8 = 9 + 4",
+            "x + 9 = 4 + 7"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 4 = 13",
+          "□ = 13 − 6 = 7",
+          "x + 7 = 9 + 4"
+        ],
+        "final": "x = 6"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_rp",
+        "params": {
+          "a": 9,
+          "b": 4,
+          "c": 7,
+          "d": 4,
+          "form": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä yhtälö 9 + 5 = □ + x siten, että sen ratkaisu on x = 7. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        },
+        "checks": {
+          "valid": [
+            "9 + 5 = 7 + x",
+            "7 + x = 9 + 5"
+          ],
+          "invalid": [
+            "9 + 5 = x",
+            "9 + 5 = 8 + x",
+            "9 + 5 + 7 = x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 5 = 14",
+          "□ = 14 − 7 = 7",
+          "9 + 5 = 7 + x"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_rp",
+        "params": {
+          "a": 9,
+          "b": 5,
+          "c": 7,
+          "d": 3,
+          "form": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Täydennä yhtälö 9 − 3 = x + □ siten, että sen ratkaisu on x = 3. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        },
+        "checks": {
+          "valid": [
+            "9 − 3 = x + 3",
+            "x + 3 = 9 − 3"
+          ],
+          "invalid": [
+            "9 − 3 = x",
+            "9 − 3 = x + 4",
+            "9 − 3 = x − 3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 − 3 = 6",
+          "□ = 6 − 3 = 3",
+          "9 − 3 = x + 3"
+        ],
+        "final": "x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_rp",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 5,
+          "d": 3,
+          "form": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Vaa'an vasemmassa kupissa on 8 kg:n ja 3 kg:n painot, oikeassa kupissa 5 kg:n paino ja paino x kg. Kirjoita yhtälö, joka kuvaa tasapainoa ja jonka ratkaisu on x = 6."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        },
+        "checks": {
+          "valid": [
+            "8 + 3 = 5 + x",
+            "5 + x = 8 + 3",
+            "x = 8 + 3 − 5"
+          ],
+          "invalid": [
+            "8 + 3 = x",
+            "8 + 3 + 5 = x",
+            "8 + 3 = 5 − x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vasen kuppi: 8 + 3 = 11 kg",
+          "Oikea kuppi: 5 + x",
+          "8 + 3 = 5 + x"
+        ],
+        "final": "x = 6"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_rp",
+        "params": {
+          "a": 8,
+          "b": 3,
+          "c": 5,
+          "d": 4,
+          "form": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

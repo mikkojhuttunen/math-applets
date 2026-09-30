@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kumpi luvuista on suurempi: 0,6 vai 0,17?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,6",
+            "misconception": null,
+            "feedback": "Oikein: 0,6 = 0,60 ja sadasosina 0,60 > 0,17."
+          },
+          {
+            "id": "b",
+            "text": "0,17",
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Vertaa samoja paikka-arvoja: muuta luvut esimerkiksi sadasosiksi (0,6 = 0,60)."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          },
+          {
+            "id": "d",
+            "text": "Luvut ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,6 = 0,60",
+          "0,60 > 0,17"
+        ],
+        "final": "0,6"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_mc",
+        "params": {
+          "short": "0,6",
+          "long": "0,17",
+          "context": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kaksi lankakerää on mitattu: toisessa on 4,5 m ja toisessa 4,22 m lankaa. Kummassa kerässä on enemmän lankaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          },
+          {
+            "id": "b",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,6 = 0,60) ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "4,5 m",
+            "misconception": null,
+            "feedback": "Oikein: 4,5 = 4,50 ja sadasosina 4,50 > 4,22."
+          },
+          {
+            "id": "d",
+            "text": "4,22 m",
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Vertaa samoja paikka-arvoja: muuta luvut esimerkiksi sadasosiksi (0,6 = 0,60)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4,5 = 4,50",
+          "4,50 > 4,22"
+        ],
+        "final": "4,5"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_mc",
+        "params": {
+          "short": "4,5",
+          "long": "4,22",
+          "context": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Pituushypyssä kaksi hyppyä mitattiin tuloksiksi 3,24 m ja 3,8 m. Kumpi hyppy oli pidempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3,24 m",
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Vertaa samoja paikka-arvoja: muuta luvut esimerkiksi sadasosiksi (0,6 = 0,60)."
+          },
+          {
+            "id": "b",
+            "text": "3,8 m",
+            "misconception": null,
+            "feedback": "Oikein: 3,8 = 3,80 ja sadasosina 3,80 > 3,24."
+          },
+          {
+            "id": "c",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,6 = 0,60) ja vertaa."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3,8 = 3,80",
+          "3,80 > 3,24"
+        ],
+        "final": "3,8"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_mc",
+        "params": {
+          "short": "3,8",
+          "long": "3,24",
+          "context": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Neljän pakkauksen painot ovat 2,3 kg, 2,5 kg, 2,31 kg ja 2,14 kg. Mikä on painavimman pakkauksen paino?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2,5 kg",
+            "misconception": null,
+            "feedback": "Oikein: 2,5 on suurin, kun luvut vertaillaan samoilla paikka-arvoilla."
+          },
+          {
+            "id": "b",
+            "text": "2,3 kg",
+            "misconception": null,
+            "feedback": "Vertaa ensin kokonaisosia ja sitten desimaaleja."
+          },
+          {
+            "id": "c",
+            "text": "2,14 kg",
+            "misconception": null,
+            "feedback": "Vertaa ensin kokonaisosia ja sitten desimaaleja."
+          },
+          {
+            "id": "d",
+            "text": "2,31 kg",
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Vertaa samoja paikka-arvoja: muuta luvut esimerkiksi sadasosiksi (0,6 = 0,60)."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2,14, 2,3, 2,31, 2,5 (pienimmästä suurimpaan)"
+        ],
+        "final": "2,5"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_mc",
+        "params": {
+          "values": [
+            "2,3",
+            "2,14",
+            "2,31",
+            "2,5"
+          ],
+          "context": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-01",
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Kumpi luku on suurempi, 0,6 vai 0,53? Valitse oikea perustelu."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Luvut ovat yhtä suuret, koska molemmissa on nolla ja pilkku",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,6 = 0,60) ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "0,53 on suurempi, koska 53 > 6",
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Vertaa samoja paikka-arvoja: muuta luvut esimerkiksi sadasosiksi (0,6 = 0,60)."
+          },
+          {
+            "id": "c",
+            "text": "0,6 = 0,60 eli 60 sadasosaa, ja 60 > 53",
+            "misconception": null,
+            "feedback": "Oikein: luvut vertaillaan samoissa paikka-arvoissa."
+          },
+          {
+            "id": "d",
+            "text": "0,6 on suurempi, koska siinä on vähemmän numeroita",
+            "misconception": "NUM-02",
+            "feedback": "Tulos on oikea, mutta perustelu ei ole: numeroiden määrä ei ratkaise. Muuta luvut samoiksi paikka-arvoiksi."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,6 = 0,60",
+          "60 sadasosaa > 53 sadasosaa"
+        ],
+        "final": "0,6 > 0,53"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_mc",
+        "params": {
+          "short": "0,6",
+          "long": "0,53",
+          "justify": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,289 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-06",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "8 + 4 = x + 3",
+          "12 = x + 3",
+          "x = 12"
+        ],
+        "error_line": 3,
+        "error_type": "ignores_right_side"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: molempien puolten arvojen on oltava yhtä suuret.",
+          "Oikea ratkaisu: x = 12 − 3 = 9"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
+      },
+      "provenance": {
+        "template": "alg06_es",
+        "params": {
+          "a": 8,
+          "b": 4,
+          "c": 3,
+          "d": 3,
+          "form": "sum_left"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x + 6 = 9 + 3",
+          "x + 6 = 12",
+          "x = 12"
+        ],
+        "error_line": 3,
+        "error_type": "ignores_right_side"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: molempien puolten arvojen on oltava yhtä suuret.",
+          "Oikea ratkaisu: x = 12 − 6 = 6"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
+      },
+      "provenance": {
+        "template": "alg06_es",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 6,
+          "d": 4,
+          "form": "box_left"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "8 + 4 = 5 + x",
+          "12 = 5 + x",
+          "x = 12 + 5"
+        ],
+        "error_line": 3,
+        "error_type": "adds_instead_of_balancing"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: molempien puolten arvojen on oltava yhtä suuret.",
+          "Oikea ratkaisu: x = 12 − 5 = 7"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
+      },
+      "provenance": {
+        "template": "alg06_es",
+        "params": {
+          "a": 8,
+          "b": 4,
+          "c": 5,
+          "d": 3,
+          "form": "box_last"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "9 − 3 = x + 5",
+          "6 = x + 5",
+          "6 − 5 = x",
+          "x = 6"
+        ],
+        "error_line": 4,
+        "error_type": "ignores_right_side"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 on oikein: molempien puolten arvojen on oltava yhtä suuret.",
+          "Oikea ratkaisu: x = 6 − 5 = 1"
+        ],
+        "final": "Virhe on rivillä 4"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
+      },
+      "provenance": {
+        "template": "alg06_es",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 4,
+          "d": 5,
+          "form": "minus"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Vaa'an vasemmassa kupissa on 9 kg:n ja 3 kg:n painot, oikeassa 7 kg:n paino ja painolla x. Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "9 + 3 = 7 + x",
+          "12 = 7 + x",
+          "12 − 7 = x",
+          "x = 12 + 7"
+        ],
+        "error_line": 4,
+        "error_type": "adds_instead_of_balancing"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 on oikein: molempien puolten arvojen on oltava yhtä suuret.",
+          "Oikea ratkaisu: x = 12 − 7 = 5"
+        ],
+        "final": "Virhe on rivillä 4"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
+      },
+      "provenance": {
+        "template": "alg06_es",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 7,
+          "d": 3,
+          "form": "balance"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}
