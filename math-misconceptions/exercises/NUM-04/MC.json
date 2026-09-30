@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Onko tulo 0,25 × 8 suurempi vai pienempi kuin 8?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sitä ei voi tietää laskematta",
+            "misconception": null,
+            "feedback": "Kerroin on pienempi kuin 1, joten tuloksen suunnan voi päätellä."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä suuri kuin 8",
+            "misconception": null,
+            "feedback": "Kerroin 0,25 ei ole 1, joten tulo ei ole 8."
+          },
+          {
+            "id": "c",
+            "text": "Suurempi kuin 8",
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+          },
+          {
+            "id": "d",
+            "text": "Pienempi kuin 8",
+            "misconception": null,
+            "feedback": "Oikein: 0,25 × 8 = 2, ja 2 < 8."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,25 < 1",
+          "0,25 × 8 = 2 < 8"
+        ],
+        "final": "Pienempi kuin 8"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_mc",
+        "params": {
+          "factor": "0,25",
+          "n": 8
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Takin hinta on 80 €. Alennuksessa hinta lasketaan kertolaskulla 0,8 × 80. Miten uusi hinta eroaa vanhasta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Uusi hinta on 640 €, koska kerroin luetaan kokonaislukuna",
+            "misconception": null,
+            "feedback": "Kerroin on desimaaliluku: 0,8 on pienempi kuin 1."
+          },
+          {
+            "id": "b",
+            "text": "Uusi hinta on sama kuin vanha",
+            "misconception": null,
+            "feedback": "Kerroin ei ole 1, joten hinta muuttuu."
+          },
+          {
+            "id": "c",
+            "text": "Uusi hinta on suurempi, koska kertolasku suurentaa luvun",
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+          },
+          {
+            "id": "d",
+            "text": "Uusi hinta (64 €) on pienempi, koska kerroin 0,8 on alle 1",
+            "misconception": null,
+            "feedback": "Oikein: 0,8 × 80 = 64."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,8 × 80 = 64",
+          "64 < 80"
+        ],
+        "final": "64 €"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_mc",
+        "params": {
+          "factor": "0,8",
+          "price": 80
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista tuloista on pienempi kuin 50?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,9 × 50",
+            "misconception": null,
+            "feedback": "Oikein: 0,9 × 50 = 45 < 50."
+          },
+          {
+            "id": "b",
+            "text": "3 × 50",
+            "misconception": null,
+            "feedback": "Kerroin 3 > 1, joten tulo on suurempi kuin 50."
+          },
+          {
+            "id": "c",
+            "text": "Mikään tulo ei ole pienempi kuin 50, koska kertolasku suurentaa",
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+          },
+          {
+            "id": "d",
+            "text": "2 × 50",
+            "misconception": null,
+            "feedback": "Kerroin 2 > 1, joten tulo on suurempi kuin 50."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,9 < 1, joten 0,9 × 50 < 50"
+        ],
+        "final": "0,9 × 50"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_mc",
+        "params": {
+          "small": "0,9",
+          "n": 50,
+          "bigs": [
+            "2",
+            "3"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee 0,35 × 40 = 14 ja sanoo: \"Tulon piti olla suurempi kuin 40, joten laskin väärin.\" Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasku on väärin: tulon pitää olla suurempi kuin 40",
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+          },
+          {
+            "id": "b",
+            "text": "Lasku on oikein: 0,35 on pienempi kuin 1, joten tulo 14 on pienempi kuin 40",
+            "misconception": null,
+            "feedback": "Oikein: tulo on pienempi kuin toinen tekijä, kun kerroin on alle 1."
+          },
+          {
+            "id": "c",
+            "text": "Lasku on väärin: oikea tulo on 140",
+            "misconception": null,
+            "feedback": "Laske uudelleen: desimaalipilkun paikka pitää tarkistaa."
+          },
+          {
+            "id": "d",
+            "text": "Tuloa ei voi tarkistaa arvioimalla",
+            "misconception": null,
+            "feedback": "Arvion voi tehdä vertaamalla kerrointa lukuun 1."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,35 < 1",
+          "0,35 × 40 = 14 < 40"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_mc",
+        "params": {
+          "factor": "0,35",
+          "n": 40
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Mikä on oikea perustelu sille, että 0,25 × 4 on pienempi kuin 4?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se ei ole pienempi, koska kertolasku suurentaa aina",
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+          },
+          {
+            "id": "b",
+            "text": "0,25 × 4 on neljäsosa luvusta 4, eli 1",
+            "misconception": null,
+            "feedback": "Oikein: kertominen luvulla 0,25 ottaa neljäsosan."
+          },
+          {
+            "id": "c",
+            "text": "Se on pienempi, koska 0,25 on pienempi kuin 4",
+            "misconception": null,
+            "feedback": "Perustelu ei riitä: ratkaisevaa on, että kerroin on pienempi kuin 1."
+          },
+          {
+            "id": "d",
+            "text": "Se on yhtä suuri, koska 0,25 on vain desimaalimerkintä",
+            "misconception": null,
+            "feedback": "0,25 on neljäsosa, ei ykkönen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,25 = 1/4",
+          "0,25 × 4 = 1 = 4 / 4"
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_mc",
+        "params": {
+          "b": 4,
+          "justify": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

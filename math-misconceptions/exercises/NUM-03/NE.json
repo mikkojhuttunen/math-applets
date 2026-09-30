@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Laske 3/12 + 2/12. Kirjoita summan nimittäjä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12
+        },
+        "wrong": [
+          {
+            "match": 24,
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "3/12 + 2/12 = 5/12",
+          "Nimittäjä on 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen."
+      },
+      "provenance": {
+        "template": "num03_ne",
+        "params": {
+          "a": 3,
+          "c": 2,
+          "d": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "6/8 + 3/4 = ?/8. Kirjoita puuttuva osoittaja."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12
+        },
+        "wrong": [
+          {
+            "match": 9,
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "6/8 = 6/8, 3/4 = 6/8",
+          "6 + 6 = 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen."
+      },
+      "provenance": {
+        "template": "num03_ne",
+        "params": {
+          "denominators": [
+            8,
+            4
+          ],
+          "numerators": [
+            6,
+            3
+          ],
+          "common": 8
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Maljakkoon kaadetaan 4/8 l ja sen jälkeen 1/3 l vettä. Vettä on yhteensä ?/24 litraa. Kirjoita puuttuva osoittaja."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 20
+        },
+        "wrong": [
+          {
+            "match": 5,
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "4/8 = 12/24, 1/3 = 8/24",
+          "12 + 8 = 20"
+        ],
+        "final": "20"
+      },
+      "feedback": {
+        "correct": "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen."
+      },
+      "provenance": {
+        "template": "num03_ne",
+        "params": {
+          "denominators": [
+            8,
+            3
+          ],
+          "numerators": [
+            4,
+            1
+          ],
+          "common": 24
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Laske 3/6 + 3/12 + 1/4. Kuinka monta kokonaista summa on? Kirjoita luku."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "3/6 = 6/12, 3/12 = 3/12, 1/4 = 3/12",
+          "Yhteensä 12/12 = 1"
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen."
+      },
+      "provenance": {
+        "template": "num03_ne",
+        "params": {
+          "denominators": [
+            6,
+            12,
+            4
+          ],
+          "numerators": [
+            3,
+            3,
+            1
+          ],
+          "common": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "1/4 + 1/2 + 1/3 = ?/12. Kirjoita puuttuva osoittaja."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 13
+        },
+        "wrong": [
+          {
+            "match": 3,
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "1/4 = 3/12, 1/2 = 6/12, 1/3 = 4/12",
+          "3 + 6 + 4 = 13"
+        ],
+        "final": "13"
+      },
+      "feedback": {
+        "correct": "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen."
+      },
+      "provenance": {
+        "template": "num03_ne",
+        "params": {
+          "denominators": [
+            4,
+            2,
+            3
+          ],
+          "numerators": [
+            1,
+            1,
+            1
+          ],
+          "common": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}
