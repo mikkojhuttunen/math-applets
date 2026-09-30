@@ -45,6 +45,12 @@ class Fractions(unittest.TestCase):
             self.assertNotEqual(item["answer"], item["misconceptions"]["NUM-03"]["answer"])
 
 
+    def test_comparison_stems_differ(self):
+        rng = random.Random(2)
+        stems = {br.make_fraction_compare_item(rng)["stem_fi"] for _ in range(200)}
+        self.assertGreater(len(stems), 50)
+
+
 class ParseAnswer(unittest.TestCase):
     def test_accepted_forms(self):
         cases = {"7": 7, "5/6": Fraction(5, 6), "10/12": Fraction(5, 6), "1 1/6": Fraction(7, 6),

@@ -234,7 +234,7 @@ def make_fraction_compare_item(rng: random.Random) -> dict:
         "type": "choice",
         "template": "frac_compare_unit_v1",
         "params": {"b": b, "d": d},
-        "stem_fi": "Kumpi on suurempi?",
+        "stem_fi": f"Kumpi on suurempi, {options[0]} vai {options[1]}?",
         "options": options,
         "answer": options[correct],
         "misconceptions": {"NUM-12": {"answer": options[1 - correct]}},
