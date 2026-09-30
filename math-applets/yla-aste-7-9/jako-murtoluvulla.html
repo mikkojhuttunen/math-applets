@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Murtoluvulla jakaminen alueina</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1c1e;--mut:#5b5f66;--card:#fff;--bd:#d0d4da;--acc:#1f6feb;--p1:#4c8bf5;--p2:#7fb0ff;--whole:#c9d3e0;--warn:#b3541e;--ok:#1a7f45;--rem:#e0912f}
+@media(prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#e8eaed;--mut:#a3a8b0;--card:#1e2126;--bd:#3a3f47;--acc:#6ea8ff;--p1:#3d78d8;--p2:#5f97ee;--whole:#3a4352;--warn:#f0a070;--ok:#5fd08a;--rem:#e8a04a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+main{max-width:760px;margin:0 auto;padding:16px}
+h1{font-size:1.4rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:0 0 8px}
+p{margin:0 0 8px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:12px;margin:12px 0}
+svg{width:100%;height:auto;display:block}
+.ctl{display:grid;grid-template-columns:auto 1fr 3.2em;gap:6px 10px;align-items:center}
+.ctl label{font-weight:600}
+.ctl output{text-align:right;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.read{display:grid;grid-template-columns:1fr;gap:4px}
+.read div{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.read b{font-variant-numeric:tabular-nums}
+.big{font-size:1.15rem}
+button{font:inherit;padding:6px 14px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--fg);cursor:pointer;margin-top:10px}
+button:focus-visible,input:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.warnbox{border-left:4px solid var(--warn)}
+footer{color:var(--mut);font-size:.85rem;margin-top:12px}
+ul{margin:0;padding-left:20px}
+.note{color:var(--mut);font-size:.92rem}
+.frac{display:inline-block;text-align:center;vertical-align:middle;line-height:1.15}
+.frac span{display:block;padding:0 3px}
+.frac span:first-child{border-bottom:1.5px solid currentColor}
+</style>
+</head>
+<body>
+<main>
+<h1>Murtoluvulla jakaminen alueina</h1>
+<p>Jakolasku a : (1/n) kysyy: montako 1/n-kokoista osaa mahtuu lukuun a?</p>
+
+<div class="card">
+<svg id="fig" viewBox="0 0 600 170" role="img" aria-label="Jaettava jana ja sen jako jakajan kokoisiin osiin"></svg>
+<p class="note" id="cap"></p>
+</div>
+
+<div class="card">
+<div class="ctl">
+<label for="p">Osoittaja</label><input id="p" type="range" min="1" max="8" step="1" value="3"><output id="po"></output>
+<label for="q">Nimittäjä</label><input id="q" type="range" min="1" max="6" step="1" value="2"><output id="qo"></output>
+<label for="n">Jakaja 1/n, n =</label><input id="n" type="range" min="1" max="8" step="1" value="4"><output id="no"></output>
+</div>
+<button id="reset" type="button">Nollaa</button>
+</div>
+
+<div class="card read" aria-live="polite">
+<div class="big"><span>Lasku</span><b id="calc"></b></div>
+<div><span>Jaettava</span><b id="dv"></b></div>
+<div><span>Jakaja</span><b id="ds"></b></div>
+<div><span>Osia mahtuu (kokonaisia)</span><b id="cnt"></b></div>
+<div><span>Tulos</span><b id="res"></b></div>
+<div><span>Tulos verrattuna jaettavaan</span><b id="cmp"></b></div>
+<div><span>Sääntö: kerro käänteisluvulla</span><b id="rule"></b></div>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ul>
+<li>Valitse jaettavaksi 2 (osoittaja 2, nimittäjä 1) ja muuta n:ää. Mitä tapahtuu tulokselle, kun n kasvaa? Miksi?</li>
+<li>Valitse n = 1 ja sitten n = 2. Vertaa tulosta jaettavaan. Milloin jakaminen tekee tuloksesta suuremman ja milloin yhtä suuren?</li>
+<li>Valitse jaettavaksi 3/2 ja n = 4. Laske osien määrä kuvasta. Millä laskulla saat saman tuloksen ilman kuvaa?</li>
+</ul>
+</div>
+
+<div class="card warnbox">
+<h2>Varo virhekäsitystä</h2>
+<p>&quot;Jakaminen tekee aina pienemmäksi.&quot; Kun jaat luvun murtoluvulla 1/n, kysyt montako pientä osaa mahtuu lukuun. Mitä pienempi osa, sitä useampi mahtuu: kuvassa osien määrä on suurempi kuin jaettava luku.</p>
+<p>Toinen usein nähty virhe on jakaa osoittajat ja nimittäjät &quot;ristiin&quot; ilman perustetta. Kuvasta näet, mikä tulos on oikea: osien määrä ei riipu siitä, miten laskusäännön muistaa, vaan siitä, montako 1/n-osaa jaettavaan mahtuu.</p>
+</div>
+
+<footer>Taso: yläkoulu 7-9 · Käsite: jakolasku murtoluvulla</footer>
+</main>
+<script>
+(function(){
+var NS="http://www.w3.org/2000/svg";
+var P=document.getElementById("p"),Q=document.getElementById("q"),N=document.getElementById("n");
+var fig=document.getElementById("fig");
+function gcd(a,b){while(b){var t=a%b;a=b;b=t}return a}
+function dec(x){var s=(Math.round(x*1000)/1000).toString().replace(".",",");return s}
+function fr(a,b){var g=gcd(a,b);a/=g;b/=g;return b===1?String(a):a+"/"+b}
+function el(tag,attrs,txt){var e=document.createElementNS(NS,tag);for(var k in attrs)e.setAttribute(k,attrs[k]);if(txt!==undefined)e.textContent=txt;return e}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function draw(){
+ var p=+P.value,q=+Q.value,n=+N.value;
+ document.getElementById("po").textContent=p;
+ document.getElementById("qo").textContent=q;
+ document.getElementById("no").textContent=n;
+ var tot=p*n; // osia yhteensä = tot/q
+ var whole=Math.floor(tot/q), rem=tot%q;
+ var a=p/q, units=Math.max(1,Math.ceil(a));
+ var W=600, x0=10, L=W-20, sc=L/units;
+ fig.textContent="";
+ var cWhole=css("--whole"),c1=css("--p1"),c2=css("--p2"),cr=css("--rem"),fg=css("--fg"),mut=css("--mut"),bd=css("--bd");
+ fig.appendChild(el("text",{x:x0,y:16,fill:fg,"font-size":14},"Jaettava "+fr(p,q)+" (yksikköjä "+units+")"));
+ fig.appendChild(el("rect",{x:x0,y:24,width:a*sc,height:34,fill:cWhole,stroke:bd}));
+ for(var u=0;u<=units;u++){
+  fig.appendChild(el("line",{x1:x0+u*sc,y1:24,x2:x0+u*sc,y2:66,stroke:mut,"stroke-width":1}));
+  fig.appendChild(el("text",{x:x0+u*sc,y:80,fill:mut,"font-size":12,"text-anchor":u===0?"start":(u===units?"end":"middle")},String(u)));
+ }
+ var pw=sc/n; // yhden osan leveys
+ fig.appendChild(el("text",{x:x0,y:106,fill:fg,"font-size":14},"Osat 1/"+n+" (mahtuu "+whole+(rem?" ja osa":"")+")"));
+ var showNum=pw>=16;
+ for(var i=0;i<whole;i++){
+  fig.appendChild(el("rect",{x:x0+i*pw,y:114,width:pw,height:34,fill:i%2?c2:c1,stroke:bd,"stroke-width":.5}));
+  if(showNum)fig.appendChild(el("text",{x:x0+i*pw+pw/2,y:136,fill:"#fff","font-size":12,"text-anchor":"middle"},String(i+1)));
+ }
+ if(rem){
+  var f=rem/q;
+  fig.appendChild(el("rect",{x:x0+whole*pw,y:114,width:pw*f,height:34,fill:cr,stroke:bd,"stroke-width":.5}));
+  fig.appendChild(el("rect",{x:x0+whole*pw,y:114,width:pw,height:34,fill:"none",stroke:cr,"stroke-dasharray":"3 2"}));
+ }
+ fig.appendChild(el("line",{x1:x0+a*sc,y1:24,x2:x0+a*sc,y2:150,stroke:css("--acc"),"stroke-width":2,"stroke-dasharray":"4 3"}));
+ fig.appendChild(el("text",{x:x0+L,y:164,fill:mut,"font-size":11,"text-anchor":"end"},"katkoviiva: jaettavan loppu"));
+ // lukemat
+ document.getElementById("calc").textContent=fr(p,q)+" : 1/"+n+" = "+fr(tot,q);
+ document.getElementById("dv").textContent=fr(p,q)+" ≈ "+dec(a);
+ document.getElementById("ds").textContent="1/"+n+" ≈ "+dec(1/n);
+ document.getElementById("cnt").textContent=String(whole)+(rem?" (+ "+fr(rem,q)+" osaa)":"");
+ var v=tot/q;
+ document.getElementById("res").textContent=fr(tot,q)+(rem?" ≈ "+dec(v):"");
+ var cmp;
+ if(n===1)cmp="yhtä suuri kuin jaettava";
+ else cmp="suurempi kuin jaettava (× "+n+")";
+ document.getElementById("cmp").textContent=cmp;
+ document.getElementById("rule").textContent=fr(p,q)+" · "+n+" = "+fr(tot,q);
+ document.getElementById("cap").textContent="Harmaa jana on jaettava. Alla se on täytetty osilla, joiden koko on 1/"+n+" yksikköä. "+(rem?"Oranssi osa on vajaa: se täyttää vain osan seuraavasta jakajan kokoisesta palasta.":"Osat täyttävät jaettavan tasan.");
+}
+[P,Q,N].forEach(function(s){s.addEventListener("input",draw)});
+document.getElementById("reset").addEventListener("click",function(){P.value=3;Q.value=2;N.value=4;draw()});
+if(window.matchMedia)window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",draw);
+draw();
+})();
+</script>
+</body>
+</html>

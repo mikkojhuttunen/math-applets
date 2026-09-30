@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kehäkulma, keskuskulma ja Thaleen lause</title>
+<style>
+:root{--bg:#fafafa;--fg:#1c1c1e;--muted:#5b6068;--card:#ffffff;--line:#c9ccd1;--accent:#1f6feb;--cen:#d9480f;--ins:#0b7a3b;--warn:#fff4d6;--warnb:#c98a00;--circ:#3a3f47;--shade:rgba(31,111,235,.08)}
+@media (prefers-color-scheme:dark){:root{--bg:#15171a;--fg:#ececee;--muted:#a3a9b2;--card:#1e2126;--line:#3a3f47;--accent:#6ea8ff;--cen:#ff9a5c;--ins:#5fd68a;--warn:#3a3016;--warnb:#d9a520;--circ:#c5cad2;--shade:rgba(110,168,255,.12)}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:12px 16px 24px}
+h1{font-size:1.4rem;margin:.3em 0 .1em}
+h2{font-size:1.05rem;margin:0 0 .4em}
+p.lead{margin:.2em 0 .8em;color:var(--muted)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px;margin:12px 0}
+svg{display:block;width:100%;max-width:440px;height:auto;margin:0 auto;touch-action:none;user-select:none}
+.row{display:grid;grid-template-columns:1fr;gap:8px}
+@media(min-width:640px){.row{grid-template-columns:1fr 1fr}}
+label{display:flex;justify-content:space-between;gap:8px;font-size:.95rem}
+input[type=range]{width:100%;margin:2px 0 8px}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--fg);cursor:pointer;min-height:40px}
+button:hover{border-color:var(--accent)}
+.read{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.read div{border:1px solid var(--line);border-radius:8px;padding:8px}
+.read b{display:block;font-size:1.3rem}
+.cen{color:var(--cen)}.ins{color:var(--ins)}
+#msg{margin:8px 0 0;min-height:1.4em;color:var(--muted)}
+ul{margin:.3em 0;padding-left:1.2em}
+.warn{background:var(--warn);border-left:4px solid var(--warnb)}
+footer{color:var(--muted);font-size:.85rem;margin-top:8px}
+.sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<main>
+<h1>Kehäkulma, keskuskulma ja Thaleen lause</h1>
+<p class="lead">Vertaa samaa ympyrän kaarta vastaavaa kehäkulmaa ja keskuskulmaa. Vedä pisteitä A, B ja P ympyrän kehällä.</p>
+
+<div class="card">
+<svg id="svg" viewBox="0 0 400 400" role="img" aria-label="Ympyrä, jonka kehällä ovat pisteet A, B ja P sekä keskipiste O">
+<circle id="circ" cx="200" cy="200" r="150" fill="none" stroke="var(--circ)" stroke-width="2"/>
+<path id="cenSector" fill="var(--shade)" stroke="none"/>
+<line id="chord" stroke="var(--muted)" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line id="oa" stroke="var(--cen)" stroke-width="2.5"/>
+<line id="ob" stroke="var(--cen)" stroke-width="2.5"/>
+<line id="pa" stroke="var(--ins)" stroke-width="2.5"/>
+<line id="pb" stroke="var(--ins)" stroke-width="2.5"/>
+<path id="cenArc" fill="none" stroke="var(--cen)" stroke-width="3"/>
+<path id="insArc" fill="none" stroke="var(--ins)" stroke-width="3"/>
+<path id="right" fill="none" stroke="var(--ins)" stroke-width="3"/>
+<circle cx="200" cy="200" r="3.5" fill="var(--fg)"/>
+<text x="208" y="216" font-size="15" fill="var(--fg)">O</text>
+<g id="hA" style="cursor:grab"><circle r="10" fill="var(--card)" stroke="var(--accent)" stroke-width="3"/><text id="tA" font-size="16" font-weight="700" fill="var(--fg)" text-anchor="middle">A</text></g>
+<g id="hB" style="cursor:grab"><circle r="10" fill="var(--card)" stroke="var(--accent)" stroke-width="3"/><text id="tB" font-size="16" font-weight="700" fill="var(--fg)" text-anchor="middle">B</text></g>
+<g id="hP" style="cursor:grab"><circle r="10" fill="var(--card)" stroke="var(--ins)" stroke-width="3"/><text id="tP" font-size="16" font-weight="700" fill="var(--fg)" text-anchor="middle">P</text></g>
+</svg>
+<div id="msg" aria-live="polite"></div>
+</div>
+
+<div class="card">
+<div class="row">
+<div><label for="sA"><span>Pisteen A paikka kehällä</span><b id="vA"></b></label><input id="sA" type="range" min="0" max="359" step="1"></div>
+<div><label for="sB"><span>Pisteen B paikka kehällä</span><b id="vB"></b></label><input id="sB" type="range" min="0" max="359" step="1"></div>
+<div><label for="sP"><span>Pisteen P paikka kehällä</span><b id="vP"></b></label><input id="sP" type="range" min="0" max="359" step="1"></div>
+</div>
+<div class="btns"><button id="diam" type="button">Halkaisija AB</button><button id="reset" type="button">Nollaa</button></div>
+</div>
+
+<div class="card">
+<h2>Lukemat</h2>
+<div class="read">
+<div><span class="ins">Kehäkulma ∠APB</span><b id="rIns" class="ins"></b></div>
+<div><span class="cen">Keskuskulma ∠AOB</span><b id="rCen" class="cen"></b></div>
+<div>Kaari AB (ei sisällä P:tä)<b id="rArc"></b></div>
+<div>P sijaitsee<b id="rWhere"></b></div>
+</div>
+<p class="lead" style="margin-bottom:0">Keskuskulma mitataan sillä kaarella AB, jolle P ei kuulu. Se voi olla yli 180°.</p>
+</div>
+
+<div class="card">
+<h2>Tutki itse</h2>
+<ul>
+<li>Pidä A ja B paikallaan ja vedä P kehällä pienemmän kaaren AB puolelle ja sitten suuremman kaaren puolelle. Mitä tapahtuu kehäkulmalle ja mitä keskuskulmalle?</li>
+<li>Valitse useita A:n ja B:n paikkoja ja vertaa kehäkulman ja keskuskulman lukuja. Millainen yhteys niillä on?</li>
+<li>Paina &quot;Halkaisija AB&quot; ja liikuta P:tä. Mikä on kehäkulma, ja miksi keskuskulma on tällöin sellainen kuin se on?</li>
+</ul>
+</div>
+
+<div class="card warn">
+<h2>Varo virhekäsitystä</h2>
+<p style="margin:0">&quot;Kehäkulma muuttuu, kun kärkeä P siirretään kehällä&quot; ja &quot;kehäkulma ja keskuskulma ovat yhtä suuret&quot;. Siirrä P:tä ja vertaa lukemia: katso, milloin kehäkulma muuttuu ja milloin ei, ja onko se koskaan yhtä suuri kuin keskuskulma.</p>
+</div>
+
+<footer>Taso: yläkoulu 7-9 · Käsite: kehäkulma, keskuskulma ja Thaleen lause</footer>
+</main>
+<script>
+(function(){
+var CX=200,CY=200,R=150;
+var DEF={a:20,b:140,p:250};
+var st={a:DEF.a,b:DEF.b,p:DEF.p};
+var $=function(id){return document.getElementById(id)};
+var NS='http://www.w3.org/2000/svg';
+function mod(n){return ((n%360)+360)%360}
+function pt(t,r){var x=t*Math.PI/180;return [CX+(r||R)*Math.cos(x),CY-(r||R)*Math.sin(x)]}
+function fmt(x){var s=(Math.round(x*10)/10).toString().replace('.',',');return s+'°'}
+function f(n){return (Math.round(n*100)/100).toFixed(2)}
+function calc(){
+  var d=mod(st.b-st.a);
+  var pIn=mod(st.p-st.a)<d;
+  var arcM,start;
+  if(pIn){arcM=360-d;start=st.b}else{arcM=d;start=st.a}
+  return {d:d,pIn:pIn,arc:arcM,start:start,ins:arcM/2};
+}
+function free(which,val,dir){
+  var v=mod(val),o=['a','b','p'].filter(function(k){return k!==which});
+  for(var i=0;i<360;i++){
+    if(v!==st[o[0]]&&v!==st[o[1]])return v;
+    v=mod(v+(dir||1));
+  }
+  return mod(val);
+}
+function setAngle(which,val,dir){
+  st[which]=free(which,Math.round(val),dir);
+  render();
+}
+function line(id,p,q){var e=$(id);e.setAttribute('x1',p[0]);e.setAttribute('y1',p[1]);e.setAttribute('x2',q[0]);e.setAttribute('y2',q[1])}
+function render(){
+  var c=calc();
+  var A=pt(st.a),B=pt(st.b),P=pt(st.p),O=[CX,CY];
+  [['hA',A,'tA'],['hB',B,'tB'],['hP',P,'tP']].forEach(function(h){
+    $(h[0]).setAttribute('transform','translate('+h[1][0]+','+h[1][1]+')');
+    var dx=h[1][0]-CX,dy=h[1][1]-CY,l=Math.hypot(dx,dy);
+    var t=$(h[2]);t.setAttribute('x',dx/l*26);t.setAttribute('y',dy/l*26+5);
+  });
+  line('oa',O,A);line('ob',O,B);line('pa',P,A);line('pb',P,B);line('chord',A,B);
+  // keskuskulman kaari ja sektori
+  var r=34,s0=pt(c.start,r),e0=pt(c.start+c.arc,r);
+  var large=c.arc>180?1:0;
+  $('cenArc').setAttribute('d','M '+s0[0]+' '+s0[1]+' A '+r+' '+r+' 0 '+large+' 0 '+e0[0]+' '+e0[1]);
+  var s1=pt(c.start),e1=pt(c.start+c.arc);
+  $('cenSector').setAttribute('d','M '+CX+' '+CY+' L '+s1[0]+' '+s1[1]+' A '+R+' '+R+' 0 '+large+' 0 '+e1[0]+' '+e1[1]+' Z');
+  // kehäkulman merkintä P:ssä
+  var ux=A[0]-P[0],uy=-(A[1]-P[1]),vx=B[0]-P[0],vy=-(B[1]-P[1]);
+  var ul=Math.hypot(ux,uy),vl=Math.hypot(vx,vy);
+  var ux1=ux/ul,uy1=uy/ul,vx1=vx/vl,vy1=vy/vl;
+  var cross=ux1*vy1-uy1*vx1;
+  if(c.ins===90){
+    var k=20;
+    var p1=[P[0]+ux1*k,P[1]-uy1*k],p2=[P[0]+ux1*k+vx1*k,P[1]-uy1*k-vy1*k],p3=[P[0]+vx1*k,P[1]-vy1*k];
+    $('right').setAttribute('d','M '+p1[0]+' '+p1[1]+' L '+p2[0]+' '+p2[1]+' L '+p3[0]+' '+p3[1]);
+    $('insArc').setAttribute('d','');
+  }else{
+    var q=26,a1=[P[0]+ux1*q,P[1]-uy1*q],a2=[P[0]+vx1*q,P[1]-vy1*q];
+    $('insArc').setAttribute('d','M '+a1[0]+' '+a1[1]+' A '+q+' '+q+' 0 0 '+(cross>0?0:1)+' '+a2[0]+' '+a2[1]);
+    $('right').setAttribute('d','');
+  }
+  $('sA').value=st.a;$('sB').value=st.b;$('sP').value=st.p;
+  $('vA').textContent=st.a+'°';$('vB').textContent=st.b+'°';$('vP').textContent=st.p+'°';
+  $('rIns').textContent=fmt(c.ins);
+  $('rCen').textContent=fmt(c.arc);
+  $('rArc').textContent=fmt(c.arc);
+  $('rWhere').textContent=c.d===180?'puoliympyrän kaarella':(c.arc>180?'pienemmällä kaarella':'suuremmalla kaarella');
+  $('msg').textContent=(c.ins===90)?'AB on halkaisija (∠AOB = 180°), ja ∠APB on suora kulma.':'';
+}
+// vetäminen
+var svg=$('svg'),drag=null;
+function svgPt(e){var r=svg.getBoundingClientRect(),s=400/r.width;return [(e.clientX-r.left)*s,(e.clientY-r.top)*s]}
+function nearest(p){
+  var best=null,bd=1e9;
+  ['a','b','p'].forEach(function(k){var q=pt(st[k]),d=Math.hypot(q[0]-p[0],q[1]-p[1]);if(d<bd){bd=d;best=k}});
+  return bd<40?best:null;
+}
+svg.addEventListener('pointerdown',function(e){
+  var k=nearest(svgPt(e));
+  if(!k)return;
+  drag=k;svg.setPointerCapture(e.pointerId);e.preventDefault();
+});
+svg.addEventListener('pointermove',function(e){
+  if(!drag)return;
+  var p=svgPt(e),ang=Math.atan2(-(p[1]-CY),p[0]-CX)*180/Math.PI;
+  var target=Math.round(ang),cur=st[drag];
+  var diff=mod(target-cur);var dir=diff<=180?1:-1;
+  var o=['a','b','p'].filter(function(k){return k!==drag});
+  if(mod(target)===st[o[0]]||mod(target)===st[o[1]])return;
+  setAngle(drag,target,dir);
+});
+function end(e){drag=null}
+svg.addEventListener('pointerup',end);svg.addEventListener('pointercancel',end);
+['a','b','p'].forEach(function(k){
+  $('s'+k.toUpperCase()).addEventListener('input',function(){
+    var v=parseInt(this.value,10),old=st[k];
+    setAngle(k,v,v>=old?1:-1);
+  });
+});
+$('diam').addEventListener('click',function(){
+  var nb=mod(st.a+180);
+  if(st.p===nb){st.p=mod(st.p+1)}
+  st.b=nb;render();
+});
+$('reset').addEventListener('click',function(){st.a=DEF.a;st.b=DEF.b;st.p=DEF.p;render()});
+render();
+})();
+</script>
+</body>
+</html>
