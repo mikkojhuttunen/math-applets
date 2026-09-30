@@ -1,0 +1,224 @@
+[
+ {
+  "id": "A12.S2.08-eq-20260930-2320-001",
+  "goal": "A12.S2.08",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: 7 + 6 = □ + 9",
+  "answer": "4",
+  "answer_expr": "7 + 6 - 9",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "13",
+    "answer_expr": "7 + 6"
+   },
+   "ALG-06b": {
+    "answer": "22",
+    "answer_expr": "7 + 6 + 9"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-002",
+  "goal": "A12.S2.08",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: 8 + 7 = □ + 10",
+  "answer": "5",
+  "answer_expr": "8 + 7 - 10",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "15",
+    "answer_expr": "8 + 7"
+   },
+   "ALG-06b": {
+    "answer": "25",
+    "answer_expr": "8 + 7 + 10"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-003",
+  "goal": "A12.S2.08",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: 5 + 9 = □ + 6",
+  "answer": "8",
+  "answer_expr": "5 + 9 - 6",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "14",
+    "answer_expr": "5 + 9"
+   },
+   "ALG-06b": {
+    "answer": "20",
+    "answer_expr": "5 + 9 + 6"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-004",
+  "goal": "A12.S2.08",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: □ + 3 = 8 + 6",
+  "answer": "11",
+  "answer_expr": "8 + 6 - 3",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "14",
+    "answer_expr": "8 + 6"
+   },
+   "ALG-06b": {
+    "answer": "17",
+    "answer_expr": "8 + 6 + 3"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-005",
+  "goal": "A12.S2.08",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: □ + 8 = 9 + 4",
+  "answer": "5",
+  "answer_expr": "9 + 4 - 8",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "13",
+    "answer_expr": "9 + 4"
+   },
+   "ALG-06b": {
+    "answer": "21",
+    "answer_expr": "9 + 4 + 8"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-006",
+  "goal": "A12.S2.08",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Täydennä luku: □ + 2 = 6 + 9",
+  "answer": "13",
+  "answer_expr": "6 + 9 - 2",
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "15",
+    "answer_expr": "6 + 9"
+   },
+   "ALG-06b": {
+    "answer": "17",
+    "answer_expr": "6 + 9 + 2"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-007",
+  "goal": "A12.S2.08",
+  "level": "V",
+  "type": "choice",
+  "stem_fi": "Totta vai tarua: 12 = 8 + 4?",
+  "answer": "Totta",
+  "options": [
+   "Totta",
+   "Tarua"
+  ],
+  "workbook": [
+   "ALG-13"
+  ],
+  "misconceptions": {
+   "ALG-13": {
+    "answer": "Tarua"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-008",
+  "goal": "A12.S2.08",
+  "level": "V",
+  "type": "choice",
+  "stem_fi": "Totta vai tarua: 9 = 3 + 5?",
+  "answer": "Tarua",
+  "options": [
+   "Totta",
+   "Tarua"
+  ],
+  "workbook": [
+   "ALG-13"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-009",
+  "goal": "A12.S2.08",
+  "level": "S",
+  "type": "choice",
+  "stem_fi": "Totta vai tarua: 6 + 2 = 5 + 3?",
+  "answer": "Totta",
+  "options": [
+   "Totta",
+   "Tarua"
+  ],
+  "workbook": [
+   "ALG-06"
+  ],
+  "misconceptions": {
+   "ALG-06a": {
+    "answer": "Tarua"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.08-eq-20260930-2320-010",
+  "goal": "A12.S2.08",
+  "level": "S",
+  "type": "choice",
+  "stem_fi": "Totta vai tarua: 7 + 4 = 6 + 6?",
+  "answer": "Tarua",
+  "options": [
+   "Totta",
+   "Tarua"
+  ],
+  "workbook": [
+   "ALG-06"
+  ],
+  "source": "generated",
+  "status": "draft"
+ }
+]
