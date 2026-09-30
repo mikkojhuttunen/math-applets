@@ -1,0 +1,77 @@
+[
+  {
+    "id": "A36.S2.04-sub-20260930-1820-001",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 916 − 140.",
+    "answer": "776",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "916 - 140",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "836"
+      },
+      "NUM-10b": {
+        "answer": "736"
+      },
+      "NUM-10c": {
+        "answer": "876"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-004",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 942 − 613.",
+    "answer": "329",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "942 - 613",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "331"
+      },
+      "NUM-10b": {
+        "answer": "321"
+      },
+      "NUM-10c": {
+        "answer": "339"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.04-sub-20260930-1820-007",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 791 − 245.",
+    "answer": "546",
+    "workbook": [
+      "NUM-10"
+    ],
+    "source": "template",
+    "status": "reviewed",
+    "answer_expr": "791 - 245",
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "554"
+      },
+      "NUM-10b": {
+        "answer": "544"
+      },
+      "NUM-10c": {
+        "answer": "556"
+      }
+    }
+  }
+]
