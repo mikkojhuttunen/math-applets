@@ -29,29 +29,29 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 ## Decisions
 
 ### WD1 Data kept on the device
-- State: proposed
+- State: done (2026-09-30, recommendation accepted)
 - Question: may the page remember progress (answered items, scores) in the browser's own storage?
 - Why it matters: nothing would be sent anywhere, but `EXPERT_REVIEW_REQUIRED.md` says not to store data about grades 1-6 pupils until the sign-off, and "on the pupil's own device" is not clearly outside that.
 - Recommendation: **no storage in v1.** A round keeps its score only while the page is open. Reopen after the expert review.
 
 ### WD2 Which items are shown
-- State: proposed
+- State: done (2026-09-30, recommendation accepted)
 - Question: all current items are `draft`. What does a pupil see?
 - Recommendation: the practice page serves only `reviewed` (1-6) and `approved` (7-9) items. Drafts appear only in the teacher view (W10), marked `LUONNOS`. The repo is public, so drafts are not secret, just not offered to pupils. Until the teacher reviews some items, the demo shows the practice page in draft mode through the teacher view.
 
 ### WD3 Folder and URL
-- State: proposed
+- State: done (2026-09-30, recommendation accepted)
 - Recommendation: `harjoittele/` (URL `.../math-applets/harjoittele/`), practice page `index.html`, teacher view `opettaja.html`.
 
 ## Tasks
 
 ### W01 Skeleton
-- State: todo
+- State: done
 - Needs: WD3
 - What: `harjoittele/index.html` (start screen placeholder), `harjoittele/css/`, `harjoittele/js/` as ES modules (`<script type="module">`, no build step), `package.json` with `"type": "module"` and `"test": "node --test"`, `CHANGELOG.md`, `README.md` (how to run locally). Same look as the front page (`index.html` colours, light and dark).
 - Test: one unit test that imports a module; page opens locally with no console errors.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.1.0
+- Notes: `index.html` shows a placeholder until W06. `js/format.js` has `formatNumber()` for later pages; a helper that rewrote decimals in whole texts was dropped because it turned ids such as `A36.S2.04` into `A36.S2,04`, and the bank texts are already in Finnish format. Checked: `npm test` (2 tests), and Playwright against `python3 -m http.server` at 360 px width: status text rendered, no console errors, no requests to other origins, no horizontal scroll.
 
 ### W02 Data manifest
 - State: todo
@@ -177,3 +177,5 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | Date | Task | Result |
 |---|---|---|
 | 2026-09-30 | backlog | Created; Telegram bot paused at B01 |
+| 2026-09-30 | WD1-WD3 | Accepted: no storage in v1, pupils see reviewed items only, folder `harjoittele/` |
+| 2026-09-30 | W01 | Skeleton, v0.1.0 |
