@@ -1,5 +1,7 @@
 # Maths Telegram bot: backlog
 
+> **PAUSED (2026-09-30).** Work moved to the static practice pages in `harjoittele/` (`harjoittele/BACKLOG_WEB.md`, which also says why). The bot stays at B01 (v0.1.0). Tasks B04-B06 continue there as W11, W04 and W05. Do not start new B tasks unless the teacher resumes the bot.
+
 Work queue for a Telegram bot that serves the material in this repo (applets, curriculum goals, exercises) in Finnish. Design background: `BOT_ANALYSIS.md`.
 
 ## How to use this file
@@ -184,3 +186,4 @@ D2 rules out B20-B22 for now. They stay here as a record of what the course bots
 | 2026-09-30 | backlog | Created from the analysis in `BOT_ANALYSIS.md` |
 | 2026-09-30 | D1-D3 | Decided: teachers and upper-secondary students, no AI calls, code in `telegram-bot/` |
 | 2026-09-30 | B01 | Skeleton, v0.1.0, 15 tests pass |
+| 2026-09-30 | all | Paused; work continues in `harjoittele/BACKLOG_WEB.md` |
