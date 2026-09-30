@@ -2,14 +2,15 @@
 
 Interactive maths applets for Finnish schools (grades 1-9 and upper secondary), published with GitHub Pages from `main`. User-facing text is Finnish.
 
-## Two pipelines, disjoint files
+## Three pipelines, disjoint files
 
 | Pipeline | Files it owns | Instructions | Branch its routine pushes to |
 |---|---|---|---|
 | Applets | `BACKLOG.md`, `INDEX.md`, `index.html`, level folders | `APPLET_SPEC.md`, `SCHEDULED_TASK_PROMPT.md` | `claude/applets` |
-| Misconception exercises | `math-misconceptions/` | `math-misconceptions/README.md`, `math-misconceptions/ROUTINE_PROMPT.md` | `claude/exercises` |
+| Misconception exercises, grades 7-9 | `math-misconceptions/` except `grades1-6/` | `math-misconceptions/README.md`, `math-misconceptions/ROUTINE_PROMPT.md` | `claude/exercises` |
+| Exercises, grades 1-6 | `math-misconceptions/grades1-6/` | `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`, `math-misconceptions/grades1-6/EXPERT_REVIEW_REQUIRED.md` | `claude/exercises-1-6` |
 
-Work on one pipeline never edits the other's files. `math-applets/math/OPS_7-9_oppimistavoitteet.md` is shared read-only reference (curriculum goals S1-S6).
+Work on one pipeline never edits another's files. `math-applets/math/OPS_7-9_oppimistavoitteet.md` is shared read-only reference (curriculum goals S1-S6). The grades 1-6 pipeline reads `math-misconceptions/sources/` (item bank) read-only; its own curriculum goals are in `math-misconceptions/grades1-6/data/curriculum/OPS_1-6_oppimistavoitteet.md`.
 
 ## Layout
 
@@ -26,7 +27,8 @@ Work on one pipeline never edits the other's files. `math-applets/math/OPS_7-9_o
 
 ## Exercise work
 
-Follow `math-misconceptions/README.md`. Run `python tests/run_tests.py` and `python scripts/verify.py` from `math-misconceptions/` before committing.
+- Grades 7-9: follow `math-misconceptions/README.md`. Run `python tests/run_tests.py` and `python scripts/verify.py` from `math-misconceptions/` before committing.
+- Grades 1-6: follow `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`. From `math-misconceptions/grades1-6/` run `python -m unittest discover -s tools/buggy_rules`, `python -m unittest discover -s tools/exercise_pipeline` and `python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"` before committing. Batches go in `exercises/grades1-6/` inside that folder, never in `math-misconceptions/exercises/`, which the 7-9 scripts read. No pupil data, ever; see `EXPERT_REVIEW_REQUIRED.md`.
 
 ## Git
 
