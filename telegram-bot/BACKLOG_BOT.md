@@ -11,7 +11,7 @@ Work queue for a Telegram bot that serves the material in this repo (applets, cu
 
 ## Definition of done (every B task)
 
-1. `cd telegram-bot && npm test` passes with no network access.
+1. `cd telegram-bot && npm test` passes with no network access (`node --test` finds `test/*.test.js`).
 2. `node bot.js` starts without `TELEGRAM_TOKEN` in a dry-run mode and `GET /healthz` answers.
 3. User-facing text is Finnish, numbers use a decimal comma and U+2212 minus.
 4. Nothing about pupils is stored or logged beyond what the decisions allow.
@@ -20,18 +20,21 @@ Work queue for a Telegram bot that serves the material in this repo (applets, cu
 ## Decisions
 
 ### D1 Audience and age
-- State: proposed
+- State: done (2026-09-30)
+- Decision: no minors use AI products directly. AI only helps prepare the materials (exercises, applets) that minors are given, and a teacher reviews them first. The bot users are teachers and upper-secondary students; younger pupils get the material through their teacher.
 - Question: who talks to the bot? Teachers only, upper secondary (lukio), grades 7-9, grades 1-6?
 - Why it matters: pupils are minors. Telegram's terms set a minimum age for users, the Anthropic usage policy has extra requirements for products used by minors, and `math-misconceptions/grades1-6/EXPERT_REVIEW_REQUIRED.md` forbids pupil data for grades 1-6 until a reviewer signs off. Check the current terms of both before choosing.
 - Recommendation: v1 for **teachers** (browse applets, curriculum goals, preview and review exercises) and **lukio students**. Grades 1-9 content reaches pupils through the teacher (shared applet links, exercises shown in class), not through pupils' own Telegram accounts.
 
 ### D2 AI layer
-- State: proposed
+- State: done (2026-09-30)
+- Decision: the bot makes no AI calls. Everything it does is deterministic code over reviewed content in this repo.
 - Question: does v1 call Claude at all?
 - Recommendation: **no**. v1 is fully deterministic (links, goal lookup, bank quizzes graded in code), so it costs nothing to run and stores nothing. Add Claude later (B20-B22) only for the audience D1 allows, with the laser/optics access and credit model.
 
 ### D3 Where the code lives and how it is hosted
-- State: proposed
+- State: done (2026-09-30)
+- Decision: `telegram-bot/` in this repo.
 - Recommendation: this folder (`telegram-bot/`) in this repo, so the bot reads the content directly; deploy on Railway like the course bots, with Railway's root directory set to `telegram-bot/`. Move to a separate repo later only if the bot needs its own release cycle.
 
 ### D4 Bot identity
@@ -41,12 +44,12 @@ Work queue for a Telegram bot that serves the material in this repo (applets, cu
 ## Tasks
 
 ### B01 Project skeleton
-- State: todo
+- State: done
 - Needs: D3
-- What: `package.json` (Node 18+, `express`, `axios`, no bot framework), `bot.js` with `POST /webhook` (secret check, immediate HTTP 200, `update_id` dedupe), `GET /`, `GET /healthz` (version, uptime), `tg()` helper, `/start` and `/apua` in Finnish, `BOT_VERSION`, `CHANGELOG.md`, `.gitignore`, `README.md` with local run steps. Dry-run mode without a token prints outgoing messages instead of sending them.
+- What: `package.json` (Node 18+, no dependencies: built-in `http` server and `fetch`, no bot framework), `bot.js` with `POST /webhook` (secret check, immediate HTTP 200, `update_id` dedupe), `GET /`, `GET /healthz` (version, uptime), `tg()` helper, `/start` and `/apua` in Finnish, `BOT_VERSION`, `CHANGELOG.md`, `.gitignore`, `README.md` with local run steps. Dry-run mode without a token prints outgoing messages instead of sending them.
 - Test: `test/` with Node's built-in `node:test`; feed fake updates to `handleUpdate()` and assert on captured outgoing calls.
-- Done:
-- Notes:
+- Done: 2026-09-30, v0.1.0
+- Notes: no npm dependencies (built-in `http` and `fetch` instead of express and axios). Modules `src/config.js`, `src/server.js`, `src/telegram.js`, `src/handlers.js`, `src/texts.js`. In groups the bot answers only commands, and ignores `/cmd@otherbot`; in private chats free text and unknown commands point to `/apua`. Errors in handling are logged, never thrown. Start-up warns if a token is set without `WEBHOOK_SECRET`. 15 tests: command parsing, help replies, dedupe, group rules, Telegram errors, webhook secret, bad JSON, 404, healthz, dry-run and live API client (fake fetch). Also checked by hand: `node bot.js` in dry-run, `curl /healthz`, POST `/apua` to `/webhook` printed the help message.
 
 ### B02 Content loader
 - State: todo
@@ -150,20 +153,22 @@ Work queue for a Telegram bot that serves the material in this repo (applets, cu
 - Done:
 - Notes:
 
-## Later (only after D1/D2 allow it)
+## Later (only if D2 is reopened)
+
+D2 rules out B20-B22 for now. They stay here as a record of what the course bots do, not as planned work. B23 does not need AI but stores data about users, so it needs its own decision.
 
 ### B20 Access control and credits
-- State: todo
+- State: blocked by D2
 - Needs: D1, D2
 - What: port `membership.js`, `usageLimiter.js`, `accessGuard.js` from the course bots, texts in Finnish.
 
 ### B21 Claude Q&A for teachers
-- State: todo
+- State: blocked by D2
 - Needs: B20
 - What: free-text questions answered from a cached system prompt built from the OPS goal files and the applet backlog descriptions (`BACKLOG.md` fields Tavoite, Yleinen virhekäsitys, Interaktio). Short answers, plain Unicode maths, links to applets.
 
 ### B22 Live exercise generation with review
-- State: todo
+- State: blocked by D2
 - Needs: B20
 - What: when the bank has too few items for a filter, generate more with Claude into a pending file, never served until reviewed; export with an admin command and hand over to the exercise pipelines, whose verify scripts decide what enters the bank.
 
@@ -177,3 +182,5 @@ Work queue for a Telegram bot that serves the material in this repo (applets, cu
 | Date | Task | Result |
 |---|---|---|
 | 2026-09-30 | backlog | Created from the analysis in `BOT_ANALYSIS.md` |
+| 2026-09-30 | D1-D3 | Decided: teachers and upper-secondary students, no AI calls, code in `telegram-bot/` |
+| 2026-09-30 | B01 | Skeleton, v0.1.0, 15 tests pass |
