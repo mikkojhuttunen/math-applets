@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 2 cm. Sivu kasvatetaan 3-kertaiseksi. Kuinka monta neliösenttimetriä uuden neliön ala on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 36,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 12,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          },
+          {
+            "match": 6,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Uusi sivu 6 cm",
+          "Ala 6² = 36 cm²"
+        ],
+        "final": "36"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-ala muuttuu kertoimella k²."
+      },
+      "provenance": {
+        "template": "pro01_ne",
+        "params": {
+          "k": 3,
+          "side": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Valokuvan mitat ovat 5 cm ja 7 cm. Kuva suurennetaan niin, että jokainen mitta on 5-kertainen. Mikä on suurennoksen pinta-ala neliösenttimetreinä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 875,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 175,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Uudet mitat 25 cm ja 35 cm",
+          "Ala 25 · 35 = 875 cm²"
+        ],
+        "final": "875"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-ala muuttuu kertoimella k²."
+      },
+      "provenance": {
+        "template": "pro01_ne",
+        "params": {
+          "k": 5,
+          "a": 5,
+          "b": 7
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Puutarhan pohjapiirroksen ala on 12 m². Kaikki pituudet kasvatetaan 5-kertaisiksi. Mikä on uuden piirroksen ala neliömetreinä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 300,
+          "unit": "m²"
+        },
+        "wrong": [
+          {
+            "match": 60,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Pinta-alan kerroin 5² = 25",
+          "12 · 25 = 300"
+        ],
+        "final": "300"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-ala muuttuu kertoimella k²."
+      },
+      "provenance": {
+        "template": "pro01_ne",
+        "params": {
+          "k": 5,
+          "area": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Yksi lattia maalataan 5 purkillisella. Toisen lattian jokainen mitta on 5-kertainen ensimmäiseen verrattuna ja muoto on sama. Montako purkillista maalia toiseen lattiaan tarvitaan?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 125
+        },
+        "wrong": [
+          {
+            "match": 25,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Pinta-alan kerroin 5² = 25",
+          "5 · 25 = 125"
+        ],
+        "final": "125"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-ala muuttuu kertoimella k²."
+      },
+      "provenance": {
+        "template": "pro01_ne",
+        "params": {
+          "k": 5,
+          "cans": 5
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Kuvion pinta-ala on 4-kertainen alkuperäiseen verrattuna. Kuinka moninkertaisia kuvion pituudet ovat alkuperäiseen verrattuna?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2
+        },
+        "wrong": [
+          {
+            "match": 4,
+            "misconception": "PRO-01",
+            "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "k² = 4",
+          "k = 2"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-ala muuttuu kertoimella k²."
+      },
+      "provenance": {
+        "template": "pro01_ne",
+        "params": {
+          "area_factor": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

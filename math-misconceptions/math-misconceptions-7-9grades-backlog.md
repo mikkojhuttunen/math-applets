@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 3 |
+| Runs completed | 4 |
 | Last run | 2026-09-30 |
-| Progress | 18 of 227 planned cells generated (3 cells have a hand-written seed example only) |
+| Progress | 23 of 227 planned cells generated (3 cells have a hand-written seed example only) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -192,10 +192,10 @@ Same row order as section 3.1. Columns are in phase order.
 | ALG-10 | X | - | - | - | - | - | X | - | o | - | - | - | o | - | - |
 | NUM-01 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
 | NUM-02 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
-| NUM-03 | X | X | o | - | o | o | - | - | - | o | - | - | - | - | - |
-| NUM-04 | X | X | - | - | - | - | o | o | - | o | - | - | - | o | - |
+| NUM-03 | X | X | X | - | X | o | - | - | - | o | - | - | - | - | - |
+| NUM-04 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
 | NUM-06 | X | - | - | - | - | - | X | - | - | - | - | o | o | o | - |
-| PRO-01 | o | o | - | - | - | - | - | - | o | o | o | - | - | o | - |
+| PRO-01 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | PRO-02 | o | o | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | FUN-02 | o | o | - | - | - | - | - | - | - | - | o | - | o | - | - |
 | ALG-02 | o | - | - | - | - | - | o | - | - | - | - | - | o | o | - |
@@ -258,6 +258,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-09-30 | NUM-04 | NE | NUM-04-NE-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-04/NE.json | Draft | Strong |
 | 2026-09-30 | NUM-06 | MC | NUM-06-MC-001..005 | T, T, T, H, H | S2.08 | exercises/NUM-06/MC.json | Draft | Strong; item 5 asks for a method justification |
 | 2026-09-30 | NUM-06 | RP | NUM-06-RP-001..005 | T, T, T, H, H | S2.08 | exercises/NUM-06/RP.json | Draft | Strong |
+| 2026-09-30 | NUM-03 | ES | NUM-03-ES-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/ES.json | Draft | Strong; unlike denominators covered |
+| 2026-09-30 | NUM-03 | FS | NUM-03-FS-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/FS.json | Draft | Strong; answer is a numeric expression (variable x is only a schema placeholder) |
+| 2026-09-30 | NUM-04 | RP | NUM-04-RP-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-04/RP.json | Draft | Strong |
+| 2026-09-30 | PRO-01 | MC | PRO-01-MC-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-01/MC.json | Draft | Strong; item 5 asks for a justification |
+| 2026-09-30 | PRO-01 | NE | PRO-01-NE-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-01/NE.json | Draft | Strong |
 
 ## 6. Curriculum coverage
 
