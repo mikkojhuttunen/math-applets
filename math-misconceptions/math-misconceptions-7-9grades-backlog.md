@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 12 |
+| Runs completed | 13 |
 | Last run | 2026-10-01 |
-| Progress | 67 of 227 planned cells generated |
+| Progress | 73 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -206,9 +206,9 @@ Same row order as section 3.1. Columns are in phase order.
 | ALG-09 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | o |
 | ALG-11 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | - |
 | NUM-05 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
-| NUM-07 | X | X | o | o | o | - | - | - | - | o | - | - | o | - | o |
-| PRO-03 | o | o | - | - | - | - | o | - | - | - | o | - | o | o | - |
-| PRO-04 | o | o | - | - | - | - | o | - | - | - | o | - | o | o | - |
+| NUM-07 | X | X | X | X | o | - | - | - | - | o | - | - | o | - | o |
+| PRO-03 | X | X | - | - | - | - | o | - | - | - | o | - | o | o | - |
+| PRO-04 | X | X | - | - | - | - | o | - | - | - | o | - | o | o | - |
 | GEO-01 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | GEO-02 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | FUN-01 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
@@ -307,6 +307,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | NUM-05 | RP | NUM-05-RP-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-05/RP.json | Draft | Moderate; invalid equations multiply instead of divide |
 | 2026-10-01 | NUM-07 | MC | NUM-07-MC-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/MC.json | Draft | Moderate; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
 | 2026-10-01 | NUM-07 | NE | NUM-07-NE-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/NE.json | Draft | Moderate; wrong answer is the percentage taken of the new amount |
+| 2026-10-01 | NUM-07 | ES | NUM-07-ES-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/ES.json | Draft | Moderate; lines are equations for the original amount x; error: percentage taken of the new amount or wrong factor |
+| 2026-10-01 | NUM-07 | SO | NUM-07-SO-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | PRO-03 | MC | PRO-03-MC-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/MC.json | Draft | Moderate; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | PRO-03 | NE | PRO-03-NE-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/NE.json | Draft | Moderate; wrong entry repeats the area of the other equal-perimeter shape |
+| 2026-10-01 | PRO-04 | MC | PRO-04-MC-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/MC.json | Draft | Moderate; item 5 asks for a justification |
+| 2026-10-01 | PRO-04 | NE | PRO-04-NE-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/NE.json | Draft | Moderate; wrong entry is the area or perimeter of the shape with the larger perimeter |
 
 ## 6. Curriculum coverage
 

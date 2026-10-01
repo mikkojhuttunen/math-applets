@@ -1,0 +1,305 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion sivut ovat 15 cm ja 1 cm. Neliön sivu on 5 cm. Kuinka monta neliösenttimetriä on suuremman alan arvo?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 25,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 15,
+            "misconception": "PRO-04",
+            "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Suorakulmion ala 15 cm², neliön ala 25 cm²",
+          "Suurempi on 25 cm²"
+        ],
+        "final": "25"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta."
+      },
+      "provenance": {
+        "template": "pro04_ne",
+        "params": {
+          "w": 15,
+          "h": 1,
+          "s": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Huone A on 9 m × 1 m ja huone B on 4 m × 4 m. Kuinka monta neliömetriä on sen huoneen lattian ala, jonka ala on suurempi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 16,
+          "unit": "m²"
+        },
+        "wrong": [
+          {
+            "match": 9,
+            "misconception": "PRO-04",
+            "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "A: 9 m², B: 16 m²",
+          "Suurempi ala on 16 m²"
+        ],
+        "final": "16"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta."
+      },
+      "provenance": {
+        "template": "pro04_ne",
+        "params": {
+          "w": 9,
+          "h": 1,
+          "s": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Pelto A on 20 m × 2 m ja pelto B on 9 m × 5 m. Kuinka monta neliömetriä on suuremman pellon ala?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 45,
+          "unit": "m²"
+        },
+        "wrong": [
+          {
+            "match": 40,
+            "misconception": "PRO-04",
+            "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "A: 20 · 2 = 40 m², B: 9 · 5 = 45 m²",
+          "Suurempi ala on 45 m²"
+        ],
+        "final": "45"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta."
+      },
+      "provenance": {
+        "template": "pro04_ne",
+        "params": {
+          "w": 20,
+          "h": 2,
+          "s": [
+            9,
+            5
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Kaksi aitausta: suorakulmio 15 m × 2 m ja neliö 8 m × 8 m. Kuinka monta metriä aitaa kuluu sen aitauksen ympärille, jonka pinta-ala on suurempi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 32,
+          "unit": "m"
+        },
+        "wrong": [
+          {
+            "match": 34,
+            "misconception": "PRO-04",
+            "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Alat: 30 m² ja 64 m², suurempi on neliö",
+          "Neliön piiri 4 · 8 = 32 m"
+        ],
+        "final": "32"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta."
+      },
+      "provenance": {
+        "template": "pro04_ne",
+        "params": {
+          "w": 15,
+          "h": 2,
+          "s": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion leveys on 1 cm ja piiri 22 cm. Neliön piiri on 16 cm. Kuinka monta neliösenttimetriä on suuremman alan arvo?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 16,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 10,
+            "misconception": "PRO-04",
+            "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Suorakulmion pituus 11 − 1 = 10 cm, ala 10 cm²",
+          "Neliön sivu 4 cm, ala 16 cm²"
+        ],
+        "final": "16"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta."
+      },
+      "provenance": {
+        "template": "pro04_ne",
+        "params": {
+          "w": 10,
+          "h": 1,
+          "s": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}
