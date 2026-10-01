@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.11.0 (2026-10-01)
+
+- W11: goal browser `tavoitteet.html`: 128 curriculum goals with exercises, practice links, applets and misconceptions; search and filters in the URL. `data/goal_applets.json`. Teacher links in the practice page footer.
+
 ## 0.10.0 (2026-10-01)
 
 - W09: a wrong answer to a subtraction shows the sum in columns with the wrong columns marked; after the second try also the borrows and the correct row.

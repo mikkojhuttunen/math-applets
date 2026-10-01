@@ -54,3 +54,8 @@ table.wrong th { color: var(--dim); font-weight: 500; }
   #print .key li { margin: 0 0 4pt; }
 }
 .pupil-link { font-size: .85rem; overflow-wrap: anywhere; }
+main.wide h2 { margin: 24px 0 4px; }
+h3.area { font-size: .95rem; color: var(--dim); margin: 16px 0 4px; font-weight: 600; }
+.goal .goal-text { margin: 6px 0; font-size: 1.05rem; }
+.goal-links { margin: 6px 0; }
+.goal-links a.go { font-weight: 600; }

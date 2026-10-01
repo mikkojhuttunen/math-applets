@@ -255,6 +255,31 @@ try {
     problems.forEach((p) => failures.push(`teacher view: ${p}`));
     await page.close();
   }
+  // Goal browser: all goals, exact id search, practice and applet links, band filter.
+  {
+    const { page, problems } = await pageWithGuards(context, origin);
+    const goalTotal = Object.keys(JSON.parse(fs.readFileSync(path.join(REPO, 'harjoittele', 'data', 'goals.json'), 'utf8')).goals).length;
+    await page.goto(`${origin}/harjoittele/tavoitteet.html`);
+    await page.waitForSelector('.goal');
+    check((await page.textContent('#goal-count')).includes(`${goalTotal} / ${goalTotal}`), 'goal browser: not all goals listed');
+    const goal = entry.goals[0];
+    await page.fill('input[name=haku]', goal.toLowerCase());
+    await page.waitForFunction(() => document.querySelectorAll('.goal').length === 1);
+    const card = await page.textContent('.goal');
+    check(card.includes(goal) && card.includes('Oppilas osaa'), 'goal browser: exact id search failed');
+    check((await page.getAttribute('.goal-links a', 'href')).includes(`tavoite=${goal}`), 'goal browser: practice link wrong');
+    check(page.url().includes(`haku=${goal.toLowerCase()}`), 'goal browser: search not in the URL');
+    await page.fill('input[name=haku]', '');
+    await page.selectOption('select[name=luokat]', '7-9');
+    const codes = await page.locator('.goal code').allTextContents();
+    check(codes.length > 0 && codes.every((c) => /^S\d/.test(c)), 'goal browser: band filter failed');
+    await page.goto(`${origin}/harjoittele/tavoitteet.html?haku=A36.S2.12`);
+    await page.waitForSelector('.goal');
+    check((await page.locator('.goal a[href$="fraction_addition_applet.html"]').count()) === 1, 'goal browser: applet link missing');
+    await commonChecks(page, 'goal browser');
+    problems.forEach((p) => failures.push(`goal browser: ${p}`));
+    await page.close();
+  }
 } finally {
   await context.close();
   await browser.close();

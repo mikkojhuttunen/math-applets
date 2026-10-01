@@ -8,6 +8,7 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 |---|---|
 | `index.html` | Practice page: start screen, then rounds. Links: `?tavoite=A36.S2.04`, `?luokat=1-6`, `?virhe=NUM-10`; `?tehtava=<id>` one item; `?luonnokset=1` previews drafts |
 | `opettaja.html` | Teacher view: all items and feedback texts, review selection, printable worksheet |
+| `tavoitteet.html` | Goal browser: curriculum goals with exercises, practice links and applets (`?haku=`, `?luokat=`) |
 | `css/style.css` | Shared styles, light and dark |
 | `js/` | ES modules loaded directly by the browser, no build step |
 | `data/manifest.json` | List of exercise files and counts, built by `tools/build_manifest.js` |
@@ -15,6 +16,7 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 | `data/misconceptions_fi.json` | Finnish feedback per misconception, written by hand |
 | `data/goals.json` | Curriculum goals of grades 1-9, built by `tools/build_goals.js` |
 | `data/topics_fi.json` | Pupil-facing topic titles per goal, written by hand |
+| `data/goal_applets.json` | Applets per goal, written by hand; add a line when a new applet covers a goal |
 | `tools/` | Build scripts run with Node before committing |
 | `test/` | Unit tests (`node:test`), no dependencies |
 
