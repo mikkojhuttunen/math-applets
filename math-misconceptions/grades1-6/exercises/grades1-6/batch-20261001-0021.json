@@ -1,0 +1,366 @@
+[
+ {
+  "id": "A12.S2.06-place-20261001-0021-001",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 4 arvo luvussa 47?",
+  "answer": "40",
+  "answer_expr": "4 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "4",
+    "answer_expr": "4"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-002",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 8 arvo luvussa 83?",
+  "answer": "80",
+  "answer_expr": "8 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "8",
+    "answer_expr": "8"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-003",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 6 arvo luvussa 65?",
+  "answer": "60",
+  "answer_expr": "6 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "6",
+    "answer_expr": "6"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-004",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 9 arvo luvussa 92?",
+  "answer": "90",
+  "answer_expr": "9 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "9",
+    "answer_expr": "9"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-005",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 3 arvo luvussa 38?",
+  "answer": "30",
+  "answer_expr": "3 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "3",
+    "answer_expr": "3"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-006",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 7 arvo luvussa 74?",
+  "answer": "70",
+  "answer_expr": "7 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "7",
+    "answer_expr": "7"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-007",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 5 arvo luvussa 56?",
+  "answer": "50",
+  "answer_expr": "5 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "5",
+    "answer_expr": "5"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-008",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 2 arvo luvussa 29?",
+  "answer": "20",
+  "answer_expr": "2 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "2",
+    "answer_expr": "2"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-009",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Mimmillä on 6 kymmenen euron seteliä ja 3 yhden euron kolikkoa. Montako euroa Mimmillä on?",
+  "answer": "63",
+  "answer_expr": "6 * 10 + 3",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-010",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Eetu pakkasi 4 kymmenen tarran arkkia ja 5 irtotarraa. Montako tarraa hänellä on?",
+  "answer": "45",
+  "answer_expr": "4 * 10 + 5",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-011",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Kaupassa on 7 kymmenen munan laatikkoa ja 2 yksittäistä munaa. Montako munaa on?",
+  "answer": "72",
+  "answer_expr": "7 * 10 + 2",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-012",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Kymmenkantoja on 5 ja ykkösiä 8. Mikä luku on kyseessä?",
+  "answer": "58",
+  "answer_expr": "5 * 10 + 8",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-013",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Lukua kuvaa 9 kymmenkantaa ja 1 ykköskuutiota. Mikä luku se on?",
+  "answer": "91",
+  "answer_expr": "9 * 10 + 1",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-014",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Aino laski helmiä: 3 kymmenen helmen nauhaa ja 7 helmeä erikseen. Montako helmeä on?",
+  "answer": "37",
+  "answer_expr": "3 * 10 + 7",
+  "workbook": [
+   "NUM-09"
+  ],
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-015",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Luvussa 61 numero 6 on kymmenten paikalla. Mikä on sen arvo?",
+  "answer": "60",
+  "answer_expr": "6 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "6",
+    "answer_expr": "6"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-016",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Luvussa 45 numero 4 on kymmenten paikalla. Mikä on sen arvo?",
+  "answer": "40",
+  "answer_expr": "4 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "4",
+    "answer_expr": "4"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-017",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Luvussa 78 numero 7 on kymmenten paikalla. Mikä on sen arvo?",
+  "answer": "70",
+  "answer_expr": "7 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "7",
+    "answer_expr": "7"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-018",
+  "goal": "A12.S2.06",
+  "level": "S",
+  "type": "numeric_entry",
+  "stem_fi": "Luvussa 93 numero 9 on kymmenten paikalla. Mikä on sen arvo?",
+  "answer": "90",
+  "answer_expr": "9 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "9",
+    "answer_expr": "9"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-019",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 5 arvo luvussa 57?",
+  "answer": "50",
+  "answer_expr": "5 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "5",
+    "answer_expr": "5"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ },
+ {
+  "id": "A12.S2.06-place-20261001-0021-020",
+  "goal": "A12.S2.06",
+  "level": "V",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on numeron 8 arvo luvussa 82?",
+  "answer": "80",
+  "answer_expr": "8 * 10",
+  "workbook": [
+   "NUM-09"
+  ],
+  "misconceptions": {
+   "NUM-09a": {
+    "answer": "8",
+    "answer_expr": "8"
+   }
+  },
+  "source": "generated",
+  "status": "draft"
+ }
+]
