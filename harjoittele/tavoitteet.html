@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opetussuunnitelman tavoitteet</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body>
+<main class="wide">
+  <a class="back" href="index.html">&larr; Harjoittele</a>
+  <h1>Opetussuunnitelman tavoitteet</h1>
+  <p class="lead">Matematiikan oppimistavoitteet luokille 1–9 ja niihin liittyvät harjoitukset ja appletit.</p>
+
+  <form class="filters" id="goal-filters">
+    <label>Haku <input name="haku" type="search" placeholder="tunniste tai sana, esim. murtolu"></label>
+    <label>Luokat <select name="luokat">
+      <option value="">Kaikki</option><option value="1-2">1–2</option><option value="3-6">3–6</option><option value="7-9">7–9</option>
+    </select></label>
+    <label class="check"><input type="checkbox" name="sisalto"> Vain tavoitteet, joille on tehtäviä tai appletteja</label>
+  </form>
+  <p id="goal-count" class="status" aria-live="polite">Ladataan&hellip;</p>
+  <div id="goal-list"></div>
+  <footer>Tavoitteet: perusopetuksen opetussuunnitelman perusteet 2014, pilkottu tunnisteellisiksi tavoitteiksi. Lähteet tiedostoissa <code>OPS_1-6_oppimistavoitteet.md</code> ja <code>OPS_7-9_oppimistavoitteet.md</code>.</footer>
+</main>
+<script type="module" src="js/goals_page.js"></script>
+</body>
+</html>

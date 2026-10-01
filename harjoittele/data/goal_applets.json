@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "note": "Applets per curriculum goal, written by hand from section 7 of OPS_7-9_oppimistavoitteet.md and the topic lines in the front page index.html. Only applets that exist. Paths are relative to the repository root.",
+  "applets": {
+    "A36.S2.12": ["luokat-1-6/fraction_addition_applet.html"],
+    "S2.10": ["yla-aste-7-9/prosentti-kerroin.html", "yla-aste-7-9/prosenttimuutos.html"],
+    "S3.09": ["yla-aste-7-9/sekoitusongelma.html", "yla-aste-7-9/kustannusvertailu.html"],
+    "S4.05": ["yla-aste-7-9/suoran-yhtalo.html", "yla-aste-7-9/kustannusvertailu.html"],
+    "S5.10": ["yla-aste-7-9/trig-explorer.html"],
+    "S6.06": ["yla-aste-7-9/kolikko-ja-noppa.html"],
+    "S6.07": ["yla-aste-7-9/kolikko-ja-noppa.html", "yla-aste-7-9/heita-sikaa.html"]
+  }
+}
