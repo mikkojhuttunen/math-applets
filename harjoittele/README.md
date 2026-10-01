@@ -6,7 +6,8 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 
 | Path | Role |
 |---|---|
-| `index.html` | Practice page (pupils); `?luonnokset=1` previews drafts |
+| `index.html` | Practice page (pupils); `?luonnokset=1` previews drafts, `?tehtava=<id>` one item |
+| `opettaja.html` | Teacher view: all items and feedback texts, review selection, printable worksheet |
 | `css/style.css` | Shared styles, light and dark |
 | `js/` | ES modules loaded directly by the browser, no build step |
 | `data/manifest.json` | List of exercise files and counts, built by `tools/build_manifest.js` |
@@ -34,6 +35,10 @@ Browser test (Chromium through Playwright, which is not a dependency of this fol
 cd harjoittele
 NODE_PATH=$(npm root -g) node tools/browser_test.js
 ```
+
+## Reviewing exercises and feedback texts
+
+Open `opettaja.html`, tick what you approve and press "Kopioi tunnisteet". The copied list says which file each id is in and which `status` value to set: `reviewed` for grades 1-6 items and feedback texts, `approved` for grades 7-9 items. Edit the files, then run `node tools/build_manifest.js` and `npm test` here. The grades 1-6 verifier accepts reviewed items only with `--allow-reviewed` (see `math-misconceptions/grades1-6/exercises/grades1-6/README.md`).
 
 ## Reviewing the Finnish feedback texts
 

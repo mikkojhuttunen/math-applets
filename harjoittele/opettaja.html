@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Opettajan näkymä</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body>
+<main class="wide">
+  <a class="back" href="index.html">&larr; Harjoittele</a>
+  <h1>Opettajan näkymä</h1>
+  <p class="lead">Kaikki tehtävät ja palautetekstit, myös luonnokset. Oppilaat näkevät vain tarkistetut.</p>
+
+  <details class="help">
+    <summary>Näin merkitset tehtäviä tarkistetuiksi</summary>
+    <ol>
+      <li>Lue tehtävä, oikea vastaus ja palautteet. Kokeile tarvittaessa linkistä <em>Kokeile</em>.</li>
+      <li>Rastita hyväksymäsi tehtävät ja palautetekstit. Valinnat säilyvät tällä laitteella, kunnes tyhjennät ne.</li>
+      <li>Paina <em>Kopioi tunnisteet</em>. Muuta niiden <code>status</code>-kenttä JSON-tiedostossa: luokat 1–6 <code>"reviewed"</code>, luokat 7–9 <code>"approved"</code>, palautetekstit <code>"reviewed"</code>. Tiedoston nimi näkyy kortissa.</li>
+      <li>Aja kansiossa <code>harjoittele</code> komento <code>node tools/build_manifest.js</code> ja <code>npm test</code>.</li>
+    </ol>
+  </details>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-items" aria-selected="true" aria-controls="panel-items">Tehtävät</button>
+    <button role="tab" id="tab-texts" aria-selected="false" aria-controls="panel-texts">Palautetekstit</button>
+  </div>
+
+  <section id="panel-items" role="tabpanel" aria-labelledby="tab-items">
+    <form class="filters" id="item-filters">
+      <label>Tila <select name="status">
+        <option value="all">Kaikki</option><option value="draft">Luonnokset</option><option value="reviewed">Tarkistetut</option>
+      </select></label>
+      <label>Luokat <select name="band">
+        <option value="">Kaikki</option><option value="1-6">1–6</option><option value="7-9">7–9</option>
+      </select></label>
+      <label>Tavoite <select name="goal"><option value="">Kaikki</option></select></label>
+      <label>Virhekäsitys <select name="misconception"><option value="">Kaikki</option></select></label>
+      <label>Haku <input name="query" type="search" placeholder="tunniste tai teksti"></label>
+    </form>
+    <div class="toolbar">
+      <p id="item-count" class="status" aria-live="polite"></p>
+      <button type="button" id="select-visible">Valitse näkyvät</button>
+      <button type="button" id="print-sheet">Tulosta moniste</button>
+    </div>
+    <div id="item-list"></div>
+    <button type="button" id="more-items" hidden>Näytä lisää</button>
+  </section>
+
+  <section id="panel-texts" role="tabpanel" aria-labelledby="tab-texts" hidden>
+    <form class="filters" id="text-filters">
+      <label>Tila <select name="status">
+        <option value="all">Kaikki</option><option value="draft">Luonnokset</option><option value="reviewed">Tarkistetut</option>
+      </select></label>
+      <label class="check"><input type="checkbox" name="used" checked> Vain tehtävissä käytetyt</label>
+    </form>
+    <p id="text-count" class="status" aria-live="polite"></p>
+    <div id="text-list"></div>
+  </section>
+
+  <div class="selection-bar" id="selection-bar" hidden>
+    <span id="selection-count"></span>
+    <button type="button" id="copy-ids" class="primary">Kopioi tunnisteet</button>
+    <button type="button" id="clear-selection">Tyhjennä valinnat</button>
+    <textarea id="copy-fallback" readonly hidden aria-label="Valitut tunnisteet"></textarea>
+  </div>
+  <p id="load-status" class="status">Ladataan&hellip;</p>
+</main>
+<section id="print" aria-hidden="true"></section>
+<script type="module" src="js/teacher.js"></script>
+</body>
+</html>

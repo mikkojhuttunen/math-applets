@@ -4,27 +4,18 @@
 import { loadItems } from './items.js';
 import { loadMisconceptions, feedbackFor } from './misconceptions.js';
 import { createRound, answerText } from './round.js';
+import { el } from './dom.js';
 
 const ROUND_SIZE = 5;
 const params = new URLSearchParams(location.search);
 const drafts = params.get('luonnokset') === '1';
+// ?tehtava=<id>: just that one item (the teacher view's "Kokeile" link).
+const onlyItem = params.get('tehtava');
 const app = document.getElementById('app');
 
 let items = [];
 let texts = {};
 let round = null;
-
-function el(tag, props = {}, ...children) {
-  const node = document.createElement(tag);
-  for (const [k, v] of Object.entries(props)) {
-    if (k === 'class') node.className = v;
-    else if (k === 'text') node.textContent = v;
-    else if (k.startsWith('on')) node.addEventListener(k.slice(2), v);
-    else if (v !== undefined && v !== null && v !== false) node.setAttribute(k, v === true ? '' : v);
-  }
-  for (const c of children) if (c) node.append(c);
-  return node;
-}
 
 function show(...nodes) {
   app.replaceChildren(...nodes.filter(Boolean));
@@ -177,7 +168,8 @@ function renderSummary() {
 }
 
 function startRound() {
-  round = createRound(items, { size: ROUND_SIZE, feedback: feedbackText });
+  const pool = onlyItem ? items.filter((i) => i.id === onlyItem) : items;
+  round = createRound(pool, { size: ROUND_SIZE, feedback: feedbackText });
   renderQuestion();
 }
 
@@ -202,6 +194,10 @@ async function init() {
   } catch (e) {
     show(el('p', { class: 'error', text: 'Tehtävien lataaminen epäonnistui. Päivitä sivu hetken kuluttua.' }));
     console.error(e);
+    return;
+  }
+  if (onlyItem && !items.some((i) => i.id === onlyItem)) {
+    show(el('p', { text: `Tehtävää ${onlyItem} ei löytynyt${drafts ? '' : ' tarkistetuista tehtävistä'}.` }));
     return;
   }
   if (items.length === 0) renderEmpty();

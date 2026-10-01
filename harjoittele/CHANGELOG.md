@@ -2,6 +2,11 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.7.0 (2026-10-01)
+
+- W10: teacher view `opettaja.html`: all items and feedback texts with filters, review checkboxes and a copy list of ids, "Kokeile" link, printable worksheet with answer key. Practice page accepts `?tehtava=<id>`.
+- Manifest rebuilt for the new batches: 5 files, 100 items.
+
 ## 0.6.0 (2026-09-30)
 
 - W06: practice round of five on `index.html`: number pad, two tries, misconception feedback, correct answer after the second try, summary. Draft preview with `?luonnokset=1`. `js/round.js`, `tools/browser_test.js`.

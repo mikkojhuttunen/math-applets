@@ -118,12 +118,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes:
 
 ### W10 Teacher view
-- State: todo
+- State: done
 - Needs: W03
 - What: `opettaja.html`: all items including drafts (`LUONNOS` badge), filter by status, goal and misconception, each item with its answer, misconception answers and feedback. "Kokeile" opens that item on the practice page. A print layout for a worksheet with an answer key on a separate page. The page does not change item status; it lists the ids to mark reviewed in the JSON.
 - Test: counts match the manifest; print stylesheet hides controls.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.7.0
+- Notes: Done before W07-W09 at the teacher's request, to make reviewing easier. `opettaja.html` + `js/teacher.js` (DOM) + `js/teacher_logic.js` (filtering and counts, unit-tested). Tab **Tehtävät**: filters by status, grade band, goal, misconception (including sub-variants and their parents) and free text; each card shows id, status badge, goal, level, source file, correct answer, every stored wrong answer or wrong option with its misconception name and the pupil feedback (draft texts marked), and a **Kokeile** link that opens the item alone on the practice page (`index.html?luonnokset=1&tehtava=<id>`, added to `js/main.js`). Tab **Palautetekstit**: the 54 Finnish texts with pupil and teacher text, applet links and how many items use each. **Review**: checkboxes on items and texts, "Valitse näkyvät", and "Kopioi tunnisteet", which copies the ids grouped by file with the status value to set (`reviewed` for 1-6 and texts, `approved` for 7-9); a text box appears if the clipboard is blocked. The page never edits the JSON. Selections are kept in this browser's `localStorage` (teacher's own work, not pupil data) until cleared. **Print**: "Tulosta moniste" prints the filtered items as a worksheet (name and date lines, answer lines, tick boxes for choices) with the answer key on a new page. Shared `js/dom.js`. `loadItems` now adds `file` to each item. Fixes found by the browser test: `[hidden]` did not hide elements with their own `display` (global rule added); long misconception names in the filter made the page 531 px wide at 360 px (filters now shrink). Browser test rewritten to be deterministic now that the banks have 100 items and choice items: single typed item (unreadable, misconception, reveal), single choice item, a full random round answered correctly (one item through the number pad), and the teacher view (count, filters, card content, selection, copy list, selection kept after reload, clearing, feedback tab, print sheet). Screenshots checked: desktop, 375 px phone, print layout.
 
 ### W11 Goal browser
 - State: todo
@@ -184,3 +184,5 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | W04 | Answer checking, v0.4.0: agrees with parse_answer on 24 inputs |
 | 2026-09-30 | W05 | Finnish texts for 54 misconceptions, all draft, v0.5.0 |
 | 2026-09-30 | W06 | Practice round with number pad, draft preview, v0.6.0; browser test OK |
+| 2026-10-01 | merge | `main` merged in: 3 new grades 1-6 batches (A36.S2.11 choice, A36.S2.12 fractions); manifest rebuilt, 100 items, all load and grade correctly |
+| 2026-10-01 | W10 | Teacher view, v0.7.0; browser test OK |
