@@ -1,0 +1,328 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka vasen puoli on 5(x + 6) ja jonka ratkaisu on x = 9."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "5(x + 6) = 75",
+            "5x + 30 = 75"
+          ],
+          "invalid": [
+            "5(x + 6) = 99",
+            "5x + 6 = 75"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 9: 5(9 + 6) = 75",
+          "5(x + 6) = 75"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_rp",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 75,
+          "d": 5,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka vasen puoli on 4(x − 2) ja jonka ratkaisu on x = 8."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        },
+        "checks": {
+          "valid": [
+            "4(x − 2) = 24",
+            "4x − 8 = 24"
+          ],
+          "invalid": [
+            "4(x − 2) = 30",
+            "4x − 2 = 24"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 8: 4(8 − 2) = 24",
+          "4(x − 2) = 24"
+        ],
+        "final": "x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_rp",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "c": 24,
+          "d": 5,
+          "x": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka vasen puoli on 2(x + 4) + 4x ja jonka ratkaisu on x = 8."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        },
+        "checks": {
+          "valid": [
+            "2(x + 4) + 4x = 56",
+            "6x + 8 = 56"
+          ],
+          "invalid": [
+            "2x + 4 + 4x = 56",
+            "6x + 4 = 56",
+            "2(x + 4) + 4x = 62"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 8: 2(8 + 4) + 4 · 8 = 56",
+          "2(x + 4) + 4x = 56"
+        ],
+        "final": "x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_rp",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 56,
+          "d": 4,
+          "x": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka vasen puoli on 2(3x + 3) ja jonka ratkaisu on x = 9. Kirjoita yhtälön oikea puoli lukuna."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "2(3x + 3) = 60",
+            "6x + 6 = 60"
+          ],
+          "invalid": [
+            "6x + 3 = 60",
+            "2(3x + 3) = 63"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 9: 2(3 · 9 + 3) = 60",
+          "2(3x + 3) = 60"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_rp",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "c": 60,
+          "d": 3,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Siivooja veloittaa 3 euroa tunnilta. Työ kestää x + 3 tuntia, ja koko työn hinta on 36 euroa. Kirjoita yhtälö, jonka ratkaisu x = 9 on tuntimäärä ilman 3 tunnin lisäosaa."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "3(x + 3) = 36",
+            "3x + 9 = 36"
+          ],
+          "invalid": [
+            "3x + 3 = 36",
+            "3(x + 3) = 27"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Hinta = tuntihinta · tunnit = 3(x + 3)",
+          "3(x + 3) = 36"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_rp",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "c": 36,
+          "d": 5,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

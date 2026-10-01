@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.0",
+  "topic": "GEO-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "GEO-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-02"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 3 cm ja sen kaikki kulmat ovat 90°. Onko tämä neliö myös suorakulmio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, mutta vain jos sivu on yli 10 cm",
+            "misconception": null,
+            "feedback": "Sivun pituus ei vaikuta luokitteluun."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät (3 cm ja 3 cm)",
+            "misconception": null,
+            "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+          },
+          {
+            "id": "c",
+            "text": "Ei, koska suorakulmion sivujen pitää olla eri pituisia",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "d",
+            "text": "Ei, koska neliö ja suorakulmio ovat eri kuviot",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kulmat 90°, sivut 3, 3, 3, 3",
+          "Suorakulmion ehdot täyttyvät"
+        ],
+        "final": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät (3 cm ja 3 cm)"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+      },
+      "provenance": {
+        "template": "geo02_mc",
+        "params": {
+          "s": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-02"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen ikkunan sivu on 8 dm. Lasimestari valmistaa suorakulmion muotoisia laseja. Voiko ikkunaan käyttää suorakulmion muotoista lasia?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei, koska suorakulmiossa leveys ja korkeus ovat aina eri suuret",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä, mutta lasin ala on silloin eri kuin neliön ala",
+            "misconception": null,
+            "feedback": "Ala on sama, 8 · 8 = 64 dm²."
+          },
+          {
+            "id": "c",
+            "text": "Ei, koska neliö ei ole suorakulmio",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "d",
+            "text": "Kyllä: neliö on suorakulmio, jonka molemmat sivut ovat 8 dm",
+            "misconception": null,
+            "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8 dm × 8 dm",
+          "Leveys ja korkeus saavat olla yhtä suuret"
+        ],
+        "final": "Kyllä: neliö on suorakulmio, jonka molemmat sivut ovat 8 dm"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+      },
+      "provenance": {
+        "template": "geo02_mc",
+        "params": {
+          "s": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-02"
+      ],
+      "prompt": {
+        "text": "Suorakulmion ala on leveys · korkeus. Neliön sivu on 11 cm. Mikä on neliön ala, kun käytät suorakulmion pinta-alan kaavaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kaava ei päde neliöön, koska neliö ei ole suorakulmio",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "b",
+            "text": "11 + 11 = 22 cm²",
+            "misconception": null,
+            "feedback": "Ala saadaan kertomalla, ei laskemalla yhteen."
+          },
+          {
+            "id": "c",
+            "text": "11 · 11 = 121 cm²",
+            "misconception": null,
+            "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+          },
+          {
+            "id": "d",
+            "text": "4 · 11 = 44 cm²",
+            "misconception": null,
+            "feedback": "Tämä on neliön piiri, ei ala."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Leveys 11 cm, korkeus 11 cm",
+          "11 · 11 = 121"
+        ],
+        "final": "11 · 11 = 121 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+      },
+      "provenance": {
+        "template": "geo02_mc",
+        "params": {
+          "s": 11
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "GEO-02"
+      ],
+      "prompt": {
+        "text": "Kuvion kaikki sivut ovat 9 cm ja kaikki kulmat ovat 90°. Mitkä nimet sopivat kuviolle?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei kumpikaan",
+            "misconception": null,
+            "feedback": "Kulmat ovat 90° ja sivut yhtä pitkät, joten molemmat sopivat."
+          },
+          {
+            "id": "b",
+            "text": "Vain suorakulmio, koska sivut eivät ole eri pituisia",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "c",
+            "text": "Vain neliö, koska neliö ei ole suorakulmio",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "d",
+            "text": "Sekä neliö että suorakulmio",
+            "misconception": null,
+            "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Neljä suoraa kulmaa: suorakulmio",
+          "Neljä yhtä pitkää sivua: neliö"
+        ],
+        "final": "Sekä neliö että suorakulmio"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+      },
+      "provenance": {
+        "template": "geo02_mc",
+        "params": {
+          "s": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "GEO-02"
+      ],
+      "prompt": {
+        "text": "Mikä väite on oikein? Verrataan neliötä (sivu 10 cm) ja suorakulmiota, jonka sivut ovat 14 cm ja 10 cm."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Jokainen neliö on suorakulmio, mutta kaikki suorakulmiot eivät ole neliöitä",
+            "misconception": null,
+            "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+          },
+          {
+            "id": "b",
+            "text": "Jokainen suorakulmio on neliö, koska molemmissa on neljä suoraa kulmaa",
+            "misconception": null,
+            "feedback": "Suorakulmion 14 cm × 10 cm sivut eivät ole yhtä pitkät."
+          },
+          {
+            "id": "c",
+            "text": "Neliö ei ole suorakulmio, koska sen sivut ovat yhtä pitkät",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          },
+          {
+            "id": "d",
+            "text": "Neliö ja suorakulmio ovat täysin erilaisia kuvioita, joilla ei ole yhteisiä ominaisuuksia",
+            "misconception": "GEO-02",
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10 × 10 täyttää suorakulmion ehdot",
+          "14 × 10 ei täytä neliön ehtoa"
+        ],
+        "final": "Jokainen neliö on suorakulmio, mutta kaikki suorakulmiot eivät ole neliöitä"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+      },
+      "provenance": {
+        "template": "geo02_mc",
+        "params": {
+          "s": 10,
+          "w": 14
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    }
+  ]
+}

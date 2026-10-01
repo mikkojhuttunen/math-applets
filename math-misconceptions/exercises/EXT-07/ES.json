@@ -1,0 +1,265 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-07",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Oppilas muuntaa 2 m² neliösenttimetreiksi. Rivit ovat lukuja ilman yksikköä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 · 100 · 100",
+          "2 · 100",
+          "200"
+        ],
+        "error_line": 2,
+        "error_type": "length_factor_for_area"
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 100 · 100 cm² = 10 000 cm². Oikea rivi 2 on 2 · 10 000 = 20000."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö.",
+        "generic_wrong": "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
+      },
+      "provenance": {
+        "template": "ext07_es",
+        "params": {
+          "n": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Oppilas muuntaa 20000 cm² neliömetreiksi. Rivit ovat lukuja ilman yksikköä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "20000 / (100 · 100)",
+          "20000 / 10000",
+          "20000 / 100"
+        ],
+        "error_line": 3,
+        "error_type": "length_factor_for_area"
+      },
+      "solution": {
+        "steps": [
+          "10 000 cm² = 1 m², joten jaetaan luvulla 10 000. Oikea tulos on 2."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö.",
+        "generic_wrong": "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
+      },
+      "provenance": {
+        "template": "ext07_es",
+        "params": {
+          "n": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Oppilas muuntaa 5 km² neliömetreiksi. Rivit ovat lukuja ilman yksikköä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5 · 1000 · 1000",
+          "5 · 1000000",
+          "5 · 1000"
+        ],
+        "error_line": 3,
+        "error_type": "length_factor_for_area"
+      },
+      "solution": {
+        "steps": [
+          "1 km² = 1 000 · 1 000 m² = 1 000 000 m². Oikea tulos on 5000000."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö.",
+        "generic_wrong": "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
+      },
+      "provenance": {
+        "template": "ext07_es",
+        "params": {
+          "n": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Lattian mitat ovat 4 m ja 5 m ja laatan sivu on 20 cm. Oppilas laskee, montako laattaa tarvitaan. Rivit ovat lukuja ilman yksikköä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "20 · 10000 / (20 · 20)",
+          "200000 / 400",
+          "2000 / 400"
+        ],
+        "error_line": 3,
+        "error_type": "length_factor_for_area"
+      },
+      "solution": {
+        "steps": [
+          "Lattia on 20 m² = 200000 cm², ei 2000 cm². Oikea tulos on 500."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö.",
+        "generic_wrong": "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
+      },
+      "provenance": {
+        "template": "ext07_es",
+        "params": {
+          "w": 4,
+          "l": 5,
+          "t": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Huoneen lattia on 2 m² ja matto peittää 5000 cm². Oppilas laskee, montako neliösenttimetriä jää peittämättä. Rivit ovat lukuja ilman yksikköä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 · 10000 − 5000",
+          "20000 − 5000",
+          "200 − 5000"
+        ],
+        "error_line": 3,
+        "error_type": "length_factor_for_area"
+      },
+      "solution": {
+        "steps": [
+          "2 m² = 20000 cm², ei 200 cm². Oikea tulos on 15000."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö.",
+        "generic_wrong": "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
+      },
+      "provenance": {
+        "template": "ext07_es",
+        "params": {
+          "n": 2,
+          "c": 5000
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    }
+  ]
+}

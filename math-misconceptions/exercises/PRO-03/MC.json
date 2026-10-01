@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Suorakulmion sivut ovat 8 cm ja 12 cm. Neliön piiri on yhtä suuri kuin suorakulmion piiri. Mitä voit sanoa pinta-aloista?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pinta-aloja ei voi verrata, koska kuviot ovat eri muotoisia",
+            "misconception": null,
+            "feedback": "Pinta-alat voi aina laskea ja verrata."
+          },
+          {
+            "id": "b",
+            "text": "Suorakulmion ala on suurempi, koska sen sivut ovat 8 cm ja 12 cm",
+            "misconception": null,
+            "feedback": "Neliön ala on 100 cm², suurempi kuin 96 cm²."
+          },
+          {
+            "id": "c",
+            "text": "Neliön ala on 100 cm² ja suorakulmion 96 cm², joten alat eivät ole samat",
+            "misconception": null,
+            "feedback": "Oikein: neliön sivu on 40 / 4 = 10 cm, ja ala 10² = 100 cm²."
+          },
+          {
+            "id": "d",
+            "text": "Alat ovat samat, koska piirit ovat samat",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Piiri 2 · (8 + 12) = 40 cm",
+          "Neliön sivu 10 cm, ala 100 cm²",
+          "Suorakulmion ala 8 · 12 = 96 cm²"
+        ],
+        "final": "Neliön ala on 100 cm² ja suorakulmion 96 cm², joten alat eivät ole samat"
+      },
+      "feedback": {
+        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro03_mc",
+        "params": {
+          "a": 8,
+          "b": 12
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Kaksi aitausta tehdään 24 metrin pituisesta aidasta: toinen on suorakulmio 3 m × 9 m ja toinen neliö. Kumpaan mahtuu enemmän ruohoa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suorakulmioon, koska sen pidempi sivu on 9 m",
+            "misconception": null,
+            "feedback": "Pidempi sivu ei yksin ratkaise alaa."
+          },
+          {
+            "id": "b",
+            "text": "Sitä ei voi tietää ilman piirrosta",
+            "misconception": null,
+            "feedback": "Alat saadaan laskemalla sivujen tulot."
+          },
+          {
+            "id": "c",
+            "text": "Neliöön: sen ala on 36 m² ja suorakulmion 27 m²",
+            "misconception": null,
+            "feedback": "Oikein: 6 · 6 = 36 m² on enemmän kuin 3 · 9 = 27 m²."
+          },
+          {
+            "id": "d",
+            "text": "Molempiin yhtä paljon, koska aita on yhtä pitkä",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Neliön sivu 24 / 4 = 6 m",
+          "Neliön ala 36 m², suorakulmion ala 27 m²"
+        ],
+        "final": "Neliöön: sen ala on 36 m² ja suorakulmion 27 m²"
+      },
+      "feedback": {
+        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro03_mc",
+        "params": {
+          "perimeter": 24,
+          "a": 3,
+          "b": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: \"Suorakulmioiden piirit ovat molemmat 36 cm, joten niiden alat ovat samat.\" Suorakulmioiden sivut ovat 2 cm × 16 cm ja 8 cm × 10 cm. Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on oikea, koska piirit ovat samat",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärä: alat ovat 32 cm² ja 80 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 2 · 16 = 32 ja 8 · 10 = 80."
+          },
+          {
+            "id": "c",
+            "text": "Väite on oikea, jos kuviot ovat suorakulmioita",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          },
+          {
+            "id": "d",
+            "text": "Väite on väärä, koska piirit eivät ole samat",
+            "misconception": null,
+            "feedback": "Molempien piiri on 2 · 18 = 36 cm."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Piirit: 2 · (2 + 16) = 36 ja 2 · (8 + 10) = 36",
+          "Alat 32 cm² ja 80 cm²"
+        ],
+        "final": "Väite on väärä: alat ovat 32 cm² ja 80 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro03_mc",
+        "params": {
+          "a": 2,
+          "b": 16,
+          "c": 8,
+          "d": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Pellon ympärille on käytettävissä 24 m aitaa. Minkä mittaisen suorakulmion muotoisen pellon ala on suurin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "6 m × 6 m",
+            "misconception": null,
+            "feedback": "Oikein: ala 36 m² on suurempi kuin muiden vaihtoehtojen alat."
+          },
+          {
+            "id": "b",
+            "text": "5 m × 7 m",
+            "misconception": null,
+            "feedback": "Ala 35 m² on pienempi kuin 36 m²."
+          },
+          {
+            "id": "c",
+            "text": "Kaikkien alat ovat yhtä suuret, koska aita on yhtä pitkä",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          },
+          {
+            "id": "d",
+            "text": "4 m × 8 m",
+            "misconception": null,
+            "feedback": "Ala 32 m² on pienempi kuin 36 m²."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Sivujen summa on 12 m",
+          "6 · 6 = 36, 5 · 7 = 35, 4 · 8 = 32"
+        ],
+        "final": "6 m × 6 m"
+      },
+      "feedback": {
+        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro03_mc",
+        "params": {
+          "perimeter": 24,
+          "d1": 1,
+          "d2": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Miksi kahdella kuviolla voi olla sama piiri mutta eri pinta-ala?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se on mahdollista vain, jos piiri on pariton luku",
+            "misconception": null,
+            "feedback": "Piirin parillisuus ei vaikuta asiaan."
+          },
+          {
+            "id": "b",
+            "text": "Se on mahdollista vain, jos toinen kuvio on ympyrä",
+            "misconception": null,
+            "feedback": "Eri alat voivat olla jo suorakulmioilla."
+          },
+          {
+            "id": "c",
+            "text": "Se ei ole mahdollista, koska sama piiri tarkoittaa samaa alaa",
+            "misconception": "PRO-03",
+            "feedback": "Piiri kertoo vain reunan pituuden. Pinta-ala riippuu siitä, miten pituus jakautuu sivuille: samalla piirillä ala voi olla eri suuri."
+          },
+          {
+            "id": "d",
+            "text": "Piiri kertoo vain reunan pituuden, ala riippuu sivujen suhteesta: esimerkiksi 6 × 8 ja 7 × 7 ovat samaa piiriä mutta alat ovat 48 ja 49",
+            "misconception": null,
+            "feedback": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Piiri 28: 6 × 8 antaa alan 48",
+          "Neliö 7 × 7 antaa alan 49"
+        ],
+        "final": "Piiri kertoo vain reunan pituuden, ala riippuu sivujen suhteesta: esimerkiksi 6 × 8 ja 7 × 7 ovat samaa piiriä mutta alat ovat 48 ja 49"
+      },
+      "feedback": {
+        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro03_mc",
+        "params": {
+          "a": 6,
+          "b": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

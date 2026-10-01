@@ -1,0 +1,373 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRB-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilua kolikkoa on heitetty 7 kertaa, ja joka kerta on tullut klaava. Mikä on todennäköisyys, että seuraavalla heitolla tulee kruuna?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suurempi kuin 1/2, koska kruuna on jo \"vuorossa\"",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "b",
+            "text": "Sitä ei voi tietää",
+            "misconception": null,
+            "feedback": "Reilun kolikon todennäköisyys tunnetaan: se on 1/2."
+          },
+          {
+            "id": "c",
+            "text": "Pienempi kuin 1/2, koska sarja jatkuu samana",
+            "misconception": null,
+            "feedback": "Sarja ei jatku sen enempää kuin katkeaakaan: heitot ovat toisistaan riippumattomia."
+          },
+          {
+            "id": "d",
+            "text": "1/2",
+            "misconception": null,
+            "feedback": "Oikein: jokaisella heitolla todennäköisyys on 1/2 riippumatta aiemmista."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(kruuna) = 1/2"
+        ],
+        "final": "1/2"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_mc",
+        "params": {
+          "streak": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilua noppaa on heitetty 15 kertaa, eikä kuutosta ole tullut kertaakaan. Mitä voidaan sanoa seuraavasta heitosta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kuutosen todennäköisyys on edelleen 1/6",
+            "misconception": null,
+            "feedback": "Oikein: nopalla ei ole muistia, todennäköisyys on joka heitolla 1/6."
+          },
+          {
+            "id": "b",
+            "text": "Kuutosen todennäköisyys on nyt pienempi kuin 1/6",
+            "misconception": null,
+            "feedback": "Noppa ei \"kyllästy\" kuutoseen: todennäköisyys ei muutu."
+          },
+          {
+            "id": "c",
+            "text": "Kuutosen todennäköisyys on nyt suurempi kuin 1/6, koska kuutonen on myöhässä",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "d",
+            "text": "Kuutonen tulee varmasti seuraavalla heitolla",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(6) = 1/6"
+        ],
+        "final": "1/6"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_mc",
+        "params": {
+          "rolls": 15
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Lotossa numero 7 ei ole tullut arvonnassa 30 viikkoon. Mikä väite seuraavasta arvonnasta on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Numero 7 on yhtä todennäköinen kuin mikä tahansa muu numero",
+            "misconception": null,
+            "feedback": "Oikein: arvonta ei muista aiempia kierroksia, joten jokaisella numerolla on sama todennäköisyys."
+          },
+          {
+            "id": "b",
+            "text": "Numero 7 on nyt todennäköisempi kuin muut, koska se on myöhässä",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "c",
+            "text": "Numero 7 on nyt epätodennäköisempi kuin muut",
+            "misconception": null,
+            "feedback": "Arvonta ei suosi eikä karta numeroa 7."
+          },
+          {
+            "id": "d",
+            "text": "Numero 7 ei voi tulla, koska se ei ole tullut pitkään aikaan",
+            "misconception": null,
+            "feedback": "Jokainen numero voi tulla milloin tahansa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Arvonnat ovat riippumattomia",
+          "Jokaisen numeron todennäköisyys on sama"
+        ],
+        "final": "Yhtä todennäköinen kuin muut"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_mc",
+        "params": {
+          "weeks": 30
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Aino ja Eetu heittävät reilua kolikkoa. Kolikko on antanut 6 klaavaa peräkkäin. Aino sanoo: \"Nyt kruuna on todennäköisempi, koska tulokset tasoittuvat.\" Eetu sanoo: \"Kruuna ja klaava ovat yhtä todennäköisiä.\" Kumpi on oikeassa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Aino: kruuna on todennäköisempi",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "b",
+            "text": "Aino, mutta vain jos heittoja on vähintään 10",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "c",
+            "text": "Kumpikaan ei ole oikeassa, klaava on todennäköisempi",
+            "misconception": null,
+            "feedback": "Aiemmat heitot eivät muuta kolikon todennäköisyyksiä."
+          },
+          {
+            "id": "d",
+            "text": "Eetu: todennäköisyys on 1/2 kummallekin",
+            "misconception": null,
+            "feedback": "Oikein: tasoittuminen tapahtuu vasta pitkässä sarjassa eikä korjaa yksittäistä heittoa."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(kruuna) = P(klaava) = 1/2"
+        ],
+        "final": "Eetu"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_mc",
+        "params": {
+          "streak": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilulla kolikolla on tullut 7 kruunaa peräkkäin. Mikä perustelu on oikea sille, että seuraavalla heitolla klaavan todennäköisyys on 1/2?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pitkässä sarjassa kruunia ja klaavoja tulee yhtä paljon, joten klaava on vuorossa",
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla tai nopalla ei ole muistia. Lyhyessä sarjassa mikään tulos ei ole \"vuorossa\"."
+          },
+          {
+            "id": "b",
+            "text": "Kolikolla ei ole muistia, joten jokainen heitto on riippumaton aiemmista",
+            "misconception": null,
+            "feedback": "Oikein: riippumattomuus on ratkaiseva perustelu."
+          },
+          {
+            "id": "c",
+            "text": "Vaihtoehtoja on kaksi, joten todennäköisyys on aina 1/2",
+            "misconception": null,
+            "feedback": "Kaksi vaihtoehtoa ei riitä: esimerkiksi epäreilulla kolikolla todennäköisyydet eivät ole 1/2."
+          },
+          {
+            "id": "d",
+            "text": "Kruuna on tullut jo monta kertaa, joten se on todennäköisempi",
+            "misconception": null,
+            "feedback": "Aiemmat heitot eivät muuta todennäköisyyttä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(klaava) = 1/2 joka heitolla"
+        ],
+        "final": "Kolikolla ei ole muistia"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_mc",
+        "params": {
+          "streak": 7,
+          "justify": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke avautuu vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(x + 7)²",
+          "(x + 7)(x + 7)",
+          "x² + 7x + 7x + 49",
+          "x² + 14x + 49"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Potenssi kirjoitetaan tulona, kerrotaan jokainen termi jokaisella ja lasketaan samanmuotoiset termit yhteen.",
+          "Sievin muoto: x² + 14x + 49"
+        ],
+        "final": "x² + 14x + 49"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab."
+      },
+      "provenance": {
+        "template": "alg09_so",
+        "params": {
+          "a": 3,
+          "b": 7,
+          "c": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke avautuu vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(x − 2)²",
+          "(x − 2)(x − 2)",
+          "x² − 2x − 2x + 4",
+          "x² − 4x + 4"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Potenssi kirjoitetaan tulona. Termit ovat x ja −2, joten tulo −2 · (−2) = 4.",
+          "Sievin muoto: x² − 4x + 4"
+        ],
+        "final": "x² − 4x + 4"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab."
+      },
+      "provenance": {
+        "template": "alg09_so",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke avautuu vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(x + 2)² + 2x",
+          "(x + 2)(x + 2) + 2x",
+          "x² + 2x + 2x + 4 + 2x",
+          "x² + 4x + 4 + 2x",
+          "x² + 6x + 4"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Avataan potenssi tulona, lasketaan x-termit yhteen kahdessa vaiheessa.",
+          "Sievin muoto: x² + 6x + 4"
+        ],
+        "final": "x² + 6x + 4"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab."
+      },
+      "provenance": {
+        "template": "alg09_so",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke avautuu vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(3x + 9)²",
+          "(3x + 9)(3x + 9)",
+          "9x² + 27x + 27x + 81",
+          "9x² + 54x + 81"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Potenssi kirjoitetaan tulona; 3x · 3x = 9x² ja keskitermit ovat 27x + 27x.",
+          "Sievin muoto: 9x² + 54x + 81"
+        ],
+        "final": "9x² + 54x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab."
+      },
+      "provenance": {
+        "template": "alg09_so",
+        "params": {
+          "a": 3,
+          "b": 9,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen puutarhan sivun pituus on x + 9 metriä. Siitä erotetaan neliönmuotoinen kukkapenkki, jonka sivu on x metriä. Jäljelle jäävä pinta-ala sievennetään. Järjestä rivit oikeaan järjestykseen niin, että lauseke avautuu vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(x + 9)² − x²",
+          "(x + 9)(x + 9) − x²",
+          "x² + 9x + 9x + 81 − x²",
+          "x² + 18x + 81 − x²",
+          "18x + 81"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Avataan potenssi tulona, lasketaan samanmuotoiset termit yhteen ja x²-termit kumoutuvat.",
+          "Sievin muoto: 18x + 81"
+        ],
+        "final": "18x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab."
+      },
+      "provenance": {
+        "template": "alg09_so",
+        "params": {
+          "a": 3,
+          "b": 9,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

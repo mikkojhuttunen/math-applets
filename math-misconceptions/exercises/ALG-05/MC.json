@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen 4a arvo, kun a = 8?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "32",
+            "misconception": null,
+            "feedback": "Oikein: 4a = 4 · a = 4 · 8."
+          },
+          {
+            "id": "b",
+            "text": "12",
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, ei yhteenlaskua."
+          },
+          {
+            "id": "c",
+            "text": "84",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          },
+          {
+            "id": "d",
+            "text": "48",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4a = 4 · a",
+          "= 4 · 8",
+          "= 32"
+        ],
+        "final": "32"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_mc",
+        "params": {
+          "c": 4,
+          "v": 8
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen 4m arvo, kun m = 5?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "20",
+            "misconception": null,
+            "feedback": "Oikein: 4m = 4 · m = 4 · 5."
+          },
+          {
+            "id": "b",
+            "text": "9",
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, ei yhteenlaskua."
+          },
+          {
+            "id": "c",
+            "text": "45",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          },
+          {
+            "id": "d",
+            "text": "54",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4m = 4 · m",
+          "= 4 · 5",
+          "= 20"
+        ],
+        "final": "20"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_mc",
+        "params": {
+          "c": 4,
+          "v": 5
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen 5k + 6 arvo, kun k = 2?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "40",
+            "misconception": null,
+            "feedback": "Kertolasku koskee vain kirjainta: 5k + 6."
+          },
+          {
+            "id": "b",
+            "text": "16",
+            "misconception": null,
+            "feedback": "Oikein: ensin 5 · 2, sitten + 6."
+          },
+          {
+            "id": "c",
+            "text": "58",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          },
+          {
+            "id": "d",
+            "text": "13",
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5k + 6 = 5 · 2 + 6",
+          "= 10 + 6",
+          "= 16"
+        ],
+        "final": "16"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_mc",
+        "params": {
+          "c": 5,
+          "v": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Oppilas sanoo: 'Kun n = 9, niin 5n = 59, koska 5 ja 9 kirjoitetaan peräkkäin niin kuin luvussa 59.' Mikä on oikea arvio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Oikein, mutta vain kun n on yksinumeroinen",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          },
+          {
+            "id": "b",
+            "text": "Väärin: oikea arvo on 5 + 9 = 14",
+            "misconception": null,
+            "feedback": "Yhteenlasku ei ole lausekkeen tarkoitus."
+          },
+          {
+            "id": "c",
+            "text": "Väärin: 5n tarkoittaa kertolaskua 5 · 9 = 45",
+            "misconception": null,
+            "feedback": "Oikein: kirjaimen vieressä oleva luku on kerroin."
+          },
+          {
+            "id": "d",
+            "text": "Oikein: vierekkäin kirjoitetut merkit muodostavat yhden luvun",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5n = 5 · n",
+          "5 · 9 = 45",
+          "Oppilaan 59 ei ole sama kuin 45"
+        ],
+        "final": "5n = 45"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_mc",
+        "params": {
+          "c": 5,
+          "v": 9
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen ab arvo, kun a = 3 ja b = 7?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "21",
+            "misconception": null,
+            "feedback": "Oikein: ab = a · b."
+          },
+          {
+            "id": "b",
+            "text": "37",
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä: 2a = 2 · a."
+          },
+          {
+            "id": "c",
+            "text": "10",
+            "misconception": null,
+            "feedback": "Kirjainten välissä ei ole plusmerkkiä: vierekkäin tarkoittaa kertolaskua."
+          },
+          {
+            "id": "d",
+            "text": "2187",
+            "misconception": null,
+            "feedback": "Kyse ei ole potenssista."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "ab = a · b",
+          "= 3 · 7",
+          "= 21"
+        ],
+        "final": "21"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_mc",
+        "params": {
+          "c": 3,
+          "v": 7
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

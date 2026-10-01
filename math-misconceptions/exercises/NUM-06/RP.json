@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-06",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 0,3 ja 0,4 puolivälissä. Kirjoita yhtälö, jonka ratkaisu on x."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.35
+        },
+        "checks": {
+          "valid": [
+            "x = ((3/10) + (2/5)) / 2",
+            "2 * x = (3/10) + (2/5)"
+          ],
+          "invalid": [
+            "x = (3/10) + (2/5)",
+            "x = (2/5) - (3/10)",
+            "x = (3/10)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (0,3 + 0,4) / 2",
+          "x = 0,35"
+        ],
+        "final": "x = 0,35"
+      },
+      "feedback": {
+        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_rp",
+        "params": {
+          "a": "0,3",
+          "b": "0,4",
+          "form": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 1,9 ja 2,0 puolivälissä. Kirjoita yhtälö, jonka ratkaisu on x."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 1.95
+        },
+        "checks": {
+          "valid": [
+            "x = ((19/10) + 2) / 2",
+            "2 * x = (19/10) + 2"
+          ],
+          "invalid": [
+            "x = (19/10) + 2",
+            "x = 2 - (19/10)",
+            "x = (19/10)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (1,9 + 2,0) / 2",
+          "x = 1,95"
+        ],
+        "final": "x = 1,95"
+      },
+      "feedback": {
+        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_rp",
+        "params": {
+          "a": "1,9",
+          "b": "2,0",
+          "form": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 0,04 ja 0,05 puolivälissä. Kirjoita yhtälö, jonka ratkaisu on x."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.045
+        },
+        "checks": {
+          "valid": [
+            "x = ((1/25) + (1/20)) / 2",
+            "2 * x = (1/25) + (1/20)"
+          ],
+          "invalid": [
+            "x = (1/25) + (1/20)",
+            "x = (1/20) - (1/25)",
+            "x = (1/25)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (0,04 + 0,05) / 2",
+          "x = 0,045"
+        ],
+        "final": "x = 0,045"
+      },
+      "feedback": {
+        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_rp",
+        "params": {
+          "a": "0,04",
+          "b": "0,05",
+          "form": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on neljäsosan matkan päässä luvusta 0,5 kohti lukua 0,6. Kirjoita yhtälö, jonka ratkaisu on x."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.525
+        },
+        "checks": {
+          "valid": [
+            "x = (1/2) + ((3/5) - (1/2)) / 4",
+            "4 * x = 4 * (1/2) + (3/5) - (1/2)"
+          ],
+          "invalid": [
+            "x = (1/2) + (3/5) / 4",
+            "x = ((3/5) - (1/2)) / 4",
+            "x = (3/5) - (1/2) / 4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Väli on 0,6 − 0,5 = 0,1",
+          "x = 0,5 + 0,1 / 4 = 0,525"
+        ],
+        "final": "x = 0,525"
+      },
+      "feedback": {
+        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_rp",
+        "params": {
+          "a": "0,5",
+          "b": "0,6",
+          "form": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on kymmenesosan matkan päässä luvusta 0,8 kohti lukua 0,9. Kirjoita yhtälö, jonka ratkaisu on x."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.81
+        },
+        "checks": {
+          "valid": [
+            "x = (4/5) + ((9/10) - (4/5)) / 10",
+            "10 * x = 10 * (4/5) + (9/10) - (4/5)"
+          ],
+          "invalid": [
+            "x = (4/5) + (9/10) / 10",
+            "x = ((9/10) - (4/5)) / 10",
+            "x = (9/10) - (4/5) / 10"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Väli on 0,9 − 0,8 = 0,1",
+          "x = 0,8 + 0,1 / 10 = 0,81"
+        ],
+        "final": "x = 0,81"
+      },
+      "feedback": {
+        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_rp",
+        "params": {
+          "a": "0,8",
+          "b": "0,9",
+          "form": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

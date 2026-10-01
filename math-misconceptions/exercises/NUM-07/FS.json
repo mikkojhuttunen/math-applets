@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Pelin hinta nousi 10 % ja on nyt 44 €. Alkuperäinen hinta x ratkaistaan rivi riviltä. Täydennä puuttuva rivi: x + 10/100 · x = 44, □, x = 40. Kirjoita rivi, jossa x:n termit on yhdistetty yhdeksi kertoimeksi."
+      },
+      "payload": {
+        "lines": [
+          "x + 10/100 · x = 44",
+          "110/100 · x = 44",
+          "x = 40"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "110/100 · x = 44",
+          "variable": "x",
+          "solutions": [
+            40.0
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x + 10/100 · x = 110/100 · x",
+          "Rivi 2: 110/100 · x = 44"
+        ],
+        "final": "110/100 · x = 44"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_fs",
+        "params": {
+          "orig": "40",
+          "percent": "10",
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Takin hinta aleni 25 % ja on nyt 90 €. Alkuperäinen hinta x ratkaistaan rivi riviltä. Täydennä puuttuva rivi: x − 25/100 · x = 90, □, x = 120. Kirjoita rivi, jossa x:n termit on yhdistetty yhdeksi kertoimeksi."
+      },
+      "payload": {
+        "lines": [
+          "x − 25/100 · x = 90",
+          "75/100 · x = 90",
+          "x = 120"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "75/100 · x = 90",
+          "variable": "x",
+          "solutions": [
+            120.0
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x − 25/100 · x = 75/100 · x",
+          "Rivi 2: 75/100 · x = 90"
+        ],
+        "final": "75/100 · x = 90"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_fs",
+        "params": {
+          "orig": "120",
+          "percent": "25",
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Bussilipun hinta nousi 10 % ja on nyt 264 €. Alkuperäinen hinta x ratkaistaan rivi riviltä. Täydennä puuttuva rivi: x + 10/100 · x = 264, 110/100 · x = 264, □. Jaa yhtälön molemmat puolet kertoimella ja kirjoita ratkaisu."
+      },
+      "payload": {
+        "lines": [
+          "x + 10/100 · x = 264",
+          "110/100 · x = 264",
+          "x = 240"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x = 240",
+          "variable": "x",
+          "solutions": [
+            240.0
+          ],
+          "equivalents": [
+            "x = 264 / (110/100)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan molemmat puolet kertoimella 110/100 = 1,1: x = 264 / 1,1 = 240",
+          "Rivi 3: x = 240"
+        ],
+        "final": "x = 240"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_fs",
+        "params": {
+          "orig": "240",
+          "percent": "10",
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Kengät maksavat 25 %:n alennuksen jälkeen 120 €. Alkuperäinen hinta x ratkaistaan rivi riviltä. Täydennä puuttuva rivi: x − 25/100 · x = 120, 75/100 · x = 120, □. Jaa yhtälön molemmat puolet kertoimella ja kirjoita ratkaisu."
+      },
+      "payload": {
+        "lines": [
+          "x − 25/100 · x = 120",
+          "75/100 · x = 120",
+          "x = 160"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x = 160",
+          "variable": "x",
+          "solutions": [
+            160.0
+          ],
+          "equivalents": [
+            "x = 120 / (75/100)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan molemmat puolet kertoimella 75/100 = 0,75: x = 120 / 0,75 = 160",
+          "Rivi 3: x = 160"
+        ],
+        "final": "x = 160"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_fs",
+        "params": {
+          "orig": "160",
+          "percent": "25",
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Vuokra nousi 50 % ja on nyt 180 €/kk. Entinen vuokra x ratkaistaan rivi riviltä. Täydennä puuttuva rivi: x + 50/100 · x = 180, □, x = 120. Kirjoita rivi, jossa x:n termit on yhdistetty yhdeksi kertoimeksi."
+      },
+      "payload": {
+        "lines": [
+          "x + 50/100 · x = 180",
+          "150/100 · x = 180",
+          "x = 120"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "150/100 · x = 180",
+          "variable": "x",
+          "solutions": [
+            120.0
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x + 50/100 · x = 150/100 · x",
+          "Rivi 2: 150/100 · x = 180"
+        ],
+        "final": "150/100 · x = 180"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_fs",
+        "params": {
+          "orig": "120",
+          "percent": "50",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}

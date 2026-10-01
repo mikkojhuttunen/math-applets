@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka ainoa ratkaisu on x = 9 ja jossa x on toiseen potenssiin."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "(x − 9)² = 0",
+            "x² − 18x + 81 = 0"
+          ],
+          "invalid": [
+            "x² = 81",
+            "x² − 81 = 0",
+            "x² = 9"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kaksoisjuuri: (x − 9)² = 0",
+          "Vain x = 9, koska x − 9 = 0"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_rp",
+        "params": {
+          "a": 9,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka ainoa ratkaisu on x = −6 ja jossa x on toiseen potenssiin."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": -6
+        },
+        "checks": {
+          "valid": [
+            "(x + 6)² = 0",
+            "x² + 12x + 36 = 0"
+          ],
+          "invalid": [
+            "x² = 36",
+            "x² − 36 = 0",
+            "x² = −6"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kaksoisjuuri: (x + 6)² = 0",
+          "Vain x = −6, koska x + 6 = 0"
+        ],
+        "final": "x = −6"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_rp",
+        "params": {
+          "a": 6,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka ainoa ratkaisu on x = 3 ja jossa on tekijä x − 3 ja kerroin 2."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        },
+        "checks": {
+          "valid": [
+            "2(x − 3)² = 0",
+            "2(x − 3)(x − 3) = 0"
+          ],
+          "invalid": [
+            "2(x − 3)(x + 3) = 0",
+            "2x² = 18",
+            "2(x − 3) = 9"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan sama tekijä kahdesti: 2(x − 3)² = 0",
+          "Vain x = 3"
+        ],
+        "final": "x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_rp",
+        "params": {
+          "a": 3,
+          "p": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä yhtälö (x − 7)² = □ siten, että sen ainoa ratkaisu on x = 7. Kirjoita koko yhtälö."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        },
+        "checks": {
+          "valid": [
+            "(x − 7)² = 0",
+            "0 = (x − 7)²"
+          ],
+          "invalid": [
+            "(x − 7)² = 1",
+            "(x − 7)² = 49",
+            "(x − 7)² = 7"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliö on nolla vain, kun luku itse on nolla",
+          "□ = 0, ja x − 7 = 0 antaa x = 7"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_rp",
+        "params": {
+          "a": 7,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kirjoita yhtälö, jonka vasen puoli on 3 kertaa neliö (x − 5)² ja jonka ainoa ratkaisu on x = 5."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        },
+        "checks": {
+          "valid": [
+            "3(x − 5)² = 0",
+            "3x² − 30x + 75 = 0"
+          ],
+          "invalid": [
+            "3x² = 75",
+            "3x² − 75 = 0",
+            "3(x + 5)² = 0"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3(x − 5)² = 0",
+          "x − 5 = 0, joten x = 5"
+        ],
+        "final": "x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_rp",
+        "params": {
+          "a": 5,
+          "p": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}

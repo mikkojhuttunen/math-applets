@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-02",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Pyöräilijän etäisyys lähtöpisteestä on 2 tunnin kohdalla 18 km ja 5 tunnin kohdalla 36 km. Kuinka monta kilometriä tunnissa hän pyöräilee? Nopeus on vakio."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6,
+          "unit": "km/h"
+        },
+        "wrong": [
+          {
+            "match": 36,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          },
+          {
+            "match": 18,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "(36 − 18) / (5 − 2) = 18 / 3",
+          "= 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä."
+      },
+      "provenance": {
+        "template": "fun02_ne",
+        "params": {
+          "v": 6,
+          "c": 6,
+          "t": [
+            2,
+            5
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Juoksijan matka–aika-kuvaaja kulkee pisteiden (1; 12) ja (4; 36) kautta, kun aika on tunteina ja matka kilometreinä. Mikä on juoksijan nopeus (km/h)?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 8,
+          "unit": "km/h"
+        },
+        "wrong": [
+          {
+            "match": 36,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          },
+          {
+            "match": 12,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "(36 − 12) / (4 − 1) = 24 / 3",
+          "= 8"
+        ],
+        "final": "8"
+      },
+      "feedback": {
+        "correct": "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä."
+      },
+      "provenance": {
+        "template": "fun02_ne",
+        "params": {
+          "v": 8,
+          "c": 4,
+          "t": [
+            1,
+            4
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kaksi kulkijaa lähtee samaan suuntaan. A:n matka on s = 12t + 5 ja B:n matka s = 9t + 6, missä s on kilometreinä ja t tunteina. Kuinka monta km/h nopeammin A kulkee kuin B?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3,
+          "unit": "km/h"
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          },
+          {
+            "match": 1,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "A:n nopeus 12 km/h, B:n nopeus 9 km/h",
+          "12 − 9 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä."
+      },
+      "provenance": {
+        "template": "fun02_ne",
+        "params": {
+          "vA": 12,
+          "cA": 5,
+          "vB": 9,
+          "cB": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Vesisäiliössä on aluksi 15 l vettä. Kolmen minuutin kuluttua vettä on 30 l. Kuinka monta litraa minuutissa säiliöön tulee vettä, kun täyttö on tasaista?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5,
+          "unit": "l/min"
+        },
+        "wrong": [
+          {
+            "match": 30,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          },
+          {
+            "match": 15,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "(30 − 15) / 3 = 15 / 3",
+          "= 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä."
+      },
+      "provenance": {
+        "template": "fun02_ne",
+        "params": {
+          "start": 15,
+          "rate": 5,
+          "t": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kahden kohteen matka–aika-kuvaajat leikkaavat hetkellä t = 6 h kohdassa s = 34 km. A lähti lähtöpisteestä 4 km:n päästä ja B 0 km:n päästä. Kuinka monta km/h A:n nopeus on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5,
+          "unit": "km/h"
+        },
+        "wrong": [
+          {
+            "match": 34,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          },
+          {
+            "match": 4,
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "(34 − 4) / 6 = 30 / 6",
+          "= 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä."
+      },
+      "provenance": {
+        "template": "fun02_ne",
+        "params": {
+          "vA": 5,
+          "cA": 4,
+          "cB": 0,
+          "t0": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

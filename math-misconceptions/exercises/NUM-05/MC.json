@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Onko osamäärä 20 ÷ 0,2 suurempi vai pienempi kuin 20?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pienempi kuin 20",
+            "misconception": "NUM-05",
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä suuri kuin 20",
+            "misconception": null,
+            "feedback": "Jakaja 0,2 ei ole 1, joten osamäärä ei ole 20."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi tietää laskematta",
+            "misconception": null,
+            "feedback": "Jakaja on pienempi kuin 1, joten osamäärän suunnan voi päätellä."
+          },
+          {
+            "id": "d",
+            "text": "Suurempi kuin 20",
+            "misconception": null,
+            "feedback": "Oikein: 20 ÷ 0,2 = 100, ja 100 > 20."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,2 < 1",
+          "20 ÷ 0,2 = 100 > 20"
+        ],
+        "final": "Suurempi kuin 20"
+      },
+      "feedback": {
+        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+      },
+      "provenance": {
+        "template": "num05_mc",
+        "params": {
+          "divisor": "0,2",
+          "n": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Nauhaa on 6 metriä. Siitä leikataan 0,5 metrin pituisia pätkiä. Montako pätkää nauhasta saadaan verrattuna lukuun 6?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Alle 6 pätkää, koska jakaminen pienentää luvun",
+            "misconception": "NUM-05",
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+          },
+          {
+            "id": "b",
+            "text": "12 pätkää, eli enemmän kuin 6",
+            "misconception": null,
+            "feedback": "Oikein: 6 ÷ 0,5 = 12."
+          },
+          {
+            "id": "c",
+            "text": "Tasan 6 pätkää",
+            "misconception": null,
+            "feedback": "Pätkä on lyhyempi kuin 1 metri, joten pätkiä tulee enemmän kuin 6."
+          },
+          {
+            "id": "d",
+            "text": "3 pätkää",
+            "misconception": null,
+            "feedback": "Tämä on kertolasku. Pätkien määrä saadaan jakamalla pituus pätkän pituudella."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 ÷ 0,5 = 12",
+          "12 > 6"
+        ],
+        "final": "12 pätkää"
+      },
+      "feedback": {
+        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+      },
+      "provenance": {
+        "template": "num05_mc",
+        "params": {
+          "n": 6,
+          "piece": "0,5"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista osamääristä on suurempi kuin 30?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "30 ÷ 2",
+            "misconception": null,
+            "feedback": "Jakaja 2 > 1, joten osamäärä 15 on pienempi kuin 30."
+          },
+          {
+            "id": "b",
+            "text": "30 ÷ 5",
+            "misconception": null,
+            "feedback": "Jakaja 5 > 1, joten osamäärä 6 on pienempi kuin 30."
+          },
+          {
+            "id": "c",
+            "text": "30 ÷ 0,4",
+            "misconception": null,
+            "feedback": "Oikein: 30 ÷ 0,4 = 75 > 30."
+          },
+          {
+            "id": "d",
+            "text": "Mikään osamäärä ei ole suurempi kuin 30, koska jakolasku pienentää",
+            "misconception": "NUM-05",
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,4 < 1, joten 30 ÷ 0,4 > 30"
+        ],
+        "final": "30 ÷ 0,4"
+      },
+      "feedback": {
+        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+      },
+      "provenance": {
+        "template": "num05_mc",
+        "params": {
+          "n": 30,
+          "small": "0,4",
+          "bigs": [
+            5,
+            2
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee 9 ÷ 0,6 = 15 ja sanoo: \"Jakolasku pienentää, joten tuloksen piti olla alle 9. Laskin väärin.\" Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasku on oikein: jakaja 0,6 on pienempi kuin 1, joten osamäärä 15 on suurempi kuin 9",
+            "misconception": null,
+            "feedback": "Oikein: osamäärä on suurempi kuin jaettava, kun jakaja on alle 1."
+          },
+          {
+            "id": "b",
+            "text": "Osamäärää ei voi tarkistaa arvioimalla",
+            "misconception": null,
+            "feedback": "Arvion voi tehdä vertaamalla jakajaa lukuun 1."
+          },
+          {
+            "id": "c",
+            "text": "Lasku on väärin: osamäärän pitää olla pienempi kuin 9",
+            "misconception": "NUM-05",
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+          },
+          {
+            "id": "d",
+            "text": "Lasku on väärin: oikea osamäärä on 5,4",
+            "misconception": null,
+            "feedback": "Tämä on tulo. Tarkista, mitä lasketaan: jaetaanko vai kerrotaanko?"
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,6 < 1",
+          "9 ÷ 0,6 = 15 > 9"
+        ],
+        "final": "15"
+      },
+      "feedback": {
+        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+      },
+      "provenance": {
+        "template": "num05_mc",
+        "params": {
+          "n": 9,
+          "divisor": "0,6"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Mikä on oikea perustelu sille, että 3 ÷ 0,25 on suurempi kuin 3?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se ei ole suurempi, koska jakolasku pienentää aina",
+            "misconception": "NUM-05",
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+          },
+          {
+            "id": "b",
+            "text": "Se on yhtä suuri, koska 0,25 on vain desimaalimerkintä",
+            "misconception": null,
+            "feedback": "0,25 on neljäsosa, ei ykkönen."
+          },
+          {
+            "id": "c",
+            "text": "Luvussa 3 on 12 neljännestä, joten 3 ÷ 0,25 = 12",
+            "misconception": null,
+            "feedback": "Oikein: jakaminen luvulla 0,25 kysyy, montako neljännestä mahtuu lukuun."
+          },
+          {
+            "id": "d",
+            "text": "Se on suurempi, koska 0,25 on pienempi kuin 3",
+            "misconception": null,
+            "feedback": "Perustelu ei riitä: ratkaisevaa on, että jakaja on pienempi kuin 1."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,25 = 1/4",
+          "3 ÷ 0,25 = 3 · 4 = 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+      },
+      "provenance": {
+        "template": "num05_mc",
+        "params": {
+          "n": 3,
+          "justify": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

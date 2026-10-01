@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-02",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Kuution särmä on 2 cm. Särmä kasvatetaan 3-kertaiseksi. Kuinka monta kuutiosenttimetriä uuden kuution tilavuus on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 216,
+          "unit": "cm³"
+        },
+        "wrong": [
+          {
+            "match": 24,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          },
+          {
+            "match": 6,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Uusi särmä 6 cm",
+          "Tilavuus 6³ = 216 cm³"
+        ],
+        "final": "216"
+      },
+      "feedback": {
+        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+      },
+      "provenance": {
+        "template": "pro02_ne",
+        "params": {
+          "k": 3,
+          "edge": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Laatikon mitat ovat 2 cm, 4 cm ja 4 cm. Jokainen mitta kasvatetaan 2-kertaiseksi. Mikä on uuden laatikon tilavuus kuutiosenttimetreinä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 256,
+          "unit": "cm³"
+        },
+        "wrong": [
+          {
+            "match": 64,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Uudet mitat 4, 8 ja 8 cm",
+          "Tilavuus 4 · 8 · 8 = 256 cm³"
+        ],
+        "final": "256"
+      },
+      "feedback": {
+        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+      },
+      "provenance": {
+        "template": "pro02_ne",
+        "params": {
+          "k": 2,
+          "a": 2,
+          "b": 4,
+          "c": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Pienoismallin tilavuus on 8 cm³. Oikean esineen jokainen mitta on 2-kertainen pienoismalliin verrattuna. Mikä on esineen tilavuus kuutiosenttimetreinä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 64,
+          "unit": "cm³"
+        },
+        "wrong": [
+          {
+            "match": 16,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          },
+          {
+            "match": 32,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Tilavuuden kerroin 2³ = 8",
+          "8 · 8 = 64"
+        ],
+        "final": "64"
+      },
+      "feedback": {
+        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+      },
+      "provenance": {
+        "template": "pro02_ne",
+        "params": {
+          "k": 2,
+          "volume": 8
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Pieneen akvaarioon mahtuu 3 l vettä. Suuremman akvaarion muoto on sama ja jokainen mitta on 4-kertainen. Montako litraa vettä suureen akvaarioon mahtuu?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 192,
+          "unit": "l"
+        },
+        "wrong": [
+          {
+            "match": 12,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          },
+          {
+            "match": 48,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Tilavuuden kerroin 4³ = 64",
+          "3 · 64 = 192"
+        ],
+        "final": "192"
+      },
+      "feedback": {
+        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+      },
+      "provenance": {
+        "template": "pro02_ne",
+        "params": {
+          "k": 4,
+          "litres": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Kappaleen tilavuus on 64-kertainen alkuperäiseen verrattuna, ja kappaleen muoto on sama. Kuinka moninkertaisia kappaleen pituudet ovat alkuperäiseen verrattuna?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": 64,
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "k³ = 64",
+          "k = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+      },
+      "provenance": {
+        "template": "pro02_ne",
+        "params": {
+          "volume_factor": 64
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

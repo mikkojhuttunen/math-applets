@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-11",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 13 − (x + 5), □, −x + 8. Avaa sulku."
+      },
+      "payload": {
+        "lines": [
+          "13 − (x + 5)",
+          "13 − x − 5",
+          "−x + 8"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "13 − x − 5",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: 13 − x − 5",
+          "Lopputulos: −x + 8"
+        ],
+        "final": "13 − x − 5"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_fs",
+        "params": {
+          "a": 6,
+          "b": 5,
+          "c": 13,
+          "e": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 8 − (6x − 3), □, −6x + 11. Avaa sulku."
+      },
+      "payload": {
+        "lines": [
+          "8 − (6x − 3)",
+          "8 − 6x + 3",
+          "−6x + 11"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "8 − 6x + 3",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: 8 − 6x + 3",
+          "Lopputulos: −6x + 11"
+        ],
+        "final": "8 − 6x + 3"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_fs",
+        "params": {
+          "a": 6,
+          "b": 3,
+          "c": 8,
+          "e": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: (4x + 10) − (3x + 2), □, x + 8. Avaa jälkimmäinen sulku."
+      },
+      "payload": {
+        "lines": [
+          "(4x + 10) − (3x + 2)",
+          "4x + 10 − 3x − 2",
+          "x + 8"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "4x + 10 − 3x − 2",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: 4x + 10 − 3x − 2",
+          "Lopputulos: x + 8"
+        ],
+        "final": "4x + 10 − 3x − 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_fs",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "c": 10,
+          "e": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: −(3x − 3) − (x + 14), −3x + 3 − x − 14, □. Kirjoita sievennetty lauseke."
+      },
+      "payload": {
+        "lines": [
+          "−(3x − 3) − (x + 14)",
+          "−3x + 3 − x − 14",
+          "−4x − 11"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "−4x − 11",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3: −4x − 11",
+          "Lopputulos: −4x − 11"
+        ],
+        "final": "−4x − 11"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_fs",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "c": 14,
+          "e": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Tilillä on 8 euroa. Siitä vähennetään lasku, jonka suuruus on x − 5 euroa. Jäljelle jäävä rahamäärä sievennetään rivi riviltä. Täydennä puuttuva rivi: 8 − (x − 5), □, 13 − x. Avaa sulku."
+      },
+      "payload": {
+        "lines": [
+          "8 − (x − 5)",
+          "8 − x + 5",
+          "13 − x"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "8 − x + 5",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: 8 − x + 5",
+          "Lopputulos: 13 − x"
+        ],
+        "final": "8 − x + 5"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_fs",
+        "params": {
+          "a": 7,
+          "b": 5,
+          "c": 8,
+          "e": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}

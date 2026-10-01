@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-06",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisen kolmion kateetit ovat 8 cm ja 15 cm ja hypotenuusa 17 cm. Kulman α vastainen kateetti on 8 cm. Mikä on sin α?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "8 cm",
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Se ei ole pituus eikä siinä ole yksikköä, ja viereinen kateetti kuuluu kosinille."
+          },
+          {
+            "id": "b",
+            "text": "8/17",
+            "misconception": null,
+            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+          },
+          {
+            "id": "c",
+            "text": "15/17",
+            "misconception": "EXT-06",
+            "feedback": "Tämä on viereinen kateetti jaettuna hypotenuusalla, eli cos α."
+          },
+          {
+            "id": "d",
+            "text": "8/15",
+            "misconception": null,
+            "feedback": "Tämä on vastainen jaettuna viereisellä kateetilla, eli tan α."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin α = vastainen / hypotenuusa = 8/17"
+        ],
+        "final": "8/17"
+      },
+      "feedback": {
+        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_mc",
+        "params": {
+          "triple": [
+            8,
+            15,
+            17
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Kolmiossa PQR kulma R on suora ja α on kulma P. Mikä sivu on kulman α vastainen kateetti?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "QR",
+            "misconception": null,
+            "feedback": "Oikein: vastainen kateetti on kulmaa vastapäätä oleva sivu, ja kulma α on kärjessä P."
+          },
+          {
+            "id": "b",
+            "text": "PQ",
+            "misconception": null,
+            "feedback": "Sivu PQ on suoran kulman vastapäinen sivu eli hypotenuusa, ei kateetti."
+          },
+          {
+            "id": "c",
+            "text": "PR",
+            "misconception": "EXT-06",
+            "feedback": "Sivu PR on kulman α viereinen kateetti. Vastainen kateetti on kulmaa vastapäätä."
+          },
+          {
+            "id": "d",
+            "text": "PQR",
+            "misconception": null,
+            "feedback": "Tämä on koko kolmio, ei sivu."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kulma α on kärjessä P",
+          "Sen vastapäinen sivu on QR"
+        ],
+        "final": "QR"
+      },
+      "feedback": {
+        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_mc",
+        "params": {
+          "triple": [
+            5,
+            12,
+            13
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Oppilas kirjoittaa: \"sin α = 9 cm\", kun suorakulmaisen kolmion vastainen kateetti on 9 cm ja hypotenuusa 15 cm. Mikä on virhe?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei virhettä, sini on vastaisen kateetin pituus",
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Se ei ole pituus eikä siinä ole yksikköä, ja viereinen kateetti kuuluu kosinille."
+          },
+          {
+            "id": "b",
+            "text": "Pitäisi jakaa hypotenuusalla, mutta käyttää viereistä kateettia 12 cm",
+            "misconception": "EXT-06",
+            "feedback": "Sinin osoittaja on vastainen kateetti, ei viereinen."
+          },
+          {
+            "id": "c",
+            "text": "Sini on suhdeluku: oikea arvo on 3/5, eikä siinä ole yksikköä",
+            "misconception": null,
+            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+          },
+          {
+            "id": "d",
+            "text": "Pitäisi jakaa viereisellä kateetilla 12 cm, jolloin saadaan 3/4",
+            "misconception": null,
+            "feedback": "Vastainen jaettuna viereisellä kateetilla on tan α, ei sin α."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin α = 9/15"
+        ],
+        "final": "Sini on suhdeluku: oikea arvo on 3/5, eikä siinä ole yksikköä"
+      },
+      "feedback": {
+        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_mc",
+        "params": {
+          "triple": [
+            9,
+            12,
+            15
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Voiko suorakulmaisen kolmion kulman sini olla suurempi kuin 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, jos kolmio on tarpeeksi suuri, koska sini on sivun pituus",
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Se ei ole pituus eikä siinä ole yksikköä, ja viereinen kateetti kuuluu kosinille."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä, jos viereinen kateetti on pidempi kuin vastainen",
+            "misconception": "EXT-06",
+            "feedback": "Sini ei riipu viereisestä kateetista: se on vastainen / hypotenuusa, ja hypotenuusa on pisin sivu."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä, jos kulma on tarpeeksi suuri",
+            "misconception": null,
+            "feedback": "Teräväkulmaisen kulman sini on aina välillä 0 ja 1."
+          },
+          {
+            "id": "d",
+            "text": "Ei, koska kateetti on aina lyhyempi kuin hypotenuusa, joten suhde on pienempi kuin 1",
+            "misconception": null,
+            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin α = vastainen / hypotenuusa",
+          "Hypotenuusa on pisin sivu, joten suhde < 1"
+        ],
+        "final": "Ei, koska kateetti on aina lyhyempi kuin hypotenuusa, joten suhde on pienempi kuin 1"
+      },
+      "feedback": {
+        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_mc",
+        "params": {
+          "triple": [
+            7,
+            24,
+            25
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Kolmion kateetit ovat 6 cm ja 8 cm ja hypotenuusa 10 cm. Toisen samanmuotoisen kolmion sivut ovat 3 kertaa pidemmät. Mitä tapahtuu sinille sin α?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se muuttuu 3 kertaa pienemmäksi",
+            "misconception": null,
+            "feedback": "Hypotenuusa ja kateetti kasvavat yhtä paljon, joten suhde ei muutu."
+          },
+          {
+            "id": "b",
+            "text": "Se ei muutu: sin α = 3/5",
+            "misconception": null,
+            "feedback": "Oikein: suhde pysyy samana, kun kolmiota suurennetaan."
+          },
+          {
+            "id": "c",
+            "text": "Se muuttuu 3-kertaiseksi, koska vastainen kateetti pitenee 3-kertaiseksi",
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Se ei ole pituus eikä siinä ole yksikköä, ja viereinen kateetti kuuluu kosinille."
+          },
+          {
+            "id": "d",
+            "text": "Se on 4/5, koska viereinen kateetti ei muutu",
+            "misconception": "EXT-06",
+            "feedback": "Sinin osoittaja on vastainen kateetti, ja kaikki sivut muuttuvat."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Uudet sivut 18, 24, 30",
+          "sin α = 18/30 = 3/5"
+        ],
+        "final": "Se ei muutu: sin α = 3/5"
+      },
+      "feedback": {
+        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_mc",
+        "params": {
+          "triple": [
+            6,
+            8,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}

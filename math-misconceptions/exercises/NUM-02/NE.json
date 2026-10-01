@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-02",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Kirjoita suurempi luvuista 0,27 ja 0,2."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.27
+        },
+        "wrong": [
+          {
+            "match": 0.2,
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,2 = 0,20",
+          "0,20 < 0,27"
+        ],
+        "final": "0,27"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_ne",
+        "params": {
+          "key": [
+            "0.2",
+            "0.27"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Pituushypyssä kaksi hyppyä mitattiin tuloksiksi 1,2 m ja 1,26 m. Kumpi hyppy oli pidempi? Kirjoita suurempi luku (m)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1.26
+        },
+        "wrong": [
+          {
+            "match": 1.2,
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1,2 = 1,20",
+          "1,20 < 1,26"
+        ],
+        "final": "1,26"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_ne",
+        "params": {
+          "key": [
+            "1.2",
+            "1.26"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Kolmen pussin painot ovat 1,82 kg, 1,809 kg ja 1,8 kg. Mikä on painavimman pussin paino? Kirjoita luku (kg)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1.82
+        },
+        "wrong": [
+          {
+            "match": 1.8,
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1,8, 1,809, 1,82 (pienimmästä suurimpaan)"
+        ],
+        "final": "1,82"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_ne",
+        "params": {
+          "key": [
+            "1.8",
+            "1.809",
+            "1.82"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Luvuista 3,3 ja 3,34 suurempi on x. Montako sadasosaa x:ssä on? Kirjoita luku."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 334.0
+        },
+        "wrong": [
+          {
+            "match": 330.0,
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3,30 < 3,34, joten x = 3,34",
+          "3,34 on 334 sadasosaa"
+        ],
+        "final": "334"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_ne",
+        "params": {
+          "key": [
+            "3.3",
+            "3.34",
+            "h"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Montako luvuista 0,3, 0,4, 0,39, 0,23 on suurempia kuin 0,3? Kirjoita lukumäärä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,3 < 0,3",
+          "0,4 > 0,3",
+          "0,39 > 0,3",
+          "0,23 < 0,3"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_ne",
+        "params": {
+          "key": [
+            "0.23",
+            "0.3",
+            "0.39",
+            "0.4"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

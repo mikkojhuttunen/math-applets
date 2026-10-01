@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Neliön sivu 6 cm kasvatetaan 3-kertaiseksi. Kuinka moninkertaiseksi neliön pinta-ala muuttuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3-kertainen",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "b",
+            "text": "9-kertainen",
+            "misconception": null,
+            "feedback": "Oikein: pinta-ala muuttuu k²-kertaiseksi, eli 3² = 9."
+          },
+          {
+            "id": "c",
+            "text": "12-kertainen",
+            "misconception": null,
+            "feedback": "Tarkista: sivujen kerroin korotetaan toiseen potenssiin."
+          },
+          {
+            "id": "d",
+            "text": "6-kertainen",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Uusi sivu on 18 cm",
+          "Alkuperäinen ala 6² = 36 cm², uusi ala 324 cm²",
+          "324 / 36 = 9"
+        ],
+        "final": "9-kertainen"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro01_mc",
+        "params": {
+          "k": 3,
+          "side": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Suorakulmion mitat 5 cm ja 9 cm kasvatetaan molemmat 4-kertaisiksi. Kuinka moninkertaiseksi pinta-ala muuttuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "16-kertainen",
+            "misconception": null,
+            "feedback": "Oikein: 20 · 36 = 16 · 45."
+          },
+          {
+            "id": "b",
+            "text": "4-kertainen",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "c",
+            "text": "64-kertainen",
+            "misconception": null,
+            "feedback": "Kolmas potenssi kuvaa tilavuutta, ei pinta-alaa."
+          },
+          {
+            "id": "d",
+            "text": "8-kertainen",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen ala 5 · 9 = 45 cm²",
+          "Uusi ala 20 · 36 = 720 cm²",
+          "720 / 45 = 16"
+        ],
+        "final": "16-kertainen"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro01_mc",
+        "params": {
+          "k": 4,
+          "a": 5,
+          "b": 9
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Valokuvan pinta-ala on 50 cm². Kuva suurennetaan niin, että sen jokainen mitta on 2-kertainen. Mikä on suurennoksen pinta-ala?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "100 cm²",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "b",
+            "text": "400 cm²",
+            "misconception": null,
+            "feedback": "Pinta-alaan ei käytetä kolmatta potenssia."
+          },
+          {
+            "id": "c",
+            "text": "52 cm²",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "d",
+            "text": "200 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 50 · 2² = 200."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pinta-alan kerroin on 2² = 4",
+          "50 · 4 = 200"
+        ],
+        "final": "200 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro01_mc",
+        "params": {
+          "k": 2,
+          "area": 50
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Seinän maalaamiseen tarvitaan 1 purkki maalia. Toinen seinä on muodoltaan samanlainen, mutta sen jokainen mitta on 3-kertainen. Montako purkkia maalia toisen seinän maalaamiseen tarvitaan?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "27",
+            "misconception": null,
+            "feedback": "Maalin tarve riippuu pinta-alasta eikä tilavuudesta."
+          },
+          {
+            "id": "b",
+            "text": "9",
+            "misconception": null,
+            "feedback": "Oikein: ala on 9-kertainen, joten maalia tarvitaan 1 · 9 = 9 purkkia."
+          },
+          {
+            "id": "c",
+            "text": "4",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "d",
+            "text": "3",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pinta-alan kerroin 3² = 9",
+          "1 · 9 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro01_mc",
+        "params": {
+          "k": 3,
+          "cans": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-01"
+      ],
+      "prompt": {
+        "text": "Kuvion kaikki pituudet kasvatetaan 2-kertaisiksi. Miksi pinta-ala ei ole silloin 2-kertainen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pinta-ala ei muutu, kun kuviota suurennetaan.",
+            "misconception": null,
+            "feedback": "Suurennettu kuvio peittää suuremman alan."
+          },
+          {
+            "id": "b",
+            "text": "Pinta-ala kasvaa sekä leveys- että korkeussuunnassa, joten se on 2² = 4-kertainen.",
+            "misconception": null,
+            "feedback": "Oikein: pinta-ala riippuu kahdesta pituudesta."
+          },
+          {
+            "id": "c",
+            "text": "Pinta-ala on 2-kertainen, jos kuvio on neliö, mutta muuten ei.",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          },
+          {
+            "id": "d",
+            "text": "Pinta-ala on aina 2-kertainen, kun pituudet ovat 2-kertaiset.",
+            "misconception": "PRO-01",
+            "feedback": "Mittakaavan kerroin k kertoo pituuksien muutoksen. Pinta-ala muuttuu kertoimella k², koska kuvio kasvaa sekä leveys- että korkeussuunnassa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Ala = pituus · leveys",
+          "Molemmat kasvavat 2-kertaisiksi, joten ala kasvaa 2 · 2 = 4-kertaiseksi"
+        ],
+        "final": "Pinta-ala kasvaa sekä leveys- että korkeussuunnassa, joten se on 2² = 4-kertainen."
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro01_mc",
+        "params": {
+          "k": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

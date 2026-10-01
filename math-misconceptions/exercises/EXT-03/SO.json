@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-03",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että epäyhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "5 − 2x > 11",
+          "5 − 2x − 5 > 11 − 5",
+          "−2x > 6",
+          "x < −3"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 5 molemmilta puolilta ja jaetaan luvulla −2; merkki kääntyy.",
+          "Ratkaisu: x < −3"
+        ],
+        "final": "x < −3"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_so",
+        "params": {
+          "a": 2,
+          "r": -3,
+          "q": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että epäyhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "2 − 3x ≤ −10",
+          "−3x ≤ −12",
+          "x ≥ 4"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 2 molemmilta puolilta ja jaetaan luvulla −3; merkki kääntyy.",
+          "Ratkaisu: x ≥ 4"
+        ],
+        "final": "x ≥ 4"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_so",
+        "params": {
+          "a": 3,
+          "r": 4,
+          "q": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Vesisäiliössä on 20 litraa vettä, ja siitä valuu 4 litraa minuutissa. Milloin vettä on alle 12 litraa? Järjestä rivit oikeaan järjestykseen niin, että epäyhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "20 − 4t < 12",
+          "−4t < −8",
+          "t > 2"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 20 molemmilta puolilta ja jaetaan luvulla −4; merkki kääntyy.",
+          "Ratkaisu: t > 2"
+        ],
+        "final": "t > 2"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_so",
+        "params": {
+          "a": 4,
+          "r": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että epäyhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x + 2 > 4x − 7",
+          "x − 4x > −9",
+          "−3x > −9",
+          "x < 3"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirretään x-termit vasemmalle ja vakiot oikealle, sievennetään ja jaetaan luvulla −3; merkki kääntyy.",
+          "Ratkaisu: x < 3"
+        ],
+        "final": "x < 3"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_so",
+        "params": {
+          "p1": 1,
+          "p2": 4,
+          "q1": 2,
+          "r": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että epäyhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "−2(x + 3) ≥ −10",
+          "−2x − 6 ≥ −10",
+          "−2x ≥ −4",
+          "x ≤ 2"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Avataan sulut, siirretään vakio oikealle ja jaetaan luvulla −2; merkki kääntyy.",
+          "Ratkaisu: x ≤ 2"
+        ],
+        "final": "x ≤ 2"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_so",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "r": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    }
+  ]
+}

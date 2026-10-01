@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Suorakulmion sivut ovat 7 cm ja 11 cm. Neliön piiri on yhtä suuri. Kuinka monta neliösenttimetriä neliön ala on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 81,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 77,
+            "misconception": "PRO-03",
+            "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Piiri 2 · (7 + 11) = 36 cm",
+          "Neliön sivu 9 cm",
+          "Ala 9² = 81 cm²"
+        ],
+        "final": "81"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä."
+      },
+      "provenance": {
+        "template": "pro03_ne",
+        "params": {
+          "a": 7,
+          "b": 11
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön piiri on 20 cm ja ala 25 cm². Suorakulmion piiri on myös 20 cm ja sen toinen sivu on 4 cm. Kuinka monta neliösenttimetriä suorakulmion ala on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 24,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 25,
+            "misconception": "PRO-03",
+            "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Toinen sivu 10 − 4 = 6 cm",
+          "Ala 4 · 6 = 24 cm²"
+        ],
+        "final": "24"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä."
+      },
+      "provenance": {
+        "template": "pro03_ne",
+        "params": {
+          "half": 10,
+          "a": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen kangaspalan reunanauha on 32 cm pitkä. Suorakulmion muotoinen kangas rajataan yhtä pitkällä nauhalla, ja sen toinen sivu on 2 cm. Kuinka monta neliösenttimetriä suorakulmion ala on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 28,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 64,
+            "misconception": "PRO-03",
+            "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Toinen sivu 16 − 2 = 14 cm",
+          "Ala 2 · 14 = 28 cm²"
+        ],
+        "final": "28"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä."
+      },
+      "provenance": {
+        "template": "pro03_ne",
+        "params": {
+          "half": 16,
+          "a": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Aita on 32 m pitkä. Siitä tehdään joko neliön muotoinen aitaus tai suorakulmio, jonka toinen sivu on 5 m. Kuinka monta neliömetriä suurempi neliön ala on kuin suorakulmion ala?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 9,
+          "unit": "m²"
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "PRO-03",
+            "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Neliön ala 8² = 64 m²",
+          "Suorakulmion ala 5 · 11 = 55 m²",
+          "64 − 55 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä."
+      },
+      "provenance": {
+        "template": "pro03_ne",
+        "params": {
+          "half": 16,
+          "a": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Suorakulmioilla on sama piiri 34 cm. Toisen sivut ovat 6 cm ja 11 cm, toisen 1 cm ja 16 cm. Kuinka monta neliösenttimetriä alat eroavat toisistaan?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 50,
+          "unit": "cm²"
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "PRO-03",
+            "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Alat 6 · 11 = 66 cm² ja 1 · 16 = 16 cm²",
+          "Erotus 50 cm²"
+        ],
+        "final": "50"
+      },
+      "feedback": {
+        "correct": "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä."
+      },
+      "provenance": {
+        "template": "pro03_ne",
+        "params": {
+          "a": 6,
+          "c": 1,
+          "half": 17
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

@@ -1,0 +1,340 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Kaupassa pulla maksaa 3 euroa ja pirtelö 4 euroa. Ostetaan p kpl ensimmäistä ja k kpl toista tuotetta, jolloin hinta euroina on 3p + 4k. Laske hinta, kun p = 2 ja k = 4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 22
+        },
+        "wrong": [
+          {
+            "match": 7,
+            "misconception": "ALG-01",
+            "feedback": "Kirjaimet ovat lukuja, ei esineiden nimiä. Sijoita p = 2 ja k = 4: 3 · 2 + 4 · 4."
+          },
+          {
+            "match": 20,
+            "misconception": null,
+            "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 3p ja 4k."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3p + 4k = 3 · 2 + 4 · 4",
+          "= 6 + 16",
+          "= 22"
+        ],
+        "final": "22"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoita luvut kirjainten paikalle ja laske."
+      },
+      "provenance": {
+        "template": "alg01_ne",
+        "params": {
+          "ca": 3,
+          "cb": 4,
+          "va": 2,
+          "vb": 4,
+          "pay": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Kaupassa vihko maksaa 3 euroa ja kynä 5 euroa. Ostetaan v kpl ensimmäistä ja k kpl toista tuotetta, jolloin hinta euroina on 3v + 5k. Laske hinta, kun v = 3 ja k = 4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 29
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "ALG-01",
+            "feedback": "Kirjaimet ovat lukuja, ei esineiden nimiä. Sijoita v = 3 ja k = 4: 3 · 3 + 5 · 4."
+          },
+          {
+            "match": 27,
+            "misconception": null,
+            "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 3v ja 5k."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3v + 5k = 3 · 3 + 5 · 4",
+          "= 9 + 20",
+          "= 29"
+        ],
+        "final": "29"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoita luvut kirjainten paikalle ja laske."
+      },
+      "provenance": {
+        "template": "alg01_ne",
+        "params": {
+          "ca": 3,
+          "cb": 5,
+          "va": 3,
+          "vb": 4,
+          "pay": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Kaupassa elokuvalippu maksaa 5 euroa ja karkkipussi 2 euroa. Ostetaan l kpl ensimmäistä ja p kpl toista tuotetta, jolloin hinta euroina on 5l + 2p. Laske hinta, kun l = 4 ja p = 2."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 24
+        },
+        "wrong": [
+          {
+            "match": 7,
+            "misconception": "ALG-01",
+            "feedback": "Kirjaimet ovat lukuja, ei esineiden nimiä. Sijoita l = 4 ja p = 2: 5 · 4 + 2 · 2."
+          },
+          {
+            "match": 18,
+            "misconception": null,
+            "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 5l ja 2p."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "5l + 2p = 5 · 4 + 2 · 2",
+          "= 20 + 4",
+          "= 24"
+        ],
+        "final": "24"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoita luvut kirjainten paikalle ja laske."
+      },
+      "provenance": {
+        "template": "alg01_ne",
+        "params": {
+          "ca": 5,
+          "cb": 2,
+          "va": 4,
+          "vb": 2,
+          "pay": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Kaupassa tarra maksaa 5 euroa ja kortti 3 euroa. Kun ostetaan t kpl ensimmäistä ja k kpl toista tuotetta, hinta euroina on 5t + 3k. Ostetaan 4 kpl ensimmäistä ja 2 kpl toista, ja maksetaan 35 euron setelillä. Paljonko vaihtorahaa saadaan euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 9
+        },
+        "wrong": [
+          {
+            "match": 27,
+            "misconception": "ALG-01",
+            "feedback": "Kirjaimet ovat lukuja (kappalemääriä), ei esineiden nimiä. Laske hinta: 5 · 4 + 3 · 2."
+          },
+          {
+            "match": 26,
+            "misconception": null,
+            "feedback": "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Hinta: 5 · 4 + 3 · 2 = 26",
+          "Vaihtoraha: 35 − 26 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoita luvut kirjainten paikalle ja laske."
+      },
+      "provenance": {
+        "template": "alg01_ne",
+        "params": {
+          "ca": 5,
+          "cb": 3,
+          "va": 4,
+          "vb": 2,
+          "pay": 35
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Kaupassa omena maksaa 2 euroa ja banaani 3 euroa. Kun ostetaan o kpl ensimmäistä ja b kpl toista tuotetta, hinta euroina on 2o + 3b. Ostetaan 4 kpl ensimmäistä ja 3 kpl toista, ja maksetaan 40 euron setelillä. Paljonko vaihtorahaa saadaan euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 23
+        },
+        "wrong": [
+          {
+            "match": 35,
+            "misconception": "ALG-01",
+            "feedback": "Kirjaimet ovat lukuja (kappalemääriä), ei esineiden nimiä. Laske hinta: 2 · 4 + 3 · 3."
+          },
+          {
+            "match": 17,
+            "misconception": null,
+            "feedback": "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Hinta: 2 · 4 + 3 · 3 = 17",
+          "Vaihtoraha: 40 − 17 = 23"
+        ],
+        "final": "23"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoita luvut kirjainten paikalle ja laske."
+      },
+      "provenance": {
+        "template": "alg01_ne",
+        "params": {
+          "ca": 2,
+          "cb": 3,
+          "va": 4,
+          "vb": 3,
+          "pay": 40
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

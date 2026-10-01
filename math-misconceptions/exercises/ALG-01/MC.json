@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T7",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Omenan hinta on 5 senttiä ja päärynän hinta 7 senttiä. Ostetaan a kpl (omenaa) ja p kpl (päärynää). Mitä lauseke 5a + 7p kertoo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5 omenaa ja 7 päärynää",
+            "misconception": "ALG-01",
+            "feedback": "Kirjain luetaan tavaran nimeksi. Kirjain on kuitenkin luku: se kertoo, montako kappaletta ostetaan."
+          },
+          {
+            "id": "b",
+            "text": "Ostettujen tuotteiden yhteismäärän",
+            "misconception": null,
+            "feedback": "Lauseke kertoo hinnan, ei kappalemäärää: 5a on a tuotteen hinta."
+          },
+          {
+            "id": "c",
+            "text": "Ostosten yhteishinnan (senttiä)",
+            "misconception": null,
+            "feedback": "Oikein: lauseke on yhteishinta."
+          },
+          {
+            "id": "d",
+            "text": "Yhden kappaleen hinnan molemmista tuotteista",
+            "misconception": null,
+            "feedback": "Yhden kappaleen hinta olisi 5 + 7, ilman kirjaimia."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5a: a kappaletta, hinta 5 senttiä kappaleelta, yhteensä 5 · a senttiä",
+          "7p: p kappaletta, hinta 7 senttiä kappaleelta, yhteensä 7 · p senttiä",
+          "Summa 5a + 7p on koko ostoksen hinta"
+        ],
+        "final": "Yhteishinta (senttiä)"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+      },
+      "provenance": {
+        "template": "alg01_mc",
+        "params": {
+          "pa": 5,
+          "pb": 7,
+          "vars": [
+            "a",
+            "p"
+          ],
+          "context": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T7",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Pullan hinta on 5 euroa ja pirtelön hinta 6 euroa. Ostetaan m kpl (pullaa) ja n kpl (pirtelöä). Mitä lauseke 5m + 6n kertoo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5 pullaa ja 6 pirtelöä",
+            "misconception": "ALG-01",
+            "feedback": "Kirjain luetaan tavaran nimeksi. Kirjain on kuitenkin luku: se kertoo, montako kappaletta ostetaan."
+          },
+          {
+            "id": "b",
+            "text": "Ostosten yhteishinnan (euroa)",
+            "misconception": null,
+            "feedback": "Oikein: lauseke on yhteishinta."
+          },
+          {
+            "id": "c",
+            "text": "Ostettujen tuotteiden yhteismäärän",
+            "misconception": null,
+            "feedback": "Lauseke kertoo hinnan, ei kappalemäärää: 5m on m tuotteen hinta."
+          },
+          {
+            "id": "d",
+            "text": "Yhden kappaleen hinnan molemmista tuotteista",
+            "misconception": null,
+            "feedback": "Yhden kappaleen hinta olisi 5 + 6, ilman kirjaimia."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5m: m kappaletta, hinta 5 euroa kappaleelta, yhteensä 5 · m euroa",
+          "6n: n kappaletta, hinta 6 euroa kappaleelta, yhteensä 6 · n euroa",
+          "Summa 5m + 6n on koko ostoksen hinta"
+        ],
+        "final": "Yhteishinta (euroa)"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+      },
+      "provenance": {
+        "template": "alg01_mc",
+        "params": {
+          "pa": 5,
+          "pb": 6,
+          "vars": [
+            "m",
+            "n"
+          ],
+          "context": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T7",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Vihon hinta on 7 euroa ja kynän hinta 9 euroa. Ostetaan a kpl (vihkoa) ja p kpl (kynää). Mitä lauseke 7a + 9p kertoo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ostettujen tuotteiden yhteismäärän",
+            "misconception": null,
+            "feedback": "Lauseke kertoo hinnan, ei kappalemäärää: 7a on a tuotteen hinta."
+          },
+          {
+            "id": "b",
+            "text": "Yhden kappaleen hinnan molemmista tuotteista",
+            "misconception": null,
+            "feedback": "Yhden kappaleen hinta olisi 7 + 9, ilman kirjaimia."
+          },
+          {
+            "id": "c",
+            "text": "7 vihkoa ja 9 kynää",
+            "misconception": "ALG-01",
+            "feedback": "Kirjain luetaan tavaran nimeksi. Kirjain on kuitenkin luku: se kertoo, montako kappaletta ostetaan."
+          },
+          {
+            "id": "d",
+            "text": "Ostosten yhteishinnan (euroa)",
+            "misconception": null,
+            "feedback": "Oikein: lauseke on yhteishinta."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "7a: a kappaletta, hinta 7 euroa kappaleelta, yhteensä 7 · a euroa",
+          "9p: p kappaletta, hinta 9 euroa kappaleelta, yhteensä 9 · p euroa",
+          "Summa 7a + 9p on koko ostoksen hinta"
+        ],
+        "final": "Yhteishinta (euroa)"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+      },
+      "provenance": {
+        "template": "alg01_mc",
+        "params": {
+          "pa": 7,
+          "pb": 9,
+          "vars": [
+            "a",
+            "p"
+          ],
+          "context": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T7",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Elokuvalipun hinta on 4 euroa ja karkkipussin hinta 3 euroa. Ostetaan m kpl (elokuvalippua) ja n kpl (karkkipussia). Mitä kirjain m tarkoittaa lausekkeessa 4m + 3n?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ensimmäisen tuotteen kappalemäärää, eli lukua",
+            "misconception": null,
+            "feedback": "Oikein: kirjain on lukumäärä."
+          },
+          {
+            "id": "b",
+            "text": "Ensimmäistä tuotetta itseään, esinettä",
+            "misconception": "ALG-01",
+            "feedback": "Kirjain luetaan tavaran nimeksi. Kirjain on kuitenkin luku: se kertoo, montako kappaletta ostetaan."
+          },
+          {
+            "id": "c",
+            "text": "Ensimmäisen tuotteen hintaa",
+            "misconception": null,
+            "feedback": "Hinta on jo annettu: 4 euroa. Kirjain on määrä."
+          },
+          {
+            "id": "d",
+            "text": "Molempien tuotteiden yhteishintaa",
+            "misconception": null,
+            "feedback": "Yhteishinta on koko lauseke, ei yksi kirjain."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Hinta 4 euroa on annettu lukuna",
+          "Kertoimena m on se, montako kappaletta ostetaan",
+          "Siksi m on luku (kappalemäärä), ei esine"
+        ],
+        "final": "Kappalemäärää, eli lukua"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+      },
+      "provenance": {
+        "template": "alg01_mc",
+        "params": {
+          "pa": 4,
+          "pb": 3,
+          "vars": [
+            "m",
+            "n"
+          ],
+          "context": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T4",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-01"
+      ],
+      "prompt": {
+        "text": "Tarran hinta on 5 senttiä ja kortin hinta 9 senttiä. Ostetaan a kpl (tarraa) ja p kpl (korttia). Aino sanoo: \"Lauseke 5a + 9p tarkoittaa 5 tarraa ja 9 korttia.\" Miksi väite on virheellinen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kerroin ja kirjain pitäisi kirjoittaa toisin päin",
+            "misconception": null,
+            "feedback": "5a ja a·5 ovat sama asia."
+          },
+          {
+            "id": "b",
+            "text": "Väite on oikein: kirjain voi lyhentää tuotteen nimeä",
+            "misconception": "ALG-01",
+            "feedback": "Kirjain luetaan tavaran nimeksi. Kirjain on kuitenkin luku: se kertoo, montako kappaletta ostetaan."
+          },
+          {
+            "id": "c",
+            "text": "Kirjaimet ovat lukuja (määriä), joten lauseke on hinta eikä tuotteiden lista",
+            "misconception": null,
+            "feedback": "Oikein: kirjain edustaa lukua."
+          },
+          {
+            "id": "d",
+            "text": "Lausekkeesta puuttuu yhtäsuuruusmerkki",
+            "misconception": null,
+            "feedback": "Lauseke ei tarvitse yhtäsuuruusmerkkiä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a ja p ovat määriä eli lukuja",
+          "5a = 5 · a on hinta senttiä",
+          "Lauseke on lasku, ei luettelo esineistä"
+        ],
+        "final": "Kirjaimet ovat lukuja, joten lauseke kertoo hinnan"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+      },
+      "provenance": {
+        "template": "alg01_mc",
+        "params": {
+          "pa": 5,
+          "pb": 9,
+          "vars": [
+            "a",
+            "p"
+          ],
+          "context": 5
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

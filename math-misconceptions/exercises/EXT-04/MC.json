@@ -1,0 +1,384 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 81."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 9",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "b",
+            "text": "x = −9",
+            "misconception": null,
+            "feedback": "Myös positiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "c",
+            "text": "x = 81",
+            "misconception": null,
+            "feedback": "Tämä on luku x², ei x. Ota neliöjuuri."
+          },
+          {
+            "id": "d",
+            "text": "x = 9 tai x = −9",
+            "misconception": null,
+            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² = 81",
+          "x = 9 tai x = −9, koska 9² = (−9)² = 81"
+        ],
+        "final": "x = 9 tai x = −9"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 9,
+          "p": 1,
+          "q": -81
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² − 144 = 0."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 12",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "b",
+            "text": "x = 12 tai x = −12",
+            "misconception": null,
+            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+          },
+          {
+            "id": "c",
+            "text": "x = 144",
+            "misconception": null,
+            "feedback": "Tämä on luku x², ei x. Ota neliöjuuri."
+          },
+          {
+            "id": "d",
+            "text": "x = −12",
+            "misconception": null,
+            "feedback": "Myös positiivinen luku toteuttaa yhtälön."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² = 144",
+          "x = 12 tai x = −12, koska 12² = (−12)² = 144"
+        ],
+        "final": "x = 12 tai x = −12"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 12,
+          "p": 1,
+          "q": -144
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 3x² = 48."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 4 tai x = −4",
+            "misconception": null,
+            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+          },
+          {
+            "id": "b",
+            "text": "x = 48",
+            "misconception": null,
+            "feedback": "Tämä on luku x², ei x. Ota neliöjuuri."
+          },
+          {
+            "id": "c",
+            "text": "x = 4",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "x = −4",
+            "misconception": null,
+            "feedback": "Myös positiivinen luku toteuttaa yhtälön."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3x² = 48",
+          "x² = 16",
+          "x = 4 tai x = −4, koska 4² = (−4)² = 16"
+        ],
+        "final": "x = 4 tai x = −4"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 4,
+          "p": 3,
+          "q": -48
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 5x² − 45 = 0."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 45",
+            "misconception": null,
+            "feedback": "Tämä on luku x², ei x. Ota neliöjuuri."
+          },
+          {
+            "id": "b",
+            "text": "x = −3",
+            "misconception": null,
+            "feedback": "Myös positiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "c",
+            "text": "x = 3",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "x = 3 tai x = −3",
+            "misconception": null,
+            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5x² = 45",
+          "x² = 9",
+          "x = 3 tai x = −3, koska 3² = (−3)² = 9"
+        ],
+        "final": "x = 3 tai x = −3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 3,
+          "p": 5,
+          "q": -45
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x² = 36 ja sai vastaukseksi x = 6. Mikä perustelu osoittaa, että ratkaisu on puutteellinen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ratkaisu on väärä, koska x = 36",
+            "misconception": null,
+            "feedback": "Luku 36 on x², ei x. Tarkista sijoittamalla."
+          },
+          {
+            "id": "b",
+            "text": "Myös x = −6 toteuttaa yhtälön, koska (−6)² = 36",
+            "misconception": null,
+            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+          },
+          {
+            "id": "c",
+            "text": "Ratkaisu on täydellinen, koska luvun 36 neliöjuuri on 6",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "Ratkaisu on väärä, koska 6² ei ole 36",
+            "misconception": null,
+            "feedback": "6² = 36, joten x = 6 on ratkaisu. Puuttuu vain toinen ratkaisu."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(−6)² = 36",
+          "Ratkaisut: x = 6 tai x = −6"
+        ],
+        "final": "x = 6 tai x = −6"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 6,
+          "p": 1,
+          "q": -36
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    }
+  ]
+}

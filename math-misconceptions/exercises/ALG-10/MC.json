@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-10",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Koululla on 6 kertaa enemmän oppilaita (o) kuin opettajia (t). Mikä yhtälö kuvaa tilannetta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "o = 6t",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "6o = t",
+            "misconception": "ALG-10",
+            "feedback": "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
+          },
+          {
+            "id": "c",
+            "text": "o = t + 6",
+            "misconception": null,
+            "feedback": "Tässä lisätään, mutta 'kertaa enemmän' tarkoittaa kertolaskua."
+          },
+          {
+            "id": "d",
+            "text": "o = t/6",
+            "misconception": null,
+            "feedback": "o on suurempi luku, joten t:ää pitää kertoa, ei jakaa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "o on suurempi: o on 6 kertaa t",
+          "o = 6 · t"
+        ],
+        "final": "o = 6t"
+      },
+      "feedback": {
+        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+      },
+      "provenance": {
+        "template": "alg10_mc",
+        "params": {
+          "n": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Tapahtumassa on 8 kertaa enemmän kahvikuppeja (k) kuin teekuppeja (t). Mikä yhtälö kuvaa tilannetta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "k = 8t",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "k = t/8",
+            "misconception": null,
+            "feedback": "k on suurempi luku, joten t:ää pitää kertoa, ei jakaa."
+          },
+          {
+            "id": "c",
+            "text": "k = t + 8",
+            "misconception": null,
+            "feedback": "Tässä lisätään, mutta 'kertaa enemmän' tarkoittaa kertolaskua."
+          },
+          {
+            "id": "d",
+            "text": "8k = t",
+            "misconception": "ALG-10",
+            "feedback": "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "k on suurempi: k on 8 kertaa t",
+          "k = 8 · t"
+        ],
+        "final": "k = 8t"
+      },
+      "feedback": {
+        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+      },
+      "provenance": {
+        "template": "alg10_mc",
+        "params": {
+          "n": 8
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Tapahtumassa on 3 kertaa enemmän pelaajia (p) kuin valmentajia (v). Mikä yhtälö kuvaa tilannetta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "p = v/3",
+            "misconception": null,
+            "feedback": "p on suurempi luku, joten v:ää pitää kertoa, ei jakaa."
+          },
+          {
+            "id": "b",
+            "text": "p = 3v",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "c",
+            "text": "p = v + 3",
+            "misconception": null,
+            "feedback": "Tässä lisätään, mutta 'kertaa enemmän' tarkoittaa kertolaskua."
+          },
+          {
+            "id": "d",
+            "text": "3p = v",
+            "misconception": "ALG-10",
+            "feedback": "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "p on suurempi: p on 3 kertaa v",
+          "p = 3 · v"
+        ],
+        "final": "p = 3v"
+      },
+      "feedback": {
+        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+      },
+      "provenance": {
+        "template": "alg10_mc",
+        "params": {
+          "n": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04",
+          "S3.05"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Kirjoja (k) on 6 enemmän kuin kolminkertainen määrä lehtiä (l). Mikä yhtälö kuvaa tilannetta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3k + 6 = l",
+            "misconception": "ALG-10",
+            "feedback": "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
+          },
+          {
+            "id": "b",
+            "text": "k = 3l − 6",
+            "misconception": null,
+            "feedback": "'Enemmän' tarkoittaa lisäämistä, ei vähentämistä."
+          },
+          {
+            "id": "c",
+            "text": "k = 3(l + 6)",
+            "misconception": null,
+            "feedback": "Nyt 6 lisätään myös kerrottavaan, mutta vain kertolaskun tulokseen lisätään 6."
+          },
+          {
+            "id": "d",
+            "text": "k = 3l + 6",
+            "misconception": null,
+            "feedback": "Oikein."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan ensin: 3 · l",
+          "Lisätään 6: k = 3l + 6"
+        ],
+        "final": "k = 3l + 6"
+      },
+      "feedback": {
+        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+      },
+      "provenance": {
+        "template": "alg10_mc",
+        "params": {
+          "c": 3,
+          "d": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04",
+          "S3.05"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Kyyhkysiä (k) on 7 enemmän kuin nelinkertainen määrä harakoita (h). Mikä yhtälö kuvaa tilannetta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "k = 4(h + 7)",
+            "misconception": null,
+            "feedback": "Nyt 7 lisätään myös kerrottavaan, mutta vain kertolaskun tulokseen lisätään 7."
+          },
+          {
+            "id": "b",
+            "text": "4k + 7 = h",
+            "misconception": "ALG-10",
+            "feedback": "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
+          },
+          {
+            "id": "c",
+            "text": "k = 4h + 7",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "d",
+            "text": "k = 4h − 7",
+            "misconception": null,
+            "feedback": "'Enemmän' tarkoittaa lisäämistä, ei vähentämistä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan ensin: 4 · h",
+          "Lisätään 7: k = 4h + 7"
+        ],
+        "final": "k = 4h + 7"
+      },
+      "feedback": {
+        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+      },
+      "provenance": {
+        "template": "alg10_mc",
+        "params": {
+          "c": 4,
+          "d": 7
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

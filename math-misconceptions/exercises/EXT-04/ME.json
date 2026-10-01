@@ -1,0 +1,502 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin x² − 4 kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "x² − 4",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -3
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(x + 2)(x − 2)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "x − 2",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "c",
+            "text": "x² − 2²",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "(x − 2)(x + 2)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "(x − 2)²",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "f",
+            "text": "x² + 4",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 4 = (x − 2)(x + 2)",
+          "Tulo on nolla, kun x − a = 0 tai x + a = 0, eli x = 2 tai x = −2"
+        ],
+        "final": "x² − 4 = (x − 2)(x + 2)"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
+      },
+      "provenance": {
+        "template": "ext04_me",
+        "params": {
+          "a": 2,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 2x² − 50 kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "2x² − 50",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -3
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(2x − 10)(x + 5)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "2x² + 50",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "2(x² − 25)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "2(x − 5)²",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "e",
+            "text": "2(x − 5)(x + 5)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "2(x − 5)",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x² − 50 = 2(x − 5)(x + 5)",
+          "Tulo on nolla, kun x − a = 0 tai x + a = 0, eli x = 5 tai x = −5"
+        ],
+        "final": "2x² − 50 = 2(x − 5)(x + 5)"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
+      },
+      "provenance": {
+        "template": "ext04_me",
+        "params": {
+          "a": 5,
+          "p": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin x² − 49 kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "x² − 49",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -3
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(x − 7)(x + 7)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "(x − 7)(x − 7)",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "c",
+            "text": "(x + 7)²",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "d",
+            "text": "x² − 7",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "x² − 7 · 7",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "(x − 7) · (x + 7)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 49 = (x − 7)(x + 7)",
+          "Tulo on nolla, kun x − a = 0 tai x + a = 0, eli x = 7 tai x = −7"
+        ],
+        "final": "x² − 49 = (x − 7)(x + 7)"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
+      },
+      "provenance": {
+        "template": "ext04_me",
+        "params": {
+          "a": 7,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen laatan sivu on x ja siitä leikataan pois neliö, jonka sivu on 6. Valitse kaikki lausekkeet, jotka kuvaavat jäljelle jäävää pinta-alaa kaikilla x:n arvoilla. "
+      },
+      "payload": {
+        "reference": "x² − 36",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -3
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(x − 6)(x + 6)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "x − 6",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "c",
+            "text": "(x − 6)²",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "d",
+            "text": "x² − 36",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "(x + 6)(x − 6)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "(x − 36)",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 36 = (x − 6)(x + 6)",
+          "Tulo on nolla, kun x − a = 0 tai x + a = 0, eli x = 6 tai x = −6"
+        ],
+        "final": "x² − 36 = (x − 6)(x + 6)"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
+      },
+      "provenance": {
+        "template": "ext04_me",
+        "params": {
+          "a": 6,
+          "p": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Yhtälön 2x² = 98 ratkaisut ovat nollakohtia lausekkeelle 2x² − 98. Valitse kaikki lausekkeet, jotka ovat samat kuin tämä lauseke kaikilla x:n arvoilla. "
+      },
+      "payload": {
+        "reference": "2x² − 98",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -3
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "2(x − 7)(x − 7)",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "b",
+            "text": "2(x − 7)",
+            "equivalent": false,
+            "misconception": "EXT-04"
+          },
+          {
+            "id": "c",
+            "text": "2(x − 7)(x + 7)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "2x² − 49",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "2x² − 98",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "2(x² − 49)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x² − 98 = 2(x − 7)(x + 7)",
+          "Tulo on nolla, kun x − a = 0 tai x + a = 0, eli x = 7 tai x = −7"
+        ],
+        "final": "2x² − 98 = 2(x − 7)(x + 7)"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
+      },
+      "provenance": {
+        "template": "ext04_me",
+        "params": {
+          "a": 7,
+          "p": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}

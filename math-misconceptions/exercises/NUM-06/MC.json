@@ -1,0 +1,377 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-06",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Montako lukua on lukujen 0,5 ja 0,6 välissä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei yhtään",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "b",
+            "text": "Vain yksi, 0,55",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "c",
+            "text": "Äärettömän monta",
+            "misconception": null,
+            "feedback": "Oikein: esimerkiksi 0,55, 0,51 ja 0,501 ovat välissä, ja uusia löytyy aina."
+          },
+          {
+            "id": "d",
+            "text": "Yhdeksän",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo (0,5 + 0,6) / 2 = 0,55 on välissä",
+          "Samalla tavalla löytyy aina uusi luku"
+        ],
+        "final": "Äärettömän monta"
+      },
+      "feedback": {
+        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+      },
+      "provenance": {
+        "template": "num06_mc",
+        "params": {
+          "a": "0,5",
+          "b": "0,6"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista luvuista on lukujen 4,8 ja 4,9 välissä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Mikään ei ole, koska 4,8 ja 4,9 ovat peräkkäiset luvut",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "b",
+            "text": "4,85",
+            "misconception": null,
+            "feedback": "Oikein: 4,8 < 4,85 < 4,9."
+          },
+          {
+            "id": "c",
+            "text": "5",
+            "misconception": null,
+            "feedback": "Luku 5 on suurempi kuin 4,9."
+          },
+          {
+            "id": "d",
+            "text": "4,7",
+            "misconception": null,
+            "feedback": "Luku 4,7 on pienempi kuin 4,8."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(4,8 + 4,9) / 2 = 4,85",
+          "4,8 < 4,85 < 4,9"
+        ],
+        "final": "4,85"
+      },
+      "feedback": {
+        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+      },
+      "provenance": {
+        "template": "num06_mc",
+        "params": {
+          "a": "4,8",
+          "b": "4,9"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Kaksi lankaa on 4,9 cm ja 5 cm pitkiä. Voiko olla lankaa, jonka pituus on näiden välissä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Voi, mutta vain yksi, 4,95 cm",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "b",
+            "text": "Voi vain, jos pituus mitataan millimetrin tarkkuudella",
+            "misconception": null,
+            "feedback": "Pituuksia on välissä aina, vaikka mittaustarkkuus rajoittaisi mittaamista."
+          },
+          {
+            "id": "c",
+            "text": "Ei voi, koska 4,9 ja 5 ovat peräkkäiset luvut",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "d",
+            "text": "Voi, esimerkiksi 4,95 cm, ja tällaisia pituuksia on äärettömän monta",
+            "misconception": null,
+            "feedback": "Oikein: 4,9 < 4,95 < 5."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(4,9 + 5) / 2 = 4,95"
+        ],
+        "final": "Voi"
+      },
+      "feedback": {
+        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+      },
+      "provenance": {
+        "template": "num06_mc",
+        "params": {
+          "a": "4,9",
+          "b": "5",
+          "context": "lanka"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Mikä on suurin luku, joka on pienempi kuin 0,3?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sellaista ei ole, koska lukua lähempänä 0,3 voi aina löytää",
+            "misconception": null,
+            "feedback": "Oikein: jos luku on pienempi kuin 0,3, sen ja 0,3 väliltä löytyy suurempi."
+          },
+          {
+            "id": "b",
+            "text": "0,2",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "c",
+            "text": "0,299",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "d",
+            "text": "0,29",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,299 < 0,2995 < 0,3",
+          "Aina löytyy suurempi luku"
+        ],
+        "final": "Sellaista lukua ei ole"
+      },
+      "feedback": {
+        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+      },
+      "provenance": {
+        "template": "num06_mc",
+        "params": {
+          "b": "0,3"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Miten voit löytää aina uuden luvun lukujen 0,1 ja 0,2 väliltä? Valitse paras tapa."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasketaan lukujen keskiarvo",
+            "misconception": null,
+            "feedback": "Oikein: keskiarvo on aina lukujen välissä."
+          },
+          {
+            "id": "b",
+            "text": "Sellaista lukua ei löydy, koska luvut ovat peräkkäiset",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "c",
+            "text": "Lisätään lukuun 0,1 pienin mahdollinen desimaali, joten välissä ei ole lukuja",
+            "misconception": "NUM-06",
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+          },
+          {
+            "id": "d",
+            "text": "Lisätään luvut yhteen: 0,1 + 0,2 = 0,3",
+            "misconception": null,
+            "feedback": "Summa ei ole välissä: se on suurempi kuin pienempi luku ja usein suurempi kuin molemmat."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(0,1 + 0,2) / 2 = 0,15",
+          "0,1 < 0,15 < 0,2"
+        ],
+        "final": "Keskiarvo"
+      },
+      "feedback": {
+        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+      },
+      "provenance": {
+        "template": "num06_mc",
+        "params": {
+          "a": "0,1",
+          "b": "0,2",
+          "justify": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

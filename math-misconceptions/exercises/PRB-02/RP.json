@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRB-02",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 18 mustaa kuulaa 20:stä. Purkissa 2 on 10 kuulaa, joista x on mustia. Kirjoita yhtälö, jonka ratkaisu on x = 9, kun mustan nostamisen todennäköisyys on molemmissa purkeissa sama."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        },
+        "checks": {
+          "valid": [
+            "x / 10 = 18 / 20",
+            "x = 18 * 10 / 20"
+          ],
+          "invalid": [
+            "x = 18",
+            "x / 20 = 18 / 10",
+            "x = 18 + 10 - 20"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Todennäköisyys purkissa 1 on 18/20",
+          "Purkissa 2 on x/10",
+          "x/10 = 18/20",
+          "x = 9"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_rp",
+        "params": {
+          "a": 18,
+          "b": 20,
+          "d": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa on 10 mustaa kuulaa 25:stä. Kirjoita yhtälö, jossa x on mustan kuulan nostamisen todennäköisyys prosentteina ja jonka ratkaisu on x = 40."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 40
+        },
+        "checks": {
+          "valid": [
+            "x = 10 / 25 * 100",
+            "x / 100 = 10 / 25"
+          ],
+          "invalid": [
+            "x = 10",
+            "x = 25 / 10 * 100",
+            "x = 10 / 100"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Mustien osuus kaikista kuulista on 10/25",
+          "x = 10/25 · 100 = 40"
+        ],
+        "final": "x = 40"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_rp",
+        "params": {
+          "a": 10,
+          "b": 25,
+          "percent": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 3 mustaa ja 7 valkoista kuulaa. Kirjoita yhtälö, jossa x on mustan kuulan nostamisen todennäköisyys desimaalilukuna ja jonka ratkaisu on x = 0,3."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.3
+        },
+        "checks": {
+          "valid": [
+            "x = 3 / (3 + 7)",
+            "x * (3 + 7) = 3"
+          ],
+          "invalid": [
+            "x = 3 / 7",
+            "x = 3",
+            "x = 7 / (3 + 7)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kuulia on yhteensä 3 + 7 = 10",
+          "x = 3/10 = 0,3"
+        ],
+        "final": "x = 0,3"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_rp",
+        "params": {
+          "black": 3,
+          "white": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 2 mustaa kuulaa 8:stä. Pussiin lisätään 2 mustaa kuulaa. Kirjoita yhtälö, jossa x on mustan kuulan nostamisen todennäköisyys prosentteina lisäyksen jälkeen ja jonka ratkaisu on x = 40."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 40
+        },
+        "checks": {
+          "valid": [
+            "x = (2 + 2) / (8 + 2) * 100",
+            "x / 100 = (2 + 2) / (8 + 2)"
+          ],
+          "invalid": [
+            "x = 2 + 2",
+            "x = (2 + 2) / 8 * 100",
+            "x = 2 / (8 + 2) * 100"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Mustia on 4 ja kuulia yhteensä 10",
+          "x = 4/10 · 100 = 40"
+        ],
+        "final": "x = 40"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_rp",
+        "params": {
+          "a": 2,
+          "b": 8,
+          "add": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 8 mustaa kuulaa 25:stä ja purkissa 2 on 4 mustaa kuulaa 5:sta. Kirjoita yhtälö, jossa x on purkin 2 mustan todennäköisyyden ja purkin 1 mustan todennäköisyyden erotus prosenttiyksikköinä ja jonka ratkaisu on x = 48."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 48
+        },
+        "checks": {
+          "valid": [
+            "x = 4 / 5 * 100 - 8 / 25 * 100",
+            "x = (4 / 5 - 8 / 25) * 100"
+          ],
+          "invalid": [
+            "x = 4 - 8",
+            "x = 8 / 25 * 100 - 4 / 5 * 100",
+            "x = 8 - 4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Purkki 1: 8/25 = 32 %",
+          "Purkki 2: 4/5 = 80 %",
+          "x = 80 − 32 = 48"
+        ],
+        "final": "x = 48"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_rp",
+        "params": {
+          "a1": 8,
+          "b1": 25,
+          "a2": 4,
+          "b2": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    }
+  ]
+}

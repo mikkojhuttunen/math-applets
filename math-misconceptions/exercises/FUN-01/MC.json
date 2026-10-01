@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-01"
+      ],
+      "prompt": {
+        "text": "Pyöräilijä ajaa ensin alas mäkeä, sitten tasaista tietä ja lopuksi ylös mäkeä. Hänen nopeutensa on mäen alussa 8 km/h, tasaisen tien alussa ja lopussa 25 km/h ja ylämäen lopussa 6 km/h. Millainen nopeus–aika-kuvaaja sopii tilanteeseen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kuvaaja laskee, on vaakasuora ja nousee, kuten tien muoto: alas, tasaista, ylös",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "b",
+            "text": "Nopeus pienenee koko ajan",
+            "misconception": null,
+            "feedback": "Alamäessä nopeus kasvaa (8 → 25 km/h)."
+          },
+          {
+            "id": "c",
+            "text": "Nopeus kasvaa (8 → 25 km/h), pysyy vakiona (25 km/h) ja pienenee (25 → 6 km/h)",
+            "misconception": null,
+            "feedback": "Oikein: nopeus muuttuu juuri näin, ja kuvaajan muoto seuraa nopeuden muutosta."
+          },
+          {
+            "id": "d",
+            "text": "Nopeus pysyy koko ajan 25 km/h",
+            "misconception": null,
+            "feedback": "Nopeus on 8 km/h mäen alussa ja 6 km/h lopussa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Alamäki: 8 → 25, nopeus kasvaa",
+          "Tasainen tie: 25, pysyy samana",
+          "Ylämäki: 25 → 6, nopeus pienenee"
+        ],
+        "final": "Nopeus kasvaa (8 → 25 km/h), pysyy vakiona (25 km/h) ja pienenee (25 → 6 km/h)"
+      },
+      "feedback": {
+        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+      },
+      "provenance": {
+        "template": "fun01_mc",
+        "params": {
+          "v0": 8,
+          "v1": 25,
+          "v2": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-01"
+      ],
+      "prompt": {
+        "text": "Pyöräilijä ajaa 15 km/h tasaista vauhtia tietä, joka kulkee ensin ylämäkeen, sitten tasaisena ja lopuksi alamäkeen. Kuvaajassa vaaka-akselilla on aika (h) ja pystyakselilla kuljettu matka (km). Matka on 0, 15, 30 ja 45 km, kun aikaa on kulunut 0, 1, 2 ja 3 h. Millainen kuvaaja on?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kuvaaja laskee, koska matka pienenee",
+            "misconception": null,
+            "feedback": "Matka kasvaa: 15, 30, 45 km."
+          },
+          {
+            "id": "b",
+            "text": "Suoraan nouseva kuvaaja: matka kasvaa 15 km joka tunti",
+            "misconception": null,
+            "feedback": "Oikein: tasainen vauhti antaa suoran, vaikka tie nousisi ja laskisi."
+          },
+          {
+            "id": "c",
+            "text": "Kuvaaja on vaakasuora, koska tie on suurimmaksi osaksi tasainen",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "d",
+            "text": "Kuvaaja nousee, on vaakasuora ja laskee, kuten tien profiili",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "s = 15t",
+          "Matkat 0, 15, 30, 45 km: kasvaa tasaisesti"
+        ],
+        "final": "Suoraan nouseva kuvaaja: matka kasvaa 15 km joka tunti"
+      },
+      "feedback": {
+        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+      },
+      "provenance": {
+        "template": "fun01_mc",
+        "params": {
+          "v": 15
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-01"
+      ],
+      "prompt": {
+        "text": "Pekka kävelee kotoa kauppaan, ja matka–aika-kuvaajassa vaaka-akseli on aika (min) ja pystyakseli matka kotoa (m). Kaupan edessä hän seisoo 8 minuuttia 200 m:n päässä kotoa. Miltä tämä aikaväli näyttää kuvaajassa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Vaakasuora jana korkeudella 200 m: matka ei muutu 8 minuuttiin",
+            "misconception": null,
+            "feedback": "Oikein: paikallaan seisominen on vaakasuora jana."
+          },
+          {
+            "id": "b",
+            "text": "Pystysuora jana, koska Pekka seisoo pystyssä",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "c",
+            "text": "Nouseva jana, koska hän on kaupan edessä",
+            "misconception": null,
+            "feedback": "Matka kotoa ei kasva, kun hän seisoo paikallaan."
+          },
+          {
+            "id": "d",
+            "text": "Laskeva jana, koska hän on pysähtynyt",
+            "misconception": null,
+            "feedback": "Matka kotoa pysyy samana."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8 min ajan matka on 200 m",
+          "Matka ei muutu: vaakasuora jana"
+        ],
+        "final": "Vaakasuora jana korkeudella 200 m: matka ei muutu 8 minuuttiin"
+      },
+      "feedback": {
+        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+      },
+      "provenance": {
+        "template": "fun01_mc",
+        "params": {
+          "d": 200,
+          "m": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-01"
+      ],
+      "prompt": {
+        "text": "Matka–aika-taulukko (aika minuutteina, matka metreinä): 0 min: 0, 1 min: 100, 2 min: 400, 3 min: 400, 4 min: 700. Kuvaaja on vaakasuora aikavälillä 2–3 min. Mitä kävelijä tällä välillä tekee?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kävelee tasaista tietä, koska kuvaaja on tasainen",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "b",
+            "text": "Kävelee takaisin kotia kohti",
+            "misconception": null,
+            "feedback": "Matka kotoa ei pienene."
+          },
+          {
+            "id": "c",
+            "text": "Seisoo paikallaan, koska matka ei muutu",
+            "misconception": null,
+            "feedback": "Oikein: vaakasuora osa tarkoittaa, että suure ei muutu."
+          },
+          {
+            "id": "d",
+            "text": "Kävelee kovinta vauhtia, koska kuvaaja on pitkä",
+            "misconception": null,
+            "feedback": "Vauhti näkyy kuvaajan jyrkkyydestä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2–3 min: matka 400 → 400 m",
+          "Matka ei muutu: kävelijä seisoo"
+        ],
+        "final": "Seisoo paikallaan, koska matka ei muutu"
+      },
+      "feedback": {
+        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+      },
+      "provenance": {
+        "template": "fun01_mc",
+        "params": {
+          "s": [
+            0,
+            100,
+            400,
+            400,
+            700
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-01"
+      ],
+      "prompt": {
+        "text": "Oppilas sanoo: \"Matka–aika-kuvaaja, jossa kuljetaan 9 m/s, on kuva siitä, miltä reitti näyttää.\" Mikä on paras vastaus?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei ole: kuvaaja s = 9t näyttää, miten matka kasvaa ajan kuluessa, ja reitti voi olla mutkainen tai mäkinen",
+            "misconception": null,
+            "feedback": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+          },
+          {
+            "id": "b",
+            "text": "On: kuvaajan muoto kertoo, onko reitti suora, mäkinen vai mutkainen",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "c",
+            "text": "On: jos reitti kääntyy, myös kuvaaja kääntyy samaan suuntaan",
+            "misconception": "FUN-01",
+            "feedback": "Kuvaaja ei ole kuva tiestä tai reitistä. Vaaka-akselilla on aika, ja kuvaaja näyttää, miten pystyakselin suure muuttuu ajan kuluessa."
+          },
+          {
+            "id": "d",
+            "text": "Ei ole, koska nopeus 9 m/s ei voi näkyä kuvaajassa",
+            "misconception": null,
+            "feedback": "Nopeus näkyy kuvaajan jyrkkyytenä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "s = 9t",
+          "Vaaka-akseli on aika, ei paikka"
+        ],
+        "final": "Ei ole: kuvaaja s = 9t näyttää, miten matka kasvaa ajan kuluessa, ja reitti voi olla mutkainen tai mäkinen"
+      },
+      "feedback": {
+        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+      },
+      "provenance": {
+        "template": "fun01_mc",
+        "params": {
+          "v": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    }
+  ]
+}

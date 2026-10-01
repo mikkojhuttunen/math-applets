@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmion sivut ovat 5, 6 ja 8. Onko kolmio suorakulmainen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sitä ei voi päätellä sivujen pituuksista, vaan kulma pitää mitata",
+            "misconception": null,
+            "feedback": "Käänteislauseella kulman voi päätellä sivuista: vertaa neliöiden summaa."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä, koska kolmiossa aina 5² + 6² = 8²",
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². Kokeile laskea neliöt ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä, koska 5 + 6 > 8",
+            "misconception": null,
+            "feedback": "Epäyhtälö a + b > c kertoo vain, että kolmio on olemassa, ei sitä, onko kulma suora."
+          },
+          {
+            "id": "d",
+            "text": "Ei, koska 5² + 6² = 61, mutta 8² = 64",
+            "misconception": null,
+            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5² + 6² = 61",
+          "8² = 64",
+          "61 ≠ 64, joten kolmio ei ole suorakulmainen"
+        ],
+        "final": "Ei, koska 5² + 6² = 61, mutta 8² = 64"
+      },
+      "feedback": {
+        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+      },
+      "provenance": {
+        "template": "ext05_mc",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmiossa ABC sivut AC = 6 ja BC = 8, ja kulma C on 60°. Oppilas laskee AB = √(6² + 8²) = 10. Mikä on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasku on oikein, koska a² + b² = c² pätee kaikissa kolmioissa, AB = 10",
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². Kokeile laskea neliöt ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "Lasku ei kelpaa, koska kulma C ei ole suora kulma",
+            "misconception": null,
+            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+          },
+          {
+            "id": "c",
+            "text": "Oikea tulos on AB = 2",
+            "misconception": null,
+            "feedback": "Kolmion sivun pituus ei ole kahden sivun erotus."
+          },
+          {
+            "id": "d",
+            "text": "Oikea tulos on AB = 14",
+            "misconception": null,
+            "feedback": "Kolmion sivun pituus ei ole kahden sivun summa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pythagoraan lause koskee vain suorakulmaista kolmiota",
+          "Kulma C on 60°, ei 90°, joten laskua ei voi käyttää"
+        ],
+        "final": "Lasku ei kelpaa, koska kulma C ei ole suora kulma"
+      },
+      "feedback": {
+        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+      },
+      "provenance": {
+        "template": "ext05_mc",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "angle": 60
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Pellon sivut ovat 6 m, 7 m ja 9 m. Onko pellon nurkka suora?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, koska kolmiossa aina 6² + 7² = 9²",
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². Kokeile laskea neliöt ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä, koska 6 + 7 > 9",
+            "misconception": null,
+            "feedback": "Epäyhtälö a + b > c kertoo vain, että kolmio on olemassa, ei sitä, onko kulma suora."
+          },
+          {
+            "id": "c",
+            "text": "Ei, koska 6² + 7² = 85, mutta 9² = 81",
+            "misconception": null,
+            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi päätellä sivujen pituuksista, vaan kulma pitää mitata",
+            "misconception": null,
+            "feedback": "Käänteislauseella kulman voi päätellä sivuista: vertaa neliöiden summaa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6² + 7² = 85",
+          "9² = 81",
+          "85 ≠ 81, joten kolmio ei ole suorakulmainen"
+        ],
+        "final": "Ei, koska 6² + 7² = 85, mutta 9² = 81"
+      },
+      "feedback": {
+        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+      },
+      "provenance": {
+        "template": "ext05_mc",
+        "params": {
+          "a": 6,
+          "b": 7,
+          "c": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmion sivut ovat 6, 7 ja 9. Lasketaan 6² + 7² = 85 ja 9² = 81. Mitä tästä voi päätellä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kolmio on suorakulmainen, koska 85 > 81",
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². Kokeile laskea neliöt ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "Luvut 85 ja 81 ovat lähellä toisiaan, joten kolmio on suorakulmainen",
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². Kokeile laskea neliöt ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "Luvut eivät ole yhtä suuret, joten kolmio ei ole suorakulmainen",
+            "misconception": null,
+            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+          },
+          {
+            "id": "d",
+            "text": "Kolmiota ei ole olemassa, koska 85 ≠ 81",
+            "misconception": null,
+            "feedback": "Kolmio on olemassa, kun kaksi lyhyempää sivua on yhteensä pisintä pidempi."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "85 ≠ 81",
+          "Käänteislauseen mukaan kolmio on suorakulmainen vain, jos luvut ovat yhtä suuret"
+        ],
+        "final": "Luvut eivät ole yhtä suuret, joten kolmio ei ole suorakulmainen"
+      },
+      "feedback": {
+        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+      },
+      "provenance": {
+        "template": "ext05_mc",
+        "params": {
+          "a": 6,
+          "b": 7,
+          "c": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: \"Pythagoraan lause a² + b² = c² pätee jokaisessa kolmiossa.\" Mikä esimerkki osoittaa väitteen vääräksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kolmio, jonka sivut ovat 3, 4 ja 5, koska 3² + 4² = 5²",
+            "misconception": "EXT-05",
+            "feedback": "Tämä kolmio on suorakulmainen, joten se ei osoita väitettä vääräksi."
+          },
+          {
+            "id": "b",
+            "text": "Kolmio, jonka sivut ovat 6, 8 ja 10, koska 6² + 8² = 10²",
+            "misconception": "EXT-05",
+            "feedback": "Tämä kolmio on suorakulmainen, joten se ei osoita väitettä vääräksi."
+          },
+          {
+            "id": "c",
+            "text": "Kolmio, jonka sivut ovat 2, 3 ja 4, koska 2² + 3² = 13 ≠ 16",
+            "misconception": null,
+            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2² + 3² = 13",
+          "4² = 16",
+          "Luvut eivät ole yhtä suuret, joten väite ei pidä"
+        ],
+        "final": "Kolmio, jonka sivut ovat 2, 3 ja 4, koska 2² + 3² = 13 ≠ 16"
+      },
+      "feedback": {
+        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+      },
+      "provenance": {
+        "template": "ext05_mc",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "c": 4,
+          "variant": "counterexample"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    }
+  ]
+}

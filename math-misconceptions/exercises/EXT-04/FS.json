@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: x² − 16 = 0, □, (x − 4)(x + 4) = 0. Siirrä luku oikealle puolelle."
+      },
+      "payload": {
+        "lines": [
+          "x² − 16 = 0",
+          "x² = 16",
+          "(x − 4)(x + 4) = 0"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² = 16",
+          "variable": "x",
+          "solutions": [
+            -4,
+            4
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Lisätään 16 molemmille puolille: x² = 16",
+          "Tulon nollasääntö: x = 4 tai x = −4"
+        ],
+        "final": "x² = 16"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
+      },
+      "provenance": {
+        "template": "ext04_fs",
+        "params": {
+          "a": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: x² − 25 = 0, x² = 25, □. Kirjoita yhtälö tulomuodossa (x − luku)(x + luku) = 0."
+      },
+      "payload": {
+        "lines": [
+          "x² − 25 = 0",
+          "x² = 25",
+          "(x − 5)(x + 5) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "(x − 5)(x + 5) = 0",
+          "variable": "x",
+          "solutions": [
+            -5,
+            5
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "x² − 25 = (x − 5)(x + 5)",
+          "Tulon nollasääntö: x = 5 tai x = −5"
+        ],
+        "final": "(x − 5)(x + 5) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
+      },
+      "provenance": {
+        "template": "ext04_fs",
+        "params": {
+          "a": 5,
+          "blank": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 4x² = 36, □, (x − 3)(x + 3) = 0. Jaa yhtälön molemmat puolet luvulla 4."
+      },
+      "payload": {
+        "lines": [
+          "4x² = 36",
+          "x² = 9",
+          "(x − 3)(x + 3) = 0"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² = 9",
+          "variable": "x",
+          "solutions": [
+            -3,
+            3
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan luvulla 4: x² = 9",
+          "Tulon nollasääntö: x = 3 tai x = −3"
+        ],
+        "final": "x² = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
+      },
+      "provenance": {
+        "template": "ext04_fs",
+        "params": {
+          "a": 3,
+          "p": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 3x² − 48 = 0, 3x² = 48, □, (x − 4)(x + 4) = 0. Jaa molemmat puolet luvulla 3."
+      },
+      "payload": {
+        "lines": [
+          "3x² − 48 = 0",
+          "3x² = 48",
+          "x² = 16",
+          "(x − 4)(x + 4) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² = 16",
+          "variable": "x",
+          "solutions": [
+            -4,
+            4
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirretään luku: 3x² = 48",
+          "Jaetaan luvulla 3: x² = 16",
+          "Tulon nollasääntö: x = 4 tai x = −4"
+        ],
+        "final": "x² = 16"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
+      },
+      "provenance": {
+        "template": "ext04_fs",
+        "params": {
+          "a": 4,
+          "p": 3,
+          "blank": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 2x² + 9 = 59, □, x² = 25, (x − 5)(x + 5) = 0. Vähennä molemmilta puolilta luku 9."
+      },
+      "payload": {
+        "lines": [
+          "2x² + 9 = 59",
+          "2x² = 50",
+          "x² = 25",
+          "(x − 5)(x + 5) = 0"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "2x² = 50",
+          "variable": "x",
+          "solutions": [
+            -5,
+            5
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 9 molemmilta puolilta: 2x² = 50",
+          "Jaetaan luvulla 2: x² = 25",
+          "Tulon nollasääntö: x = 5 tai x = −5"
+        ],
+        "final": "2x² = 50"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
+      },
+      "provenance": {
+        "template": "ext04_fs",
+        "params": {
+          "a": 5,
+          "p": 2,
+          "c": 9,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    }
+  ]
+}

@@ -1,0 +1,269 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Pelin hinta nousi 25 % ja on nyt 250 €. Järjestä rivit oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,25x = 250",
+          "1,25x = 250",
+          "x = 250 / 1,25"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen määrä x on 100 %, joten uusi määrä on 1,25x. Jaetaan luvulla 1,25.",
+          "Alkuperäinen määrä on 200"
+        ],
+        "final": "x = 250 / 1,25 = 200"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_so",
+        "params": {
+          "orig": "200",
+          "percent": "25",
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Takin hinta aleni 10 % ja on nyt 108 €. Järjestä rivit oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x − 0,1x = 108",
+          "0,9x = 108",
+          "x = 108 / 0,9"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen määrä x on 100 %, joten uusi määrä on 0,9x. Jaetaan luvulla 0,9.",
+          "Alkuperäinen määrä on 120"
+        ],
+        "final": "x = 108 / 0,9 = 120"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_so",
+        "params": {
+          "orig": "120",
+          "percent": "10",
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Bussilipun hinta nousi 25 % ja on nyt 75 €. Järjestä rivit oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,25x = 75",
+          "1,25x = 75",
+          "x = 75 / 1,25"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen määrä x on 100 %, joten uusi määrä on 1,25x. Jaetaan luvulla 1,25.",
+          "Alkuperäinen määrä on 60"
+        ],
+        "final": "x = 75 / 1,25 = 60"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_so",
+        "params": {
+          "orig": "60",
+          "percent": "25",
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Kengät maksavat 10 %:n alennuksen jälkeen 72 €. Järjestä rivit (alkuperäinen määrä x) oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x − 0,1x = 72",
+          "0,9x = 72",
+          "0,9x / 0,9 = 72 / 0,9",
+          "x = 72 / 0,9"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen määrä x on 100 %, joten uusi määrä on 0,9x. Jaetaan luvulla 0,9.",
+          "Alkuperäinen määrä on 80"
+        ],
+        "final": "x = 72 / 0,9 = 80"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_so",
+        "params": {
+          "orig": "80",
+          "percent": "10",
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Vuokra nousi 50 % ja on nyt 300 €/kk. Järjestä rivit (alkuperäinen määrä x) oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,5x = 300",
+          "1,5x = 300",
+          "1,5x / 1,5 = 300 / 1,5",
+          "x = 300 / 1,5"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen määrä x on 100 %, joten uusi määrä on 1,5x. Jaetaan luvulla 1,5.",
+          "Alkuperäinen määrä on 200"
+        ],
+        "final": "x = 300 / 1,5 = 200"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x."
+      },
+      "provenance": {
+        "template": "num07_so",
+        "params": {
+          "orig": "200",
+          "percent": "50",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

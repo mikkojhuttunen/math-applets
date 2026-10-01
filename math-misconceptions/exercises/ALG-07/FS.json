@@ -1,0 +1,335 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 5x + 3 = 28, □, x = 5. Kirjoita rivi, jossa luku 3 on siirretty toiselle puolelle."
+      },
+      "payload": {
+        "lines": [
+          "5x + 3 = 28",
+          "5x = 25",
+          "x = 5"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "5x = 25",
+          "variable": "x",
+          "solutions": [
+            5
+          ],
+          "equivalents": [
+            "25 = 5x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 3 molemmilta puolilta: 5x = 28 − 3 = 25",
+          "Ratkaisu: x = 5"
+        ],
+        "final": "5x = 25"
+      },
+      "feedback": {
+        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
+      },
+      "provenance": {
+        "template": "alg07_fs",
+        "params": {
+          "a": 5,
+          "b": 3,
+          "c": 28,
+          "e": 0,
+          "x": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 4x − 9 = 3, □, x = 3. Kirjoita rivi, jossa luku 9 on siirretty toiselle puolelle."
+      },
+      "payload": {
+        "lines": [
+          "4x − 9 = 3",
+          "4x = 12",
+          "x = 3"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "4x = 12",
+          "variable": "x",
+          "solutions": [
+            3
+          ],
+          "equivalents": [
+            "12 = 4x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Lisätään 9 molemmille puolille: 4x = 3 + 9 = 12",
+          "Ratkaisu: x = 3"
+        ],
+        "final": "4x = 12"
+      },
+      "feedback": {
+        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
+      },
+      "provenance": {
+        "template": "alg07_fs",
+        "params": {
+          "a": 4,
+          "b": 9,
+          "c": 3,
+          "e": 0,
+          "x": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 4 + 5x = 29, 5x = 25, □. Jaa yhtälön molemmat puolet luvulla 5 ja kirjoita ratkaisu."
+      },
+      "payload": {
+        "lines": [
+          "4 + 5x = 29",
+          "5x = 25",
+          "x = 5"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x = 5",
+          "variable": "x",
+          "solutions": [
+            5
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan molemmat puolet luvulla 5: x = 25 / 5 = 5",
+          "Ratkaisu: x = 5"
+        ],
+        "final": "x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
+      },
+      "provenance": {
+        "template": "alg07_fs",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "c": 29,
+          "e": 0,
+          "x": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: 5x + 6 = 2x + 18, □, 3x = 12, x = 4. Kirjoita rivi, jossa x-termit ovat vasemmalla ja luvut oikealla."
+      },
+      "payload": {
+        "lines": [
+          "5x + 6 = 2x + 18",
+          "5x − 2x = 18 − 6",
+          "3x = 12",
+          "x = 4"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "5x − 2x = 18 − 6",
+          "variable": "x",
+          "solutions": [
+            4
+          ],
+          "equivalents": [
+            "5x − 2x = 12"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 2x ja 6 molemmilta puolilta: 5x − 2x = 18 − 6",
+          "Ratkaisu: x = 4"
+        ],
+        "final": "5x − 2x = 18 − 6"
+      },
+      "feedback": {
+        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
+      },
+      "provenance": {
+        "template": "alg07_fs",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 18,
+          "e": 2,
+          "x": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Koripallojoukkue maksaa pelipaidoista 5 euroa kappaleelta ja saa 7 euron alennuksen koko tilauksesta. Lasku on 23 euroa, ja paitojen määrä x ratkaistaan yhtälöstä. Täydennä puuttuva rivi: 5x − 7 = 23, □, x = 6. Kirjoita rivi, jossa alennus on otettu huomioon."
+      },
+      "payload": {
+        "lines": [
+          "5x − 7 = 23",
+          "5x = 30",
+          "x = 6"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "5x = 30",
+          "variable": "x",
+          "solutions": [
+            6
+          ],
+          "equivalents": [
+            "30 = 5x"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Lisätään alennus 7 euroa molemmille puolille: 5x = 23 + 7 = 30",
+          "Ratkaisu: x = 6"
+        ],
+        "final": "5x = 30"
+      },
+      "feedback": {
+        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
+      },
+      "provenance": {
+        "template": "alg07_fs",
+        "params": {
+          "a": 5,
+          "b": 7,
+          "c": 23,
+          "e": 0,
+          "x": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}
