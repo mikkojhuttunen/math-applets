@@ -1,0 +1,202 @@
+[
+  {
+    "id": "A12.S2.06-place-20261001-0121-001",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 3 arvo luvussa 36?",
+    "answer": "30",
+    "answer_expr": "3 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "3",
+        "answer_expr": "3"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-002",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 6 arvo luvussa 61?",
+    "answer": "60",
+    "answer_expr": "6 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "6",
+        "answer_expr": "6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-003",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 2 arvo luvussa 23?",
+    "answer": "20",
+    "answer_expr": "2 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "2",
+        "answer_expr": "2"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-004",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 7 arvo luvussa 71?",
+    "answer": "70",
+    "answer_expr": "7 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "7",
+        "answer_expr": "7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-005",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 7 arvo luvussa 706?",
+    "answer": "700",
+    "answer_expr": "7 * 100",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "7",
+        "answer_expr": "7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-006",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 4 arvo luvussa 342?",
+    "answer": "40",
+    "answer_expr": "4 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "4",
+        "answer_expr": "4"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-007",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 5 arvo luvussa 512?",
+    "answer": "500",
+    "answer_expr": "5 * 100",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "5",
+        "answer_expr": "5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-008",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Mikä on numeron 8 arvo luvussa 187?",
+    "answer": "80",
+    "answer_expr": "8 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "8",
+        "answer_expr": "8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-009",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Luvussa 920 numero 9 on satojen paikalla. Mikä on sen arvo?",
+    "answer": "900",
+    "answer_expr": "9 * 100",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "9",
+        "answer_expr": "9"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-place-20261001-0121-010",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "numeric_entry",
+    "stem_fi": "Luvussa 635 numero 3 on kymmenten paikalla. Mikä on sen arvo?",
+    "answer": "30",
+    "answer_expr": "3 * 10",
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "3",
+        "answer_expr": "3"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-001",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Metri nauhaa maksaa 4 €. Paljonko maksaa 0,5 m nauhaa? Vastaa euroina.",
+    "answer": "2",
+    "answer_expr": "4 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "8",
+        "answer_expr": "4 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-002",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Litra mehua maksaa 6 €. Paljonko maksaa 0,5 l mehua? Vastaa euroina.",
+    "answer": "3",
+    "answer_expr": "6 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "12",
+        "answer_expr": "6 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-003",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo omenoita maksaa 3 €. Paljonko maksaa 0,5 kg omenoita? Vastaa euroina.",
+    "answer": "1,5",
+    "answer_expr": "3 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "6",
+        "answer_expr": "3 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-004",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Kangasta myydään 10 € metriltä. Paljonko maksaa 0,5 m kangasta? Vastaa euroina.",
+    "answer": "5",
+    "answer_expr": "10 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "20",
+        "answer_expr": "10 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-005",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo perunoita maksaa 2 €. Paljonko maksaa 0,5 kg perunoita? Vastaa euroina.",
+    "answer": "1",
+    "answer_expr": "2 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "4",
+        "answer_expr": "2 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-006",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Litra kermaa maksaa 5 €. Paljonko maksaa 0,5 l kermaa? Vastaa euroina.",
+    "answer": "2,5",
+    "answer_expr": "5 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "10",
+        "answer_expr": "5 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-007",
+    "goal": "A36.S2.14",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Metri johtoa maksaa 8 €. Paljonko maksaa 0,5 m johtoa? Vastaa euroina.",
+    "answer": "4",
+    "answer_expr": "8 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "16",
+        "answer_expr": "8 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-008",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo juustoa maksaa 12 €. Paljonko maksaa 0,25 kg juustoa? Vastaa euroina.",
+    "answer": "3",
+    "answer_expr": "12 * 0.25",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "48",
+        "answer_expr": "12 / 0.25"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-009",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Litra maitoa maksaa 2 €. Paljonko maksaa 0,25 l maitoa? Vastaa euroina.",
+    "answer": "0,5",
+    "answer_expr": "2 * 0.25",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "8",
+        "answer_expr": "2 / 0.25"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-010",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Metri köyttä maksaa 20 €. Paljonko maksaa 0,1 m köyttä? Vastaa euroina.",
+    "answer": "2",
+    "answer_expr": "20 * 0.1",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "200",
+        "answer_expr": "20 / 0.1"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-011",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo mansikoita maksaa 8 €. Paljonko maksaa 0,25 kg mansikoita? Vastaa euroina.",
+    "answer": "2",
+    "answer_expr": "8 * 0.25",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "32",
+        "answer_expr": "8 / 0.25"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-012",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Metri puulistaa maksaa 6 €. Paljonko maksaa 0,2 m listaa? Vastaa euroina.",
+    "answer": "1,2",
+    "answer_expr": "6 * 0.2",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "30",
+        "answer_expr": "6 / 0.2"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-013",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo kinkkua maksaa 12 €. Paljonko maksaa 0,75 kg kinkkua? Vastaa euroina.",
+    "answer": "9",
+    "answer_expr": "12 * 0.75",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "16",
+        "answer_expr": "12 / 0.75"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-014",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Litra maalia maksaa 9 €. Paljonko maksaa 0,5 l maalia? Vastaa euroina.",
+    "answer": "4,5",
+    "answer_expr": "9 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "18",
+        "answer_expr": "9 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-015",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo karkkia maksaa 5 €. Paljonko maksaa 0,2 kg karkkia? Vastaa euroina.",
+    "answer": "1",
+    "answer_expr": "5 * 0.2",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "25",
+        "answer_expr": "5 / 0.2"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-016",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Metri putkea maksaa 14 €. Paljonko maksaa 0,5 m putkea? Vastaa euroina.",
+    "answer": "7",
+    "answer_expr": "14 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "28",
+        "answer_expr": "14 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-017",
+    "goal": "A36.S2.14",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Metri nauhaa maksaa 8 €. Ella ostaa 0,5 m nauhaa ja maksaa 20 eurolla. Paljonko hän saa vaihtorahaa? Vastaa euroina.",
+    "answer": "16",
+    "answer_expr": "20 - 8 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "4",
+        "answer_expr": "20 - 8 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-018",
+    "goal": "A36.S2.14",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Kilo kirsikoita maksaa 12 €. Joni ostaa 0,5 kg kirsikoita ja maksaa 30 eurolla. Paljonko hän saa vaihtorahaa? Vastaa euroina.",
+    "answer": "24",
+    "answer_expr": "30 - 12 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "6",
+        "answer_expr": "30 - 12 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-019",
+    "goal": "A36.S2.14",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Litra siirappia maksaa 6 €. Aino ostaa 0,25 l siirappia ja maksaa 50 eurolla. Paljonko hän saa vaihtorahaa? Vastaa euroina.",
+    "answer": "48,5",
+    "answer_expr": "50 - 6 * 0.25",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "26",
+        "answer_expr": "50 - 6 / 0.25"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-mult-below1-20261001-0321-020",
+    "goal": "A36.S2.14",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Metri verhokangasta maksaa 10 €. Eero ostaa 0,5 m kangasta ja 0,5 m nauhaa, joka maksaa 4 € metriltä. Paljonko hän maksaa yhteensä? Vastaa euroina.",
+    "answer": "7",
+    "answer_expr": "10 * 0.5 + 4 * 0.5",
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "28",
+        "answer_expr": "10 / 0.5 + 4 / 0.5"
+      }
+    },
+    "source": "human",
+    "status": "draft"
+  }
+]
