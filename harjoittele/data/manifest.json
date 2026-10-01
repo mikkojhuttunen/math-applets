@@ -17,18 +17,46 @@
       "by_status": {
         "draft": 20
       }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20260930-1921.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20260930-2020.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20260930-2121.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
     }
   ],
   "totals": {
-    "items": 40,
+    "items": 100,
     "by_status": {
-      "draft": 40
+      "draft": 100
     },
     "by_goal": {
-      "A36.S2.04": 40
+      "A36.S2.04": 40,
+      "A36.S2.11": 20,
+      "A36.S2.12": 40
     },
     "by_misconception": {
-      "NUM-10": 40
+      "NUM-03": 40,
+      "NUM-10": 40,
+      "NUM-12": 20
     }
   }
 }
