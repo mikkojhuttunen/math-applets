@@ -12,7 +12,7 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | 4 | A12.S2.08 | ALG-06, ALG-13 | numeric_entry with `answer_expr`, or choice true/false | 30 | 30 | done | For example `8 + 4 = □ + 5` (answer 7, expr `8 + 4 - 5`); `8 = 5 + 3` true or false. |
 | 5 | A12.S2.06 | NUM-09 | numeric_entry with `answer_expr` | 30 | 30 | done | Value of a digit in a number, for example 706 gives 700 (expr `7 * 100`). |
 | 6 | A36.S2.01 | NUM-13 | numeric_entry with `answer_expr` | 20 | 20 | done | Multiplying by 10 with decimals, for example `3,5 × 10` gives 35. Wrong answer 3,50. |
-| 7 | A36.S2.14 | NUM-11 | numeric_entry with `answer_expr` | 20 | 0 | todo | Multiplier below 1, for example price of 0,5 m at 4 € per m. Wrong answer from division. |
+| 7 | A36.S2.14 | NUM-11 | numeric_entry with `answer_expr` | 20 | 20 | done | Multiplier below 1, for example price of 0,5 m at 4 € per m. Wrong answer from division. |
 | 8 | A36.S4.09 | MEA-01 | numeric_entry with `answer_expr` | 20 | 0 | todo | Covering a rectangle with unit squares, rows times columns. Wrong answer from adding. |
 | 9 | A12.S2.08 | none | numeric_entry with `answer_expr` | 60 | 0 | todo | Addition and subtraction within 20, no misconception tags. |
 | 10 | A12.S2.09 | none | numeric_entry with `answer_expr` | 60 | 0 | todo | Addition and subtraction within 100. |
