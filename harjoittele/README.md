@@ -33,12 +33,21 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000/harjoittele/`. All exercises are drafts for now, so use `http://localhost:8000/harjoittele/?luonnokset=1` to try a round.
 
-Browser test (Chromium through Playwright, which is not a dependency of this folder):
+Browser checks (Chromium through Playwright, which is not a dependency of this folder; use a globally installed Playwright with `NODE_PATH`, or `npm install --no-save playwright@1.56.1`):
 
 ```
 cd harjoittele
+NODE_PATH=$(npm root -g) node tools/check_pages.js --self-test
+NODE_PATH=$(npm root -g) node tools/check_pages.js
 NODE_PATH=$(npm root -g) node tools/browser_test.js
 ```
+
+`check_pages.js` sweeps every page for errors, requests to other sites, Finnish number format and phone width; `browser_test.js` clicks through a round, the teacher view and the goal browser.
+
+## Continuous integration
+
+- `.github/workflows/harjoittele.yml`: on pull requests and pushes to `main` touching `harjoittele/` or the front page, runs `npm test`, the page check (with its self-test) and the browser test.
+- `.github/workflows/harjoittele-content.yml`: on pull requests changing exercise batches, curriculum goals or misconception sources, warns if `harjoittele/data/` needs rebuilding. It never fails, because those pull requests come from other pipelines.
 
 ## Reviewing exercises and feedback texts
 

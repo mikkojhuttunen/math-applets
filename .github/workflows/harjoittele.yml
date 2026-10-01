@@ -1,0 +1,42 @@
+# Practice pages (harjoittele/): unit tests, page check and browser test.
+# Check that the action versions below are current before relying on them.
+name: harjoittele
+on:
+  pull_request:
+    paths:
+      - "harjoittele/**"
+      - "index.html"
+      - ".github/workflows/harjoittele.yml"
+  push:
+    branches: [main]
+    paths:
+      - "harjoittele/**"
+      - "index.html"
+      - ".github/workflows/harjoittele.yml"
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: harjoittele
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Unit tests (no dependencies; includes the data freshness checks)
+        run: npm test
+      - name: Install Playwright and Chromium (test tool only, not a site dependency)
+        run: |
+          npm install --no-save playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Page check self-test (must catch every rule on a broken page)
+        run: node tools/check_pages.js --self-test
+      - name: Page check
+        run: node tools/check_pages.js
+      - name: Browser test
+        run: node tools/browser_test.js

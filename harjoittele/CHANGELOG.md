@@ -2,6 +2,11 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.12.0 (2026-10-01)
+
+- W12: link to the practice pages on the front page.
+- W13: `tools/check_pages.js` page check with `--self-test`; GitHub Actions workflows `harjoittele` (tests, page check, browser test) and `harjoittele-content` (warns when `data/` needs rebuilding after exercise or curriculum changes).
+
 ## 0.11.0 (2026-10-01)
 
 - W11: goal browser `tavoitteet.html`: 128 curriculum goals with exercises, practice links, applets and misconceptions; search and filters in the URL. `data/goal_applets.json`. Teacher links in the practice page footer.

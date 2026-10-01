@@ -22,7 +22,7 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 
 1. `cd harjoittele && npm test` passes offline (unit tests with `node:test`, no dependencies).
 2. The page works when served locally: `python3 -m http.server` from the repo root, then open `http://localhost:8000/harjoittele/`. (`file://` does not allow the data fetches.)
-3. The browser check passes: `NODE_PATH=$(npm root -g) node tools/browser_test.js` prints `BROWSER TEST OK` (no console errors, no requests to other origins, no `NaN`, no horizontal scroll). W13 turns it into a general page check and a CI workflow.
+3. The browser checks pass: `NODE_PATH=$(npm root -g) node tools/check_pages.js` prints `PAGE CHECK OK` and `NODE_PATH=$(npm root -g) node tools/browser_test.js` prints `BROWSER TEST OK`. On GitHub the workflow `harjoittele` runs both.
 4. The ground rules above still hold.
 5. `CHANGELOG.md` in this folder has a line for the change.
 
@@ -134,19 +134,19 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `tavoitteet.html` + `js/goals_page.js` (DOM) + `js/goals_view.js` (rows, search, grouping; unit-tested). All 128 goals of `data/goals.json` (built in W08) grouped by grade band (1-2, 3-6, 7-9) and content area. Each goal: id, 7-9 grade, "Oppilas osaa …" text, exercise count with how many are reviewed, the pupil topic title when there is one, a practice link (`index.html?tavoite=`) when reviewed items exist or a draft preview link when only drafts exist, related applets, and the misconceptions its items cover. Search by exact id (shows just that goal) or by word in id, text or area; band filter; "only goals with exercises or applets" (9 goals now). Filters are in the URL (`?haku=`, `?luokat=`, `?sisalto=1`). Applets per goal come from the new hand-written `data/goal_applets.json` (7 goals, 9 applets), based on section 7 of the 7-9 curriculum file and the front page's topic lines; `pythagoras-neliot`, listed there, does not exist and is left out. A test checks that every goal and applet in it exists. Applet names are read from the front page's own links, so they follow `index.html`. Links to the goal browser from the teacher view and from the practice page footer ("Opettajalle: …"). 5 new unit tests; the browser test checks the full list, exact id search, practice link, URL, band filter and an applet link, at 360 px.
 
 ### W12 Link from the front page
-- State: todo
+- State: done
 - Needs: W06
 - What: one link to `harjoittele/` in the root `index.html`. That file belongs to the applets pipeline, so this is done only with the teacher's OK, in its own commit, touching nothing else.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.12.0
+- Notes: Approved by the teacher on 2026-10-01. One line under the heading of the root `index.html`, using only the page's existing styles: "Harjoittele tehtäviä – laskutehtäviä, joissa palaute kertoo, mikä vastauksessa meni pieleen", linking to `harjoittele/`. Own commit `Lisää etusivulle linkki harjoitussivuille`, touching only `index.html`. The W13 page check verifies that the link exists and opens. Until items are reviewed, a pupil following it sees the "no reviewed exercises yet" message.
 
 ### W13 Automated page check
-- State: todo
+- State: done
 - Needs: W06
 - What: `tools/check_pages.js` with Playwright (Chromium is preinstalled in the Claude environment): opens each page, fails on console errors, requests to other origins, `NaN`/`undefined` on screen, a decimal point in shown numbers, missing `lang="fi"`, or horizontal scrolling at 360 px width. Plus a GitHub Actions workflow `.github/workflows/harjoittele.yml` running the unit tests and this check on pull requests that touch `harjoittele/`.
 - Test: the check itself fails on a deliberately broken fixture page.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.12.0
+- Notes: `tools/check_pages.js` (Playwright): serves the repo and checks 8 page states at 360 px: the root front page, practice start (pupil and draft), a round in progress, an unknown goal, the teacher view and its feedback-text tab, and the goal browser. Fails on console or page errors, requests to other sites (aborted, so the check also works offline), `lang` other than `fi`, horizontal scrolling, and in the visible text `NaN`, `undefined`, a decimal point between digits, or a hyphen-minus used as a minus; curriculum and item ids, file names and URLs are ignored. Also checks that the front-page link to `harjoittele/` opens. `--self-test` runs it against `test/fixtures/pages/broken.html`, which must trip all eight rules without flagging the id `A36.S2.04`. The text rules are also unit-tested under `npm test` (3 tests). CI: `.github/workflows/harjoittele.yml` on pull requests and pushes to `main` that touch `harjoittele/`, the front page or the workflow: `npm test`, then Playwright **pinned to 1.56.1** (`npm install --no-save`, so no lockfile or package change) with `npx playwright install --with-deps chromium`, then the self-test, the page check and `tools/browser_test.js`. `.github/workflows/harjoittele-content.yml` on pull requests that change exercise batches, curriculum goals or the misconception sources: runs the three `--check` commands and only **warns** (exit 0) with the commands to run, because those pull requests come from other pipelines that may not edit `harjoittele/`. Verified by running the same steps in a fresh clone (npm test 67 passed, Playwright 1.56.1 installed from npm, self-test, page check and browser test OK), and the freshness script on an up-to-date clone (OK) and with a fake new batch (warning, exit 0). The workflows themselves have not run on GitHub yet: they first run on the pull request that merges this branch. `harjoittele/.gitignore` ignores `node_modules/`.
 
 ### W14 Demo release v1.0
 - State: todo
@@ -190,3 +190,5 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-10-01 | W08 | Start screen, shareable topic links, goals.json, v0.9.0 |
 | 2026-10-01 | W09 | Subtraction in columns after a wrong answer, v0.10.0 |
 | 2026-10-01 | W11 | Goal browser tavoitteet.html, v0.11.0 |
+| 2026-10-01 | W12 | Front page link to harjoittele/ (own commit, index.html only) |
+| 2026-10-01 | W13 | Page check, self-test, CI workflows harjoittele and harjoittele-content, v0.12.0 |
