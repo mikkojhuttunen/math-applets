@@ -17,7 +17,7 @@ test('textProblems finds NaN, undefined, decimal points and hyphen minus', () =>
 
 test('the page list covers every page of the site', () => {
   const urls = PAGES.map((p) => p.url.split('?')[0]);
-  for (const page of ['harjoittele/', 'harjoittele/opettaja.html', 'harjoittele/tavoitteet.html', 'index.html']) {
+  for (const page of ['harjoittele/', 'harjoittele/opettaja.html', 'harjoittele/tavoitteet.html', 'harjoittele/testaa.html', 'index.html']) {
     assert.ok(urls.includes(page), page);
   }
 });

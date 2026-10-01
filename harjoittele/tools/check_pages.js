@@ -45,6 +45,7 @@ export const PAGES = [
     },
   },
   { url: 'harjoittele/tavoitteet.html', wait: '.goal' },
+  { url: 'harjoittele/testaa.html', wait: '.level' },
 ];
 
 export function serve(root = REPO) {

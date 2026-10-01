@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.13.0 (2026-10-01)
+
+- `testaa.html`: test page with every applet and practice topic per school level (`LIVE_BACKLOG.md` L03).
+
 ## 0.12.1 (2026-10-01)
 
 - Manifest rebuilt: 143 files, 1010 items. Pupil titles for 33 more goals. Fix: column view only for a bare subtraction, not for a subtraction inside another question.

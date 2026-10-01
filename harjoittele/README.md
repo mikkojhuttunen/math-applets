@@ -8,6 +8,7 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 |---|---|
 | `index.html` | Practice page: start screen, then rounds. Links: `?tavoite=A36.S2.04`, `?luokat=1-6`, `?virhe=NUM-10`; `?tehtava=<id>` one item; `?luonnokset=1` previews drafts |
 | `opettaja.html` | Teacher view: all items and feedback texts, review selection, printable worksheet |
+| `testaa.html` | Test page: applets and practice topics per school level, draft previews |
 | `tavoitteet.html` | Goal browser: curriculum goals with exercises, practice links and applets (`?haku=`, `?luokat=`) |
 | `css/style.css` | Shared styles, light and dark |
 | `js/` | ES modules loaded directly by the browser, no build step |

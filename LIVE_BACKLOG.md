@@ -33,7 +33,7 @@ Work queue for getting the whole site live on GitHub Pages and testable on a lap
 ### T3 Test on the laptop
 - State: todo
 - Needs: T2 (or L04 for a local copy)
-- Start from the test page (L03) or from these addresses:
+- Start from the test page `https://mikkojhuttunen.github.io/math-applets/harjoittele/testaa.html` (L03) or from these addresses:
   - front page and applets: `https://mikkojhuttunen.github.io/math-applets/`
   - exercises, draft preview: `https://mikkojhuttunen.github.io/math-applets/harjoittele/?luonnokset=1`
   - teacher view: `https://mikkojhuttunen.github.io/math-applets/harjoittele/opettaja.html`
@@ -57,9 +57,10 @@ Work queue for getting the whole site live on GitHub Pages and testable on a lap
 - What: `tools/check_pages.js` gets a `--base <url>` option to check the live site instead of a local copy; a workflow `.github/workflows/pages-live.yml` runs it after each GitHub Pages deployment (and by hand) and fails if a page is missing, broken or breaks the rules. Also checks that every front-page link answers.
 
 ### L03 Test page for all school levels
-- State: todo
+- State: done (2026-10-01)
 - What: `harjoittele/testaa.html`, one page for a tester on a laptop: per school level (luokat 1-2, 3-6, 7-9, lukio pitkä, lukio lyhyt) the applets (read from the front page) and the practice topics with item counts and draft-preview links, plus links to the teacher view and the goal browser, and a short checklist of what to try. Linked from the practice page footer.
 
+- Notes: `harjoittele/testaa.html` (+ `js/testaa_page.js`, `js/testhub.js`): reads the front page's `<h2>` sections and their links, so new applets appear without changes here; grades 1-2 and 3-6 practice topics go under the front page's 1-6 section, 7-9 under 7-9; lukio sections show their applets and "Ei vielä harjoituksia". Each topic links to the draft preview until it has reviewed items, then to the pupil view. Shows 20 applets and 740 exercises, and how many items are of types the page cannot show. Linked from the practice page footer ("testaa sivustoa"). Added to `tools/check_pages.js`; 3 unit tests. One-off sweep before this: every one of the 740 showable items opened alone at 360 px with no errors; one content finding for the grades 7-9 pipeline (see log).
 ### L04 Run the site on the laptop without GitHub
 - State: done (2026-10-01)
 - What: `TESTING.md` at the root: clone or download the repository, start `python3 -m http.server 8000` (or `py -m http.server 8000` on Windows) in its folder and open `http://localhost:8000/`. Explains why opening the files directly (`file://`) works for applets but not for the practice pages. Includes the test addresses of T3 for `localhost`.
@@ -97,3 +98,5 @@ Work queue for getting the whole site live on GitHub Pages and testable on a lap
 |---|---|---|
 | 2026-10-01 | backlog | Created. Pages not enabled; `main` would publish the front page and applets; branch not merged; 740 of 1010 items showable |
 | 2026-10-01 | L01, L04 | `.nojekyll`; `TESTING.md` |
+| 2026-10-01 | L03 | Test page `harjoittele/testaa.html` |
+| 2026-10-01 | sweep | All 740 showable items render at 360 px without errors. Content finding for the grades 7-9 pipeline (not edited here): `math-misconceptions/exercises/ALG-03/MC.json`, item `ALG-03-MC-003` writes `-3` with a hyphen-minus instead of `−3` |

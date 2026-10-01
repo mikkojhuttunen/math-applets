@@ -6,6 +6,7 @@ Two ways: the published site on GitHub Pages, or a local copy on your own laptop
 
 | What | Address |
 |---|---|
+| Test page: everything per school level | https://mikkojhuttunen.github.io/math-applets/harjoittele/testaa.html |
 | Front page and applets | https://mikkojhuttunen.github.io/math-applets/ |
 | Exercises, draft preview | https://mikkojhuttunen.github.io/math-applets/harjoittele/?luonnokset=1 |
 | Teacher view | https://mikkojhuttunen.github.io/math-applets/harjoittele/opettaja.html |
@@ -27,7 +28,7 @@ On Windows use `py -m http.server 8000` instead of the last line. Then open http
 
 Without git: on the GitHub page of the repository choose Code → Download ZIP, unzip it, and start the server in the unzipped folder.
 
-The same addresses as in table A work with `http://localhost:8000/` in place of `https://mikkojhuttunen.github.io/math-applets/`, for example http://localhost:8000/harjoittele/?luonnokset=1.
+The same addresses as in table A work with `http://localhost:8000/` in place of `https://mikkojhuttunen.github.io/math-applets/`, for example http://localhost:8000/harjoittele/testaa.html.
 
 Why a server: the applets are single files and also open with a double click, but the practice pages load exercise files, and browsers block that for pages opened straight from the disk (`file://`).
 
