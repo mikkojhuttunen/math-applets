@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Polkupyörän hinta nousi 50 % ja on nyt 300 €. Mikä hinta oli ennen nousua? Kirjoita hinta euroina."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 200.0
+        },
+        "wrong": [
+          {
+            "match": 150.0,
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "300 € on 150 % vanhasta hinnasta",
+          "300 ÷ 1,5 = 200"
+        ],
+        "final": "200"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_ne",
+        "params": {
+          "orig": "200",
+          "percent": "50",
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Kengät maksavat alennuksen 25 % jälkeen 120 €. Mikä oli hinta ennen alennusta? Kirjoita hinta euroina."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 160.0
+        },
+        "wrong": [
+          {
+            "match": 150.0,
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "120 € on 75 % vanhasta hinnasta",
+          "120 ÷ 0,75 = 160"
+        ],
+        "final": "160"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_ne",
+        "params": {
+          "orig": "160",
+          "percent": "25",
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Reppu maksaa 50 %:n alennuksen jälkeen 40 €. Montako euroa alennus oli?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 40.0
+        },
+        "wrong": [
+          {
+            "match": 20.0,
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "40 ÷ 0,5 = 80",
+          "80 − 40 = 40"
+        ],
+        "final": "40"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_ne",
+        "params": {
+          "orig": "80",
+          "percent": "50",
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Vuokra nousi 20 % ja on nyt 720 €/kk. Kuinka monta euroa vuokra nousi kuukaudessa?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 120.0
+        },
+        "wrong": [
+          {
+            "match": 144.0,
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "720 ÷ 1,2 = 600",
+          "720 − 600 = 120"
+        ],
+        "final": "120"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_ne",
+        "params": {
+          "orig": "600",
+          "percent": "20",
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Jäätelön hinta aleni 25 %. Nyt se maksaa 4,5 €. Mikä oli hinta ennen alennusta euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6.0
+        },
+        "wrong": [
+          {
+            "match": 5.625,
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "4,5 € on 75 % vanhasta hinnasta",
+          "4,5 ÷ 0,75 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_ne",
+        "params": {
+          "orig": "120",
+          "percent": "25",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}
