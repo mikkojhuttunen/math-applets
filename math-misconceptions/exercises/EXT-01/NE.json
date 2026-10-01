@@ -1,0 +1,301 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laske −3²."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -9.0
+        },
+        "wrong": [
+          {
+            "match": 9.0,
+            "misconception": "EXT-01",
+            "feedback": "Potenssi koskee vain sitä lukua, jonka vieressä se on: −a² = −(a · a). Vasta sulkeissa (−a)² = a²."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "−3² = −(3 · 3)",
+          "= −9"
+        ],
+        "final": "−9"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_ne",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laske −3² + 20."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 11.0
+        },
+        "wrong": [
+          {
+            "match": 29.0,
+            "misconception": "EXT-01",
+            "feedback": "Potenssi koskee vain sitä lukua, jonka vieressä se on: −a² = −(a · a). Vasta sulkeissa (−a)² = a²."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "−3² = −9",
+          "−9 + 20 = 11"
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_ne",
+        "params": {
+          "a": 3,
+          "b": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laske −6² − (−6)²."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -72.0
+        },
+        "wrong": [
+          {
+            "match": 0.0,
+            "misconception": "EXT-01",
+            "feedback": "Potenssi koskee vain sitä lukua, jonka vieressä se on: −a² = −(a · a). Vasta sulkeissa (−a)² = a²."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "−6² = −36",
+          "(−6)² = 36",
+          "−36 − 36 = −72"
+        ],
+        "final": "−72"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_ne",
+        "params": {
+          "a": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen −x² arvo, kun x = −3."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -9.0
+        },
+        "wrong": [
+          {
+            "match": 9.0,
+            "misconception": "EXT-01",
+            "feedback": "Potenssi koskee vain sitä lukua, jonka vieressä se on: −a² = −(a · a). Vasta sulkeissa (−a)² = a²."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x² = (−3)² = 9",
+          "−x² = −9"
+        ],
+        "final": "−9"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_ne",
+        "params": {
+          "x": -3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laske −3² + (−3)² + (−3)³."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -27.0
+        },
+        "wrong": [
+          {
+            "match": -9.0,
+            "misconception": "EXT-01",
+            "feedback": "Potenssi koskee vain sitä lukua, jonka vieressä se on: −a² = −(a · a). Vasta sulkeissa (−a)² = a²."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "−3² = −9",
+          "(−3)² = 9",
+          "(−3)³ = −27",
+          "summa = −27"
+        ],
+        "final": "−27"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_ne",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

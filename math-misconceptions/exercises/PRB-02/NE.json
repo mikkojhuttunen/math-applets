@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRB-02",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 12 mustaa kuulaa 25:stä. Purkissa 2 on 2 mustaa kuulaa 4:sta. Kummasta purkista on parempi mahdollisuus nostaa musta kuula? Kirjoita purkin numero."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "12/25 = 0,480",
+          "2/4 = 0,500",
+          "Purkin 2 osuus on suurempi"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_ne",
+        "params": {
+          "a1": 12,
+          "b1": 25,
+          "a2": 2,
+          "b2": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa on 34 mustaa kuulaa 50:stä. Kuinka monta prosenttia on todennäköisyys nostaa musta kuula?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 68.0
+        },
+        "wrong": [
+          {
+            "match": 34.0,
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "34/50 = 68 %"
+        ],
+        "final": "68"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_ne",
+        "params": {
+          "a": 34,
+          "b": 50
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 6 mustaa kuulaa 20:stä. Purkissa 2 on 10 kuulaa. Montako mustaa kuulaa purkissa 2 pitää olla, jotta mustan nostamisen todennäköisyys on sama kuin purkissa 1?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3.0
+        },
+        "wrong": [
+          {
+            "match": 6.0,
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "6/20 = x/10",
+          "x = 6 · 10 / 20 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_ne",
+        "params": {
+          "a": 6,
+          "b": 20,
+          "d": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 4 mustaa kuulaa 25:stä ja purkissa 2 on 2 mustaa kuulaa 8:sta. Kuinka monta prosenttia on todennäköisyys nostaa musta kuula siitä purkista, josta mahdollisuus on parempi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 25.0
+        },
+        "wrong": [
+          {
+            "match": 16.0,
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Purkki 1: 4/25 = 16 %",
+          "Purkki 2: 2/8 = 25 %",
+          "Parempi on purkki 2: 25 %"
+        ],
+        "final": "25"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_ne",
+        "params": {
+          "a1": 4,
+          "b1": 25,
+          "a2": 2,
+          "b2": 8,
+          "higher_pct": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 6 punaista kuulaa 20:stä. Pussiin lisätään 5 punaista kuulaa, valkoisia ei lisätä. Kuinka monta prosenttia on nyt todennäköisyys nostaa punainen kuula?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 44.0
+        },
+        "wrong": [
+          {
+            "match": 11.0,
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Punaisia 11, kuulia yhteensä 25",
+          "11/25 = 44 %"
+        ],
+        "final": "44"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_ne",
+        "params": {
+          "a": 6,
+          "b": 20,
+          "add": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 15 |
+| Runs completed | 16 |
 | Last run | 2026-10-01 |
-| Progress | 79 of 227 planned cells generated |
+| Progress | 85 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -212,9 +212,9 @@ Same row order as section 3.1. Columns are in phase order.
 | GEO-01 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | GEO-02 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | FUN-01 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
-| PRB-01 | o | o | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| PRB-02 | o | o | - | - | - | - | o | o | - | - | - | - | o | - | - |
-| EXT-01 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
+| PRB-01 | X | X | - | - | - | - | - | - | - | - | - | - | o | o | - |
+| PRB-02 | X | X | - | - | - | - | o | o | - | - | - | - | o | - | - |
+| EXT-01 | X | X | o | - | o | o | - | - | - | - | - | - | - | - | - |
 | EXT-02 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
 | EXT-03 | o | o | o | o | o | - | - | - | - | - | - | o | o | - | o |
 | EXT-04 | o | o | o | - | o | o | o | - | - | - | - | - | - | - | o |
@@ -319,6 +319,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | GEO-01 | MC | GEO-01-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-01/MC.json | Draft | Moderate; triangles given by coordinates, angles or sides (no figure); item 5 asks for a justification |
 | 2026-10-01 | GEO-02 | MC | GEO-02-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-02/MC.json | Draft | Moderate; item 5 asks to judge a class-inclusion claim (justification) |
 | 2026-10-01 | FUN-01 | MC | FUN-01-MC-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-01/MC.json | Draft | Moderate; graphs described by value tables and verbal trends (no figure); item 5 asks for a justification |
+| 2026-10-01 | PRB-01 | MC | PRB-01-MC-001..005 | T, T, T, H, H | S6.06 | exercises/PRB-01/MC.json | Draft | Moderate; item 5 asks for a justification (independence); xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | PRB-01 | NE | PRB-01-NE-001..005 | T, T, T, H, H | S6.06 | exercises/PRB-01/NE.json | Draft | Moderate; wrong answers follow the "it is due" or "it balances out" belief |
+| 2026-10-01 | PRB-02 | MC | PRB-02-MC-001..005 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/MC.json | Draft | Moderate; item 5 asks for a justification (proportion, not count) |
+| 2026-10-01 | PRB-02 | NE | PRB-02-NE-001..005 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/NE.json | Draft | Moderate; wrong answer is the count of marbles instead of the proportion |
+| 2026-10-01 | EXT-01 | MC | EXT-01-MC-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification |
+| 2026-10-01 | EXT-01 | NE | EXT-01-NE-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer reads −a² as (−a)² |
 
 ## 6. Curriculum coverage
 
