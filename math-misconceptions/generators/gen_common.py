@@ -66,3 +66,13 @@ def cli(make_items, tid, code):
         out.write_text(text, encoding="utf-8")
     else:
         print(text)
+
+
+def lin(p, q):
+    """Linear expression p x + q as display text (proper minus sign, no 1x, no +0)."""
+    if p == 0:
+        return num(q)
+    first = ("−" if p < 0 else "") + ("" if abs(p) == 1 else str(abs(p))) + "x"
+    if q == 0:
+        return first
+    return f"{first} {'+' if q > 0 else MINUS} {abs(q)}"

@@ -1,0 +1,512 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin (x + 5)² kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "(x + 5)²",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 25",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "b",
+            "text": "2x + 10",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "x² + 5x + 25",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "d",
+            "text": "x² + 10x + 25",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "x² + 5x + 5x + 25",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "(x + 5)(x + 5)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x + 5)² = (x + 5)(x + 5)",
+          "x² + 10x + 25"
+        ],
+        "final": "x² + 10x + 25"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg09_me",
+        "params": {
+          "b": 5,
+          "c": 2,
+          "d": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin (x − 9)² kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "(x − 9)²",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(x − 9)(x − 9)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "x² − 81",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "c",
+            "text": "81 − 18x + x²",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "x² − 18x + 81",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "x² + 18x + 81",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "x² − 18x − 81",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x − 9)² = (x − 9)(x − 9)",
+          "x² − 18x + 81"
+        ],
+        "final": "x² − 18x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg09_me",
+        "params": {
+          "b": 9,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin (3x + 2)² kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "(3x + 2)²",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "9x² + 12x + 4",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "3x² + 12x + 4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "9x² + 4",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "d",
+            "text": "4 + 12x + 9x²",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "(3x + 2)(3x + 2)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "9x² + 6x + 4",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(3x + 2)² = (3x + 2)(3x + 2)",
+          "9x² + 12x + 4"
+        ],
+        "final": "9x² + 12x + 4"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg09_me",
+        "params": {
+          "b": 2,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin (x + 5)² − x² kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "(x + 5)² − x²",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "10x + 25",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "10x",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "c",
+            "text": "5x + 25",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "d",
+            "text": "x² + 10x + 25 − x²",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "25",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "f",
+            "text": "25 + 10x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x + 5)² = x² + 10x + 25",
+          "10x + 25"
+        ],
+        "final": "10x + 25"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg09_me",
+        "params": {
+          "b": 5,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen terassin sivu on x + 6 metriä, ja viereen tulee 9 m² kukkapenkki. Valitse kaikki lausekkeet, jotka kuvaavat yhteenlaskettua pinta-alaa neliömetreinä. "
+      },
+      "payload": {
+        "reference": "(x + 6)² + 9",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 6x + 45",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "b",
+            "text": "x² + 12x + 45",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "x² + 36 + 9",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "d",
+            "text": "(x + 15)²",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "x² + 12x + 36 + 9",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "(x + 6)(x + 6) + 9",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x + 6)² = x² + 12x + 36",
+          "x² + 12x + 45"
+        ],
+        "final": "x² + 12x + 45"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg09_me",
+        "params": {
+          "b": 6,
+          "c": 3,
+          "d": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}
