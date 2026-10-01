@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 17 |
+| Runs completed | 18 |
 | Last run | 2026-10-01 |
-| Progress | 90 of 227 planned cells generated |
+| Progress | 95 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -214,9 +214,9 @@ Same row order as section 3.1. Columns are in phase order.
 | FUN-01 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
 | PRB-01 | X | X | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | PRB-02 | X | X | - | - | - | - | X | o | - | - | - | - | o | - | - |
-| EXT-01 | X | X | X | - | X | o | - | - | - | - | - | - | - | - | - |
-| EXT-02 | X | X | o | - | o | o | - | - | - | - | - | - | - | - | - |
-| EXT-03 | o | o | o | o | o | - | - | - | - | - | - | o | o | - | o |
+| EXT-01 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
+| EXT-02 | X | X | X | - | X | o | - | - | - | - | - | - | - | - | - |
+| EXT-03 | X | X | o | o | o | - | - | - | - | - | - | o | o | - | o |
 | EXT-04 | o | o | o | - | o | o | o | - | - | - | - | - | - | - | o |
 | EXT-05 | o | o | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | EXT-06 | o | o | o | - | o | - | - | o | o | o | - | - | - | - | - |
@@ -330,6 +330,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | EXT-01 | FS | EXT-01-FS-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression (variable x is only a schema placeholder) |
 | 2026-10-01 | EXT-02 | MC | EXT-02-MC-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification of a⁰ = 1 |
 | 2026-10-01 | EXT-02 | NE | EXT-02-NE-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answers read the power as a product, a⁰ as 0 and a⁻ⁿ as negative |
+| 2026-10-01 | EXT-01 | ME | EXT-01-ME-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/ME.json | Draft | Not assessed; literature evidence not yet checked; expressions are numeric (variable x is only a schema placeholder); distractors read −a² as (−a)² or the reverse |
+| 2026-10-01 | EXT-02 | ES | EXT-02-ES-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/ES.json | Draft | Not assessed; literature evidence not yet checked; exponents written with ^ so the checker can parse them; errors: power read as a product, a^0 = 0, a^(−n) negative |
+| 2026-10-01 | EXT-02 | FS | EXT-02-FS-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression with ^ exponents (variable x is only a schema placeholder) |
+| 2026-10-01 | EXT-03 | MC | EXT-03-MC-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification by substitution |
+| 2026-10-01 | EXT-03 | NE | EXT-03-NE-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/NE.json | Draft | Not assessed; literature evidence not yet checked; answer is the number of integers in a window satisfying the inequality, wrong answer is the count with the sign not reversed |
 
 ## 6. Curriculum coverage
 
