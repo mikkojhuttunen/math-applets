@@ -331,7 +331,7 @@
       "schema_version": "1.0",
       "id": "ALG-01-MC-005",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -348,7 +348,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Tarran hinta on 5 senttiä ja kortin hinta 9 senttiä. Ostetaan a kpl (tarraa) ja p kpl (korttia). Aino sanoo: \"Lauseke 5a + 9p tarkoittaa 5 tarraa ja 9 korttia.\" Miksi väite on virheellinen?"
+        "text": "Tarran hinta on 5 senttiä ja kortin hinta 9 senttiä. Ostetaan a kpl tarroja ja p kpl kortteja. Aino sanoo: \"Lauseke 5a + 9p tarkoittaa 5 tarraa ja 9 korttia.\" Miksi väite on virheellinen?"
       },
       "payload": {
         "options": [

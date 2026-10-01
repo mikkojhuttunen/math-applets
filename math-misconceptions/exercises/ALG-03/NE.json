@@ -184,7 +184,7 @@
       "schema_version": "1.0",
       "id": "ALG-03-NE-004",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -201,7 +201,7 @@
         "ALG-03"
       ],
       "prompt": {
-        "text": "Luvun w kaksinkertainen on 8. Mikä on luku w?"
+        "text": "Luku w kerrottuna kahdella on 8. Mikä on luku w?"
       },
       "payload": {
         "answer": {

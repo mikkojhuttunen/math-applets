@@ -147,13 +147,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Kaupassa on 5 pussia. Jokaisessa pussissa on 2 pulla. Montako pullaa on yhteensä?",
+    "stem_fi": "Kaupassa on 5 pussia. Jokaisessa pussissa on 2 pullaa. Montako pullaa on yhteensä?",
     "answer": "10",
     "answer_expr": "5 * 2",
     "workbook": [],
     "misconceptions": {},
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1122-013",
@@ -173,13 +173,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Luokassa on 4 pöytää. Jokaisen pöydän ympärillä on 4 tuolia. Montako tuolia on yhteensä?",
+    "stem_fi": "Luokassa on 4 pöytää. Jokaisen pöydän ympärillä on 4 tuolia. Montako tuolia luokassa on yhteensä?",
     "answer": "16",
     "answer_expr": "4 * 4",
     "workbook": [],
     "misconceptions": {},
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1122-015",

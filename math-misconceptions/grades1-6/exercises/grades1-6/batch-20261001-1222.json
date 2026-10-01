@@ -160,13 +160,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Eemeli ostaa 3 kumia. Jokainen kumi maksaa 10 senttiä. Montako senttiä hän maksaa?",
+    "stem_fi": "Eemeli ostaa 3 kumia. Jokainen kumi maksaa 10 senttiä. Montako senttiä hän maksaa kumeista yhteensä?",
     "answer": "30",
     "answer_expr": "3*10",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1222-014",
@@ -199,13 +199,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Mari tekee 2 riviä pikkuautoja. Jokaisella rivillä on 7 autoa. Montako autoa on yhteensä?",
+    "stem_fi": "Mari muodostaa pikkuautoista kaksi riviä. Kummassakin rivissä on 7 autoa. Montako autoa riveissä on yhteensä?",
     "answer": "14",
     "answer_expr": "2*7",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1222-017",
@@ -225,26 +225,26 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Ville ottaa joka päivä 3 omenaa mukaan kouluun. Montako omenaa hän ottaa 7 päivässä?",
+    "stem_fi": "Ville ottaa joka päivä 3 omenaa mukaan kouluun. Montako omenaa hän on vienyt kouluun 7 päivässä?",
     "answer": "21",
     "answer_expr": "3*7",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1222-019",
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Jokaisessa vihkossa on 4 väriliitua. Montako väriliitua on 8 vihkossa?",
+    "stem_fi": "Jokaisessa penaalissa on 4 väriliitua. Montako väriliitua on 8 penaalissa?",
     "answer": "32",
     "answer_expr": "4*8",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1222-020",

@@ -7,7 +7,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-RP-001",
       "type": "RP",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -23,7 +23,7 @@
         "ALG-02"
       ],
       "prompt": {
-        "text": "Kaksoset ovat yhtä vanhoja. Toisen ikä on y = 7 vuotta, ja toisen ikää merkitään kirjaimella x. Kirjoita yhtälö, jonka ratkaisu on x = 7."
+        "text": "Kirjoita yhtälö, jonka ratkaisu on x = 7."
       },
       "payload": {
         "constraint": {
@@ -46,13 +46,13 @@
       },
       "solution": {
         "steps": [
-          "x = y = 7",
-          "x + 6 = 7 + 6"
+          "Lisätään yhtälön x = 7 molemmille puolille sama luku: x + 6 = 7 + 6",
+          "x + 6 = 13"
         ],
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
+        "correct": "Oikein: yhtälö toteutuu arvolla x = 7."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -70,7 +70,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-RP-002",
       "type": "RP",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -86,7 +86,7 @@
         "ALG-02"
       ],
       "prompt": {
-        "text": "Kolikoilla x ja y on sama arvo. Kolikon y arvo on 9 senttiä. Kirjoita yhtälö, jossa x on tuntematon ja jonka ratkaisu on x = 9."
+        "text": "Kirjoita yhtälö, jossa x on tuntematon ja jonka ratkaisu on x = 9."
       },
       "payload": {
         "constraint": {
@@ -109,13 +109,13 @@
       },
       "solution": {
         "steps": [
-          "x = y = 9",
-          "x + 6 = 9 + 6 = 15"
+          "Lisätään yhtälön x = 9 molemmille puolille sama luku: x + 6 = 9 + 6",
+          "x + 6 = 15"
         ],
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 9."
+        "correct": "Oikein: yhtälö toteutuu arvolla x = 9."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -133,7 +133,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-RP-003",
       "type": "RP",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -149,7 +149,7 @@
         "ALG-02"
       ],
       "prompt": {
-        "text": "Luvut x ja y ovat yhtä suuret, ja y = 6. Täydennä yhtälö x + □ = 12 siten, että sen ratkaisu on x = 6. Kirjoita koko yhtälö."
+        "text": "Täydennä yhtälö x + □ = 12 siten, että sen ratkaisu on x = 6. Kirjoita koko yhtälö."
       },
       "payload": {
         "constraint": {
@@ -178,7 +178,7 @@
         "final": "x = 6"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 6."
+        "correct": "Oikein: yhtälö toteutuu arvolla x = 6."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -260,7 +260,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-RP-005",
       "type": "RP",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -276,7 +276,7 @@
         "ALG-02"
       ],
       "prompt": {
-        "text": "Luvut x ja y ovat yhtä suuret, ja y = 5. Kirjoita yhtälö muotoa 3x − □ = 10, jonka ratkaisu on x = 5. Kirjoita koko yhtälö."
+        "text": "Kirjoita yhtälö muotoa 3x − □ = 10, jonka ratkaisu on x = 5. Kirjoita koko yhtälö."
       },
       "payload": {
         "constraint": {
@@ -287,7 +287,8 @@
         "checks": {
           "valid": [
             "3x − 5 = 10",
-            "10 = 3x − 5"
+            "10 = 3x − 5",
+            "3x − x = 10"
           ],
           "invalid": [
             "3x − 6 = 10",
@@ -305,7 +306,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 5."
+        "correct": "Oikein: yhtälö toteutuu arvolla x = 5."
       },
       "provenance": {
         "template": "alg02_rp",

@@ -225,13 +225,13 @@
   "goal": "A12.S2.09",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Mattilla oli 74 euroa. Hän osti pelin, joka maksoi 48 euroa. Montako euroa Matille jäi?",
+  "stem_fi": "Matilla oli 74 euroa. Hän osti pelin, joka maksoi 48 euroa. Montako euroa Matille jäi?",
   "answer": "26",
   "answer_expr": "74 - 48",
   "workbook": [],
   "misconceptions": {},
   "source": "human",
-  "status": "draft"
+  "status": "reviewed"
  },
  {
   "id": "A12.S2.09-addsub100-20261001-0921-019",

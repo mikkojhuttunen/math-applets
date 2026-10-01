@@ -160,13 +160,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Pihalla on 3 pesää. Jokaisessa pesässä on 5 munaa. Montako munaa on yhteensä?",
+    "stem_fi": "Pihalla on 3 pesää. Jokaisessa pesässä on 5 munaa. Montako munaa pesissä on yhteensä?",
     "answer": "15",
     "answer_expr": "3 * 5",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1322-014",
@@ -186,13 +186,13 @@
     "goal": "A12.S2.12",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Yksi viikko on 7 päivää. Montako päivää on 3 viikossa?",
+    "stem_fi": "Yksi viikko koostuu 7 päivästä. Montako päivää on 3 viikossa?",
     "answer": "21",
     "answer_expr": "7 * 3",
     "misconceptions": [],
     "workbook": [],
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.12-kertotaulu-20261001-1322-016",
