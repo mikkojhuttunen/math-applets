@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.13.2 (2026-10-01)
+
+- Manifest rebuilt after the teacher's corrections: 16 more items reviewed or approved (443 of 1010 pupil-ready).
+
 ## 0.13.1 (2026-10-01)
 
 - Manifest rebuilt after the teacher's first review: 390 grades 1-6 items `reviewed`, 37 grades 7-9 items `approved`. Tests follow: the browser test expects the start screen when reviewed items exist, and the page check probes the unknown goal `X99` instead of `X9.99`, which the decimal-point rule flagged once the page echoed it.

@@ -135,8 +135,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 1,
-        "reviewed": 19
+        "reviewed": 20
       }
     },
     {
@@ -144,8 +143,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 1,
-        "reviewed": 19
+        "reviewed": 20
       }
     },
     {
@@ -153,8 +151,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 2,
-        "reviewed": 18
+        "reviewed": 20
       }
     },
     {
@@ -162,8 +159,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 4,
-        "reviewed": 16
+        "reviewed": 20
       }
     },
     {
@@ -171,8 +167,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 2,
-        "reviewed": 18
+        "reviewed": 20
       }
     },
     {
@@ -180,8 +175,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "approved": 4,
-        "draft": 1
+        "approved": 5
       }
     },
     {
@@ -205,8 +199,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "approved": 1,
-        "draft": 4
+        "approved": 5
       }
     },
     {
@@ -222,8 +215,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "approved": 4,
-        "draft": 1
+        "approved": 5
       }
     },
     {
@@ -1159,9 +1151,9 @@
   "totals": {
     "items": 1010,
     "by_status": {
-      "approved": 37,
-      "draft": 583,
-      "reviewed": 390
+      "approved": 43,
+      "draft": 567,
+      "reviewed": 400
     },
     "by_goal": {
       "A12.S2.06": 30,
