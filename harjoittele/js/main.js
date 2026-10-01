@@ -3,7 +3,7 @@
 
 import { loadItems } from './items.js';
 import { loadMisconceptions, feedbackFor } from './misconceptions.js';
-import { createRound, answerText } from './round.js';
+import { createRound, answerText, presentOptions } from './round.js';
 import { el } from './dom.js';
 
 const ROUND_SIZE = 5;
@@ -104,9 +104,10 @@ function renderQuestion() {
     });
     nodes.push(form, feedback, numberPad(input, expression));
   } else {
-    const options = el('div', { class: 'options' });
-    for (const opt of item.options) {
-      const b = el('button', { type: 'button', class: 'option', text: opt.text });
+    const options = el('div', { class: 'options', role: 'group', 'aria-label': 'Vaihtoehdot' });
+    for (const opt of presentOptions(item)) {
+      const b = el('button', { type: 'button', class: 'option', 'data-letter': opt.letter },
+        el('span', { class: 'letter', 'aria-hidden': 'true', text: opt.letter }), el('span', { class: 'option-text', text: opt.text }));
       b.addEventListener('click', () => {
         if (round.settled) return;
         const out = round.choose(opt.id);
@@ -166,6 +167,17 @@ function renderSummary() {
   );
   again.focus();
 }
+
+// Letter keys A-H choose an option on choice items.
+document.addEventListener('keydown', (e) => {
+  if (e.ctrlKey || e.metaKey || e.altKey || /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName || '')) return;
+  const letter = e.key.length === 1 ? e.key.toUpperCase() : '';
+  const b = letter && app.querySelector(`.option[data-letter="${letter}"]:not(:disabled)`);
+  if (b) {
+    e.preventDefault();
+    b.click();
+  }
+});
 
 function startRound() {
   const pool = onlyItem ? items.filter((i) => i.id === onlyItem) : items;

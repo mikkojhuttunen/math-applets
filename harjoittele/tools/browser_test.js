@@ -126,11 +126,15 @@ try {
     await page.goto(`${origin}/harjoittele/?luonnokset=1&tehtava=${encodeURIComponent(choice.id)}`);
     await page.waitForSelector('.option');
     const wrongOpt = choice.options.find((o) => !o.correct && o.misconception);
-    await page.click(`.option:text-is("${wrongOpt.text}")`);
-    check(await page.isDisabled(`.option:text-is("${wrongOpt.text}")`), 'wrong option not disabled');
+    const wrongBtn = page.locator('.option', { has: page.locator(`.option-text:text-is("${wrongOpt.text}")`) });
+    await wrongBtn.click();
+    check(await wrongBtn.isDisabled(), 'wrong option not disabled');
     check((await page.textContent('.feedback')).includes(`Virhekäsitys: ${wrongOpt.misconception}`), 'choice misconception not shown');
-    await page.click(`.option:text-is("${choice.answer}")`);
-    check((await page.textContent('.feedback')).includes('Oikein!'), 'right option not accepted');
+    // The right option by its letter key.
+    const rightBtn = page.locator('.option', { has: page.locator(`.option-text:text-is("${choice.answer}")`) });
+    const letter = await rightBtn.getAttribute('data-letter');
+    await page.keyboard.press(letter.toLowerCase());
+    check((await page.textContent('.feedback')).includes('Oikein!'), 'right option not accepted by its letter key');
     problems.forEach((p) => failures.push(`choice item: ${p}`));
     await page.close();
   }
@@ -144,7 +148,7 @@ try {
       await page.waitForSelector('.stem');
       const item = byStem[await page.textContent('.stem')];
       if (item.kind === 'choice') {
-        await page.click(`.option:text-is("${item.answer}")`);
+        await page.locator('.option', { has: page.locator(`.option-text:text-is("${item.answer}")`) }).click();
       } else if (!padUsed && /^[\d/,−\s]+$/.test(item.answer)) {
         const keys = [...item.answer].map((ch) => (ch === ' ' ? 'väli' : ch));
         for (const k of keys) await page.click(`.pad .key:text-is("${k}")`);

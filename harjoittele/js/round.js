@@ -33,6 +33,13 @@ export function shuffle(list, random = Math.random) {
   return a;
 }
 
+// Options of a choice item in a fresh random order, each with the letter
+// shown on its button (A, B, C ...). Grading uses option ids, so the order
+// does not matter.
+export function presentOptions(item, random = Math.random) {
+  return shuffle(item.options || [], random).map((o, i) => ({ ...o, letter: 'ABCDEFGH'[i] }));
+}
+
 // The correct answer as shown to the pupil after the second try.
 export function answerText(item) {
   if (item.kind === 'choice') return (item.options.find((o) => o.correct) || {}).text || '';

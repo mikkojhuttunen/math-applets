@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.8.0 (2026-10-01)
+
+- W07: choice options in random order with letters A, B, C ...; letter keys choose.
+
 ## 0.7.0 (2026-10-01)
 
 - W10: teacher view `opettaja.html`: all items and feedback texts with filters, review checkboxes and a copy list of ids, "Kokeile" link, printable worksheet with answer key. Practice page accepts `?tehtava=<id>`.

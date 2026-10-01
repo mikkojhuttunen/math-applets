@@ -90,7 +90,8 @@ button:disabled { opacity: .45; cursor: default; }
 .pad { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; max-width: 320px; margin: 12px 0; }
 .key { font-size: 1.3rem; min-height: 52px; padding: 0; }
 .options { display: grid; gap: 8px; }
-.option { text-align: left; font-size: 1.2rem; min-height: 52px; }
+.option { display: flex; align-items: center; gap: 12px; text-align: left; font-size: 1.2rem; min-height: 52px; }
+.option .letter { display: inline-grid; place-items: center; width: 1.8em; height: 1.8em; border-radius: 50%; border: 1px solid var(--line); font-size: .9rem; font-weight: 700; color: var(--dim); flex: none; }
 .feedback { margin-top: 12px; }
 .msg { margin: 6px 0; }
 .msg.ok { color: var(--ok); font-weight: 600; }

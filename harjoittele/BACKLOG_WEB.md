@@ -94,12 +94,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: `js/round.js` (pure, unit-tested) runs a round of 5: unreadable answers do not use a try; the first wrong answer shows the item's own feedback (7-9), else the misconception text from W05, else a general hint; the second wrong answer reveals the correct answer (and `solution.steps` when present); summary counts correct and first-try answers. Choice items already work through the same flow (buttons; a wrongly chosen option is disabled), so W07 only has to add shuffling and keyboard checks. `js/main.js` renders it: large answer field, on-screen number pad (0-9, `,`, `−`, `/`, space, delete, clear; `x ( ) +` added for expression answers; pad taps keep the cursor), Enter submits, feedback directly under the field so it stays visible on a 375 × 667 phone, `aria-live` feedback. DOM built with `textContent` only. Nothing stored. **Draft preview** `?luonnokset=1` (WD2): drafts and draft feedback texts, a yellow LUONNOS banner, item id and misconception id shown; without it pupils currently see "no reviewed exercises yet". Bug found by the browser test and fixed: after the second wrong answer `current()` returned null and the reveal crashed. Tests: 9 unit tests for the round; `tools/browser_test.js` (Playwright, run separately) plays a full draft round in Chromium at 360 px: unreadable answer, misconception answer, reveal, number-pad input with delete, Enter, summary 4/5, new round; plus pupil view, no console errors, no foreign requests, no NaN, no horizontal scroll, `lang="fi"`. Screenshots checked in light and dark.
 
 ### W07 Choice items
-- State: todo
+- State: done
 - Needs: W06
 - What: `choice` (1-6) and `MC`, `TF` (7-9) items as large buttons in shuffled order; wrong options mapped to misconception feedback like W06.
 - Test: shuffled order still grades right; keyboard selection works.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.8.0
+- Notes: Grading and feedback for choice items were already in W06. Added `presentOptions()` in `js/round.js`: options in a new random order each time, lettered A, B, C ... on large buttons; the letter keys choose an option when no text field has focus; a wrongly chosen option is disabled. 1 new unit test (shuffled order grades by id, the item itself is not changed); browser test chooses the wrong option by click and the right one by its letter key. Real choice items now in the banks: 20 `A36.S2.11` comparisons (`NUM-12`).
 
 ### W08 Start screen and shareable links
 - State: todo
@@ -186,3 +186,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-09-30 | W06 | Practice round with number pad, draft preview, v0.6.0; browser test OK |
 | 2026-10-01 | merge | `main` merged in: 3 new grades 1-6 batches (A36.S2.11 choice, A36.S2.12 fractions); manifest rebuilt, 100 items, all load and grade correctly |
 | 2026-10-01 | W10 | Teacher view, v0.7.0; browser test OK |
+| 2026-10-01 | W07 | Choice items shuffled and lettered, letter keys, v0.8.0 |

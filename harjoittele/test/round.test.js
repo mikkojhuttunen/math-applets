@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert';
-import { createRound, shuffle, answerText, TEXT } from '../js/round.js';
+import { createRound, shuffle, answerText, presentOptions, TEXT } from '../js/round.js';
 
 function entry(id, answer, wrong = []) {
   return { id, kind: 'entry', stem: `Laske ${id}`, answer: { kind: 'typed', value: answer }, wrong, feedbackCorrect: null };
@@ -95,4 +95,22 @@ test('answerText formats every answer kind in Finnish', () => {
   assert.strictEqual(answerText({ kind: 'entry', answer: { kind: 'number', value: -2.5, unit: 'cm' } }), '−2,5 cm');
   assert.strictEqual(answerText({ kind: 'entry', answer: { kind: 'set', values: [3, -3] } }), '3 tai −3');
   assert.strictEqual(answerText({ kind: 'entry', answer: { kind: 'expression', reference: '5x + 35' } }), '5x + 35');
+});
+
+test('presentOptions shuffles and letters the options; grading follows the id, not the position', () => {
+  const item = {
+    id: 'm', kind: 'choice', stem: 'Kumpi?',
+    options: [
+      { id: 'a', text: '1/4', correct: true, misconception: null },
+      { id: 'b', text: '1/8', correct: false, misconception: 'NUM-12' },
+      { id: 'c', text: '1/2', correct: false, misconception: null },
+    ],
+  };
+  const shown = presentOptions(item, seq(0.1, 0.1));
+  assert.deepStrictEqual(shown.map((o) => o.letter), ['A', 'B', 'C']);
+  assert.deepStrictEqual([...shown.map((o) => o.id)].sort(), ['a', 'b', 'c']);
+  assert.notStrictEqual(shown.map((o) => o.id).join(''), 'abc');
+  const right = shown.find((o) => o.correct);
+  assert.strictEqual(createRound([item]).choose(right.id).status, 'correct');
+  assert.strictEqual(item.options[0].letter, undefined, 'item itself is not changed');
 });
