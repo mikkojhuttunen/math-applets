@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Kumpi on suurempi, 12 vai 0,5 × 12? Kirjoita suurempi luku."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12.0
+        },
+        "wrong": [
+          {
+            "match": 6.0,
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,5 × 12 = 6",
+          "12 > 6"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_ne",
+        "params": {
+          "factor": "0,5",
+          "n": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Kirjoita pienempi luvuista 20 ja 0,9 × 20."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 18.0
+        },
+        "wrong": [
+          {
+            "match": 20.0,
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,9 × 20 = 18",
+          "18 < 20"
+        ],
+        "final": "18"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_ne",
+        "params": {
+          "factor": "0,9",
+          "n": 20
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Lasketaan tulot 0,5 × 24, 1,5 × 24, 2 × 24. Mikä tulo on pienin? Kirjoita sen arvo."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12.0
+        },
+        "wrong": [
+          {
+            "match": 24.0,
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,5 × 24 = 12",
+          "1,5 × 24 = 36",
+          "2 × 24 = 48",
+          "Pienin on 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_ne",
+        "params": {
+          "factors": [
+            "0,5",
+            "1,5",
+            "2"
+          ],
+          "n": 24
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Montako tuloista 1,2 × 30, 2 × 30, 0,75 × 30, 0,9 × 30 on suurempia kuin 30? Kirjoita lukumäärä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0
+        },
+        "wrong": [
+          {
+            "match": 4.0,
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1,2 × 30 = 36 > 30",
+          "2 × 30 = 60 > 30",
+          "0,75 × 30 = 22,5 < 30",
+          "0,9 × 30 = 27 < 30"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_ne",
+        "params": {
+          "factors": [
+            "1,2",
+            "2",
+            "0,75",
+            "0,9"
+          ],
+          "n": 30
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Montako luvuista 1/4 × 24, 2/3 × 24, 3/2 × 24, 5/6 × 24 on pienempiä kuin 24? Kirjoita lukumäärä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3.0
+        },
+        "wrong": [
+          {
+            "match": 0.0,
+            "misconception": "NUM-04",
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1/4 × 24 = 6 < 24",
+          "2/3 × 24 = 16 < 24",
+          "3/2 × 24 = 36 > 24",
+          "5/6 × 24 = 20 < 24"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+      },
+      "provenance": {
+        "template": "num04_ne",
+        "params": {
+          "factors": [
+            "1/4",
+            "2/3",
+            "3/2",
+            "5/6"
+          ],
+          "n": 24
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

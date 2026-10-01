@@ -1,0 +1,321 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kirjoita suurempi luvuista 0,9 ja 0,73."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.9
+        },
+        "wrong": [
+          {
+            "match": 0.73,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,9 = 0,90",
+          "0,90 > 0,73"
+        ],
+        "final": "0,9"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_ne",
+        "params": {
+          "key": [
+            "0.9",
+            "0.73"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kahden pussin painot ovat 4,6 kg ja 4,47 kg. Kumpi pussi on painavampi? Kirjoita suurempi luku (kg)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4.6
+        },
+        "wrong": [
+          {
+            "match": 4.47,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "4,6 = 4,60",
+          "4,60 > 4,47"
+        ],
+        "final": "4,6"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_ne",
+        "params": {
+          "key": [
+            "4.6",
+            "4.47"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kolmen pussin painot ovat 1,71 kg, 1,718 kg ja 1,9 kg. Mikä on painavimman pussin paino? Kirjoita luku (kg)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1.9
+        },
+        "wrong": [
+          {
+            "match": 1.718,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          },
+          {
+            "match": 1.71,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1,71, 1,718, 1,9 (pienimmästä suurimpaan)"
+        ],
+        "final": "1,9"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_ne",
+        "params": {
+          "key": [
+            "1.71",
+            "1.718",
+            "1.9"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Montako sadasosaa luvussa 0,9 on? Kirjoita luku."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 90.0
+        },
+        "wrong": [
+          {
+            "match": 9.0,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,9 = 0,90",
+          "0,90 on 90 sadasosaa"
+        ],
+        "final": "90"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_ne",
+        "params": {
+          "key": [
+            "0.9",
+            "h"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Montako luvuista 0,87, 0,4, 0,72, 0,11 on suurempia kuin 0,5? Kirjoita lukumäärä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0
+        },
+        "wrong": [
+          {
+            "match": 3.0,
+            "misconception": "NUM-01",
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,87 > 0,5",
+          "0,4 < 0,5",
+          "0,72 > 0,5",
+          "0,11 < 0,5"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num01_ne",
+        "params": {
+          "key": [
+            "0.11",
+            "0.4",
+            "0.72",
+            "0.87"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 81. Kirjoita negatiivinen ratkaisu."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -9
+        },
+        "wrong": [
+          {
+            "match": 9,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri. Tarkista sijoittamalla: myös vastaluku toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "x² = 81",
+          "x = 9 tai x = −9",
+          "Negatiivinen ratkaisu on −9"
+        ],
+        "final": "−9"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten otetaan huomioon sekä positiivinen että negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 9,
+          "p": 1,
+          "q": -81
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 2x² = 18. Kirjoita pienempi ratkaisu."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -3
+        },
+        "wrong": [
+          {
+            "match": 3,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri. Tarkista sijoittamalla: myös vastaluku toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "x² = 9",
+          "x = 3 tai x = −3",
+          "Pienempi ratkaisu on −3"
+        ],
+        "final": "−3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten otetaan huomioon sekä positiivinen että negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 3,
+          "p": 2,
+          "q": -18
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kaksi eri lukua toteuttavat yhtälön x² − 49 = 0. Kuinka suuri on lukujen etäisyys toisistaan lukusuoralla?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 14
+        },
+        "wrong": [
+          {
+            "match": 7,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri. Tarkista sijoittamalla: myös vastaluku toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "x² = 49",
+          "x = 7 tai x = −7",
+          "Etäisyys on 7 − (−7) = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten otetaan huomioon sekä positiivinen että negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 7,
+          "p": 1,
+          "q": -49
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä 4x² − 100 = 0 on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2
+        },
+        "wrong": [
+          {
+            "match": 1,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri. Tarkista sijoittamalla: myös vastaluku toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "4x² = 100",
+          "x² = 25",
+          "x = 5 tai x = −5",
+          "Ratkaisuja on 2"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten otetaan huomioon sekä positiivinen että negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 5,
+          "p": 4,
+          "q": -100
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 2x² − 50 = 0 ja laske kaikkien ratkaisujen itseisarvojen summa."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 10
+        },
+        "wrong": [
+          {
+            "match": 5,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri. Tarkista sijoittamalla: myös vastaluku toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "x² = 25",
+          "x = 5 tai x = −5",
+          "|5| + |−5| = 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten otetaan huomioon sekä positiivinen että negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 5,
+          "p": 2,
+          "q": -50
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    }
+  ]
+}

@@ -1,0 +1,290 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRB-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilua kolikkoa on heitetty 4 kertaa, ja joka kerta on tullut kruuna. Kuinka monta prosenttia on todennäköisyys, että seuraavalla heitolla tulee klaava?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 50.0
+        },
+        "wrong": [
+          {
+            "match": 93.75,
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(klaava) = 1/2 = 50 %"
+        ],
+        "final": "50"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_ne",
+        "params": {
+          "streak": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilua noppaa on heitetty 15 kertaa, eikä kuutosta ole tullut kertaakaan. Seuraavalla heitolla kuutosen todennäköisyys on 1/☐. Kirjoita nimittäjä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6.0
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(6) = 1/6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_ne",
+        "params": {
+          "rolls": 15
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Pyörässä on 5 yhtä suurta sektoria, ja niistä yksi on sininen. Pyörä on pyöräytetty 4 kertaa, eikä sininen ole tullut kertaakaan. Kuinka monta prosenttia on todennäköisyys, että seuraavalla pyöräytyksellä tulee sininen?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 20.0
+        },
+        "wrong": [
+          {
+            "match": 100.0,
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "P(sininen) = 1/5",
+          "1/5 = 20 %"
+        ],
+        "final": "20"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_ne",
+        "params": {
+          "sectors": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilua kolikkoa heitetään yhteensä 80 kertaa. Ensimmäisistä 8 heitosta jokainen on kruuna. Montako kruunaa odotetaan tulevan jäljellä olevista 72 heitosta?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 36.0
+        },
+        "wrong": [
+          {
+            "match": 32.0,
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Jäljellä on 72 heittoa",
+          "Jokaisella heitolla P(kruuna) = 1/2",
+          "72 · 1/2 = 36"
+        ],
+        "final": "36"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_ne",
+        "params": {
+          "tosses": 80,
+          "streak": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-01"
+      ],
+      "prompt": {
+        "text": "Reilulla kolikolla on tullut 4 klaavaa peräkkäin. Kuinka monta prosenttia on todennäköisyys, että myös seuraava heitto on klaava?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 50.0
+        },
+        "wrong": [
+          {
+            "match": 3.125,
+            "misconception": "PRB-01",
+            "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Heitot ovat riippumattomia",
+          "P(klaava) = 1/2 = 50 %"
+        ],
+        "final": "50"
+      },
+      "feedback": {
+        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+      },
+      "provenance": {
+        "template": "prb01_ne",
+        "params": {
+          "streak": 4,
+          "same_side": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

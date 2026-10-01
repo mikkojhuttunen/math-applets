@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvuille a ja b pätee a + b = 12. Voiko olla a = b?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Voi: a = 6 ja b = 6",
+            "misconception": null,
+            "feedback": "Oikein: eri kirjaimet saavat olla sama luku."
+          },
+          {
+            "id": "b",
+            "text": "Ei voi, koska a ja b ovat eri kirjaimia",
+            "misconception": "ALG-02",
+            "feedback": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kirjain on vain paikan pitäjä, ei luvun nimi."
+          },
+          {
+            "id": "c",
+            "text": "Voi vain, jos a = 12 ja b = 0",
+            "misconception": null,
+            "feedback": "Silloin a ≠ b. Kokeile lukuja, jotka ovat yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "Ei voi, koska a + b ei ole 12",
+            "misconception": null,
+            "feedback": "Tarkista: 6 + 6 = 12."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kokeillaan a = 6 ja b = 6",
+          "6 + 6 = 12",
+          "Ehto a + b = 12 toteutuu, joten a = b on mahdollinen"
+        ],
+        "final": "Voi: a = b = 6"
+      },
+      "feedback": {
+        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+      },
+      "provenance": {
+        "template": "alg02_mc",
+        "params": {
+          "h": 6,
+          "pair": [
+            "a",
+            "b"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvuille m ja n pätee m · n = 64. Mikä väite on tosi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "m = 8 ja n = 8 on mahdollinen",
+            "misconception": null,
+            "feedback": "Oikein: kirjaimilla saa olla sama arvo."
+          },
+          {
+            "id": "b",
+            "text": "Ehto ei voi toteutua, koska 64 ei ole tulo",
+            "misconception": null,
+            "feedback": "Tarkista: 8 · 8 = 64."
+          },
+          {
+            "id": "c",
+            "text": "m ja n ovat aina 8",
+            "misconception": null,
+            "feedback": "Muitakin pareja on, esimerkiksi m = 1 ja n = 64."
+          },
+          {
+            "id": "d",
+            "text": "m ja n eivät voi olla yhtä suuret",
+            "misconception": "ALG-02",
+            "feedback": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kirjain on vain paikan pitäjä, ei luvun nimi."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8 · 8 = 64",
+          "Siis m = 8, n = 8 sopii ehtoon"
+        ],
+        "final": "m = n = 8 on mahdollinen"
+      },
+      "feedback": {
+        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+      },
+      "provenance": {
+        "template": "alg02_mc",
+        "params": {
+          "h": 8,
+          "pair": [
+            "m",
+            "n"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen 3c + 2d arvo, kun c = 3 ja d = 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "15",
+            "misconception": null,
+            "feedback": "Oikein: sijoita kummankin kirjaimen paikalle luku."
+          },
+          {
+            "id": "b",
+            "text": "Ei voi laskea, koska kirjainten arvot ovat samat",
+            "misconception": "ALG-02",
+            "feedback": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kirjain on vain paikan pitäjä, ei luvun nimi."
+          },
+          {
+            "id": "c",
+            "text": "11",
+            "misconception": null,
+            "feedback": "Kirjaimen d paikalle sijoitetaan 3, ja sillä kerrotaan 2."
+          },
+          {
+            "id": "d",
+            "text": "18",
+            "misconception": null,
+            "feedback": "Kertoimet kerrotaan kirjaimen arvolla, ei keskenään."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3c + 2d = 3 · 3 + 2 · 3",
+          "= 9 + 6",
+          "= 15"
+        ],
+        "final": "15"
+      },
+      "feedback": {
+        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+      },
+      "provenance": {
+        "template": "alg02_mc",
+        "params": {
+          "h": 3,
+          "pair": [
+            "c",
+            "d"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Ville sanoo: 'Yhtälön p + q = 6 ratkaisu p = 3, q = 3 ei kelpaa, koska eri kirjaimet tarkoittavat eri lukuja.' Mikä on oikea perustelu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ratkaisu kelpaa: 3 + 3 = 6, ja kirjaimet saavat olla yhtä suuret",
+            "misconception": null,
+            "feedback": "Oikein: yhtälön toteuttavat kaikki luvut, joilla ehto pätee."
+          },
+          {
+            "id": "b",
+            "text": "Ratkaisu ei kelpaa, koska 3 ei ole 6",
+            "misconception": null,
+            "feedback": "Kirjainten summa on 3 + 3 = 6."
+          },
+          {
+            "id": "c",
+            "text": "Ville on oikeassa, koska ratkaisuja on vain yksi",
+            "misconception": null,
+            "feedback": "Ratkaisuja on monta, esimerkiksi myös eri lukuparit."
+          },
+          {
+            "id": "d",
+            "text": "Ville on oikeassa: eri kirjaimilla on aina eri arvot",
+            "misconception": "ALG-02",
+            "feedback": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kirjain on vain paikan pitäjä, ei luvun nimi."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Sijoitus: 3 + 3 = 6",
+          "Yhtälö toteutuu",
+          "Mikään sääntö ei vaadi eri kirjaimille eri arvoja"
+        ],
+        "final": "Eri kirjaimet saavat olla sama luku"
+      },
+      "feedback": {
+        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+      },
+      "provenance": {
+        "template": "alg02_mc",
+        "params": {
+          "h": 3,
+          "pair": [
+            "p",
+            "q"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kaksoset ovat 7-vuotiaita. Aino on s vuotta ja Eetu t vuotta. Mikä väite on tosi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Koska kirjaimet ovat s ja t, ikien täytyy olla eri",
+            "misconception": "ALG-02",
+            "feedback": "Eri kirjaimet voivat tarkoittaa samaa lukua. Kirjain on vain paikan pitäjä, ei luvun nimi."
+          },
+          {
+            "id": "b",
+            "text": "s + t = 7",
+            "misconception": null,
+            "feedback": "Yhteenlasku olisi 7 + 7 = 14."
+          },
+          {
+            "id": "c",
+            "text": "s = t = 7, vaikka kirjaimet ovat eri",
+            "misconception": null,
+            "feedback": "Oikein: samaa lukua voi merkitä kahdella kirjaimella."
+          },
+          {
+            "id": "d",
+            "text": "s = 7 mutta t = 7 − 1",
+            "misconception": null,
+            "feedback": "Kaksosilla on sama ikä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Aino: s = 7",
+          "Eetu: t = 7",
+          "Kirjaimet ovat eri, arvot samat"
+        ],
+        "final": "s = t = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+      },
+      "provenance": {
+        "template": "alg02_mc",
+        "params": {
+          "h": 6,
+          "pair": [
+            "s",
+            "t"
+          ]
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

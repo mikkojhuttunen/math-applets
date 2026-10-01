@@ -1,0 +1,509 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-02",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 2^3 + 6."
+      },
+      "payload": {
+        "reference": "2^3 + 6",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "6 + 2^3",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "4 + 6",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "2 · 2 · 2 + 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "2 + 3 + 6",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "e",
+            "text": "14",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "2 · 3 + 6",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2^3 = 2 · 2 · 2 = 8",
+          "8 + 6 = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "a": 2,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 3 · 7^0 + 4."
+      },
+      "payload": {
+        "reference": "3 · 7^0 + 4",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "3 · 7 + 4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "7^0 + 4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "3 · 0 + 4",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "3 · 1 + 4",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "7",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "4 + 3 · 7^0",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "7^0 = 1",
+          "3 · 1 + 4 = 7"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "a": 7,
+          "b": 3,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 4^(−1) + 12."
+      },
+      "payload": {
+        "reference": "4^(−1) + 12",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "4 + 12",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "12 + 1/4",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "−1/4 + 12",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "1/4 + 12",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "−4 + 12",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "f",
+            "text": "12 + 4^(−1)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4^(−1) = 1/4",
+          "1/4 + 12 = 49/4"
+        ],
+        "final": "49/4"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "a": 4,
+          "b": 12
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 5^0 + 5^(−2)."
+      },
+      "payload": {
+        "reference": "5^0 + 5^(−2)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "1 + 1/5^2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "5^(−2) + 1",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "1/5^2 + 1",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "0 + 1/5^2",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "e",
+            "text": "1 + 5^2",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "1 − 5^2",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5^0 = 1",
+          "5^(−2) = 1/5^2 = 1/25",
+          "1 + 1/25 = 26/25"
+        ],
+        "final": "26/25"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin tulon arvo. "
+      },
+      "payload": {
+        "reference": "5^2 · 5^0 · 5^(−1)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "5^1",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "25 · 0 · −5",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "c",
+            "text": "10 · 1 · −5",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "25 · 1 · 5",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "25 · 1 · 1/5",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "5",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5^0 = 1",
+          "5^(−1) = 1/5",
+          "25 · 1 · 1/5 = 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "a": 5,
+          "n": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 19
+      }
+    }
+  ]
+}

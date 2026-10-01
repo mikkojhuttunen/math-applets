@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-11",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "13 − (x + 4)",
+          "13 − x − 4",
+          "9 − x"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Miinus muuttaa sulun molempien termien merkit: −x − 4. Lopuksi 13 − 4 = 9.",
+          "Sievin muoto: 9 − x"
+        ],
+        "final": "9 − x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_so",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "c": 13,
+          "d": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "9 − (5x − 4)",
+          "9 − 5x + 4",
+          "13 − 5x"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Miinus muuttaa myös luvun −4 merkin plussaksi. Lopuksi 9 + 4 = 13.",
+          "Sievin muoto: 13 − 5x"
+        ],
+        "final": "13 − 5x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_so",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "c": 9,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(7x + 13) − (6x + 6)",
+          "7x + 13 − (6x + 6)",
+          "7x + 13 − 6x − 6",
+          "7x − 6x + 13 − 6",
+          "x + 7"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Poistetaan ensin ensimmäisen sulun merkit, sitten toisen sulun termien merkit vaihtuvat, ja lopuksi lasketaan samanmuotoiset termit.",
+          "Sievin muoto: x + 7"
+        ],
+        "final": "x + 7"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_so",
+        "params": {
+          "a": 7,
+          "b": 6,
+          "c": 13,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "−(4x − 2) − (x + 13)",
+          "−4x + 2 − (x + 13)",
+          "−4x + 2 − x − 13",
+          "−4x − x + 2 − 13",
+          "−5x − 11"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Kummankin sulun edessä oleva miinus vaihtaa sulun sisällä olevien termien merkit; sen jälkeen lasketaan samanmuotoiset termit.",
+          "Sievin muoto: −5x − 11"
+        ],
+        "final": "−5x − 11"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_so",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "c": 13,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Ostoksen hinta on 9 euroa. Siitä vähennetään alennus, jonka suuruus on x − 6 euroa. Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "9 − (x − 6)",
+          "9 − x + 6",
+          "15 − x"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Alennus x − 6 vähennetään kokonaan: miinus vaihtaa molempien termien merkit.",
+          "Sievin muoto: 15 − x"
+        ],
+        "final": "15 − x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_so",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 9,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

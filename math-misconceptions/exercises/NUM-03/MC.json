@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Laske 3/12 + 5/12."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "8/12",
+            "misconception": null,
+            "feedback": "Oikein: nimittäjä pysyy samana ja osoittajat lasketaan yhteen."
+          },
+          {
+            "id": "b",
+            "text": "8/144",
+            "misconception": null,
+            "feedback": "Samannimisten murtolukujen summassa nimittäjä pysyy samana: osat ovat samankokoisia."
+          },
+          {
+            "id": "c",
+            "text": "15/12",
+            "misconception": null,
+            "feedback": "Samannimisten murtolukujen summassa nimittäjä pysyy samana: osat ovat samankokoisia."
+          },
+          {
+            "id": "d",
+            "text": "8/24",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3/12 + 5/12 = (3 + 5)/12",
+          "= 8/12"
+        ],
+        "final": "8/12"
+      },
+      "feedback": {
+        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+      },
+      "provenance": {
+        "template": "num03_mc",
+        "params": {
+          "a": 3,
+          "c": 5,
+          "d": 12
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Laske 2/4 + 2/6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5/6",
+            "misconception": null,
+            "feedback": "Oikein: yhteinen nimittäjä on 12, ja 6/12 + 4/12 = 10/12."
+          },
+          {
+            "id": "b",
+            "text": "10/10",
+            "misconception": null,
+            "feedback": "Nimittäjäksi ei kelpaa nimittäjien summa. Käytä yhteistä nimittäjää."
+          },
+          {
+            "id": "c",
+            "text": "4/10",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          },
+          {
+            "id": "d",
+            "text": "4/24",
+            "misconception": null,
+            "feedback": "Murtolukuja ei yhteenlaskussa kerrota keskenään. Muuta ne samannimisiksi."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2/4 = 6/12, 2/6 = 4/12",
+          "6/12 + 4/12 = 10/12"
+        ],
+        "final": "5/6"
+      },
+      "feedback": {
+        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+      },
+      "provenance": {
+        "template": "num03_mc",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 2,
+          "d": 6,
+          "context": false
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Kakkuohjeessa tarvitaan 1/8 l maitoa ja 3/5 l kermaa. Kuinka monta litraa nestettä tarvitaan yhteensä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3/40 l",
+            "misconception": null,
+            "feedback": "Murtolukuja ei yhteenlaskussa kerrota keskenään. Muuta ne samannimisiksi."
+          },
+          {
+            "id": "b",
+            "text": "4/13 l",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          },
+          {
+            "id": "c",
+            "text": "29/40 l",
+            "misconception": null,
+            "feedback": "Oikein: yhteinen nimittäjä on 40, ja 5/40 + 24/40 = 29/40."
+          },
+          {
+            "id": "d",
+            "text": "29/13 l",
+            "misconception": null,
+            "feedback": "Nimittäjäksi ei kelpaa nimittäjien summa. Käytä yhteistä nimittäjää."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1/8 = 5/40, 3/5 = 24/40",
+          "5/40 + 24/40 = 29/40"
+        ],
+        "final": "29/40 l"
+      },
+      "feedback": {
+        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+      },
+      "provenance": {
+        "template": "num03_mc",
+        "params": {
+          "a": 1,
+          "b": 8,
+          "c": 3,
+          "d": 5,
+          "context": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Laske summa 5/6 + 3/5 arvioiden. Onko summa suurempi vai pienempi kuin 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pienempi kuin 1, koska 5/6 + 3/5 = 8/11",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          },
+          {
+            "id": "b",
+            "text": "Sitä ei voi arvioida ilman laskemista",
+            "misconception": null,
+            "feedback": "Arvion voi tehdä vertaamalla lukuja puoleen."
+          },
+          {
+            "id": "c",
+            "text": "Täsmälleen 1",
+            "misconception": null,
+            "feedback": "Laske arvio: kumpi luku on suurempi kuin 1/2?"
+          },
+          {
+            "id": "d",
+            "text": "Suurempi kuin 1, koska kumpikin yhteenlaskettava on yli puoli",
+            "misconception": null,
+            "feedback": "Oikein: molemmat luvut ovat yli 1/2, joten summa on yli 1."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5/6 > 1/2 ja 3/5 > 1/2",
+          "Summa > 1/2 + 1/2 = 1"
+        ],
+        "final": "Suurempi kuin 1"
+      },
+      "feedback": {
+        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+      },
+      "provenance": {
+        "template": "num03_mc",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 3,
+          "d": 5,
+          "estimate": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.02"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee 1/2 + 1/3 = 2/5. Miksi vastaus ei voi olla oikein? Valitse paras perustelu."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Murtolukuja ei voi laskea yhteen, jos nimittäjät ovat erilaiset",
+            "misconception": null,
+            "feedback": "Erinimiset murtoluvut voi laskea yhteen, kun ne muutetaan samannimisiksi."
+          },
+          {
+            "id": "b",
+            "text": "Yhteenlaskettavat ovat yhdessä 5/6, mikä on eri kuin 2/5; yhteenlaskettavat on ensin muutettava samannimisiksi",
+            "misconception": null,
+            "feedback": "Oikein: summa on laskettava yhteisellä nimittäjällä."
+          },
+          {
+            "id": "c",
+            "text": "Vastaus on oikein, koska 1 + 1 = 2 ja 2 + 3 = 5",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          },
+          {
+            "id": "d",
+            "text": "2/5 on oikea vastaus, koska osoittajat ja nimittäjät lasketaan yhteen",
+            "misconception": "NUM-03",
+            "feedback": "Osoittajat ja nimittäjät eivät lasku erikseen yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Yhteinen nimittäjä 6: 3/6 + 2/6 = 5/6",
+          "5/6 ≠ 2/5"
+        ],
+        "final": "Summa on laskettava samannimisillä murtoluvuilla"
+      },
+      "feedback": {
+        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+      },
+      "provenance": {
+        "template": "num03_mc",
+        "params": {
+          "a": 1,
+          "b": 2,
+          "c": 1,
+          "d": 3,
+          "justify": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

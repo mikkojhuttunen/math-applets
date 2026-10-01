@@ -1,0 +1,499 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-05",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 4n."
+      },
+      "payload": {
+        "reference": "4n",
+        "variables": [
+          "n"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "n + n + n + n",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "4 + n",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "40 + n",
+            "equivalent": false,
+            "misconception": "ALG-05"
+          },
+          {
+            "id": "d",
+            "text": "4 · n",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "n^4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "n · 4",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4n = 4 · n",
+          "n · 4 ja n + … + n (4 kertaa) ovat samat"
+        ],
+        "final": "4n = 4 · n"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
+      },
+      "provenance": {
+        "template": "alg05_me",
+        "params": {
+          "c": 4,
+          "d": 4,
+          "letter": "n"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 4m."
+      },
+      "payload": {
+        "reference": "4m",
+        "variables": [
+          "m"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "40 + m",
+            "equivalent": false,
+            "misconception": "ALG-05"
+          },
+          {
+            "id": "b",
+            "text": "4 + m",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "m^4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "m · 4",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "m + m + m + m",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "4 · m",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4m = 4 · m",
+          "m · 4 ja m + … + m (4 kertaa) ovat samat"
+        ],
+        "final": "4m = 4 · m"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
+      },
+      "provenance": {
+        "template": "alg05_me",
+        "params": {
+          "c": 4,
+          "d": 9,
+          "letter": "m"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Mitkä seuraavista ovat yhtä suuria kuin 5k + 3? Valitse kaikki oikeat."
+      },
+      "payload": {
+        "reference": "5k + 3",
+        "variables": [
+          "k"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "k · 5 + 3",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "50 + k + 3",
+            "equivalent": false,
+            "misconception": "ALG-05"
+          },
+          {
+            "id": "c",
+            "text": "5 · k + 3",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "3 + 5k",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "8k",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "5 + k + 3",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5k = 5 · k",
+          "5k + 3"
+        ],
+        "final": "5k = 5 · k"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
+      },
+      "provenance": {
+        "template": "alg05_me",
+        "params": {
+          "c": 5,
+          "d": 3,
+          "letter": "k"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin ab, kun a ja b ovat lukuja."
+      },
+      "payload": {
+        "reference": "ab",
+        "variables": [
+          "a",
+          "b"
+        ],
+        "samples": [
+          [
+            2,
+            3
+          ],
+          [
+            -1,
+            4
+          ],
+          [
+            5,
+            2
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "a^b",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "ba",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "b · a",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "a + b",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "a · b",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "10a + b",
+            "equivalent": false,
+            "misconception": "ALG-05"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "ab = a · b",
+          "Kertolaskussa tekijöiden järjestys ei vaikuta tulokseen: a · b = b · a"
+        ],
+        "final": "ab = a · b"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
+      },
+      "provenance": {
+        "template": "alg05_me",
+        "params": {
+          "c": 4,
+          "d": 3,
+          "letter": "p"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Yksi mehupullo maksaa t euroa. Ostetaan 5 pulloa. Valitse kaikki lausekkeet, jotka kuvaavat hintaa euroina."
+      },
+      "payload": {
+        "reference": "5t",
+        "variables": [
+          "t"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            4
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "t + t + t + t + t",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "t · 5",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "5 + t",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "50 + t",
+            "equivalent": false,
+            "misconception": "ALG-05"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5 pulloa maksaa 5 · t = 5t euroa",
+          "Sama kuin t + … + t (5 kertaa)"
+        ],
+        "final": "5 pulloa maksaa 5 · t = 5t euroa"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
+      },
+      "provenance": {
+        "template": "alg05_me",
+        "params": {
+          "c": 5,
+          "d": 2,
+          "letter": "t"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

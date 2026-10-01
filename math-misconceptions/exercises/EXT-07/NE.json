@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-07",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Muunna 7 m² neliösenttimetreiksi. Kirjoita vastaus ilman yksikköä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 70000
+        },
+        "wrong": [
+          {
+            "match": 700,
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "input_hint": "Kirjoita luku ilman välilyöntejä"
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 10 000 cm²",
+          "7 · 10 000 = 70 000"
+        ],
+        "final": "70 000"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+      },
+      "provenance": {
+        "template": "ext07_ne",
+        "params": {
+          "n": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Muunna 2,5 m² neliösenttimetreiksi. Kirjoita vastaus ilman yksikköä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 25000
+        },
+        "wrong": [
+          {
+            "match": 250,
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "input_hint": "Kirjoita luku ilman välilyöntejä"
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 10 000 cm²",
+          "2,5 · 10 000 = 25 000"
+        ],
+        "final": "25 000"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+      },
+      "provenance": {
+        "template": "ext07_ne",
+        "params": {
+          "n": "2.5"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Muunna 30 000 cm² neliömetreiksi. Kirjoita vastaus ilman yksikköä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3
+        },
+        "wrong": [
+          {
+            "match": 300,
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "input_hint": "Kirjoita luku ilman välilyöntejä"
+      },
+      "solution": {
+        "steps": [
+          "10 000 cm² = 1 m²",
+          "30 000 ÷ 10 000 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+      },
+      "provenance": {
+        "template": "ext07_ne",
+        "params": {
+          "cm2": 30000
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Lattian mitat ovat 4 m ja 5 m. Laatat ovat neliön muotoisia, ja niiden sivu on 20 cm. Montako laattaa tarvitaan lattian peittämiseen?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 500
+        },
+        "wrong": [
+          {
+            "match": 5,
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "input_hint": "Kirjoita luku ilman välilyöntejä"
+      },
+      "solution": {
+        "steps": [
+          "Lattia: 4 · 5 = 20 m² = 200 000 cm²",
+          "Laatta: 20 · 20 = 400 cm²",
+          "200 000 ÷ 400 = 500"
+        ],
+        "final": "500"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+      },
+      "provenance": {
+        "template": "ext07_ne",
+        "params": {
+          "floor": [
+            4,
+            5
+          ],
+          "tile": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Järven pinta-ala on 2 km². Kuinka monta neliömetriä se on? Kirjoita vastaus ilman yksikköä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2000000
+        },
+        "wrong": [
+          {
+            "match": 2000,
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "input_hint": "Kirjoita luku ilman välilyöntejä"
+      },
+      "solution": {
+        "steps": [
+          "1 km = 1 000 m, joten 1 km² = 1 000 · 1 000 m² = 1 000 000 m²",
+          "2 · 1 000 000 = 2 000 000"
+        ],
+        "final": "2 000 000"
+      },
+      "feedback": {
+        "correct": "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+      },
+      "provenance": {
+        "template": "ext07_ne",
+        "params": {
+          "km2": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}

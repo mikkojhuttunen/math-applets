@@ -70,8 +70,22 @@ with tempfile.TemporaryDirectory() as tmp:
     check("S-ID missing from the OPS file is rejected", r.returncode == 1 and "does not exist in the OPS file" in r.stdout, r.stdout[-300:])
 
 # 3. backlog cross-check: cells 'o' with files present must fail, cells 'X' must pass
-text = (ROOT / BACKLOG).read_text(encoding="utf-8")
-r = run("verify.py", "--exercises", str(FIX / "good"), "--check-backlog")
+# The real backlog gains X cells with every run, so the test works on a copy with all matrix X reset to 'o'.
+raw = (ROOT / BACKLOG).read_text(encoding="utf-8")
+norm_lines, in_m = [], False
+for line in raw.splitlines():
+    if line.startswith("| ID | MC |"):
+        in_m = True
+    elif in_m and not line.startswith("|"):
+        in_m = False
+    if in_m and not line.startswith("| ID |") and not line.startswith("|---"):
+        line = "|".join(" o " if c.strip() == "X" else c for c in line.split("|"))
+    norm_lines.append(line)
+text = "\n".join(norm_lines) + "\n"
+with tempfile.TemporaryDirectory() as tmp0:
+    bl0 = Path(tmp0) / "bl0.md"
+    bl0.write_text(text, encoding="utf-8")
+    r = run("verify.py", "--exercises", str(FIX / "good"), "--check-backlog", "--backlog", str(bl0))
 check("backlog check rejects files whose cell is not X", r.returncode == 1 and "expected X" in r.stdout, r.stdout[-300:])
 
 codes, rows = verify.parse_matrix(text)

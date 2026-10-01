@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-07",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Mikä on 1 m² neliösenttimetreinä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "100 cm²",
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          },
+          {
+            "id": "b",
+            "text": "100 000 cm²",
+            "misconception": null,
+            "feedback": "Kerroin on liian suuri: 1 m² = 100 cm · 100 cm = 10 000 cm²."
+          },
+          {
+            "id": "c",
+            "text": "1 000 cm²",
+            "misconception": null,
+            "feedback": "Kerroin 1 000 ei ole oikea: 1 m² = 100 cm · 100 cm."
+          },
+          {
+            "id": "d",
+            "text": "10 000 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 100 cm · 100 cm = 10 000 cm²",
+          "1 · 10 000 = 10 000"
+        ],
+        "final": "10 000 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+      },
+      "provenance": {
+        "template": "ext07_mc",
+        "params": {
+          "n": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Matto on 5 m² suuri. Mikä on sen pinta-ala neliösenttimetreinä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "50 000 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+          },
+          {
+            "id": "b",
+            "text": "50 cm²",
+            "misconception": null,
+            "feedback": "Kerroin on liian pieni: 1 m² = 10 000 cm²."
+          },
+          {
+            "id": "c",
+            "text": "500 cm²",
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          },
+          {
+            "id": "d",
+            "text": "5 000 cm²",
+            "misconception": null,
+            "feedback": "Kerroin 1 000 ei ole oikea: 1 m² = 100 cm · 100 cm."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 10 000 cm²",
+          "5 · 10 000 = 50 000"
+        ],
+        "final": "50 000 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+      },
+      "provenance": {
+        "template": "ext07_mc",
+        "params": {
+          "n": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Mikä on 70 000 cm² neliömetreinä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,7 m²",
+            "misconception": null,
+            "feedback": "Jaettiin liian pienellä luvulla: 1 m² on 10 000 cm²."
+          },
+          {
+            "id": "b",
+            "text": "7 m²",
+            "misconception": null,
+            "feedback": "Oikein: 10 000 cm² = 1 m², joten jaetaan luvulla 10 000."
+          },
+          {
+            "id": "c",
+            "text": "700 m²",
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          },
+          {
+            "id": "d",
+            "text": "70 m²",
+            "misconception": null,
+            "feedback": "Suunta on väärä: neliömetri on suurempi yksikkö kuin neliösenttimetri."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10 000 cm² = 1 m²",
+          "70 000 ÷ 10 000 = 7"
+        ],
+        "final": "7 m²"
+      },
+      "feedback": {
+        "correct": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+      },
+      "provenance": {
+        "template": "ext07_mc",
+        "params": {
+          "cm2": 70000
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Oppilas sanoo: \"1 m = 100 cm, joten 1 m² = 100 cm².\" Mikä perustelu osoittaa, että päätelmä on virheellinen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Päätelmä on oikea, koska 1 m = 100 cm",
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          },
+          {
+            "id": "b",
+            "text": "Neliö, jonka sivu on 1 m, on 100 cm · 100 cm = 10 000 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+          },
+          {
+            "id": "c",
+            "text": "Päätelmä on virheellinen, koska 1 m² = 1 000 cm²",
+            "misconception": null,
+            "feedback": "Pinta-alassa on kaksi ulottuvuutta, joten kerroin on 100 · 100 = 10 000, ei 1 000."
+          },
+          {
+            "id": "d",
+            "text": "Päätelmä on virheellinen, koska 1 m on 10 cm",
+            "misconception": null,
+            "feedback": "1 m = 100 cm on oikein. Virhe on siinä, että pinta-alassa kerroin otetaan kahdesti."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²"
+        ],
+        "final": "Neliö, jonka sivu on 1 m, on 100 cm · 100 cm = 10 000 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+      },
+      "provenance": {
+        "template": "ext07_mc",
+        "params": {},
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-07-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.14"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-07"
+      ],
+      "prompt": {
+        "text": "Kumpi on suurempi: 1,5 m² vai 12 000 cm²?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "1,5 m² = 15 000 cm², joka ei ole 12 000 cm²."
+          },
+          {
+            "id": "b",
+            "text": "1,5 m² on suurempi, koska se on 15 000 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 1,5 m² = 15 000 cm² > 12 000 cm²."
+          },
+          {
+            "id": "c",
+            "text": "12 000 cm² on suurempi, koska luku 12 000 on suurempi kuin 1,5",
+            "misconception": null,
+            "feedback": "Lukuja ei voi verrata ennen kuin yksiköt on muunnettu samaksi."
+          },
+          {
+            "id": "d",
+            "text": "12 000 cm² on suurempi, koska 1,5 m² on vain 150 cm²",
+            "misconception": "EXT-07",
+            "feedback": "Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: 1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm²."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,5 m² = 1,5 · 10 000 cm² = 15 000 cm²",
+          "15 000 > 12 000"
+        ],
+        "final": "1,5 m² on suurempi, koska se on 15 000 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+      },
+      "provenance": {
+        "template": "ext07_mc",
+        "params": {
+          "m2": 1.5,
+          "cm2": 12000
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}

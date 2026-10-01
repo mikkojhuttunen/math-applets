@@ -1,0 +1,320 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-05",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen 8n arvo, kun n = 4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 32
+        },
+        "wrong": [
+          {
+            "match": 84,
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä."
+          },
+          {
+            "match": 12,
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, ei yhteenlaskua."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "8n = 8 · n",
+          "= 8 · 4",
+          "= 32"
+        ],
+        "final": "32"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_ne",
+        "params": {
+          "c": 8,
+          "v": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen 2k arvo, kun k = 5."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 10
+        },
+        "wrong": [
+          {
+            "match": 25,
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä."
+          },
+          {
+            "match": 7,
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, ei yhteenlaskua."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "2k = 2 · k",
+          "= 2 · 5",
+          "= 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_ne",
+        "params": {
+          "c": 2,
+          "v": 5
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen 4m − 6 arvo, kun m = 7."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 22
+        },
+        "wrong": [
+          {
+            "match": 41,
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä."
+          },
+          {
+            "match": 5,
+            "misconception": null,
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "4m − 6 = 4 · 7 − 6",
+          "= 28 − 6",
+          "= 22"
+        ],
+        "final": "22"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_ne",
+        "params": {
+          "c": 4,
+          "v": 7
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Laske lausekkeen ab + 3 arvo, kun a = 3 ja b = 6."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 21
+        },
+        "wrong": [
+          {
+            "match": 39,
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä."
+          },
+          {
+            "match": 12,
+            "misconception": null,
+            "feedback": "Kirjainten välissä ei ole plusmerkkiä: vierekkäin tarkoittaa kertolaskua."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "ab = a · b = 3 · 6 = 18",
+          "18 + 3 = 21"
+        ],
+        "final": "21"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_ne",
+        "params": {
+          "c": 3,
+          "v": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-05-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-05"
+      ],
+      "prompt": {
+        "text": "Yksi kirja maksaa p euroa. Ostetaan 8 kirjaa, jolloin hinta euroina on 8p. Kun p = 3, maksetaan 100 euron setelillä. Paljonko vaihtorahaa saadaan euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 76
+        },
+        "wrong": [
+          {
+            "match": 17,
+            "misconception": "ALG-05",
+            "feedback": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua, eivät kymmeniä ja ykkösiä."
+          },
+          {
+            "match": 89,
+            "misconception": null,
+            "feedback": "Hinta on kertolasku: 8 · 3."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Hinta: 8p = 8 · 3 = 24",
+          "Vaihtoraha: 100 − 24 = 76"
+        ],
+        "final": "76"
+      },
+      "feedback": {
+        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+      },
+      "provenance": {
+        "template": "alg05_ne",
+        "params": {
+          "c": 7,
+          "v": 5
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

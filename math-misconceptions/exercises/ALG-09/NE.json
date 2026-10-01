@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Avaa sulut ja sievennä: (x + 7)²"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² + 14x + 49",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x² + 49",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli. Kirjoita (x + 7)(x + 7) ja kerro."
+          },
+          {
+            "match": "x² + 7x + 49",
+            "misconception": "ALG-09",
+            "feedback": "Keskitermejä on kaksi: x · 7 + 7 · x."
+          }
+        ],
+        "input_hint": "Kirjoita esim. x² + 6x + 9"
+      },
+      "solution": {
+        "steps": [
+          "Avataan neliö: x² + 14x + 49",
+          "x² + 14x + 49"
+        ],
+        "final": "x² + 14x + 49"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "b": 7,
+          "c": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Avaa sulut ja sievennä: (x − 3)²"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² − 6x + 9",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x² − 9",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu erotuksen yli. Kirjoita (x − 3)(x − 3) ja kerro."
+          },
+          {
+            "match": "x² − 6x − 9",
+            "misconception": "ALG-09",
+            "feedback": "Viimeinen termi on (−3)² = 9."
+          }
+        ],
+        "input_hint": "Kirjoita esim. x² + 6x + 9"
+      },
+      "solution": {
+        "steps": [
+          "Avataan neliö: x² − 6x + 9",
+          "x² − 6x + 9"
+        ],
+        "final": "x² − 6x + 9"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "b": 3,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Avaa sulut ja sievennä: (2x + 9)²"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "4x² + 36x + 81",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "4x² + 81",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: keskitermi 2 · 2x · 9 puuttuu."
+          },
+          {
+            "match": "4x² + 18x + 81",
+            "misconception": "ALG-09",
+            "feedback": "Keskitermejä on kaksi."
+          }
+        ],
+        "input_hint": "Kirjoita esim. x² + 6x + 9"
+      },
+      "solution": {
+        "steps": [
+          "Avataan neliö: 4x² + 36x + 81",
+          "4x² + 36x + 81"
+        ],
+        "final": "4x² + 36x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "b": 9,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laatan sivu on (x + 4) cm. Kirjoita laatan pinta-ala sievennettynä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² + 8x + 16",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x² + 16",
+            "misconception": "ALG-09",
+            "feedback": "Pinta-ala jakautuu neliöön x², kahteen suorakulmioon ja neliöön 4²."
+          },
+          {
+            "match": "x² + 8x",
+            "misconception": "ALG-09",
+            "feedback": "Pieni neliö 4² = 16 puuttuu."
+          }
+        ],
+        "input_hint": "Kirjoita esim. x² + 6x + 9"
+      },
+      "solution": {
+        "steps": [
+          "Avataan neliö: x² + 8x + 16",
+          "x² + 8x + 16"
+        ],
+        "final": "x² + 8x + 16"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "b": 4,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Sievennä: (x + 6)² − x²"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "12x + 36",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "36",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (x + 6)² = x² + 12x + 36."
+          },
+          {
+            "match": "6x + 36",
+            "misconception": "ALG-09",
+            "feedback": "Keskitermejä on kaksi: 2 · 6x."
+          }
+        ],
+        "input_hint": "Kirjoita esim. x² + 6x + 9"
+      },
+      "solution": {
+        "steps": [
+          "Avataan neliö: x² + 12x + 36",
+          "12x + 36"
+        ],
+        "final": "12x + 36"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "b": 6,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}

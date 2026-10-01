@@ -1,0 +1,508 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 3(x + 2) kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "3(x + 2)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "3x + 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "5x",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "3 · x + 3 · 2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "x + 6",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "e",
+            "text": "3x + 2",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "f",
+            "text": "6 + 3x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3(x + 2) = 3 · x + 3 · 2",
+          "3x + 6"
+        ],
+        "final": "3x + 6"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg08_me",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08",
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 5(x − 7) kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "5(x − 7)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "5x − 7",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "b",
+            "text": "x − 35",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "c",
+            "text": "−35 + 5x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "5x − 35",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "5x + 35",
+            "equivalent": false,
+            "misconception": "ALG-11"
+          },
+          {
+            "id": "f",
+            "text": "5 · x − 5 · 7",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5(x − 7) = 5 · x − 5 · 7",
+          "5x − 35"
+        ],
+        "final": "5x − 35"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg08_me",
+        "params": {
+          "a": 5,
+          "b": 7,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 2(4 + 5x) kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "2(4 + 5x)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "4 + 10x",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "b",
+            "text": "8 + 5x",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "c",
+            "text": "40x",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "10x + 8",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "8 + 10x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "2 · 4 + 2 · 5x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2(4 + 5x) = 2 · 4 + 2 · 5x",
+          "8 + 10x"
+        ],
+        "final": "8 + 10x"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg08_me",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 4(x + 8) + 5 kaikilla x:n arvoilla."
+      },
+      "payload": {
+        "reference": "4(x + 8) + 5",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "4x + 37",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "4(x + 13)",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "x + 32 + 5",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "d",
+            "text": "4x + 32 + 5",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "5 + 32 + 4x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "4x + 8 + 5",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4(x + 8) + 5 = 4x + 32 + 5",
+          "4x + 37"
+        ],
+        "final": "4x + 37"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg08_me",
+        "params": {
+          "a": 4,
+          "b": 8,
+          "c": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Kauppias pakkaa 3 pussia. Jokaiseen pussiin tulee 5x grammaa karkkia ja 3 grammaa suklaata. Valitse kaikki lausekkeet, jotka kuvaavat pussien kokonaispainoa grammoina. "
+      },
+      "payload": {
+        "reference": "3(5x + 3)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            -2
+          ],
+          [
+            1
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "3 · 5x + 3 · 3",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "15x + 9",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "9 + 15x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "8x + 6",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "5x + 9",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          },
+          {
+            "id": "f",
+            "text": "15x + 3",
+            "equivalent": false,
+            "misconception": "ALG-08"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3(5x + 3) = 3 · 5x + 3 · 3",
+          "15x + 9"
+        ],
+        "final": "15x + 9"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
+      },
+      "provenance": {
+        "template": "alg08_me",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "c": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

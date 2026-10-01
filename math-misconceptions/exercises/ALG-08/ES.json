@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6(x + 6) + 5x",
+          "6x + 6 + 5x",
+          "11x + 6"
+        ],
+        "error_line": 2,
+        "error_type": "distributes_to_first_term_only"
+      },
+      "solution": {
+        "steps": [
+          "Kerroin 6 kertoo molemmat termit: 6(x + 6) = 6x + 36. Oikea tulos on 11x + 36."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg08_es",
+        "params": {
+          "a": 6,
+          "b": 6,
+          "c": 5,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "7(x − 7) + 56",
+          "7x − 7 + 56",
+          "7x + 49"
+        ],
+        "error_line": 2,
+        "error_type": "distributes_to_first_term_only"
+      },
+      "solution": {
+        "steps": [
+          "Kerroin 7 kertoo myös luvun 7: 7(x − 7) = 7x − 49. Oikea tulos on 7x + 7."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg08_es",
+        "params": {
+          "a": 7,
+          "b": 7,
+          "c": 6,
+          "d": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "3(x + 8) + 5(x + 4)",
+          "3x + 24 + 5(x + 4)",
+          "3x + 24 + 5x + 4",
+          "8x + 28"
+        ],
+        "error_line": 3,
+        "error_type": "distributes_to_first_term_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Kerroin 5 kertoo toisenkin termin: 5(x + 4) = 5x + 20. Oikea tulos on 8x + 44."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg08_es",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "c": 5,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "7(4x + 3) − 2x",
+          "28x + 3 − 2x",
+          "26x + 3"
+        ],
+        "error_line": 2,
+        "error_type": "distributes_to_first_term_only"
+      },
+      "solution": {
+        "steps": [
+          "Kerroin 7 kertoo myös luvun 3: 7(4x + 3) = 28x + 21. Oikea tulos on 26x + 21."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg08_es",
+        "params": {
+          "a": 7,
+          "b": 3,
+          "c": 5,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Siivousyritys veloittaa 6 euroa tunnilta. Työ kestää x + 6 tuntia, ja lisäksi veloitetaan 9 euron kulkumaksu. Oppilas kirjoittaa kokonaishinnan lausekkeen ja sieventää sen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6(x + 6) + 9",
+          "6x + 6 + 9",
+          "6x + 15"
+        ],
+        "error_line": 2,
+        "error_type": "distributes_to_first_term_only"
+      },
+      "solution": {
+        "steps": [
+          "Tuntihinta 6 euroa kerrotaan koko työajalla x + 6: 6(x + 6) = 6x + 36. Oikea tulos on 6x + 45."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg08_es",
+        "params": {
+          "a": 6,
+          "b": 6,
+          "c": 2,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

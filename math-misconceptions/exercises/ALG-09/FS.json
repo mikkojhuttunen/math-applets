@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: (x + 7)², □, x² + 7x + 7x + 49, x² + 14x + 49. Kirjoita neliö tulona."
+      },
+      "payload": {
+        "lines": [
+          "(x + 7)²",
+          "(x + 7)(x + 7)",
+          "x² + 7x + 7x + 49",
+          "x² + 14x + 49"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "(x + 7)(x + 7)",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: (x + 7)(x + 7)",
+          "Lopputulos: x² + 14x + 49"
+        ],
+        "final": "(x + 7)(x + 7)"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 7,
+          "c": 4,
+          "d": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: (x − 8)², (x − 8)(x − 8), □, x² − 16x + 64. Kerro sulut keskenään ja kirjoita kaikki neljä termiä."
+      },
+      "payload": {
+        "lines": [
+          "(x − 8)²",
+          "(x − 8)(x − 8)",
+          "x² − 8x − 8x + 64",
+          "x² − 16x + 64"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² − 8x − 8x + 64",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3: x² − 8x − 8x + 64",
+          "Lopputulos: x² − 16x + 64"
+        ],
+        "final": "x² − 8x − 8x + 64"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 8,
+          "c": 2,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: (2x + 6)², (2x + 6)(2x + 6), 4x² + 12x + 12x + 36, □. Kirjoita sievennetty lauseke."
+      },
+      "payload": {
+        "lines": [
+          "(2x + 6)²",
+          "(2x + 6)(2x + 6)",
+          "4x² + 12x + 12x + 36",
+          "4x² + 24x + 36"
+        ],
+        "blank_index": 4,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "4x² + 24x + 36",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 4: 4x² + 24x + 36",
+          "Lopputulos: 4x² + 24x + 36"
+        ],
+        "final": "4x² + 24x + 36"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 6,
+          "c": 2,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: (x + 3)² + 7, □, x² + 6x + 16. Avaa neliö."
+      },
+      "payload": {
+        "lines": [
+          "(x + 3)² + 7",
+          "x² + 6x + 9 + 7",
+          "x² + 6x + 16"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² + 6x + 9 + 7",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: x² + 6x + 9 + 7",
+          "Lopputulos: x² + 6x + 16"
+        ],
+        "final": "x² + 6x + 9 + 7"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 3,
+          "c": 4,
+          "d": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen terassin sivu on x + 4 metriä, ja siitä jää x metrin sivuinen neliö kukkapenkiksi. Terassin jäljelle jäävä pinta-ala lasketaan rivi riviltä. Täydennä puuttuva rivi: (x + 4)² − x², □, 8x + 16. Avaa neliö."
+      },
+      "payload": {
+        "lines": [
+          "(x + 4)² − x²",
+          "x² + 8x + 16 − x²",
+          "8x + 16"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² + 8x + 16 − x²",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2: x² + 8x + 16 − x²",
+          "Lopputulos: 8x + 16"
+        ],
+        "final": "x² + 8x + 16 − x²"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 4,
+          "c": 4,
+          "d": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

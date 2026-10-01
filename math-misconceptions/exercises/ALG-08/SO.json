@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "3(x + 7) + 3x",
+          "3x + 21 + 3x",
+          "3x + 3x + 21",
+          "6x + 21"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan sulku luvulla 3, järjestetään x-termit vierekkäin ja lasketaan ne yhteen.",
+          "Sievin muoto: 6x + 21"
+        ],
+        "final": "6x + 21"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen."
+      },
+      "provenance": {
+        "template": "alg08_so",
+        "params": {
+          "a": 3,
+          "b": 7,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "2(x − 7) + 16",
+          "2x − 14 + 16",
+          "2x + 2"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan sulku luvulla 2 ja lasketaan luvut yhteen: −14 + 16 = 2.",
+          "Sievin muoto: 2x + 2"
+        ],
+        "final": "2x + 2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen."
+      },
+      "provenance": {
+        "template": "alg08_so",
+        "params": {
+          "a": 2,
+          "b": 7,
+          "c": 5,
+          "d": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "2(x + 2) + 2(x + 5)",
+          "2x + 4 + 2(x + 5)",
+          "2x + 4 + 2x + 10",
+          "4x + 14"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Avataan ensin ensimmäinen sulku, sitten toinen, ja lopuksi lasketaan samanmuotoiset termit yhteen.",
+          "Sievin muoto: 4x + 14"
+        ],
+        "final": "4x + 14"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen."
+      },
+      "provenance": {
+        "template": "alg08_so",
+        "params": {
+          "a": 2,
+          "b": 2,
+          "c": 2,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "5(3x + 4) − 14x",
+          "15x + 20 − 14x",
+          "15x − 14x + 20",
+          "1x + 20"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Kerroin 5 kertoo molemmat termit: 15x ja 20. Sitten x-termit lasketaan yhteen.",
+          "Sievin muoto: 1x + 20"
+        ],
+        "final": "1x + 20"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen."
+      },
+      "provenance": {
+        "template": "alg08_so",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Siivousyritys veloittaa 4 euroa tunnilta. Työ kestää x + 8 tuntia, ja lisäksi veloitetaan 8 euron kulkumaksu. Järjestä rivit oikeaan järjestykseen niin, että lauseke sievenee vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "4(x + 8) + 8",
+          "4x + 32 + 8",
+          "4x + 40"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Tuntihinta kerrotaan sekä x:llä että luvulla 8, ja kulkumaksu lisätään.",
+          "Sievin muoto: 4x + 40"
+        ],
+        "final": "4x + 40"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen."
+      },
+      "provenance": {
+        "template": "alg08_so",
+        "params": {
+          "a": 4,
+          "b": 8,
+          "c": 5,
+          "d": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

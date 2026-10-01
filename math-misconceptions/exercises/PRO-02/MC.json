@@ -1,0 +1,385 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Kuution särmä 3 cm kasvatetaan 3-kertaiseksi. Kuinka moninkertaiseksi kuution tilavuus muuttuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "27-kertainen",
+            "misconception": null,
+            "feedback": "Oikein: tilavuus muuttuu k³-kertaiseksi, eli 3³ = 27."
+          },
+          {
+            "id": "b",
+            "text": "9-kertainen",
+            "misconception": null,
+            "feedback": "Kertoimella k² muuttuu pinta-ala, ei tilavuus. Tilavuudessa kasvaa myös kolmas ulottuvuus."
+          },
+          {
+            "id": "c",
+            "text": "6-kertainen",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "d",
+            "text": "3-kertainen",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen tilavuus 3³ = 27 cm³",
+          "Uusi tilavuus 9³ = 729 cm³",
+          "729 / 27 = 27"
+        ],
+        "final": "27-kertainen"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro02_mc",
+        "params": {
+          "k": 3,
+          "edge": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisen särmiön mitat ovat 2 cm, 3 cm ja 4 cm. Jokainen mitta kasvatetaan 4-kertaiseksi. Kuinka moninkertaiseksi tilavuus muuttuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "16-kertainen",
+            "misconception": null,
+            "feedback": "Kertoimella k² muuttuu pinta-ala, ei tilavuus. Tilavuudessa kasvaa myös kolmas ulottuvuus."
+          },
+          {
+            "id": "b",
+            "text": "64-kertainen",
+            "misconception": null,
+            "feedback": "Oikein: 8 · 12 · 16 = 64 · 24."
+          },
+          {
+            "id": "c",
+            "text": "8-kertainen",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "d",
+            "text": "4-kertainen",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Alkuperäinen tilavuus 2 · 3 · 4 = 24 cm³",
+          "Uusi tilavuus 8 · 12 · 16 = 1536 cm³",
+          "1536 / 24 = 64"
+        ],
+        "final": "64-kertainen"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro02_mc",
+        "params": {
+          "k": 4,
+          "a": 2,
+          "b": 3,
+          "c": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Pienoismallin tilavuus on 20 cm³. Oikea esine on muodoltaan samanlainen, ja sen jokainen mitta on 2-kertainen pienoismalliin verrattuna. Mikä on esineen tilavuus?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "160 cm³",
+            "misconception": null,
+            "feedback": "Oikein: 20 · 2³ = 160."
+          },
+          {
+            "id": "b",
+            "text": "22 cm³",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "c",
+            "text": "80 cm³",
+            "misconception": null,
+            "feedback": "Kertoimella k² muuttuu pinta-ala, ei tilavuus. Tilavuudessa kasvaa myös kolmas ulottuvuus."
+          },
+          {
+            "id": "d",
+            "text": "40 cm³",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Tilavuuden kerroin 2³ = 8",
+          "20 · 8 = 160"
+        ],
+        "final": "160 cm³"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro02_mc",
+        "params": {
+          "k": 2,
+          "volume": 20
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Pieneen kuutionmuotoiseen astiaan mahtuu 3 l vettä. Toinen kuutionmuotoinen astia on 2-kertainen joka suunnassa. Kuinka monta litraa vettä siihen mahtuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "6 l",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "b",
+            "text": "5 l",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "c",
+            "text": "12 l",
+            "misconception": null,
+            "feedback": "Kertoimella k² muuttuu pinta-ala, ei tilavuus. Tilavuudessa kasvaa myös kolmas ulottuvuus."
+          },
+          {
+            "id": "d",
+            "text": "24 l",
+            "misconception": null,
+            "feedback": "Oikein: tilavuus on 8-kertainen, joten 3 · 8 = 24 l."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Tilavuuden kerroin 2³ = 8",
+          "3 · 8 = 24"
+        ],
+        "final": "24 l"
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro02_mc",
+        "params": {
+          "k": 2,
+          "litres": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.05"
+        ],
+        "t": [
+          "T16",
+          "T18"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-02"
+      ],
+      "prompt": {
+        "text": "Kappaleen kaikki pituudet kasvatetaan 2-kertaisiksi. Miksi tilavuus ei ole silloin 2-kertainen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tilavuus on aina 2-kertainen, kun pituudet ovat 2-kertaiset.",
+            "misconception": "PRO-02",
+            "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Kuutiolla on kolme ulottuvuutta, joten tilavuus muuttuu kertoimella k³."
+          },
+          {
+            "id": "b",
+            "text": "Tilavuus ei muutu, kun kappaletta suurennetaan.",
+            "misconception": null,
+            "feedback": "Suurennettu kappale vie enemmän tilaa."
+          },
+          {
+            "id": "c",
+            "text": "Tilavuudessa on kolme ulottuvuutta (pituus, leveys, korkeus), joten se on 2³ = 8-kertainen.",
+            "misconception": null,
+            "feedback": "Oikein: tilavuus riippuu kolmesta pituudesta."
+          },
+          {
+            "id": "d",
+            "text": "Tilavuus on 4-kertainen, koska kappale kasvaa kahteen suuntaan.",
+            "misconception": null,
+            "feedback": "Kertoimella k² muuttuu pinta-ala, ei tilavuus. Tilavuudessa kasvaa myös kolmas ulottuvuus."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Tilavuus = pituus · leveys · korkeus",
+          "Kaikki kolme kasvavat 2-kertaisiksi, joten tilavuus kasvaa 2 · 2 · 2 = 8-kertaiseksi"
+        ],
+        "final": "Tilavuudessa on kolme ulottuvuutta (pituus, leveys, korkeus), joten se on 2³ = 8-kertainen."
+      },
+      "feedback": {
+        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+      },
+      "provenance": {
+        "template": "pro02_mc",
+        "params": {
+          "k": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

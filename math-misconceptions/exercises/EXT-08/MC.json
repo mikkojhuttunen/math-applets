@@ -1,0 +1,412 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-08",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Oppilaat saivat kokeesta pisteet 10, 18, 8, 11, 17. Mikä on pisteiden mediaani?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "18",
+            "misconception": null,
+            "feedback": "Tämä on suurin arvo, ei keskimmäinen."
+          },
+          {
+            "id": "b",
+            "text": "12,8",
+            "misconception": null,
+            "feedback": "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
+          },
+          {
+            "id": "c",
+            "text": "11",
+            "misconception": null,
+            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+          },
+          {
+            "id": "d",
+            "text": "8",
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 8, 10, 11, 17, 18",
+          "Keskimmäinen arvo on 11"
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_mc",
+        "params": {
+          "values": [
+            10,
+            18,
+            8,
+            11,
+            17
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden kävelylenkin pituudet olivat 35, 18, 37, 22, 32, 3 minuuttia. Mikä on pituuksien mediaani?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "32",
+            "misconception": null,
+            "feedback": "Tämä on vain toinen kahdesta keskimmäisestä arvosta. Parillisella määrällä otetaan niiden keskiarvo."
+          },
+          {
+            "id": "b",
+            "text": "27",
+            "misconception": null,
+            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+          },
+          {
+            "id": "c",
+            "text": "24,5",
+            "misconception": null,
+            "feedback": "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
+          },
+          {
+            "id": "d",
+            "text": "29,5",
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 3, 18, 22, 32, 35, 37",
+          "Kaksi keskimmäistä: 22 ja 32, keskiarvo 27"
+        ],
+        "final": "27"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_mc",
+        "params": {
+          "values": [
+            35,
+            18,
+            37,
+            22,
+            32,
+            3
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee lukujen 15, 18, 7, 28, 21, 22, 12 mediaania. Mikä on mediaanin laskemisen ensimmäinen vaihe?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasketaan kaikki luvut yhteen ja jaetaan niiden lukumäärällä",
+            "misconception": null,
+            "feedback": "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
+          },
+          {
+            "id": "b",
+            "text": "Valitaan luettelon keskimmäinen luku sellaisenaan",
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          },
+          {
+            "id": "c",
+            "text": "Etsitään luku, joka esiintyy useimmin",
+            "misconception": null,
+            "feedback": "Tämä on tyyppiarvo, ei mediaani."
+          },
+          {
+            "id": "d",
+            "text": "Luvut järjestetään pienimmästä suurimpaan",
+            "misconception": null,
+            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 7, 12, 15, 18, 21, 22, 28",
+          "Mediaani on 18"
+        ],
+        "final": "Luvut järjestetään pienimmästä suurimpaan"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_mc",
+        "params": {
+          "values": [
+            15,
+            18,
+            7,
+            28,
+            21,
+            22,
+            12
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden hengen yrityksessä kuukausipalkat ovat 13, 16, 17, 21, 198, 20 (luvut ovat satoja euroja). Keskiarvo on 47,5 ja mediaani 18,5. Kumpi kuvaa paremmin tyypillistä palkkaa ja miksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keskiarvo, koska se on aina tyypillisin arvo",
+            "misconception": "EXT-08",
+            "feedback": "Keskiarvo ei aina kuvaa tyypillistä arvoa: yksi poikkeava arvo vetää sen kauas useimmista arvoista."
+          },
+          {
+            "id": "b",
+            "text": "Mediaani, koska yksi erittäin suuri palkka nostaa keskiarvoa mutta ei muuta keskimmäistä arvoa paljon",
+            "misconception": null,
+            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+          },
+          {
+            "id": "c",
+            "text": "Keskiarvo, koska se ottaa huomioon kaikki arvot, joten se on paras",
+            "misconception": "EXT-08",
+            "feedback": "Juuri siksi poikkeava arvo vaikuttaa siihen paljon. Tässä useimmat palkat ovat selvästi keskiarvoa pienempiä."
+          },
+          {
+            "id": "d",
+            "text": "Kumpikaan ei kuvaa, koska ne ovat eri lukuja",
+            "misconception": null,
+            "feedback": "Molemmat ovat keskilukuja; kysymys on, kumpi sopii aineistoon."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 13, 16, 17, 20, 21, 198",
+          "Mediaani 18,5, keskiarvo 47,5",
+          "Poikkeava suuri arvo nostaa keskiarvoa, joten mediaani kuvaa tyypillistä palkkaa paremmin"
+        ],
+        "final": "Mediaani, koska yksi erittäin suuri palkka nostaa keskiarvoa mutta ei muuta keskimmäistä arvoa paljon"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_mc",
+        "params": {
+          "values": [
+            13,
+            16,
+            17,
+            21,
+            198,
+            20
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Oppilas sanoo: \"Luvuista 25, 26, 10, 4, 17 mediaani on 10, koska se on listan keskellä.\" Mikä on oikea arvio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on väärä, mediaani on keskiarvo 16,4",
+            "misconception": null,
+            "feedback": "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärä: luvut pitää järjestää ensin, ja silloin mediaani on 17",
+            "misconception": null,
+            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+          },
+          {
+            "id": "c",
+            "text": "Väite on oikea, koska mediaani on aina sama kuin keskiarvo",
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ja keskiarvo ovat eri keskilukuja, eivätkä yleensä ole yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "Väite on oikea, koska mediaani on aina keskimmäinen luku listassa",
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 4, 10, 17, 25, 26",
+          "Mediaani on 17, ei 10"
+        ],
+        "final": "Väite on väärä: luvut pitää järjestää ensin, ja silloin mediaani on 17"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_mc",
+        "params": {
+          "values": [
+            25,
+            26,
+            10,
+            4,
+            17
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    }
+  ]
+}
