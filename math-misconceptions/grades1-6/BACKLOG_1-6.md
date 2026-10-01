@@ -16,6 +16,6 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | 8 | A36.S4.09 | MEA-01 | numeric_entry with `answer_expr` | 20 | 20 | done | Covering a rectangle with unit squares, rows times columns. Wrong answer from adding. |
 | 9 | A12.S2.08 | none | numeric_entry with `answer_expr` | 60 | 60 | done | Addition and subtraction within 20, no misconception tags. |
 | 10 | A12.S2.09 | none | numeric_entry with `answer_expr` | 60 | 60 | done | Addition and subtraction within 100. |
-| 11 | A12.S2.12 | none | numeric_entry with `answer_expr` | 60 | 40 | in progress | Multiplication tables 1–5 and 10. |
+| 11 | A12.S2.12 | none | numeric_entry with `answer_expr` | 60 | 60 | done | Multiplication tables 1–5 and 10. |
 | 12 | A36.S4.04 | GEO-03 | choice | 10 | 0 | hold | Evidence Limited in the item bank. A human decides whether to proceed. |
 | 13 | A36.S4.11 | MEA-02 | numeric_entry with `answer_expr` | 10 | 0 | hold | No study found for the misconception. Do not generate until a human decides. |
