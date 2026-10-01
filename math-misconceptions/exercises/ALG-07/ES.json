@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "3x + 3 = 21",
+          "3x = 24",
+          "x = 8"
+        ],
+        "error_line": 2,
+        "error_type": "sign_not_changed"
+      },
+      "solution": {
+        "steps": [
+          "Luku 3 siirretään toiselle puolelle vähentämällä: 3x = 21 − 3 = 18.",
+          "Oikea ratkaisu: x = 6"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
+      },
+      "provenance": {
+        "template": "alg07_es",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "x": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "4x − 5 = 31",
+          "4x = 26",
+          "x = 13/2"
+        ],
+        "error_line": 2,
+        "error_type": "sign_not_changed"
+      },
+      "solution": {
+        "steps": [
+          "Luku 5 siirretään toiselle puolelle lisäämällä: 4x = 31 + 5 = 36.",
+          "Oikea ratkaisu: x = 9"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
+      },
+      "provenance": {
+        "template": "alg07_es",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 + 3x = 26",
+          "3x = 24",
+          "x = 24"
+        ],
+        "error_line": 3,
+        "error_type": "one_sided_operation"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Jakaminen luvulla 3 on tehtävä molemmille puolille: x = 24 / 3 = 8.",
+          "Oikea ratkaisu: x = 8"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
+      },
+      "provenance": {
+        "template": "alg07_es",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "x": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5x + 5 = 3x + 17",
+          "5x − 3x = 22",
+          "2x = 22"
+        ],
+        "error_line": 2,
+        "error_type": "sign_not_changed"
+      },
+      "solution": {
+        "steps": [
+          "Luku 5 siirretään vasemmalta oikealle vähentämällä: 5x − 3x = 17 − 5 = 12, joten 2x = 12 ja x = 6.",
+          "Oikea ratkaisu: x = 6"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
+      },
+      "provenance": {
+        "template": "alg07_es",
+        "params": {
+          "a": 5,
+          "b": 5,
+          "x": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Koripallojoukkue maksaa pelipaidoista 2 euroa kappaleelta ja saa 4 euron alennuksen koko tilauksesta. Lasku on 14 euroa, ja paitojen määrä x saadaan yhtälöstä. Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2x − 4 = 14",
+          "2x = 10",
+          "x = 5"
+        ],
+        "error_line": 2,
+        "error_type": "sign_not_changed"
+      },
+      "solution": {
+        "steps": [
+          "Alennuksen 4 euroa lisätään molemmille puolille: 2x = 14 + 4 = 18, joten x = 9.",
+          "Oikea ratkaisu: x = 9"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
+      },
+      "provenance": {
+        "template": "alg07_es",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Avaa sulut: (x + 7)²"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 49",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "b",
+            "text": "x² + 14x + 49",
+            "misconception": null,
+            "feedback": "Oikein: (a + b)² = a² + 2ab + b²."
+          },
+          {
+            "id": "c",
+            "text": "x² + 7x + 49",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "d",
+            "text": "x² + 14",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x + 7)(x + 7)",
+          "x² + 14x + 49"
+        ],
+        "final": "x² + 14x + 49"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "b": 7,
+          "c": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Avaa sulut: (x − 9)²"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² − 18x − 81",
+            "misconception": "ALG-09",
+            "feedback": "Viimeinen termi on (−9)² = 81, ei −81."
+          },
+          {
+            "id": "b",
+            "text": "x² + 18x + 81",
+            "misconception": "ALG-09",
+            "feedback": "Keskimmäisen termin merkki on miinus, koska termit ovat x ja −9."
+          },
+          {
+            "id": "c",
+            "text": "x² − 81",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "d",
+            "text": "x² − 18x + 81",
+            "misconception": null,
+            "feedback": "Oikein: (a + b)² = a² + 2ab + b²."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x − 9)(x − 9)",
+          "x² − 18x + 81"
+        ],
+        "final": "x² − 18x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "b": 9,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Laske ilman laskinta: (6 + 3)². Mikä on tulos?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "63",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "b",
+            "text": "45",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "c",
+            "text": "18",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi tarkoittaa kertomista itsellään, ei kahdella kertomista."
+          },
+          {
+            "id": "d",
+            "text": "81",
+            "misconception": null,
+            "feedback": "Oikein: (a + b)² = a² + 2ab + b²."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 + 3 = 9",
+          "9² = 81"
+        ],
+        "final": "81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "b": 6,
+          "c": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen pihan sivun pituus on (x + 9) metriä. Mikä lauseke antaa pihan pinta-alan avattuna?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 81",
+            "misconception": "ALG-09",
+            "feedback": "Neliö jakautuu osiin x², kaksi suorakulmiota x · 9 ja 9²."
+          },
+          {
+            "id": "b",
+            "text": "x² + 18x + 81",
+            "misconception": null,
+            "feedback": "Oikein: (a + b)² = a² + 2ab + b²."
+          },
+          {
+            "id": "c",
+            "text": "x² + 9x + 81",
+            "misconception": "ALG-09",
+            "feedback": "Suorakulmioita x · 9 on kaksi, ei yksi."
+          },
+          {
+            "id": "d",
+            "text": "x² + 18x",
+            "misconception": "ALG-09",
+            "feedback": "Pienen neliön 9² = 81 puuttuu."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pinta-ala = (x + 9)²",
+          "x² + 2 · 9x + 9² = x² + 18x + 81"
+        ],
+        "final": "x² + 18x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "b": 9,
+          "c": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää, että (x + 2)² = x² + 4. Miten väitteen voi tarkistaa sijoittamalla x = 2?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sijoittamalla ei voi tarkistaa lausekkeiden yhtäsuuruutta",
+            "misconception": "ALG-09",
+            "feedback": "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "Vasen puoli on (2 + 2)² = 16 ja oikea puoli 8, joten väite on väärä",
+            "misconception": null,
+            "feedback": "Oikein: jos lausekkeet olisivat yhtä suuret, niiden arvot olisivat samat."
+          },
+          {
+            "id": "c",
+            "text": "Vasen puoli on 16 ja oikea 8, mutta väite on silti oikein, koska potenssi jakautuu",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          },
+          {
+            "id": "d",
+            "text": "Molemmat puolet ovat 8, joten väite on oikein",
+            "misconception": "ALG-09",
+            "feedback": "Potenssi ei jakaudu summan yli: (a + b)² = (a + b)(a + b), ja tulossa on myös kaksinkertainen tulo 2ab."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 2: (2 + 2)² = 16",
+          "2² + 2² = 8"
+        ],
+        "final": "Arvot 16 ja 8 eroavat"
+      },
+      "feedback": {
+        "correct": "Oikein: väärä väite paljastuu, kun arvot eivät ole yhtä suuret."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "b": 2,
+          "x": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}

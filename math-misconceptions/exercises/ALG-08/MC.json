@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-08",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Avaa sulut: 5(x + 3)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5x + 15",
+            "misconception": null,
+            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+          },
+          {
+            "id": "b",
+            "text": "x + 15",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo myös ensimmäisen termin."
+          },
+          {
+            "id": "c",
+            "text": "5x − 15",
+            "misconception": null,
+            "feedback": "Tarkista termin merkki kertolaskun jälkeen."
+          },
+          {
+            "id": "d",
+            "text": "5x + 3",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5 · x + 5 · (3)",
+          "5x + 15"
+        ],
+        "final": "5x + 15"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "alg08_mc",
+        "params": {
+          "a": 5,
+          "b": 3,
+          "c": 1,
+          "sign": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08",
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Avaa sulut: 3(x − 6)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 18",
+            "misconception": null,
+            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+          },
+          {
+            "id": "b",
+            "text": "x − 18",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo myös ensimmäisen termin."
+          },
+          {
+            "id": "c",
+            "text": "3x − 6",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
+          },
+          {
+            "id": "d",
+            "text": "3x + 18",
+            "misconception": "ALG-11",
+            "feedback": "Tarkista termin merkki kertolaskun jälkeen."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3 · x + 3 · (-6)",
+          "3x − 18"
+        ],
+        "final": "3x − 18"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "alg08_mc",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 1,
+          "sign": -1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Avaa sulut: 9(3x + 9)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "27x − 81",
+            "misconception": null,
+            "feedback": "Tarkista termin merkki kertolaskun jälkeen."
+          },
+          {
+            "id": "b",
+            "text": "27x + 9",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
+          },
+          {
+            "id": "c",
+            "text": "27x + 81",
+            "misconception": null,
+            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+          },
+          {
+            "id": "d",
+            "text": "3x + 81",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo myös ensimmäisen termin."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "9 · 3x + 9 · (9)",
+          "27x + 81"
+        ],
+        "final": "27x + 81"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "alg08_mc",
+        "params": {
+          "a": 9,
+          "b": 9,
+          "c": 3,
+          "sign": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Yhden lipun hinta on x euroa ja jokaiseen lippuun lisätään 5 euron palvelumaksu. Perhe ostaa 3 lippua. Mikä lauseke antaa kokonaishinnan avattuna?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 15",
+            "misconception": "ALG-08",
+            "feedback": "Myös lipun hinta x kerrotaan lippujen määrällä."
+          },
+          {
+            "id": "b",
+            "text": "3x + 15",
+            "misconception": null,
+            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+          },
+          {
+            "id": "c",
+            "text": "3x + 8",
+            "misconception": "ALG-08",
+            "feedback": "Luvulla 3 kerrotaan palvelumaksu, ei lisätä sitä."
+          },
+          {
+            "id": "d",
+            "text": "3x + 5",
+            "misconception": "ALG-08",
+            "feedback": "Palvelumaksu maksetaan jokaisesta lipusta, joten sekin kerrotaan luvulla 3."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3(x + 5) = 3x + 3 · 5",
+          "3x + 15"
+        ],
+        "final": "3x + 15"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+      },
+      "provenance": {
+        "template": "alg08_mc",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "c": 3,
+          "sign": -1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Oppilas kirjoittaa 4(x + 5) = 4x + 5. Miten virheen voi todeta sijoittamalla x = 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sijoittamalla ei voi tarkistaa sulkulausekkeen avaamista",
+            "misconception": "ALG-08",
+            "feedback": "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret."
+          },
+          {
+            "id": "b",
+            "text": "Vasen puoli on 4(1 + 5) = 24 ja oikea puoli 9, joten väite on väärä",
+            "misconception": null,
+            "feedback": "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
+          },
+          {
+            "id": "c",
+            "text": "Molemmat puolet saavat arvon 24, joten väite on oikein",
+            "misconception": "ALG-08",
+            "feedback": "Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
+          },
+          {
+            "id": "d",
+            "text": "Vasen puoli on 24 ja oikea 9, mutta väite on silti oikein, koska kerroin 4 on molemmissa",
+            "misconception": "ALG-08",
+            "feedback": "Yhtä suurilla lausekkeilla on täsmälleen sama arvo."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 1: 4(1 + 5) = 24",
+          "4x + 5 = 9"
+        ],
+        "final": "Arvot 24 ja 9 eroavat"
+      },
+      "feedback": {
+        "correct": "Oikein: väärä sulkujen avaus näkyy arvojen eroavuutena."
+      },
+      "provenance": {
+        "template": "alg08_mc",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "x": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}
