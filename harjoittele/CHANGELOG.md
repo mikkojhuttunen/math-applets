@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.12.1 (2026-10-01)
+
+- Manifest rebuilt: 143 files, 1010 items. Pupil titles for 33 more goals. Fix: column view only for a bare subtraction, not for a subtraction inside another question.
+
 ## 0.12.0 (2026-10-01)
 
 - W12: link to the practice pages on the front page.

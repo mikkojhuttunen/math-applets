@@ -14,7 +14,9 @@
 // Column index 0 is the leftmost column.
 
 export function parseSubtraction(stem) {
-  const m = /(\d+)\s*[−\-–]\s*(\d+)/.exec(stem || '');
+  // Only a bare subtraction ("Laske 453 − 127."), not one inside an
+  // equation or another question such as "9 − 3 = □ + 5" or "y = 8 − 3x".
+  const m = /^\s*(?:Laske\s+)?(\d+)\s*[−\-–]\s*(\d+)\s*[.=]?\s*$/.exec(stem || '');
   if (!m) return null;
   const a = Number(m[1]);
   const b = Number(m[2]);

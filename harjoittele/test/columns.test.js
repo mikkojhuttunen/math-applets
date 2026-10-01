@@ -10,6 +10,9 @@ test('parseSubtraction reads the stem, U+2212 or hyphen', () => {
   assert.deepStrictEqual(parseSubtraction('Laske 800 - 406.'), { a: 800, b: 406 });
   assert.strictEqual(parseSubtraction('Laske 3/4 + 1/2.'), null);
   assert.strictEqual(parseSubtraction('Laske 12 − 30.'), null);
+  assert.strictEqual(parseSubtraction('Täydennä luku: 9 \u2212 3 = □ + 5'), null);
+  assert.strictEqual(parseSubtraction('Suoran yhtälö on y = 8 \u2212 3x. Mikä on kulmakerroin?'), null);
+  assert.deepStrictEqual(parseSubtraction('52 \u2212 17 ='), { a: 52, b: 17 });
 });
 
 test('453 − 127: the three NUM-10 variants and where they go wrong', () => {

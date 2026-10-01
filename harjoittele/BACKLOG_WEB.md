@@ -192,3 +192,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-10-01 | W11 | Goal browser tavoitteet.html, v0.11.0 |
 | 2026-10-01 | W12 | Front page link to harjoittele/ (own commit, index.html only) |
 | 2026-10-01 | W13 | Page check, self-test, CI workflows harjoittele and harjoittele-content, v0.12.0 |
+| 2026-10-01 | merge | `main` merged in: 143 files, 1010 items (all draft), 740 showable on 36 goals; 270 grades 7-9 items of types ES, RP, FS, ME, SO skipped (tasks L06-L10 in `LIVE_BACKLOG.md`). Pupil titles for 33 new goals in `data/topics_fi.json`. Fix: the column view matched a subtraction inside other questions (`9 − 3 = □ + 5`, `y = 8 − 3x`); `parseSubtraction` now accepts only a bare subtraction |
