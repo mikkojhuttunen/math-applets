@@ -1,0 +1,377 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-08",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Verkkokaupan kävijämäärä kasvaa 10 % ja laskee sen jälkeen 10 %. Alkutilanteeseen verrattuna kävijämäärä on:"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suurempi kuin alussa",
+            "misconception": null,
+            "feedback": "Lasku on suurempi kuin nousu, koska se kohdistuu suurempaan arvoon."
+          },
+          {
+            "id": "b",
+            "text": "Pienempi: 99 % alkuarvosta",
+            "misconception": null,
+            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "c",
+            "text": "Sama kuin alussa",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "d",
+            "text": "Pienempi: 20 % alkuarvosta",
+            "misconception": null,
+            "feedback": "Prosentteja ei lasketa yhteen tai kerrota luvulla kaksi."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,1 · 0,9 = 0,99",
+          "99 % alkuarvosta"
+        ],
+        "final": "99 % alkuarvosta"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": 10,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Takin hinta on 50 €. Hintaa korotetaan 20 %, ja korotettua hintaa alennetaan sen jälkeen 20 %. Mikä on lopullinen hinta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "48 €",
+            "misconception": null,
+            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "b",
+            "text": "50 €",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "c",
+            "text": "60 €",
+            "misconception": null,
+            "feedback": "Tämä on hinta korotuksen jälkeen, alennus puuttuu."
+          },
+          {
+            "id": "d",
+            "text": "30 €",
+            "misconception": null,
+            "feedback": "Alennus lasketaan korotetusta hinnasta, ei alkuperäisestä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "50 · 1,2 = 60",
+          "60 · 0,8 = 48"
+        ],
+        "final": "48 €"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "price": 50,
+          "q": 20,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Puhelimen hinta laskee 25 % ja nousee sen jälkeen 25 %. Alkuperäiseen hintaan verrattuna lopullinen hinta on:"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pienempi: 50 % alkuperäisestä",
+            "misconception": null,
+            "feedback": "Prosentteja ei lasketa yhteen."
+          },
+          {
+            "id": "b",
+            "text": "Pienempi: 93,75 % alkuperäisestä",
+            "misconception": null,
+            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "c",
+            "text": "Suurempi kuin alkuperäinen",
+            "misconception": null,
+            "feedback": "Nousu kohdistuu pienentyneeseen hintaan, joten se on pienempi muutos euroina kuin lasku."
+          },
+          {
+            "id": "d",
+            "text": "Sama kuin alkuperäinen",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,75 · 1,25 = 0,9375",
+          "93,75 % alkuperäisestä"
+        ],
+        "final": "93,75 % alkuperäisestä"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": 25,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Aino korottaa tuotteen hintaa 30 % ja alentaa sitten 30 %. Eero alentaa saman tuotteen hintaa 30 % ja korottaa sitten 30 %. Kummallakin on sama alkuhinta. Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lopulliset hinnat ovat yhtä suuret ja yhtä suuret kuin alkuhinta",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "b",
+            "text": "Lopulliset hinnat ovat yhtä suuret, ja kumpikin on 91 % alkuhinnasta",
+            "misconception": null,
+            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "c",
+            "text": "Ainon lopullinen hinta on suurempi",
+            "misconception": null,
+            "feedback": "Kertolasku ei riipu järjestyksestä: 1,10 · 0,90 = 0,90 · 1,10."
+          },
+          {
+            "id": "d",
+            "text": "Eeron lopullinen hinta on suurempi",
+            "misconception": null,
+            "feedback": "Kertolasku ei riipu järjestyksestä: 1,10 · 0,90 = 0,90 · 1,10."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Aino: 1,3 · 0,7 = 0,91",
+          "Eero: 0,7 · 1,3 = 0,91"
+        ],
+        "final": "Yhtä suuret, 91 % alkuhinnasta"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": 30,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Miksi hinta ei palaa alkuperäiseen, kun sitä korotetaan 30 % ja alennetaan sen jälkeen 30 %?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Koska alennus lasketaan korotetusta hinnasta, joka on suurempi kuin alkuperäinen",
+            "misconception": null,
+            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+          },
+          {
+            "id": "b",
+            "text": "Koska prosentteja ei voi laskea peräkkäin",
+            "misconception": null,
+            "feedback": "Prosentit voidaan laskea peräkkäin kertomalla muutoskertoimet."
+          },
+          {
+            "id": "c",
+            "text": "Koska 30 % on aina 30 euroa",
+            "misconception": null,
+            "feedback": "Prosentti on osuus, ei kiinteä eurosumma; sen suuruus riippuu siitä, mistä arvosta se lasketaan."
+          },
+          {
+            "id": "d",
+            "text": "Hinta palaa alkuperäiseen, koska prosentit ovat yhtä suuret",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,3 · 0,7 = 0,91 ≠ 1"
+        ],
+        "final": "Alennus lasketaan suuremmasta arvosta"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": 30,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    }
+  ]
+}

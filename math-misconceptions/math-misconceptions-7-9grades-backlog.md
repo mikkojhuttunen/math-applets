@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 24 |
+| Runs completed | 25 |
 | Last run | 2026-10-01 |
-| Progress | 127 of 227 planned cells generated |
+| Progress | 133 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -224,9 +224,9 @@ Same row order as section 3.1. Columns are in phase order.
 | EXT-08 | X | X | X | X | X | - | X | - | - | - | - | - | o | o | - |
 | EXT-09 | X | X | - | - | - | - | X | o | o | - | o | - | - | - | - |
 | ALG-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
-| ALG-12 | X | X | o | - | - | o | - | - | - | - | - | - | - | - | - |
-| NUM-08 | o | o | o | - | - | - | - | - | - | o | - | - | o | o | - |
-| FUN-03 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
+| ALG-12 | X | X | X | - | - | X | - | - | - | - | - | - | - | - | - |
+| NUM-08 | X | X | o | - | - | - | - | - | - | o | - | - | o | o | - |
+| FUN-03 | X | X | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | FUN-04 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | FUN-05 | o | o | - | - | - | - | - | o | o | - | - | - | - | o | - |
 
@@ -367,6 +367,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | EXT-09 | RP | EXT-09-RP-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/RP.json | Draft | Not assessed; literature evidence not yet checked; x solved from a line; invalid equations swap slope and intercept; xlsx has no row for EXT topics, seed from backlog section 3.2 |
 | 2026-10-01 | ALG-12 | MC | ALG-12-MC-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/MC.json | Draft | Limited; limited evidence, check full text before relying on it; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
 | 2026-10-01 | ALG-12 | NE | ALG-12-NE-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer subtracts the absolute value |
+| 2026-10-01 | ALG-12 | ES | ALG-12-ES-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/ES.json | Draft | Limited; limited evidence, check full text before relying on it; lines are numeric expressions; error: a − (−b) written as a − b (the absolute value is subtracted) |
+| 2026-10-01 | ALG-12 | ME | ALG-12-ME-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/ME.json | Draft | Limited; limited evidence, check full text before relying on it; expressions are numeric (variable x is only a schema placeholder); distractors read a − (−b) as a − b |
+| 2026-10-01 | NUM-08 | MC | NUM-08-MC-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-08/MC.json | Draft | Limited; limited evidence, check full text before relying on it; item 5 asks for a justification (the second percentage is taken of the changed amount) |
+| 2026-10-01 | NUM-08 | NE | NUM-08-NE-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-08/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer treats a rise and a fall of the same percentage as cancelling; item 5 asks for the percentage needed to return to the start |
+| 2026-10-01 | FUN-03 | MC | FUN-03-MC-001..005 | T, T, T, H, H | S4.05 | exercises/FUN-03/MC.json | Draft | Limited; limited evidence, check full text before relying on it; axis scales described in words (no figure); item 5 asks for a justification |
+| 2026-10-01 | FUN-03 | NE | FUN-03-NE-001..005 | T, T, T, H, H | S4.05 | exercises/FUN-03/NE.json | Draft | Limited; limited evidence, check full text before relying on it; axis scales described in words (no figure); wrong answer is the slope read from apparent steepness |
 
 ## 6. Curriculum coverage
 

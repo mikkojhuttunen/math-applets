@@ -1,0 +1,299 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora y = 3x piirretään koordinaatistoon, jossa y-akselin yksikkö on 2 kertaa x-akselin yksikön pituinen, joten suora näyttää jyrkemmältä. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3
+        },
+        "wrong": [
+          {
+            "match": 6,
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Yhtälöstä y = 3x kulmakerroin on 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_ne",
+        "params": {
+          "k": 3,
+          "m": 2,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora kulkee pisteiden (0, 1) ja (2, 7) kautta. Se on piirretty koordinaatistoon, jossa y-akselin yksikkö on 2 kertaa x-akselin yksikön pituinen, joten suora näyttää jyrkemmältä. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3
+        },
+        "wrong": [
+          {
+            "match": 6,
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Muutos y: 7 − 1 = 6",
+          "Muutos x: 2 − 0 = 2",
+          "Kulmakerroin 6 / 2 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_ne",
+        "params": {
+          "p": 2,
+          "s": 3,
+          "m": 2,
+          "c": 1,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on 4 kertaa lyhyempi kuin x-akselin yksikkö. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": 1,
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1 cm oikealle on 1 yksikkö, 1 cm ylös on 4 yksikköä",
+          "Kulmakerroin = 4 / 1 = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_ne",
+        "params": {
+          "r": 4,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora y = kx + 1 näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on 3 kertaa lyhyempi kuin x-akselin yksikkö. Mikä on y:n arvo, kun x = 3?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 10
+        },
+        "wrong": [
+          {
+            "match": 4,
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kulmakerroin k = 3",
+          "y = 3 · 3 + 1 = 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_ne",
+        "params": {
+          "r": 3,
+          "c": 1,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Kuvassa suora nousee 2 cm jokaista yhtä oikealle kulkevaa senttimetriä kohti. x-akselin yksikkö on 1 cm ja y-akselin yksikkö 0,5 cm. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": 2,
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Oikealle 1 cm = 1 yksikkö",
+          "Ylös 2 cm = 2 / 0,5 = 4 yksikköä",
+          "Kulmakerroin 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_ne",
+        "params": {
+          "h": 2,
+          "u": "1/2",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    }
+  ]
+}

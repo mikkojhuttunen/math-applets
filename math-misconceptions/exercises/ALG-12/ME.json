@@ -1,0 +1,513 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-12",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 6 − (−8)."
+      },
+      "payload": {
+        "reference": "6 − (−8)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "6 · 8",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "6 + 8",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "14",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "8 + 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "6 − 8",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "f",
+            "text": "−6 − 8",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 − (−8) = 6 + 8 = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_me",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "c": 4,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin −7 − (−5)."
+      },
+      "payload": {
+        "reference": "−7 − (−5)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "−7 − 5",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "b",
+            "text": "−2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "−7 + 5",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "7 − 5",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "5 − 7",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "f",
+            "text": "7 + 5",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−7 − (−5) = −7 + 5 = −2"
+        ],
+        "final": "−2"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_me",
+        "params": {
+          "a": 7,
+          "b": 5,
+          "c": 4,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 8 − (−9) − (−6)."
+      },
+      "payload": {
+        "reference": "8 − (−9) − (−6)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "8 − 9 − 6",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "b",
+            "text": "8 + 9 − (−6)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "8 − (−6) + 9",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "8 + 9 + 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "8 + 9 − 6",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "f",
+            "text": "−8 − 9 − 6",
+            "equivalent": false,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8 + 9 + 6 = 23"
+        ],
+        "final": "23"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_me",
+        "params": {
+          "a": 8,
+          "b": 9,
+          "c": 6,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Lämpötila nousee arvosta −4 °C arvoon 2 °C. Valitse kaikki lausekkeet, joiden arvo on lämpötilan muutos asteina (loppu miinus alku). "
+      },
+      "payload": {
+        "reference": "2 − (−4)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "4 − 2",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "−2 − 4",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "4 + 2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "2 − 4",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "f",
+            "text": "2 + 4",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Muutos on 2 − (−4) = 2 + 4 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_me",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 8,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki lausekkeet, joiden arvo on sama kuin 9 − (−2) − 6."
+      },
+      "payload": {
+        "reference": "9 − (−2) − 6",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "5",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "9 + 2 + (−6)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "9 + 2 − 6",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "9 + 2 + 6",
+            "equivalent": false,
+            "misconception": null
+          },
+          {
+            "id": "e",
+            "text": "9 − 2 + 6",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          },
+          {
+            "id": "f",
+            "text": "9 − 2 − 6",
+            "equivalent": false,
+            "misconception": "ALG-12"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "9 − (−2) = 9 + 2",
+          "11 − 6 = 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_me",
+        "params": {
+          "a": 2,
+          "b": 6,
+          "c": 9,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    }
+  ]
+}
