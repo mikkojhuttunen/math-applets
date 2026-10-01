@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 8 |
+| Runs completed | 9 |
 | Last run | 2026-10-01 |
-| Progress | 45 of 227 planned cells generated (2 cells have a hand-written seed example only) |
+| Progress | 51 of 227 planned cells generated (1 cell has a hand-written seed example only) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -201,9 +201,9 @@ Same row order as section 3.1. Columns are in phase order.
 | ALG-02 | X | - | - | - | - | - | X | - | - | - | - | - | o | o | - |
 | ALG-04 | X | X | X | - | - | X | - | o | - | - | - | - | - | - | - |
 | ALG-05 | X | X | - | - | - | X | - | - | - | - | - | - | - | - | - |
-| ALG-07 | X | X | X | X | o | - | o | - | - | - | - | - | o | - | o |
-| ALG-08 | X | X | o | s | o | s | o | - | - | - | - | - | - | - | - |
-| ALG-09 | X | X | o | o | o | o | - | - | - | - | - | - | - | - | o |
+| ALG-07 | X | X | X | X | X | - | X | - | - | - | - | - | o | - | o |
+| ALG-08 | X | X | X | X | o | s | o | - | - | - | - | - | - | - | - |
+| ALG-09 | X | X | X | X | o | o | - | - | - | - | - | - | - | - | o |
 | ALG-11 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | - |
 | NUM-05 | o | o | - | - | - | - | o | o | - | o | - | - | - | o | - |
 | NUM-07 | o | o | o | o | o | - | - | - | - | o | - | - | o | - | o |
@@ -285,6 +285,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | ALG-08 | NE | ALG-08-NE-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/NE.json | Draft | Moderate |
 | 2026-10-01 | ALG-09 | MC | ALG-09-MC-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/MC.json | Draft | Moderate; item 5 asks to check a claim by substitution (justification) |
 | 2026-10-01 | ALG-09 | NE | ALG-09-NE-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-07 | FS | ALG-07-FS-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/FS.json | Draft | Moderate; blanked line is an equation (answer kind equation) |
+| 2026-10-01 | ALG-07 | RP | ALG-07-RP-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/RP.json | Draft | Moderate; invalid equations are sign-slip or one-sided results |
+| 2026-10-01 | ALG-08 | ES | ALG-08-ES-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/ES.json | Draft | Moderate; error: only the first bracket term is multiplied |
+| 2026-10-01 | ALG-08 | SO | ALG-08-SO-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | ALG-09 | ES | ALG-09-ES-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/ES.json | Draft | Moderate; error: (a + b)² = a² + b² or dropped cross term |
+| 2026-10-01 | ALG-09 | SO | ALG-09-SO-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
 
 ## 6. Curriculum coverage
 
