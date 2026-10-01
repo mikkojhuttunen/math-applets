@@ -1,0 +1,297 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-12",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Laske 6 − (−9)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 15
+        },
+        "wrong": [
+          {
+            "match": -3,
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "6 − (−9) = 6 + 9 = 15"
+        ],
+        "final": "15"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_ne",
+        "params": {
+          "a": 6,
+          "b": 9,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Laske −8 − (−12)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": -20,
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "−8 − (−12) = −8 + 12 = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_ne",
+        "params": {
+          "a": 8,
+          "b": 12,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Laske 5 − (−2) − (−2)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 9
+        },
+        "wrong": [
+          {
+            "match": 1,
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "5 + 2 + 2 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_ne",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Päivän ylin lämpötila on 8 °C ja alin −6 °C. Kuinka monta astetta ylin lämpötila on alinta korkeampi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 14
+        },
+        "wrong": [
+          {
+            "match": 2,
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Erotus on 8 − (−6) = 8 + 6 = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_ne",
+        "params": {
+          "a": 8,
+          "b": 6,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Sukeltaja on syvyydessä −6 m ja lokki korkeudella 7 m merenpinnasta. Mikä on lokin ja sukeltajan korkeusero metreinä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 13
+        },
+        "wrong": [
+          {
+            "match": 1,
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "7 − (−6) = 7 + 6 = 13"
+        ],
+        "final": "13"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_ne",
+        "params": {
+          "a": 6,
+          "b": 7,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    }
+  ]
+}

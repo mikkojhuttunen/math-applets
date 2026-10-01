@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-12",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Laske 5 − (−4)."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "20",
+            "misconception": null,
+            "feedback": "Tässä ei kerrota, vaan vähennetään."
+          },
+          {
+            "id": "b",
+            "text": "1",
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          },
+          {
+            "id": "c",
+            "text": "9",
+            "misconception": null,
+            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+          },
+          {
+            "id": "d",
+            "text": "−9",
+            "misconception": null,
+            "feedback": "Tulos on väärän merkkinen: positiiviseen lukuun lisätään positiivinen luku."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5 − (−4) = 5 + 4 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_mc",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Laske −9 − (−2)."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−11",
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          },
+          {
+            "id": "b",
+            "text": "11",
+            "misconception": null,
+            "feedback": "Tarkista ensimmäisen luvun merkki."
+          },
+          {
+            "id": "c",
+            "text": "−7",
+            "misconception": null,
+            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+          },
+          {
+            "id": "d",
+            "text": "7",
+            "misconception": null,
+            "feedback": "Tarkista tuloksen merkki."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−9 − (−2) = −9 + 2 = −7"
+        ],
+        "final": "−7"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_mc",
+        "params": {
+          "a": 9,
+          "b": 2,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Lämpötila on 6 astetta. Mikä on lämpötilan ja lämpötilan −8 astetta erotus (ensimmäinen miinus toinen)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "14",
+            "misconception": null,
+            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+          },
+          {
+            "id": "b",
+            "text": "−14",
+            "misconception": null,
+            "feedback": "Tulos on väärän merkkinen."
+          },
+          {
+            "id": "c",
+            "text": "8",
+            "misconception": null,
+            "feedback": "Tarkista laskutoimitus."
+          },
+          {
+            "id": "d",
+            "text": "−2",
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 − (−8) = 6 + 8 = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_mc",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee 4 − (−6) = -2, koska vähennyslasku pienentää lukua. Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on väärin: 4 − (−6) = 10",
+            "misconception": null,
+            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+          },
+          {
+            "id": "b",
+            "text": "Laskua ei voi laskea",
+            "misconception": null,
+            "feedback": "Lasku voidaan laskea."
+          },
+          {
+            "id": "c",
+            "text": "Väite on väärin: 4 − (−6) = −10",
+            "misconception": null,
+            "feedback": "Tulos on väärän merkkinen."
+          },
+          {
+            "id": "d",
+            "text": "Väite on oikein: 4 − (−6) = −2",
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4 − (−6) = 4 + 6 = 10",
+          "Tarkistus: 10 − 4 = 6"
+        ],
+        "final": "4 − (−6) = 10"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_mc",
+        "params": {
+          "a": 4,
+          "b": 6,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-12-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-12"
+      ],
+      "prompt": {
+        "text": "Miksi laskun 6 − (−8) tulos on suurempi kuin 6?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei ole suurempi: vähentäminen pienentää lukua aina",
+            "misconception": "ALG-12",
+            "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
+          },
+          {
+            "id": "b",
+            "text": "Koska negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä",
+            "misconception": null,
+            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+          },
+          {
+            "id": "c",
+            "text": "Koska 6 on aina suurempi kuin 8",
+            "misconception": null,
+            "feedback": "Vertailu ei selitä tulosta; ratkaisevaa on vähennettävän luvun merkki."
+          },
+          {
+            "id": "d",
+            "text": "Koska kaksi miinusmerkkiä kumoaa toisensa vain kertolaskussa",
+            "misconception": null,
+            "feedback": "Vähennyslaskussa vähennettävän vastaluku lisätään."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 − (−8) = 6 + 8 = 14 > 6"
+        ],
+        "final": "Negatiivisen luvun vähentäminen on vastaluvun lisäämistä"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+      },
+      "provenance": {
+        "template": "alg12_mc",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    }
+  ]
+}

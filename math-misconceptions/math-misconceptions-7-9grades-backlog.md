@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 23 |
+| Runs completed | 24 |
 | Last run | 2026-10-01 |
-| Progress | 122 of 227 planned cells generated |
+| Progress | 127 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -221,10 +221,10 @@ Same row order as section 3.1. Columns are in phase order.
 | EXT-05 | X | X | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | EXT-06 | X | X | X | - | X | - | - | o | o | o | - | - | - | - | - |
 | EXT-07 | X | X | X | - | - | - | - | - | o | o | - | - | - | - | - |
-| EXT-08 | X | X | X | X | o | - | o | - | - | - | - | - | o | o | - |
-| EXT-09 | X | X | - | - | - | - | o | o | o | - | o | - | - | - | - |
+| EXT-08 | X | X | X | X | X | - | X | - | - | - | - | - | o | o | - |
+| EXT-09 | X | X | - | - | - | - | X | o | o | - | o | - | - | - | - |
 | ALG-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
-| ALG-12 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
+| ALG-12 | X | X | o | - | - | o | - | - | - | - | - | - | - | - | - |
 | NUM-08 | o | o | o | - | - | - | - | - | - | o | - | - | o | o | - |
 | FUN-03 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | FUN-04 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
@@ -362,6 +362,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | EXT-09 | NE | EXT-09-NE-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer is the intercept where the slope is asked (and the reverse) |
 | 2026-10-01 | ALG-03 | MC | ALG-03-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/MC.json | Draft | Limited; limited evidence, check full text before relying on it; items 4 and 5 ask for a justification (value is not the alphabet position) |
 | 2026-10-01 | ALG-03 | NE | ALG-03-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer is the letter's alphabet position |
+| 2026-10-01 | EXT-08 | FS | EXT-08-FS-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression (variable x is only a schema placeholder); mean, median of an even list, mean minus median, mean with an added value |
+| 2026-10-01 | EXT-08 | RP | EXT-08-RP-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/RP.json | Draft | Not assessed; literature evidence not yet checked; x is a missing value of a list; invalid equations take the mean or median as the missing value or use a wrong divisor |
+| 2026-10-01 | EXT-09 | RP | EXT-09-RP-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/RP.json | Draft | Not assessed; literature evidence not yet checked; x solved from a line; invalid equations swap slope and intercept; xlsx has no row for EXT topics, seed from backlog section 3.2 |
+| 2026-10-01 | ALG-12 | MC | ALG-12-MC-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/MC.json | Draft | Limited; limited evidence, check full text before relying on it; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | ALG-12 | NE | ALG-12-NE-001..005 | T, T, T, H, H | S2.01 | exercises/ALG-12/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer subtracts the absolute value |
 
 ## 6. Curriculum coverage
 

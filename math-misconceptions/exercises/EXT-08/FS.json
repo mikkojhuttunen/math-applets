@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-08",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Viiden oppilaan koepisteet ovat 17, 24, 14, 6, 27. Laske keskiarvo. Kirjoita välivaihe, jossa summa on laskettu: (17 + 24 + 14 + 6 + 27) / 5 = □ = 17,6"
+      },
+      "payload": {
+        "lines": [
+          "(17 + 24 + 14 + 6 + 27) / 5",
+          "88 / 5",
+          "17,6"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "88 / 5",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(17 + 24 + 14 + 6 + 27) / 5 = 88 / 5",
+          "88 / 5 = 17,6"
+        ],
+        "final": "88 / 5"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_fs",
+        "params": {
+          "values": [
+            17,
+            24,
+            14,
+            6,
+            27
+          ],
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden kävelylenkin pituudet ovat 22, 31, 29, 12, 36, 34 minuuttia. Laske mediaani: järjestä luvut ja laske kahden keskimmäisen keskiarvo (29 ja 31). Kirjoita välivaihe, jossa keskimmäisten summa on laskettu: (29 + 31) / 2 = □ = 30"
+      },
+      "payload": {
+        "lines": [
+          "(29 + 31) / 2",
+          "60 / 2",
+          "30"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "60 / 2",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(29 + 31) / 2 = 60 / 2",
+          "60 / 2 = 30"
+        ],
+        "final": "60 / 2"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_fs",
+        "params": {
+          "values": [
+            22,
+            31,
+            29,
+            12,
+            36,
+            34
+          ],
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Viikon päivälämpötilat ovat 3, 29, 27, 5, 14, 26, 1 astetta. Mediaani on 14. Laske keskiarvon ja mediaanin erotus. Kirjoita välivaihe, jossa keskiarvo on laskettu: 105 / 7 − 14 = □ = 1"
+      },
+      "payload": {
+        "lines": [
+          "105 / 7 − 14",
+          "15 − 14",
+          "1"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "15 − 14",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "105 / 7 − 14 = 15 − 14",
+          "15 − 14 = 1"
+        ],
+        "final": "15 − 14"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_fs",
+        "params": {
+          "values": [
+            3,
+            29,
+            27,
+            5,
+            14,
+            26,
+            1
+          ],
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Neljän ostoksen hinnat ovat 15, 17, 8, 6 euroa. Viides ostos maksaa 84 euroa. Laske kaikkien viiden hintojen keskiarvo. Kirjoita välivaihe, jossa summa on laskettu: (15 + 17 + 8 + 6 + 84) / 5 = □ = 26"
+      },
+      "payload": {
+        "lines": [
+          "(15 + 17 + 8 + 6 + 84) / 5",
+          "130 / 5",
+          "26"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "130 / 5",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(15 + 17 + 8 + 6 + 84) / 5 = 130 / 5",
+          "130 / 5 = 26"
+        ],
+        "final": "130 / 5"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_fs",
+        "params": {
+          "values": [
+            15,
+            17,
+            8,
+            6
+          ],
+          "outlier": 84,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kolmen kokeen keskiarvo on 9. Neljännen kokeen tulos on 11. Laske neljän kokeen keskiarvo; kolmen ensimmäisen summa on 9 · 3. Kirjoita välivaihe, jossa summa on laskettu: (9 · 3 + 11) / 4 = □ = 9,5"
+      },
+      "payload": {
+        "lines": [
+          "(9 · 3 + 11) / 4",
+          "38 / 4",
+          "9,5"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "38 / 4",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(9 · 3 + 11) / 4 = 38 / 4",
+          "38 / 4 = 9,5"
+        ],
+        "final": "38 / 4"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_fs",
+        "params": {
+          "mean": 9,
+          "last": 11,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 24
+      }
+    }
+  ]
+}
