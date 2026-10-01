@@ -1,0 +1,378 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.04"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-04"
+      ],
+      "prompt": {
+        "text": "Onko y = 3 funktio, kun x voi olla mikä tahansa luku?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "On, mutta vain jos x = 3",
+            "misconception": null,
+            "feedback": "Funktio on määritelty kaikille x:n arvoille, ei vain yhdelle."
+          },
+          {
+            "id": "b",
+            "text": "On, koska jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, nimittäin 3",
+            "misconception": null,
+            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+          },
+          {
+            "id": "c",
+            "text": "Ei ole, koska y ei muutu x:n mukana",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          },
+          {
+            "id": "d",
+            "text": "Ei ole, koska lausekkeessa ei ole x:ää",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kun x = 1, y = 3; kun x = 2, y = 3",
+          "Jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo 3"
+        ],
+        "final": "On funktio"
+      },
+      "feedback": {
+        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+      },
+      "provenance": {
+        "template": "fun04_mc",
+        "params": {
+          "c": 3,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.04"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-04"
+      ],
+      "prompt": {
+        "text": "Kuntosalin kuukausimaksu on 20 € riippumatta siitä, kuinka monta kertaa käyt salilla. Onko kuukausimaksu käyntikertojen funktio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei ole, koska käyntikertoja ei voi laskea lausekkeeseen",
+            "misconception": null,
+            "feedback": "Käyntikertojen määrä on funktion muuttuja, vaikka maksu ei siitä riipu."
+          },
+          {
+            "id": "b",
+            "text": "On: jokaista käyntikertojen määrää vastaa täsmälleen yksi maksu, 20 €",
+            "misconception": null,
+            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+          },
+          {
+            "id": "c",
+            "text": "Ei ole, koska maksu ei muutu käyntikertojen mukana",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          },
+          {
+            "id": "d",
+            "text": "On vain, jos käyntikertoja on yli 10",
+            "misconception": null,
+            "feedback": "Funktio on määritelty kaikilla käyntikertamäärillä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0 käyntiä: 20 €, 10 käyntiä: 20 €",
+          "Jokaista määrää vastaa yksi maksu, joten kyseessä on funktio"
+        ],
+        "final": "On funktio"
+      },
+      "feedback": {
+        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+      },
+      "provenance": {
+        "template": "fun04_mc",
+        "params": {
+          "fee": 20,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.04"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-04"
+      ],
+      "prompt": {
+        "text": "Funktio on f(x) = 4. Mikä on f(10)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sitä ei voi laskea, koska lausekkeessa ei ole x:ää",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          },
+          {
+            "id": "b",
+            "text": "40",
+            "misconception": null,
+            "feedback": "Funktion arvo ei riipu x:stä: f(x) on aina 4."
+          },
+          {
+            "id": "c",
+            "text": "4",
+            "misconception": null,
+            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+          },
+          {
+            "id": "d",
+            "text": "10",
+            "misconception": null,
+            "feedback": "f(10) ei ole 10, vaan lausekkeen arvo 4."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f(x) = 4 kaikilla x:n arvoilla",
+          "f(10) = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+      },
+      "provenance": {
+        "template": "fun04_mc",
+        "params": {
+          "c": 4,
+          "x0": 10,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.04"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-04"
+      ],
+      "prompt": {
+        "text": "Funktion kuvaaja on vaakasuora suora y = 4. Mitä siitä voi päätellä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se ei ole funktion kuvaaja, koska se on suora eikä käyrä",
+            "misconception": null,
+            "feedback": "Suora voi olla funktion kuvaaja."
+          },
+          {
+            "id": "b",
+            "text": "Se on funktion kuvaaja vain, jos suora nousee",
+            "misconception": null,
+            "feedback": "Funktion ei tarvitse olla nouseva."
+          },
+          {
+            "id": "c",
+            "text": "Se ei ole funktion kuvaaja, koska y ei muutu",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          },
+          {
+            "id": "d",
+            "text": "Se on funktion kuvaaja: jokaisella x:llä on täsmälleen yksi y:n arvo, 4",
+            "misconception": null,
+            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pystysuora suora leikkaa kuvaajan täsmälleen kerran jokaisella x:llä",
+          "Siis kyseessä on funktio"
+        ],
+        "final": "Funktion kuvaaja"
+      },
+      "feedback": {
+        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+      },
+      "provenance": {
+        "template": "fun04_mc",
+        "params": {
+          "c": 4,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.04"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-04"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: \"y = 5 ei ole funktio, koska siinä ei ole x:ää eikä y muutu.\" Mikä väitteen perustelussa on virheellistä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se, että y on kokonaisluku",
+            "misconception": null,
+            "feedback": "Funktion arvon laji ei ratkaise sitä, onko kyseessä funktio."
+          },
+          {
+            "id": "b",
+            "text": "Funktio vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y; muuttuminen ei ole vaatimus",
+            "misconception": null,
+            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+          },
+          {
+            "id": "c",
+            "text": "Mikään, väite on oikein",
+            "misconception": "FUN-04",
+            "feedback": "Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää."
+          },
+          {
+            "id": "d",
+            "text": "Se, että funktiossa pitää olla kaksi muuttujaa",
+            "misconception": null,
+            "feedback": "Funktiossa on yksi riippumaton muuttuja."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Funktion määritelmä: jokaista x:ää vastaa täsmälleen yksi y",
+          "y = 5 täyttää määritelmän"
+        ],
+        "final": "Muuttuminen ei ole funktion vaatimus"
+      },
+      "feedback": {
+        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+      },
+      "provenance": {
+        "template": "fun04_mc",
+        "params": {
+          "c": 5,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    }
+  ]
+}

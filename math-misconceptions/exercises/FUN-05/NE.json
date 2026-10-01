@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-05",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Funktio on y = 3x + 4. Kun x = 4, y = 16. Mikä on y, kun x = 8?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 28
+        },
+        "wrong": [
+          {
+            "match": 32,
+            "misconception": "FUN-05",
+            "feedback": "Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "y = 3 · 8 + 4 = 28",
+          "Ei 32, sillä funktio ei ole suoraan verrannollinen"
+        ],
+        "final": "28"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+      },
+      "provenance": {
+        "template": "fun05_ne",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "x0": 4,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Pizzan kuljetuksen hinta on 6 € + 4 € jokaiselta kilometriltä. 5 km:n kuljetus maksaa 26 €. Mitä 10 km:n kuljetus maksaa euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 46
+        },
+        "wrong": [
+          {
+            "match": 52,
+            "misconception": "FUN-05",
+            "feedback": "Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "6 + 4 · 10 = 46"
+        ],
+        "final": "46"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+      },
+      "provenance": {
+        "template": "fun05_ne",
+        "params": {
+          "a": 4,
+          "b": 6,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Funktio on y = 3x + 2. Kun x = 2, y = 8. Mikä on y, kun x = 6?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 20
+        },
+        "wrong": [
+          {
+            "match": 24,
+            "misconception": "FUN-05",
+            "feedback": "Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "y = 3 · 6 + 2 = 20"
+        ],
+        "final": "20"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+      },
+      "provenance": {
+        "template": "fun05_ne",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "x0": 2,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Funktio on y = 2x + 5. Kuinka paljon y:n arvo kasvaa, kun x kasvaa arvosta 3 arvoon 6?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": 11,
+            "misconception": "FUN-05",
+            "feedback": "Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "y(3) = 11, y(6) = 17",
+          "Kasvu = 17 − 11 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+      },
+      "provenance": {
+        "template": "fun05_ne",
+        "params": {
+          "a": 2,
+          "b": 5,
+          "x0": 3,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Suoralla on piste (1, 3) ja piste (2, 8). Mikä on y, kun x = 4?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 18
+        },
+        "wrong": [
+          {
+            "match": 12,
+            "misconception": "FUN-05",
+            "feedback": "Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kulmakerroin = (8 − 3) / (2 − 1) = 5",
+          "y = 3 + 3 · 5 = 18"
+        ],
+        "final": "18"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+      },
+      "provenance": {
+        "template": "fun05_ne",
+        "params": {
+          "p": 3,
+          "q": 8,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    }
+  ]
+}

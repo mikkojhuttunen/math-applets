@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Funktio on y = 2x + 3. Kun x kaksinkertaistuu arvosta 1 arvoon 2, kaksinkertaistuuko myös y?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, koska kuvaaja on suora",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "b",
+            "text": "Ei: y pienenee arvosta 5 arvoon 7",
+            "misconception": null,
+            "feedback": "Arvo kasvaa, 5 → 7."
+          },
+          {
+            "id": "c",
+            "text": "Ei: y muuttuu arvosta 5 arvoon 7, eikä 7 ole 10",
+            "misconception": null,
+            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+          },
+          {
+            "id": "d",
+            "text": "Kyllä, koska x ja y kasvavat yhtä aikaa",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 1: y = 2 + 3 = 5",
+          "x = 2: y = 4 + 3 = 7",
+          "2 · 5 = 10 ≠ 7"
+        ],
+        "final": "Ei kaksinkertaistu"
+      },
+      "feedback": {
+        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Taulukossa x = 1, 2, 3 ja y = 7, 12, 17. Taulukon arvot ovat suoralta. Onko y suoraan verrannollinen x:ään?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, koska arvot ovat suoralta",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "b",
+            "text": "Ei, koska arvot eivät ole suoralta",
+            "misconception": null,
+            "feedback": "Arvot ovat suoralta: erotukset ovat yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä, koska y kasvaa kun x kasvaa",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "d",
+            "text": "Ei: suhde y/x ei ole vakio (7/1 = 7, mutta 12/2 = 6)",
+            "misconception": null,
+            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "y/x: 7/1 = 7, 12/2 = 6",
+          "Suhde ei ole vakio"
+        ],
+        "final": "Ei ole"
+      },
+      "feedback": {
+        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Taksimatkan hinta on 4 € + 2 € jokaiselta kilometriltä. 3 km:n matka maksaa 10 €. Mitä 6 km:n matka maksaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "16 €",
+            "misconception": null,
+            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+          },
+          {
+            "id": "b",
+            "text": "18 €",
+            "misconception": null,
+            "feedback": "Matka on 6 km, ei 7 km."
+          },
+          {
+            "id": "c",
+            "text": "20 €",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "d",
+            "text": "12 €",
+            "misconception": null,
+            "feedback": "Aloitusmaksu pitää myös lisätä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4 + 2 · 6 = 16",
+          "2 · 10 = 20 ei kelpaa, koska aloitusmaksu on mukana vain kerran"
+        ],
+        "final": "16 €"
+      },
+      "feedback": {
+        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "n": 3,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Minkä funktion arvo kaksinkertaistuu aina, kun x kaksinkertaistuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "y = 4x + 2",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "b",
+            "text": "y = x + 4",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "c",
+            "text": "y = 4 − x",
+            "misconception": null,
+            "feedback": "y pienenee x:n kasvaessa."
+          },
+          {
+            "id": "d",
+            "text": "y = 4x",
+            "misconception": null,
+            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "y = 4x: y(2x) = 4 · 2x = 2 · 4x",
+          "y = 4x + 2: y(2x) = 8x + 2 ≠ 2 · (4x + 2)"
+        ],
+        "final": "y = 4x"
+      },
+      "feedback": {
+        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.03"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: \"Funktio y = 4x + 1 on suora, joten se on suoraan verrannollisuus.\" Mikä on vastaesimerkki?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei vastaesimerkkiä, väite on oikein",
+            "misconception": "FUN-05",
+            "feedback": "Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot."
+          },
+          {
+            "id": "b",
+            "text": "Kun x = 1, y = 4",
+            "misconception": null,
+            "feedback": "Kun x = 1, y = 5."
+          },
+          {
+            "id": "c",
+            "text": "Kun x = 1, y = 5; kun x = 2, y = 9. Arvo 9 ei ole kaksinkertainen arvoon 5 verrattuna",
+            "misconception": null,
+            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+          },
+          {
+            "id": "d",
+            "text": "Kun x = 0, y = 0",
+            "misconception": null,
+            "feedback": "Kun x = 0, y = 1, eikä 0."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 1: y = 5",
+          "x = 2: y = 9",
+          "2 · 5 = 10 ≠ 9"
+        ],
+        "final": "Suora ei kulje origon kautta"
+      },
+      "feedback": {
+        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 4,
+          "b": 1,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 26
+      }
+    }
+  ]
+}
