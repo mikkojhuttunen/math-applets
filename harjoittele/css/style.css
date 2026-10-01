@@ -115,3 +115,16 @@ h2 { font-size: 1.3rem; margin: 0 0 4px; }
 .topic:hover, .topic:focus { border-color: var(--link); }
 .topic-count { font-size: .85rem; font-weight: 400; color: var(--dim); white-space: nowrap; }
 .actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+.columns-box { margin: 10px 0; }
+.columns {
+  display: grid; justify-content: start; font-size: 1.5rem; line-height: 1.5;
+  font-variant-numeric: tabular-nums; font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+.columns .c { text-align: center; }
+.columns .op { color: var(--dim); }
+.columns .line { border-bottom: 2px solid var(--text); }
+.columns .carry { font-size: .8rem; line-height: 1.2; color: var(--link); align-self: end; }
+.columns .wrong { color: var(--bad); background: color-mix(in srgb, var(--bad) 15%, transparent); border-radius: 4px; font-weight: 700; }
+.columns .right { color: var(--ok); font-weight: 700; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }

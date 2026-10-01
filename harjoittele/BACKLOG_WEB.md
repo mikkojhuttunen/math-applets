@@ -110,12 +110,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: Start screen "Valitse aihe": goals that have items, grouped by grade band, with item counts, plus "Kaikki aiheet sekaisin". Topic names for pupils come from the hand-written `data/topics_fi.json` (3 titles now: A36.S2.04 "Yhteen- ja vähennyslasku allekkain", A36.S2.11 "Murtolukujen vertailu", A36.S2.12 "Murtolukujen yhteenlasku"; teacher may reword), falling back to the curriculum text. A test fails when a bank uses a goal with no title, as a reminder. URL parameters `?tavoite=`, `?luokat=`, `?virhe=` (combinable, `luonnokset=1` kept), set with `history.pushState`, so links are shareable and Back returns to the start screen; a choice with no items says so. The round shows the topic and a "Vaihda aihe" link; the summary has "Uusi kierros" and "Vaihda aihe". The teacher view shows the pupil link for its current goal / band / misconception filters. To support this, `tools/build_goals.js` builds `data/goals.json` (128 goals from section 3 of both curriculum files, with area and 7-9 grade), which is also the data W11 needs. `js/teacher_logic.js` renamed `js/filters.js` (shared). 6 new unit tests; browser test covers the start screen, topic link, URL, items all on the chosen goal, Back, an unknown goal, and the pupil link.
 
 ### W09 Visual feedback for column arithmetic
-- State: todo
+- State: done
 - Needs: W06
 - What: for the subtraction misconceptions (`NUM-10a`, `NUM-10b`, `NUM-10c`), show the pupil's answer and the correct one in columns and highlight the column where they differ. Pattern for later visual feedback on other misconceptions, and for links to matching applets.
 - Test: rendering for each sub-variant with the real batch items.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.10.0
+- Notes: `js/columns.js` (pure): `parseSubtraction()` reads `Laske A − B.` stems, `columnLayout()` right-aligns the digits, works out the correct column method (including borrowing across a zero) and lists the columns where the pupil's answer differs. On the practice page, any wrong whole-number answer to a subtraction item (not only stored misconception answers) shows the sum in columns: after the first try only the pupil's row with the wrong columns in red (no correct digits, so the second try is still theirs); after the second try also the borrow marks above the top row and the correct row in green. With 453 − 127 the three NUM-10 variants mark different columns: 10a tens and ones, 10b ones, 10c tens. Single-item mode now shows the topic name instead of the id. 6 new unit tests, including every stored wrong answer of the 40 real subtraction items; the browser test checks the marked columns on the first try and the correct row and borrows after the second. Addition and other operations are not covered yet: the parser only accepts subtraction.
 
 ### W10 Teacher view
 - State: done
@@ -188,3 +188,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-10-01 | W10 | Teacher view, v0.7.0; browser test OK |
 | 2026-10-01 | W07 | Choice items shuffled and lettered, letter keys, v0.8.0 |
 | 2026-10-01 | W08 | Start screen, shareable topic links, goals.json, v0.9.0 |
+| 2026-10-01 | W09 | Subtraction in columns after a wrong answer, v0.10.0 |

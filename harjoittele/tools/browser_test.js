@@ -89,7 +89,7 @@ try {
     await page.close();
   }
   const byStem = Object.fromEntries(data.map((i) => [i.stem, i]));
-  const entry = data.find((i) => i.kind === 'entry' && i.wrong.length && /^\d+$/.test(i.answer));
+  const entry = data.find((i) => i.kind === 'entry' && i.wrong.length && /^\d+$/.test(i.answer) && /\u2212/.test(i.stem));
   const choice = data.find((i) => i.kind === 'choice' && i.options.some((o) => !o.correct && o.misconception));
 
   // One typed item: unreadable, misconception answer, another wrong answer, reveal.
@@ -109,10 +109,20 @@ try {
     const retryText = await page.textContent('.feedback');
     check(retryText.includes('Yritä vielä kerran') && retryText.includes(`Virhekäsitys: ${mis.misconception}`), `retry after ${mis.match} not shown: ${retryText}`);
     check(!retryText.includes('Tarkista laskusi'), 'draft misconception text not used');
+    const isSubtraction = /\d\s*\u2212\s*\d/.test(entry.stem);
+    if (isSubtraction) {
+      check((await page.locator('.columns .wrong').count()) > 0, 'column view: no wrong column marked after the first try');
+      check((await page.locator('.columns .right').count()) === 0, 'column view: correct digits shown before the second try');
+    }
     await submit('1');
     const reveal = await page.textContent('.feedback');
     check(reveal.includes(`Oikea vastaus: ${entry.answer}`), `reveal missing: ${reveal}`);
     check(await page.isDisabled('#answer'), 'answer field not locked after reveal');
+    if (isSubtraction) {
+      const rightRow = (await page.locator('.columns .right').allTextContents()).join('');
+      check(rightRow === entry.answer, `column view: correct row ${rightRow} is not ${entry.answer}`);
+      check((await page.locator('.columns .carry').allTextContents()).join('') !== '', 'column view: no borrow marks after the reveal');
+    }
     await page.click('text=Katso tulos');
     check((await page.textContent('#app')).includes('Sait 0/1 oikein'), 'single-item summary wrong');
     await commonChecks(page, 'typed item');

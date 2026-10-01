@@ -10,6 +10,7 @@ import { loadItems } from './items.js';
 import { loadMisconceptions, feedbackFor } from './misconceptions.js';
 import { createRound, answerText, presentOptions } from './round.js';
 import { el } from './dom.js';
+import { parseSubtraction, columnLayout } from './columns.js';
 import { filterItems, filtersFromParams, paramsFromFilters, topicTitle, startChoices } from './filters.js';
 
 const ROUND_SIZE = 5;
@@ -105,10 +106,11 @@ function renderQuestion() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (round.settled) return;
-      handleOutcome(round.answer(input.value), feedback, () => {
+      const given = input.value;
+      handleOutcome(round.answer(given), feedback, () => {
         input.disabled = true;
         check.disabled = true;
-      }, () => input.select());
+      }, () => input.select(), { item, given });
     });
     nodes.push(form, feedback, numberPad(input, expression));
   } else {
@@ -131,10 +133,40 @@ function renderQuestion() {
   if (first && !matchMedia('(pointer: coarse)').matches) first.focus();
 }
 
-function handleOutcome(out, feedback, lock, retry) {
+// Subtraction in columns: the pupil's answer with the differing columns
+// marked. After the second try also the correct row and the borrows.
+function columnsView(item, given, reveal) {
+  const sub = item && item.kind === 'entry' && parseSubtraction(item.stem);
+  const layout = sub && columnLayout(sub.a, sub.b, given);
+  if (!layout || !layout.wrong.length) return null;
+  const cols = layout.width + 1;
+  const grid = el('div', { class: 'columns', style: `grid-template-columns: repeat(${cols}, 1.6em)` });
+  const cell = (text, cls = '') => grid.append(el('span', { class: `c ${cls}`.trim(), text }));
+  const row = (label, values, classOf = () => '') => {
+    cell(label, 'op');
+    values.forEach((v, i) => cell(v, classOf(i)));
+  };
+  if (reveal) row('', layout.carry, () => 'carry');
+  row('', layout.top);
+  row('\u2212', layout.bottom, () => 'line');
+  row('', layout.given, (i) => (layout.wrong.includes(i) ? 'wrong' : ''));
+  if (reveal) row('', layout.correct, () => 'right');
+  const legend = reveal
+    ? 'Ylärivillä pienet luvut näyttävät lainaamisen. Punaisella merkityissä sarakkeissa vastauksesi poikkeaa oikeasta (alin rivi).'
+    : 'Punaisella merkityissä sarakkeissa on virhe. Laske ne uudelleen.';
+  const columns = layout.wrong.length;
+  return el('figure', { class: 'columns-box' }, grid,
+    el('figcaption', { class: 'meta', text: legend }),
+    el('span', { class: 'sr-only', text: `Virhe ${columns} sarakkeessa.` }));
+}
+
+function handleOutcome(out, feedback, lock, retry, context = {}) {
   if (!out) return;
   const kind = out.status === 'correct' ? 'ok' : out.status === 'unreadable' ? 'info' : 'bad';
   const parts = [el('p', { class: `msg ${kind}`, text: out.text })];
+  if (out.status === 'retry' || out.status === 'reveal') {
+    parts.push(columnsView(context.item, context.given, out.status === 'reveal'));
+  }
   if (drafts && out.misconception) parts.push(el('p', { class: 'meta', text: `Virhekäsitys: ${out.misconception}` }));
   if (out.status === 'retry') parts.push(el('p', { class: 'msg', text: 'Yritä vielä kerran.' }));
   if (out.status === 'reveal') {
@@ -149,11 +181,11 @@ function handleOutcome(out, feedback, lock, retry) {
     const next = el('button', { type: 'button', class: 'primary', text: last ? 'Katso tulos' : 'Seuraava' });
     next.addEventListener('click', () => (round.next() ? renderQuestion() : renderSummary()));
     parts.push(next);
-    feedback.replaceChildren(...parts);
+    feedback.replaceChildren(...parts.filter(Boolean));
     next.focus();
     return;
   }
-  feedback.replaceChildren(...parts);
+  feedback.replaceChildren(...parts.filter(Boolean));
   if (retry) retry();
 }
 
@@ -250,7 +282,7 @@ function route() {
   if (items.length === 0) return renderEmpty();
   if (onlyItem) {
     pool = items.filter((i) => i.id === onlyItem);
-    topicLabel = onlyItem;
+    topicLabel = pool.length ? topicTitle(pool[0].goals[0], topics, goals) : onlyItem;
     if (!pool.length) return show(el('p', { text: `Tehtävää ${onlyItem} ei löytynyt${drafts ? '' : ' tarkistetuista tehtävistä'}.` }));
     return startRound();
   }

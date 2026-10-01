@@ -2,6 +2,10 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.10.0 (2026-10-01)
+
+- W09: a wrong answer to a subtraction shows the sum in columns with the wrong columns marked; after the second try also the borrows and the correct row.
+
 ## 0.9.0 (2026-10-01)
 
 - W08: start screen with topics; shareable links `?tavoite=`, `?luokat=`, `?virhe=`; pupil link in the teacher view; `data/goals.json` from the curriculum files (`tools/build_goals.js`) and pupil titles in `data/topics_fi.json`.
