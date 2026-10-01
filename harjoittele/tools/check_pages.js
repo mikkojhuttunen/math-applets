@@ -33,7 +33,7 @@ export const PAGES = [
       await page.waitForSelector('.stem');
     },
   },
-  { url: 'harjoittele/?tavoite=X9.99' },
+  { url: 'harjoittele/?tavoite=X99' },
   { url: 'harjoittele/opettaja.html', wait: '#item-list .item' },
   {
     url: 'harjoittele/opettaja.html',

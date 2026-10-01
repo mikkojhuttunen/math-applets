@@ -63,12 +63,22 @@ const browser = await chromium.launch();
 const context = await browser.newContext({ permissions: ['clipboard-read', 'clipboard-write'] });
 
 try {
-  // Pupil view: all current items are drafts, so the page says so.
+  // Pupil view: the start screen when some items are reviewed or approved,
+  // otherwise the "no reviewed exercises yet" message.
   {
     const { page, problems } = await pageWithGuards(context, origin);
     await page.goto(`${origin}/harjoittele/`);
-    await page.waitForSelector('#app a[href="?luonnokset=1"]');
-    check((await page.textContent('#app')).includes('Tarkistettuja tehtäviä ei ole vielä'), 'pupil view: empty message missing');
+    const pupilReady = await page.evaluate(async () => {
+      const manifest = await (await fetch('data/manifest.json')).json();
+      return manifest.files.some((f) => f.by_status.reviewed || f.by_status.approved);
+    });
+    if (pupilReady) {
+      await page.waitForSelector('.topic');
+      check(!(await page.textContent('#app')).includes('Tarkistettuja tehtäviä ei ole vielä'), 'pupil view: empty message shown although items are reviewed');
+    } else {
+      await page.waitForSelector('#app a[href="?luonnokset=1"]');
+      check((await page.textContent('#app')).includes('Tarkistettuja tehtäviä ei ole vielä'), 'pupil view: empty message missing');
+    }
     check(await page.isHidden('#draft-banner'), 'pupil view: draft banner visible');
     await commonChecks(page, 'pupil view');
     problems.forEach((p) => failures.push(`pupil view: ${p}`));
