@@ -76,6 +76,22 @@ Write the first `n` of those, unchanged, to `exercises/grades1-6/batch-$STAMP.js
 5. Vary the numbers and the contexts. No two stems may be the same, also across earlier batches.
 6. Avoid tasks with two reasonable readings. If unsure, leave the item out.
 
+**Finnish terms.** Use the words Finnish teachers and textbooks use; do not translate English terms word for word.
+
+| Concept | Use | Never |
+|---|---|---|
+| base-ten blocks (the set) | kymmenjärjestelmävälineet | kymmenkantavälineet |
+| one (small cube) | ykköskuutio, ykkönen | |
+| ten (rod of ten) | kymppitanko, kymppisauva, kymppi | kymmenkanta, kymmensauva |
+| hundred (flat) | satalevy, satanen | |
+| thousand (cube) | tuhatkuutio, tuhat | |
+| place value columns | ykköset, kymmenet, sadat, tuhannet | |
+| digit / number | numero (one symbol) / luku (the value) | numero for a whole number |
+| column method | allekkain, laskea allekkain | sarakemenetelmä |
+| numerator / denominator | osoittaja / nimittäjä | |
+
+Grammar with numbers: after 1 the noun is in the nominative, after 2 and more in the partitive: *1 ykköskuutio*, *5 kymppitankoa*. With a case ending both agree: *1 ykköskuutiosta*, *9 kymppitangosta*. Write numbers with a decimal comma and the minus sign − (U+2212) also in `stem_fi`.
+
 **Evidence.** If the item bank row has evidence `Limited`, add a `notes` entry: "Evidence for this misconception is limited; reviewer to confirm".
 
 ## Verify before you commit

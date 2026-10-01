@@ -206,28 +206,30 @@
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Kymmenkantoja on 5 ja ykkösiä 8. Mikä luku on kyseessä?",
+  "stem_fi": "Pöydällä on 5 kymppitankoa ja 8 ykköskuutiota. Mikä luku niistä muodostuu?",
   "answer": "58",
   "answer_expr": "5 * 10 + 8",
   "workbook": [
    "NUM-09"
   ],
   "source": "generated",
-  "status": "draft"
+  "status": "draft",
+  "notes": "Sanamuoto korjattu käsin 2026-10-01: kymmenkanta → kymppitanko."
  },
  {
   "id": "A12.S2.06-place-20261001-0021-013",
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Lukua kuvaa 9 kymmenkantaa ja 1 ykköskuutiota. Mikä luku se on?",
+  "stem_fi": "Luku on rakennettu 9 kymppitangosta ja 1 ykköskuutiosta. Mikä luku se on?",
   "answer": "91",
   "answer_expr": "9 * 10 + 1",
   "workbook": [
    "NUM-09"
   ],
   "source": "generated",
-  "status": "draft"
+  "status": "draft",
+  "notes": "Sanamuoto korjattu käsin 2026-10-01: kymmenkanta → kymppitanko, 1 ykköskuutiota → 1 ykköskuutiosta."
  },
  {
   "id": "A12.S2.06-place-20261001-0021-014",
