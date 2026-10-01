@@ -1,0 +1,382 @@
+[
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-002",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 3/9 + 1/3. Vastaa murtolukuna.",
+    "answer": "2/3",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "3/9 + 1/3",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "1/3"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-005",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 2/8 + 1/2. Vastaa murtolukuna.",
+    "answer": "3/4",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "2/8 + 1/2",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "3/10"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-008",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 4/5 + 4/9. Vastaa murtolukuna.",
+    "answer": "56/45",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "4/5 + 4/9",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/7"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-011",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/4 + 3/5. Vastaa murtolukuna.",
+    "answer": "17/20",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/4 + 3/5",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/9"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-014",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/2 + 2/8. Vastaa murtolukuna.",
+    "answer": "3/4",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/2 + 2/8",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "3/10"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-017",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 3/7 + 1/2. Vastaa murtolukuna.",
+    "answer": "13/14",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "3/7 + 1/2",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/9"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-020",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 4/8 + 2/6. Vastaa murtolukuna.",
+    "answer": "5/6",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "4/8 + 2/6",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "3/7"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-023",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 6/9 + 2/3. Vastaa murtolukuna.",
+    "answer": "4/3",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "6/9 + 2/3",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "2/3"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-026",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/4 + 1/6. Vastaa murtolukuna.",
+    "answer": "5/12",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/4 + 1/6",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "1/5"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-029",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 3/9 + 1/6. Vastaa murtolukuna.",
+    "answer": "1/2",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "3/9 + 1/6",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/15"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-032",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/4 + 4/6. Vastaa murtolukuna.",
+    "answer": "11/12",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/4 + 4/6",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "1/2"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-035",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/7 + 1/6. Vastaa murtolukuna.",
+    "answer": "13/42",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/7 + 1/6",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "2/13"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-038",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 5/9 + 3/5. Vastaa murtolukuna.",
+    "answer": "52/45",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "5/9 + 3/5",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/7"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-041",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 4/7 + 4/9. Vastaa murtolukuna.",
+    "answer": "64/63",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "4/7 + 4/9",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "1/2"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-044",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 1/8 + 1/3. Vastaa murtolukuna.",
+    "answer": "11/24",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "1/8 + 1/3",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "2/11"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-046",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 4/6 + 2/3. Vastaa murtolukuna.",
+    "answer": "4/3",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "4/6 + 2/3",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "2/3"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-049",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 5/6 + 7/9. Vastaa murtolukuna.",
+    "answer": "29/18",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "5/6 + 7/9",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/5"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-051",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 4/5 + 1/4. Vastaa murtolukuna.",
+    "answer": "21/20",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "4/5 + 1/4",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "5/9"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-054",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 7/8 + 1/4. Vastaa murtolukuna.",
+    "answer": "9/8",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "7/8 + 1/4",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "2/3"
+      }
+    }
+  },
+  {
+    "id": "A36.S2.12-fadd-20260930-2020-057",
+    "goal": "A36.S2.12",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Laske 2/8 + 2/5. Vastaa murtolukuna.",
+    "answer": "13/20",
+    "workbook": [
+      "NUM-03"
+    ],
+    "source": "template",
+    "status": "draft",
+    "answer_expr": "2/8 + 2/5",
+    "misconceptions": {
+      "NUM-03": {
+        "answer": "4/13"
+      }
+    }
+  }
+]
