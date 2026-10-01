@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 14 |
+| Runs completed | 15 |
 | Last run | 2026-10-01 |
-| Progress | 76 of 227 planned cells generated |
+| Progress | 79 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -209,9 +209,9 @@ Same row order as section 3.1. Columns are in phase order.
 | NUM-07 | X | X | X | X | X | - | - | - | - | o | - | - | o | - | o |
 | PRO-03 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
 | PRO-04 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
-| GEO-01 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| GEO-02 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| FUN-01 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
+| GEO-01 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
+| GEO-02 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
+| FUN-01 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
 | PRB-01 | o | o | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | PRB-02 | o | o | - | - | - | - | o | o | - | - | - | - | o | - | - |
 | EXT-01 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
@@ -316,6 +316,9 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | NUM-07 | FS | NUM-07-FS-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/FS.json | Draft | Moderate; blanked line is an equation (answer kind equation); percentages written as hundredths so the checker compares exact rationals |
 | 2026-10-01 | PRO-03 | RP | PRO-03-RP-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/RP.json | Draft | Moderate; invalid equations equate the areas instead of the perimeters |
 | 2026-10-01 | PRO-04 | RP | PRO-04-RP-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/RP.json | Draft | Moderate; equal areas with a larger perimeter; invalid equations equate the perimeters |
+| 2026-10-01 | GEO-01 | MC | GEO-01-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-01/MC.json | Draft | Moderate; triangles given by coordinates, angles or sides (no figure); item 5 asks for a justification |
+| 2026-10-01 | GEO-02 | MC | GEO-02-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-02/MC.json | Draft | Moderate; item 5 asks to judge a class-inclusion claim (justification) |
+| 2026-10-01 | FUN-01 | MC | FUN-01-MC-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-01/MC.json | Draft | Moderate; graphs described by value tables and verbal trends (no figure); item 5 asks for a justification |
 
 ## 6. Curriculum coverage
 
