@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-09",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 2x + 1. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2
+        },
+        "wrong": [
+          {
+            "match": 1,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "match": 3,
+            "misconception": null,
+            "feedback": "Tarkista, mitä lukua kysytään: kulmakerroin on x:n kerroin."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Muoto y = mx + b, joten m = 2"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_ne",
+        "params": {
+          "m": 2,
+          "b": 1,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 8 − 3x. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -3
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "match": 3,
+            "misconception": null,
+            "feedback": "Tarkista, mitä lukua kysytään: kulmakerroin on x:n kerroin."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kirjoitetaan y = −3x + 8",
+          "Kulmakerroin on −3"
+        ],
+        "final": "−3"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_ne",
+        "params": {
+          "m": -3,
+          "b": 8,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suora y = 3x + 7 leikkaa y-akselin pisteessä (0, y). Mikä on y?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 7
+        },
+        "wrong": [
+          {
+            "match": 3,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "match": 10,
+            "misconception": null,
+            "feedback": "Tarkista, mitä lukua kysytään: kulmakerroin on x:n kerroin."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 0: y = 3 · 0 + 7 = 7"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_ne",
+        "params": {
+          "m": 3,
+          "b": 7,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran pisteiden taulukossa x = 0, 1, 2 ja y = 9, 11, 13. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2
+        },
+        "wrong": [
+          {
+            "match": 9,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "match": 11,
+            "misconception": null,
+            "feedback": "Tarkista, mitä lukua kysytään: kulmakerroin on x:n kerroin."
+          },
+          {
+            "match": 13,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kun x kasvaa yhdellä, y muuttuu 11 − 9 = 2",
+          "Kulmakerroin on 2"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_ne",
+        "params": {
+          "m": 2,
+          "b": 9,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran y = 4x + 1 pisteessä x = 0 on y = 1. Kuinka paljon y kasvaa, kun x kasvaa 4 yksikköä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 16
+        },
+        "wrong": [
+          {
+            "match": 4,
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin ja b on y:n arvo kohdassa x = 0."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kulmakerroin on 4, joten 4 yksikön muutoksella y muuttuu 4 · 4 = 16"
+        ],
+        "final": "16"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_ne",
+        "params": {
+          "m": 4,
+          "b": 1,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}

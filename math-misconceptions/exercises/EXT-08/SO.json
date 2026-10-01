@@ -1,0 +1,306 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-08",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Koepisteet ovat 18, 33, 10, 21, 24. Mediaani on 21. Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(18 + 33 + 10 + 21 + 24) / 5 − 21",
+          "106 / 5 − 21",
+          "21,2 − 21",
+          "0,2"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on summa jaettuna lukujen määrällä: 106 / 5 = 21,2",
+          "Mediaani on 21, joten erotus on 21,2 − 21 = 0,2"
+        ],
+        "final": "21,2 − 21 = 0,2"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+      },
+      "provenance": {
+        "template": "ext08_so",
+        "params": {
+          "values": [
+            18,
+            33,
+            10,
+            21,
+            24
+          ],
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Lukemat kirjat ovat 35, 11, 10, 9, 39. Mediaani on 11. Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(35 + 11 + 10 + 9 + 39) / 5 − 11",
+          "104 / 5 − 11",
+          "20,8 − 11",
+          "9,8"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on summa jaettuna lukujen määrällä: 104 / 5 = 20,8",
+          "Mediaani on 11, joten erotus on 20,8 − 11 = 9,8"
+        ],
+        "final": "20,8 − 11 = 9,8"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+      },
+      "provenance": {
+        "template": "ext08_so",
+        "params": {
+          "values": [
+            35,
+            11,
+            10,
+            9,
+            39
+          ],
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Päivälämpötilat ovat 12, 2, 29, 4, 35, 30, 7 astetta. Mediaani on 12. Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(12 + 2 + 29 + 4 + 35 + 30 + 7) / 7 − 12",
+          "119 / 7 − 12",
+          "17 − 12",
+          "5"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on summa jaettuna lukujen määrällä: 119 / 7 = 17",
+          "Mediaani on 12, joten erotus on 17 − 12 = 5"
+        ],
+        "final": "17 − 12 = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+      },
+      "provenance": {
+        "template": "ext08_so",
+        "params": {
+          "values": [
+            12,
+            2,
+            29,
+            4,
+            35,
+            30,
+            7
+          ],
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Lenkkien pituudet ovat 4, 28, 36, 5, 9, 26 minuuttia. Mediaani on 17,5. Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(4 + 28 + 36 + 5 + 9 + 26) / 6 − 17,5",
+          "108 / 6 − 17,5",
+          "18 − 17,5",
+          "0,5"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on summa jaettuna lukujen määrällä: 108 / 6 = 18",
+          "Mediaani on 17,5, joten erotus on 18 − 17,5 = 0,5"
+        ],
+        "final": "18 − 17,5 = 0,5"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+      },
+      "provenance": {
+        "template": "ext08_so",
+        "params": {
+          "values": [
+            4,
+            28,
+            36,
+            5,
+            9,
+            26
+          ],
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Viikon myynnit ovat 34, 18, 25, 1, 19, 17 kappaletta. Mediaani on 18,5. Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "(34 + 18 + 25 + 1 + 19 + 17) / 6 − 18,5",
+          "114 / 6 − 18,5",
+          "19 − 18,5",
+          "0,5"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on summa jaettuna lukujen määrällä: 114 / 6 = 19",
+          "Mediaani on 18,5, joten erotus on 19 − 18,5 = 0,5"
+        ],
+        "final": "19 − 18,5 = 0,5"
+      },
+      "feedback": {
+        "correct": "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+      },
+      "provenance": {
+        "template": "ext08_so",
+        "params": {
+          "values": [
+            34,
+            18,
+            25,
+            1,
+            19,
+            17
+          ],
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}
