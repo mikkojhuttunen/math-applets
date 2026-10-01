@@ -1,0 +1,318 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-08",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Oppilaat saivat kokeesta pisteet 19, 12, 4, 15, 14. Oppilas laskee mediaanin ja lisää siihen 4 bonuspistettä. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "4 + 14",
+          "4 + 4",
+          "8"
+        ],
+        "error_line": 2,
+        "error_type": "unsorted_middle"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 4, 12, 14, 15, 19, mediaani on 14",
+          "Rivillä 2 on käytetty listan keskimmäistä lukua 4 sellaisenaan, vaikka lista ei ollut järjestyksessä",
+          "Oikea tulos on 18"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+      },
+      "provenance": {
+        "template": "ext08_es",
+        "params": {
+          "values": [
+            19,
+            12,
+            4,
+            15,
+            14
+          ],
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Seitsemän päivän lämpötilat olivat 5, 16, 23, 27, 2, 19, 26 astetta. Oppilas laskee mediaanilämpötilan kaksinkertaisen. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 · 19",
+          "38",
+          "54"
+        ],
+        "error_line": 3,
+        "error_type": "unsorted_middle"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 2, 5, 16, 19, 23, 26, 27, mediaani on 19, ja 2 · 19 = 38",
+          "Rivi 3 käyttää lukua 27, joka on listan keskimmäinen luku vasta järjestämättä",
+          "Oikea tulos on 38"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+      },
+      "provenance": {
+        "template": "ext08_es",
+        "params": {
+          "values": [
+            5,
+            16,
+            23,
+            27,
+            2,
+            19,
+            26
+          ],
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden kävelylenkin pituudet olivat 7, 25, 14, 4, 29, 15 minuuttia. Oppilas laskee mediaanin kahden keskimmäisen keskiarvona. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(14 + 15) / 2",
+          "(14 + 4) / 2",
+          "14,5"
+        ],
+        "error_line": 2,
+        "error_type": "unsorted_middle"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 4, 7, 14, 15, 25, 29, keskimmäiset ovat 14 ja 15",
+          "Rivi 2 käyttää järjestämättömän listan keskimmäisiä lukuja 14 ja 4",
+          "Oikea tulos on 14,5"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+      },
+      "provenance": {
+        "template": "ext08_es",
+        "params": {
+          "values": [
+            7,
+            25,
+            14,
+            4,
+            29,
+            15
+          ],
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden oppilaan lukemat kirjat ovat 9, 10, 33, 39, 15, 37. Oppilas laskee mediaanin ja kertoo sen kolmella. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "3 · (15 + 33) / 2",
+          "3 · (33 + 39) / 2",
+          "72"
+        ],
+        "error_line": 2,
+        "error_type": "unsorted_middle"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 9, 10, 15, 33, 37, 39, keskimmäiset 15 ja 33, mediaani 24",
+          "Rivi 2 käyttää järjestämättömän listan keskimmäisiä lukuja 33 ja 39",
+          "Oikea tulos on 72"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+      },
+      "provenance": {
+        "template": "ext08_es",
+        "params": {
+          "values": [
+            9,
+            10,
+            33,
+            39,
+            15,
+            37
+          ],
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Seitsemän työntekijän kuukausipalkat ovat 15, 26, 12, 24, 13, 23, 216 (luvut ovat satoja euroja). Oppilas laskee mediaanipalkan euroina. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "23 · 100",
+          "47 · 100",
+          "4700"
+        ],
+        "error_line": 2,
+        "error_type": "mean_for_median"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 12, 13, 15, 23, 24, 26, 216, mediaani on 23, eli 2300 €",
+          "Rivi 2 käyttää keskiarvoa 47, joka on suuren arvon takia suurempi kuin tyypillinen palkka",
+          "Oikea tulos on 2300"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+      },
+      "provenance": {
+        "template": "ext08_es",
+        "params": {
+          "values": [
+            15,
+            26,
+            12,
+            24,
+            13,
+            23,
+            216
+          ],
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}

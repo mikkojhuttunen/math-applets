@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 22 |
+| Runs completed | 23 |
 | Last run | 2026-10-01 |
-| Progress | 116 of 227 planned cells generated |
+| Progress | 122 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -221,9 +221,9 @@ Same row order as section 3.1. Columns are in phase order.
 | EXT-05 | X | X | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | EXT-06 | X | X | X | - | X | - | - | o | o | o | - | - | - | - | - |
 | EXT-07 | X | X | X | - | - | - | - | - | o | o | - | - | - | - | - |
-| EXT-08 | X | X | o | o | o | - | o | - | - | - | - | - | o | o | - |
-| EXT-09 | o | o | - | - | - | - | o | o | o | - | o | - | - | - | - |
-| ALG-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
+| EXT-08 | X | X | X | X | o | - | o | - | - | - | - | - | o | o | - |
+| EXT-09 | X | X | - | - | - | - | o | o | o | - | o | - | - | - | - |
+| ALG-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | ALG-12 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
 | NUM-08 | o | o | o | - | - | - | - | - | - | o | - | - | o | o | - |
 | FUN-03 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
@@ -356,6 +356,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | EXT-07 | ES | EXT-07-ES-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/ES.json | Draft | Not assessed; literature evidence not yet checked; lines are numeric expressions; error: the length factor (100 or 1 000) is used for the area |
 | 2026-10-01 | EXT-08 | MC | EXT-08-MC-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/MC.json | Draft | Not assessed; literature evidence not yet checked; item 4 asks for a justification (mean vs median with an outlier), item 5 asks to judge a claim |
 | 2026-10-01 | EXT-08 | NE | EXT-08-NE-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answers are the middle of the unsorted list or the mean |
+| 2026-10-01 | EXT-08 | ES | EXT-08-ES-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/ES.json | Draft | Not assessed; literature evidence not yet checked; lines are numeric expressions; errors: the middle of the unsorted list used as the median, or the mean used for the median (item 5) |
+| 2026-10-01 | EXT-08 | SO | EXT-08-SO-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/SO.json | Draft | Not assessed; literature evidence not yet checked; task is mean minus median (median given in the prompt); exact order, all lines equal line 1 |
+| 2026-10-01 | EXT-09 | MC | EXT-09-MC-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/MC.json | Draft | Not assessed; literature evidence not yet checked; items 4 and 5 compare steepness of two lines (item 5 asks to judge a claim); xlsx has no row for EXT topics, seed from backlog section 3.2 |
+| 2026-10-01 | EXT-09 | NE | EXT-09-NE-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer is the intercept where the slope is asked (and the reverse) |
+| 2026-10-01 | ALG-03 | MC | ALG-03-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/MC.json | Draft | Limited; limited evidence, check full text before relying on it; items 4 and 5 ask for a justification (value is not the alphabet position) |
+| 2026-10-01 | ALG-03 | NE | ALG-03-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer is the letter's alphabet position |
 
 ## 6. Curriculum coverage
 

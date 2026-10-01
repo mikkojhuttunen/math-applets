@@ -1,0 +1,381 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-09",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 2x + 6. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin on x:n kerroin, 2."
+          },
+          {
+            "id": "b",
+            "text": "6",
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin on x:n kerroin, ei vakiotermi. Suoralla y = mx + b luku m kertoo, kuinka paljon y muuttuu, kun x kasvaa yhdellä, ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "id": "c",
+            "text": "8",
+            "misconception": null,
+            "feedback": "Kulmakerrointa ei saa summaamalla luvuista."
+          },
+          {
+            "id": "d",
+            "text": "−2",
+            "misconception": null,
+            "feedback": "Kulmakerroin on x:n kerroin sellaisenaan."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Yhtälö on muotoa y = mx + b, ja tässä m = 2",
+          "Vakiotermi 6 kertoo leikkauskohdan, ei kulmakerrointa"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+      },
+      "provenance": {
+        "template": "ext09_mc",
+        "params": {
+          "m": 2,
+          "b": 6,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 6 − 2x. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "4",
+            "misconception": null,
+            "feedback": "Kulmakerrointa ei saa vähentämällä luvuista."
+          },
+          {
+            "id": "b",
+            "text": "−2",
+            "misconception": null,
+            "feedback": "Oikein: x:n kerroin on −2, joten suora laskee."
+          },
+          {
+            "id": "c",
+            "text": "6",
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin on x:n kerroin, ei vakiotermi. Suoralla y = mx + b luku m kertoo, kuinka paljon y muuttuu, kun x kasvaa yhdellä, ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "id": "d",
+            "text": "2",
+            "misconception": null,
+            "feedback": "Kulmakertoimen merkki kuuluu x:n kertoimeen: suora laskee."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kirjoitetaan muotoon y = −2x + 6",
+          "Kulmakerroin on −2"
+        ],
+        "final": "−2"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+      },
+      "provenance": {
+        "template": "ext09_mc",
+        "params": {
+          "m": -2,
+          "b": 6,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Mihin kohtaan suora y = 2x + 8 leikkaa y-akselin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(2, 0)",
+            "misconception": "EXT-09",
+            "feedback": "Kulmakerroin on x:n kerroin, ei vakiotermi. Suoralla y = mx + b luku m kertoo, kuinka paljon y muuttuu, kun x kasvaa yhdellä, ja b on y:n arvo kohdassa x = 0."
+          },
+          {
+            "id": "b",
+            "text": "(0, 2)",
+            "misconception": null,
+            "feedback": "Kun x = 0, termi mx katoaa ja jäljelle jää vakiotermi."
+          },
+          {
+            "id": "c",
+            "text": "(0, 8)",
+            "misconception": null,
+            "feedback": "Oikein: kun x = 0, y = 8."
+          },
+          {
+            "id": "d",
+            "text": "(8, 0)",
+            "misconception": null,
+            "feedback": "Leikkauspiste y-akselin kanssa on muotoa (0, y)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 0: y = 2 · 0 + 8 = 8"
+        ],
+        "final": "(0, 8)"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+      },
+      "provenance": {
+        "template": "ext09_mc",
+        "params": {
+          "m": 2,
+          "b": 8,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suorat ovat y = 2x + 12 ja y = 4x + 6. Kumpi suora nousee jyrkemmin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suorat nousevat yhtä jyrkästi",
+            "misconception": null,
+            "feedback": "Suorien kulmakertoimet ovat eri suuria."
+          },
+          {
+            "id": "b",
+            "text": "Suora y = 4x + 6, koska sen kulmakerroin 4 on suurempi",
+            "misconception": null,
+            "feedback": "Oikein: 4 > 2, joten toinen suora nousee jyrkemmin."
+          },
+          {
+            "id": "c",
+            "text": "Suora y = 2x + 12, koska sen y-arvot ovat suurempia",
+            "misconception": "EXT-09",
+            "feedback": "Jyrkkyyden kertoo kulmakerroin, ei se, kumman suoran y-arvot ovat suurempia. Vakiotermi siirtää suoraa ylös tai alas mutta ei muuta sen jyrkkyyttä."
+          },
+          {
+            "id": "d",
+            "text": "Suora y = 2x + 12, koska sen vakiotermi 12 on suurempi",
+            "misconception": "EXT-09",
+            "feedback": "Jyrkkyyden kertoo kulmakerroin, ei se, kumman suoran y-arvot ovat suurempia. Vakiotermi siirtää suoraa ylös tai alas mutta ei muuta sen jyrkkyyttä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kulmakertoimet ovat 2 ja 4",
+          "Suurempi kulmakerroin 4 tarkoittaa jyrkempää nousua"
+        ],
+        "final": "y = 4x + 6"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+      },
+      "provenance": {
+        "template": "ext09_mc",
+        "params": {
+          "m": 2,
+          "b": 6,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: ”Suora y = 4x + 14 on jyrkempi kuin suora y = 6x + 8, koska sen y-arvot ovat aina suurempia.” Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suorien jyrkkyyttä ei voi verrata yhtälöistä",
+            "misconception": null,
+            "feedback": "Jyrkkyyden voi lukea kulmakertoimesta."
+          },
+          {
+            "id": "b",
+            "text": "Väite on oikein, koska suurempi y-arvo tarkoittaa jyrkempää suoraa",
+            "misconception": "EXT-09",
+            "feedback": "Jyrkkyyden kertoo kulmakerroin, ei se, kumman suoran y-arvot ovat suurempia. Vakiotermi siirtää suoraa ylös tai alas mutta ei muuta sen jyrkkyyttä."
+          },
+          {
+            "id": "c",
+            "text": "Väite on väärin: jyrkkyyden kertoo kulmakerroin, ja suoran y = 6x + 8 kulmakerroin 6 on suurempi",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+          },
+          {
+            "id": "d",
+            "text": "Väite on oikein, koska suoran vakiotermi on suurempi",
+            "misconception": "EXT-09",
+            "feedback": "Jyrkkyyden kertoo kulmakerroin, ei se, kumman suoran y-arvot ovat suurempia. Vakiotermi siirtää suoraa ylös tai alas mutta ei muuta sen jyrkkyyttä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kulmakertoimet ovat 4 ja 6",
+          "Kun x on suuri, suoran y = 6x + 8 y-arvot ohittavat toisen suoran"
+        ],
+        "final": "Väite on väärin"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+      },
+      "provenance": {
+        "template": "ext09_mc",
+        "params": {
+          "m": 4,
+          "b": 8,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}
