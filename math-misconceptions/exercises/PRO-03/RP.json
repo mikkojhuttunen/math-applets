@@ -1,0 +1,332 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-03",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 6 cm. Suorakulmion yksi sivu on 4 cm, ja sen piiri on yhtä suuri kuin neliön piiri. Kirjoita yhtälö, jonka ratkaisu x = 8 on suorakulmion toinen sivu (cm)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        },
+        "checks": {
+          "valid": [
+            "2 * (4 + x) = 24",
+            "4 + x = 12"
+          ],
+          "invalid": [
+            "4 * x = 36",
+            "x = 6",
+            "4 + x = 24"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliön piiri 4 · 6 = 24 cm",
+          "Suorakulmion piiri 2 · (4 + x) = 24",
+          "x = 12 − 4 = 8"
+        ],
+        "final": "x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_rp",
+        "params": {
+          "s": 6,
+          "a": 4,
+          "b": 8,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 4 cm ja 10 cm. Suorakulmion B piiri on sama kuin A:n, ja sen yksi sivu on 3 cm. Kirjoita yhtälö, jonka ratkaisu x = 11 on B:n toinen sivu (cm)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 11
+        },
+        "checks": {
+          "valid": [
+            "2 * (3 + x) = 2 * (4 + 10)",
+            "3 + x = 14"
+          ],
+          "invalid": [
+            "3 * x = 40",
+            "x = 10",
+            "3 + x = 28"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n piiri 2 · (4 + 10) = 28 cm",
+          "B:n piiri 2 · (3 + x) = 28",
+          "x = 14 − 3 = 11"
+        ],
+        "final": "x = 11"
+      },
+      "feedback": {
+        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_rp",
+        "params": {
+          "s": 7,
+          "a": 3,
+          "b": 11,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laidunkarsinan aita on 24 m pitkä. Sama aita riittää suorakulmion muotoiseen karsinaan, jonka leveys on 1 m. Kirjoita yhtälö, jonka ratkaisu x = 11 on karsinan pituus (m)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 11
+        },
+        "checks": {
+          "valid": [
+            "2 * (1 + x) = 24",
+            "2 * 1 + 2 * x = 24"
+          ],
+          "invalid": [
+            "1 * x = 36",
+            "x = 6",
+            "2 * 1 + x = 24"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Aidan pituus on karsinan piiri: 2 · (1 + x) = 24",
+          "1 + x = 12",
+          "x = 11"
+        ],
+        "final": "x = 11"
+      },
+      "feedback": {
+        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_rp",
+        "params": {
+          "s": 6,
+          "a": 1,
+          "b": 11,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Nauha on kierretty suorakulmion ympäri, jonka sivut ovat 2 cm ja 12 cm. Nauha avataan ja siitä muotoillaan neliö. Kirjoita yhtälö, jonka ratkaisu x = 7 on neliön sivu (cm)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        },
+        "checks": {
+          "valid": [
+            "4 * x = 2 * (2 + 12)",
+            "x = (2 + 12) / 2"
+          ],
+          "invalid": [
+            "x * x = 24",
+            "x = 24",
+            "4 * x = 24"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Nauhan pituus on suorakulmion piiri 2 · (2 + 12) = 28 cm",
+          "4x = 28",
+          "x = 7"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_rp",
+        "params": {
+          "s": 7,
+          "a": 2,
+          "b": 12,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Kaksi lasten leikkialuetta on rajattu yhtä pitkällä köydellä. Neliön muotoisen alueen sivu on 4 m, ja suorakulmion muotoisen alueen lyhyempi sivu on 1 m. Pidempi sivu on x m. Kirjoita yhtälö, jonka ratkaisu x = 7 kertoo pidemmän sivun."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        },
+        "checks": {
+          "valid": [
+            "2 * (1 + x) = 4 * 4",
+            "2 * x = 4 * 4 − 2 * 1"
+          ],
+          "invalid": [
+            "1 * x = 4 * 4",
+            "x = 4 + 1",
+            "x + 1 = 4 * 4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Köyden pituus 4 · 4 = 16 m",
+          "2 · (1 + x) = 16",
+          "x = 7"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_rp",
+        "params": {
+          "s": 4,
+          "a": 1,
+          "b": 7,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}
