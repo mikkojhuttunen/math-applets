@@ -6,13 +6,15 @@ Static practice pages on GitHub Pages for the exercise banks in this repository.
 
 | Path | Role |
 |---|---|
-| `index.html` | Practice page (pupils); `?luonnokset=1` previews drafts, `?tehtava=<id>` one item |
+| `index.html` | Practice page: start screen, then rounds. Links: `?tavoite=A36.S2.04`, `?luokat=1-6`, `?virhe=NUM-10`; `?tehtava=<id>` one item; `?luonnokset=1` previews drafts |
 | `opettaja.html` | Teacher view: all items and feedback texts, review selection, printable worksheet |
 | `css/style.css` | Shared styles, light and dark |
 | `js/` | ES modules loaded directly by the browser, no build step |
 | `data/manifest.json` | List of exercise files and counts, built by `tools/build_manifest.js` |
 | `data/misconceptions_source.json` | English misconception catalogue, built by `tools/extract_misconceptions.py` |
 | `data/misconceptions_fi.json` | Finnish feedback per misconception, written by hand |
+| `data/goals.json` | Curriculum goals of grades 1-9, built by `tools/build_goals.js` |
+| `data/topics_fi.json` | Pupil-facing topic titles per goal, written by hand |
 | `tools/` | Build scripts run with Node before committing |
 | `test/` | Unit tests (`node:test`), no dependencies |
 
@@ -53,3 +55,5 @@ cd harjoittele
 node tools/build_manifest.js
 npm test
 ```
+
+If a batch uses a goal that has no title yet, the tests say so: add it to `data/topics_fi.json`. If a curriculum goal file changes, run `node tools/build_goals.js`.

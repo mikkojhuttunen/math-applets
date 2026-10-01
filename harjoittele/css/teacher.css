@@ -53,3 +53,4 @@ table.wrong th { color: var(--dim); font-weight: 500; }
   #print .key { break-before: page; }
   #print .key li { margin: 0 0 4pt; }
 }
+.pupil-link { font-size: .85rem; overflow-wrap: anywhere; }

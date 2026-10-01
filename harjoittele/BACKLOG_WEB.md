@@ -102,12 +102,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: Grading and feedback for choice items were already in W06. Added `presentOptions()` in `js/round.js`: options in a new random order each time, lettered A, B, C ... on large buttons; the letter keys choose an option when no text field has focus; a wrongly chosen option is disabled. 1 new unit test (shuffled order grades by id, the item itself is not changed); browser test chooses the wrong option by click and the right one by its letter key. Real choice items now in the banks: 20 `A36.S2.11` comparisons (`NUM-12`).
 
 ### W08 Start screen and shareable links
-- State: todo
+- State: done
 - Needs: W06
 - What: choose grade band, then topic (curriculum goal) or misconception, showing only choices that have items. Every choice is also a URL parameter (`?tavoite=A36.S2.04`, `?luokat=3-6`, `?virhe=NUM-10`) so a teacher can share one link or QR code for a lesson.
 - Test: each parameter, a parameter with no items gives a Finnish message.
-- Done:
-- Notes:
+- Done: 2026-10-01, v0.9.0
+- Notes: Start screen "Valitse aihe": goals that have items, grouped by grade band, with item counts, plus "Kaikki aiheet sekaisin". Topic names for pupils come from the hand-written `data/topics_fi.json` (3 titles now: A36.S2.04 "Yhteen- ja vähennyslasku allekkain", A36.S2.11 "Murtolukujen vertailu", A36.S2.12 "Murtolukujen yhteenlasku"; teacher may reword), falling back to the curriculum text. A test fails when a bank uses a goal with no title, as a reminder. URL parameters `?tavoite=`, `?luokat=`, `?virhe=` (combinable, `luonnokset=1` kept), set with `history.pushState`, so links are shareable and Back returns to the start screen; a choice with no items says so. The round shows the topic and a "Vaihda aihe" link; the summary has "Uusi kierros" and "Vaihda aihe". The teacher view shows the pupil link for its current goal / band / misconception filters. To support this, `tools/build_goals.js` builds `data/goals.json` (128 goals from section 3 of both curriculum files, with area and 7-9 grade), which is also the data W11 needs. `js/teacher_logic.js` renamed `js/filters.js` (shared). 6 new unit tests; browser test covers the start screen, topic link, URL, items all on the chosen goal, Back, an unknown goal, and the pupil link.
 
 ### W09 Visual feedback for column arithmetic
 - State: todo
@@ -126,7 +126,7 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Notes: Done before W07-W09 at the teacher's request, to make reviewing easier. `opettaja.html` + `js/teacher.js` (DOM) + `js/teacher_logic.js` (filtering and counts, unit-tested). Tab **Tehtävät**: filters by status, grade band, goal, misconception (including sub-variants and their parents) and free text; each card shows id, status badge, goal, level, source file, correct answer, every stored wrong answer or wrong option with its misconception name and the pupil feedback (draft texts marked), and a **Kokeile** link that opens the item alone on the practice page (`index.html?luonnokset=1&tehtava=<id>`, added to `js/main.js`). Tab **Palautetekstit**: the 54 Finnish texts with pupil and teacher text, applet links and how many items use each. **Review**: checkboxes on items and texts, "Valitse näkyvät", and "Kopioi tunnisteet", which copies the ids grouped by file with the status value to set (`reviewed` for 1-6 and texts, `approved` for 7-9); a text box appears if the clipboard is blocked. The page never edits the JSON. Selections are kept in this browser's `localStorage` (teacher's own work, not pupil data) until cleared. **Print**: "Tulosta moniste" prints the filtered items as a worksheet (name and date lines, answer lines, tick boxes for choices) with the answer key on a new page. Shared `js/dom.js`. `loadItems` now adds `file` to each item. Fixes found by the browser test: `[hidden]` did not hide elements with their own `display` (global rule added); long misconception names in the filter made the page 531 px wide at 360 px (filters now shrink). Browser test rewritten to be deterministic now that the banks have 100 items and choice items: single typed item (unreadable, misconception, reveal), single choice item, a full random round answered correctly (one item through the number pad), and the teacher view (count, filters, card content, selection, copy list, selection kept after reload, clearing, feedback tab, print sheet). Screenshots checked: desktop, 375 px phone, print layout.
 
 ### W11 Goal browser
-- State: todo
+- State: todo (data part done in W08: `data/goals.json`, `tools/build_goals.js`)
 - Needs: W03
 - What: the curriculum goals of both OPS files (`math-misconceptions/grades1-6/data/curriculum/OPS_1-6_oppimistavoitteet.md`, `math-applets/math/OPS_7-9_oppimistavoitteet.md`) as a searchable list: each goal with its exercise count and a practice link. Goals are read at build time into `data/goals.json` by a tool like W02. Taken over from bot task B04.
 - Test: exact id and text search, goal with no items.
@@ -187,3 +187,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-10-01 | merge | `main` merged in: 3 new grades 1-6 batches (A36.S2.11 choice, A36.S2.12 fractions); manifest rebuilt, 100 items, all load and grade correctly |
 | 2026-10-01 | W10 | Teacher view, v0.7.0; browser test OK |
 | 2026-10-01 | W07 | Choice items shuffled and lettered, letter keys, v0.8.0 |
+| 2026-10-01 | W08 | Start screen, shareable topic links, goals.json, v0.9.0 |

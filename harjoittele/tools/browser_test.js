@@ -84,7 +84,7 @@ try {
       const { loadItems } = await import('./js/items.js');
       const { answerText } = await import('./js/round.js');
       const { items } = await loadItems(new URL('data/manifest.json', location.href).href, { includeDrafts: true });
-      return items.map((i) => ({ id: i.id, kind: i.kind, stem: i.stem, answer: answerText(i), wrong: i.wrong || [], options: i.options || [] }));
+      return items.map((i) => ({ id: i.id, kind: i.kind, stem: i.stem, goals: i.goals, answer: answerText(i), wrong: i.wrong || [], options: i.options || [] }));
     });
     await page.close();
   }
@@ -139,10 +139,46 @@ try {
     await page.close();
   }
 
-  // A full random round, all correct; the first typed item goes in with the pad.
+  // Start screen, topic links and the back button.
+  {
+    const { page, problems } = await pageWithGuards(context, origin);
+    const goalIds = [...new Set(data.flatMap((i) => i.goals))];
+    await page.goto(`${origin}/harjoittele/?luonnokset=1`);
+    await page.waitForSelector('.topic');
+    check((await page.locator('.topic').count()) === goalIds.length, 'start screen: wrong number of topics');
+    const goal = goalIds[goalIds.length - 1];
+    await page.click(`.topic[href*="tavoite=${goal}"]`);
+    await page.waitForSelector('.stem');
+    check(page.url().includes(`tavoite=${goal}`) && page.url().includes('luonnokset=1'), `topic link did not set the URL: ${page.url()}`);
+    for (let n = 1; n <= 5; n++) {
+      const item = byStem[await page.textContent('.stem')];
+      check(item.goals.includes(goal), `item ${item.id} is not about ${goal}`);
+      if (n < 5) {
+        if (item.kind === 'choice') await page.locator('.option', { has: page.locator(`.option-text:text-is("${item.answer}")`) }).click();
+        else {
+          await page.fill('#answer', item.answer);
+          await page.press('#answer', 'Enter');
+        }
+        await page.click('text=Seuraava');
+      }
+    }
+    await page.goBack();
+    await page.waitForSelector('.topic');
+    check(!page.url().includes('tavoite='), 'back did not return to the start screen');
+    await commonChecks(page, 'start screen');
+
+    await page.goto(`${origin}/harjoittele/?tavoite=X9.99&luonnokset=1`);
+    await page.waitForSelector('#app a');
+    check((await page.textContent('#app')).includes('ei ole vielä tehtäviä'), 'unknown goal message missing');
+    problems.forEach((p) => failures.push(`start screen: ${p}`));
+    await page.close();
+  }
+
+  // A full mixed round, all correct; the first typed item goes in with the pad.
   {
     const { page, problems } = await pageWithGuards(context, origin);
     await page.goto(`${origin}/harjoittele/?luonnokset=1`);
+    await page.click('text=Kaikki aiheet sekaisin');
     let padUsed = false;
     for (let n = 1; n <= 5; n++) {
       await page.waitForSelector('.stem');
@@ -186,6 +222,7 @@ try {
     const card = await page.textContent('#item-list .item');
     check(card.includes(`Oikea vastaus: ${entry.answer}`) && card.includes(entry.wrong[0].match), 'item card missing answer or wrong answers');
     check(card.includes('luonnos'), 'draft feedback badge missing');
+    check((await page.getAttribute('#pupil-link', 'href')).endsWith('/harjoittele/index.html?luokat=1-6'), 'pupil link wrong');
     await page.check('#item-list .item input[type=checkbox]');
     check((await page.textContent('#selection-count')).includes('1 tehtävää'), 'selection not counted');
     await page.click('#copy-ids');

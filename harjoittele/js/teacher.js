@@ -6,7 +6,7 @@
 import { loadItems } from './items.js';
 import { loadMisconceptions, feedbackFor } from './misconceptions.js';
 import { answerText } from './round.js';
-import { filterItems, summarize, misconceptionIds, sortIds, selectionText } from './teacher_logic.js';
+import { filterItems, summarize, sortIds, selectionText, paramsFromFilters } from './filters.js';
 import { el } from './dom.js';
 
 const PAGE = 40;
@@ -167,6 +167,12 @@ function renderItems() {
   $('item-count').textContent = `Näytetään ${list.length} / ${items.length} tehtävää (${s.reviewed} tarkistettu, ${s.draft} luonnosta).`;
   $('item-list').replaceChildren(...list.slice(0, shownItems).map(itemCard));
   $('more-items').hidden = list.length <= shownItems;
+  // Link for pupils: same topic filters, no drafts, no status or text search.
+  const f = itemFilters();
+  const q = paramsFromFilters({ goal: f.goal, band: f.band, misconception: f.misconception }).toString();
+  const link = new URL(`index.html${q ? `?${q}` : ''}`, location.href).href;
+  $('pupil-link').href = link;
+  $('pupil-link').textContent = link;
 }
 
 function fillSelect(select, counts, label = (id) => id) {

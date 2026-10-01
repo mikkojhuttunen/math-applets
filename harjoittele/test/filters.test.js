@@ -2,7 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
-import { misconceptionIds, filterItems, summarize, sortIds, selectionText } from '../js/teacher_logic.js';
+import { misconceptionIds, filterItems, summarize, sortIds, selectionText } from '../js/filters.js';
 import { loadItems } from '../js/items.js';
 import { SITE_DIR, fileFetch, fileUrl } from './helpers.js';
 
@@ -56,4 +56,57 @@ test('teacher view counts agree with the manifest', async () => {
     const reviewed = (manifest.totals.by_status.reviewed || 0) + (manifest.totals.by_status.approved || 0);
     assert.strictEqual(s.reviewed, reviewed);
   }
+});
+
+import { filtersFromParams, paramsFromFilters, topicTitle, startChoices } from '../js/filters.js';
+import { buildGoals, serialize as serializeGoals, GOALS_PATH, parseGoals } from '../tools/build_goals.js';
+
+test('URL parameters to filters and back', () => {
+  const { filters, active } = filtersFromParams(new URLSearchParams('tavoite=A36.S2.04&virhe=NUM-10'));
+  assert.deepStrictEqual(filters, { goal: 'A36.S2.04', band: '', misconception: 'NUM-10' });
+  assert.strictEqual(active, true);
+  assert.strictEqual(filtersFromParams(new URLSearchParams('luonnokset=1')).active, false);
+  assert.strictEqual(paramsFromFilters(filters).toString(), 'tavoite=A36.S2.04&virhe=NUM-10');
+});
+
+test('topicTitle prefers the hand-written title, then the curriculum text', () => {
+  const goals = { 'A36.S2.01': { text: 'ymmärtää kymmenjärjestelmän' } };
+  assert.strictEqual(topicTitle('A36.S2.04', { 'A36.S2.04': 'Vähennyslasku' }, goals), 'Vähennyslasku');
+  assert.strictEqual(topicTitle('A36.S2.01', {}, goals), 'Ymmärtää kymmenjärjestelmän');
+  assert.strictEqual(topicTitle('X.1', {}, goals), 'X.1');
+});
+
+test('startChoices groups goals with item counts by band', () => {
+  assert.deepStrictEqual(startChoices([A, B, C]), [
+    { band: '1-6', goals: [{ id: 'A36.S2.04', count: 1 }, { id: 'A36.S2.11', count: 1 }] },
+    { band: '7-9', goals: [{ id: 'S3.02', count: 1 }] },
+  ]);
+});
+
+test('parseGoals reads only section 3 tables, with area and 7-9 grade', () => {
+  const md = [
+    '## 2. Tavoitteet', '| S2.01 | ei tämä | 7 | T1 |',
+    '## 3. Atomiset', '### S2 Luvut', '| ID | Oppilas osaa… | Lk | T |', '| S2.01 | laskea | 7 | T10 |',
+    '#### S3 Algebra', '| A36.S3.01 | tutkia | T5 |',
+    '## 4. Kriteerit', '| S2.02 | ei tämäkään | 8 | T1 |',
+  ].join('\n');
+  assert.deepStrictEqual(parseGoals(md), {
+    'S2.01': { text: 'laskea', band: '7-9', area: 'S2 Luvut', grade: '7' },
+    'A36.S3.01': { text: 'tutkia', band: '3-6', area: 'S3 Algebra' },
+  });
+});
+
+test('data/goals.json is up to date (run: node tools/build_goals.js)', () => {
+  assert.strictEqual(fs.readFileSync(GOALS_PATH, 'utf8'), serializeGoals(buildGoals()));
+});
+
+test('every goal used by the banks exists and has a pupil title', async () => {
+  const goals = JSON.parse(fs.readFileSync(GOALS_PATH, 'utf8')).goals;
+  const topics = JSON.parse(fs.readFileSync(path.join(SITE_DIR, 'data', 'topics_fi.json'), 'utf8')).topics;
+  const { items } = await loadItems(fileUrl(path.join(SITE_DIR, 'data', 'manifest.json')), { fetchImpl: fileFetch, includeDrafts: true });
+  for (const g of new Set(items.flatMap((i) => i.goals))) {
+    assert.ok(goals[g], `goal ${g} is not in the curriculum files`);
+    assert.ok(topics[g], `goal ${g} has no title in data/topics_fi.json`);
+  }
+  for (const g of Object.keys(topics)) assert.ok(goals[g], `topics_fi.json has an unknown goal ${g}`);
 });

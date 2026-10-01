@@ -1,4 +1,5 @@
-// Filtering and counting for the teacher view (opettaja.html). No DOM.
+// Filtering and counting of items, shared by the practice page and the
+// teacher view. No DOM.
 
 import { parentId } from './misconceptions.js';
 
@@ -54,4 +55,47 @@ export function sortIds(ids) {
 // Selected ids grouped for the copy-out list, in natural order.
 export function selectionText(ids) {
   return sortIds(ids).join('\n');
+}
+
+// Filters from the practice page's URL: ?tavoite=, ?luokat=, ?virhe=.
+// Returns the filter object for filterItems() and a list of what was set.
+export function filtersFromParams(params) {
+  const filters = {
+    goal: params.get('tavoite') || '',
+    band: params.get('luokat') || '',
+    misconception: params.get('virhe') || '',
+  };
+  return { filters, active: Object.values(filters).some(Boolean) };
+}
+
+export function paramsFromFilters(filters) {
+  const p = new URLSearchParams();
+  if (filters.goal) p.set('tavoite', filters.goal);
+  if (filters.band) p.set('luokat', filters.band);
+  if (filters.misconception) p.set('virhe', filters.misconception);
+  return p;
+}
+
+// Topic title for pupils: the hand-written title if there is one, else the
+// curriculum text with a capital first letter, else the id.
+export function topicTitle(goalId, topics = {}, goals = {}) {
+  if (topics[goalId]) return topics[goalId];
+  const g = goals[goalId];
+  if (g && g.text) return g.text.charAt(0).toUpperCase() + g.text.slice(1);
+  return goalId;
+}
+
+// Goals that have items, grouped by grade band, for the start screen.
+// [{ band: '1-6' | '7-9', goals: [{ id, count }] }]
+export function startChoices(items) {
+  const bands = new Map();
+  for (const item of items) {
+    if (!bands.has(item.gradeBand)) bands.set(item.gradeBand, new Map());
+    const counts = bands.get(item.gradeBand);
+    for (const g of item.goals) counts.set(g, (counts.get(g) || 0) + 1);
+  }
+  return [...bands.keys()].sort().map((band) => ({
+    band,
+    goals: sortIds([...bands.get(band).keys()]).map((id) => ({ id, count: bands.get(band).get(id) })),
+  }));
 }

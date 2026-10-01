@@ -1,21 +1,29 @@
-// Practice page: loads the exercises and runs rounds of five.
-// ?luonnokset=1 shows draft exercises and draft feedback (teacher preview, WD2).
+// Practice page: a start screen to pick a topic, then rounds of five.
+// URL parameters (shareable):
+//   ?tavoite=A36.S2.04   one curriculum goal
+//   ?luokat=1-6          one grade band
+//   ?virhe=NUM-10        items about one misconception
+//   ?tehtava=<id>        one item (the teacher view's "Kokeile" link)
+//   ?luonnokset=1        drafts and draft feedback (teacher preview, WD2)
 
 import { loadItems } from './items.js';
 import { loadMisconceptions, feedbackFor } from './misconceptions.js';
 import { createRound, answerText, presentOptions } from './round.js';
 import { el } from './dom.js';
+import { filterItems, filtersFromParams, paramsFromFilters, topicTitle, startChoices } from './filters.js';
 
 const ROUND_SIZE = 5;
-const params = new URLSearchParams(location.search);
-const drafts = params.get('luonnokset') === '1';
-// ?tehtava=<id>: just that one item (the teacher view's "Kokeile" link).
-const onlyItem = params.get('tehtava');
+const drafts = new URLSearchParams(location.search).get('luonnokset') === '1';
 const app = document.getElementById('app');
+const BAND_TITLES = { '1-6': 'Luokat 1–6', '7-9': 'Luokat 7–9' };
 
 let items = [];
 let texts = {};
+let goals = {};
+let topics = {};
 let round = null;
+let pool = [];
+let topicLabel = '';
 
 function show(...nodes) {
   app.replaceChildren(...nodes.filter(Boolean));
@@ -84,7 +92,7 @@ function renderQuestion() {
   const c = round.current();
   const item = c.item;
   const feedback = el('div', { class: 'feedback', 'aria-live': 'polite' });
-  const nodes = [progress(c), draftInfo(item), el('p', { class: 'stem', text: item.stem })];
+  const nodes = [topicBar(), progress(c), draftInfo(item), el('p', { class: 'stem', text: item.stem })];
 
   if (item.kind === 'entry') {
     const expression = item.answer.kind === 'expression';
@@ -159,11 +167,13 @@ function renderSummary() {
   }
   const again = el('button', { type: 'button', class: 'primary', text: 'Uusi kierros' });
   again.addEventListener('click', startRound);
+  const change = el('button', { type: 'button', text: 'Vaihda aihe' });
+  change.addEventListener('click', () => navigate({}));
   show(
     el('h2', { text: `Sait ${s.correct}/${s.total} oikein` }),
     el('p', { class: 'status', text: `Ensimmäisellä yrityksellä ${s.firstTry}/${s.total}.` }),
     list,
-    again,
+    el('div', { class: 'actions' }, again, change),
   );
   again.focus();
 }
@@ -179,8 +189,88 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ------------------------------------------------------- start / routing ---
+
+function urlFor(filters) {
+  const p = paramsFromFilters(filters);
+  if (drafts) p.set('luonnokset', '1');
+  const q = p.toString();
+  return q ? `?${q}` : location.pathname;
+}
+
+function navigate(filters) {
+  history.pushState(null, '', urlFor(filters));
+  route();
+}
+
+function topicBar() {
+  const change = el('a', { href: urlFor({}), text: 'Vaihda aihe' });
+  change.addEventListener('click', (e) => {
+    e.preventDefault();
+    navigate({});
+  });
+  return el('p', { class: 'topic-bar' }, el('span', { text: topicLabel }), change);
+}
+
+function renderStart() {
+  const groups = startChoices(items).map(({ band, goals: list }) =>
+    el('div', { class: 'topic-group' },
+      el('h3', { text: BAND_TITLES[band] || band }),
+      ...list.map(({ id, count }) => {
+        const b = el('a', { class: 'topic', href: urlFor({ goal: id }) },
+          el('span', { class: 'topic-title', text: topicTitle(id, topics, goals) }),
+          el('span', { class: 'topic-count', text: `${count} tehtävää` }));
+        b.addEventListener('click', (e) => {
+          e.preventDefault();
+          navigate({ goal: id });
+        });
+        return b;
+      })));
+  const mixed = el('button', { type: 'button', text: 'Kaikki aiheet sekaisin' });
+  mixed.addEventListener('click', () => {
+    topicLabel = 'Kaikki aiheet';
+    pool = items;
+    startRound();
+  });
+  show(el('h2', { text: 'Valitse aihe' }), ...groups, el('div', { class: 'actions' }, mixed));
+}
+
+function describe(filters) {
+  const parts = [];
+  if (filters.goal) parts.push(topicTitle(filters.goal, topics, goals));
+  if (filters.band) parts.push(BAND_TITLES[filters.band] || filters.band);
+  if (filters.misconception) parts.push(`virhetyyppi ${filters.misconception}`);
+  return parts.join(' · ');
+}
+
+function route() {
+  const params = new URLSearchParams(location.search);
+  const onlyItem = params.get('tehtava');
+  const { filters, active } = filtersFromParams(params);
+  if (items.length === 0) return renderEmpty();
+  if (onlyItem) {
+    pool = items.filter((i) => i.id === onlyItem);
+    topicLabel = onlyItem;
+    if (!pool.length) return show(el('p', { text: `Tehtävää ${onlyItem} ei löytynyt${drafts ? '' : ' tarkistetuista tehtävistä'}.` }));
+    return startRound();
+  }
+  if (!active) return renderStart();
+  pool = filterItems(items, filters);
+  topicLabel = describe(filters);
+  if (!pool.length) {
+    const back = el('a', { href: urlFor({}), text: 'Valitse toinen aihe' });
+    back.addEventListener('click', (e) => {
+      e.preventDefault();
+      navigate({});
+    });
+    return show(el('p', { text: `Valinnalla ”${topicLabel}” ei ole vielä tehtäviä.` }), el('p', {}, back));
+  }
+  startRound();
+}
+
+window.addEventListener('popstate', route);
+
 function startRound() {
-  const pool = onlyItem ? items.filter((i) => i.id === onlyItem) : items;
   round = createRound(pool, { size: ROUND_SIZE, feedback: feedbackText });
   renderQuestion();
 }
@@ -196,24 +286,25 @@ async function init() {
   if (drafts) document.getElementById('draft-banner').hidden = false;
   const base = new URL('data/', location.href);
   try {
-    const [loaded, t] = await Promise.all([
+    const optional = (name, key) =>
+      fetch(new URL(name, base)).then((r) => r.json()).then((d) => d[key] || {}).catch(() => ({}));
+    const [loaded, t, g, tp] = await Promise.all([
       loadItems(new URL('manifest.json', base).href, { includeDrafts: drafts }),
       loadMisconceptions(new URL('misconceptions_fi.json', base).href).catch(() => ({})),
+      optional('goals.json', 'goals'),
+      optional('topics_fi.json', 'topics'),
     ]);
     items = loaded.items;
     texts = t;
+    goals = g;
+    topics = tp;
     if (loaded.errors.length) console.warn('Some exercise files failed to load', loaded.errors);
   } catch (e) {
     show(el('p', { class: 'error', text: 'Tehtävien lataaminen epäonnistui. Päivitä sivu hetken kuluttua.' }));
     console.error(e);
     return;
   }
-  if (onlyItem && !items.some((i) => i.id === onlyItem)) {
-    show(el('p', { text: `Tehtävää ${onlyItem} ei löytynyt${drafts ? '' : ' tarkistetuista tehtävistä'}.` }));
-    return;
-  }
-  if (items.length === 0) renderEmpty();
-  else startRound();
+  route();
 }
 
 init();

@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "note": "Pupil-facing topic titles per curriculum goal, shown on the practice page's start screen. Written by hand; goals without a title fall back to the curriculum text in goals.json.",
+  "topics": {
+    "A36.S2.04": "Yhteen- ja vähennyslasku allekkain",
+    "A36.S2.11": "Murtolukujen vertailu",
+    "A36.S2.12": "Murtolukujen yhteenlasku"
+  }
+}
