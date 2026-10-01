@@ -90,6 +90,16 @@ What `scripts/verify.py` checks: structure, curriculum links, and the algebra of
 - Before a topic is treated as complete for the active phases, at least one item should ask the student to justify (T4) or check plausibility (T6). If none exists, add an `MC` with a "why" option, or `TF` / `EX` if phase 4 is active.
 - Do not copy item text from third-party datasets (Eedi, Otero et al.) without checking their licences.
 
+### 1.5 Language and style (teacher's review, 2026-10-01)
+
+Each rule comes from an item that had to be corrected.
+
+- No object names in brackets after a count: "Ostetaan a kpl tarroja ja p kpl kortteja", not "a kpl (tarraa)". Letters standing for variables may still be given in brackets, as in "oppilaita (o)".
+- No story or extra facts that the task does not use. "Luvut x ja y ovat yhtä suuret, ja y = 6." before "Täydennä yhtälö x + □ = 12 …" was removed as unnecessary. If a misconception needs a context, the task must need that context too.
+- Name multiplications plainly: "Luku w kerrottuna kahdella on 8", not "Luvun w kaksinkertainen on 8".
+- `RP` items accept every equation of the requested form that has the required solution, also when the box holds an expression with the unknown: for "3x − □ = 10, ratkaisu x = 5", `3x − x = 10` is valid and goes in `checks.valid`.
+- After a number of two or more, the noun is in the partitive ("5 tarraa"); inflect names correctly (Matti → Matilla).
+
 ## 2. Legend
 
 **Cell codes in section 4:** `o` planned, `s` seed example only (hand-written, still to be generated as a batch), `X` generated batch exists (see log), `-` not suitable for this misconception.
@@ -442,7 +452,20 @@ Not every goal needs a misconception exercise. The content goals below are the c
 
 Without a topic and not listed as a candidate: S1.01, S1.02, S1.03, S1.05, S1.06, S1.07, S1.08, S1.09, S2.04, S2.05, S2.13, S4.01, S4.06, S4.08, S5.06, S5.12, S6.01, S6.05. Most are goals under S1 (thinking skills) and construction/computation goals where no documented misconception has been catalogued.
 
-## 7. Mapping decisions to confirm
+## 7. Revisions requested by the teacher (manual session, not for the routine)
+
+Existing items are immutable for the routine. These approved items use the bracket pattern of section 1.5 and should be revised in a manual session after the teacher confirms the wording. Change only `prompt.text`.
+
+| Item | Now | Suggestion |
+|---|---|---|
+| ALG-01-MC-001 | Ostetaan a kpl (omenaa) ja p kpl (päärynää). | Ostetaan a kpl omenoita ja p kpl päärynöitä. |
+| ALG-01-MC-002 | Ostetaan m kpl (pullaa) ja n kpl (pirtelöä). | Ostetaan m kpl pullia ja n kpl pirtelöitä. |
+| ALG-01-MC-003 | Ostetaan a kpl (vihkoa) ja p kpl (kynää). | Ostetaan a kpl vihkoja ja p kpl kyniä. |
+| ALG-01-MC-004 | Ostetaan m kpl (elokuvalippua) ja n kpl (karkkipussia). | Ostetaan m kpl elokuvalippuja ja n kpl karkkipusseja. |
+
+Corrected by the teacher on 2026-10-01 (for reference): ALG-01-MC-005, ALG-02-RP-001, -002, -003, -005 (preamble removed, solution and feedback no longer mention y; -005 also accepts `3x − x = 10`), ALG-03-NE-004. With the preamble gone, the ALG-02-RP items no longer show the ALG-02 idea (different letters may have the same value); the teacher should decide whether they keep the ALG-02 tag or whether ALG-02 needs new RP items.
+
+## 8. Mapping decisions to confirm
 
 - **Grade levels** come from the suggested grade split in the OPS file, which follows common textbook sequencing, not the national core curriculum. Change the mapping if the local curriculum differs.
 - **NUM-01 and NUM-02** (decimal comparison) are mapped to S2.06 because the OPS file lists this error there. S2.08 (ordering numbers, number line) is the better fit for a number-line item; it is kept as a secondary link.

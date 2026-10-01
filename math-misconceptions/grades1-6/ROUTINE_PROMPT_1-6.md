@@ -75,6 +75,19 @@ Write the first `n` of those, unchanged, to `exercises/grades1-6/batch-$STAMP.js
 4. If the backlog row names a misconception, add the wrong answer the misconception produces under `misconceptions`, with the item bank id as tag. Take the wrong answer from the item bank row and compute it, do not guess.
 5. Vary the numbers and the contexts. No two stems may be the same, also across earlier batches.
 6. Avoid tasks with two reasonable readings. If unsure, leave the item out.
+7. Follow **Language and style** below. Read every stem aloud once before you write it to the file.
+
+**Language and style.** From the teacher's review of 2026-10-01. Each rule comes from an item that had to be corrected.
+
+- After a number of two or more, the noun is in the partitive: "2 pullaa", "4 tuolia", never "2 pulla".
+- Inflect names with consonant gradation: Matti → Matilla, Matille (not "Mattilla"). Check every inflected name.
+- The question says where or what is counted: "Montako tuolia luokassa on yhteensä?", "Montako munaa pesissä on yhteensä?", "Montako senttiä hän maksaa kumeista yhteensä?". Not a bare "Montako X on yhteensä?".
+- Rows and piles: write "Mari muodostaa pikkuautoista kaksi riviä. Kummassakin rivissä on 7 autoa." Not "Mari tekee 2 riviä pikkuautoja" or "Ruutuja on 3 riviä". Use "kummassakin" for two, "jokaisessa" for more.
+- A total built up over days takes the perfect tense: "Ville ottaa joka päivä 3 omenaa mukaan kouluun. Montako omenaa hän on vienyt kouluun 7 päivässä?"
+- Containers and places must fit the objects: crayons are in a pencil case ("penaali"), not in a notebook; plates are on a table ("pöydällä"), not in it.
+- Facts about units: "Yksi viikko koostuu 7 päivästä", not "Yksi viikko on 7 päivää".
+- Use the verb forms of the standard language: "ui", never "uimasi".
+- If you change one of these patterns in a template, change it in every item the template makes.
 
 **Evidence.** If the item bank row has evidence `Limited`, add a `notes` entry: "Evidence for this misconception is limited; reviewer to confirm".
 

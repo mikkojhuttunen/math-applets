@@ -19,3 +19,31 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | 11 | A12.S2.12 | none | numeric_entry with `answer_expr` | 60 | 60 | done | Multiplication tables 1–5 and 10. |
 | 12 | A36.S4.04 | GEO-03 | choice | 10 | 0 | hold | Evidence Limited in the item bank. A human decides whether to proceed. |
 | 13 | A36.S4.11 | MEA-02 | numeric_entry with `answer_expr` | 10 | 0 | hold | No study found for the misconception. Do not generate until a human decides. |
+
+## Revisions requested by the teacher (manual session, not for the routine)
+
+The routine never edits existing batch files. These reviewed items match the language rules in `ROUTINE_PROMPT_1-6.md` (section **Language and style**, from the review of 2026-10-01) and should be revised in a manual session after the teacher confirms the wording. Suggestions follow the teacher's own corrections; change only `stem_fi`.
+
+| Item | Now | Suggestion | Rule |
+|---|---|---|---|
+| A12.S2.08-add20-20261001-0721-012 | Hänen veljensä uimasi 6 minuuttia vähemmän. | Hänen veljensä ui 6 minuuttia vähemmän. | verb form (error) |
+| A12.S2.09-addsub100-20261001-0820-012 | Lainaan lähti 37 kirjaa. | Kirjastosta lainattiin 37 kirjaa. | wording |
+| A12.S2.12-kertotaulu-20261001-1122-011 | Pöydässä on 3 lautasta. … Montako omenaa on yhteensä? | Pöydällä on 3 lautasta. … Montako omenaa lautasilla on yhteensä? | place, question |
+| A12.S2.12-kertotaulu-20261001-1122-012 | Montako pullaa on yhteensä? | Montako pullaa pusseissa on yhteensä? | question |
+| A12.S2.12-kertotaulu-20261001-1122-015 | Aino piirtää 3 riviä tähtiä. | Aino piirtää tähtiä kolmeen riviin. | rows |
+| A12.S2.12-kertotaulu-20261001-1122-018 | Kukkamaassa on 2 riviä tulppaaneja. … Montako tulppaania on yhteensä? | Kukkamaassa on tulppaaneja kahdessa rivissä. Kummassakin rivissä on 8 tulppaania. Montako tulppaania kukkamaassa on yhteensä? | rows, question |
+| A12.S2.12-kertotaulu-20261001-1122-019 | Montako sivua hän lukee 6 päivässä? | Montako sivua hän on lukenut 6 päivässä? | tense |
+| A12.S2.12-kertotaulu-20261001-1122-020 | Montako tarraa on yhteensä? | Montako tarraa vihkossa on yhteensä? | question |
+| A12.S2.12-kertotaulu-20261001-1322-014 | Sanni jakaa pöydälle 7 lautasta. Jokaiselle tulee 2 korttia. | Sanni laittaa pöydälle 7 lautasta ja jokaiselle lautaselle 2 korttia. | unclear |
+| A12.S2.12-kertotaulu-20261001-1322-017 | Montako purkkia on yhteensä? | Montako purkkia hyllyillä on yhteensä? | question |
+| A12.S2.12-kertotaulu-20261001-1322-018 | Oskari tekee 4 pinoa kortteja. … Montako korttia on yhteensä? | Oskari tekee korteista neljä pinoa. … Montako korttia pinoissa on yhteensä? | rows, question |
+| A12.S2.12-kertotaulu-20261001-1322-020 | Montako lintua on yhteensä? | Montako lintua oksilla on yhteensä? | question |
+| A12.S2.08-add20-20261001-0721-018 | Montako nallea on yhteensä? | Montako nallea tuolilla ja hyllyllä on yhteensä? | question |
+| A36.S4.09-cover-20261001-0421-001 | Ruutuja on 3 riviä, … Montako ruutua on yhteensä? | Ruudut ovat kolmessa rivissä, … Montako ruutua suorakulmion peittämiseen tarvitaan? | rows, question |
+| A36.S4.09-cover-20261001-0421-002 | Laattoja on 4 riviä, | Laatat ovat neljässä rivissä, | rows |
+| A36.S4.09-cover-20261001-0421-005 | Ruutuja on 6 riviä | Ruudut ovat kuudessa rivissä, | rows |
+| A36.S4.09-cover-20261001-0421-006 | Montako kolon paikkaa kennossa on? | Montako koloa kennossa on? | wording |
+| A36.S4.09-cover-20261001-0421-018 | Montako ruutua on yhteensä? | Montako ruutua suorakulmion peittämiseen tarvitaan? | question |
+| A36.S4.09-cover-20261001-0421-019 | Ruutuja on 15 riviä | Ruudut ovat 15 rivissä, | rows |
+
+Items the teacher already corrected on 2026-10-01 (for reference): 0921-018, 1122-012, 1122-014, 1222-013, 1222-016, 1222-018, 1222-019, 1322-013, 1322-015 (batch ids `A12.S2.09-addsub100-20261001-…` and `A12.S2.12-kertotaulu-20261001-…`).
