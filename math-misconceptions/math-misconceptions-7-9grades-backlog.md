@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 6 |
-| Last run | 2026-09-30 |
-| Progress | 34 of 227 planned cells generated (3 cells have a hand-written seed example only) |
+| Runs completed | 7 |
+| Last run | 2026-10-01 |
+| Progress | 39 of 227 planned cells generated (3 cells have a hand-written seed example only) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -199,9 +199,9 @@ Same row order as section 3.1. Columns are in phase order.
 | PRO-02 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | FUN-02 | X | X | - | - | - | - | - | - | - | - | o | - | o | - | - |
 | ALG-02 | X | - | - | - | - | - | X | - | - | - | - | - | o | o | - |
-| ALG-04 | X | X | o | - | - | o | - | o | - | - | - | - | - | - | - |
-| ALG-05 | X | X | - | - | - | o | - | - | - | - | - | - | - | - | - |
-| ALG-07 | o | o | s | o | o | - | o | - | - | - | - | - | o | - | o |
+| ALG-04 | X | X | X | - | - | X | - | o | - | - | - | - | - | - | - |
+| ALG-05 | X | X | - | - | - | X | - | - | - | - | - | - | - | - | - |
+| ALG-07 | X | X | s | o | o | - | o | - | - | - | - | - | o | - | o |
 | ALG-08 | o | o | o | s | o | s | o | - | - | - | - | - | - | - | - |
 | ALG-09 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | o |
 | ALG-11 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | - |
@@ -274,6 +274,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-09-30 | ALG-04 | NE | ALG-04-NE-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/NE.json | Draft | Moderate |
 | 2026-09-30 | ALG-05 | MC | ALG-05-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/MC.json | Draft | Moderate; item 4 asks for a justification |
 | 2026-09-30 | ALG-05 | NE | ALG-05-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-04 | ES | ALG-04-ES-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/ES.json | Draft | Moderate; expression lines, error merges unlike terms into one x-term |
+| 2026-10-01 | ALG-04 | ME | ALG-04-ME-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/ME.json | Draft | Moderate |
+| 2026-10-01 | ALG-05 | ME | ALG-05-ME-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/ME.json | Draft | Moderate; place-value distractors such as 10c + n tagged ALG-05 |
+| 2026-10-01 | ALG-07 | MC | ALG-07-MC-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/MC.json | Draft | Moderate; item 5 asks to identify the error in a step (justification) |
+| 2026-10-01 | ALG-07 | NE | ALG-07-NE-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/NE.json | Draft | Moderate |
 
 ## 6. Curriculum coverage
 

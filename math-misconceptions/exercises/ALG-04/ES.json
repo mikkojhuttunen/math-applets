@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-04",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6x + 8",
+          "14x",
+          "x · 14"
+        ],
+        "error_line": 2,
+        "error_type": "joins_unlike_terms"
+      },
+      "solution": {
+        "steps": [
+          "6x ja 8 ovat eri muotoisia termejä, joten 6x + 8 on jo sievin.",
+          "Oikea tulos: 6x + 8"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg04_es",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "c": 2,
+          "d": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2x + 6 + 7x",
+          "9x + 6",
+          "15x"
+        ],
+        "error_line": 3,
+        "error_type": "joins_unlike_terms"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: 2x + 7x = 9x. Luku 6 ei yhdisty x-termiin.",
+          "Oikea tulos: 9x + 6"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg04_es",
+        "params": {
+          "a": 2,
+          "b": 6,
+          "c": 7,
+          "d": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6 + 4x + 5",
+          "4x + 6 + 5",
+          "15x"
+        ],
+        "error_line": 3,
+        "error_type": "joins_unlike_terms"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Luvut: 6 + 5 = 11, joten tulos on 4x + 11.",
+          "Oikea tulos: 4x + 11"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg04_es",
+        "params": {
+          "a": 4,
+          "b": 6,
+          "c": 5,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6x + 6 + 3x − 5",
+          "6x + 3x + 6 − 5",
+          "9x + 1",
+          "10x"
+        ],
+        "error_line": 4,
+        "error_type": "joins_unlike_terms"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 on oikein: 9x + 1. Termejä 9x ja 1 ei voi yhdistää.",
+          "Oikea tulos: 9x + 1"
+        ],
+        "final": "Virhe on rivillä 4"
+      },
+      "feedback": {
+        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg04_es",
+        "params": {
+          "a": 6,
+          "b": 6,
+          "c": 3,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Retkellä jokainen osallistuja maksaa x euroa. Ryhmä A maksaa 6x euroa, ryhmä B 4x euroa ja lisäksi ostetaan yhteinen eväspaketti hintaan 6 euroa. Oppilas sieventää kokonaishinnan rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "6x + 6 + 4x",
+          "6x + 4x + 6",
+          "16x"
+        ],
+        "error_line": 3,
+        "error_type": "joins_unlike_terms"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Eväspaketin hinta 6 € ei ole osallistujien määrästä riippuva, joten tulos on 10x + 6.",
+          "Oikea tulos: 10x + 6"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg04_es",
+        "params": {
+          "a": 6,
+          "b": 6,
+          "c": 4,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}
