@@ -7,7 +7,7 @@
       "schema_version": "1.0",
       "id": "ALG-04-ME-001",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -108,7 +108,7 @@
       "schema_version": "1.0",
       "id": "ALG-04-ME-002",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -209,7 +209,7 @@
       "schema_version": "1.0",
       "id": "ALG-04-ME-003",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
