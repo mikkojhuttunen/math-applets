@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-06",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisessa kolmiossa kulman α vastainen kateetti on 6 cm ja hypotenuusa 10 cm. Oppilas laskee lausekkeen 3 · sin α arvoa. Rivi 1 on sijoitus. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "3 · 6/10",
+          "3 · 6",
+          "18"
+        ],
+        "error_line": 2,
+        "error_type": "sine_as_length"
+      },
+      "solution": {
+        "steps": [
+          "Sini on suhdeluku 6/10, ei sivun pituus 6. Oikea rivi 2 on 18/10."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_es",
+        "params": {
+          "triple": [
+            6,
+            8,
+            10
+          ],
+          "m": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisessa kolmiossa kulman β vastainen kateetti on 24 cm, viereinen kateetti 7 cm ja hypotenuusa 25 cm. Oppilas laskee lausekkeen 4 · sin β arvoa. Rivi 1 on sijoitus. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "4 · 24/25",
+          "4 · 7/25",
+          "28/25"
+        ],
+        "error_line": 2,
+        "error_type": "adjacent_for_opposite"
+      },
+      "solution": {
+        "steps": [
+          "Sinin osoittaja on vastainen kateetti 24, ei viereinen 7. Oikea rivi 2 on 96/25."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_es",
+        "params": {
+          "triple": [
+            7,
+            24,
+            25
+          ],
+          "m": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisessa kolmiossa kulman α viereinen kateetti on 12 cm, vastainen kateetti 5 cm ja hypotenuusa 13 cm. Oppilas laskee lausekkeen 2 · cos α arvoa. Rivi 1 on sijoitus. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 · 12/13",
+          "24/13",
+          "10/13"
+        ],
+        "error_line": 3,
+        "error_type": "opposite_for_adjacent"
+      },
+      "solution": {
+        "steps": [
+          "Kosinin osoittaja on viereinen kateetti 12, ei vastainen 5. Oikea rivi 3 on 24/13."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_es",
+        "params": {
+          "triple": [
+            5,
+            12,
+            13
+          ],
+          "m": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisen kolmion sivut ovat 8 cm, 15 cm ja 17 cm, ja kulman α vastainen kateetti on 8 cm. Kolmio suurennetaan 4-kertaiseksi. Oppilas laskee suurennetun kolmion sin α -arvon. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "32/68",
+          "4 · 8/(4 · 17)",
+          "32/17"
+        ],
+        "error_line": 3,
+        "error_type": "scaled_numerator_only"
+      },
+      "solution": {
+        "steps": [
+          "Myös hypotenuusa kasvaa 4-kertaiseksi (68), joten sini ei muutu: 8/17."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_es",
+        "params": {
+          "triple": [
+            8,
+            15,
+            17
+          ],
+          "m": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Tikkaat ovat 5 m pitkät ja ne yltävät 3 m korkeudelle seinällä. Oppilas laskee, paljonko hypotenuusa kertaa kulman sini on. Rivi 1 on sijoitus. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5 · 3/5",
+          "5 · 4/5",
+          "4"
+        ],
+        "error_line": 2,
+        "error_type": "adjacent_for_opposite"
+      },
+      "solution": {
+        "steps": [
+          "Vastainen kateetti on 3 m, joten sinin osoittajassa on 3. Oikea tulos on 3."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
+      },
+      "provenance": {
+        "template": "ext06_es",
+        "params": {
+          "triple": [
+            3,
+            4,
+            5
+          ],
+          "m": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    }
+  ]
+}

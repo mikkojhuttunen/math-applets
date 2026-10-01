@@ -1,0 +1,343 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-08",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Oppilaat saivat kokeesta pisteet 5, 10, 2, 6, 8. Mikä on pisteiden mediaani?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 2.0,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          },
+          {
+            "match": 6.2,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 2, 5, 6, 8, 10",
+          "Keskimmäinen arvo on 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_ne",
+        "params": {
+          "values": [
+            5,
+            10,
+            2,
+            6,
+            8
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Seitsemän päivän lämpötilat olivat 3, 21, 18, 20, 12, 7, 10 astetta. Mikä on lämpötilojen mediaani?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 20.0,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 3, 7, 10, 12, 18, 20, 21",
+          "Keskimmäinen arvo on 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_ne",
+        "params": {
+          "values": [
+            3,
+            21,
+            18,
+            20,
+            12,
+            7,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden kävelylenkin pituudet olivat 39, 14, 4, 38, 16, 22 minuuttia. Mikä on pituuksien mediaani?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 19.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 21.0,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 4, 14, 16, 22, 38, 39",
+          "Kaksi keskimmäistä ovat 16 ja 22, niiden keskiarvo on 19"
+        ],
+        "final": "19"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_ne",
+        "params": {
+          "values": [
+            39,
+            14,
+            4,
+            38,
+            16,
+            22
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Viiden oppilaan lukemat kirjat ovat 18, 20, 6, 21, 7. Kuudes oppilas on lukenut 27 kirjaa. Mikä on kaikkien kuuden oppilaan lukemien kirjojen mediaani?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 19.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 13.5,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 6, 7, 18, 20, 21, 27",
+          "Kaksi keskimmäistä ovat 18 ja 20, niiden keskiarvo on 19"
+        ],
+        "final": "19"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_ne",
+        "params": {
+          "values": [
+            18,
+            20,
+            6,
+            21,
+            7,
+            27
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Seitsemän työntekijän kuukausipalkat ovat 19, 20, 25, 10, 18, 232, 12 (luvut ovat satoja euroja). Mikä on mediaanipalkka sadoissa euroissa?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 19.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 10.0,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          },
+          {
+            "match": 48.0,
+            "misconception": "EXT-08",
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Järjestys: 10, 12, 18, 19, 20, 25, 232",
+          "Keskimmäinen arvo on 19"
+        ],
+        "final": "19"
+      },
+      "feedback": {
+        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+      },
+      "provenance": {
+        "template": "ext08_ne",
+        "params": {
+          "values": [
+            19,
+            20,
+            25,
+            10,
+            18,
+            232,
+            12
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 22
+      }
+    }
+  ]
+}
