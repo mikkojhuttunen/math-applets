@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-05",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmion sivut ovat 5, 6 ja 8. Laske erotus 5² + 6² − 8²."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -3
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² ei ole nolla. Laske neliöt erikseen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "5² + 6² = 61",
+          "8² = 64",
+          "61 − 64 = -3"
+        ],
+        "final": "−3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+      },
+      "provenance": {
+        "template": "ext05_ne",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmion sivut ovat 4, 5 ja 6. Laske erotus 4² + 5² − 6²."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² ei ole nolla. Laske neliöt erikseen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "4² + 5² = 41",
+          "6² = 36",
+          "41 − 36 = 5"
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+      },
+      "provenance": {
+        "template": "ext05_ne",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Pellon sivut ovat 7 m, 9 m ja 12 m. Kuinka paljon luku 12² on suurempi kuin summa 7² + 9²?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 14
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² ei ole nolla. Laske neliöt erikseen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "7² + 9² = 130",
+          "12² = 144",
+          "144 − 130 = 14"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+      },
+      "provenance": {
+        "template": "ext05_ne",
+        "params": {
+          "a": 7,
+          "b": 9,
+          "c": 12
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Tikkaat nojaavat seinää vasten. Kolmion sivut ovat 8 m, 11 m ja 13 m (13 m on pisin). Laske 13² − (8² + 11²)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -16
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² ei ole nolla. Laske neliöt erikseen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "8² + 11² = 185",
+          "13² = 169",
+          "169 − 185 = -16"
+        ],
+        "final": "−16"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+      },
+      "provenance": {
+        "template": "ext05_ne",
+        "params": {
+          "a": 8,
+          "b": 11,
+          "c": 13
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-05-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.09"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-05"
+      ],
+      "prompt": {
+        "text": "Kolmioiden sivut ovat (5, 12, 13), (6, 7, 9), (8, 15, 17), (7, 9, 11), (9, 12, 15). Kuinka moni kolmioista on suorakulmainen?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3
+        },
+        "wrong": [
+          {
+            "match": 5,
+            "misconception": "EXT-05",
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² ei ole nolla. Laske neliöt erikseen."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "5² + 12² = 169, 13² = 169: suorakulmainen",
+          "6² + 7² = 85, 9² = 81: ei suorakulmainen",
+          "8² + 15² = 289, 17² = 289: suorakulmainen",
+          "7² + 9² = 130, 11² = 121: ei suorakulmainen",
+          "9² + 12² = 225, 15² = 225: suorakulmainen",
+          "Suorakulmaisia on 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+      },
+      "provenance": {
+        "template": "ext05_ne",
+        "params": {
+          "triangles": [
+            [
+              5,
+              12,
+              13
+            ],
+            [
+              6,
+              7,
+              9
+            ],
+            [
+              8,
+              15,
+              17
+            ],
+            [
+              7,
+              9,
+              11
+            ],
+            [
+              9,
+              12,
+              15
+            ]
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    }
+  ]
+}
