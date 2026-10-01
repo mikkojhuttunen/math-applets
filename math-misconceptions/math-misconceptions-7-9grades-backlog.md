@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 20 |
+| Runs completed | 21 |
 | Last run | 2026-10-01 |
-| Progress | 105 of 227 planned cells generated |
+| Progress | 111 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -217,10 +217,10 @@ Same row order as section 3.1. Columns are in phase order.
 | EXT-01 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
 | EXT-02 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
 | EXT-03 | X | X | X | X | X | - | - | - | - | - | - | o | o | - | o |
-| EXT-04 | X | X | X | - | X | o | o | - | - | - | - | - | - | - | o |
+| EXT-04 | X | X | X | - | X | X | X | - | - | - | - | - | - | - | o |
 | EXT-05 | X | X | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| EXT-06 | o | o | o | - | o | - | - | o | o | o | - | - | - | - | - |
-| EXT-07 | o | o | o | - | - | - | - | - | o | o | - | - | - | - | - |
+| EXT-06 | X | X | o | - | o | - | - | o | o | o | - | - | - | - | - |
+| EXT-07 | X | X | o | - | - | - | - | - | o | o | - | - | - | - | - |
 | EXT-08 | o | o | o | o | o | - | o | - | - | - | - | - | o | o | - |
 | EXT-09 | o | o | - | - | - | - | o | o | o | - | o | - | - | - | - |
 | ALG-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
@@ -345,6 +345,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | EXT-04 | FS | EXT-04-FS-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/FS.json | Draft | Not assessed; literature evidence not yet checked; lines are equations ending in the factored form (x − a)(x + a) = 0; accepted by solution-set equivalence |
 | 2026-10-01 | EXT-05 | MC | EXT-05-MC-001..005 | T, T, T, H, H | S5.09 | exercises/EXT-05/MC.json | Draft | Not assessed; literature evidence not yet checked; triangles given by side lengths or one angle (no figure); item 5 asks for a counterexample (justification) |
 | 2026-10-01 | EXT-05 | NE | EXT-05-NE-001..005 | T, T, T, H, H | S5.09 | exercises/EXT-05/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer is 0 (theorem assumed to hold) or every triangle counted as right-angled |
+| 2026-10-01 | EXT-04 | ME | EXT-04-ME-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/ME.json | Draft | Not assessed; literature evidence not yet checked; reference x² − a² (or scaled); distractors keep only one root, e.g. (x − a)² or x − a |
+| 2026-10-01 | EXT-04 | RP | EXT-04-RP-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/RP.json | Draft | Not assessed; literature evidence not yet checked; target is a single solution, so valid equations are double roots such as (x − a)² = 0; invalid ones x² = a² have two solutions |
+| 2026-10-01 | EXT-06 | MC | EXT-06-MC-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/MC.json | Draft | Not assessed; literature evidence not yet checked; triangles given by side lengths (no figure); item 4 asks for a justification (sine cannot exceed 1) |
+| 2026-10-01 | EXT-06 | NE | EXT-06-NE-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/NE.json | Draft | Not assessed; literature evidence not yet checked; Pythagorean triples with terminating ratios; wrong answers are a side length given as the sine, or the adjacent-leg ratio |
+| 2026-10-01 | EXT-07 | MC | EXT-07-MC-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/MC.json | Draft | Not assessed; literature evidence not yet checked; item 4 asks to refute 1 m² = 100 cm² (justification); item 5 compares areas after conversion |
+| 2026-10-01 | EXT-07 | NE | EXT-07-NE-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer uses the length factor 100 (or 1 000 for km²) |
 
 ## 6. Curriculum coverage
 

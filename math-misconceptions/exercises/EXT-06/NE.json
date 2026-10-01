@@ -1,0 +1,337 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-06",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisen kolmion kateetit ovat 6 cm ja 8 cm ja hypotenuusa 10 cm. Kulman α vastainen kateetti on 6 cm. Laske sin α desimaalilukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.6,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 6.0,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          },
+          {
+            "match": 0.8,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          }
+        ],
+        "input_hint": "Kirjoita luku desimaalipilkulla"
+      },
+      "solution": {
+        "steps": [
+          "sin α = 6 / 10",
+          "= 0,6"
+        ],
+        "final": "0,6"
+      },
+      "feedback": {
+        "correct": "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+      },
+      "provenance": {
+        "template": "ext06_ne",
+        "params": {
+          "legs": [
+            6,
+            8
+          ],
+          "hyp": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisen kolmion kateetit ovat 3 cm ja 4 cm ja hypotenuusa 5 cm. Kulman β vastainen kateetti on 4 cm. Laske sin β desimaalilukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.8,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 4.0,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          },
+          {
+            "match": 0.6,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          }
+        ],
+        "input_hint": "Kirjoita luku desimaalipilkulla"
+      },
+      "solution": {
+        "steps": [
+          "sin β = 4 / 5",
+          "= 0,8"
+        ],
+        "final": "0,8"
+      },
+      "feedback": {
+        "correct": "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+      },
+      "provenance": {
+        "template": "ext06_ne",
+        "params": {
+          "legs": [
+            3,
+            4
+          ],
+          "hyp": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisessa kolmiossa kulman α viereinen kateetti on 12 cm, vastainen kateetti 9 cm ja hypotenuusa 15 cm. Laske cos α desimaalilukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.8,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 0.6,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          },
+          {
+            "match": 12.0,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          }
+        ],
+        "input_hint": "Kirjoita luku desimaalipilkulla"
+      },
+      "solution": {
+        "steps": [
+          "cos α = viereinen / hypotenuusa = 12 / 15",
+          "= 0,8"
+        ],
+        "final": "0,8"
+      },
+      "feedback": {
+        "correct": "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+      },
+      "provenance": {
+        "template": "ext06_ne",
+        "params": {
+          "legs": [
+            9,
+            12
+          ],
+          "hyp": 15
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Tikkaat ovat 25 m pitkät ja ne yltävät 7 m korkeudelle seinällä. Laske sen kulman sini, jonka tikkaat muodostavat maan kanssa. Kulman vastainen kateetti on korkeus 7 m."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.28,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 7.0,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          },
+          {
+            "match": 0.96,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          }
+        ],
+        "input_hint": "Kirjoita luku desimaalipilkulla"
+      },
+      "solution": {
+        "steps": [
+          "sin α = 7 / 25",
+          "= 0,28"
+        ],
+        "final": "0,28"
+      },
+      "feedback": {
+        "correct": "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+      },
+      "provenance": {
+        "template": "ext06_ne",
+        "params": {
+          "legs": [
+            7,
+            24
+          ],
+          "hyp": 25
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-06-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.10"
+        ],
+        "t": [
+          "T17"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-06"
+      ],
+      "prompt": {
+        "text": "Suorakulmaisessa kolmiossa sin α = 0,6 ja hypotenuusa on 20 cm. Kuinka monta senttimetriä pitkä on kulman α vastainen kateetti?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12.0,
+          "tolerance": 0
+        },
+        "wrong": [
+          {
+            "match": 16.0,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          },
+          {
+            "match": 0.6,
+            "misconception": "EXT-06",
+            "feedback": "Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta etkä käytä viereistä kateettia."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "vastainen = sin α · hypotenuusa = 0,6 · 20",
+          "= 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+      },
+      "provenance": {
+        "template": "ext06_ne",
+        "params": {
+          "legs": [
+            12,
+            16
+          ],
+          "hyp": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 21
+      }
+    }
+  ]
+}
