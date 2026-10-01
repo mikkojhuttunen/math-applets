@@ -10,6 +10,7 @@ Interactive maths applets for Finnish schools (grades 1-9 and upper secondary), 
 | Misconception exercises, grades 7-9 | `math-misconceptions/` except `grades1-6/` | `math-misconceptions/README.md`, `math-misconceptions/ROUTINE_PROMPT.md` | `claude/exercises` |
 | Exercises, grades 1-6 | `math-misconceptions/grades1-6/` | `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`, `math-misconceptions/grades1-6/EXPERT_REVIEW_REQUIRED.md` | `claude/exercises-1-6` |
 | Practice pages | `harjoittele/` | `harjoittele/BACKLOG_WEB.md` | no routine; manual sessions |
+| Site publishing | `LIVE_BACKLOG.md`, `TESTING.md`, `.nojekyll`, `.github/workflows/pages-live.yml` | `LIVE_BACKLOG.md` | no routine; manual sessions |
 | Telegram bot (paused) | `telegram-bot/` | `telegram-bot/BACKLOG_BOT.md`, `telegram-bot/BOT_ANALYSIS.md` | no routine; paused at B01 |
 
 Work on one pipeline never edits another's files. The practice pages and the bot read the other pipelines' files read-only. `math-applets/math/OPS_7-9_oppimistavoitteet.md` is shared read-only reference (curriculum goals S1-S6). The grades 1-6 pipeline reads `math-misconceptions/sources/` (item bank) read-only; its own curriculum goals are in `math-misconceptions/grades1-6/data/curriculum/OPS_1-6_oppimistavoitteet.md`.

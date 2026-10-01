@@ -167,7 +167,7 @@ export async function loadItems(manifestUrl, { fetchImpl = globalThis.fetch, inc
         skipped.push({ file: file.path, id, reason: 'not reviewed' });
       } else {
         seen.add(item.id);
-        items.push(item);
+        items.push({ ...item, file: file.path });
       }
     }
   }

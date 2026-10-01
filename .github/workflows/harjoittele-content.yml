@@ -1,0 +1,41 @@
+# When exercise batches, curriculum goals or the misconception sources change,
+# the practice pages' generated data in harjoittele/data/ may need rebuilding.
+# This only warns: pull requests from the exercise pipelines must not edit
+# harjoittele/, so whoever merges runs the commands in harjoittele/README.md.
+# Check that the action versions below are current before relying on them.
+name: harjoittele-content
+on:
+  pull_request:
+    paths:
+      - "math-misconceptions/grades1-6/exercises/grades1-6/**"
+      - "math-misconceptions/exercises/**"
+      - "math-misconceptions/grades1-6/data/curriculum/**"
+      - "math-applets/math/OPS_7-9_oppimistavoitteet.md"
+      - "math-misconceptions/sources/math_misconceptions_item_bank.xlsx"
+      - "math-misconceptions/math-misconceptions-7-9grades-backlog.md"
+      - "math-misconceptions/grades1-6/tools/buggy_rules/buggy_rules.py"
+jobs:
+  freshness:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: harjoittele
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Is harjoittele/data up to date?
+        run: |
+          stale=""
+          node tools/build_manifest.js --check || stale="$stale node tools/build_manifest.js;"
+          node tools/build_goals.js --check || stale="$stale node tools/build_goals.js;"
+          python3 tools/extract_misconceptions.py --check || stale="$stale python3 tools/extract_misconceptions.py;"
+          if [ -n "$stale" ]; then
+            echo "::warning title=harjoittele data out of date::After merging, run in harjoittele/:$stale then npm test, and commit harjoittele/data/."
+          else
+            echo "harjoittele data is up to date"
+          fi
