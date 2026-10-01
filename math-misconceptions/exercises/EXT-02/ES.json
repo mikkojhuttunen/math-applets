@@ -1,0 +1,275 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-02",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5^3 − 20",
+          "5 · 3 − 20",
+          "−5"
+        ],
+        "error_line": 2,
+        "error_type": "integer_exponent"
+      },
+      "solution": {
+        "steps": [
+          "5^3 = 5 · 5 · 5 = 125, ei 5 · 3. Oikea tulos on 105."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 5,
+          "n": 3,
+          "c": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2 · 5^0 + 6",
+          "2 · 0 + 6",
+          "0 + 6",
+          "6"
+        ],
+        "error_line": 2,
+        "error_type": "integer_exponent"
+      },
+      "solution": {
+        "steps": [
+          "5^0 = 1, ei 0. Oikea tulos on 2 · 1 + 6 = 8."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5^(−1) + 20",
+          "−5 + 20",
+          "15"
+        ],
+        "error_line": 2,
+        "error_type": "integer_exponent"
+      },
+      "solution": {
+        "steps": [
+          "5^(−1) = 1/5, ei −5. Oikea tulos on 1/5 + 20."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 5,
+          "b": 20
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "4^0 + 4^(−1)",
+          "1 + 4^(−1)",
+          "1 − 4",
+          "−3"
+        ],
+        "error_line": 3,
+        "error_type": "integer_exponent"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein, koska 4^0 = 1. Mutta 4^(−1) = 1/4, ei −4. Oikea tulos on 1 + 1/4."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "5^2 + 5^(−2)",
+          "25 + 5^(−2)",
+          "25 − 25",
+          "0"
+        ],
+        "error_line": 3,
+        "error_type": "integer_exponent"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. 5^(−2) = 1/5^2 = 1/25, ei −25. Oikea tulos on 25 + 1/25."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    }
+  ]
+}

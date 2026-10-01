@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for auto-generating exercises about documented misconceptions, linked to the Finnish curriculum (OPS 7-9) goal IDs |
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
-| Runs completed | 0 |
-| Last run | never |
-| Progress | 0 of 227 planned cells generated (3 cells have a hand-written seed example only) |
+| Runs completed | 23 |
+| Last run | 2026-10-01 |
+| Progress | 122 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -133,9 +133,9 @@ Priority: 1 = evidence Strong, 2 = Moderate or curriculum-derived (`EXT`), 3 = L
 | PRO-01 | Illusion of linearity: area | Strong | 1 | S5.05 | S5.07 | T16, T18 | 8 | Applet gap (OPS §7): similarity and scale (k, k², k³). Same k² idea as OPS §6 (S5.05). |
 | PRO-02 | Illusion of linearity: volume | Strong | 1 | S5.05 | S5.13 | T16, T18 | 8 | Applet gap (OPS §7): similarity and scale (k, k², k³). |
 | FUN-02 | Slope–height confusion | Strong | 1 | S4.07 | S4.05 | T8, T15 | 9 |  |
-| ALG-02 | Different letters must differ in value | Moderate | 2 | S3.01 | - | T15 | 7 | Evidence rests on a study with unverified authors; check before use. |
-| ALG-04 | Conjoining terms | Moderate | 2 | S3.02 | - | T14 | 7 |  |
-| ALG-05 | Juxtaposition read as place value | Moderate | 2 | S3.01 | - | T15 | 7 |  |
+| ALG-02 | X | Moderate | 2 | S3.01 | - | T15 | X | Evidence rests on a study with unverified authors; check before use. |
+| ALG-04 | X | X | 2 | S3.02 | - | T14 | 7 |  |
+| ALG-05 | X | X | 2 | S3.01 | - | T15 | 7 |  |
 | ALG-07 | Sign errors and one-sided operations | Moderate | 2 | S3.05 | - | T14 | 7→8 | Applet gap (OPS §7): equation as a balance. Hand-written ES seed exists. |
 | ALG-08 | Distributive law applied to one term | Moderate | 2 | S3.02 | S3.04 | T14 | 7 | Hand-written seeds exist (SO prototype, ME example). |
 | ALG-09 | Square of a sum | Moderate | 2 | S3.04 | S3.03 | T14 | 8 |  |
@@ -187,43 +187,43 @@ Same row order as section 3.1. Columns are in phase order.
 
 | ID | MC | NE | ES | SO | FS | ME | RP | SC | MA | EST | GI | NL | EX | TF | PH |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| ALG-01 | o | o | - | - | - | - | - | - | o | - | - | - | o | o | - |
-| ALG-06 | o | o | o | - | - | - | o | o | - | - | - | - | - | o | - |
-| ALG-10 | o | - | - | - | - | - | o | - | o | - | - | - | o | - | - |
-| NUM-01 | o | o | - | - | - | - | - | o | - | - | - | o | o | - | - |
-| NUM-02 | o | o | - | - | - | - | - | o | - | - | - | o | o | - | - |
-| NUM-03 | o | o | o | - | o | o | - | - | - | o | - | - | - | - | - |
-| NUM-04 | o | o | - | - | - | - | o | o | - | o | - | - | - | o | - |
-| NUM-06 | o | - | - | - | - | - | o | - | - | - | - | o | o | o | - |
-| PRO-01 | o | o | - | - | - | - | - | - | o | o | o | - | - | o | - |
-| PRO-02 | o | o | - | - | - | - | - | - | o | o | o | - | - | o | - |
-| FUN-02 | o | o | - | - | - | - | - | - | - | - | o | - | o | - | - |
-| ALG-02 | o | - | - | - | - | - | o | - | - | - | - | - | o | o | - |
-| ALG-04 | o | o | o | - | - | o | - | o | - | - | - | - | - | - | - |
-| ALG-05 | o | o | - | - | - | o | - | - | - | - | - | - | - | - | - |
-| ALG-07 | o | o | s | o | o | - | o | - | - | - | - | - | o | - | o |
-| ALG-08 | o | o | o | s | o | s | o | - | - | - | - | - | - | - | - |
-| ALG-09 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | o |
-| ALG-11 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | - |
-| NUM-05 | o | o | - | - | - | - | o | o | - | o | - | - | - | o | - |
-| NUM-07 | o | o | o | o | o | - | - | - | - | o | - | - | o | - | o |
-| PRO-03 | o | o | - | - | - | - | o | - | - | - | o | - | o | o | - |
-| PRO-04 | o | o | - | - | - | - | o | - | - | - | o | - | o | o | - |
-| GEO-01 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| GEO-02 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| FUN-01 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
-| PRB-01 | o | o | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| PRB-02 | o | o | - | - | - | - | o | o | - | - | - | - | o | - | - |
-| EXT-01 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
-| EXT-02 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
-| EXT-03 | o | o | o | o | o | - | - | - | - | - | - | o | o | - | o |
-| EXT-04 | o | o | o | - | o | o | o | - | - | - | - | - | - | - | o |
-| EXT-05 | o | o | - | - | - | - | - | o | - | - | - | - | o | o | - |
-| EXT-06 | o | o | o | - | o | - | - | o | o | o | - | - | - | - | - |
-| EXT-07 | o | o | o | - | - | - | - | - | o | o | - | - | - | - | - |
-| EXT-08 | o | o | o | o | o | - | o | - | - | - | - | - | o | o | - |
-| EXT-09 | o | o | - | - | - | - | o | o | o | - | o | - | - | - | - |
-| ALG-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
+| ALG-01 | X | X | - | - | - | - | - | - | o | - | - | - | o | o | - |
+| ALG-06 | X | X | X | - | - | - | X | o | - | - | - | - | - | o | - |
+| ALG-10 | X | - | - | - | - | - | X | - | o | - | - | - | o | - | - |
+| NUM-01 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
+| NUM-02 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
+| NUM-03 | X | X | X | - | X | X | - | - | - | o | - | - | - | - | - |
+| NUM-04 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
+| NUM-06 | X | - | - | - | - | - | X | - | - | - | - | o | o | o | - |
+| PRO-01 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
+| PRO-02 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
+| FUN-02 | X | X | - | - | - | - | - | - | - | - | o | - | o | - | - |
+| ALG-02 | X | - | - | - | - | - | X | - | - | - | - | - | o | o | - |
+| ALG-04 | X | X | X | - | - | X | - | o | - | - | - | - | - | - | - |
+| ALG-05 | X | X | - | - | - | X | - | - | - | - | - | - | - | - | - |
+| ALG-07 | X | X | X | X | X | - | X | - | - | - | - | - | o | - | o |
+| ALG-08 | X | X | X | X | X | X | X | - | - | - | - | - | - | - | - |
+| ALG-09 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | o |
+| ALG-11 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | - |
+| NUM-05 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
+| NUM-07 | X | X | X | X | X | - | - | - | - | o | - | - | o | - | o |
+| PRO-03 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
+| PRO-04 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
+| GEO-01 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
+| GEO-02 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
+| FUN-01 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
+| PRB-01 | X | X | - | - | - | - | - | - | - | - | - | - | o | o | - |
+| PRB-02 | X | X | - | - | - | - | X | o | - | - | - | - | o | - | - |
+| EXT-01 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
+| EXT-02 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
+| EXT-03 | X | X | X | X | X | - | - | - | - | - | - | o | o | - | o |
+| EXT-04 | X | X | X | - | X | X | X | - | - | - | - | - | - | - | o |
+| EXT-05 | X | X | - | - | - | - | - | o | - | - | - | - | o | o | - |
+| EXT-06 | X | X | X | - | X | - | - | o | o | o | - | - | - | - | - |
+| EXT-07 | X | X | X | - | - | - | - | - | o | o | - | - | - | - | - |
+| EXT-08 | X | X | X | X | o | - | o | - | - | - | - | - | o | o | - |
+| EXT-09 | X | X | - | - | - | - | o | o | o | - | o | - | - | - | - |
+| ALG-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | ALG-12 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
 | NUM-08 | o | o | o | - | - | - | - | - | - | o | - | - | o | o | - |
 | FUN-03 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
@@ -240,6 +240,128 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-09-20 | ALG-08 | SO | (seed) | - | S3.02 | docx appendix, [prototype](https://claude.ai/artifact/BngH5P3L9yDcG1NPPx3JEu) | Seed | Order lines to simplify 2(x + 3) + 4x - 5; prototype has a generator |
 | 2026-09-20 | ALG-08 | ME | (seed) | - | S3.02 | docx appendix | Seed | Which expressions equal 3(x - 2); distractors tagged |
 | 2026-09-20 | - | NE | (seed) | - | S2.10 | docx appendix | Seed | Jacket 80 € +15 %. Fits no topic exactly; NUM-07 and NUM-08 are the closest. Not counted in section 4 |
+| 2026-09-30 | ALG-01 | MC | ALG-01-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-01/MC.json | Draft | Strong; item 5 asks for a justification (no T4 link for this topic) |
+| 2026-09-30 | ALG-01 | NE | ALG-01-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-01/NE.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | MC | ALG-06-MC-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/MC.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | NE | ALG-06-NE-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/NE.json | Draft | Strong |
+| 2026-09-30 | ALG-10 | MC | ALG-10-MC-001..005 | T, T, T, H, H | S1.04 (S3.05) | exercises/ALG-10/MC.json | Draft | Strong |
+| 2026-09-30 | ALG-10 | RP | ALG-10-RP-001..005 | T, T, T, H, K | S1.04 (S3.05) | exercises/ALG-10/RP.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | ES | ALG-06-ES-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/ES.json | Draft | Strong |
+| 2026-09-30 | ALG-06 | RP | ALG-06-RP-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-06/RP.json | Draft | Strong |
+| 2026-09-30 | NUM-01 | MC | NUM-01-MC-001..005 | T, T, T, H, H | S2.06 (S2.08) | exercises/NUM-01/MC.json | Draft | Strong; item 5 asks for a justification (no T4 link for this topic) |
+| 2026-09-30 | NUM-01 | NE | NUM-01-NE-001..005 | T, T, T, H, H | S2.06 (S2.08) | exercises/NUM-01/NE.json | Draft | Strong |
+| 2026-09-30 | NUM-02 | MC | NUM-02-MC-001..005 | T, T, T, H, H | S2.06 (S2.08) | exercises/NUM-02/MC.json | Draft | Strong; item 5 asks for a justification (no T4 link for this topic) |
+| 2026-09-30 | NUM-02 | NE | NUM-02-NE-001..005 | T, T, T, H, H | S2.06 (S2.08) | exercises/NUM-02/NE.json | Draft | Strong |
+| 2026-09-30 | NUM-03 | MC | NUM-03-MC-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/MC.json | Draft | Strong; unlike denominators covered; item 5 asks for a justification |
+| 2026-09-30 | NUM-03 | NE | NUM-03-NE-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/NE.json | Draft | Strong; answers are numerators or denominators (integers) |
+| 2026-09-30 | NUM-04 | MC | NUM-04-MC-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-04/MC.json | Draft | Strong; item 5 asks for a justification |
+| 2026-09-30 | NUM-04 | NE | NUM-04-NE-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-04/NE.json | Draft | Strong |
+| 2026-09-30 | NUM-06 | MC | NUM-06-MC-001..005 | T, T, T, H, H | S2.08 | exercises/NUM-06/MC.json | Draft | Strong; item 5 asks for a method justification |
+| 2026-09-30 | NUM-06 | RP | NUM-06-RP-001..005 | T, T, T, H, H | S2.08 | exercises/NUM-06/RP.json | Draft | Strong |
+| 2026-09-30 | NUM-03 | ES | NUM-03-ES-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/ES.json | Draft | Strong; unlike denominators covered |
+| 2026-09-30 | NUM-03 | FS | NUM-03-FS-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/FS.json | Draft | Strong; answer is a numeric expression (variable x is only a schema placeholder) |
+| 2026-09-30 | NUM-04 | RP | NUM-04-RP-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-04/RP.json | Draft | Strong |
+| 2026-09-30 | PRO-01 | MC | PRO-01-MC-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-01/MC.json | Draft | Strong; item 5 asks for a justification |
+| 2026-09-30 | PRO-01 | NE | PRO-01-NE-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-01/NE.json | Draft | Strong |
+| 2026-09-30 | NUM-03 | ME | NUM-03-ME-001..005 | T, T, T, H, H | S2.02 | exercises/NUM-03/ME.json | Draft | Strong; unlike denominators; expressions are numeric (variable x is only a schema placeholder) |
+| 2026-09-30 | PRO-02 | MC | PRO-02-MC-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-02/MC.json | Draft | Strong; item 5 asks for a justification |
+| 2026-09-30 | PRO-02 | NE | PRO-02-NE-001..005 | T, T, T, H, H | S5.05 | exercises/PRO-02/NE.json | Draft | Strong |
+| 2026-09-30 | FUN-02 | MC | FUN-02-MC-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-02/MC.json | Draft | Strong; graphs described by value tables and equations (no figure); item 5 asks for a justification |
+| 2026-09-30 | FUN-02 | NE | FUN-02-NE-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-02/NE.json | Draft | Strong; speed from two graph points |
+| 2026-09-30 | ALG-02 | MC | ALG-02-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-02/MC.json | Draft | Moderate; evidence rests on a study with unverified authors (check before use); item 4 asks for a justification |
+| 2026-09-30 | ALG-02 | RP | ALG-02-RP-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-02/RP.json | Draft | Moderate; evidence rests on a study with unverified authors (check before use); second letter given in words, equation written for x |
+| 2026-09-30 | ALG-04 | MC | ALG-04-MC-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/MC.json | Draft | Moderate; item 4 asks for a justification (substitution check) |
+| 2026-09-30 | ALG-04 | NE | ALG-04-NE-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/NE.json | Draft | Moderate |
+| 2026-09-30 | ALG-05 | MC | ALG-05-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/MC.json | Draft | Moderate; item 4 asks for a justification |
+| 2026-09-30 | ALG-05 | NE | ALG-05-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-04 | ES | ALG-04-ES-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/ES.json | Draft | Moderate; expression lines, error merges unlike terms into one x-term |
+| 2026-10-01 | ALG-04 | ME | ALG-04-ME-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-04/ME.json | Draft | Moderate |
+| 2026-10-01 | ALG-05 | ME | ALG-05-ME-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-05/ME.json | Draft | Moderate; place-value distractors such as 10c + n tagged ALG-05 |
+| 2026-10-01 | ALG-07 | MC | ALG-07-MC-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/MC.json | Draft | Moderate; item 5 asks to identify the error in a step (justification) |
+| 2026-10-01 | ALG-07 | NE | ALG-07-NE-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-07 | ES | ALG-07-ES-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/ES.json | Draft | Moderate; sign not changed when moving a term, and one-sided division (item 3) |
+| 2026-10-01 | ALG-07 | SO | ALG-07-SO-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | ALG-08 | MC | ALG-08-MC-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/MC.json | Draft | Moderate; item 5 asks to check a claim by substitution (justification) |
+| 2026-10-01 | ALG-08 | NE | ALG-08-NE-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-09 | MC | ALG-09-MC-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/MC.json | Draft | Moderate; item 5 asks to check a claim by substitution (justification) |
+| 2026-10-01 | ALG-09 | NE | ALG-09-NE-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-07 | FS | ALG-07-FS-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/FS.json | Draft | Moderate; blanked line is an equation (answer kind equation) |
+| 2026-10-01 | ALG-07 | RP | ALG-07-RP-001..005 | T, T, T, H, H | S3.05 | exercises/ALG-07/RP.json | Draft | Moderate; invalid equations are sign-slip or one-sided results |
+| 2026-10-01 | ALG-08 | ES | ALG-08-ES-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/ES.json | Draft | Moderate; error: only the first bracket term is multiplied |
+| 2026-10-01 | ALG-08 | SO | ALG-08-SO-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | ALG-09 | ES | ALG-09-ES-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/ES.json | Draft | Moderate; error: (a + b)² = a² + b² or dropped cross term |
+| 2026-10-01 | ALG-09 | SO | ALG-09-SO-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | ALG-08 | FS | ALG-08-FS-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/FS.json | Draft | Moderate; blanked line is an expression, answer accepted by equivalence |
+| 2026-10-01 | ALG-08 | ME | ALG-08-ME-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/ME.json | Draft | Moderate; distractors multiply only one term of the bracket; item 2 sign distractor tagged ALG-11 |
+| 2026-10-01 | ALG-09 | FS | ALG-09-FS-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/FS.json | Draft | Moderate; blanked line is an expression, answer accepted by equivalence |
+| 2026-10-01 | ALG-09 | ME | ALG-09-ME-001..005 | T, T, T, H, H | S3.04 (S3.03) | exercises/ALG-09/ME.json | Draft | Moderate; distractors distribute the power over the sum or lose the cross term |
+| 2026-10-01 | ALG-11 | MC | ALG-11-MC-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/MC.json | Draft | Moderate; item 5 asks to check a claim by substitution (justification) |
+| 2026-10-01 | ALG-11 | NE | ALG-11-NE-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/NE.json | Draft | Moderate |
+| 2026-10-01 | ALG-08 | RP | ALG-08-RP-001..005 | T, T, T, H, H | S3.02 | exercises/ALG-08/RP.json | Draft | Moderate; invalid equations multiply only the first bracket term |
+| 2026-10-01 | ALG-11 | ES | ALG-11-ES-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/ES.json | Draft | Moderate; error: minus before a bracket changes only the first term's sign |
+| 2026-10-01 | ALG-11 | SO | ALG-11-SO-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | NUM-05 | MC | NUM-05-MC-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-05/MC.json | Draft | Moderate; item 5 asks for a justification; xlsx row not read (openpyxl not in requirements), seed from backlog section 3.1 |
+| 2026-10-01 | NUM-05 | NE | NUM-05-NE-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-05/NE.json | Draft | Moderate; wrong answer is the product with the divisor |
+| 2026-10-01 | ALG-11 | FS | ALG-11-FS-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/FS.json | Draft | Moderate; blanked line is an expression, answer accepted by equivalence |
+| 2026-10-01 | ALG-11 | ME | ALG-11-ME-001..005 | T, T, T, H, H | S3.02 (S2.01) | exercises/ALG-11/ME.json | Draft | Moderate; distractors leave a bracket term's sign unchanged |
+| 2026-10-01 | NUM-05 | RP | NUM-05-RP-001..005 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-05/RP.json | Draft | Moderate; invalid equations multiply instead of divide |
+| 2026-10-01 | NUM-07 | MC | NUM-07-MC-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/MC.json | Draft | Moderate; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | NUM-07 | NE | NUM-07-NE-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/NE.json | Draft | Moderate; wrong answer is the percentage taken of the new amount |
+| 2026-10-01 | NUM-07 | ES | NUM-07-ES-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/ES.json | Draft | Moderate; lines are equations for the original amount x; error: percentage taken of the new amount or wrong factor |
+| 2026-10-01 | NUM-07 | SO | NUM-07-SO-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/SO.json | Draft | Moderate; exact order, all lines equivalent to line 1 |
+| 2026-10-01 | PRO-03 | MC | PRO-03-MC-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/MC.json | Draft | Moderate; item 5 asks for a justification; xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | PRO-03 | NE | PRO-03-NE-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/NE.json | Draft | Moderate; wrong entry repeats the area of the other equal-perimeter shape |
+| 2026-10-01 | PRO-04 | MC | PRO-04-MC-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/MC.json | Draft | Moderate; item 5 asks for a justification |
+| 2026-10-01 | PRO-04 | NE | PRO-04-NE-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/NE.json | Draft | Moderate; wrong entry is the area or perimeter of the shape with the larger perimeter |
+| 2026-10-01 | NUM-07 | FS | NUM-07-FS-001..005 | T, T, T, H, H | S2.10 | exercises/NUM-07/FS.json | Draft | Moderate; blanked line is an equation (answer kind equation); percentages written as hundredths so the checker compares exact rationals |
+| 2026-10-01 | PRO-03 | RP | PRO-03-RP-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-03/RP.json | Draft | Moderate; invalid equations equate the areas instead of the perimeters |
+| 2026-10-01 | PRO-04 | RP | PRO-04-RP-001..005 | T, T, T, H, H | S5.07 | exercises/PRO-04/RP.json | Draft | Moderate; equal areas with a larger perimeter; invalid equations equate the perimeters |
+| 2026-10-01 | GEO-01 | MC | GEO-01-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-01/MC.json | Draft | Moderate; triangles given by coordinates, angles or sides (no figure); item 5 asks for a justification |
+| 2026-10-01 | GEO-02 | MC | GEO-02-MC-001..005 | T, T, T, H, H | S5.03 | exercises/GEO-02/MC.json | Draft | Moderate; item 5 asks to judge a class-inclusion claim (justification) |
+| 2026-10-01 | FUN-01 | MC | FUN-01-MC-001..005 | T, T, T, H, H | S4.07 | exercises/FUN-01/MC.json | Draft | Moderate; graphs described by value tables and verbal trends (no figure); item 5 asks for a justification |
+| 2026-10-01 | PRB-01 | MC | PRB-01-MC-001..005 | T, T, T, H, H | S6.06 | exercises/PRB-01/MC.json | Draft | Moderate; item 5 asks for a justification (independence); xlsx row read via zip (openpyxl not in requirements) |
+| 2026-10-01 | PRB-01 | NE | PRB-01-NE-001..005 | T, T, T, H, H | S6.06 | exercises/PRB-01/NE.json | Draft | Moderate; wrong answers follow the "it is due" or "it balances out" belief |
+| 2026-10-01 | PRB-02 | MC | PRB-02-MC-001..005 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/MC.json | Draft | Moderate; item 5 asks for a justification (proportion, not count) |
+| 2026-10-01 | PRB-02 | NE | PRB-02-NE-001..005 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/NE.json | Draft | Moderate; wrong answer is the count of marbles instead of the proportion |
+| 2026-10-01 | EXT-01 | MC | EXT-01-MC-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification |
+| 2026-10-01 | EXT-01 | NE | EXT-01-NE-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer reads −a² as (−a)² |
+| 2026-10-01 | PRB-02 | RP | PRB-02-RP-001..005 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/RP.json | Draft | Moderate; invalid equations use the count of black marbles instead of the proportion |
+| 2026-10-01 | EXT-01 | ES | EXT-01-ES-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/ES.json | Draft | Not assessed; literature evidence not yet checked; error: −a² read as a² |
+| 2026-10-01 | EXT-01 | FS | EXT-01-FS-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression (variable x is only a schema placeholder) |
+| 2026-10-01 | EXT-02 | MC | EXT-02-MC-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification of a⁰ = 1 |
+| 2026-10-01 | EXT-02 | NE | EXT-02-NE-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answers read the power as a product, a⁰ as 0 and a⁻ⁿ as negative |
+| 2026-10-01 | EXT-01 | ME | EXT-01-ME-001..005 | T, T, T, H, H | S2.01 (S2.11) | exercises/EXT-01/ME.json | Draft | Not assessed; literature evidence not yet checked; expressions are numeric (variable x is only a schema placeholder); distractors read −a² as (−a)² or the reverse |
+| 2026-10-01 | EXT-02 | ES | EXT-02-ES-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/ES.json | Draft | Not assessed; literature evidence not yet checked; exponents written with ^ so the checker can parse them; errors: power read as a product, a^0 = 0, a^(−n) negative |
+| 2026-10-01 | EXT-02 | FS | EXT-02-FS-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression with ^ exponents (variable x is only a schema placeholder) |
+| 2026-10-01 | EXT-03 | MC | EXT-03-MC-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification by substitution |
+| 2026-10-01 | EXT-03 | NE | EXT-03-NE-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/NE.json | Draft | Not assessed; literature evidence not yet checked; answer is the number of integers in a window satisfying the inequality, wrong answer is the count with the sign not reversed |
+| 2026-10-01 | EXT-02 | ME | EXT-02-ME-001..005 | T, T, T, H, H | S2.11 | exercises/EXT-02/ME.json | Draft | Not assessed; literature evidence not yet checked; expressions are numeric with ^ exponents (variable x is only a schema placeholder); distractors read the power as a product, a^0 as 0 or a negative exponent as a negative number |
+| 2026-10-01 | EXT-03 | ES | EXT-03-ES-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/ES.json | Draft | Not assessed; literature evidence not yet checked; error: division by a negative number keeps the inequality sign |
+| 2026-10-01 | EXT-03 | SO | EXT-03-SO-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/SO.json | Draft | Not assessed; literature evidence not yet checked; exact order, all lines have the same solution set as line 1, sign reversed in the last step |
+| 2026-10-01 | EXT-04 | MC | EXT-04-MC-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/MC.json | Draft | Not assessed; literature evidence not yet checked; item 5 asks for a justification by substitution |
+| 2026-10-01 | EXT-04 | NE | EXT-04-NE-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/NE.json | Draft | Not assessed; literature evidence not yet checked; asks for a value that needs both roots, wrong answer comes from the positive root only |
+| 2026-10-01 | EXT-03 | FS | EXT-03-FS-001..005 | T, T, T, H, H | S3.07 | exercises/EXT-03/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is an inequality; answer stored as kind expression with an inequality reference because kind equation needs a finite solution set; accepted by solution-set equivalence |
+| 2026-10-01 | EXT-04 | ES | EXT-04-ES-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/ES.json | Draft | Not assessed; literature evidence not yet checked; error: only the positive root is kept |
+| 2026-10-01 | EXT-04 | FS | EXT-04-FS-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/FS.json | Draft | Not assessed; literature evidence not yet checked; lines are equations ending in the factored form (x − a)(x + a) = 0; accepted by solution-set equivalence |
+| 2026-10-01 | EXT-05 | MC | EXT-05-MC-001..005 | T, T, T, H, H | S5.09 | exercises/EXT-05/MC.json | Draft | Not assessed; literature evidence not yet checked; triangles given by side lengths or one angle (no figure); item 5 asks for a counterexample (justification) |
+| 2026-10-01 | EXT-05 | NE | EXT-05-NE-001..005 | T, T, T, H, H | S5.09 | exercises/EXT-05/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer is 0 (theorem assumed to hold) or every triangle counted as right-angled |
+| 2026-10-01 | EXT-04 | ME | EXT-04-ME-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/ME.json | Draft | Not assessed; literature evidence not yet checked; reference x² − a² (or scaled); distractors keep only one root, e.g. (x − a)² or x − a |
+| 2026-10-01 | EXT-04 | RP | EXT-04-RP-001..005 | T, T, T, H, H | S3.08 | exercises/EXT-04/RP.json | Draft | Not assessed; literature evidence not yet checked; target is a single solution, so valid equations are double roots such as (x − a)² = 0; invalid ones x² = a² have two solutions |
+| 2026-10-01 | EXT-06 | MC | EXT-06-MC-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/MC.json | Draft | Not assessed; literature evidence not yet checked; triangles given by side lengths (no figure); item 4 asks for a justification (sine cannot exceed 1) |
+| 2026-10-01 | EXT-06 | NE | EXT-06-NE-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/NE.json | Draft | Not assessed; literature evidence not yet checked; Pythagorean triples with terminating ratios; wrong answers are a side length given as the sine, or the adjacent-leg ratio |
+| 2026-10-01 | EXT-07 | MC | EXT-07-MC-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/MC.json | Draft | Not assessed; literature evidence not yet checked; item 4 asks to refute 1 m² = 100 cm² (justification); item 5 compares areas after conversion |
+| 2026-10-01 | EXT-07 | NE | EXT-07-NE-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer uses the length factor 100 (or 1 000 for km²) |
+| 2026-10-01 | EXT-06 | ES | EXT-06-ES-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/ES.json | Draft | Not assessed; literature evidence not yet checked; lines are numeric expressions built from Pythagorean triples; errors: sine read as a length, adjacent leg for opposite (and reverse), numerator scaled without the hypotenuse |
+| 2026-10-01 | EXT-06 | FS | EXT-06-FS-001..005 | T, T, T, H, H | S5.10 | exercises/EXT-06/FS.json | Draft | Not assessed; literature evidence not yet checked; blanked line is a numeric expression (variable x is only a schema placeholder) |
+| 2026-10-01 | EXT-07 | ES | EXT-07-ES-001..005 | T, T, T, H, H | S5.14 | exercises/EXT-07/ES.json | Draft | Not assessed; literature evidence not yet checked; lines are numeric expressions; error: the length factor (100 or 1 000) is used for the area |
+| 2026-10-01 | EXT-08 | MC | EXT-08-MC-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/MC.json | Draft | Not assessed; literature evidence not yet checked; item 4 asks for a justification (mean vs median with an outlier), item 5 asks to judge a claim |
+| 2026-10-01 | EXT-08 | NE | EXT-08-NE-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answers are the middle of the unsorted list or the mean |
+| 2026-10-01 | EXT-08 | ES | EXT-08-ES-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/ES.json | Draft | Not assessed; literature evidence not yet checked; lines are numeric expressions; errors: the middle of the unsorted list used as the median, or the mean used for the median (item 5) |
+| 2026-10-01 | EXT-08 | SO | EXT-08-SO-001..005 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/SO.json | Draft | Not assessed; literature evidence not yet checked; task is mean minus median (median given in the prompt); exact order, all lines equal line 1 |
+| 2026-10-01 | EXT-09 | MC | EXT-09-MC-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/MC.json | Draft | Not assessed; literature evidence not yet checked; items 4 and 5 compare steepness of two lines (item 5 asks to judge a claim); xlsx has no row for EXT topics, seed from backlog section 3.2 |
+| 2026-10-01 | EXT-09 | NE | EXT-09-NE-001..005 | T, T, T, H, H | S4.05 | exercises/EXT-09/NE.json | Draft | Not assessed; literature evidence not yet checked; wrong answer is the intercept where the slope is asked (and the reverse) |
+| 2026-10-01 | ALG-03 | MC | ALG-03-MC-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/MC.json | Draft | Limited; limited evidence, check full text before relying on it; items 4 and 5 ask for a justification (value is not the alphabet position) |
+| 2026-10-01 | ALG-03 | NE | ALG-03-NE-001..005 | T, T, T, H, H | S3.01 | exercises/ALG-03/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer is the letter's alphabet position |
 
 ## 6. Curriculum coverage
 

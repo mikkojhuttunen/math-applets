@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-11",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "15 − (x + 5)",
+          "15 − x + 5",
+          "20 − x"
+        ],
+        "error_line": 2,
+        "error_type": "minus_not_distributed"
+      },
+      "solution": {
+        "steps": [
+          "Miinus koskee koko sulkua: −(x + 5) = −x − 5. Oikea tulos on 10 − x."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg11_es",
+        "params": {
+          "a": 6,
+          "b": 5,
+          "c": 15,
+          "d": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "10 − (4x − 2)",
+          "10 − 4x − 2",
+          "8 − 4x"
+        ],
+        "error_line": 2,
+        "error_type": "minus_not_distributed"
+      },
+      "solution": {
+        "steps": [
+          "Miinus muuttaa myös luvun −2 merkin: −(4x − 2) = −4x + 2. Oikea tulos on 12 − 4x."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg11_es",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "c": 10,
+          "d": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(7x + 14) − (4x + 6)",
+          "7x + 14 − (4x + 6)",
+          "7x + 14 − 4x + 6",
+          "3x + 20"
+        ],
+        "error_line": 3,
+        "error_type": "minus_not_distributed"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Miinus koskee koko jälkimmäistä sulkua: −(4x + 6) = −4x − 6. Oikea tulos on 3x + 8."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg11_es",
+        "params": {
+          "a": 7,
+          "b": 4,
+          "c": 14,
+          "d": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−(7x − 2) − (x + 15)",
+          "−7x + 2 − (x + 15)",
+          "−7x + 2 − x + 15",
+          "−8x + 17"
+        ],
+        "error_line": 3,
+        "error_type": "minus_not_distributed"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Miinus koskee koko sulkua (x + 15): −(x + 15) = −x − 15. Oikea tulos on −8x − 13."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg11_es",
+        "params": {
+          "a": 7,
+          "b": 2,
+          "c": 15,
+          "d": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Ostoksen hinta on 15 euroa. Siitä vähennetään alennus, jonka suuruus on x − 5 euroa. Oppilas kirjoittaa maksettavan summan lausekkeen ja sieventää sen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "15 − (x − 5)",
+          "15 − x − 5",
+          "10 − x"
+        ],
+        "error_line": 2,
+        "error_type": "minus_not_distributed"
+      },
+      "solution": {
+        "steps": [
+          "Alennus x − 5 vähennetään kokonaan: −(x − 5) = −x + 5. Oikea tulos on 20 − x."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
+      },
+      "provenance": {
+        "template": "alg11_es",
+        "params": {
+          "a": 5,
+          "b": 5,
+          "c": 15,
+          "d": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

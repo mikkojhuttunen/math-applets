@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-01",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−4² + 10",
+          "4² + 10",
+          "26"
+        ],
+        "error_line": 2,
+        "error_type": "negative_base_square"
+      },
+      "solution": {
+        "steps": [
+          "Potenssi lasketaan ennen miinusmerkkiä: −4² = −(4 · 4) = −16. Oikea tulos on −6."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
+      },
+      "provenance": {
+        "template": "ext01_es",
+        "params": {
+          "a": 4,
+          "b": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−5² − 4",
+          "−(5 · 5) − 4",
+          "5 · 5 − 4",
+          "21"
+        ],
+        "error_line": 3,
+        "error_type": "negative_base_square"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein. Miinus kuuluu potenssin eteen, joten −(5 · 5) = −25 eikä 25. Oikea tulos on −29."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
+      },
+      "provenance": {
+        "template": "ext01_es",
+        "params": {
+          "a": 5,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−(−3)² + 30",
+          "3² + 30",
+          "39"
+        ],
+        "error_line": 2,
+        "error_type": "negative_base_square"
+      },
+      "solution": {
+        "steps": [
+          "Sulkeissa (−3)² = 9, ja sen eteen jää miinus: −(−3)² = −9. Oikea tulos on 21."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
+      },
+      "provenance": {
+        "template": "ext01_es",
+        "params": {
+          "d": 3,
+          "c": 30
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−5² + (−5)²",
+          "5² + 5²",
+          "50"
+        ],
+        "error_line": 2,
+        "error_type": "negative_base_square"
+      },
+      "solution": {
+        "steps": [
+          "−5² = −25 ja (−5)² = 25. Oikea tulos on −25 + 25 = 0."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
+      },
+      "provenance": {
+        "template": "ext01_es",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Oppilas laskee rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "−3² − (−3)²",
+          "−(3 · 3) − 3 · 3",
+          "3 · 3 − 3 · 3",
+          "0"
+        ],
+        "error_line": 3,
+        "error_type": "negative_base_square"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: −3² = −9 ja (−3)² = 9. Oikea tulos on −9 − 9 = −18."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
+      },
+      "provenance": {
+        "template": "ext01_es",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    }
+  ]
+}

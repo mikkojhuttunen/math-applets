@@ -1,0 +1,393 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "y + 8 = 18. Mikä on y?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "10",
+            "misconception": null,
+            "feedback": "Oikein: 18 − 8 = 10."
+          },
+          {
+            "id": "b",
+            "text": "18",
+            "misconception": null,
+            "feedback": "Tämä on yhtälön oikea puoli, ei ratkaisu."
+          },
+          {
+            "id": "c",
+            "text": "26",
+            "misconception": null,
+            "feedback": "Luku 8 on vähennettävä, ei lisättävä."
+          },
+          {
+            "id": "d",
+            "text": "25",
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "y + 8 = 18",
+          "y = 18 − 8 = 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_mc",
+        "params": {
+          "letter": "y",
+          "position": 25,
+          "value": 10,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "4m = 24. Mikä on m?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "96",
+            "misconception": null,
+            "feedback": "Kerroin 4 on jaettava pois, ei kerrottava."
+          },
+          {
+            "id": "b",
+            "text": "20",
+            "misconception": null,
+            "feedback": "Termi 4m tarkoittaa tuloa 4 · m."
+          },
+          {
+            "id": "c",
+            "text": "6",
+            "misconception": null,
+            "feedback": "Oikein: 24 ÷ 4 = 6."
+          },
+          {
+            "id": "d",
+            "text": "13",
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4m = 24",
+          "m = 24 ÷ 4 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_mc",
+        "params": {
+          "letter": "m",
+          "position": 13,
+          "value": 6,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "t − 6 = -3. Mikä on t?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3",
+            "misconception": null,
+            "feedback": "Oikein: -3 + 6 = 3."
+          },
+          {
+            "id": "b",
+            "text": "−9",
+            "misconception": null,
+            "feedback": "Luku 6 on lisättävä, ei vähennettävä."
+          },
+          {
+            "id": "c",
+            "text": "9",
+            "misconception": null,
+            "feedback": "Tarkista vastauksen merkki."
+          },
+          {
+            "id": "d",
+            "text": "20",
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "t − 6 = -3",
+          "t = -3 + 6 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_mc",
+        "params": {
+          "letter": "t",
+          "position": 20,
+          "value": 3,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön d + 3 = 10 ja kirjoittaa: ”d = 4, koska d on aakkosten 4. kirjain.” Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on oikein: d = 4, koska kirjaimen paikka aakkosissa on sen arvo",
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärin: yhtälöstä saadaan d = 13",
+            "misconception": null,
+            "feedback": "Luku 3 on vähennettävä, ei lisättävä."
+          },
+          {
+            "id": "c",
+            "text": "Väite on väärin: yhtälöstä saadaan d = 7",
+            "misconception": null,
+            "feedback": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+          },
+          {
+            "id": "d",
+            "text": "Yhtälöllä ei ole ratkaisua",
+            "misconception": null,
+            "feedback": "Yhtälö on ratkaistavissa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "d + 3 = 10",
+          "d = 10 − 3 = 7",
+          "Tarkistus: 7 + 3 = 10"
+        ],
+        "final": "d = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_mc",
+        "params": {
+          "letter": "d",
+          "position": 4,
+          "value": 7,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "Miksi yhtälössä p + 2 = 10 kirjaimen p arvoa ei voi päätellä sen paikasta aakkosissa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Siksi, että p:n arvo on aina 10",
+            "misconception": null,
+            "feedback": "Luku 10 on yhtälön oikea puoli, ei kirjaimen arvo."
+          },
+          {
+            "id": "b",
+            "text": "Kirjain on tuntematon luku, jonka arvon määrää yhtälö, ei kirjaimen paikka aakkosissa",
+            "misconception": null,
+            "feedback": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+          },
+          {
+            "id": "c",
+            "text": "Siksi, että kirjaimet vaihtavat paikkaa aakkosissa",
+            "misconception": null,
+            "feedback": "Aakkosjärjestys ei liity kirjaimen arvoon."
+          },
+          {
+            "id": "d",
+            "text": "Sen voi päätellä: p on aakkosten 16. kirjain, joten p = 16",
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "p + 2 = 10",
+          "p = 8, eli arvo saadaan laskemalla yhtälöstä"
+        ],
+        "final": "Arvo ratkaistaan yhtälöstä"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_mc",
+        "params": {
+          "letter": "p",
+          "position": 16,
+          "value": 8,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}

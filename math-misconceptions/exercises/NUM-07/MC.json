@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Pelin hinta nousi 10 % ja on nyt 88 €. Mikä hinta oli ennen korotusta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "96,8 €",
+            "misconception": null,
+            "feedback": "Tämä olisi hinta, jos nykyinen hinta nousisi vielä kerran."
+          },
+          {
+            "id": "b",
+            "text": "78 €",
+            "misconception": null,
+            "feedback": "10 % ei tarkoita 10 euroa."
+          },
+          {
+            "id": "c",
+            "text": "80 €",
+            "misconception": null,
+            "feedback": "Oikein: 80 · 1,1 = 88."
+          },
+          {
+            "id": "d",
+            "text": "79,2 €",
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. Alkuperäinen määrä on se 100 %, josta muutos lasketaan."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vanha hinta on 100 %, uusi 110 %",
+          "88 ÷ 1,1 = 80"
+        ],
+        "final": "80 €"
+      },
+      "feedback": {
+        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_mc",
+        "params": {
+          "orig": "80",
+          "percent": "10",
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Takin hinta aleni 25 % ja se maksaa nyt 45 €. Mikä oli takin hinta ennen alennusta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "70 €",
+            "misconception": null,
+            "feedback": "25 % ei tarkoita 25 euroa."
+          },
+          {
+            "id": "b",
+            "text": "60 €",
+            "misconception": null,
+            "feedback": "Oikein: 60 · 0,75 = 45."
+          },
+          {
+            "id": "c",
+            "text": "33,75 €",
+            "misconception": null,
+            "feedback": "Tämä olisi hinta, jos nykyinen hinta alenisi vielä kerran."
+          },
+          {
+            "id": "d",
+            "text": "56,25 €",
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. Alkuperäinen määrä on se 100 %, josta muutos lasketaan."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vanha hinta on 100 %, uusi 75 %",
+          "45 ÷ 0,75 = 60"
+        ],
+        "final": "60 €"
+      },
+      "feedback": {
+        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_mc",
+        "params": {
+          "orig": "60",
+          "percent": "25",
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Luokan oppilasmäärä kasvoi 50 % ja on nyt 90. Kuinka monta oppilasta lisää luokkaan tuli?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "45",
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. Alkuperäinen määrä on se 100 %, josta muutos lasketaan."
+          },
+          {
+            "id": "b",
+            "text": "50",
+            "misconception": null,
+            "feedback": "50 on prosenttiluku, ei oppilaiden määrä."
+          },
+          {
+            "id": "c",
+            "text": "60",
+            "misconception": null,
+            "feedback": "Tämä on alkuperäinen määrä, ei lisäys."
+          },
+          {
+            "id": "d",
+            "text": "30",
+            "misconception": null,
+            "feedback": "Oikein: alkuperäinen määrä oli 60, ja kasvu on 90 − 60 = 30."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "90 ÷ 1,5 = 60",
+          "90 − 60 = 30"
+        ],
+        "final": "30"
+      },
+      "feedback": {
+        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_mc",
+        "params": {
+          "orig": "60",
+          "percent": "50",
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Palkka nousi 25 % ja on nyt 150 €/kk. Oppilas laskee vanhaksi palkaksi 150 − 25 % · 150 = 112,5 €. Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lasku on väärin: vanha palkka on 120 €, koska 120 · 1,25 = 150",
+            "misconception": null,
+            "feedback": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+          },
+          {
+            "id": "b",
+            "text": "Vanhaa palkkaa ei voi laskea, jos ei tiedä korotuksen euromäärää",
+            "misconception": null,
+            "feedback": "Prosentin ja uuden määrän avulla alkuperäisen voi laskea."
+          },
+          {
+            "id": "c",
+            "text": "Lasku on väärin: vanha palkka on 187,5 €",
+            "misconception": null,
+            "feedback": "Tämä olisi palkka, jos nykyinen palkka nousisi vielä kerran."
+          },
+          {
+            "id": "d",
+            "text": "Lasku on oikein: 112,5 € on vanha palkka",
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. Alkuperäinen määrä on se 100 %, josta muutos lasketaan."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "112,5 · 1,25 = 140,625 ≠ 150",
+          "150 ÷ 1,25 = 120"
+        ],
+        "final": "120 €"
+      },
+      "feedback": {
+        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_mc",
+        "params": {
+          "orig": "120",
+          "percent": "25",
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Hinta nousi 20 %. Miksi vanhaa hintaa ei saa laskemalla uudesta hinnasta 20 % pois?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Siksi, että prosentteja ei saa vähentää hinnasta lainkaan",
+            "misconception": null,
+            "feedback": "Prosentteja voi käyttää, kunhan perusarvo on oikea."
+          },
+          {
+            "id": "b",
+            "text": "Koska 20 % on laskettu vanhasta hinnasta, ja uusi hinta on suurempi, joten 20 % uudesta hinnasta on liian suuri",
+            "misconception": null,
+            "feedback": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+          },
+          {
+            "id": "c",
+            "text": "Se on aina oikein, koska nousu ja lasku 20 % kumoavat toisensa",
+            "misconception": "NUM-07",
+            "feedback": "Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. Alkuperäinen määrä on se 100 %, josta muutos lasketaan."
+          },
+          {
+            "id": "d",
+            "text": "Siksi, että vanha hinta on aina 20 euroa pienempi",
+            "misconception": null,
+            "feedback": "20 % ei tarkoita 20 euroa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Uusi hinta = 1,2 · vanha hinta",
+          "Vanha hinta = uusi hinta ÷ 1,2"
+        ],
+        "final": "Perusarvo on vanha hinta, ei uusi"
+      },
+      "feedback": {
+        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+      },
+      "provenance": {
+        "template": "num07_mc",
+        "params": {
+          "orig": "60",
+          "percent": "20",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}

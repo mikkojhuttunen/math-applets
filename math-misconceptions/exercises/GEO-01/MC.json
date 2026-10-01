@@ -1,0 +1,467 @@
+{
+  "schema_version": "1.0",
+  "topic": "GEO-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "GEO-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-01"
+      ],
+      "prompt": {
+        "text": "Koordinaatistoon piirretään kuvio, jonka kärjet ovat A(2, 3), B(4, 9), C(3, 1). Pisteet yhdistetään janoilla. Onko syntyvä kuvio kolmio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei, koska yksikään sivu ei ole vaakasuora ja kolmion pohjan pitää olla alhaalla",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "b",
+            "text": "Ei, koska kolmion täytyy olla symmetrinen",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä: pisteet eivät ole samalla suoralla, ja kuvion ala on 5 ruutua",
+            "misconception": null,
+            "feedback": "Oikein: kolme pistettä, jotka eivät ole samalla suoralla, määräävät kolmion, vaikka se olisi vinossa."
+          },
+          {
+            "id": "d",
+            "text": "Kyllä, mutta vain jos kaikki sivut ovat yhtä pitkät",
+            "misconception": null,
+            "feedback": "Kolmion sivut saavat olla eri pituisia."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kärjet A(2, 3), B(4, 9), C(3, 1)",
+          "Pisteet eivät ole samalla suoralla: ala 5 > 0",
+          "Kuvio on kolmio"
+        ],
+        "final": "Kyllä: pisteet eivät ole samalla suoralla, ja kuvion ala on 5 ruutua"
+      },
+      "feedback": {
+        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+      },
+      "provenance": {
+        "template": "geo01_mc",
+        "params": {
+          "points": [
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              3,
+              1
+            ]
+          ],
+          "twice_area": 10
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-01"
+      ],
+      "prompt": {
+        "text": "Kuviolla on kolme suoraa sivua ja sen kulmat ovat 126°, 38° ja 16°. Onko kuvio kolmio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä, koska kulmien summa on 360°",
+            "misconception": null,
+            "feedback": "Kulmien summa on 126 + 38 + 16 = 180°."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä: kulmien summa on 126 + 38 + 16 = 180°",
+            "misconception": null,
+            "feedback": "Oikein: kolmion yksi kulma saa olla tylppä, kunhan kulmien summa on 180°."
+          },
+          {
+            "id": "c",
+            "text": "Ei, koska kolmion kulmat ovat aina yhtä suuret",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "d",
+            "text": "Ei, koska kolmiossa kaikkien kulmien pitää olla teräviä ja 126° on tylppä",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "126 + 38 + 16 = 180",
+          "Kulmasumma on kolmion kulmasumma"
+        ],
+        "final": "Kyllä: kulmien summa on 126 + 38 + 16 = 180°"
+      },
+      "feedback": {
+        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+      },
+      "provenance": {
+        "template": "geo01_mc",
+        "params": {
+          "angles": [
+            126,
+            38,
+            16
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "GEO-01"
+      ],
+      "prompt": {
+        "text": "Kukkapenkin reunat ovat suoria ja niiden pituudet ovat 5 m, 7 m ja 8 m. Onko penkin muoto kolmio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei, koska 5 + 7 < 8",
+            "misconception": null,
+            "feedback": "5 + 7 = 12, mikä on suurempi kuin 8."
+          },
+          {
+            "id": "b",
+            "text": "Ei, koska kolmion kaikkien sivujen pitää olla yhtä pitkät",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "c",
+            "text": "Ei, koska oikea kolmio on tasakylkinen",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "d",
+            "text": "Kyllä: 5 + 7 = 12 > 8, joten sivuista saa kolmion, vaikka ne ovat eri pituisia",
+            "misconception": null,
+            "feedback": "Oikein: kolmion sivut saavat olla eri pituisia, kunhan kaksi lyhintä sivua on yhteensä pidempiä kuin pisin."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5 + 7 = 12 > 8",
+          "Sivuista voi muodostaa kolmion"
+        ],
+        "final": "Kyllä: 5 + 7 = 12 > 8, joten sivuista saa kolmion, vaikka ne ovat eri pituisia"
+      },
+      "feedback": {
+        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+      },
+      "provenance": {
+        "template": "geo01_mc",
+        "params": {
+          "sides": [
+            5,
+            7,
+            8
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "GEO-01"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista pistejoukoista EI muodosta kolmiota, kun pisteet yhdistetään janoilla?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A(3, 3), B(4, 6), C(5, 9)",
+            "misconception": null,
+            "feedback": "Oikein: pisteet ovat samalla suoralla (ala 0), joten kolmiota ei synny."
+          },
+          {
+            "id": "b",
+            "text": "A(7, 9), B(5, 7), C(3, 4)",
+            "misconception": "GEO-01",
+            "feedback": "Nämä pisteet eivät ole samalla suoralla, joten ne muodostavat kolmion, vaikka se näyttää vinolta."
+          },
+          {
+            "id": "c",
+            "text": "A(1, 2), B(3, 6), C(6, 0)",
+            "misconception": "GEO-01",
+            "feedback": "Nämä pisteet eivät ole samalla suoralla, joten ne muodostavat kolmion, vaikka se näyttää vinolta."
+          },
+          {
+            "id": "d",
+            "text": "A(2, 4), B(6, 1), C(4, 3)",
+            "misconception": "GEO-01",
+            "feedback": "Nämä pisteet eivät ole samalla suoralla, joten ne muodostavat kolmion, vaikka se näyttää vinolta."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A(3, 3), B(4, 6), C(5, 9): ala 0",
+          "Muut pistejoukot antavat ala > 0"
+        ],
+        "final": "A(3, 3), B(4, 6), C(5, 9)"
+      },
+      "feedback": {
+        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+      },
+      "provenance": {
+        "template": "geo01_mc",
+        "params": {
+          "collinear": [
+            [
+              3,
+              3
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              9
+            ]
+          ],
+          "triangles": [
+            [
+              [
+                7,
+                9
+              ],
+              [
+                5,
+                7
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                2,
+                4
+              ],
+              [
+                6,
+                1
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                1,
+                2
+              ],
+              [
+                3,
+                6
+              ],
+              [
+                6,
+                0
+              ]
+            ]
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "GEO-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.03"
+        ],
+        "t": [
+          "T16"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "GEO-01"
+      ],
+      "prompt": {
+        "text": "Kuvion kärjet ovat A(7, 5), B(6, 3), C(2, 4). Oppilas sanoo: \"Tämä ei ole oikea kolmio, koska se on vinossa.\" Miten asiaa kannattaa perustella?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kolmio on kolmio, kun kolme suoraa sivua sulkee kuvion. Tässä ala on 4,5 ruutua, joten pisteet eivät ole samalla suoralla",
+            "misconception": null,
+            "feedback": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+          },
+          {
+            "id": "b",
+            "text": "Kuvio on kolmio vain, jos sitä kierretään niin, että yksi sivu on vaakasuora",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "c",
+            "text": "Oppilas on oikeassa, koska kolmioksi kutsutaan vain tasasivuista kuviota",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          },
+          {
+            "id": "d",
+            "text": "Oppilas on oikeassa: kolmion pitää olla symmetrinen ja pohjan vaakasuora",
+            "misconception": "GEO-01",
+            "feedback": "Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet eivät vaikuta siihen, onko se kolmio."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kärjet A(7, 5), B(6, 3), C(2, 4)",
+          "Ala 4,5 > 0",
+          "Asento ei vaikuta kolmion käsitteeseen"
+        ],
+        "final": "Kolmio on kolmio, kun kolme suoraa sivua sulkee kuvion. Tässä ala on 4,5 ruutua, joten pisteet eivät ole samalla suoralla"
+      },
+      "feedback": {
+        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+      },
+      "provenance": {
+        "template": "geo01_mc",
+        "params": {
+          "points": [
+            [
+              7,
+              5
+            ],
+            [
+              6,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "twice_area": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 15
+      }
+    }
+  ]
+}

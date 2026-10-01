@@ -1,0 +1,402 @@
+[
+ {
+  "id": "A36.S4.09-cover-20261001-0421-001",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmio peitetään 1 cm × 1 cm ruuduilla. Ruutuja on 3 riviä, ja jokaisella rivillä on 5 ruutua. Montako ruutua on yhteensä?",
+  "answer": "15",
+  "answer_expr": "3 * 5",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "8",
+    "answer_expr": "3 + 5"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-002",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Lattia peitetään neliönmuotoisilla laatoilla. Laattoja on 4 riviä, ja jokaisella rivillä on 6 laattaa. Montako laattaa tarvitaan?",
+  "answer": "24",
+  "answer_expr": "4 * 6",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "10",
+    "answer_expr": "4 + 6"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-003",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Suklaalevyssä on 2 riviä ja jokaisella rivillä 7 palaa. Montako palaa levyssä on?",
+  "answer": "14",
+  "answer_expr": "2 * 7",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "9",
+    "answer_expr": "2 + 7"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-004",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Postimerkkiarkissa on 5 riviä, ja jokaisella rivillä on 4 postimerkkiä. Montako postimerkkiä arkissa on?",
+  "answer": "20",
+  "answer_expr": "5 * 4",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "9",
+    "answer_expr": "5 + 4"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-005",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Pöytä peitetään 1 dm × 1 dm ruuduilla. Ruutuja on 6 riviä ja jokaisella rivillä 3 ruutua. Montako ruutua tarvitaan?",
+  "answer": "18",
+  "answer_expr": "6 * 3",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "9",
+    "answer_expr": "6 + 3"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-006",
+  "goal": "A36.S4.09",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Munakennossa on 2 riviä ja jokaisella rivillä 6 koloa. Montako kolon paikkaa kennossa on?",
+  "answer": "12",
+  "answer_expr": "2 * 6",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "8",
+    "answer_expr": "2 + 6"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-007",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmio peitetään 1 cm × 1 cm ruuduilla. Se on 7 ruutua leveä ja 4 ruutua korkea. Montako ruutua tarvitaan koko suorakulmion peittämiseen?",
+  "answer": "28",
+  "answer_expr": "4 * 7",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "11",
+    "answer_expr": "4 + 7"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-008",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Seinälle kiinnitetään 1 m × 1 m levyjä. Levyjä on 8 vaakariviä, ja jokaisella rivillä on 5 levyä. Montako levyä seinällä on?",
+  "answer": "40",
+  "answer_expr": "8 * 5",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "13",
+    "answer_expr": "8 + 5"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-009",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Kauppa asettelee purkkeja hyllylle 6 riviin. Jokaisella rivillä on 9 purkkia. Montako purkkia hyllyllä on?",
+  "answer": "54",
+  "answer_expr": "6 * 9",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "15",
+    "answer_expr": "6 + 9"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-010",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmion muotoinen pelikenttä on piirretty ruudukkoon. Siinä on 9 riviä ja jokaisella rivillä 3 ruutua. Montako ruutua kentässä on?",
+  "answer": "27",
+  "answer_expr": "9 * 3",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "12",
+    "answer_expr": "9 + 3"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-011",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Kuvio peitetään 1 cm × 1 cm ruuduilla. Ruudut muodostavat 7 riviä ja 8 saraketta. Montako ruutua kuviossa on?",
+  "answer": "56",
+  "answer_expr": "7 * 8",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "15",
+    "answer_expr": "7 + 8"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-012",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Bussissa on 10 penkkiriviä, ja jokaisessa rivissä on 4 paikkaa. Montako paikkaa bussissa on?",
+  "answer": "40",
+  "answer_expr": "10 * 4",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "14",
+    "answer_expr": "10 + 4"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-013",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmion pituus on 9 cm ja leveys 5 cm. Se peitetään 1 cm × 1 cm ruuduilla ilman päällekkäisyyksiä. Montako ruutua tarvitaan?",
+  "answer": "45",
+  "answer_expr": "5 * 9",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "14",
+    "answer_expr": "5 + 9"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-014",
+  "goal": "A36.S4.09",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Liitutaulu peitetään 1 dm × 1 dm tarroilla. Tarroja tulee 6 riviin ja jokaiselle riville 12 tarraa. Montako tarraa tarvitaan?",
+  "answer": "72",
+  "answer_expr": "6 * 12",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "18",
+    "answer_expr": "6 + 12"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-015",
+  "goal": "A36.S4.09",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Ida peittää suorakulmion 1 cm × 1 cm ruuduilla. Hän tekee 8 riviä, ja jokaisella rivillä on 6 ruutua. Montako ruutua hän tarvitsee, kun hän peittää kuvion kokonaan?",
+  "answer": "48",
+  "answer_expr": "8 * 6",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "14",
+    "answer_expr": "8 + 6"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-016",
+  "goal": "A36.S4.09",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Lattia on 12 laattaa leveä ja 7 laattaa pitkä. Jokainen laatta on 1 dm × 1 dm. Montako laattaa lattiaan tarvitaan?",
+  "answer": "84",
+  "answer_expr": "7 * 12",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "19",
+    "answer_expr": "7 + 12"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-017",
+  "goal": "A36.S4.09",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Pihan pinta-ala halutaan laskea. Piha peitetään 1 m × 1 m ruuduilla: 9 riviä, jokaisella rivillä 11 ruutua. Montako neliömetriä piha on?",
+  "answer": "99",
+  "answer_expr": "9 * 11",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "20",
+    "answer_expr": "9 + 11"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-018",
+  "goal": "A36.S4.09",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmio peitetään 1 cm × 1 cm ruuduilla 13 riviin. Jokaisella rivillä on 4 ruutua. Montako ruutua on yhteensä?",
+  "answer": "52",
+  "answer_expr": "13 * 4",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "17",
+    "answer_expr": "13 + 4"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-019",
+  "goal": "A36.S4.09",
+  "level": "K",
+  "type": "numeric_entry",
+  "stem_fi": "Matto peitetään 1 dm × 1 dm ruuduilla. Ruutuja on 15 riviä ja jokaisella rivillä 8 ruutua. Montako neliödesimetriä maton pinta-ala on?",
+  "answer": "120",
+  "answer_expr": "15 * 8",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "23",
+    "answer_expr": "15 + 8"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S4.09-cover-20261001-0421-020",
+  "goal": "A36.S4.09",
+  "level": "K",
+  "type": "numeric_entry",
+  "stem_fi": "Suorakulmion muotoinen kukkapenkki on 14 m pitkä ja 6 m leveä. Se jaetaan 1 m × 1 m ruutuihin. Montako ruutua penkissä on?",
+  "answer": "84",
+  "answer_expr": "6 * 14",
+  "workbook": [
+   "MEA-01"
+  ],
+  "misconceptions": {
+   "MEA-01a": {
+    "answer": "20",
+    "answer_expr": "6 + 14"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ }
+]

@@ -1,0 +1,383 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen −6² arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−36",
+            "misconception": null,
+            "feedback": "Oikein: −6² = −(6 · 6) = −36."
+          },
+          {
+            "id": "b",
+            "text": "36",
+            "misconception": "EXT-01",
+            "feedback": "Potenssimerkintä koskee vain sitä lukua, jonka vieressä se on. Lausekkeessa −3² potenssi lasketaan ensin: −3² = −(3 · 3) = −9. Vasta sulkeissa (−3)² = 9."
+          },
+          {
+            "id": "c",
+            "text": "12",
+            "misconception": null,
+            "feedback": "Tämä on 6 · 2. Potenssi 6² tarkoittaa 6 · 6."
+          },
+          {
+            "id": "d",
+            "text": "−12",
+            "misconception": null,
+            "feedback": "Tämä on −6 · 2. Potenssi 6² tarkoittaa 6 · 6."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−6² = −(6 · 6)",
+          "= −36"
+        ],
+        "final": "−36"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_mc",
+        "params": {
+          "a": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista väitteistä on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(−2)² = 4 ja −2² = 4",
+            "misconception": "EXT-01",
+            "feedback": "Potenssimerkintä koskee vain sitä lukua, jonka vieressä se on. Lausekkeessa −3² potenssi lasketaan ensin: −3² = −(3 · 3) = −9. Vasta sulkeissa (−3)² = 9."
+          },
+          {
+            "id": "b",
+            "text": "(−2)² = 4 ja −2² = −4",
+            "misconception": null,
+            "feedback": "Oikein: sulkeet määräävät, kuuluuko miinus potenssin kantalukuun."
+          },
+          {
+            "id": "c",
+            "text": "(−2)² = −4 ja −2² = −4",
+            "misconception": null,
+            "feedback": "Kun 2² kerrotaan luvulla −2, miinus kertaa miinus on plus: (−2)² = 4."
+          },
+          {
+            "id": "d",
+            "text": "(−2)² = −4 ja −2² = 4",
+            "misconception": null,
+            "feedback": "Tämä on päinvastoin. Sulkeissa (−2)² = (−2) · (−2) = 4."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(−2)² = (−2) · (−2) = 4",
+          "−2² = −(2 · 2) = −4"
+        ],
+        "final": "(−2)² = 4, −2² = −4"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_mc",
+        "params": {
+          "a": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Laskin näyttää, että −3² = −9. Onko tulos oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "On: potenssi lasketaan ensin, joten −3² = −(3 · 3) = −9",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "Ei ole: tuloksen pitäisi olla −6",
+            "misconception": null,
+            "feedback": "Potenssi 3² tarkoittaa 3 · 3, ei 3 · 2."
+          },
+          {
+            "id": "c",
+            "text": "Ei ole: miinus kertaa miinus on plus, joten tuloksen pitäisi olla 9",
+            "misconception": "EXT-01",
+            "feedback": "Potenssimerkintä koskee vain sitä lukua, jonka vieressä se on. Lausekkeessa −3² potenssi lasketaan ensin: −3² = −(3 · 3) = −9. Vasta sulkeissa (−3)² = 9."
+          },
+          {
+            "id": "d",
+            "text": "Ei ole: laskimen tulos riippuu laskimesta",
+            "misconception": null,
+            "feedback": "Laskujärjestys on sovittu: potenssi lasketaan ennen etumerkkiä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−3² = −(3 · 3)",
+          "= −9"
+        ],
+        "final": "On oikein"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_mc",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista lausekkeista on arvoltaan 9?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−3 · 3",
+            "misconception": null,
+            "feedback": "Tämä on −9: erimerkkisten lukujen tulo on negatiivinen."
+          },
+          {
+            "id": "b",
+            "text": "−3²",
+            "misconception": "EXT-01",
+            "feedback": "Potenssimerkintä koskee vain sitä lukua, jonka vieressä se on. Lausekkeessa −3² potenssi lasketaan ensin: −3² = −(3 · 3) = −9. Vasta sulkeissa (−3)² = 9."
+          },
+          {
+            "id": "c",
+            "text": "−(3²)",
+            "misconception": null,
+            "feedback": "Tämä on −9: potenssi 3² on 9 ja sen eteen tulee miinus."
+          },
+          {
+            "id": "d",
+            "text": "(−3)²",
+            "misconception": null,
+            "feedback": "Oikein: (−3)² = (−3) · (−3) = 9."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(−3)² = 9",
+          "−3² = −9"
+        ],
+        "final": "(−3)²"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_mc",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.01",
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-01"
+      ],
+      "prompt": {
+        "text": "Mikä perustelu on oikea sille, että −3² = −9 eikä 9?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Potenssi koskee koko lukua −3, joten −3² = (−3) · (−3) = 9",
+            "misconception": "EXT-01",
+            "feedback": "Potenssimerkintä koskee vain sitä lukua, jonka vieressä se on. Lausekkeessa −3² potenssi lasketaan ensin: −3² = −(3 · 3) = −9. Vasta sulkeissa (−3)² = 9."
+          },
+          {
+            "id": "b",
+            "text": "Miinus ja potenssi kumoavat toisensa, joten tulos on −3 + 3 = 0",
+            "misconception": null,
+            "feedback": "Miinusmerkki ja potenssi eivät kumoa toisiaan."
+          },
+          {
+            "id": "c",
+            "text": "Tulos on −9, koska 3 · 3 = 9 ja luku on aina negatiivinen",
+            "misconception": null,
+            "feedback": "Etumerkki ei ole \"aina\" negatiivinen: (−3)² = 9."
+          },
+          {
+            "id": "d",
+            "text": "Potenssi koskee vain lukua 3, joten −3² = −(3 · 3) = −9",
+            "misconception": null,
+            "feedback": "Oikein: potenssi lasketaan ennen miinusmerkkiä."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Potenssi lasketaan ensin: 3² = 9",
+          "Miinusmerkki tulee sen eteen: −9"
+        ],
+        "final": "Potenssi koskee vain lukua 3"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+      },
+      "provenance": {
+        "template": "ext01_mc",
+        "params": {
+          "a": 3,
+          "justify": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

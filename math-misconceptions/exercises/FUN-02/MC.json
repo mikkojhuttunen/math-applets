@@ -1,0 +1,408 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kaksi pyöräilijää A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä (km) ajan (h) funktiona: A: t = 0 → 0 km, t = 2 → 10 km. B: t = 0 → 5 km, t = 2 → 13 km. Kuvaajat (aika–määrä) leikkaavat, kun t = 5. Kumpi kulkee nopeammin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A",
+            "misconception": null,
+            "feedback": "Oikein: A:n määrä kasvaa nopeammin. A:n nopeus on 5 ja B:n 4 km/h."
+          },
+          {
+            "id": "b",
+            "text": "B",
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo vain sen, kuinka pitkän matkan kohde on kulkenut. Nopeuden kertoo jyrkkyys: kuinka paljon matka kasvaa aikayksikössä."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi päätellä annetuista tiedoista.",
+            "misconception": null,
+            "feedback": "Kahdesta pisteestä lasketaan muutos aikayksikköä kohti."
+          },
+          {
+            "id": "d",
+            "text": "Yhtä nopeasti, koska kuvaajat leikkaavat.",
+            "misconception": null,
+            "feedback": "Leikkauspiste kertoo vain, että määrät ovat yhtä suuret sillä hetkellä. Nopeus on kuvaajan jyrkkyys."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: (10 − 0) / 2 = 5 km/h",
+          "B: (13 − 5) / 2 = 4 km/h"
+        ],
+        "final": "A"
+      },
+      "feedback": {
+        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+      },
+      "provenance": {
+        "template": "fun02_mc",
+        "params": {
+          "vF": 5,
+          "cF": 0,
+          "vS": 4,
+          "cS": 5,
+          "t0": 5,
+          "faster": "A",
+          "q": 2,
+          "context": "pyöräilijää"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kaksi juoksijaa A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä (km) ajan (h) funktiona: A: t = 0 → 3 km, t = 2 → 9 km. B: t = 0 → 11 km, t = 2 → 13 km. Kuvaajat (aika–määrä) leikkaavat, kun t = 4. Kumpi kulkee hitaammin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "B",
+            "misconception": null,
+            "feedback": "Oikein: B:n määrä kasvaa hitaammin. A:n nopeus on 3 ja B:n 1 km/h."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä nopeasti, koska kuvaajat leikkaavat.",
+            "misconception": null,
+            "feedback": "Leikkauspiste kertoo vain, että määrät ovat yhtä suuret sillä hetkellä. Nopeus on kuvaajan jyrkkyys."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi päätellä annetuista tiedoista.",
+            "misconception": null,
+            "feedback": "Kahdesta pisteestä lasketaan muutos aikayksikköä kohti."
+          },
+          {
+            "id": "d",
+            "text": "A",
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo vain sen, kuinka pitkän matkan kohde on kulkenut. Nopeuden kertoo jyrkkyys: kuinka paljon matka kasvaa aikayksikössä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: (9 − 3) / 2 = 3 km/h",
+          "B: (13 − 11) / 2 = 1 km/h"
+        ],
+        "final": "B"
+      },
+      "feedback": {
+        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+      },
+      "provenance": {
+        "template": "fun02_mc",
+        "params": {
+          "vF": 3,
+          "cF": 3,
+          "vS": 1,
+          "cS": 11,
+          "t0": 4,
+          "faster": "A",
+          "q": 2,
+          "context": "juoksijaa"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kaksi vesisäiliötä täyttyy letkuilla. Vettä on säiliöissä (l) ajan (min) funktiona: A: t = 0 → 8 l, t = 2 → 12 l. B: t = 0 → 0 l, t = 2 → 8 l. Kuvaajat (aika–määrä) leikkaavat, kun t = 4. Kumpi täyttyy nopeammin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A",
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo vain sen, kuinka pitkän matkan kohde on kulkenut. Nopeuden kertoo jyrkkyys: kuinka paljon matka kasvaa aikayksikössä."
+          },
+          {
+            "id": "b",
+            "text": "Sitä ei voi päätellä annetuista tiedoista.",
+            "misconception": null,
+            "feedback": "Kahdesta pisteestä lasketaan muutos aikayksikköä kohti."
+          },
+          {
+            "id": "c",
+            "text": "Yhtä nopeasti, koska kuvaajat leikkaavat.",
+            "misconception": null,
+            "feedback": "Leikkauspiste kertoo vain, että määrät ovat yhtä suuret sillä hetkellä. Nopeus on kuvaajan jyrkkyys."
+          },
+          {
+            "id": "d",
+            "text": "B",
+            "misconception": null,
+            "feedback": "Oikein: B:n määrä kasvaa nopeammin. A:n nopeus on 2 ja B:n 4 l/min."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: (12 − 8) / 2 = 2 l/min",
+          "B: (8 − 0) / 2 = 4 l/min"
+        ],
+        "final": "B"
+      },
+      "feedback": {
+        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+      },
+      "provenance": {
+        "template": "fun02_mc",
+        "params": {
+          "vF": 4,
+          "cF": 0,
+          "vS": 2,
+          "cS": 8,
+          "t0": 4,
+          "faster": "B",
+          "q": 2,
+          "context": "vesisäiliötä"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kaksi juoksijaa: A:n matka (km) on s = 2t + 3 ja B:n matka s = t + 8, missä t on aika tunteina. Kumpi juoksija on hetkellä t = 1 kauempana lähtöpisteestä ja kumpi juoksee nopeammin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kauempana on B, nopeammin juoksee A.",
+            "misconception": null,
+            "feedback": "Oikein: B:n matka on t = 1 suurempi (9 km), mutta A:n nopeus on suurempi (2 km/h)."
+          },
+          {
+            "id": "b",
+            "text": "A on kauempana ja myös juoksee nopeammin.",
+            "misconception": null,
+            "feedback": "Tarkista luvut: t = 1 antaa B:lle 9 km ja A:lle 5 km."
+          },
+          {
+            "id": "c",
+            "text": "Kauempana on A, nopeammin juoksee B.",
+            "misconception": null,
+            "feedback": "Tarkista luvut: t = 1 antaa B:lle 9 km ja A:lle 5 km."
+          },
+          {
+            "id": "d",
+            "text": "B on kauempana ja myös juoksee nopeammin.",
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo vain sen, kuinka pitkän matkan kohde on kulkenut. Nopeuden kertoo jyrkkyys: kuinka paljon matka kasvaa aikayksikössä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "t = 1: B 9 km, A 5 km",
+          "Nopeudet (termin t kerroin): B 1 km/h, A 2 km/h"
+        ],
+        "final": "Kauempana on B, nopeammin juoksee A."
+      },
+      "feedback": {
+        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+      },
+      "provenance": {
+        "template": "fun02_mc",
+        "params": {
+          "vF": 2,
+          "cF": 3,
+          "vS": 1,
+          "cS": 8,
+          "faster": "A",
+          "q": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.07"
+        ],
+        "t": [
+          "T8",
+          "T15"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-02"
+      ],
+      "prompt": {
+        "text": "Kahden kohteen matka–aika-kuvaajat leikkaavat, kun t = 4. Ennen leikkauspistettä A:n kuvaaja on B:n kuvaajan yläpuolella. Mikä perustelu on oikea, kun kysytään, kumpi liikkuu nopeammin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ylempänä oleva A on kauempana, mutta nopeutta kuvaa jyrkkyys. B:n kuvaaja nousee jyrkemmin, joten B liikkuu nopeammin.",
+            "misconception": null,
+            "feedback": "Oikein: korkeus on matka, jyrkkyys on nopeus."
+          },
+          {
+            "id": "b",
+            "text": "Nopeus on sama, koska kuvaajat kohtaavat.",
+            "misconception": null,
+            "feedback": "Kuvaajat voivat leikata, vaikka jyrkkyydet ovat erilaiset."
+          },
+          {
+            "id": "c",
+            "text": "B liikkuu nopeammin, koska kuvaajat leikkaavat sen kohdalla.",
+            "misconception": null,
+            "feedback": "Leikkauspiste ei kerro nopeutta vaan sen, että matkat ovat yhtä suuret."
+          },
+          {
+            "id": "d",
+            "text": "A liikkuu nopeammin, koska sen kuvaaja on ylempänä.",
+            "misconception": "FUN-02",
+            "feedback": "Kuvaajan korkeus kertoo vain sen, kuinka pitkän matkan kohde on kulkenut. Nopeuden kertoo jyrkkyys: kuinka paljon matka kasvaa aikayksikössä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Korkeus = matka: A on kauempana kuin B ennen t = 4",
+          "Jyrkkyys = nopeus: B 2, A 1"
+        ],
+        "final": "Ylempänä oleva A on kauempana, mutta nopeutta kuvaa jyrkkyys. B:n kuvaaja nousee jyrkemmin, joten B liikkuu nopeammin."
+      },
+      "feedback": {
+        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+      },
+      "provenance": {
+        "template": "fun02_mc",
+        "params": {
+          "vF": 2,
+          "cF": 0,
+          "vS": 1,
+          "cS": 4,
+          "t0": 4,
+          "faster": "B"
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

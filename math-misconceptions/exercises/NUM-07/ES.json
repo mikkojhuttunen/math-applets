@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-07",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Pelin hinta nousi 20 % ja on nyt 48 €. Oppilas laskee alkuperäisen hinnan x rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,2x = 48",
+          "x = 48 − 0,2 · 48",
+          "x = 38,4"
+        ],
+        "error_line": 2,
+        "error_type": "percentage_of_new_amount"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on väärin: 20 % on laskettu uudesta määrästä 48",
+          "Oikein: 1,2x = 48, joten x = 48 / 1,2 = 40"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
+      },
+      "provenance": {
+        "template": "num07_es",
+        "params": {
+          "orig": "40",
+          "percent": "20",
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Takin hinta aleni 25 % ja on nyt 45 €. Oppilas laskee alkuperäisen hinnan x rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x − 0,25x = 45",
+          "x = 45 + 0,25 · 45",
+          "x = 56,25"
+        ],
+        "error_line": 2,
+        "error_type": "percentage_of_new_amount"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on väärin: 25 % on laskettu uudesta määrästä 45",
+          "Oikein: 0,75x = 45, joten x = 45 / 0,75 = 60"
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
+      },
+      "provenance": {
+        "template": "num07_es",
+        "params": {
+          "orig": "60",
+          "percent": "25",
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Bussilipun hinta nousi 25 % ja on nyt 100 €. Oppilas ratkaisee alkuperäisen hinnan x. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,25x = 100",
+          "1,25x = 100",
+          "x = 100 · 0,75"
+        ],
+        "error_line": 3,
+        "error_type": "multiplies_new_amount_by_inverse_factor"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: 1,25x = 100",
+          "Rivi 3 on väärin: jaettava on 100 ja jakaja 1,25, ei kertoimen 0,75 kertominen; x = 100 / 1,25 = 80"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
+      },
+      "provenance": {
+        "template": "num07_es",
+        "params": {
+          "orig": "80",
+          "percent": "25",
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Kengät maksavat 25 %:n alennuksen jälkeen 90 €. Oppilas ratkaisee alkuperäisen hinnan x. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x − 0,25x = 90",
+          "0,75x = 90",
+          "x = 90 · 1,25"
+        ],
+        "error_line": 3,
+        "error_type": "multiplies_new_amount_by_inverse_factor"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: 0,75x = 90",
+          "Rivi 3 on väärin: jaetaan luvulla 0,75, x = 90 / 0,75 = 120"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
+      },
+      "provenance": {
+        "template": "num07_es",
+        "params": {
+          "orig": "120",
+          "percent": "25",
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-07-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-07"
+      ],
+      "prompt": {
+        "text": "Vuokra nousi 50 % ja on nyt 180 €/kk. Oppilas laskee entisen vuokran x rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x + 0,5x = 180",
+          "1,5x = 180",
+          "x = 180 − 0,5 · 180",
+          "x = 90"
+        ],
+        "error_line": 3,
+        "error_type": "percentage_of_new_amount"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: 1,5x = 180",
+          "Rivi 3 on väärin: 50 % on laskettu uudesta määrästä; oikein x = 180 / 1,5 = 120"
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
+      },
+      "provenance": {
+        "template": "num07_es",
+        "params": {
+          "orig": "120",
+          "percent": "50",
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

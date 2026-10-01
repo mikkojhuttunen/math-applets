@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että yhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "5x + 8 = 53",
+          "5x + 8 − 8 = 53 − 8",
+          "5x = 45",
+          "x = 9"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 8 molemmilta puolilta ja jaetaan luvulla 5.",
+          "Ratkaisu: x = 9"
+        ],
+        "final": "x = 9"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi."
+      },
+      "provenance": {
+        "template": "alg07_so",
+        "params": {
+          "a": 5,
+          "b": 8,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että yhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "2x − 9 = 1",
+          "2x − 9 + 9 = 1 + 9",
+          "2x = 10",
+          "x = 5"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Lisätään 9 molemmille puolille ja jaetaan luvulla 2.",
+          "Ratkaisu: x = 5"
+        ],
+        "final": "x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi."
+      },
+      "provenance": {
+        "template": "alg07_so",
+        "params": {
+          "a": 2,
+          "b": 9,
+          "x": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että yhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "9 + 5x = 49",
+          "5x = 49 − 9",
+          "5x = 40",
+          "x = 8"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 9 molemmilta puolilta ja jaetaan luvulla 5.",
+          "Ratkaisu: x = 8"
+        ],
+        "final": "x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi."
+      },
+      "provenance": {
+        "template": "alg07_so",
+        "params": {
+          "a": 5,
+          "b": 9,
+          "x": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit oikeaan järjestykseen niin, että yhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "6x + 7 = 4x + 13",
+          "6x − 4x + 7 = 13",
+          "6x − 4x = 13 − 7",
+          "2x = 6",
+          "x = 3"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 4x ja 7 molemmilta puolilta, sievennetään ja jaetaan luvulla 2.",
+          "Ratkaisu: x = 3"
+        ],
+        "final": "x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi."
+      },
+      "provenance": {
+        "template": "alg07_so",
+        "params": {
+          "a": 6,
+          "b": 7,
+          "x": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Mökin vuokra on 8 euroa kiinteää maksua ja 2 euroa vuorokaudelta. Vuokra oli yhteensä 22 euroa, ja vuorokausien määrä x ratkaistaan yhtälöstä. Järjestä rivit oikeaan järjestykseen niin, että yhtälö ratkeaa vaihe vaiheelta."
+      },
+      "payload": {
+        "lines": [
+          "2x + 8 = 22",
+          "2x + 8 − 8 = 22 − 8",
+          "2x = 14",
+          "x = 7"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään kiinteä maksu 8 molemmilta puolilta ja jaetaan luvulla 2.",
+          "Ratkaisu: x = 7"
+        ],
+        "final": "x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi."
+      },
+      "provenance": {
+        "template": "alg07_so",
+        "params": {
+          "a": 2,
+          "b": 8,
+          "x": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}

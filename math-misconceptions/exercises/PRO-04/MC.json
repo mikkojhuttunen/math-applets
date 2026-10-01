@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion sivut ovat 11 cm ja 2 cm. Neliön sivu on 5 cm. Kummalla kuviolla on suurempi pinta-ala?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Neliöllä: sen ala on 25 cm² ja suorakulmion 22 cm²",
+            "misconception": null,
+            "feedback": "Oikein: 5 · 5 = 25 cm² ja 11 · 2 = 22 cm²."
+          },
+          {
+            "id": "b",
+            "text": "Suorakulmiolla, koska sen piiri on 26 cm ja neliön 20 cm",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "c",
+            "text": "Kuvioilla on sama ala",
+            "misconception": null,
+            "feedback": "Alat ovat 22 cm² ja 25 cm²."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi tietää, koska muodot ovat erilaiset",
+            "misconception": null,
+            "feedback": "Pinta-alat voi laskea ja verrata."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Suorakulmion ala 11 · 2 = 22 cm², piiri 26 cm",
+          "Neliön ala 5 · 5 = 25 cm², piiri 20 cm"
+        ],
+        "final": "Neliöllä: sen ala on 25 cm² ja suorakulmion 22 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro04_mc",
+        "params": {
+          "w": 11,
+          "h": 2,
+          "s": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Huone A on 16 m × 2 m ja huone B on 6 m × 6 m. Huoneen A lattian reunalistaa kuluu enemmän. Onko huoneen A lattiapinta-ala silloin suurempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei: huoneiden alat ovat yhtä suuret, 32 m²",
+            "misconception": null,
+            "feedback": "Huoneen B ala on 36 m²."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä, koska sen piiri on suurempi",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä, koska reunalistaa kuluu enemmän ja ala on silloin aina suurempi",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "d",
+            "text": "Ei: huoneen A ala on 32 m² ja huoneen B 36 m²",
+            "misconception": null,
+            "feedback": "Oikein: A:n piiri on suurempi (36 m > 24 m), mutta ala pienempi."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: piiri 36 m, ala 32 m²",
+          "B: piiri 24 m, ala 36 m²"
+        ],
+        "final": "Ei: huoneen A ala on 32 m² ja huoneen B 36 m²"
+      },
+      "feedback": {
+        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro04_mc",
+        "params": {
+          "w": 16,
+          "h": 2,
+          "s": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: \"Jos kuvion piiri on suurempi, myös sen pinta-ala on suurempi.\" Vertaa suorakulmiota 13 cm × 1 cm ja neliötä 4 cm × 4 cm. Mikä väite on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on oikea: suurempi piiri tarkoittaa aina suurempaa alaa",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärä, koska piiri ja ala eivät liity toisiinsa mitenkään",
+            "misconception": null,
+            "feedback": "Piiri ja ala molemmat riippuvat sivuista, mutta eri tavalla."
+          },
+          {
+            "id": "c",
+            "text": "Väite on oikea, koska suorakulmion pidempi sivu on 13 cm",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "d",
+            "text": "Väite on väärä: suorakulmion piiri on 28 cm > 16 cm, mutta ala 13 cm² < 16 cm²",
+            "misconception": null,
+            "feedback": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Suorakulmio: piiri 28 cm, ala 13 cm²",
+          "Neliö: piiri 16 cm, ala 16 cm²"
+        ],
+        "final": "Väite on väärä: suorakulmion piiri on 28 cm > 16 cm, mutta ala 13 cm² < 16 cm²"
+      },
+      "feedback": {
+        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro04_mc",
+        "params": {
+          "w": 13,
+          "h": 1,
+          "s": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Kaksi pellon aitausta: suorakulmio 10 m × 2 m ja neliö 5 m × 5 m. Aitausten sisälle kylvetään ruohoa. Kummassa aitauksessa on enemmän ruohoa ja kummassa kuluu enemmän aitaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon",
+            "misconception": null,
+            "feedback": "Oikein: neliön ala 25 m² > 20 m², suorakulmion piiri 24 m > 20 m."
+          },
+          {
+            "id": "b",
+            "text": "Neliössä on enemmän ruohoa ja siihen kuluu enemmän aitaa",
+            "misconception": null,
+            "feedback": "Neliön piiri on 20 m, suorakulmion 24 m."
+          },
+          {
+            "id": "c",
+            "text": "Suorakulmiossa on enemmän ruohoa ja siihen kuluu enemmän aitaa",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          },
+          {
+            "id": "d",
+            "text": "Aitausten ruohomäärät ja aitamäärät ovat samat",
+            "misconception": null,
+            "feedback": "Sekä alat että piirit eroavat."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Suorakulmio: piiri 24 m, ala 20 m²",
+          "Neliö: piiri 20 m, ala 25 m²"
+        ],
+        "final": "Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon"
+      },
+      "feedback": {
+        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro04_mc",
+        "params": {
+          "w": 10,
+          "h": 2,
+          "s": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Miksi kuvion piirin kasvattaminen ei välttämättä kasvata sen pinta-alaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Piiri mitataan neliösenteissä, joten sitä ei voi verrata alaan",
+            "misconception": null,
+            "feedback": "Piiri mitataan pituusyksiköissä; syy on muussa."
+          },
+          {
+            "id": "b",
+            "text": "Ala riippuu sivujen tulosta: esimerkiksi 15 × 1 (piiri 32, ala 15) on ohut, kun taas 7 × 7 (piiri 28) on alaltaan suurempi, 49",
+            "misconception": null,
+            "feedback": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+          },
+          {
+            "id": "c",
+            "text": "Pinta-alaan vaikuttaa vain kuvion korkeus",
+            "misconception": null,
+            "feedback": "Ala riippuu molemmista sivumitoista."
+          },
+          {
+            "id": "d",
+            "text": "Piiri ja ala kasvavat aina yhtä aikaa, joten kasvattaminen aina kasvattaa alaa",
+            "misconception": "PRO-04",
+            "feedback": "Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan kuin pienempipiirinen, mutta tasaisempi kuvio."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "15 × 1: piiri 32, ala 15",
+          "7 × 7: piiri 28, ala 49"
+        ],
+        "final": "Ala riippuu sivujen tulosta: esimerkiksi 15 × 1 (piiri 32, ala 15) on ohut, kun taas 7 × 7 (piiri 28) on alaltaan suurempi, 49"
+      },
+      "feedback": {
+        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+      },
+      "provenance": {
+        "template": "pro04_mc",
+        "params": {
+          "w": 15,
+          "h": 1,
+          "s": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

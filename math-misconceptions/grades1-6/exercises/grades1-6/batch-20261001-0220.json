@@ -1,0 +1,402 @@
+[
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-001",
+  "goal": "A36.S2.01",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 3,5 × 10.",
+  "answer": "35",
+  "answer_expr": "3.5 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "3,50",
+    "answer_expr": "3.50"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-002",
+  "goal": "A36.S2.01",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 4,2 × 10.",
+  "answer": "42",
+  "answer_expr": "4.2 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "4,20",
+    "answer_expr": "4.20"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-003",
+  "goal": "A36.S2.01",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on 7,8 · 10?",
+  "answer": "78",
+  "answer_expr": "7.8 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "7,80",
+    "answer_expr": "7.80"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-004",
+  "goal": "A36.S2.01",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 2,6 × 10.",
+  "answer": "26",
+  "answer_expr": "2.6 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "2,60",
+    "answer_expr": "2.60"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-005",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 0,4 × 10.",
+  "answer": "4",
+  "answer_expr": "0.4 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,40",
+    "answer_expr": "0.40"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-006",
+  "goal": "A36.S2.01",
+  "level": "P",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on 1,9 · 10?",
+  "answer": "19",
+  "answer_expr": "1.9 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "1,90",
+    "answer_expr": "1.90"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-007",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 6,25 × 10.",
+  "answer": "62,5",
+  "answer_expr": "6.25 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "6,250",
+    "answer_expr": "6.250"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-008",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on 0,35 · 10?",
+  "answer": "3,5",
+  "answer_expr": "0.35 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,350",
+    "answer_expr": "0.350"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-009",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 2,4 × 100.",
+  "answer": "240",
+  "answer_expr": "2.4 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "2,400",
+    "answer_expr": "2.400"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-010",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 5,7 × 100.",
+  "answer": "570",
+  "answer_expr": "5.7 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "5,700",
+    "answer_expr": "5.700"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-011",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on 0,8 · 100?",
+  "answer": "80",
+  "answer_expr": "0.8 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,800",
+    "answer_expr": "0.800"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-012",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 1,25 × 100.",
+  "answer": "125",
+  "answer_expr": "1.25 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "1,2500",
+    "answer_expr": "1.2500"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-013",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 0,06 × 100.",
+  "answer": "6",
+  "answer_expr": "0.06 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,0600",
+    "answer_expr": "0.0600"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-014",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Laske 3,14 × 1000.",
+  "answer": "3140",
+  "answer_expr": "3.14 * 1000",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "3,14000",
+    "answer_expr": "3.14000"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-015",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Mikä on 0,5 · 1000?",
+  "answer": "500",
+  "answer_expr": "0.5 * 1000",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,5000",
+    "answer_expr": "0.5000"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-016",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Yksi mehupullo maksaa 4,5 €. Paljonko 10 pulloa maksaa?",
+  "answer": "45",
+  "answer_expr": "4.5 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "4,50",
+    "answer_expr": "4.50"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-017",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Yksi nauha on 1,2 m pitkä. Kuinka pitkä on 10 nauhaa peräkkäin? Vastaa metreinä.",
+  "answer": "12",
+  "answer_expr": "1.2 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "1,20",
+    "answer_expr": "1.20"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-018",
+  "goal": "A36.S2.01",
+  "level": "T",
+  "type": "numeric_entry",
+  "stem_fi": "Yksi omena painaa 0,7 kg. Paljonko 10 omenaa painaa yhteensä? Vastaa kilogrammoina.",
+  "answer": "7",
+  "answer_expr": "0.7 * 10",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,70",
+    "answer_expr": "0.70"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-019",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Yksi kynä maksaa 2,3 €. Paljonko 100 kynää maksaa?",
+  "answer": "230",
+  "answer_expr": "2.3 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "2,300",
+    "answer_expr": "2.300"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ },
+ {
+  "id": "A36.S2.01-mult10-20261001-0220-020",
+  "goal": "A36.S2.01",
+  "level": "H",
+  "type": "numeric_entry",
+  "stem_fi": "Yhdessä pikarissa on 0,9 dl mehua. Kuinka monta desilitraa mehua on 100 pikarissa?",
+  "answer": "90",
+  "answer_expr": "0.9 * 100",
+  "workbook": [
+   "NUM-13"
+  ],
+  "misconceptions": {
+   "NUM-13a": {
+    "answer": "0,900",
+    "answer_expr": "0.900"
+   }
+  },
+  "source": "human",
+  "status": "draft"
+ }
+]

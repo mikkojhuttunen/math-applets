@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-05",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 3 jaetaan luvulla 0,5. Kirjoita yhtälö, jonka ratkaisu on x = 6."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        },
+        "checks": {
+          "valid": [
+            "x = 3 / (1/2)",
+            "(1/2) * x = 3"
+          ],
+          "invalid": [
+            "x = 3 * (1/2)",
+            "x = 3 - (1/2)",
+            "x = 3 / (3/2)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3 ÷ 0,5 = 6",
+          "x = 3 ÷ 0,5"
+        ],
+        "final": "x = 6"
+      },
+      "feedback": {
+        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_rp",
+        "params": {
+          "p": "0.5",
+          "q": 3,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Nauhaa on 3 metriä, ja siitä leikataan 0,2 metrin pituisia pätkiä. Kirjoita yhtälö, jossa x on pätkien lukumäärä ja jonka ratkaisu on x = 15."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 15
+        },
+        "checks": {
+          "valid": [
+            "x = 3 / (1/5)",
+            "(1/5) * x = 3"
+          ],
+          "invalid": [
+            "x = 3 * (1/5)",
+            "x = 3",
+            "x = 3 - (1/5)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Pätkien määrä = nauhan pituus ÷ pätkän pituus = 3 ÷ 0,2",
+          "x = 15"
+        ],
+        "final": "x = 15"
+      },
+      "feedback": {
+        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_rp",
+        "params": {
+          "p": "0.2",
+          "q": 3,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 12 jaetaan tuntemattomalla luvulla x, ja osamäärä on 60. Kirjoita yhtälö, jonka ratkaisu on x = 0,2."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.2
+        },
+        "checks": {
+          "valid": [
+            "12 / x = 60",
+            "x = 12 / 60"
+          ],
+          "invalid": [
+            "12 * x = 60",
+            "x = 60 / 12",
+            "x = 12 * 60"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Osamäärä 60 on suurempi kuin 12, joten jakajan täytyy olla alle 1",
+          "12 ÷ x = 60",
+          "x = 12 ÷ 60 = 0,2"
+        ],
+        "final": "x = 0,2"
+      },
+      "feedback": {
+        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_rp",
+        "params": {
+          "p": "0.2",
+          "q": 12,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 15 jaetaan ensin luvulla 0,5 ja saatu osamäärä jaetaan vielä luvulla 0,5. Kirjoita yhtälö, jossa x on lopputulos."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 60
+        },
+        "checks": {
+          "valid": [
+            "x = 15 / (1/2) / (1/2)",
+            "x = (15 / (1/2)) / (1/2)"
+          ],
+          "invalid": [
+            "x = 15 / (1/2)",
+            "x = 15 * (1/2) * (1/2)",
+            "x = 15 - (1/2) - (1/2)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "15 ÷ 0,5 = 30",
+          "30 ÷ 0,5 = 60",
+          "x = 15 ÷ 0,5 ÷ 0,5"
+        ],
+        "final": "x = 60"
+      },
+      "feedback": {
+        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_rp",
+        "params": {
+          "p": "0.5",
+          "q": 15,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Pizzaa on 6 kappaletta ja jokainen annos on 1/3 pizzasta. Kirjoita yhtälö, jossa x on annosten lukumäärä ja jonka ratkaisu on x = 18."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 18
+        },
+        "checks": {
+          "valid": [
+            "x = 6 / (1/3)",
+            "x = 6 * 3"
+          ],
+          "invalid": [
+            "x = 6 / 3",
+            "x = 6 * (1/3)",
+            "x = 6"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "1/3 < 1, joten annoksia on enemmän kuin 6",
+          "x = 6 ÷ 1/3 = 18"
+        ],
+        "final": "x = 18"
+      },
+      "feedback": {
+        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_rp",
+        "params": {
+          "p": "1/3",
+          "q": 6,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}

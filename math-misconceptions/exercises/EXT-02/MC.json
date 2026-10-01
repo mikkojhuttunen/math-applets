@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä on potenssin 3³ arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "81",
+            "misconception": null,
+            "feedback": "Tämä on 3⁴: kertoja on yksi liikaa. Potenssissa 3³ kerrotaan 3 kertaa luvulla 3."
+          },
+          {
+            "id": "b",
+            "text": "9",
+            "misconception": "EXT-02",
+            "feedback": "Potenssi on toistettu kertolasku: 3³ = 3 · 3 · 3 = 27. Kantalukua ei kerrota eksponentilla."
+          },
+          {
+            "id": "c",
+            "text": "27",
+            "misconception": null,
+            "feedback": "Oikein: 3³ = 3 · 3 · 3 = 27."
+          },
+          {
+            "id": "d",
+            "text": "6",
+            "misconception": null,
+            "feedback": "Tämä on 3 + 3. Potenssi on tulo, ei summa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3 · 3 · 3 = 27"
+        ],
+        "final": "27"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 3,
+          "n": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä on potenssin 7⁰ arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1",
+            "misconception": null,
+            "feedback": "Oikein: jokaisen nollasta eroavan luvun nollas potenssi on 1, joten 7⁰ = 1."
+          },
+          {
+            "id": "b",
+            "text": "0",
+            "misconception": "EXT-02",
+            "feedback": "Nollas potenssi ei ole nolla. Kun eksponentti pienenee yhdellä, tulo jaetaan luvulla 7: 7¹ = 7, 7⁰ = 7 ÷ 7 = 1."
+          },
+          {
+            "id": "c",
+            "text": "7",
+            "misconception": null,
+            "feedback": "Tämä on 7¹. Eksponentti 0 ei jätä kantalukua sellaisenaan."
+          },
+          {
+            "id": "d",
+            "text": "−1",
+            "misconception": null,
+            "feedback": "Nollas potenssi ei ole negatiivinen: a⁰ = 1."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "7¹ = 7",
+          "7⁰ = 7 ÷ 7 = 1"
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä on potenssin 3⁻³ arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "27",
+            "misconception": null,
+            "feedback": "Tämä on 3³: negatiivinen eksponentti kääntää luvun käänteisluvuksi."
+          },
+          {
+            "id": "b",
+            "text": "−27",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee tuloksesta negatiivista. Se tarkoittaa käänteislukua: 3⁻³ = 1/3³ = 1/27."
+          },
+          {
+            "id": "c",
+            "text": "1/27",
+            "misconception": null,
+            "feedback": "Oikein: 3⁻³ = 1/3³ = 1/27."
+          },
+          {
+            "id": "d",
+            "text": "−9",
+            "misconception": null,
+            "feedback": "Tämä on −3 · 3. Potenssi ei ole tulo."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3⁻³ = 1/3³",
+          "= 1/27"
+        ],
+        "final": "1/27"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 3,
+          "n": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista väitteistä on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5⁰ = 0 ja 5⁻² = 1/25",
+            "misconception": "EXT-02",
+            "feedback": "Nollas potenssi on 1, ei 0: 5⁰ = 5 ÷ 5 = 1."
+          },
+          {
+            "id": "b",
+            "text": "5⁰ = 1 ja 5⁻² = 1/25",
+            "misconception": null,
+            "feedback": "Oikein: nollas potenssi on 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+          },
+          {
+            "id": "c",
+            "text": "5⁰ = 1 ja 5⁻² = −25",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee luvusta negatiivista: 5⁻² = 1/25."
+          },
+          {
+            "id": "d",
+            "text": "5⁰ = 0 ja 5⁻² = −10",
+            "misconception": "EXT-02",
+            "feedback": "Nollas potenssi on 1, ei 0. Lisäksi 5⁻² = 1/5² = 1/25, eikä se ole negatiivinen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5⁰ = 5 ÷ 5 = 1",
+          "5⁻² = 1/5² = 1/25"
+        ],
+        "final": "5⁰ = 1 ja 5⁻² = 1/25"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä perustelu on oikea sille, että 5⁰ = 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se on sopimus, joka ei liity muihin potensseihin: 5⁰ voisi olla mikä tahansa luku",
+            "misconception": null,
+            "feedback": "Arvo 1 seuraa potenssien laskusäännöistä: a¹ ÷ a = a⁰ = 1."
+          },
+          {
+            "id": "b",
+            "text": "Kun eksponentti pienenee yhdellä, tulo jaetaan luvulla 5: 5² = 25, 5¹ = 5, 5⁰ = 5 ÷ 5 = 1",
+            "misconception": null,
+            "feedback": "Oikein: potenssit muodostavat jonon, jossa jokaisella askeleella jaetaan kantaluvulla."
+          },
+          {
+            "id": "c",
+            "text": "Koska 5 ÷ 5 = 0",
+            "misconception": null,
+            "feedback": "5 ÷ 5 = 1, ei 0: luku jaettuna itsellään on 1."
+          },
+          {
+            "id": "d",
+            "text": "Nollas potenssi tarkoittaa, että lukua 5 ei kerrota kertaakaan, joten tulos on 0",
+            "misconception": "EXT-02",
+            "feedback": "Kertojia ei ole, mutta tyhjä tulo on 1, ei 0. Jonosta nähdään: a¹ ÷ a = a⁰ = 1."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5² = 25",
+          "5¹ = 5",
+          "5⁰ = 5 ÷ 5 = 1"
+        ],
+        "final": "Jonossa jaetaan kantaluvulla: 5⁰ = 5 ÷ 5 = 1"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 5,
+          "justify": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 17
+      }
+    }
+  ]
+}

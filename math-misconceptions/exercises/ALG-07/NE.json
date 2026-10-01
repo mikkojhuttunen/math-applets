@@ -1,0 +1,322 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 6x + 6 = 42. Kirjoita x:n arvo."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": "8",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu."
+          },
+          {
+            "match": "36",
+            "misconception": "ALG-07",
+            "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "6x = 42 − 6 = 36",
+          "x = 36 / 6 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_ne",
+        "params": {
+          "a": 6,
+          "b": 6,
+          "x": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 3x − 5 = 7. Kirjoita x:n arvo."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": "2/3",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu."
+          },
+          {
+            "match": "12",
+            "misconception": "ALG-07",
+            "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3x = 7 + 5 = 12",
+          "x = 12 / 3 = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_ne",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "x": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 5 + 3x = 32. Kirjoita x:n arvo."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 9
+        },
+        "wrong": [
+          {
+            "match": "37/3",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu."
+          },
+          {
+            "match": "27",
+            "misconception": "ALG-07",
+            "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3x = 32 − 5 = 27",
+          "x = 27 / 3 = 9"
+        ],
+        "final": "9"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_ne",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "x": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 3x = 2x + 3. Kirjoita x:n arvo."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3
+        },
+        "wrong": [
+          {
+            "match": "3/5",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu."
+          },
+          {
+            "match": "1",
+            "misconception": "ALG-07",
+            "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 2x molemmilta puolilta: 1x = 3",
+          "x = 3 / 1 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_ne",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "x": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Kauppa myy kahvia: pakkaus maksaa 3 euroa ja kertamaksu pussista on 2 euroa. Asiakas maksoi 23 euroa. Montako pakkausta x hän osti? Yhtälö on 3x + 2 = 23."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 7
+        },
+        "wrong": [
+          {
+            "match": "25/3",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu."
+          },
+          {
+            "match": "21",
+            "misconception": "ALG-07",
+            "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3x = 23 − 2 = 21",
+          "x = 21 / 3 = 7"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_ne",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "x": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

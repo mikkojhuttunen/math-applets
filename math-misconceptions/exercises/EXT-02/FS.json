@@ -1,0 +1,367 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-02",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Kirjoita välivaihe, jossa potenssi on avattu tuloksi: 3^3 + 4 = □ = 31"
+      },
+      "payload": {
+        "lines": [
+          "3^3 + 4",
+          "3 · 3 · 3 + 4",
+          "31"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "3 · 3 · 3 + 4",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3^3 + 4 = 3 · 3 · 3 + 4",
+          "3 · 3 · 3 + 4 = 31"
+        ],
+        "final": "3 · 3 · 3 + 4"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
+      },
+      "provenance": {
+        "template": "ext02_fs",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Kirjoita välivaihe, jossa nollas potenssi on laskettu: 2 · 5^0 + 6 = □ = 8"
+      },
+      "payload": {
+        "lines": [
+          "2 · 5^0 + 6",
+          "2 · 1 + 6",
+          "8"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "2 · 1 + 6",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "2 · 5^0 + 6 = 2 · 1 + 6",
+          "2 · 1 + 6 = 8"
+        ],
+        "final": "2 · 1 + 6"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
+      },
+      "provenance": {
+        "template": "ext02_fs",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "c": 6,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Kirjoita välivaihe, jossa negatiivinen eksponentti on muutettu murtoluvuksi: 3^(−2) · 3^3 = □ = 3"
+      },
+      "payload": {
+        "lines": [
+          "3^(−2) · 3^3",
+          "1/9 · 27",
+          "3"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "1/9 · 27",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3^(−2) · 3^3 = 1/9 · 27",
+          "1/9 · 27 = 3"
+        ],
+        "final": "1/9 · 27"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
+      },
+      "provenance": {
+        "template": "ext02_fs",
+        "params": {
+          "a": 3,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Kirjoita välivaihe, jossa jokainen potenssi on laskettu: 4^0 + 4^(−1) + 4^2 = □ = 17 + 1/4"
+      },
+      "payload": {
+        "lines": [
+          "4^0 + 4^(−1) + 4^2",
+          "1 + 1/4 + 16",
+          "17 + 1/4"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "1 + 1/4 + 16",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "4^0 + 4^(−1) + 4^2 = 1 + 1/4 + 16",
+          "1 + 1/4 + 16 = 17 + 1/4"
+        ],
+        "final": "1 + 1/4 + 16"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
+      },
+      "provenance": {
+        "template": "ext02_fs",
+        "params": {
+          "a": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-02-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.11"
+        ],
+        "t": [
+          "T10",
+          "T11"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Kirjoita välivaihe, jossa potenssit on laskettu: 7^0 · 2^(−1) · 8 = □ = 4"
+      },
+      "payload": {
+        "lines": [
+          "7^0 · 2^(−1) · 8",
+          "1 · 1/2 · 8",
+          "4"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "1 · 1/2 · 8",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "7^0 · 2^(−1) · 8 = 1 · 1/2 · 8",
+          "1 · 1/2 · 8 = 4"
+        ],
+        "final": "1 · 1/2 · 8"
+      },
+      "feedback": {
+        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
+      },
+      "provenance": {
+        "template": "ext02_fs",
+        "params": {
+          "a": 2,
+          "b": 7,
+          "c": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    }
+  ]
+}

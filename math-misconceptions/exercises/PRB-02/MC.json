@@ -1,0 +1,397 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRB-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 6 mustaa kuulaa 8:stä. Purkissa 2 on 3 mustaa kuulaa 4:stä. Kummasta purkista on parempi mahdollisuus nostaa musta kuula?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sitä ei voi tietää",
+            "misconception": null,
+            "feedback": "Osuudet voidaan laskea ja verrata."
+          },
+          {
+            "id": "b",
+            "text": "Mahdollisuus on sama, 3/4",
+            "misconception": null,
+            "feedback": "Oikein: molemmissa mustien osuus on 3/4."
+          },
+          {
+            "id": "c",
+            "text": "Purkista 1, koska siinä on enemmän mustia kuulia",
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista. Vertaa osuuksia, esimerkiksi sieventämällä murtoluvut."
+          },
+          {
+            "id": "d",
+            "text": "Purkista 2, koska siinä on vähemmän kuulia",
+            "misconception": null,
+            "feedback": "Kuulien kokonaismäärä yksin ei ratkaise: vertaa mustien osuutta."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6/8 = 3/4",
+          "3/4 = 3/4"
+        ],
+        "final": "Yhtä hyvä"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_mc",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "k": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 3 mustaa kuulaa 12:stä. Purkissa 2 on 2 mustaa kuulaa 4:sta. Kummasta purkista on parempi mahdollisuus nostaa musta kuula?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Purkista 2",
+            "misconception": null,
+            "feedback": "Oikein: 1/2 > 1/4."
+          },
+          {
+            "id": "b",
+            "text": "Molemmista yhtä hyvä",
+            "misconception": null,
+            "feedback": "Osuudet ovat 1/4 ja 1/2, eli eri suuret."
+          },
+          {
+            "id": "c",
+            "text": "Purkista 1, koska siinä on enemmän mustia kuulia",
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista. Vertaa osuuksia, esimerkiksi sieventämällä murtoluvut."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi tietää",
+            "misconception": null,
+            "feedback": "Osuudet voidaan laskea ja verrata."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3/12 = 0,250",
+          "2/4 = 0,500",
+          "Purkin 2 osuus on suurempi"
+        ],
+        "final": "Purkki 2"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_mc",
+        "params": {
+          "a1": 3,
+          "b1": 12,
+          "a2": 2,
+          "b2": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Luokalla 8A on 36 oppilasta, joista 14 on pelannut lätkää. Luokalla 8B on 9 oppilasta, joista 7 on pelannut lätkää. Kummalta luokalta arvotulla oppilaalla on suurempi todennäköisyys olla lätkänpelaaja?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Luokalta 8A, koska siellä on enemmän lätkänpelaajia",
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista. Vertaa osuuksia, esimerkiksi sieventämällä murtoluvut."
+          },
+          {
+            "id": "b",
+            "text": "Todennäköisyydet ovat samat",
+            "misconception": null,
+            "feedback": "Osuudet ovat 7/18 ja 7/9, eli eri suuret."
+          },
+          {
+            "id": "c",
+            "text": "Luokalta 8B",
+            "misconception": null,
+            "feedback": "Oikein: 7/9 > 7/18."
+          },
+          {
+            "id": "d",
+            "text": "Luokalta 8A, koska siellä on enemmän oppilaita",
+            "misconception": null,
+            "feedback": "Suurempi luokka ei tee osuudesta suurempaa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8A: 14/36 = 0,389",
+          "8B: 7/9 = 0,778",
+          "8B:n osuus on suurempi"
+        ],
+        "final": "8B"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_mc",
+        "params": {
+          "g1": 14,
+          "n1": 36,
+          "g2": 7,
+          "n2": 9
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 9 punaista ja 3 sinistä kuulaa. Pussiin lisätään 4 punaista ja 4 sinistä kuulaa. Mitä tapahtuu todennäköisyydelle nostaa punainen kuula?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Se pienenee: 3/4 → 13/20",
+            "misconception": null,
+            "feedback": "Oikein: 13/20 = 13/20 < 3/4."
+          },
+          {
+            "id": "b",
+            "text": "Se kasvaa, koska punaisia kuulia on nyt enemmän",
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista. Vertaa osuuksia, esimerkiksi sieventämällä murtoluvut."
+          },
+          {
+            "id": "c",
+            "text": "Se pysyy samana, koska kumpaakin lisättiin saman verran",
+            "misconception": null,
+            "feedback": "Lisäys muuttaa osuutta, koska kuulia oli eri määrät."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Uudet osuudet voidaan laskea."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Ennen: 9/12 = 3/4",
+          "Jälkeen: 13/20 = 13/20"
+        ],
+        "final": "Pienenee"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_mc",
+        "params": {
+          "red": 9,
+          "blue": 3,
+          "add": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 36 mustaa kuulaa 60:stä. Purkissa 2 on 3 mustaa kuulaa 5:stä. Mikä päättely on oikea?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Purkki 2 on parempi, koska siinä on vähemmän kuulia yhteensä",
+            "misconception": null,
+            "feedback": "Kokonaismäärä yksin ei ratkaise: vertaa osuuksia."
+          },
+          {
+            "id": "b",
+            "text": "Mahdollisuudet ovat samat, koska mustia on molemmissa yhtä paljon",
+            "misconception": null,
+            "feedback": "Mustien määrät ovat eri suuret; samaksi osuudet tekee niiden suhde kaikkiin kuuliin."
+          },
+          {
+            "id": "c",
+            "text": "Mahdollisuudet ovat samat, koska mustien osuus on molemmissa 3/5",
+            "misconception": null,
+            "feedback": "Oikein: 36/60 = 3/5 = 3/5."
+          },
+          {
+            "id": "d",
+            "text": "Purkki 1 on parempi, koska siinä on enemmän mustia kuulia",
+            "misconception": "PRB-02",
+            "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista. Vertaa osuuksia, esimerkiksi sieventämällä murtoluvut."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "36/60 = 3/5",
+          "3/5 = 3/5"
+        ],
+        "final": "Sama osuus"
+      },
+      "feedback": {
+        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+      },
+      "provenance": {
+        "template": "prb02_mc",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "k": 12,
+          "justify": true
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 16
+      }
+    }
+  ]
+}

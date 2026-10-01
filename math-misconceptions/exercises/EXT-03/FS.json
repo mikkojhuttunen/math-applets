@@ -1,0 +1,369 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-03",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: −2x + 7 > −3, −2x > −10, □. Jaa molemmat puolet luvulla −2."
+      },
+      "payload": {
+        "lines": [
+          "−2x + 7 > −3",
+          "−2x > −10",
+          "x < 5"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x < 5",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 7 molemmilta puolilta: −2x > −10",
+          "Jaetaan luvulla −2, merkki kääntyy: x < 5"
+        ],
+        "final": "x < 5"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_fs",
+        "params": {
+          "a": 2,
+          "r": 5,
+          "q": 7,
+          "blank": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: −3x + 1 ≤ −5, −3x ≤ −6, □. Ratkaise x."
+      },
+      "payload": {
+        "lines": [
+          "−3x + 1 ≤ −5",
+          "−3x ≤ −6",
+          "x ≥ 2"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x ≥ 2",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 1 molemmilta puolilta: −3x ≤ −6",
+          "Jaetaan luvulla −3, merkki kääntyy: x ≥ 2"
+        ],
+        "final": "x ≥ 2"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_fs",
+        "params": {
+          "a": 3,
+          "r": 2,
+          "blank": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Vesisäiliössä on 8 litraa vettä, ja siitä valuu 2 litraa minuutissa. Milloin vettä on alle 2 litraa? Täydennä puuttuva rivi: 8 − 2t < 2, −2t < −6, □."
+      },
+      "payload": {
+        "lines": [
+          "8 − 2t < 2",
+          "−2t < −6",
+          "t > 3"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "t > 3",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 8 molemmilta puolilta: −2t < −6",
+          "Jaetaan luvulla −2, merkki kääntyy: t > 3"
+        ],
+        "final": "t > 3"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_fs",
+        "params": {
+          "t0": 8,
+          "a": 2,
+          "r": 3,
+          "blank": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: −2(x + 3) < −14, □, −2x < −8, x > 4. Avaa sulut. Merkkiä ei vielä käännetä."
+      },
+      "payload": {
+        "lines": [
+          "−2(x + 3) < −14",
+          "−2x − 6 < −14",
+          "−2x < −8",
+          "x > 4"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "−2x − 6 < −14",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Avataan sulut: −2x − 6 < −14",
+          "Siirretään luku oikealle: −2x < −8",
+          "Jaetaan luvulla −2, merkki kääntyy: x > 4"
+        ],
+        "final": "−2x − 6 < −14"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_fs",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "r": 4,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: x + 2 > 4x − 7, □, x < 3. Siirrä x-termit vasemmalle ja luvut oikealle. Merkkiä ei vielä käännetä."
+      },
+      "payload": {
+        "lines": [
+          "x + 2 > 4x − 7",
+          "−3x > −9",
+          "x < 3"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "−3x > −9",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirretään termit: −3x > −9",
+          "Jaetaan luvulla −3, merkki kääntyy: x < 3"
+        ],
+        "final": "−3x > −9"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
+      },
+      "provenance": {
+        "template": "ext03_fs",
+        "params": {
+          "p1": 1,
+          "p2": 4,
+          "q1": 2,
+          "r": 3,
+          "blank": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    }
+  ]
+}

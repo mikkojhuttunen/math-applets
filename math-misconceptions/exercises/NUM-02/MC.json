@@ -1,0 +1,396 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Kumpi luvuista on suurempi: 0,4 vai 0,46?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,46",
+            "misconception": null,
+            "feedback": "Oikein: 0,40 < 0,46, kun luvut vertaillaan sadasosina."
+          },
+          {
+            "id": "b",
+            "text": "Luvut ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          },
+          {
+            "id": "d",
+            "text": "0,4",
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,4 = 0,40",
+          "0,40 < 0,46"
+        ],
+        "final": "0,46"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_mc",
+        "params": {
+          "short": "0,4",
+          "long": "0,46",
+          "context": 0
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Pituushypyssä kaksi hyppyä mitattiin tuloksiksi 2,7 m ja 2,76 m. Kumpi hyppy oli pidempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2,7 m",
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          },
+          {
+            "id": "c",
+            "text": "2,76 m",
+            "misconception": null,
+            "feedback": "Oikein: 2,70 < 2,76, kun luvut vertaillaan sadasosina."
+          },
+          {
+            "id": "d",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2,7 = 2,70",
+          "2,70 < 2,76"
+        ],
+        "final": "2,76"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_mc",
+        "params": {
+          "short": "2,7",
+          "long": "2,76",
+          "context": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Kahden kasvin pituudet ovat 2,8 m ja 2,83 m. Kumpi kasvi on pidempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "b",
+            "text": "2,83 m",
+            "misconception": null,
+            "feedback": "Oikein: 2,80 < 2,83, kun luvut vertaillaan sadasosina."
+          },
+          {
+            "id": "c",
+            "text": "2,8 m",
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "d",
+            "text": "Sitä ei voi päätellä",
+            "misconception": null,
+            "feedback": "Luvut voi aina vertailla, esimerkiksi muuttamalla ne samoiksi paikka-arvoiksi."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2,8 = 2,80",
+          "2,80 < 2,83"
+        ],
+        "final": "2,83"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_mc",
+        "params": {
+          "short": "2,8",
+          "long": "2,83",
+          "context": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-02"
+      ],
+      "prompt": {
+        "text": "Neljän pakkauksen painot ovat 2,3 kg, 2,7 kg, 2,74 kg ja 2,11 kg. Mikä on painavimman pakkauksen paino?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2,74 kg",
+            "misconception": null,
+            "feedback": "Oikein: 2,74 on suurin, kun luvut vertaillaan samoilla paikka-arvoilla."
+          },
+          {
+            "id": "b",
+            "text": "2,7 kg",
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "2,3 kg",
+            "misconception": null,
+            "feedback": "Vertaa ensin kokonaisosia ja sitten desimaaleja."
+          },
+          {
+            "id": "d",
+            "text": "2,11 kg",
+            "misconception": null,
+            "feedback": "Vertaa ensin kokonaisosia ja sitten desimaaleja."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2,11, 2,3, 2,7, 2,74 (pienimmästä suurimpaan)"
+        ],
+        "final": "2,74"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_mc",
+        "params": {
+          "values": [
+            "2,7",
+            "2,74",
+            "2,11",
+            "2,3"
+          ],
+          "context": 1
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.06",
+          "S2.08"
+        ],
+        "t": [
+          "T11",
+          "T12"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-02",
+        "NUM-01"
+      ],
+      "prompt": {
+        "text": "Kumpi luku on suurempi, 0,2 vai 0,26? Valitse oikea perustelu."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,26 on suurempi, koska siinä on enemmän numeroita",
+            "misconception": "NUM-01",
+            "feedback": "Tulos on oikea, mutta perustelu ei ole: numeroiden määrä ei ratkaise. Muuta luvut samoiksi paikka-arvoiksi."
+          },
+          {
+            "id": "b",
+            "text": "0,2 on suurempi, koska kymmenesosa on suurempi kuin sadasosa",
+            "misconception": "NUM-02",
+            "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
+          },
+          {
+            "id": "c",
+            "text": "0,2 = 0,20 eli 20 sadasosaa, ja 26 > 20",
+            "misconception": null,
+            "feedback": "Oikein: luvut vertaillaan samoissa paikka-arvoissa."
+          },
+          {
+            "id": "d",
+            "text": "Luvut ovat yhtä suuret, koska ne alkavat samalla numerolla",
+            "misconception": null,
+            "feedback": "Luvuilla on eri arvot. Kirjoita lyhyempi luku samalla desimaalimäärällä (0,4 = 0,40) ja vertaa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,2 = 0,20",
+          "26 sadasosaa > 20 sadasosaa"
+        ],
+        "final": "0,26 > 0,2"
+      },
+      "feedback": {
+        "correct": "Oikein: desimaaliluvut vertaillaan paikka-arvoittain."
+      },
+      "provenance": {
+        "template": "num02_mc",
+        "params": {
+          "short": "0,2",
+          "long": "0,26",
+          "justify": true
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

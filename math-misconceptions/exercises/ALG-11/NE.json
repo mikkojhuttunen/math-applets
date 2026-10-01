@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-11",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: −(x − 7)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "7 − x",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "−x − 7",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "input_hint": "Kirjoita esim. −x + 5"
+      },
+      "solution": {
+        "steps": [
+          "Muutetaan sulun sisällä olevien termien merkit: 7 − x"
+        ],
+        "final": "7 − x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_ne",
+        "params": {
+          "a": 7,
+          "b": 7,
+          "c": 4,
+          "d": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: −(6x + 8)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "−6x − 8",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "8 − 6x",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "input_hint": "Kirjoita esim. −x + 5"
+      },
+      "solution": {
+        "steps": [
+          "Muutetaan sulun sisällä olevien termien merkit: −6x − 8"
+        ],
+        "final": "−6x − 8"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_ne",
+        "params": {
+          "a": 6,
+          "b": 8,
+          "c": 8,
+          "d": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: 4 − (3x − 6)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "10 − 3x",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "−3x − 2",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "input_hint": "Kirjoita esim. −x + 5"
+      },
+      "solution": {
+        "steps": [
+          "Muutetaan sulun sisällä olevien termien merkit: 10 − 3x"
+        ],
+        "final": "10 − 3x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_ne",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 4,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: −(7x − 9) − (x + 5)"
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "4 − 8x",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "−8x − 14",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "input_hint": "Kirjoita esim. −x + 5"
+      },
+      "solution": {
+        "steps": [
+          "Muutetaan sulun sisällä olevien termien merkit: 4 − 8x"
+        ],
+        "final": "4 − 8x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_ne",
+        "params": {
+          "a": 7,
+          "b": 9,
+          "c": 6,
+          "d": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Tilillä on 9 euroa. Siitä maksetaan lasku, jonka hinta on x euroa, mutta laskusta saa 6 euron alennuksen. Kirjoita jäljelle jäävä rahamäärä sievennettynä lausekkeena."
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "15 − x",
+          "samples": [
+            [
+              -2
+            ],
+            [
+              0
+            ],
+            [
+              3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "3 − x",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "input_hint": "Kirjoita esim. −x + 5"
+      },
+      "solution": {
+        "steps": [
+          "Muutetaan sulun sisällä olevien termien merkit: 15 − x"
+        ],
+        "final": "15 − x"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_ne",
+        "params": {
+          "a": 2,
+          "b": 6,
+          "c": 3,
+          "d": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-11",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: −(x − 8)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 8",
+            "misconception": null,
+            "feedback": "Ensimmäisen termin merkki muuttuu myös."
+          },
+          {
+            "id": "b",
+            "text": "x − 8",
+            "misconception": null,
+            "feedback": "Sulun edessä oleva miinus ei jää pois, vaan muuttaa merkit."
+          },
+          {
+            "id": "c",
+            "text": "−x + 8",
+            "misconception": null,
+            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+          },
+          {
+            "id": "d",
+            "text": "−x − 8",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−(x − 8) = −x + 8"
+        ],
+        "final": "−x + 8"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_mc",
+        "params": {
+          "a": 4,
+          "b": 8,
+          "c": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: −(3x + 4)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 4",
+            "misconception": null,
+            "feedback": "Ensimmäisen termin merkki muuttuu myös."
+          },
+          {
+            "id": "b",
+            "text": "3x + 4",
+            "misconception": null,
+            "feedback": "Sulun edessä oleva miinus muuttaa merkit."
+          },
+          {
+            "id": "c",
+            "text": "−3x − 4",
+            "misconception": null,
+            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+          },
+          {
+            "id": "d",
+            "text": "−3x + 4",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "−(3x + 4) = −3x − 4"
+        ],
+        "final": "−3x − 4"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_mc",
+        "params": {
+          "a": 3,
+          "b": 4,
+          "c": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Sievennä: 6 − (2x − 8)"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2x + 14",
+            "misconception": null,
+            "feedback": "Miinus muuttaa myös termin 2x merkin."
+          },
+          {
+            "id": "b",
+            "text": "2x − 2",
+            "misconception": null,
+            "feedback": "Sulun sisällä olevien termien merkit muuttuvat molemmat."
+          },
+          {
+            "id": "c",
+            "text": "−2x + 14",
+            "misconception": null,
+            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+          },
+          {
+            "id": "d",
+            "text": "−2x − 2",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "6 − (2x − 8) = 6 − 2x + 8",
+          "−2x + 14"
+        ],
+        "final": "−2x + 14"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_mc",
+        "params": {
+          "a": 2,
+          "b": 8,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Tilillä on 8 euroa. Siitä maksetaan lasku, jonka hinta on x euroa, mutta laskusta saa 6 euron alennuksen. Mikä lauseke antaa jäljelle jäävän rahamäärän sievennettynä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−x + 2",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          },
+          {
+            "id": "b",
+            "text": "−x + 14",
+            "misconception": null,
+            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+          },
+          {
+            "id": "c",
+            "text": "−x + 8",
+            "misconception": null,
+            "feedback": "Alennus pienentää laskua, joten se kasvattaa jäljelle jäävää rahaa."
+          },
+          {
+            "id": "d",
+            "text": "x + 2",
+            "misconception": null,
+            "feedback": "Lasku pienentää tilin saldoa, joten x on miinusmerkkinen."
+          },
+          {
+            "id": "e",
+            "text": "x + 14",
+            "misconception": null,
+            "feedback": "Lasku pienentää tilin saldoa, joten x on miinusmerkkinen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "8 − (x − 6) = 8 − x + 6",
+          "−x + 14"
+        ],
+        "final": "−x + 14"
+      },
+      "feedback": {
+        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+      },
+      "provenance": {
+        "template": "alg11_mc",
+        "params": {
+          "a": 2,
+          "b": 6,
+          "c": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-11-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02",
+          "S2.01"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Oppilas kirjoittaa −(x − 8) = −x − 8. Miten virheen voi todeta sijoittamalla x = 3?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Molemmat puolet saavat arvon 5, joten väite on oikein",
+            "misconception": "ALG-11",
+            "feedback": "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
+          },
+          {
+            "id": "b",
+            "text": "Sijoittamalla ei voi tarkistaa merkkien muuttumista",
+            "misconception": "ALG-11",
+            "feedback": "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret."
+          },
+          {
+            "id": "c",
+            "text": "Arvot 5 ja −11 eroavat, mutta väite on silti oikein, koska miinus on molemmissa",
+            "misconception": "ALG-11",
+            "feedback": "Yhtä suurilla lausekkeilla on täsmälleen sama arvo."
+          },
+          {
+            "id": "d",
+            "text": "Vasen puoli on −(3 − 8) = 5, oikea puoli on −11, joten väite on väärä",
+            "misconception": null,
+            "feedback": "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 3: −(3 − 8) = 5",
+          "−3 − 8 = -11"
+        ],
+        "final": "Arvot 5 ja −11 eroavat"
+      },
+      "feedback": {
+        "correct": "Oikein: väärä merkkien muutos näkyy arvojen eroavuutena."
+      },
+      "provenance": {
+        "template": "alg11_mc",
+        "params": {
+          "b": 8,
+          "x": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

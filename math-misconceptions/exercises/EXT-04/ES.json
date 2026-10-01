@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-04",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x² − 49 = 0",
+          "x² = 49",
+          "x = 7"
+        ],
+        "error_line": 3,
+        "error_type": "negative_root_lost"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 ottaa huomioon vain positiivisen juuren. Oikein: x = 7 tai x = −7, koska (−7)² = 49."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "2x² = 50",
+          "x² = 25",
+          "x = 5"
+        ],
+        "error_line": 3,
+        "error_type": "negative_root_lost"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 ottaa huomioon vain positiivisen juuren. Oikein: x = 5 tai x = −5, koska (−5)² = 25."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 5,
+          "p": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x² + 5 = 69",
+          "x² = 64",
+          "x = 8"
+        ],
+        "error_line": 3,
+        "error_type": "negative_root_lost"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 ottaa huomioon vain positiivisen juuren. Oikein: x = 8 tai x = −8, koska (−8)² = 64."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 8,
+          "c": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Ajattelen lukua. Kun sen neliöstä vähennetään 25, tulos on nolla. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "x² − 25 = 0",
+          "x² = 25",
+          "x = 5"
+        ],
+        "error_line": 3,
+        "error_type": "negative_root_lost"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 ottaa huomioon vain positiivisen juuren. Oikein: x = 5 tai x = −5, koska (−5)² = 25."
+        ],
+        "final": "Virhe on rivillä 3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 5,
+          "context": "number-puzzle"
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "3x² + 7 = 55",
+          "3x² = 48",
+          "x² = 16",
+          "x = 4"
+        ],
+        "error_line": 4,
+        "error_type": "negative_root_lost"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 4 ottaa huomioon vain positiivisen juuren. Oikein: x = 4 tai x = −4, koska (−4)² = 16."
+        ],
+        "final": "Virhe on rivillä 4"
+      },
+      "feedback": {
+        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 4,
+          "p": 3,
+          "c": 7
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 20
+      }
+    }
+  ]
+}

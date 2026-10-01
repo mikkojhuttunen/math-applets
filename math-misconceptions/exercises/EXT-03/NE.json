@@ -1,0 +1,325 @@
+{
+  "schema_version": "1.0",
+  "topic": "EXT-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Kuinka monta kokonaislukua väliltä −10…10 toteuttaa epäyhtälön −3x > 12?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": 14,
+            "misconception": "EXT-03",
+            "feedback": "Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan luvulla −3, ja merkki kääntyy: x < −4",
+          "Ratkaisuja on 6 kappaletta"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+      },
+      "provenance": {
+        "template": "ext03_ne",
+        "params": {
+          "p": -3,
+          "q": 0,
+          "rhs": 12,
+          "rel": ">",
+          "window": [
+            -10,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Kuinka monta kokonaislukua väliltä −10…10 toteuttaa epäyhtälön −2x ≤ −8?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 7
+        },
+        "wrong": [
+          {
+            "match": 15,
+            "misconception": "EXT-03",
+            "feedback": "Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan luvulla −2, ja merkki kääntyy: x ≥ 4",
+          "Ratkaisuja on 7 kappaletta"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+      },
+      "provenance": {
+        "template": "ext03_ne",
+        "params": {
+          "p": -2,
+          "q": 0,
+          "rhs": -8,
+          "rel": "≤",
+          "window": [
+            -10,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Lämpötila on aluksi 10 °C ja laskee 5 astetta tunnissa, joten t tunnin kuluttua se on −5t + 10 °C. Kuinka monta kokonaislukua t väliltä 0…10 on sellaisia, että lämpötila on alle −5 °C?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 7
+        },
+        "wrong": [
+          {
+            "match": 3,
+            "misconception": "EXT-03",
+            "feedback": "Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "−5t < −15",
+          "Jaetaan luvulla −5, ja merkki kääntyy: t > 3",
+          "Ratkaisuja on 7 kappaletta"
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+      },
+      "provenance": {
+        "template": "ext03_ne",
+        "params": {
+          "p": -5,
+          "q": 10,
+          "rhs": -5,
+          "rel": "<",
+          "window": [
+            0,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Kuinka monta kokonaislukua väliltä −10…10 toteuttaa epäyhtälön −4x + 1 > −7?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "EXT-03",
+            "feedback": "Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "−4x > −8",
+          "Jaetaan luvulla −4, ja merkki kääntyy: x < 2",
+          "Ratkaisuja on 12 kappaletta"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+      },
+      "provenance": {
+        "template": "ext03_ne",
+        "params": {
+          "p": -4,
+          "q": 1,
+          "rhs": -7,
+          "rel": ">",
+          "window": [
+            -10,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.07"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-03"
+      ],
+      "prompt": {
+        "text": "Kuinka monta kokonaislukua väliltä −10…10 toteuttaa epäyhtälön −3x + 2 ≥ −7?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 14
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "EXT-03",
+            "feedback": "Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön."
+          }
+        ],
+        "input_hint": "Kirjoita kokonaisluku"
+      },
+      "solution": {
+        "steps": [
+          "−3x ≥ −9",
+          "Jaetaan luvulla −3, ja merkki kääntyy: x ≤ 3",
+          "Ratkaisuja on 14 kappaletta"
+        ],
+        "final": "14"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+      },
+      "provenance": {
+        "template": "ext03_ne",
+        "params": {
+          "p": -3,
+          "q": 2,
+          "rhs": -7,
+          "rel": "≥",
+          "window": [
+            -10,
+            10
+          ]
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 18
+      }
+    }
+  ]
+}

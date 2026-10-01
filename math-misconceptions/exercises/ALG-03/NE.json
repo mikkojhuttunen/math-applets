@@ -1,0 +1,309 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "y + 5 = 15. Mikä on y?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 10
+        },
+        "wrong": [
+          {
+            "match": 25,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "y = 15 − 5 = 10"
+        ],
+        "final": "10"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_ne",
+        "params": {
+          "letter": "y",
+          "position": 25,
+          "value": 10,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "3k = 18. Mikä on k?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6
+        },
+        "wrong": [
+          {
+            "match": 11,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "k = 18 ÷ 3 = 6"
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_ne",
+        "params": {
+          "letter": "k",
+          "position": 11,
+          "value": 6,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "p − 4 = 7. Mikä on p?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 11
+        },
+        "wrong": [
+          {
+            "match": 16,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "p = 7 + 4 = 11"
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_ne",
+        "params": {
+          "letter": "p",
+          "position": 16,
+          "value": 11,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "Luvun w kaksinkertainen on 8. Mikä on luku w?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 4
+        },
+        "wrong": [
+          {
+            "match": 23,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "2w = 8",
+          "w = 4"
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_ne",
+        "params": {
+          "letter": "w",
+          "position": 23,
+          "value": 4,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T14",
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-03"
+      ],
+      "prompt": {
+        "text": "Tiedetään, että n + 2 = 13 ja o = n + 1. Mikä on o?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 12
+        },
+        "wrong": [
+          {
+            "match": 15,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          },
+          {
+            "match": 14,
+            "misconception": "ALG-03",
+            "feedback": "Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan yhtälöstä."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "n = 13 − 2 = 11",
+          "o = 11 + 1 = 12"
+        ],
+        "final": "12"
+      },
+      "feedback": {
+        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+      },
+      "provenance": {
+        "template": "alg03_ne",
+        "params": {
+          "letter": "n",
+          "position": 14,
+          "value": 11,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 23
+      }
+    }
+  ]
+}

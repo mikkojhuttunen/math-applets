@@ -1,0 +1,278 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-09",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(x + 7)² + 4",
+          "x² + 49 + 4",
+          "x² + 53"
+        ],
+        "error_line": 2,
+        "error_type": "power_over_sum"
+      },
+      "solution": {
+        "steps": [
+          "(x + 7)² = (x + 7)(x + 7) = x² + 14x + 49. Oikea tulos on x² + 14x + 53."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 2,
+          "b": 7,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(x − 5)² + 6x",
+          "x² − 25 + 6x",
+          "x² + 6x − 25"
+        ],
+        "error_line": 2,
+        "error_type": "power_over_sum"
+      },
+      "solution": {
+        "steps": [
+          "(x − 5)² = (x − 5)(x − 5) = x² − 10x + 25. Oikea tulos on x² − 4x + 25."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 3,
+          "b": 5,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(x + 4)²",
+          "(x + 4)(x + 4)",
+          "x² + 4x + 4x + 16",
+          "x² + 16"
+        ],
+        "error_line": 4,
+        "error_type": "drops_cross_term"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 3 on oikein. Keskimmäiset termit 4x + 4x = 8x eivät katoa: oikea tulos on x² + 8x + 16."
+        ],
+        "final": "Virhe on rivillä 4"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 4,
+          "b": 4,
+          "c": 6
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(2x + 4)²",
+          "(2x)² + 4²",
+          "4x² + 16"
+        ],
+        "error_line": 2,
+        "error_type": "power_over_sum"
+      },
+      "solution": {
+        "steps": [
+          "(2x + 4)² = (2x + 4)(2x + 4) = 4x² + 16x + 16. Oikea tulos on 4x² + 16x + 16."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-09-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.04",
+          "S3.03"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliönmuotoisen puutarhan sivun pituus on x + 7 metriä. Siitä erotetaan neliönmuotoinen kukkapenkki, jonka sivu on 7 metriä. Oppilas laskee jäljelle jäävän pinta-alan lausekkeen rivi riviltä. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+      },
+      "payload": {
+        "lines": [
+          "(x + 7)² − 49",
+          "x² + 49 − 49",
+          "x²"
+        ],
+        "error_line": 2,
+        "error_type": "power_over_sum"
+      },
+      "solution": {
+        "steps": [
+          "(x + 7)² = x² + 14x + 49. Oikea tulos on x² + 14x."
+        ],
+        "final": "Virhe on rivillä 2"
+      },
+      "feedback": {
+        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 2,
+          "b": 7,
+          "c": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

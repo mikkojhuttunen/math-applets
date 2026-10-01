@@ -1,0 +1,382 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-07",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 5x + 3 = 23."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 26/5",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          },
+          {
+            "id": "b",
+            "text": "x = 4",
+            "misconception": null,
+            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+          },
+          {
+            "id": "c",
+            "text": "x = 8/5",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          },
+          {
+            "id": "d",
+            "text": "x = 20",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5x = 23 − 3 = 20",
+          "x = 20 / 5 = 4"
+        ],
+        "final": "x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_mc",
+        "params": {
+          "a": 5,
+          "b": 3,
+          "x": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 5x − 2 = 38."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 8",
+            "misconception": null,
+            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+          },
+          {
+            "id": "b",
+            "text": "x = 40",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          },
+          {
+            "id": "c",
+            "text": "x = 36/5",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          },
+          {
+            "id": "d",
+            "text": "x = 48/5",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5x = 38 + 2 = 40",
+          "x = 40 / 5 = 8"
+        ],
+        "final": "x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_mc",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "x": 8
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Taksimatka maksaa aloitusmaksun 8 euroa ja lisäksi 3 euroa kilometriltä. Matka maksoi 14 euroa. Montako kilometriä x ajettiin? Yhtälö on 3x + 8 = 14."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 2",
+            "misconception": null,
+            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+          },
+          {
+            "id": "b",
+            "text": "x = −10/3",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          },
+          {
+            "id": "c",
+            "text": "x = 22/3",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          },
+          {
+            "id": "d",
+            "text": "x = 6",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään aloitusmaksu: 3x = 14 − 8 = 6",
+          "x = 6 / 3 = 2"
+        ],
+        "final": "x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_mc",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "x": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 5x = 2x + 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 9/7",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          },
+          {
+            "id": "b",
+            "text": "x = 3",
+            "misconception": null,
+            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+          },
+          {
+            "id": "c",
+            "text": "x = 9/5",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          },
+          {
+            "id": "d",
+            "text": "x = 11/5",
+            "misconception": "ALG-07",
+            "feedback": "Jokainen laskutoimitus on tehtävä yhtälön molemmille puolille, myös kaikille termeille."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vähennetään 2x molemmilta puolilta: 3x = 9",
+          "x = 9 / 3 = 3"
+        ],
+        "final": "x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+      },
+      "provenance": {
+        "template": "alg07_mc",
+        "params": {
+          "a": 5,
+          "b": 4,
+          "x": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisee yhtälön 3x + 2 = 17 ja kirjoittaa ensimmäiseksi riviksi 3x = 19. Mikä virhe rivillä on?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Luku 2 siirrettiin toiselle puolelle, mutta sen merkki ei vaihtunut: pitäisi olla 3x = 15",
+            "misconception": null,
+            "feedback": "Oikein: luku 2 on vähennettävä molemmilta puolilta."
+          },
+          {
+            "id": "b",
+            "text": "Luku 2 pitää jättää vasemmalle puolelle, koska sen edessä on plusmerkki",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          },
+          {
+            "id": "c",
+            "text": "Yhtälö jaettiin luvulla 3 vain vasemmalta puolelta",
+            "misconception": null,
+            "feedback": "Rivillä ei ole jakolaskua."
+          },
+          {
+            "id": "d",
+            "text": "Rivi on oikein, koska luku 2 siirtyi sivulta toiselle",
+            "misconception": "ALG-07",
+            "feedback": "Siirrettäessä termi yhtälön toiselle puolelle sen merkki vaihtuu: lisäys muuttuu vähennykseksi ja päinvastoin."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3x + 2 = 17",
+          "Vähennetään 2 molemmilta puolilta: 3x = 17 − 2 = 15"
+        ],
+        "final": "3x = 15"
+      },
+      "feedback": {
+        "correct": "Oikein: termin siirto toiselle puolelle vaihtaa sen merkin."
+      },
+      "provenance": {
+        "template": "alg07_mc",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "x": 5
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

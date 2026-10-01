@@ -1,0 +1,336 @@
+{
+  "schema_version": "1.0",
+  "topic": "PRO-04",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 8 cm ja 7 cm. Suorakulmion B yksi sivu on 28 cm. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu (cm), kun suorakulmioiden alat ovat yhtä suuret."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        },
+        "checks": {
+          "valid": [
+            "28 * x = 8 * 7",
+            "x = 56 / 28"
+          ],
+          "invalid": [
+            "28 + x = 8 + 7",
+            "x = 7",
+            "2 * (28 + x) = 2 * (8 + 7)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 8 · 7 = 56 cm²",
+          "B:n ala 28 · x = 56",
+          "x = 56 / 28 = 2",
+          "B:n piiri 60 on suurempi kuin A:n piiri 30, mutta alat ovat samat"
+        ],
+        "final": "x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_rp",
+        "params": {
+          "a": 8,
+          "b": 7,
+          "c": 28,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Matto on 3 m pitkä ja 8 m leveä. Toinen matto on 12 m pitkä. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen maton leveys (m), kun matoilla on sama pinta-ala."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        },
+        "checks": {
+          "valid": [
+            "12 * x = 3 * 8",
+            "x = 24 / 12"
+          ],
+          "invalid": [
+            "12 + x = 3 + 8",
+            "x = 8",
+            "2 * (12 + x) = 2 * (3 + 8)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 3 · 8 = 24 cm²",
+          "B:n ala 12 · x = 24",
+          "x = 24 / 12 = 2",
+          "B:n piiri 28 on suurempi kuin A:n piiri 22, mutta alat ovat samat"
+        ],
+        "final": "x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_rp",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "c": 12,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Pelto on 4 m · 5 m. Toisen pellon yksi sivu on 10 m, ja pellot ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen pellon toinen sivu (m)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        },
+        "checks": {
+          "valid": [
+            "10 * x = 4 * 5",
+            "x = 20 / 10"
+          ],
+          "invalid": [
+            "10 + x = 4 + 5",
+            "x = 5",
+            "2 * (10 + x) = 2 * (4 + 5)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 4 · 5 = 20 cm²",
+          "B:n ala 10 · x = 20",
+          "x = 20 / 10 = 2",
+          "B:n piiri 24 on suurempi kuin A:n piiri 18, mutta alat ovat samat"
+        ],
+        "final": "x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_rp",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "c": 10,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 3 cm ja 6 cm. Suorakulmion B sivu on 9 cm, ja B:n piiri on suurempi kuin A:n piiri. Silti suorakulmioiden alat ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu (cm)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        },
+        "checks": {
+          "valid": [
+            "9 * x = 3 * 6",
+            "x = 18 / 9"
+          ],
+          "invalid": [
+            "9 + x = 3 + 6",
+            "x = 6",
+            "2 * (9 + x) = 2 * (3 + 6)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 3 · 6 = 18 cm²",
+          "B:n ala 9 · x = 18",
+          "x = 18 / 9 = 2",
+          "B:n piiri 22 on suurempi kuin A:n piiri 18, mutta alat ovat samat"
+        ],
+        "final": "x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_rp",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 9,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 6 cm. Suorakulmion yksi sivu on 3 cm, ja sen ala on yhtä suuri kuin neliön ala. Kirjoita yhtälö, jonka ratkaisu x = 12 on suorakulmion toinen sivu (cm)."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 12
+        },
+        "checks": {
+          "valid": [
+            "3 * x = 6 * 6",
+            "x = 36 / 3"
+          ],
+          "invalid": [
+            "2 * (3 + x) = 24",
+            "x = 6",
+            "3 + x = 12"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliön ala 6² = 36 cm²",
+          "3 · x = 36",
+          "x = 12",
+          "Suorakulmion piiri 30 cm on suurempi kuin neliön piiri 24 cm, mutta alat ovat samat"
+        ],
+        "final": "x = 12"
+      },
+      "feedback": {
+        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_rp",
+        "params": {
+          "s": 6,
+          "a": 3,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}

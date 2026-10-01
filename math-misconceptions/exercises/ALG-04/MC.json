@@ -1,0 +1,387 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Sievennä lauseke 4x + 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "20x",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "b",
+            "text": "4x + 5",
+            "misconception": null,
+            "feedback": "Oikein: 4x ja 5 ovat eri muotoisia termejä, joten lauseke on jo sievin."
+          },
+          {
+            "id": "c",
+            "text": "9x",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "d",
+            "text": "9",
+            "misconception": null,
+            "feedback": "Kirjain ei katoa: 4x ei ole sama kuin 4."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4x on x-termi, 5 on vakiotermi",
+          "Eri muotoisia termejä ei voi yhdistää",
+          "4x + 5"
+        ],
+        "final": "4x + 5"
+      },
+      "feedback": {
+        "correct": "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi."
+      },
+      "provenance": {
+        "template": "alg04_mc",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "c": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Sievennä lauseke 4x + 7 + 2x."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "13",
+            "misconception": null,
+            "feedback": "Kirjain x ei saa kadota: x-termit pysyvät x-termeinä."
+          },
+          {
+            "id": "b",
+            "text": "13x",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "c",
+            "text": "6x + 7",
+            "misconception": null,
+            "feedback": "Oikein: vain x-termit voi laskea yhteen."
+          },
+          {
+            "id": "d",
+            "text": "8x + 7",
+            "misconception": null,
+            "feedback": "Samanlaiset termit lasketaan yhteen, ei kerrota: 4x + 2x."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x-termit: 4x + 2x = 6x",
+          "Vakiotermi: 7",
+          "6x + 7"
+        ],
+        "final": "6x + 7"
+      },
+      "feedback": {
+        "correct": "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi."
+      },
+      "provenance": {
+        "template": "alg04_mc",
+        "params": {
+          "a": 4,
+          "b": 7,
+          "c": 2
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Mikä lauseke on sama kuin 3 + 4y − 4?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3y",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "b",
+            "text": "8y",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "c",
+            "text": "4y − 1",
+            "misconception": null,
+            "feedback": "Oikein: luvut yhdistetään keskenään, y-termi pysyy omana termin."
+          },
+          {
+            "id": "d",
+            "text": "4y − 7",
+            "misconception": null,
+            "feedback": "Tarkista vakiotermien merkit: +3 ja −4."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Luvut: 3 − 4 = −1",
+          "y-termi: 4y",
+          "4y − 1"
+        ],
+        "final": "4y − 1"
+      },
+      "feedback": {
+        "correct": "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi."
+      },
+      "provenance": {
+        "template": "alg04_mc",
+        "params": {
+          "a": 4,
+          "b": 3,
+          "c": 3
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventää lausekkeen 6x + 5 muotoon 11x. Mikä perustelu osoittaa, että sieventäminen on väärin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kun x = 2, 6x + 5 = 17, mutta 11x = 22",
+            "misconception": null,
+            "feedback": "Oikein: lausekkeiden arvot eroavat, joten ne eivät ole sama lauseke."
+          },
+          {
+            "id": "b",
+            "text": "Väärin, koska luvut pitäisi kertoa keskenään",
+            "misconception": null,
+            "feedback": "Kertominen ei kuulu tehtävään."
+          },
+          {
+            "id": "c",
+            "text": "Sieventäminen on oikein, koska plusmerkki pyytää laskemaan kaiken yhteen",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "d",
+            "text": "Väärin, koska vastauksessa ei saa olla kirjainta",
+            "misconception": null,
+            "feedback": "Kirjain saa olla vastauksessa, kun alkuperäisessäkin on kirjain."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 2: 6x + 5 = 17",
+          "x = 2: 11x = 22",
+          "Arvot eroavat, joten lausekkeet eivät ole samat"
+        ],
+        "final": "Sijoituksella nähdään, että lausekkeet eroavat"
+      },
+      "feedback": {
+        "correct": "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi."
+      },
+      "provenance": {
+        "template": "alg04_mc",
+        "params": {
+          "a": 6,
+          "b": 5,
+          "c": 4
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-04"
+      ],
+      "prompt": {
+        "text": "Pizza maksaa x euroa ja juoma 6 euroa. Kaksi pizzaa ja yksi juoma maksaa 2x + 6 euroa. Matti sanoo hinnan olevan 8x euroa. Mikä on oikea hinta euroina, kun x = 10?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "32",
+            "misconception": null,
+            "feedback": "Juoma ostetaan vain kerran, ei kahta."
+          },
+          {
+            "id": "b",
+            "text": "16",
+            "misconception": null,
+            "feedback": "Pizzoja on kaksi."
+          },
+          {
+            "id": "c",
+            "text": "80",
+            "misconception": "ALG-04",
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+          },
+          {
+            "id": "d",
+            "text": "26",
+            "misconception": null,
+            "feedback": "Oikein: 2x + 6 ei ole sama kuin 8x."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x + 6 = 2 · 10 + 6",
+          "= 20 + 6",
+          "= 26"
+        ],
+        "final": "26"
+      },
+      "feedback": {
+        "correct": "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi."
+      },
+      "provenance": {
+        "template": "alg04_mc",
+        "params": {
+          "a": 2,
+          "b": 5,
+          "c": 6
+        },
+        "generated": "2026-09-30",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}
