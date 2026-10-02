@@ -1,0 +1,279 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-02",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laski lausekkeen 5⁰ + 5⁻¹ arvon näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "5^0 + 5^(−1)",
+          "0 + 1/5",
+          "1/5"
+        ],
+        "error_line": 2,
+        "error_type": "zero_power_as_zero"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on kirjoitettu 5⁰ = 0, mutta mikä tahansa nollasta eroava luku potenssiin 0 on 1.",
+          "Oikein: 1 + 1/5 = 6/5."
+        ],
+        "final": "6/5"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivinen eksponentti ja nollas potenssi noudattavat omia sääntöjään.",
+        "generic_wrong": "a⁰ = 1, a⁻ⁿ = 1/aⁿ ja (aᵐ)ⁿ = aᵐⁿ. Kokeile pienellä luvulla, esim. 2⁻¹ = 1/2."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "expr": "5^0+5^-1"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laski potenssin 4⁻² arvon näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "4^(−2)",
+          "4 · (−2)",
+          "−8"
+        ],
+        "error_line": 2,
+        "error_type": "negative_exponent_as_product"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 potenssi on laskettu kertolaskuna eksponentin kanssa, mutta 4⁻² ei ole 4 · (−2).",
+          "Oikein: 4⁻² = 1/4² = 1/16."
+        ],
+        "final": "1/16"
+      },
+      "feedback": {
+        "correct": "Oikein: negatiivinen eksponentti ja nollas potenssi noudattavat omia sääntöjään.",
+        "generic_wrong": "a⁰ = 1, a⁻ⁿ = 1/aⁿ ja (aᵐ)ⁿ = aᵐⁿ. Kokeile pienellä luvulla, esim. 2⁻¹ = 1/2."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "a": 4,
+          "n": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Lääkeannos on 3 · 10⁻² grammaa. Oppilas muutti sen lausekkeen arvoksi näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "3 · 10^(−2)",
+          "3 · (−100)",
+          "−300"
+        ],
+        "error_line": 2,
+        "error_type": "negative_exponent_as_negative"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on kirjoitettu 10⁻² = −100, mutta negatiivinen eksponentti tarkoittaa käänteislukua: 10⁻² = 1/100.",
+          "Oikein: 3 · 1/100 = 0,03 grammaa. Annos ei voi olla negatiivinen."
+        ],
+        "final": "0,03"
+      },
+      "feedback": {
+        "correct": "Oikein: 10⁻² = 0,01, joten annos on 0,03 g.",
+        "generic_wrong": "a⁰ = 1, a⁻ⁿ = 1/aⁿ ja (aᵐ)ⁿ = aᵐⁿ. Kokeile pienellä luvulla, esim. 2⁻¹ = 1/2."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "c": 3,
+          "n": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen (2⁻¹)⁻² näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(2^(−1))^(−2)",
+          "2^(−1 − 2)",
+          "2^(−3)",
+          "1/8"
+        ],
+        "error_line": 2,
+        "error_type": "power_of_power_added"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 potenssin potenssissa eksponentit on laskettu yhteen, vaikka ne kerrotaan: (aᵐ)ⁿ = aᵐⁿ.",
+          "Oikein: 2^((−1) · (−2)) = 2² = 4."
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein: eksponentit kerrotaan keskenään, joten tulos on 4.",
+        "generic_wrong": "a⁰ = 1, a⁻ⁿ = 1/aⁿ ja (aᵐ)ⁿ = aᵐⁿ. Kokeile pienellä luvulla, esim. 2⁻¹ = 1/2."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "expr": "(2^-1)^-2"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Bakteerien määrä on N(t) = 500 · 2^t, missä t on aika tunteina. Oppilas laski määrän kaksi tuntia ennen hetkeä t = 0 näin. Napauta rivi, jossa on virhe. Vihje: voiko bakteerien määrä olla negatiivinen?"
+      },
+      "payload": {
+        "lines": [
+          "500 · 2^(−2)",
+          "500 · (−4)",
+          "−2000"
+        ],
+        "error_line": 2,
+        "error_type": "negative_exponent_as_negative"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on kirjoitettu 2⁻² = −4. Määrä ei voi olla negatiivinen, ja 2⁻² = 1/4.",
+          "Oikein: 500 · 1/4 = 125."
+        ],
+        "final": "125"
+      },
+      "feedback": {
+        "correct": "Oikein: 500 · 2⁻² = 125 bakteeria.",
+        "generic_wrong": "a⁰ = 1, a⁻ⁿ = 1/aⁿ ja (aᵐ)ⁿ = aᵐⁿ. Kokeile pienellä luvulla, esim. 2⁻¹ = 1/2."
+      },
+      "provenance": {
+        "template": "ext02_es",
+        "params": {
+          "n0": 500,
+          "t": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}

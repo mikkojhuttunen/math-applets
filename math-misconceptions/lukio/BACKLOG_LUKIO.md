@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 7 |
+| Runs completed | 8 |
 | Last run | 2026-10-02 |
-| Progress | 34 of 151 planned cells in phases 0–2 generated |
+| Progress | 38 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -190,9 +190,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LPRB-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LFUN-01 | X | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
 | LSTA-04 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| ALG-09 | X | X | X | - | X | o | - | - | - | - | - | - | - | - | - |
-| EXT-02 | X | X | o | - | - | o | - | - | - | - | - | - | - | - | - |
-| NUM-08 | X | X | - | - | - | - | o | - | - | o | - | - | - | - | - |
+| ALG-09 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
+| EXT-02 | X | X | X | - | - | X | - | - | - | - | - | - | - | - | - |
+| NUM-08 | X | X | - | - | - | - | X | - | - | o | - | - | - | - | - |
 | FUN-05 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | EXT-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-01 | o | o | s | o | o | - | s | - | - | - | - | - | - | - | o |
@@ -278,6 +278,10 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | EXT-02 | NE | LU-EXT-02-NE-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/NE.json | Draft | Run 7; 2⁻³, 5⁰ + 3⁻², 4 · 10⁻² (MAB), (2/3)⁻², N(−3) for bacteria (MAB); answers rational or number; MAB items via MAY1.04 |
 | 2026-10-02 | NUM-08 | MC | LU-NUM-08-MC-001…005 | P, T, H | none | MAY1.03, MAA9.03, MAB6.01 | exercises/NUM-08/MC.json | Draft | Run 7; +20 % then −20 %, price 50 € +30 % −30 % (MAB), +10 % and +20 % (MAB), −10 % for three years, plausibility check of undoing +25 % (MAB); 3 MAB items |
 | 2026-10-02 | NUM-08 | NE | LU-NUM-08-NE-001…005 | P, T, H | none | MAY1.03, MAA9.03, MAB6.01 | exercises/NUM-08/NE.json | Draft | Run 7; 80 € +15 % −15 %, two 10 % rises (MAB), two 20 % cuts (MAB), +3 % for three years, undoing +20 % (MAB); 3 MAB items |
+| 2026-10-02 | EXT-02 | ES | LU-EXT-02-ES-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/ES.json | Draft | Run 8; 5⁰ + 5⁻¹ (a⁰ = 0), 4⁻² as 4 · (−2), 3 · 10⁻² as negative (MAB), (2⁻¹)⁻² with exponents added, N(−2) for bacteria with plausibility hint (MAB); 2 MAB items; evidence not yet checked (catalogue rating Moderate); verifier allows only G2 for this topic |
+| 2026-10-02 | EXT-02 | ME | LU-EXT-02-ME-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/ME.json | Draft | Run 8; x⁻², x⁰ + x⁻¹, 2 · 10⁻ˣ (MAB), (x⁻¹)⁻², 500 · 2⁻ˣ (MAB); 2 MAB items; evidence not yet checked |
+| 2026-10-02 | ALG-09 | ME | LU-ALG-09-ME-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/ME.json | Draft | Run 8; (x + 5)², (2x − 3)² (MAB), (x + y)² − (x − y)², (x + 1/x)², (a + b)² − a² (MAB); 2 MAB items |
+| 2026-10-02 | NUM-08 | RP | LU-NUM-08-RP-001…005 | P, T, H | none | MAY1.03, MAB6.01, MAA9.03 | exercises/NUM-08/RP.json | Draft | Run 8; equation for p, k, s, p, d: +50 % −50 % (MAB), +10 % and +20 % (MAB), −20 % then +25 %, equal yearly rise giving 21 %, undoing +25 % (MAB); 3 MAB items |
 
 ## 7. Coverage and decisions to confirm
 

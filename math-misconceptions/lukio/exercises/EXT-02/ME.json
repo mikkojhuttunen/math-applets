@@ -1,0 +1,445 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-02",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin x⁻² kaikilla x ≠ 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "x^(-2)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "−x^2",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "b",
+            "text": "1/x^2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "−2x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "(1/x)^2",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x⁻² = 1/x² = (1/x)².",
+          "Kun x = 2, x⁻² = 1/4, mutta −2x = −4 ja −x² = −4."
+        ],
+        "final": "b ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: käytä a⁰ = 1 ja a⁻ⁿ = 1/aⁿ.",
+        "generic_wrong": "a⁰ = 1 ja a⁻ⁿ = 1/aⁿ. Sijoita lukuarvo ja vertaa, esim. x = 2."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "reference": "x^(-2)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin x⁰ + x⁻¹ kaikilla x ≠ 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "x^0 + x^(-1)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "1 + 1/x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "1/x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "c",
+            "text": "1 − x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "(x + 1)/x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x⁰ = 1 ja x⁻¹ = 1/x, joten summa on 1 + 1/x = (x + 1)/x.",
+          "Lauseke 1/x unohtaa, että x⁰ = 1, ei 0."
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: käytä a⁰ = 1 ja a⁻ⁿ = 1/aⁿ.",
+        "generic_wrong": "a⁰ = 1 ja a⁻ⁿ = 1/aⁿ. Sijoita lukuarvo ja vertaa, esim. x = 2."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "reference": "x^0 + x^(-1)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Hiukkasen massa on 2 · 10⁻ˣ grammaa, kun x on positiivinen kokonaisluku. Mitkä lausekkeista ovat yhtä suuria kuin 2 · 10⁻ˣ? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "2 * 10^(-x)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "2 · (1/10)^x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "−20x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "c",
+            "text": "2 · 10^x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "2/10^x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10⁻ˣ = 1/10ˣ = (1/10)ˣ.",
+          "Kun x = 2, massa on 2/100 = 0,02 g, mutta 2 · 10² = 200 ja −20x = −40 eivät sovi."
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: käytä a⁰ = 1 ja a⁻ⁿ = 1/aⁿ.",
+        "generic_wrong": "a⁰ = 1 ja a⁻ⁿ = 1/aⁿ. Sijoita lukuarvo ja vertaa, esim. x = 2."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "reference": "2 · 10^(-x)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin (x⁻¹)⁻² kaikilla x ≠ 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "(x^(-1))^(-2)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "1/x^2",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "b",
+            "text": "x^2 · x^0",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "x^2",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "x^(-3)",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Potenssin potenssissa eksponentit kerrotaan: (−1) · (−2) = 2, joten tulos on x².",
+          "x⁻³ syntyy, jos eksponentit lasketaan yhteen."
+        ],
+        "final": "b ja c"
+      },
+      "feedback": {
+        "correct": "Oikein: käytä a⁰ = 1 ja a⁻ⁿ = 1/aⁿ.",
+        "generic_wrong": "a⁰ = 1 ja a⁻ⁿ = 1/aⁿ. Sijoita lukuarvo ja vertaa, esim. x = 2."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "reference": "(x^(-1))^(-2)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Bakteerien määrä on aluksi 500 ja se kaksinkertaistuu joka tunti, joten N(x) = 500 · 2ˣ. Mitkä lausekkeista ovat yhtä suuria kuin 500 · 2⁻ˣ eli määrä x tuntia ennen alkuhetkeä? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "500 * 2^(-x)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            2
+          ],
+          [
+            3
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "500 · 2^x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "b",
+            "text": "500 · (1/2)^x",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "−500 · 2^x",
+            "equivalent": false,
+            "misconception": "EXT-02"
+          },
+          {
+            "id": "d",
+            "text": "500/2^x",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2⁻ˣ = 1/2ˣ, joten määrä pienenee, kun mennään ajassa taaksepäin.",
+          "Kun x = 2, määrä on 500/4 = 125. Lauseke −500 · 2ˣ antaisi negatiivisen määrän."
+        ],
+        "final": "b ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: käytä a⁰ = 1 ja a⁻ⁿ = 1/aⁿ.",
+        "generic_wrong": "a⁰ = 1 ja a⁻ⁿ = 1/aⁿ. Sijoita lukuarvo ja vertaa, esim. x = 2."
+      },
+      "provenance": {
+        "template": "ext02_me",
+        "params": {
+          "reference": "500 · 2^(-x)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 8
+      }
+    }
+  ]
+}
