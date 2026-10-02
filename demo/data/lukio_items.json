@@ -1,0 +1,1471 @@
+{
+ "schema_version": 1,
+ "note": "Demo exercises for upper secondary (lukio), written by hand for the demo site. Same item shape as the grades 7-9 bank (math-misconceptions/schema/item.schema.json, types NE and MC), plus `set` naming the demo topic. Not reviewed by a teacher.",
+ "items": [
+  {
+   "id": "DEMO-MAA2-yhtalot-01",
+   "set": "MAA2-yhtalot",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö x² − 5x + 6 = 0."
+   },
+   "payload": {
+    "answer": {
+     "kind": "set",
+     "values": [
+      2,
+      3
+     ]
+    },
+    "wrong": [
+     {
+      "match": "−2; −3",
+      "misconception": null,
+      "feedback": "Tarkista merkit: x² − 5x + 6 = (x − 2)(x − 3), joten nollakohdat ovat positiiviset."
+     }
+    ],
+    "input_hint": "Kirjoita ratkaisut puolipisteellä, esim. 1; 4"
+   },
+   "solution": {
+    "steps": [
+     "Tulo (x − 2)(x − 3) = x² − 5x + 6",
+     "Tulo on nolla, kun x = 2 tai x = 3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA2-yhtalot-02",
+   "set": "MAA2-yhtalot",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Montako reaalista ratkaisua yhtälöllä x² + 4x + 5 = 0 on?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 0
+    },
+    "wrong": [
+     {
+      "match": "2",
+      "misconception": null,
+      "feedback": "Laske ensin diskriminantti D = b² − 4ac. Jos D < 0, reaalisia ratkaisuja ei ole."
+     },
+     {
+      "match": "1",
+      "misconception": null,
+      "feedback": "Yksi ratkaisu on vain silloin, kun diskriminantti on 0."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "D = 4² − 4 · 1 · 5 = 16 − 20 = −4",
+     "D < 0, joten reaalisia ratkaisuja ei ole"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA2-yhtalot-03",
+   "set": "MAA2-yhtalot",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö x² = 49."
+   },
+   "payload": {
+    "answer": {
+     "kind": "set",
+     "values": [
+      7,
+      -7
+     ]
+    },
+    "wrong": [
+     {
+      "match": "7",
+      "misconception": null,
+      "feedback": "Myös (−7)² = 49. Yhtälöllä on kaksi ratkaisua."
+     }
+    ],
+    "input_hint": "Kirjoita ratkaisut puolipisteellä, esim. 1; 4"
+   },
+   "solution": {
+    "steps": [
+     "x = ±√49 = ±7"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA2-yhtalot-04",
+   "set": "MAA2-yhtalot",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Mihin suuntaan paraabeli y = −2x² + 3 aukeaa?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "Ylöspäin",
+      "misconception": null,
+      "feedback": "Katso x²:n kerrointa: −2 on negatiivinen."
+     },
+     {
+      "id": "b",
+      "text": "Alaspäin",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "c",
+      "text": "Oikealle",
+      "misconception": null,
+      "feedback": "Funktion y = ax² + c kuvaaja aukeaa aina ylös tai alas."
+     }
+    ],
+    "correct": [
+     "b"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "x²:n kerroin a = −2 < 0",
+     "Kun a < 0, paraabeli aukeaa alaspäin"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA2-yhtalot-05",
+   "set": "MAA2-yhtalot",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Paraabelin y = x² − 6x + 1 huippu on kohdassa x = ?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 3
+    },
+    "wrong": [
+     {
+      "match": "−3",
+      "misconception": null,
+      "feedback": "Huipun x-koordinaatti on x = −b/(2a) = −(−6)/2. Tarkista merkki."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "x = −b/(2a) = −(−6)/(2 · 1) = 3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA2-yhtalot-06",
+   "set": "MAA2-yhtalot",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö 2x² − 8x = 0."
+   },
+   "payload": {
+    "answer": {
+     "kind": "set",
+     "values": [
+      0,
+      4
+     ]
+    },
+    "wrong": [
+     {
+      "match": "4",
+      "misconception": null,
+      "feedback": "Jos jaat x:llä, ratkaisu x = 0 katoaa. Ota x yhteiseksi tekijäksi: 2x(x − 4) = 0."
+     }
+    ],
+    "input_hint": "Kirjoita ratkaisut puolipisteellä, esim. 1; 4"
+   },
+   "solution": {
+    "steps": [
+     "2x(x − 4) = 0",
+     "x = 0 tai x = 4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA6-derivaatta-01",
+   "set": "MAA6-derivaatta",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Derivoi f(x) = x³ − 4x."
+   },
+   "payload": {
+    "answer": {
+     "kind": "expression",
+     "variables": [
+      "x"
+     ],
+     "reference": "3x² − 4",
+     "samples": [
+      [
+       -2
+      ],
+      [
+       0
+      ],
+      [
+       3
+      ]
+     ]
+    },
+    "wrong": [
+     {
+      "match": "3x² − 4x",
+      "misconception": null,
+      "feedback": "Termin −4x derivaatta on −4, ei −4x."
+     },
+     {
+      "match": "3x²",
+      "misconception": null,
+      "feedback": "Myös termi −4x derivoidaan: sen derivaatta on −4."
+     }
+    ],
+    "input_hint": "Kirjoita esim. 2x + 1"
+   },
+   "solution": {
+    "steps": [
+     "D x³ = 3x²",
+     "D(−4x) = −4",
+     "f'(x) = 3x² − 4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA6-derivaatta-02",
+   "set": "MAA6-derivaatta",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Olkoon f(x) = x². Laske f'(3)."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 6
+    },
+    "wrong": [
+     {
+      "match": "9",
+      "misconception": null,
+      "feedback": "Laskit funktion arvon f(3). Derivoi ensin: f'(x) = 2x."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "f'(x) = 2x",
+     "f'(3) = 2 · 3 = 6"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA6-derivaatta-03",
+   "set": "MAA6-derivaatta",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Mikä on käyrän y = x² − 2x tangentin kulmakerroin kohdassa x = 1?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 0
+    },
+    "wrong": [
+     {
+      "match": "−1",
+      "misconception": null,
+      "feedback": "Laskit käyrän pisteen y-koordinaatin. Kulmakerroin on derivaatan arvo: y' = 2x − 2."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "y' = 2x − 2",
+     "y'(1) = 2 − 2 = 0"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA6-derivaatta-04",
+   "set": "MAA6-derivaatta",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Funktiolle pätee f'(2) = 0, ja derivaatta vaihtaa kohdassa x = 2 merkkinsä negatiivisesta positiiviseksi. Mikä kohta x = 2 on?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "Minimikohta",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "Maksimikohta",
+      "misconception": null,
+      "feedback": "Funktio ensin vähenee (f' < 0) ja sitten kasvaa (f' > 0). Silloin kohta on pohja, ei huippu."
+     },
+     {
+      "id": "c",
+      "text": "Ei kumpikaan",
+      "misconception": null,
+      "feedback": "Kun derivaatan merkki vaihtuu, kohta on ääriarvokohta."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "Vasemmalla f vähenee, oikealla kasvaa",
+     "Kohta x = 2 on paikallinen minimikohta"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA6-derivaatta-05",
+   "set": "MAA6-derivaatta",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Derivoi f(x) = 5x² + 3x + 7."
+   },
+   "payload": {
+    "answer": {
+     "kind": "expression",
+     "variables": [
+      "x"
+     ],
+     "reference": "10x + 3",
+     "samples": [
+      [
+       -2
+      ],
+      [
+       0
+      ],
+      [
+       3
+      ]
+     ]
+    },
+    "wrong": [
+     {
+      "match": "10x + 10",
+      "misconception": null,
+      "feedback": "Vakion 7 derivaatta on 0."
+     }
+    ],
+    "input_hint": "Kirjoita esim. 2x + 1"
+   },
+   "solution": {
+    "steps": [
+     "D 5x² = 10x",
+     "D 3x = 3",
+     "D 7 = 0",
+     "f'(x) = 10x + 3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA7-yksikkoympyra-01",
+   "set": "MAA7-yksikkoympyra",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Mikä on sin 30°?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "1/2",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "√3/2",
+      "misconception": null,
+      "feedback": "Tämä on cos 30°. Sini on yksikköympyrän pisteen y-koordinaatti."
+     },
+     {
+      "id": "c",
+      "text": "√2/2",
+      "misconception": null,
+      "feedback": "Tämä on sin 45°."
+     },
+     {
+      "id": "d",
+      "text": "3/10",
+      "misconception": null,
+      "feedback": "Kulman asteluku ei ole sinin arvo."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "Kulmaa 30° vastaava piste on (√3/2, 1/2)",
+     "sin 30° on y-koordinaatti 1/2"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA7-yksikkoympyra-02",
+   "set": "MAA7-yksikkoympyra",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Mikä on cos 180°?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": -1
+    },
+    "wrong": [
+     {
+      "match": "1",
+      "misconception": null,
+      "feedback": "Kulmaa 180° vastaava piste on (−1, 0). Kosini on x-koordinaatti."
+     },
+     {
+      "match": "0",
+      "misconception": null,
+      "feedback": "Kulmaa 180° vastaava piste on (−1, 0). Kosini on x-koordinaatti, sini y-koordinaatti."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Kulmaa 180° vastaava piste on (−1, 0)",
+     "cos 180° = −1"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA7-yksikkoympyra-03",
+   "set": "MAA7-yksikkoympyra",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Kuinka monta radiaania on 90°?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "π/2",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "π",
+      "misconception": null,
+      "feedback": "π radiaania on 180°."
+     },
+     {
+      "id": "c",
+      "text": "π/4",
+      "misconception": null,
+      "feedback": "π/4 radiaania on 45°."
+     },
+     {
+      "id": "d",
+      "text": "90π",
+      "misconception": null,
+      "feedback": "Muunnos: kerro luvulla π/180°."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "90° · π/180° = π/2"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA7-yksikkoympyra-04",
+   "set": "MAA7-yksikkoympyra",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Kulmalle α pätee sin α > 0 ja cos α < 0. Missä neljänneksessä kulman kehäpiste on?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "I neljänneksessä",
+      "misconception": null,
+      "feedback": "I neljänneksessä sekä sini että kosini ovat positiivisia."
+     },
+     {
+      "id": "b",
+      "text": "II neljänneksessä",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "c",
+      "text": "III neljänneksessä",
+      "misconception": null,
+      "feedback": "III neljänneksessä myös sini on negatiivinen."
+     },
+     {
+      "id": "d",
+      "text": "IV neljänneksessä",
+      "misconception": null,
+      "feedback": "IV neljänneksessä sini on negatiivinen ja kosini positiivinen."
+     }
+    ],
+    "correct": [
+     "b"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "y-koordinaatti positiivinen, x-koordinaatti negatiivinen",
+     "Piste on vasemmalla ylhäällä: II neljännes"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA7-yksikkoympyra-05",
+   "set": "MAA7-yksikkoympyra",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske sin² 40° + cos² 40°."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 1
+    },
+    "wrong": [],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Yksikköympyrän piste toteuttaa x² + y² = 1",
+     "Siksi sin² α + cos² α = 1 kaikilla α"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-01",
+   "set": "MAA8-eksp-log",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske log₂ 8."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 3
+    },
+    "wrong": [
+     {
+      "match": "4",
+      "misconception": null,
+      "feedback": "log₂ 8 kysyy, mihin potenssiin 2 korotetaan, jotta saadaan 8. Se ei ole 8 : 2."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "2³ = 8",
+     "Siis log₂ 8 = 3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-02",
+   "set": "MAA8-eksp-log",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske lg 1000."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 3
+    },
+    "wrong": [
+     {
+      "match": "100",
+      "misconception": null,
+      "feedback": "lg on kymmenkantainen logaritmi: mihin potenssiin 10 korotetaan, jotta saadaan 1000?"
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "10³ = 1000",
+     "lg 1000 = 3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-03",
+   "set": "MAA8-eksp-log",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö 2ˣ = 32."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 5
+    },
+    "wrong": [
+     {
+      "match": "16",
+      "misconception": null,
+      "feedback": "Kysytään eksponenttia: kuinka monta kakkosta kerrotaan, jotta saadaan 32?"
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "32 = 2⁵",
+     "x = 5"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-04",
+   "set": "MAA8-eksp-log",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske ln(e⁴)."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 4
+    },
+    "wrong": [],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "ln ja e-kantainen potenssi kumoavat toisensa",
+     "ln(e⁴) = 4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-05",
+   "set": "MAA8-eksp-log",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske log₃ 9 + log₃ 3."
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "3",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "log₃ 12",
+      "misconception": null,
+      "feedback": "Logaritmien summa on tulon logaritmi: log₃(9 · 3), ei summan."
+     },
+     {
+      "id": "c",
+      "text": "2",
+      "misconception": null,
+      "feedback": "log₃ 9 = 2, mutta myös log₃ 3 = 1 lasketaan mukaan."
+     },
+     {
+      "id": "d",
+      "text": "12",
+      "misconception": null,
+      "feedback": "Logaritmeja ei voi korvata niiden argumenteilla."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "log₃ 9 = 2 ja log₃ 3 = 1",
+     "Summa on 3 (tai log₃ 27 = 3)"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA8-eksp-log-06",
+   "set": "MAA8-eksp-log",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö 3ˣ = 1."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 0
+    },
+    "wrong": [
+     {
+      "match": "1",
+      "misconception": null,
+      "feedback": "Mikä tahansa nollasta poikkeava luku potenssiin 0 on 1."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "3⁰ = 1",
+     "x = 0"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA9-integraali-01",
+   "set": "MAA9-integraali",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske integraali ∫₀² 2x dx."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 4
+    },
+    "wrong": [
+     {
+      "match": "2",
+      "misconception": null,
+      "feedback": "Integraalifunktio on x². Sijoita rajat: 2² − 0²."
+     },
+     {
+      "match": "8",
+      "misconception": null,
+      "feedback": "Älä kerro funktion arvoa välin pituudella: alue on kolmio, jonka ala on 2 · 4 / 2."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Integraalifunktio F(x) = x²",
+     "F(2) − F(0) = 4 − 0 = 4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA9-integraali-02",
+   "set": "MAA9-integraali",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Anna funktion f(x) = x² integraalifunktio, jossa vakio C = 0."
+   },
+   "payload": {
+    "answer": {
+     "kind": "expression",
+     "variables": [
+      "x"
+     ],
+     "reference": "x³/3",
+     "samples": [
+      [
+       -2
+      ],
+      [
+       0
+      ],
+      [
+       3
+      ]
+     ]
+    },
+    "wrong": [
+     {
+      "match": "2x",
+      "misconception": null,
+      "feedback": "Tämä on derivaatta. Integroinnissa eksponenttia kasvatetaan yhdellä ja jaetaan uudella eksponentilla."
+     },
+     {
+      "match": "x³",
+      "misconception": null,
+      "feedback": "Muista jakaa uudella eksponentilla: x³/3."
+     }
+    ],
+    "input_hint": "Kirjoita esim. x^4/4"
+   },
+   "solution": {
+    "steps": [
+     "∫ xⁿ dx = xⁿ⁺¹/(n + 1)",
+     "F(x) = x³/3"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA9-integraali-03",
+   "set": "MAA9-integraali",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske integraali ∫₁³ 5 dx."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 10
+    },
+    "wrong": [
+     {
+      "match": "5",
+      "misconception": null,
+      "feedback": "Vakiofunktion integraali on suorakulmion ala: korkeus 5, leveys 3 − 1 = 2."
+     },
+     {
+      "match": "15",
+      "misconception": null,
+      "feedback": "Välin pituus on 3 − 1 = 2, ei 3."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Integraalifunktio 5x",
+     "5 · 3 − 5 · 1 = 10"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA9-integraali-04",
+   "set": "MAA9-integraali",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske integraali ∫₀³ x² dx."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 9
+    },
+    "wrong": [
+     {
+      "match": "27",
+      "misconception": null,
+      "feedback": "Integraalifunktio on x³/3: muista jakaa kolmella."
+     },
+     {
+      "match": "6",
+      "misconception": null,
+      "feedback": "Derivoit funktion. Integraalissa tarvitaan integraalifunktio x³/3."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "F(x) = x³/3",
+     "F(3) − F(0) = 27/3 = 9"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAA9-integraali-05",
+   "set": "MAA9-integraali",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Funktio f on välillä [1, 4] negatiivinen. Mikä on integraalin ∫₁⁴ f(x) dx merkki?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "Negatiivinen",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "Positiivinen",
+      "misconception": null,
+      "feedback": "Pinta-ala on positiivinen, mutta x-akselin alapuolinen alue tuo integraaliin negatiivisen osuuden."
+     },
+     {
+      "id": "c",
+      "text": "Nolla",
+      "misconception": null,
+      "feedback": "Integraali on nolla vain, jos ylä- ja alapuolisten alueiden alat kumoavat toisensa."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "Kuvaaja on x-akselin alapuolella koko välillä",
+     "Integraali on alueen pinta-alan vastaluku, siis negatiivinen"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-toisen-asteen-malli-01",
+   "set": "MAB-toisen-asteen-malli",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Voitto on V(x) = −2x² + 40x − 100 euroa, kun myydään x kappaletta. Millä x:n arvolla voitto on suurin?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 10
+    },
+    "wrong": [
+     {
+      "match": "−10",
+      "misconception": null,
+      "feedback": "Huipun kohta on x = −b/(2a) = −40/(2 · (−2)). Tarkista merkit."
+     },
+     {
+      "match": "20",
+      "misconception": null,
+      "feedback": "Muista kerroin 2 nimittäjässä: x = −b/(2a)."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "a = −2, b = 40",
+     "x = −40/(2 · (−2)) = 10"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-toisen-asteen-malli-02",
+   "set": "MAB-toisen-asteen-malli",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Voitto on V(x) = −2x² + 40x − 100 euroa. Kuinka suuri on suurin voitto (x = 10)?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 100,
+     "unit": "€"
+    },
+    "wrong": [
+     {
+      "match": "500",
+      "misconception": null,
+      "feedback": "Sijoita x = 10 jokaiseen termiin: −2 · 10² = −200."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "V(10) = −2 · 100 + 400 − 100",
+     "V(10) = 100 €"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-toisen-asteen-malli-03",
+   "set": "MAB-toisen-asteen-malli",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö x² − 16 = 0."
+   },
+   "payload": {
+    "answer": {
+     "kind": "set",
+     "values": [
+      4,
+      -4
+     ]
+    },
+    "wrong": [
+     {
+      "match": "4",
+      "misconception": null,
+      "feedback": "Myös (−4)² = 16. Yhtälöllä on kaksi ratkaisua."
+     }
+    ],
+    "input_hint": "Kirjoita ratkaisut puolipisteellä, esim. 1; 4"
+   },
+   "solution": {
+    "steps": [
+     "x² = 16",
+     "x = 4 tai x = −4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-toisen-asteen-malli-04",
+   "set": "MAB-toisen-asteen-malli",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Laske funktion f(x) = 3x² − 2 arvo, kun x = −2."
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 10
+    },
+    "wrong": [
+     {
+      "match": "−14",
+      "misconception": null,
+      "feedback": "(−2)² = 4, ei −4. Neliö on aina ei-negatiivinen."
+     },
+     {
+      "match": "34",
+      "misconception": null,
+      "feedback": "Potenssi lasketaan ennen kertolaskua: 3 · (−2)² = 3 · 4."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "(−2)² = 4",
+     "3 · 4 − 2 = 10"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-toisen-asteen-malli-05",
+   "set": "MAB-toisen-asteen-malli",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Ratkaise yhtälö x² + 2x − 15 = 0."
+   },
+   "payload": {
+    "answer": {
+     "kind": "set",
+     "values": [
+      3,
+      -5
+     ]
+    },
+    "wrong": [
+     {
+      "match": "−3; 5",
+      "misconception": null,
+      "feedback": "Tarkista merkit: x² + 2x − 15 = (x + 5)(x − 3)."
+     }
+    ],
+    "input_hint": "Kirjoita ratkaisut puolipisteellä, esim. 1; 4"
+   },
+   "solution": {
+    "steps": [
+     "Ratkaisukaava: x = (−2 ± √(4 + 60)) / 2 = (−2 ± 8) / 2",
+     "x = 3 tai x = −5"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-prosentit-talous-01",
+   "set": "MAB-prosentit-talous",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Takki maksaa 250 €. Hintaa alennetaan 20 %. Mikä on uusi hinta?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 200,
+     "unit": "€"
+    },
+    "wrong": [
+     {
+      "match": "230",
+      "misconception": null,
+      "feedback": "Alennus on 20 prosenttia hinnasta, ei 20 euroa: 0,20 · 250 € = 50 €."
+     },
+     {
+      "match": "50",
+      "misconception": null,
+      "feedback": "Tämä on alennuksen suuruus. Kysyttiin uutta hintaa."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Kerroin 1 − 0,20 = 0,80",
+     "0,80 · 250 € = 200 €"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-prosentit-talous-02",
+   "set": "MAB-prosentit-talous",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Hinta nousee ensin 10 % ja laskee sitten 10 %. Montako prosenttia uusi hinta on alkuperäisestä?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 99,
+     "unit": "%"
+    },
+    "wrong": [
+     {
+      "match": "100",
+      "misconception": null,
+      "feedback": "Lasku lasketaan jo korotetusta hinnasta. Kertoimet: 1,10 · 0,90."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "1,10 · 0,90 = 0,99",
+     "Uusi hinta on 99 % alkuperäisestä"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-prosentit-talous-03",
+   "set": "MAB-prosentit-talous",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Tilille talletetaan 1000 €. Vuotuinen korko on 2 % ja korko lisätään pääomaan. Paljonko tilillä on 2 vuoden kuluttua?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 1040.4,
+     "unit": "€",
+     "tolerance": 0.005
+    },
+    "wrong": [
+     {
+      "match": "1040",
+      "misconception": null,
+      "feedback": "Toisena vuonna korkoa kertyy myös ensimmäisen vuoden korolle: 1000 · 1,02²."
+     }
+    ],
+    "input_hint": "Kirjoita luku sentin tarkkuudella"
+   },
+   "solution": {
+    "steps": [
+     "1000 € · 1,02² = 1000 € · 1,0404",
+     "= 1040,40 €"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-prosentit-talous-04",
+   "set": "MAB-prosentit-talous",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Hinta laskee 15 %. Millä kertoimella vanha hinta kerrotaan, jotta saadaan uusi hinta?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 0.85
+    },
+    "wrong": [
+     {
+      "match": "0,15",
+      "misconception": null,
+      "feedback": "Tämä on muutos. Uusi hinta on 100 % − 15 % vanhasta."
+     },
+     {
+      "match": "1,15",
+      "misconception": null,
+      "feedback": "Kerroin 1,15 tarkoittaa 15 %:n nousua."
+     }
+    ],
+    "input_hint": "Kirjoita desimaaliluku"
+   },
+   "solution": {
+    "steps": [
+     "100 % − 15 % = 85 %",
+     "Kerroin 0,85"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-prosentit-talous-05",
+   "set": "MAB-prosentit-talous",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Kuukausipalkka nousee 1800 eurosta 1890 euroon. Montako prosenttia palkka nousi?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 5,
+     "unit": "%"
+    },
+    "wrong": [
+     {
+      "match": "90",
+      "misconception": null,
+      "feedback": "Tämä on nousu euroina. Jaa nousu vanhalla palkalla."
+     },
+     {
+      "match": "4,76",
+      "misconception": null,
+      "feedback": "Vertaa vanhaan palkkaan: 90 € / 1800 €, ei uuteen."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Nousu 1890 € − 1800 € = 90 €",
+     "90 / 1800 = 0,05 = 5 %"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-todennakoisyys-01",
+   "set": "MAB-todennakoisyys",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Noppaa heitetään kaksi kertaa. Millä todennäköisyydellä saadaan kaksi kuutosta? Anna vastaus murtolukuna."
+   },
+   "payload": {
+    "answer": {
+     "kind": "typed",
+     "value": "1/36"
+    },
+    "wrong": [
+     {
+      "match": "1/3",
+      "misconception": null,
+      "feedback": "Riippumattomien tapahtumien todennäköisyydet kerrotaan, ei lasketa yhteen."
+     },
+     {
+      "match": "2/36",
+      "misconception": null,
+      "feedback": "Kaksi kuutosta on vain yksi alkeistapaus (6, 6) kaikista 36:sta."
+     }
+    ],
+    "input_hint": "Kirjoita esim. 1/6"
+   },
+   "solution": {
+    "steps": [
+     "P(kuutonen) = 1/6 kummallakin heitolla",
+     "1/6 · 1/6 = 1/36"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-todennakoisyys-02",
+   "set": "MAB-todennakoisyys",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Kuinka monessa eri järjestyksessä neljä kirjaa voidaan asettaa hyllyyn?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 24
+    },
+    "wrong": [
+     {
+      "match": "16",
+      "misconception": null,
+      "feedback": "Järjestyksiä on 4!, eli 4 · 3 · 2 · 1."
+     },
+     {
+      "match": "4",
+      "misconception": null,
+      "feedback": "Ensimmäiselle paikalle on 4 vaihtoehtoa, toiselle 3 ja niin edelleen."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "4! = 4 · 3 · 2 · 1 = 24"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-todennakoisyys-03",
+   "set": "MAB-todennakoisyys",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Viiden hengen joukosta valitaan kaksi edustajaa. Kuinka monella tavalla valinta voidaan tehdä?"
+   },
+   "payload": {
+    "answer": {
+     "kind": "number",
+     "value": 10
+    },
+    "wrong": [
+     {
+      "match": "20",
+      "misconception": null,
+      "feedback": "Järjestyksellä ei ole väliä: pari (A, B) on sama kuin (B, A). Jaa kahdella."
+     },
+     {
+      "match": "25",
+      "misconception": null,
+      "feedback": "Samaa henkilöä ei voi valita kahdesti, eikä järjestyksellä ole väliä."
+     }
+    ],
+    "input_hint": "Kirjoita luku"
+   },
+   "solution": {
+    "steps": [
+     "Järjestettyjä pareja 5 · 4 = 20",
+     "Jokainen pari kahdesti: 20 : 2 = 10"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-todennakoisyys-04",
+   "set": "MAB-todennakoisyys",
+   "type": "NE",
+   "status": "demo",
+   "prompt": {
+    "text": "Korttipakasta (52 korttia) nostetaan yksi kortti. Millä todennäköisyydellä se on hertta? Anna vastaus murtolukuna."
+   },
+   "payload": {
+    "answer": {
+     "kind": "typed",
+     "value": "1/4"
+    },
+    "wrong": [
+     {
+      "match": "1/13",
+      "misconception": null,
+      "feedback": "Herttoja on 13 kappaletta, joten todennäköisyys on 13/52."
+     },
+     {
+      "match": "1/52",
+      "misconception": null,
+      "feedback": "Herttoja on 13, ei yksi."
+     }
+    ],
+    "input_hint": "Kirjoita esim. 1/6"
+   },
+   "solution": {
+    "steps": [
+     "Herttoja on 13",
+     "13/52 = 1/4"
+    ]
+   }
+  },
+  {
+   "id": "DEMO-MAB-todennakoisyys-05",
+   "set": "MAB-todennakoisyys",
+   "type": "MC",
+   "status": "demo",
+   "prompt": {
+    "text": "Tapahtuman A todennäköisyys on 0,3. Mikä on todennäköisyys, että A ei tapahdu?"
+   },
+   "payload": {
+    "options": [
+     {
+      "id": "a",
+      "text": "0,7",
+      "misconception": null,
+      "feedback": null
+     },
+     {
+      "id": "b",
+      "text": "0,3",
+      "misconception": null,
+      "feedback": "Vastatapahtuman todennäköisyys on 1 − P(A)."
+     },
+     {
+      "id": "c",
+      "text": "−0,3",
+      "misconception": null,
+      "feedback": "Todennäköisyys ei voi olla negatiivinen."
+     },
+     {
+      "id": "d",
+      "text": "1,3",
+      "misconception": null,
+      "feedback": "Todennäköisyys on enintään 1. Vähennä: 1 − 0,3."
+     }
+    ],
+    "correct": [
+     "a"
+    ]
+   },
+   "solution": {
+    "steps": [
+     "P(ei A) = 1 − 0,3 = 0,7"
+    ]
+   }
+  }
+ ]
+}

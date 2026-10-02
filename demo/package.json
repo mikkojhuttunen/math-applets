@@ -1,0 +1,13 @@
+{
+  "name": "math-applets-demo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Demo site: school level, season and topic, then working exercises. Uses the practice pages' engine.",
+  "type": "module",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
