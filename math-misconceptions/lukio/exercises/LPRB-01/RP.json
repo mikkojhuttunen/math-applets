@@ -1,0 +1,317 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-01",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta kolikkoa. Merkitään p = todennäköisyys, että ainakin yksi on klaava. Kirjoita yhtälö, jonka ainoa ratkaisu on p:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 0.75
+        },
+        "checks": {
+          "valid": [
+            "p = 3/4",
+            "4p = 3"
+          ],
+          "invalid": [
+            "p = 2/3",
+            "3p = 2"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jonot KK, KL, LK, LL ovat yhtä todennäköisiä, ja kolmessa niistä on klaava.",
+          "p = 3/4. Arvo 2/3 olettaisi, että tulokset 0, 1 ja 2 klaavaa ovat yhtä todennäköisiä."
+        ],
+        "final": "p = 3/4"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan yhtä todennäköisten kolikkojonojen määrä.",
+        "generic_wrong": "Luettele yhtä todennäköiset alkeistulokset (kolikkojonot) ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_rp",
+        "params": {
+          "coins": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kolmea kolikkoa. Merkitään p = todennäköisyys, että täsmälleen kaksi on klaavaa. Kirjoita yhtälö, jonka ainoa ratkaisu on p:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 0.375
+        },
+        "checks": {
+          "valid": [
+            "p = 3/8",
+            "8p = 3"
+          ],
+          "invalid": [
+            "p = 1/4",
+            "4p = 1"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 8; kaksi klaavaa on jonoissa KKL, KLK ja LKK.",
+          "p = 3/8. Arvo 1/4 olettaisi, että tulokset 0–3 klaavaa ovat yhtä todennäköisiä."
+        ],
+        "final": "p = 3/8"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan yhtä todennäköisten kolikkojonojen määrä.",
+        "generic_wrong": "Luettele yhtä todennäköiset alkeistulokset (kolikkojonot) ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_rp",
+        "params": {
+          "coins": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kolmea kolikkoa. Merkitään p = todennäköisyys, että ainakin yksi on klaava. Kirjoita yhtälö, jonka ainoa ratkaisu on p:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 0.875
+        },
+        "checks": {
+          "valid": [
+            "p = 1 − 1/8",
+            "8p = 7"
+          ],
+          "invalid": [
+            "p = 3/4",
+            "4p = 3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Ainoa jono ilman klaavaa on LLL, joten p = 1 − 1/8 = 7/8.",
+          "Arvo 3/4 olettaisi, että tulokset 0–3 klaavaa ovat yhtä todennäköisiä."
+        ],
+        "final": "p = 7/8"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan yhtä todennäköisten kolikkojonojen määrä.",
+        "generic_wrong": "Luettele yhtä todennäköiset alkeistulokset (kolikkojonot) ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_rp",
+        "params": {
+          "coins": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään neljää kolikkoa. Merkitään p = todennäköisyys, että täsmälleen yksi on klaava. Kirjoita yhtälö, jonka ainoa ratkaisu on p:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 0.25
+        },
+        "checks": {
+          "valid": [
+            "p = 4/16",
+            "4p = 1"
+          ],
+          "invalid": [
+            "p = 1/5",
+            "5p = 1"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2⁴ = 16; yksi klaava on jonoissa, joissa klaavan paikka on 1., 2., 3. tai 4., eli 4 jonoa.",
+          "p = 4/16 = 1/4. Arvo 1/5 olettaisi, että tulokset 0–4 klaavaa ovat yhtä todennäköisiä."
+        ],
+        "final": "p = 1/4"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan yhtä todennäköisten kolikkojonojen määrä.",
+        "generic_wrong": "Luettele yhtä todennäköiset alkeistulokset (kolikkojonot) ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_rp",
+        "params": {
+          "coins": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kolmea kolikkoa. Merkitään p = todennäköisyys, että kaikki kolme ovat samanlaisia (kaikki klaavoja tai kaikki kruunuja). Kirjoita yhtälö, jonka ainoa ratkaisu on p:n oikea arvo, ja perustele, miksi arvo 1/2 ei kelpaa."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 0.25
+        },
+        "checks": {
+          "valid": [
+            "p = 2/8",
+            "4p = 1"
+          ],
+          "invalid": [
+            "p = 1/2",
+            "2p = 1"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 8; samanlaisia ovat vain KKK ja LLL, joten p = 2/8 = 1/4.",
+          "Arvo 1/2 olettaisi, että ”kaikki samanlaisia” ja ”ei kaikki samanlaisia” ovat yhtä todennäköisiä, vaikka jälkimmäiseen kuuluu 6 jonoa."
+        ],
+        "final": "p = 1/4"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan yhtä todennäköisten kolikkojonojen määrä.",
+        "generic_wrong": "Luettele yhtä todennäköiset alkeistulokset (kolikkojonot) ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_rp",
+        "params": {
+          "coins": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

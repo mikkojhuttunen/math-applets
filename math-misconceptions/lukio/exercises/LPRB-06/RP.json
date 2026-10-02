@@ -1,0 +1,315 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-06",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Luokasta, jossa on 8 oppilasta, valitaan 3 edustajaa. Merkitään k = erilaisten edustajaryhmien määrä. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 56
+        },
+        "checks": {
+          "valid": [
+            "k = 8·7·6/(3·2·1)",
+            "6k = 8·7·6"
+          ],
+          "invalid": [
+            "k = 8·7·6",
+            "k = 8·7·6/3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Järjestyksellä ei ole väliä: 8·7·6 laskee valinnat järjestyksineen, ja jokainen ryhmä tulee 3! = 6 kertaa.",
+          "k = 336/6 = 56."
+        ],
+        "final": "esim. k = 8·7·6/(3·2·1) (k = 56)"
+      },
+      "feedback": {
+        "correct": "Oikein: järjestettyjen valintojen määrä jaetaan järjestysten määrällä.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_rp",
+        "params": {
+          "n": 8,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Pizzaan valitaan 2 eri täytettä 6:sta. Merkitään k = erilaisten täytevalintojen määrä. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 15
+        },
+        "checks": {
+          "valid": [
+            "k = 6·5/2",
+            "2k = 6·5"
+          ],
+          "invalid": [
+            "k = 6·5",
+            "k = 6·2"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Täytteet ovat joukko: 6·5 = 30 laskee jokaisen parin kahdesti.",
+          "k = 30/2 = 15."
+        ],
+        "final": "esim. k = 6·5/2 (k = 15)"
+      },
+      "feedback": {
+        "correct": "Oikein: täytteiden järjestyksellä ei ole väliä.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_rp",
+        "params": {
+          "n": 6,
+          "k": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Kilpailussa on 7 osallistujaa. Kulta, hopea ja pronssi jaetaan kolmelle parhaalle. Merkitään k = erilaisten palkintojärjestysten määrä. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 210
+        },
+        "checks": {
+          "valid": [
+            "k = 7·6·5",
+            "k = 210"
+          ],
+          "invalid": [
+            "k = 7·6·5/(3·2·1)",
+            "k = 7·6·5/3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Järjestyksellä on väliä, koska mitalit ovat eri arvoisia: 7·6·5 = 210."
+        ],
+        "final": "esim. k = 7·6·5 (k = 210)"
+      },
+      "feedback": {
+        "correct": "Oikein: kun järjestyksellä on väliä, ei jaeta.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_rp",
+        "params": {
+          "n": 7,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Kerhossa on 9 jäsentä, ja heistä valitaan 4 hengen joukkue. Merkitään k = erilaisten joukkueiden määrä. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 126
+        },
+        "checks": {
+          "valid": [
+            "k = 9·8·7·6/(4·3·2·1)",
+            "24k = 9·8·7·6"
+          ],
+          "invalid": [
+            "k = 9·8·7·6",
+            "k = 9·8·7·6/4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "3024 laskee valinnat järjestyksineen; jokainen joukkue tulee 4! = 24 kertaa.",
+          "k = 3024/24 = 126."
+        ],
+        "final": "esim. k = 9·8·7·6/(4·3·2·1) (k = 126)"
+      },
+      "feedback": {
+        "correct": "Oikein: jaetaan 4!:lla, ei 4:llä.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_rp",
+        "params": {
+          "n": 9,
+          "k": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Juhlissa on 7 vierasta, ja jokainen kättelee jokaisen kanssa kerran. Merkitään k = kättelyjen määrä. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo, ja tarkista, että k on pienempi kuin 42."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 21
+        },
+        "checks": {
+          "valid": [
+            "k = 7·6/2",
+            "2k = 7·6"
+          ],
+          "invalid": [
+            "k = 7·6",
+            "k = 7·5"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jokainen kättely A–B on sama kuin B–A, joten 42 jaetaan 2:lla.",
+          "k = 42/2 = 21, mikä on pienempi kuin 42."
+        ],
+        "final": "esim. k = 7·6/2 (k = 21)"
+      },
+      "feedback": {
+        "correct": "Oikein: kättelyt ovat pareja, ei järjestettyjä pareja.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_rp",
+        "params": {
+          "n": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

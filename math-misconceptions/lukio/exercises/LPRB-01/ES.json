@@ -1,0 +1,283 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-01",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Oppilas laski todennäköisyyden, että silmälukujen summa on 9 tai 10. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "4/36 + 3/36",
+          "7/36",
+          "2/11"
+        ],
+        "error_line": 3,
+        "error_type": "sums_as_equally_likely"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 summia 2–12 on pidetty yhtä todennäköisinä: kahdesta 11 summasta.",
+          "Oikein: summa 9 syntyy 4 tavalla ja summa 10 kolmella, yhteensä 7 noppaparia 36:sta, P = 7/36."
+        ],
+        "final": "7/36"
+      },
+      "feedback": {
+        "correct": "Oikein: summat eivät ole yhtä todennäköisiä, noppaparit ovat.",
+        "generic_wrong": "Luettele alkeistulokset, jotka ovat yhtä todennäköisiä (noppaparit, kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_es",
+        "params": {
+          "sums": [
+            9,
+            10
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta kolikkoa. Oppilas laski todennäköisyyden, että ainakin yksi on klaava. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "1/4 + 1/4 + 1/4",
+          "3/4",
+          "2/3"
+        ],
+        "error_line": 3,
+        "error_type": "outcome_counts_as_equally_likely"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 tulokset 0, 1 ja 2 klaavaa on pidetty yhtä todennäköisinä, ja suotuisia on 2 niistä 3:sta.",
+          "Oikein: tulokset KK, KL, LK, LL ovat yhtä todennäköisiä; ainakin yksi klaava on kolmessa 4:stä."
+        ],
+        "final": "3/4"
+      },
+      "feedback": {
+        "correct": "Oikein: klaavojen lukumäärät eivät ole yhtä todennäköisiä, vain jonot ovat.",
+        "generic_wrong": "Luettele alkeistulokset, jotka ovat yhtä todennäköisiä (noppaparit, kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_es",
+        "params": {
+          "coins": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kolmea kolikkoa. Oppilas laski todennäköisyyden, että täsmälleen kaksi on klaavaa. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "1/8 + 1/8 + 1/8",
+          "3/8",
+          "1/4"
+        ],
+        "error_line": 3,
+        "error_type": "outcome_counts_as_equally_likely"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 tulokset 0, 1, 2 ja 3 klaavaa on pidetty yhtä todennäköisinä: yksi neljästä.",
+          "Oikein: jonoja on 8, ja kaksi klaavaa on jonoissa KKL, KLK, LKK, eli P = 3/8."
+        ],
+        "final": "3/8"
+      },
+      "feedback": {
+        "correct": "Oikein: jonoja on 8, ja kolme niistä sisältää kaksi klaavaa.",
+        "generic_wrong": "Luettele alkeistulokset, jotka ovat yhtä todennäköisiä (noppaparit, kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_es",
+        "params": {
+          "coins": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Oppilas laski todennäköisyyden, että summa on enintään 3. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "1/36 + 2/36",
+          "3/36",
+          "2/11"
+        ],
+        "error_line": 3,
+        "error_type": "sums_as_equally_likely"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 summia 2–12 on pidetty yhtä todennäköisinä: kaksi summaa (2 ja 3) 11:stä.",
+          "Oikein: summa 2 syntyy yhdellä noppaparilla ja summa 3 kahdella, P = 3/36 = 1/12."
+        ],
+        "final": "1/12"
+      },
+      "feedback": {
+        "correct": "Oikein: summa 3 on kaksi kertaa todennäköisempi kuin summa 2.",
+        "generic_wrong": "Luettele alkeistulokset, jotka ovat yhtä todennäköisiä (noppaparit, kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_es",
+        "params": {
+          "max_sum": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Oppilas laski todennäköisyyden, että tulokset ovat viitonen ja kuutonen (jossakin järjestyksessä). Napauta rivi, jossa on virhe. Vihje: onko tämä todennäköisempää kuin kaksi kuutosta?"
+      },
+      "payload": {
+        "lines": [
+          "1/36 + 1/36",
+          "2/36",
+          "1/36"
+        ],
+        "error_line": 3,
+        "error_type": "unordered_pair_as_single_outcome"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 viitonen–kuutonen on laskettu yhdeksi noppapariksi, vaikka paria (5, 6) ja paria (6, 5) on kaksi.",
+          "Oikein: 2/36 = 1/18, kaksi kertaa todennäköisempi kuin kaksi kuutosta (1/36)."
+        ],
+        "final": "1/18"
+      },
+      "feedback": {
+        "correct": "Oikein: eri tulokset (5, 6) ja (6, 5) ovat kaksi erillistä noppaparia.",
+        "generic_wrong": "Luettele alkeistulokset, jotka ovat yhtä todennäköisiä (noppaparit, kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_es",
+        "params": {
+          "pair": [
+            5,
+            6
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

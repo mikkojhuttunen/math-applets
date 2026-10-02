@@ -1,0 +1,276 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-06",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Luokasta, jossa on 8 oppilasta, valitaan 3 edustajaa. Oppilas laski edustajaryhmien määrän näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "8·7·6/(3·2·1)",
+          "336/6",
+          "336"
+        ],
+        "error_line": 3,
+        "error_type": "order_not_divided_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 jako 6:lla on unohdettu: 336 laskee valinnat järjestyksineen.",
+          "Oikein: 336/6 = 56."
+        ],
+        "final": "56 ryhmää"
+      },
+      "feedback": {
+        "correct": "Oikein: sama ryhmä eri järjestyksessä on yksi ryhmä, joten järjestysten määrä jaetaan pois.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_es",
+        "params": {
+          "n": 8,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Kisassa on 8 osallistujaa. Kulta, hopea ja pronssi jaetaan kolmelle parhaalle. Oppilas laski palkintojärjestysten määrän näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "8·7·6",
+          "336",
+          "336/6"
+        ],
+        "error_line": 3,
+        "error_type": "divided_although_order_matters"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 on jaettu 6:lla, vaikka kulta, hopea ja pronssi ovat eri palkintoja.",
+          "Oikein: järjestyksellä on väliä, joten 8·7·6 = 336."
+        ],
+        "final": "336 järjestystä"
+      },
+      "feedback": {
+        "correct": "Oikein: kun järjestyksellä on väliä, järjestyksiä ei jaeta pois.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_es",
+        "params": {
+          "n": 8,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Ryhmässä on 6 poikaa ja 5 tyttöä. Työryhmään valitaan kaksi poikaa ja yksi tyttö. Oppilas laski työryhmien määrän näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "6·5/(2·1)·5",
+          "15·5",
+          "30·5"
+        ],
+        "error_line": 3,
+        "error_type": "order_not_divided_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 poikaparin valinta on laskettu järjestyksineen: 30 eikä 15.",
+          "Oikein: 15·5 = 75."
+        ],
+        "final": "75 työryhmää"
+      },
+      "feedback": {
+        "correct": "Oikein: poikaparin järjestyksellä ei ole väliä, joten pareja on C(6, 2) = 15.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_es",
+        "params": {
+          "boys": 6,
+          "girls": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Pizzaan valitaan 3 eri täytettä 7:stä. Oppilas laski erilaisten täytevalintojen määrän näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "7·6·5/(3·2·1)",
+          "210/6",
+          "210/3"
+        ],
+        "error_line": 3,
+        "error_type": "divided_by_k_not_k_factorial"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 on jaettu luvulla 3 eikä 3! = 6: 3 täytettä voidaan järjestää 6 tavalla.",
+          "Oikein: 210/6 = 35."
+        ],
+        "final": "35 valintaa"
+      },
+      "feedback": {
+        "correct": "Oikein: 3 täytteen järjestysten määrä on 3! = 6.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_es",
+        "params": {
+          "n": 7,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Juhlissa on 6 vierasta, ja jokainen kättelee jokaisen kanssa kerran. Oppilas laski kättelyjen määrän näin. Napauta rivi, jossa on virhe. Vihje: jokainen kättely kuuluu kahdelle vieraalle."
+      },
+      "payload": {
+        "lines": [
+          "6·5/(2·1)",
+          "30/2",
+          "30"
+        ],
+        "error_line": 3,
+        "error_type": "order_not_divided_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 jako 2:lla on unohdettu: 30 laskee jokaisen kättelyn kahdesti, A–B ja B–A.",
+          "Oikein: 30/2 = 15."
+        ],
+        "final": "15 kättelyä"
+      },
+      "feedback": {
+        "correct": "Oikein: kättely A–B on sama kuin B–A. Tulos 30 olisi myös suurempi kuin vierasparien määrä.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä k!."
+      },
+      "provenance": {
+        "template": "lprb06_es",
+        "params": {
+          "n": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

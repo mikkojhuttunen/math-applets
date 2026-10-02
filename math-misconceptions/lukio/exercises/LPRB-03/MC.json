@@ -1,0 +1,360 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.05"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-03"
+      ],
+      "prompt": {
+        "text": "Noppaa heitetään kerran. Kumpi on todennäköisempää: A) tulos on alkuluku, vai B) tulos on alkuluku ja parillinen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Yhtä todennäköisiä, koska 2 on alkuluku",
+            "misconception": null,
+            "feedback": "Tulokset 3 ja 5 kuuluvat vain tapahtumaan A, joten A on todennäköisempi."
+          },
+          {
+            "id": "b",
+            "text": "A, todennäköisyys 1/2 (B:n todennäköisyys on 1/6)",
+            "misconception": null,
+            "feedback": "Oikein: B:hen kuuluu vain tulos 2, A:han kuuluu tulokset 2, 3 ja 5."
+          },
+          {
+            "id": "c",
+            "text": "B, koska se kertoo tuloksesta enemmän",
+            "misconception": "LPRB-03",
+            "feedback": "Tarkempi kuvaus ei lisää todennäköisyyttä: tapahtuma B on osa tapahtumaa A."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: tulokset 2, 3, 5 → 3/6.",
+          "B: tulos 2 → 1/6.",
+          "B on osa A:ta, joten P(B) ≤ P(A)."
+        ],
+        "final": "A"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tapahtuma ”A ja B” on aina osa tapahtumaa A, joten sen todennäköisyys ei voi olla suurempi kuin P(A). Tarkempi kuvaus ei tee tapahtumasta todennäköisempää."
+      },
+      "provenance": {
+        "template": "lprb03_mc",
+        "params": {
+          "event": "prime"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-03"
+      ],
+      "prompt": {
+        "text": "Koripalloilija onnistuu vapaaheitoissa 60 prosentin todennäköisyydellä. Kumpi on todennäköisempää: A) ensimmäinen heitto menee sisään, vai B) kaksi ensimmäistä heittoa menevät molemmat sisään?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "B on todennäköisempää, koska pelaaja on hyvä heittäjä",
+            "misconception": "LPRB-03",
+            "feedback": "Molemmat heitot sisään on osa tilannetta ”ensimmäinen sisään”, joten sen todennäköisyys on pienempi."
+          },
+          {
+            "id": "b",
+            "text": "A on todennäköisempää",
+            "misconception": null,
+            "feedback": "Oikein: P(A) = 0,6, mutta P(B) = 0,6 · 0,6 = 0,36 on pienempi."
+          },
+          {
+            "id": "c",
+            "text": "Yhtä todennäköisiä, koska heitot ovat samanlaisia",
+            "misconception": null,
+            "feedback": "Toisenkin heiton pitää onnistua, mikä pienentää todennäköisyyttä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "P(A) = 0,6.",
+          "P(B) = 0,6 · 0,6 = 0,36.",
+          "0,36 < 0,6."
+        ],
+        "final": "A"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tapahtuma ”A ja B” on aina osa tapahtumaa A, joten sen todennäköisyys ei voi olla suurempi kuin P(A). Tarkempi kuvaus ei tee tapahtumasta todennäköisempää."
+      },
+      "provenance": {
+        "template": "lprb03_mc",
+        "params": {
+          "p": "0.6"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-03"
+      ],
+      "prompt": {
+        "text": "Kerhosta arvotaan yksi jäsen. Tapahtuma A: jäsen on tyttö. Tapahtuma B: jäsen on tyttö ja pelaa jalkapalloa. Mikä väite on aina tosi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "P(B) ≤ P(A)",
+            "misconception": null,
+            "feedback": "Oikein: jokainen B:hen kuuluva jäsen kuuluu myös A:han."
+          },
+          {
+            "id": "b",
+            "text": "P(B) = P(A)",
+            "misconception": null,
+            "feedback": "Näin on vain, jos kaikki kerhon tytöt pelaavat jalkapalloa. Aina tosi väite on P(B) ≤ P(A)."
+          },
+          {
+            "id": "c",
+            "text": "P(B) > P(A), koska B on tarkempi kuvaus",
+            "misconception": "LPRB-03",
+            "feedback": "Tarkempi kuvaus rajaa joukkoa pienemmäksi, ei suuremmaksi."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "B-joukko on A-joukon osajoukko.",
+          "Osajoukon todennäköisyys ei ole suurempi."
+        ],
+        "final": "P(B) ≤ P(A)"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tapahtuma ”A ja B” on aina osa tapahtumaa A, joten sen todennäköisyys ei voi olla suurempi kuin P(A). Tarkempi kuvaus ei tee tapahtumasta todennäköisempää."
+      },
+      "provenance": {
+        "template": "lprb03_mc",
+        "params": {
+          "setting": "club"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.05"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-03"
+      ],
+      "prompt": {
+        "text": "Tapahtuman A todennäköisyys on 0,30. Mikä seuraavista voi olla tapahtuman ”A ja B” todennäköisyys?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,50",
+            "misconception": "LPRB-03",
+            "feedback": "”A ja B” on osa A:ta, joten sen todennäköisyys ei ylitä lukua 0,30."
+          },
+          {
+            "id": "b",
+            "text": "0,35",
+            "misconception": "LPRB-03",
+            "feedback": "”A ja B” on osa A:ta, joten sen todennäköisyys ei ylitä lukua 0,30."
+          },
+          {
+            "id": "c",
+            "text": "0,25",
+            "misconception": null,
+            "feedback": "Oikein: se on enintään P(A) = 0,30."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "P(A ja B) ≤ P(A) = 0,30.",
+          "Vain 0,25 on enintään 0,30."
+        ],
+        "final": "0,25"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tapahtuma ”A ja B” on aina osa tapahtumaa A, joten sen todennäköisyys ei voi olla suurempi kuin P(A). Tarkempi kuvaus ei tee tapahtumasta todennäköisempää."
+      },
+      "provenance": {
+        "template": "lprb03_mc",
+        "params": {
+          "p_a": "0.30"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.05"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-03"
+      ],
+      "prompt": {
+        "text": "Aino lukee paljon, käy kirjastossa viikoittain ja pitää hiljaisuudesta. Kumpi on todennäköisempää: A) Aino on kirjastovirkailija, vai B) Aino on kirjastovirkailija ja kirjoittaa blogia? Valitse paras perustelu vastaukselle."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei voi sanoa, koska Ainosta ei tiedetä tarpeeksi",
+            "misconception": null,
+            "feedback": "Vertailu onnistuu ilman lisätietoa: osajoukko ei ole todennäköisempi kuin kokonaisuus."
+          },
+          {
+            "id": "b",
+            "text": "A on todennäköisempää, koska jokainen B:n täyttävä henkilö täyttää myös A:n",
+            "misconception": null,
+            "feedback": "Oikein: B on A:n osajoukko, joten P(B) ≤ P(A) riippumatta Ainon kuvauksesta."
+          },
+          {
+            "id": "c",
+            "text": "B on todennäköisempää, koska bloggaaminen sopii kirjalliseen ihmiseen",
+            "misconception": "LPRB-03",
+            "feedback": "Lisäehto voi vain pienentää todennäköisyyttä, ei suurentaa."
+          },
+          {
+            "id": "d",
+            "text": "B on todennäköisempää, koska kuvaus sopii Ainoon paremmin",
+            "misconception": "LPRB-03",
+            "feedback": "Kuvauksen sopivuus ei muuta joukkojen kokoja: B on osa A:ta."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "B-joukko on A-joukon osajoukko.",
+          "Siksi P(B) ≤ P(A)."
+        ],
+        "final": "A, koska B on A:n osajoukko"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tapahtuma ”A ja B” on aina osa tapahtumaa A, joten sen todennäköisyys ei voi olla suurempi kuin P(A). Tarkempi kuvaus ei tee tapahtumasta todennäköisempää."
+      },
+      "provenance": {
+        "template": "lprb03_mc",
+        "params": {
+          "setting": "library"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 5
+      }
+    }
+  ]
+}

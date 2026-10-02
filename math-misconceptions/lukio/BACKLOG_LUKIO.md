@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 4 |
+| Runs completed | 5 |
 | Last run | 2026-10-02 |
-| Progress | 18 of 151 planned cells in phases 0–2 generated |
+| Progress | 24 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -184,10 +184,10 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LLIM-01 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LLIM-02 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LDER-04 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
-| LPRB-06 | X | X | o | - | - | - | o | - | - | - | - | - | - | - | - |
-| LPRB-01 | s | X | o | - | - | - | o | - | - | - | - | - | - | - | - |
+| LPRB-06 | X | X | X | - | - | - | X | - | - | - | - | - | - | - | - |
+| LPRB-01 | s | X | X | - | - | - | X | - | - | - | - | - | - | - | - |
 | LPRB-04 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
-| LPRB-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
+| LPRB-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LFUN-01 | o | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
 | LSTA-04 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | ALG-09 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
@@ -261,6 +261,13 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LPRB-01 | NE | LU-LPRB-01-NE-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-01/NE.json | Draft | Run 4; sum 9, one head of two (MAB), two heads of three, sum at most 4 (MAB), at least one six with plausibility check; answers rational; 2 MAB items |
 | 2026-10-02 | LPRB-04 | MC | LU-LPRB-04-MC-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-04/MC.json | Draft | Run 4; coin sequences, lotto rows (MAB), dice sequences, sequence vs event (MAB), family justification (MAB); evidence † for the source (kahneman1972subjective), evidence to be checked; 3 MAB items |
 | 2026-10-02 | LPRB-04 | NE | LU-LPRB-04-NE-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-04/NE.json | Draft | Run 4; count of more likely sequences, P of a sequence (MAB), ratio of sequences, sequence vs event (MAB), lotto row count; evidence to be checked; 2 MAB items |
+| 2026-10-02 | LPRB-06 | ES | LU-LPRB-06-ES-001…005 | P, T, H | none | MAA8.03, MAB5.07 | exercises/LPRB-06/ES.json | Draft | Run 5; division by k! forgotten (3 of 8, 2 boys of 6 and 1 girl of 5), divided although order matters (medals), divided by k instead of k! (pizza, MAB), handshakes with plausibility hint (MAB); 2 MAB items |
+| 2026-10-02 | LPRB-06 | RP | LU-LPRB-06-RP-001…005 | P, T, H | none | MAA8.03, MAB5.07 | exercises/LPRB-06/RP.json | Draft | Run 5; equation for k: 3 of 8, 2 toppings of 6 (MAB), medals (order matters), 4 of 9, handshakes (MAB); 2 MAB items |
+| 2026-10-02 | LPRB-01 | MC | - | - | - | - | - | Skipped | Run 5; not selected: the cell stays `s` and the seed already uses ID LU-LPRB-01-MC-001, so a batch would collide again (see Run 4 Failed row); ES and RP generated instead |
+| 2026-10-02 | LPRB-01 | ES | LU-LPRB-01-ES-001…005 | T, P, H | none | MAA8.04, MAB5.06 | exercises/LPRB-01/ES.json | Draft | Run 5; sums 9 or 10, at least one head of two (MAB), two heads of three, sum at most 3 (MAB), five and six in either order with a hint; 2 MAB items |
+| 2026-10-02 | LPRB-01 | RP | LU-LPRB-01-RP-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-01/RP.json | Draft | Run 5; equation for p with coin sequences (at least one head of 2 and of 3, exactly 2 of 3, exactly 1 of 4, all alike with justification of why 1/2 fails); probabilities exact in binary; 3 MAB items |
+| 2026-10-02 | LPRB-03 | MC | LU-LPRB-03-MC-001…005 | P, T, H | none | MAA8.05, MAB5.06 | exercises/LPRB-03/MC.json | Draft | Run 5; prime vs prime and even, two free throws (MAB), club subset (MAB), possible P(A and B) when P(A) = 0,30, library justification (G3); 2 MAB items |
+| 2026-10-02 | LPRB-03 | NE | LU-LPRB-03-NE-001…005 | P, T, H | none | MAA8.05, MAB5.06 | exercises/LPRB-03/NE.json | Draft | Run 5; even and greater than 3, red ace (MAB), first and third coin heads (MAB), independent product, sum 7 with first die 3 and plausibility of an estimate; answers rational; 2 MAB items |
 
 ## 7. Coverage and decisions to confirm
 
