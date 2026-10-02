@@ -1,0 +1,384 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 49."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 24,5",
+            "misconception": null,
+            "feedback": "x² = 49 ei tarkoita 2x = 49. Ota neliöjuuri."
+          },
+          {
+            "id": "b",
+            "text": "x = −7",
+            "misconception": null,
+            "feedback": "Myös 7² = 49, joten x = 7 on ratkaisu."
+          },
+          {
+            "id": "c",
+            "text": "x = 7",
+            "misconception": "EXT-04",
+            "feedback": "Myös (−7)² = 49, joten x = −7 on ratkaisu."
+          },
+          {
+            "id": "d",
+            "text": "x = −7 tai x = 7",
+            "misconception": null,
+            "feedback": "Oikein: sekä positiivinen että negatiivinen juuri toteuttavat yhtälön."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = ±√49.",
+          "x = −7 tai x = 7."
+        ],
+        "final": "x = −7 tai x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 49
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laatan pinta-ala on 2,25 m². Yhtälö sivun pituudelle x on x² = 2,25. Mitkä ovat yhtälön ratkaisut?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = −1,5",
+            "misconception": null,
+            "feedback": "Myös 1,5² = 2,25, joten x = 1,5 on ratkaisu."
+          },
+          {
+            "id": "b",
+            "text": "x = 1,125",
+            "misconception": null,
+            "feedback": "x² = 2,25 ei tarkoita 2x = 2,25. Ota neliöjuuri."
+          },
+          {
+            "id": "c",
+            "text": "x = 1,5",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä on myös ratkaisu x = −1,5, koska (−1,5)² = 2,25. (Sivun pituudeksi kelpaa vain positiivinen.)"
+          },
+          {
+            "id": "d",
+            "text": "x = −3/2 tai x = 3/2",
+            "misconception": null,
+            "feedback": "Oikein: sekä positiivinen että negatiivinen juuri toteuttavat yhtälön."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = ±√2,25 = ±1,5.",
+          "Sivun pituudeksi kelpaa vain 1,5 m, mutta yhtälön ratkaisut ovat ±1,5."
+        ],
+        "final": "x = −3/2 tai x = 3/2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 2.25
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö (x − 2)² = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 1 tai x = −5",
+            "misconception": null,
+            "feedback": "Luvut x − 2 = ±3 antavat x = 2 ± 3, ei x = −2 ± 3."
+          },
+          {
+            "id": "b",
+            "text": "x = 11",
+            "misconception": null,
+            "feedback": "Neliöstä ei päästä pois lisäämällä 2 ja neliöimällä; ota neliöjuuri: x − 2 = ±3."
+          },
+          {
+            "id": "c",
+            "text": "x = −1 tai x = 5",
+            "misconception": null,
+            "feedback": "Oikein: sekä positiivinen että negatiivinen juuri toteuttavat yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "x = 5",
+            "misconception": "EXT-04",
+            "feedback": "Myös x − 2 = −3 toteuttaa yhtälön, joten x = −1 on ratkaisu."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x − 2 = 3 tai x − 2 = −3.",
+          "x = −1 tai x = 5."
+        ],
+        "final": "x = −1 tai x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "c": 2,
+          "a": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 2x² = 50."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 5",
+            "misconception": "EXT-04",
+            "feedback": "Myös x = −5 toteuttaa yhtälön: 2 · (−5)² = 50."
+          },
+          {
+            "id": "b",
+            "text": "x = ±10",
+            "misconception": null,
+            "feedback": "Sekä jakaminen että neliöjuuri tarvitaan: x² = 25, x = ±5."
+          },
+          {
+            "id": "c",
+            "text": "x = −5 tai x = 5",
+            "misconception": null,
+            "feedback": "Oikein: sekä positiivinen että negatiivinen juuri toteuttavat yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "x = ±25",
+            "misconception": null,
+            "feedback": "Jaa ensin 2:lla: x² = 25. Sen jälkeen ota neliöjuuri."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan 2:lla: x² = 25.",
+          "x = −5 tai x = 5."
+        ],
+        "final": "x = −5 tai x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "c": 2,
+          "a": 50
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ville ratkaisi yhtälön x² = 64 ja sai vastaukseksi x = 8. Mikä perustelu osoittaa vastauksen vajaaksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Yhtälö x² = 64 on määritelty vain positiivisille luvuille, joten x = 8 riittää.",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälö on määritelty kaikille reaaliluvuille. Myös negatiivinen luku voi toteuttaa sen."
+          },
+          {
+            "id": "b",
+            "text": "Myös (−8)² = 64, joten x = −8 on toinen ratkaisu ja vastaus oli vajaa.",
+            "misconception": null,
+            "feedback": "Oikein: sekä positiivinen että negatiivinen juuri toteuttavat yhtälön."
+          },
+          {
+            "id": "c",
+            "text": "Koska 8² = 64, riittää löytää yksi ratkaisu.",
+            "misconception": "EXT-04",
+            "feedback": "Yhtälön kaikki ratkaisut pitää löytää. Tarkista, toteuttaako vastaluku yhtälön."
+          },
+          {
+            "id": "d",
+            "text": "Vastaus on väärä, koska neliöjuuri 64 ei ole kokonaisluku.",
+            "misconception": null,
+            "feedback": "√64 = 8 on kokonaisluku, vika on muualla."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(−8)² = 64, joten x = −8 on myös ratkaisu.",
+          "Ratkaisut ovat x = 8 ja x = −8."
+        ],
+        "final": "Myös (−8)² = 64, joten x = −8 on toinen ratkaisu ja vastaus oli vajaa."
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_mc",
+        "params": {
+          "a": 64
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

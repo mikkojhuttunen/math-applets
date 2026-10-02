@@ -1,0 +1,392 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 3x."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 3",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä hävittää ratkaisun x = 0. Tarkista sijoittamalla: 0² = 3 · 0."
+          },
+          {
+            "id": "b",
+            "text": "x = 0 tai x = 3",
+            "misconception": null,
+            "feedback": "Oikein: nollaksi sievenevä tekijä antaa myös ratkaisun."
+          },
+          {
+            "id": "c",
+            "text": "x = 0",
+            "misconception": null,
+            "feedback": "Myös x = 3 toteuttaa yhtälön: 3² = 3 · 3."
+          },
+          {
+            "id": "d",
+            "text": "x = 3 tai x = −3",
+            "misconception": null,
+            "feedback": "x² = 3x ei ole sama kuin x² = 9. Siirrä 3x vasemmalle ja tekijöi."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 3x = 0.",
+          "x(x − 3) = 0.",
+          "x = 0 tai x = 3."
+        ],
+        "final": "x = 0 tai x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_mc",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Pallon korkeus metreinä heiton jälkeen on h = 12t − 3t², missä t on aika sekunteina. Milloin korkeus on 0 m?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "t = 0 s tai t = 4 s",
+            "misconception": null,
+            "feedback": "Oikein: nollaksi sievenevä tekijä antaa myös ratkaisun."
+          },
+          {
+            "id": "b",
+            "text": "t = 4 s",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen t:llä hävittää hetken t = 0 s, jolloin pallo on heitettäessä maassa."
+          },
+          {
+            "id": "c",
+            "text": "t = 0 s",
+            "misconception": null,
+            "feedback": "Pallo palaa maahan myös hetkellä t = 4 s."
+          },
+          {
+            "id": "d",
+            "text": "t = 2 s",
+            "misconception": null,
+            "feedback": "t = 2 s on huipun hetki, jolloin korkeus on 12 m."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "12t − 3t² = 0.",
+          "3t(4 − t) = 0.",
+          "t = 0 s tai t = 4 s."
+        ],
+        "final": "t = 0 s tai t = 4 s"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_mc",
+        "params": {
+          "a": 12,
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x³ = 4x."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 0 tai x = 4",
+            "misconception": null,
+            "feedback": "x³ = 4x antaa x(x² − 4) = 0, ja x² = 4 antaa x = ±2."
+          },
+          {
+            "id": "b",
+            "text": "x = 2 tai x = −2",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä hävittää ratkaisun x = 0."
+          },
+          {
+            "id": "c",
+            "text": "x = −2 tai x = 0 tai x = 2",
+            "misconception": null,
+            "feedback": "Oikein: nollaksi sievenevä tekijä antaa myös ratkaisun."
+          },
+          {
+            "id": "d",
+            "text": "x = 2",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä hävittää ratkaisun x = 0, ja neliöjuuresta jää pois ratkaisu x = −2."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x³ − 4x = 0.",
+          "x(x − 2)(x + 2) = 0.",
+          "x = −2 tai x = 0 tai x = 2."
+        ],
+        "final": "x = −2 tai x = 0 tai x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_mc",
+        "params": {
+          "n": 3,
+          "a": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x(x − 5) = 2x."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 7",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä hävittää ratkaisun x = 0. Tarkista: 0 · (0 − 5) = 2 · 0."
+          },
+          {
+            "id": "b",
+            "text": "x = 3",
+            "misconception": null,
+            "feedback": "Yhtälö x − 5 = 2 antaa x = 7, ei x = 3."
+          },
+          {
+            "id": "c",
+            "text": "x = 0",
+            "misconception": null,
+            "feedback": "Myös x = 7 toteuttaa yhtälön: 7 · 2 = 14."
+          },
+          {
+            "id": "d",
+            "text": "x = 0 tai x = 7",
+            "misconception": null,
+            "feedback": "Oikein: nollaksi sievenevä tekijä antaa myös ratkaisun."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x(x − 5) − 2x = 0.",
+          "x(x − 7) = 0.",
+          "x = 0 tai x = 7."
+        ],
+        "final": "x = 0 tai x = 7"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_mc",
+        "params": {
+          "a": 5,
+          "b": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05",
+          "MAA2.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Yhtälössä (x − 1)(x + 2) = 4(x − 1) Liisa jakaa molemmat puolet tekijällä x − 1. Mikä perustelu osoittaa, että tämä on virhe?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Jakaminen on virhe, koska yhtälössä ei saa jakaa mitään lauseketta.",
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen on sallittua, kun jakaja ei voi olla nolla. Tässä jakaja voi olla nolla."
+          },
+          {
+            "id": "b",
+            "text": "Kun x = 1, tekijä x − 1 on nolla, eikä nollalla voi jakaa. Luku 1 toteuttaa yhtälön, joten ratkaisu x = 1 katoaisi.",
+            "misconception": null,
+            "feedback": "Oikein: nollaksi sievenevä tekijä antaa myös ratkaisun."
+          },
+          {
+            "id": "c",
+            "text": "Jakaminen on virhe, koska yhtälöllä ei ole ratkaisuja.",
+            "misconception": null,
+            "feedback": "Yhtälöllä on ratkaisut: x = 1 ja x = 2."
+          },
+          {
+            "id": "d",
+            "text": "Jakaminen on sallittu, koska molemmilla puolilla on sama tekijä.",
+            "misconception": "LEQU-01",
+            "feedback": "Sama tekijä ei riitä. Jos tekijä on nolla, jakaminen ei ole määritelty ja ratkaisu voi kadota."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirretään oikea puoli vasemmalle: (x − 1)(x + 2 − 4) = 0.",
+          "Ratkaisut: x = 1 tai x = 2; jako olisi hävittänyt ratkaisun x = 1."
+        ],
+        "final": "Kun x = 1, tekijä x − 1 on nolla, eikä nollalla voi jakaa. Luku 1 toteuttaa yhtälön, joten ratkaisu x = 1 katoaisi."
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_mc",
+        "params": {
+          "a": 1,
+          "b": 2,
+          "c": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

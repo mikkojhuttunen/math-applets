@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 8 |
+| Runs completed | 9 |
 | Last run | 2026-10-02 |
-| Progress | 38 of 151 planned cells in phases 0–2 generated |
+| Progress | 44 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -193,9 +193,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | ALG-09 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
 | EXT-02 | X | X | X | - | - | X | - | - | - | - | - | - | - | - | - |
 | NUM-08 | X | X | - | - | - | - | X | - | - | o | - | - | - | - | - |
-| FUN-05 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
-| EXT-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
-| LEQU-01 | o | o | s | o | o | - | s | - | - | - | - | - | - | - | o |
+| FUN-05 | X | X | - | - | - | - | - | - | - | - | o | - | - | o | - |
+| EXT-04 | X | X | o | - | - | - | - | - | - | - | - | o | - | - | - |
+| LEQU-01 | X | X | s | o | o | - | s | - | - | - | - | - | - | - | o |
 | LEQU-02 | o | o | o | s | o | - | - | - | - | - | - | - | - | - | o |
 | LEQU-03 | o | o | o | - | o | - | - | - | - | - | - | o | - | - | o |
 | LEQU-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
@@ -282,6 +282,14 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | EXT-02 | ME | LU-EXT-02-ME-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/ME.json | Draft | Run 8; x⁻², x⁰ + x⁻¹, 2 · 10⁻ˣ (MAB), (x⁻¹)⁻², 500 · 2⁻ˣ (MAB); 2 MAB items; evidence not yet checked |
 | 2026-10-02 | ALG-09 | ME | LU-ALG-09-ME-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/ME.json | Draft | Run 8; (x + 5)², (2x − 3)² (MAB), (x + y)² − (x − y)², (x + 1/x)², (a + b)² − a² (MAB); 2 MAB items |
 | 2026-10-02 | NUM-08 | RP | LU-NUM-08-RP-001…005 | P, T, H | none | MAY1.03, MAB6.01, MAA9.03 | exercises/NUM-08/RP.json | Draft | Run 8; equation for p, k, s, p, d: +50 % −50 % (MAB), +10 % and +20 % (MAB), −20 % then +25 %, equal yearly rise giving 21 %, undoing +25 % (MAB); 3 MAB items |
+| 2026-10-02 | FUN-05 | MC | LU-FUN-05-MC-001…005 | P, T, H | none | MAY1.06, MAB4.01 | exercises/FUN-05/MC.json | Draft | Run 9; taxi 10 km, bike rental (MAB), proportional function, table y = 3x + 4 (MAB), counterexample f(2x) ≠ 2f(x) as justification; 2 MAB items; evidence Limited in the catalogue, evidence to be checked; verifier allows only G5 for this topic, so item 005 is a justification in content but tagged G5 |
+| 2026-10-02 | FUN-05 | NE | LU-FUN-05-NE-001…005 | P, T, H | none | MAY1.06, MAB4.01 | exercises/FUN-05/NE.json | Draft | Run 9; f(10) from f(5), phone plan (MAB), gym fee (MAB), f(6) from two points, tank with plausibility check of an estimate; 2 MAB items; evidence to be checked |
+| 2026-10-02 | EXT-04 | MC | LU-EXT-04-MC-001…005 | T, H | none | MAA2.04, MAB2.04 | exercises/EXT-04/MC.json | Draft | Run 9; x² = 49, tile area 2,25 (MAB), (x − 2)² = 9, 2x² = 50 (MAB), justification why x = 8 for x² = 64 is incomplete; 2 MAB items; evidence not yet checked; only G4 allowed for this topic |
+| 2026-10-02 | EXT-04 | NE | LU-EXT-04-NE-001…005 | T, H | none | MAA2.04, MAB2.04 | exercises/EXT-04/NE.json | Draft | Run 9; negative root of x² = 121, 3x² = 75 (MAB), smaller root of (x − 1)² = 16, number of roots (MAB), sum of roots with plausibility check; 2 MAB items; evidence not yet checked |
+| 2026-10-02 | LEQU-01 | MC | LU-LEQU-01-MC-001…005 | T, H | none | MAA2.05, MAA2.04, MAB2.04 | exercises/LEQU-01/MC.json | Draft | Run 9; x² = 3x, ball height 12t − 3t² (MAB), x³ = 4x, x(x − 5) = 2x (MAB), justification why dividing by x − 1 is an error (G3); 2 MAB items; source † (vaiyavutjamai2006effects), evidence to be checked |
+| 2026-10-02 | LEQU-01 | NE | LU-LEQU-01-NE-001…005 | T, H | none | MAA2.05, MAA2.04, MAB2.04 | exercises/LEQU-01/NE.json | Draft | Run 9; smaller root of x² = 7x, number of roots of 6x² = 18x (MAB), x³ = 9x, product of roots of x(x + 4) = 3x (MAB), sum of roots with plausibility check; 2 MAB items; evidence to be checked |
+| 2026-10-02 | LEQU-01 | ES, RP | - | - | - | - | - | Skipped | Run 9; not selected: the seed cells `s` already use IDs LU-LEQU-01-ES-001 and LU-LEQU-01-RP-001, so a batch would collide; MC and NE generated instead |
+| 2026-10-02 | LPRB-01 | MC | - | - | - | - | - | Skipped | Run 9; not selected: seed ID collision as in Run 4 and Run 5 |
 
 ## 7. Coverage and decisions to confirm
 

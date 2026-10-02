@@ -1,0 +1,309 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 7x. Kirjoita ratkaisuista pienempi."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 7.0,
+            "misconception": "LEQU-01",
+            "feedback": "7 on vain toinen ratkaisu. Jakaminen x:llä hävittää ratkaisun x = 0."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x² − 7x = 0.",
+          "x(x − 7) = 0, joten x = 0 tai x = 7."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_ne",
+        "params": {
+          "a": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä 6x² = 18x on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä jättää vain ratkaisun x = 3. Ratkaisu x = 0 toteuttaa myös yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "6x² − 18x = 0.",
+          "6x(x − 3) = 0, joten x = 0 tai x = 3."
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_ne",
+        "params": {
+          "c": 6,
+          "a": 18
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä x³ = 9x on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 2.0,
+            "misconception": "LEQU-01",
+            "feedback": "Jakaminen x:llä jättää vain ratkaisut x = 3 ja x = −3. Ratkaisu x = 0 toteuttaa myös yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x³ − 9x = 0.",
+          "x(x − 3)(x + 3) = 0, joten ratkaisuja on kolme."
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_ne",
+        "params": {
+          "n": 3,
+          "a": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x(x + 4) = 3x. Mikä on ratkaisujen tulo?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": -1.0,
+            "misconception": "LEQU-01",
+            "feedback": "−1 on vain ratkaisu x = −1, joka saadaan jakamalla x:llä. Ratkaisu x = 0 puuttuu, joten tulo on 0."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x(x + 4) − 3x = 0.",
+          "x(x + 1) = 0, joten x = 0 tai x = −1.",
+          "Tulo on 0 · (−1) = 0."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_ne",
+        "params": {
+          "a": 4,
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05",
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Elias ratkaisee yhtälön (x − 1)(x + 2) = 4(x − 1) jakamalla tekijällä x − 1 ja arvioi ratkaisujen summaksi 2. Laske ratkaisujen summa ja tarkista arvio."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 2.0,
+            "misconception": "LEQU-01",
+            "feedback": "2 on vain ratkaisu x = 2. Kun x = 1, molemmat puolet ovat nolla, joten myös x = 1 on ratkaisu."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "(x − 1)(x + 2 − 4) = 0, joten (x − 1)(x − 2) = 0.",
+          "Ratkaisut ovat 1 ja 2, summa on 3."
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_ne",
+        "params": {
+          "a": 1,
+          "b": 2,
+          "c": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "FUN-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-FUN-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.06"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Taksin hinta on 4 € + 2 € jokaiselta kilometriltä. Viiden kilometrin matka maksaa 14 €. Mitä kymmenen kilometrin matka maksaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "34 €",
+            "misconception": null,
+            "feedback": "Lisäkilometrejä on 5, ei 10: 14 € on jo viiden kilometrin hinta."
+          },
+          {
+            "id": "b",
+            "text": "20 €",
+            "misconception": null,
+            "feedback": "Perusmaksu 4 € puuttuu: hinta on 4 € + 2 € · 10."
+          },
+          {
+            "id": "c",
+            "text": "28 €",
+            "misconception": "FUN-05",
+            "feedback": "Hinta ei kaksinkertaistu, koska perusmaksu 4 € ei kasva matkan mukana."
+          },
+          {
+            "id": "d",
+            "text": "24 €",
+            "misconception": null,
+            "feedback": "Oikein: 4 + 2 · 10 = 24. Perusmaksu 4 € maksetaan vain kerran."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f(x) = 4 + 2x.",
+          "f(10) = 4 + 20 = 24."
+        ],
+        "final": "24 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio f(x) = ax + b on verrannollinen vain, kun b = 0. Jos b ≠ 0, x:n kaksinkertaistuminen ei kaksinkertaista f(x):ää."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "x": 10
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-FUN-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.06",
+          "MAB4.01"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Polkupyörän vuokra on 30 € + 8 € tunnilta. Kahden tunnin vuokra on 46 €. Mitä kuuden tunnin vuokra maksaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "138 €",
+            "misconception": "FUN-05",
+            "feedback": "Kolminkertainen aika ei kolminkertaista hintaa, koska 30 € on kiinteä maksu."
+          },
+          {
+            "id": "b",
+            "text": "48 €",
+            "misconception": null,
+            "feedback": "Kiinteä maksu 30 € puuttuu."
+          },
+          {
+            "id": "c",
+            "text": "94 €",
+            "misconception": null,
+            "feedback": "Kahden tunnin hinta sisältää jo kaksi tuntia, joten lisätunteja on neljä, ei kuutta."
+          },
+          {
+            "id": "d",
+            "text": "78 €",
+            "misconception": null,
+            "feedback": "Oikein: 30 + 8 · 6 = 78."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f(t) = 30 + 8t.",
+          "f(6) = 30 + 48 = 78."
+        ],
+        "final": "78 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio f(x) = ax + b on verrannollinen vain, kun b = 0. Jos b ≠ 0, x:n kaksinkertaistuminen ei kaksinkertaista f(x):ää."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 8,
+          "b": 30,
+          "t": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-FUN-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.06"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Mikä funktioista kuvaa suoraa verrannollisuutta (y on verrannollinen x:ään)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "f(x) = 0,5x²",
+            "misconception": null,
+            "feedback": "x:n kaksinkertaistuminen nelinkertaistaa f(x):n, joten tämä ei ole suora verrannollisuus."
+          },
+          {
+            "id": "b",
+            "text": "f(x) = 2 − 0,5x",
+            "misconception": "FUN-05",
+            "feedback": "Suora laskee mutta ei kulje origon kautta, joten kyseessä ei ole suora verrannollisuus."
+          },
+          {
+            "id": "c",
+            "text": "f(x) = 0,5x + 2",
+            "misconception": "FUN-05",
+            "feedback": "Funktio on lineaarinen mutta f(0) = 2 ≠ 0, joten se ei ole verrannollinen."
+          },
+          {
+            "id": "d",
+            "text": "f(x) = 0,5x",
+            "misconception": null,
+            "feedback": "Oikein: f(x) = ax ja f(0) = 0, joten kaksinkertainen x antaa kaksinkertaisen f(x):n."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Verrannollisessa funktiossa f(x) = ax.",
+          "Vain f(x) = 0,5x on tätä muotoa."
+        ],
+        "final": "f(x) = 0,5x"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio f(x) = ax + b on verrannollinen vain, kun b = 0. Jos b ≠ 0, x:n kaksinkertaistuminen ei kaksinkertaista f(x):ää."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 0.5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-FUN-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.06",
+          "MAB4.01"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Taulukossa on x = 1, 2, 3 ja y = 7, 10, 13. Mikä väite on tosi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "y ei ole verrannollinen x:ään, koska suhde y/x ei ole vakio (7, 5, 13/3).",
+            "misconception": null,
+            "feedback": "Oikein: verrannollisuudessa y/x olisi vakio."
+          },
+          {
+            "id": "b",
+            "text": "y on verrannollinen x:ään, koska y kasvaa tasaisesti 3 kerrallaan.",
+            "misconception": "FUN-05",
+            "feedback": "Tasainen kasvu tarkoittaa lineaarista funktiota y = 3x + 4, mutta verrannollisuus vaatisi y = 3x."
+          },
+          {
+            "id": "c",
+            "text": "y on verrannollinen x:ään, koska y kasvaa, kun x kasvaa.",
+            "misconception": "FUN-05",
+            "feedback": "Kasvaminen ei riitä. Verrannollisessa y/x on vakio ja x = 0 antaa y = 0."
+          },
+          {
+            "id": "d",
+            "text": "y on verrannollinen x:ään, koska 7 + 10 = 17.",
+            "misconception": null,
+            "feedback": "Summalla ei voi perustella verrannollisuutta."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "y/x = 7, 5 ja 13/3.",
+          "Suhde ei ole vakio, joten verrannollisuutta ei ole; y = 3x + 4."
+        ],
+        "final": "ei verrannollinen"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio f(x) = ax + b on verrannollinen vain, kun b = 0. Jos b ≠ 0, x:n kaksinkertaistuminen ei kaksinkertaista f(x):ää."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "table": [
+            [
+              1,
+              7
+            ],
+            [
+              2,
+              10
+            ],
+            [
+              3,
+              13
+            ]
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-FUN-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.06"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "FUN-05"
+      ],
+      "prompt": {
+        "text": "Pekka väittää, että jokaiselle lineaariselle funktiolle pätee f(2x) = 2f(x). Mikä on perusteltu vastaus funktion f(x) = 2x + 3 kohdalla?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on tosi, koska f(2) = 7 ja f(1) = 5 kasvavat molemmat.",
+            "misconception": "FUN-05",
+            "feedback": "Kasvaminen ei riitä; tarkista, onko f(2) kaksi kertaa f(1)."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärä, koska funktio on lineaarinen.",
+            "misconception": null,
+            "feedback": "Lineaarisuus ei riitä perusteeksi. Perustele laskemalla vastaesimerkki."
+          },
+          {
+            "id": "c",
+            "text": "Väite on väärä: f(2 · 1) = 7, mutta 2 · f(1) = 10. Yhtälö pätisi vain, jos vakiotermi olisi 0.",
+            "misconception": null,
+            "feedback": "Oikein: yksi vastaesimerkki riittää kumoamaan yleisen väitteen."
+          },
+          {
+            "id": "d",
+            "text": "Väite on tosi, koska funktion kuvaaja on suora.",
+            "misconception": "FUN-05",
+            "feedback": "Suoran kuvaaja ei riitä. Suoran täytyy kulkea origon kautta, jotta f(2x) = 2f(x)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f(1) = 5, f(2) = 7.",
+          "2 · f(1) = 10 ≠ 7, joten väite ei päde."
+        ],
+        "final": "väite on väärä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio f(x) = ax + b on verrannollinen vain, kun b = 0. Jos b ≠ 0, x:n kaksinkertaistuminen ei kaksinkertaista f(x):ää."
+      },
+      "provenance": {
+        "template": "fun05_mc",
+        "params": {
+          "a": 2,
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}

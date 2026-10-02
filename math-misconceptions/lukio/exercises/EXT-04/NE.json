@@ -1,0 +1,305 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x² = 121. Kirjoita negatiivinen ratkaisu."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -11.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 11.0,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälön toinen ratkaisu on vastaluku: myös (−11)² = 121."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x = 11 tai x = −11.",
+          "Negatiivinen ratkaisu on −11."
+        ],
+        "final": "−11"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 121
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö 3x² = 75. Kirjoita negatiivinen ratkaisu."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -5.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 5.0,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä on myös negatiivinen ratkaisu, koska 3 · (−5)² = 75."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Jaetaan 3:lla: x² = 25.",
+          "x = ±5, negatiivinen ratkaisu on −5."
+        ],
+        "final": "−5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "c": 3,
+          "a": 75
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö (x − 1)² = 16. Kirjoita ratkaisuista pienempi."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -3.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 5.0,
+            "misconception": "EXT-04",
+            "feedback": "5 on yhtälön suurempi ratkaisu. Myös x − 1 = −4 toteuttaa yhtälön."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x − 1 = 4 tai x − 1 = −4.",
+          "x = 5 tai x = −3; pienempi on −3."
+        ],
+        "final": "−3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "c": 1,
+          "a": 16
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä x² − 12 = 37 on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "EXT-04",
+            "feedback": "Yhtälöllä x² = 49 on kaksi ratkaisua, koska myös (−7)² = 49."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x² = 49.",
+          "x = 7 tai x = −7, eli ratkaisuja on 2."
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "c": -12,
+          "a": 37
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Yhtälön x² = 20 ratkaisujen summan arvioi Eeva olevan 4,47. Laske ratkaisujen summa ja tarkista Eevan arvio."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 4.47,
+            "misconception": "EXT-04",
+            "feedback": "4,47 on vain positiivinen ratkaisu √20. Yhtälöllä on myös ratkaisu −√20."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Ratkaisut ovat √20 ≈ 4,47 ja −√20 ≈ −4,47.",
+          "Summa on 0, joten Eevan arvio ei täsmää."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_ne",
+        "params": {
+          "a": 20
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 9
+      }
+    }
+  ]
+}
