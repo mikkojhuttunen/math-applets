@@ -1,0 +1,276 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-04",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x² = 81 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² = 81",
+          "x² − 81 = 0",
+          "(x − 9)(x + 9) = 0",
+          "x − 9 = 0"
+        ],
+        "error_line": 4,
+        "error_type": "positive_root_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 4 on jäänyt pois tekijä x + 9, josta saadaan ratkaisu x = −9.",
+          "Oikein: x = 9 tai x = −9."
+        ],
+        "final": "x = 9 tai x = −9"
+      },
+      "feedback": {
+        "correct": "Oikein: myös vastaluku toteuttaa yhtälön.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "a": 81
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas etsi paraabelin y = x² − 9 nollakohdat näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² − 9 = 0",
+          "x² = 9",
+          "x = 3"
+        ],
+        "error_line": 3,
+        "error_type": "positive_root_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 on otettu vain positiivinen neliöjuuri. Myös (−3)² = 9.",
+          "Oikein: paraabeli leikkaa x-akselin kohdissa x = −3 ja x = 3."
+        ],
+        "final": "x = −3 tai x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: myös vastaluku toteuttaa yhtälön.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "c": -9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön (x − 2)² = 9 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(x − 2)² = 9",
+          "x − 2 = 3",
+          "x = 5"
+        ],
+        "error_line": 2,
+        "error_type": "positive_root_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on otettu vain positiivinen neliöjuuri: myös x − 2 = −3 toteuttaa yhtälön.",
+          "Oikein: x = 5 tai x = −1."
+        ],
+        "final": "x = 5 tai x = −1"
+      },
+      "feedback": {
+        "correct": "Oikein: myös vastaluku toteuttaa yhtälön.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "shift": 2,
+          "a": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Kuvaajan y = 2x² pisteet, joissa y = 50, löytyy ratkaisemalla yhtälö 2x² = 50. Oppilas ratkaisi sen näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "2x² = 50",
+          "x² = 25",
+          "x = 5"
+        ],
+        "error_line": 3,
+        "error_type": "positive_root_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 on otettu vain positiivinen neliöjuuri. Kuvaajalla on kaksi pistettä, joiden y-koordinaatti on 50.",
+          "Oikein: x = 5 tai x = −5."
+        ],
+        "final": "x = 5 tai x = −5"
+      },
+      "feedback": {
+        "correct": "Oikein: myös vastaluku toteuttaa yhtälön.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "c": 2,
+          "a": 50
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-04-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x² + 5 = 30 näin. Napauta rivi, jossa on virhe. Vihje: sijoita x = −5 alkuperäiseen yhtälöön."
+      },
+      "payload": {
+        "lines": [
+          "x² + 5 = 30",
+          "x² = 25",
+          "x = 5"
+        ],
+        "error_line": 3,
+        "error_type": "positive_root_only"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 on otettu vain positiivinen neliöjuuri.",
+          "Tarkistus: (−5)² + 5 = 30, joten myös x = −5 on ratkaisu."
+        ],
+        "final": "x = 5 tai x = −5"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoitus x = −5 antaa 25 + 5 = 30, joten −5 on myös ratkaisu.",
+        "generic_wrong": "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: x = √a ja x = −√a. Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "ext04_es",
+        "params": {
+          "c": 5,
+          "a": 30
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

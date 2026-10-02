@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 9 |
+| Runs completed | 10 |
 | Last run | 2026-10-02 |
-| Progress | 44 of 151 planned cells in phases 0–2 generated |
+| Progress | 49 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -194,9 +194,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | EXT-02 | X | X | X | - | - | X | - | - | - | - | - | - | - | - | - |
 | NUM-08 | X | X | - | - | - | - | X | - | - | o | - | - | - | - | - |
 | FUN-05 | X | X | - | - | - | - | - | - | - | - | o | - | - | o | - |
-| EXT-04 | X | X | o | - | - | - | - | - | - | - | - | o | - | - | - |
-| LEQU-01 | X | X | s | o | o | - | s | - | - | - | - | - | - | - | o |
-| LEQU-02 | o | o | o | s | o | - | - | - | - | - | - | - | - | - | o |
+| EXT-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
+| LEQU-01 | X | X | s | X | X | - | s | - | - | - | - | - | - | - | o |
+| LEQU-02 | X | X | o | s | o | - | - | - | - | - | - | - | - | - | o |
 | LEQU-03 | o | o | o | - | o | - | - | - | - | - | - | o | - | - | o |
 | LEQU-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-05 | o | o | o | - | - | - | o | - | - | - | - | o | - | - | - |
@@ -290,6 +290,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LEQU-01 | NE | LU-LEQU-01-NE-001…005 | T, H | none | MAA2.05, MAA2.04, MAB2.04 | exercises/LEQU-01/NE.json | Draft | Run 9; smaller root of x² = 7x, number of roots of 6x² = 18x (MAB), x³ = 9x, product of roots of x(x + 4) = 3x (MAB), sum of roots with plausibility check; 2 MAB items; evidence to be checked |
 | 2026-10-02 | LEQU-01 | ES, RP | - | - | - | - | - | Skipped | Run 9; not selected: the seed cells `s` already use IDs LU-LEQU-01-ES-001 and LU-LEQU-01-RP-001, so a batch would collide; MC and NE generated instead |
 | 2026-10-02 | LPRB-01 | MC | - | - | - | - | - | Skipped | Run 9; not selected: seed ID collision as in Run 4 and Run 5 |
+| 2026-10-02 | EXT-04 | ES | LU-EXT-04-ES-001…005 | T, H | none | MAA2.04, MAB2.04 | exercises/EXT-04/ES.json | Draft | Run 10; x² = 81, nollakohdat of y = x² − 9 (MAB), (x − 2)² = 9, 2x² = 50 (MAB), x² + 5 = 30 with a substitution hint; the negative root is dropped on the error line; 2 MAB items; evidence not yet checked |
+| 2026-10-02 | LEQU-01 | SO | LU-LEQU-01-SO-001…005 | T, H | none | MAA2.05, MAB2.04, MAA2.04 | exercises/LEQU-01/SO.json | Draft | Run 10; order the steps without dividing: x² = 5x, 2t² = 8t (MAB), x³ = 9x, x(x + 2) = 3x (MAB), common factor x − 2 (G3); 2 MAB items; source † (vaiyavutjamai2006effects), evidence to be checked |
+| 2026-10-02 | LEQU-01 | FS | LU-LEQU-01-FS-001…005 | T, H | none | MAA2.05, MAB2.04, MAA2.04 | exercises/LEQU-01/FS.json | Draft | Run 10; blank is the factoring line: x² = 7x, 3x² = 12x (MAB), x³ = 16x, x(x + 2) = 3x (MAB), common factor x − 3 (G3); 2 MAB items; evidence to be checked |
+| 2026-10-02 | LEQU-02 | MC | LU-LEQU-02-MC-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/MC.json | Draft | Run 10; (x − 2)(x − 3) = 6, x(x + 4) = 5, (2x − 1)(x + 3) = 4, substitution check of x = 13 or 14 (justification), which equation allows the rule directly; MAA only |
+| 2026-10-02 | LEQU-02 | NE | LU-LEQU-02-NE-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/NE.json | Draft | Run 10; larger root of (x − 3)(x − 4) = 12, smaller root of x(x − 5) = 14, larger root of (x + 1)(x − 2) = 10, sum of roots of x(x − 6) = 16, sum of roots of (x − 3)(x + 2) = −6 with a substitution check; MAA only |
 
 ## 7. Coverage and decisions to confirm
 

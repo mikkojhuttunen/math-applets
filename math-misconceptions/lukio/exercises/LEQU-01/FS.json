@@ -1,0 +1,330 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: ota yhteinen tekijä x."
+      },
+      "payload": {
+        "lines": [
+          "x² = 7x",
+          "x² − 7x = 0",
+          "x(x − 7) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x(x − 7) = 0",
+          "variable": "x",
+          "solutions": [
+            0,
+            7
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 7x vasemmalle: x² − 7x = 0.",
+          "Ota x yhteiseksi tekijäksi: x(x − 7) = 0.",
+          "x = 0 tai x = 7."
+        ],
+        "final": "x(x − 7) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tekijöihin jakaminen säilyttää myös ratkaisun, jossa tekijä on 0.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_fs",
+        "params": {
+          "a": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: ota yhteinen tekijä 3x."
+      },
+      "payload": {
+        "lines": [
+          "3x² = 12x",
+          "3x² − 12x = 0",
+          "3x(x − 4) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "3x(x − 4) = 0",
+          "variable": "x",
+          "solutions": [
+            0,
+            4
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 12x vasemmalle: 3x² − 12x = 0.",
+          "Ota 3x yhteiseksi tekijäksi: 3x(x − 4) = 0.",
+          "x = 0 tai x = 4."
+        ],
+        "final": "3x(x − 4) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tekijöihin jakaminen säilyttää myös ratkaisun, jossa tekijä on 0.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_fs",
+        "params": {
+          "c": 3,
+          "b": 12
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: ota yhteinen tekijä x."
+      },
+      "payload": {
+        "lines": [
+          "x³ = 16x",
+          "x³ − 16x = 0",
+          "x(x² − 16) = 0",
+          "x(x − 4)(x + 4) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x(x² − 16) = 0",
+          "variable": "x",
+          "solutions": [
+            -4,
+            0,
+            4
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 16x vasemmalle: x³ − 16x = 0.",
+          "Ota x yhteiseksi tekijäksi: x(x² − 16) = 0.",
+          "Tekijöi erotus: x(x − 4)(x + 4) = 0.",
+          "x = −4 tai x = 0 tai x = 4."
+        ],
+        "final": "x(x² − 16) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tekijöihin jakaminen säilyttää myös ratkaisun, jossa tekijä on 0.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_fs",
+        "params": {
+          "n": 3,
+          "a": 16
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: ota x yhteiseksi tekijäksi ennen sieventämistä."
+      },
+      "payload": {
+        "lines": [
+          "x(x + 2) = 3x",
+          "x(x + 2) − 3x = 0",
+          "x(x + 2 − 3) = 0",
+          "x(x − 1) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x(x + 2 − 3) = 0",
+          "variable": "x",
+          "solutions": [
+            0,
+            1
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 3x vasemmalle: x(x + 2) − 3x = 0.",
+          "Ota x yhteiseksi tekijäksi: x(x + 2 − 3) = 0.",
+          "Sievennä: x(x − 1) = 0.",
+          "x = 0 tai x = 1."
+        ],
+        "final": "x(x + 2 − 3) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tekijöihin jakaminen säilyttää myös ratkaisun, jossa tekijä on 0.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_fs",
+        "params": {
+          "a": 2,
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05",
+          "MAA2.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: ota yhteinen tekijä x − 3 jakamatta sillä."
+      },
+      "payload": {
+        "lines": [
+          "(x − 3)(x + 2) = 4(x − 3)",
+          "(x − 3)(x + 2) − 4(x − 3) = 0",
+          "(x − 3)(x + 2 − 4) = 0",
+          "(x − 3)(x − 2) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "(x − 3)(x + 2 − 4) = 0",
+          "variable": "x",
+          "solutions": [
+            2,
+            3
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirrä oikea puoli vasemmalle, koska x − 3 voi olla nolla.",
+          "Ota x − 3 yhteiseksi tekijäksi: (x − 3)(x + 2 − 4) = 0.",
+          "Sievennä: (x − 3)(x − 2) = 0.",
+          "x = 2 tai x = 3."
+        ],
+        "final": "(x − 3)(x + 2 − 4) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tekijöihin jakaminen säilyttää myös ratkaisun, jossa tekijä on 0.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_fs",
+        "params": {
+          "a": 3,
+          "b": 2,
+          "c": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

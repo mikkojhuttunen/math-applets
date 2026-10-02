@@ -1,0 +1,283 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit niin, että ne ratkaisevat yhtälön x² = 5x oikein ilman jakamista x:llä."
+      },
+      "payload": {
+        "lines": [
+          "x² = 5x",
+          "x² − 5x = 0",
+          "x(x − 5) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 5x vasemmalle, jotta ratkaisu x = 0 ei katoa.",
+          "Ota x yhteiseksi tekijäksi.",
+          "x = 0 tai x = 5."
+        ],
+        "final": "x = 0 tai x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi ja sitten tekijöihin, ei jakamista.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_so",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-SO-002",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Kappaleen korkeus on 2t² = 8t jollain hetkellä t. Järjestä rivit niin, että ne ratkaisevat yhtälön oikein ilman jakamista t:llä."
+      },
+      "payload": {
+        "lines": [
+          "2t² = 8t",
+          "2t² − 8t = 0",
+          "2t(t − 4) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 8t vasemmalle.",
+          "Ota 2t yhteiseksi tekijäksi.",
+          "t = 0 tai t = 4."
+        ],
+        "final": "t = 0 tai t = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi ja sitten tekijöihin, ei jakamista.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_so",
+        "params": {
+          "c": 2,
+          "b": 8
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-SO-003",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit niin, että ne ratkaisevat yhtälön x³ = 9x oikein ilman jakamista x:llä."
+      },
+      "payload": {
+        "lines": [
+          "x³ = 9x",
+          "x³ − 9x = 0",
+          "x(x² − 9) = 0",
+          "x(x − 3)(x + 3) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 9x vasemmalle.",
+          "Ota x yhteiseksi tekijäksi.",
+          "Tekijöi erotus x² − 9.",
+          "x = −3 tai x = 0 tai x = 3."
+        ],
+        "final": "x = −3 tai x = 0 tai x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi ja sitten tekijöihin, ei jakamista.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_so",
+        "params": {
+          "n": 3,
+          "a": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-SO-004",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit niin, että ne ratkaisevat yhtälön x(x + 2) = 3x oikein ilman jakamista x:llä."
+      },
+      "payload": {
+        "lines": [
+          "x(x + 2) = 3x",
+          "x(x + 2) − 3x = 0",
+          "x(x + 2 − 3) = 0",
+          "x(x − 1) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 3x vasemmalle.",
+          "Ota x yhteiseksi tekijäksi.",
+          "Sievennä sulkeet.",
+          "x = 0 tai x = 1."
+        ],
+        "final": "x = 0 tai x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi ja sitten tekijöihin, ei jakamista.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_so",
+        "params": {
+          "a": 2,
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-SO-005",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05",
+          "MAA2.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Yhtälössä (x − 2)(x + 1) = 5(x − 2) on tekijä x − 2 kummallakin puolella. Järjestä rivit niin, että ratkaisu ei jaa tekijällä x − 2."
+      },
+      "payload": {
+        "lines": [
+          "(x − 2)(x + 1) = 5(x − 2)",
+          "(x − 2)(x + 1) − 5(x − 2) = 0",
+          "(x − 2)(x + 1 − 5) = 0",
+          "(x − 2)(x − 4) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Siirrä oikea puoli vasemmalle, koska x − 2 voi olla nolla.",
+          "Ota x − 2 yhteiseksi tekijäksi ja sievennä.",
+          "x = 2 tai x = 4."
+        ],
+        "final": "x = 2 tai x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi ja sitten tekijöihin, ei jakamista.",
+        "generic_wrong": "Yhtälön molempia puolia saa jakaa vain lausekkeella, joka ei voi olla nolla. Siirrä muuten kaikki yhdelle puolelle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ01_so",
+        "params": {
+          "a": 2,
+          "b": 1,
+          "c": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}

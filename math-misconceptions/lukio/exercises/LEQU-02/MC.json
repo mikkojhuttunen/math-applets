@@ -1,0 +1,386 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö (x − 2)(x − 3) = 6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 0 tai x = 5",
+            "misconception": null,
+            "feedback": "Oikein: yhtälö on ensin saatava muotoon, jossa tulo on 0."
+          },
+          {
+            "id": "b",
+            "text": "x = 2 tai x = 3",
+            "misconception": null,
+            "feedback": "Nämä ratkaisevat yhtälön (x − 2)(x − 3) = 0, eivät yhtälöä, jossa tulo on 6."
+          },
+          {
+            "id": "c",
+            "text": "x = 5",
+            "misconception": null,
+            "feedback": "Yhtälöllä on kaksi ratkaisua: kerro auki ja siirrä 6 vasemmalle."
+          },
+          {
+            "id": "d",
+            "text": "x = 8 tai x = 9",
+            "misconception": "LEQU-02",
+            "feedback": "Tulon nollasääntö ei päde, kun tulo on 6. Tekijät voivat olla esimerkiksi 2 ja 3."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 5x + 6 = 6.",
+          "x² − 5x = 0, eli x(x − 5) = 0.",
+          "x = 0 tai x = 5."
+        ],
+        "final": "x = 0 tai x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle, kerro auki ja tekijöi uudelleen."
+      },
+      "provenance": {
+        "template": "lequ02_mc",
+        "params": {
+          "k": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö x(x + 4) = 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 1",
+            "misconception": null,
+            "feedback": "Myös x = −5 toteuttaa yhtälön: −5 · (−1) = 5."
+          },
+          {
+            "id": "b",
+            "text": "x = −5 tai x = 1",
+            "misconception": null,
+            "feedback": "Oikein: yhtälö on ensin saatava muotoon, jossa tulo on 0."
+          },
+          {
+            "id": "c",
+            "text": "x = 5 tai x = 1",
+            "misconception": "LEQU-02",
+            "feedback": "Tulon nollasääntö ei päde, kun tulo on 5. Tekijä voi olla mikä tahansa luku, kunhan tulo on 5."
+          },
+          {
+            "id": "d",
+            "text": "x = 0 tai x = −4",
+            "misconception": null,
+            "feedback": "Nämä ratkaisevat yhtälön x(x + 4) = 0."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² + 4x − 5 = 0.",
+          "(x + 5)(x − 1) = 0.",
+          "x = −5 tai x = 1."
+        ],
+        "final": "x = −5 tai x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle, kerro auki ja tekijöi uudelleen."
+      },
+      "provenance": {
+        "template": "lequ02_mc",
+        "params": {
+          "k": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö (2x − 1)(x + 3) = 4."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 1/2 tai x = −3",
+            "misconception": null,
+            "feedback": "Nämä ratkaisevat yhtälön (2x − 1)(x + 3) = 0."
+          },
+          {
+            "id": "b",
+            "text": "x = 5/2 tai x = 1",
+            "misconception": "LEQU-02",
+            "feedback": "Tulon nollasääntö ei päde, kun tulo on 4. Kerro auki ja siirrä 4 vasemmalle."
+          },
+          {
+            "id": "c",
+            "text": "x = −7/2 tai x = 1",
+            "misconception": null,
+            "feedback": "Oikein: yhtälö on ensin saatava muotoon, jossa tulo on 0."
+          },
+          {
+            "id": "d",
+            "text": "x = 1 tai x = 7/2",
+            "misconception": null,
+            "feedback": "Merkkivirhe: 2x² + 5x − 7 = 0 antaa tekijät (2x + 7)(x − 1)."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x² + 5x − 3 = 4.",
+          "2x² + 5x − 7 = 0, eli (2x + 7)(x − 1) = 0.",
+          "x = −7/2 tai x = 1."
+        ],
+        "final": "x = −7/2 tai x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle, kerro auki ja tekijöi uudelleen."
+      },
+      "provenance": {
+        "template": "lequ02_mc",
+        "params": {
+          "k": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön (x − 1)(x − 2) = 12 ja sai x = 13 tai x = 14. Mikä tarkistus paljastaa nopeimmin, että vastaus on väärä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ratkaisuja pitää olla kolme, koska yhtälö on toista astetta.",
+            "misconception": null,
+            "feedback": "Toisen asteen yhtälöllä on enintään kaksi ratkaisua."
+          },
+          {
+            "id": "b",
+            "text": "Sijoitetaan x = 13 alkuperäiseen yhtälöön: (13 − 1)(13 − 2) = 12 · 11 = 132, joka ei ole 12.",
+            "misconception": null,
+            "feedback": "Oikein: yhtälö on ensin saatava muotoon, jossa tulo on 0."
+          },
+          {
+            "id": "c",
+            "text": "Tarkistetaan vain tekijät: 13 − 1 = 12 ja 14 − 2 = 12, joten molemmat ratkaisut ovat oikein.",
+            "misconception": "LEQU-02",
+            "feedback": "Tarkistuksessa on laskettava koko tulo. Pelkkä toinen tekijä ei kerro, onko tulo 12."
+          },
+          {
+            "id": "d",
+            "text": "Yhtälön ratkaisujen pitää olla pienempiä kuin 12, joten 13 ja 14 ovat väärin.",
+            "misconception": null,
+            "feedback": "Ratkaisun suuruudelle ei ole tällaista rajaa. Oikea ratkaisu on x = 5 tai x = −2, mutta syy on sijoituksessa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Sijoitus x = 13: 12 · 11 = 132 ≠ 12, joten x = 13 ei ole ratkaisu.",
+          "Oikea ratkaisu: x² − 3x + 2 = 12, (x − 5)(x + 2) = 0, x = −2 tai x = 5."
+        ],
+        "final": "Sijoitetaan x = 13 alkuperäiseen yhtälöön: (13 − 1)(13 − 2) = 12 · 11 = 132, joka ei ole 12."
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle, kerro auki ja tekijöi uudelleen."
+      },
+      "provenance": {
+        "template": "lequ02_mc",
+        "params": {
+          "k": 12,
+          "check": "substitution"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Missä yhtälössä tulon nollasääntöä saa käyttää suoraan ilman, että yhtälöä ensin muokataan?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(x − 4)(x + 1) = 1",
+            "misconception": "LEQU-02",
+            "feedback": "Tulon nollasääntö vaatii, että tulo on 0. Tässä tulo on 1."
+          },
+          {
+            "id": "b",
+            "text": "x(x − 4) = 4",
+            "misconception": "LEQU-02",
+            "feedback": "Oikealla puolella on 4, ei 0. Siirrä 4 vasemmalle ja tekijöi uudelleen."
+          },
+          {
+            "id": "c",
+            "text": "(x − 4)(x + 1) = 0",
+            "misconception": null,
+            "feedback": "Oikein: yhtälö on ensin saatava muotoon, jossa tulo on 0."
+          },
+          {
+            "id": "d",
+            "text": "(x − 4) + (x + 1) = 0",
+            "misconception": null,
+            "feedback": "Tämä on summa, ei tulo. Tulon nollasääntö koskee tuloa."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Sääntö: ab = 0 täsmälleen silloin, kun a = 0 tai b = 0.",
+          "Vain yhtälössä (x − 4)(x + 1) = 0 on tulo, joka on yhtä suuri kuin 0."
+        ],
+        "final": "(x − 4)(x + 1) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle, kerro auki ja tekijöi uudelleen."
+      },
+      "provenance": {
+        "template": "lequ02_mc",
+        "params": {
+          "case": "which_equation"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 10
+      }
+    }
+  ]
+}
