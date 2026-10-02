@@ -1,0 +1,353 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "ALG-09",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Sievennä (x − 6)²."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 36",
+            "misconception": "ALG-09",
+            "feedback": "Keskimmäinen tulo −2 · 6x = −12x puuttuu."
+          },
+          {
+            "id": "b",
+            "text": "x² − 12x + 36",
+            "misconception": null,
+            "feedback": "Oikein: (x − 6)² = x² − 12x + 36."
+          },
+          {
+            "id": "c",
+            "text": "x² − 36",
+            "misconception": null,
+            "feedback": "Tämä on summan ja erotuksen tulo (x + 6)(x − 6), ei erotuksen neliö."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x − 6)² = (x − 6)(x − 6).",
+          "= x² − 12x + 36."
+        ],
+        "final": "x² − 12x + 36"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "e": "x - 6"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Sievennä (2x + 5)² − (2x − 5)²."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "40x",
+            "misconception": null,
+            "feedback": "Oikein: neliöiden erotus on 40x."
+          },
+          {
+            "id": "b",
+            "text": "0",
+            "misconception": "ALG-09",
+            "feedback": "Jos neliöt jakautuisivat, molemmista tulisi 4x² + 25 ja erotus olisi 0. Keskimmäiset tulot ±20x eivät kumoudu."
+          },
+          {
+            "id": "c",
+            "text": "20x",
+            "misconception": null,
+            "feedback": "Keskimmäiset tulot ovat +20x ja −20x; erotuksessa ne eivät kumoudu vaan lasketaan yhteen."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(2x + 5)² = 4x² + 20x + 25 ja (2x − 5)² = 4x² − 20x + 25.",
+          "Erotus on (20x) − (−20x) = 40x."
+        ],
+        "final": "40x"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "a": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen tontin sivu on x metriä. Tonttia laajennetaan niin, että sivu pitenee 3 metriä. Mikä lauseke antaa uuden tontin pinta-alan (m²)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 9",
+            "misconception": "ALG-09",
+            "feedback": "Puuttuu kaksi suorakaidetta, kummankin pinta-ala 3x."
+          },
+          {
+            "id": "b",
+            "text": "x² + 6x + 9",
+            "misconception": null,
+            "feedback": "Oikein: pinta-ala on (x + 3)² = x² + 6x + 9."
+          },
+          {
+            "id": "c",
+            "text": "x² + 3x + 9",
+            "misconception": null,
+            "feedback": "Suorakaiteita on kaksi, joten keskimmäinen termi on 6x."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Uusi sivu on x + 3.",
+          "Pinta-ala (x + 3)² = x² + 6x + 9."
+        ],
+        "final": "x² + 6x + 9"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "d": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Kahden neliön sivujen pituuksien summa on 7 m ja tulo 12 m². Kuinka suuri on neliöiden yhteenlaskettu pinta-ala?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "61 m²",
+            "misconception": null,
+            "feedback": "Keskimmäinen tulo on 2ab = 24 ja se vähennetään, ei ab:tä lisätä."
+          },
+          {
+            "id": "b",
+            "text": "49 m²",
+            "misconception": "ALG-09",
+            "feedback": "(a + b)² ei ole a² + b²; erotus on 2ab."
+          },
+          {
+            "id": "c",
+            "text": "25 m²",
+            "misconception": null,
+            "feedback": "Oikein: a² + b² = (a + b)² − 2ab = 49 − 24 = 25."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(a + b)² = a² + 2ab + b², joten a² + b² = 7² − 2 · 12.",
+          "= 49 − 24 = 25."
+        ],
+        "final": "25 m²"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "s": 7,
+          "p": 12
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: ”(x + 3)² = x² + 9, sillä kun x = 0, molemmat puolet ovat 9.” Mikä perustelu arvioi väitteen oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on väärä, koska 9 ei ole neliöluku.",
+            "misconception": null,
+            "feedback": "9 = 3², mutta virhe on puuttuvassa keskimmäisessä tulossa 6x."
+          },
+          {
+            "id": "b",
+            "text": "Väite on väärä: x = 1 antaa (1 + 3)² = 16, mutta 1² + 9 = 10. Yksi vastaesimerkki riittää.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "c",
+            "text": "Väite on oikea, koska se toimii kokeiltaessa x = 0.",
+            "misconception": "ALG-09",
+            "feedback": "Yksi onnistunut kokeilu ei todista yleistä väitettä; vastaesimerkki kumoaa sen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = 1: (1 + 3)² = 16 ja 1² + 9 = 10.",
+          "Vastaesimerkki kumoaa väitteen; oikein (x + 3)² = x² + 6x + 9."
+        ],
+        "final": "Väite on väärä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_mc",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,331 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "ALG-09",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Kerro auki ja sievennä (x − 8)²."
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x**2 - 16*x + 64",
+          "samples": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              -3
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x^2 + 64",
+            "misconception": "ALG-09",
+            "feedback": "Keskimmäinen tulo −2 · 8x = −16x puuttuu."
+          }
+        ],
+        "input_hint": "esim. x^2 + 1"
+      },
+      "solution": {
+        "steps": [
+          "(x − 8)² = (x − 8)(x − 8).",
+          "= x² − 16x + 64."
+        ],
+        "final": "x² − 16x + 64"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "e": "x - 8"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Laske 47² päässä kirjoittamalla 47 = 50 − 3 ja käyttämällä binomikaavaa."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2209
+        },
+        "wrong": [
+          {
+            "match": 2509,
+            "misconception": "ALG-09",
+            "feedback": "50² + 3² jättää pois keskimmäisen tulon −2 · 50 · 3 = −300."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(50 − 3)² = 50² − 2 · 50 · 3 + 3².",
+          "= 2500 − 300 + 9 = 2209."
+        ],
+        "final": "2209"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "n": 47
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen aukion sivu on x metriä. Aukiota levennetään 2 metriä sekä pituus- että leveyssuunnassa, jolloin siitä tulee neliö, jonka sivu on x + 2. Kirjoita lauseke pinta-alan lisäykselle (m²)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "4*x + 4",
+          "samples": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              5
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "4",
+            "misconception": "ALG-09",
+            "feedback": "(x + 2)² ei ole x² + 4; keskimmäinen tulo 4x puuttuu."
+          }
+        ],
+        "input_hint": "esim. 3x + 1"
+      },
+      "solution": {
+        "steps": [
+          "Uusi pinta-ala (x + 2)² = x² + 4x + 4.",
+          "Lisäys on x² + 4x + 4 − x² = 4x + 4."
+        ],
+        "final": "4x + 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "d": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Kahden neliön sivujen pituuksien summa on 9 m ja tulo 20 m². Laske neliöiden yhteenlaskettu pinta-ala (m²)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 41,
+          "unit": "m²"
+        },
+        "wrong": [
+          {
+            "match": 81,
+            "misconception": "ALG-09",
+            "feedback": "(a + b)² ei ole a² + b²; erotus on 2ab."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a² + b² = (a + b)² − 2ab = 9² − 2 · 20.",
+          "= 81 − 40 = 41."
+        ],
+        "final": "41 m²"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "s": 9,
+          "p": 20
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää, että (a + b)² = a² + b². Laske erotus (a + b)² − (a² + b²), kun a = 3 ja b = 4, ja päättele, mitä erotus kertoo väitteestä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 24
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "ALG-09",
+            "feedback": "(3 + 4)² = 49 ja 3² + 4² = 25, joten erotus ei ole 0."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(3 + 4)² = 49 ja 3² + 4² = 25.",
+          "Erotus 24 = 2ab, joten väite on väärä."
+        ],
+        "final": "24"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_ne",
+        "params": {
+          "a": 3,
+          "b": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 5 |
+| Runs completed | 6 |
 | Last run | 2026-10-02 |
-| Progress | 24 of 151 planned cells in phases 0–2 generated |
+| Progress | 28 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -188,9 +188,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LPRB-01 | s | X | X | - | - | - | X | - | - | - | - | - | - | - | - |
 | LPRB-04 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LPRB-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
-| LFUN-01 | o | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
-| LSTA-04 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| ALG-09 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
+| LFUN-01 | X | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
+| LSTA-04 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
+| ALG-09 | X | X | o | - | o | o | - | - | - | - | - | - | - | - | - |
 | EXT-02 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
 | NUM-08 | o | o | - | - | - | - | o | - | - | o | - | - | - | - | - |
 | FUN-05 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
@@ -268,6 +268,10 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LPRB-01 | RP | LU-LPRB-01-RP-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-01/RP.json | Draft | Run 5; equation for p with coin sequences (at least one head of 2 and of 3, exactly 2 of 3, exactly 1 of 4, all alike with justification of why 1/2 fails); probabilities exact in binary; 3 MAB items |
 | 2026-10-02 | LPRB-03 | MC | LU-LPRB-03-MC-001…005 | P, T, H | none | MAA8.05, MAB5.06 | exercises/LPRB-03/MC.json | Draft | Run 5; prime vs prime and even, two free throws (MAB), club subset (MAB), possible P(A and B) when P(A) = 0,30, library justification (G3); 2 MAB items |
 | 2026-10-02 | LPRB-03 | NE | LU-LPRB-03-NE-001…005 | P, T, H | none | MAA8.05, MAB5.06 | exercises/LPRB-03/NE.json | Draft | Run 5; even and greater than 3, red ace (MAB), first and third coin heads (MAB), independent product, sum 7 with first die 3 and plausibility of an estimate; answers rational; 2 MAB items |
+| 2026-10-02 | LFUN-01 | MC | LU-LFUN-01-MC-001…005 | P, T, H | none | MAY1.07, MAA12.01 | exercises/LFUN-01/MC.json | Draft | Run 6; constant rule, piecewise f(3), table with equal values, parking tariff, \|x\| justification; 3 MAB items via MAY1.07; verifier allows only G2 for this topic, so item 005 is a justification in content but tagged G2 |
+| 2026-10-02 | LSTA-04 | MC | LU-LSTA-04-MC-001…005 | P, T, H | none, cas | MAB9.04 | exercises/LSTA-04/MC.json | Draft | Run 6; meaning of 95 %, margin of error (cas), sample size 100→400, 40 intervals, can true support be 50 %; all MAB; items 001, 004, 005 are justification or plausibility checks |
+| 2026-10-02 | ALG-09 | MC | LU-ALG-09-MC-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/MC.json | Draft | Run 6; (x − 6)², (2x + 5)² − (2x − 5)², extended plot (MAB), a² + b² from a + b and ab (MAB), counterexample justification; 2 MAB items; carried over from 1–9 |
+| 2026-10-02 | ALG-09 | NE | LU-ALG-09-NE-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/NE.json | Draft | Run 6; (x − 8)² expression, 47² by (50 − 3)², area increase (MAB), a² + b² (MAB), (a + b)² − (a² + b²) at a = 3, b = 4; 2 MAB items |
 
 ## 7. Coverage and decisions to confirm
 

@@ -1,0 +1,359 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LSTA-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LSTA-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB9.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LSTA-04"
+      ],
+      "prompt": {
+        "text": "Otoksesta lasketaan oppilaiden viikoittaisen liikunnan keskiarvolle 95 %:n luottamusväli 12,1–13,4 tuntia. Mikä väite kuvaa luottamusvälin merkitystä oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Jos otanta toistettaisiin monta kertaa ja väli laskettaisiin joka kerta samalla tavalla, noin 95 % väleistä sisältäisi todellisen keskiarvon.",
+            "misconception": null,
+            "feedback": "Oikein: 95 % kuvaa menetelmän onnistumista toistoissa."
+          },
+          {
+            "id": "b",
+            "text": "95 % kaikista oppilaista nukkuu 12,1–13,4 tuntia.",
+            "misconception": null,
+            "feedback": "Luottamusväli koskee keskiarvoa, ei yksittäisiä havaintoja."
+          },
+          {
+            "id": "c",
+            "text": "Todellinen keskiarvo on tällä välillä 95 %:n todennäköisyydellä.",
+            "misconception": "LSTA-04",
+            "feedback": "Todellinen keskiarvo on kiinteä luku; se joko on välillä tai ei ole. Prosentti kuvaa menetelmää, ei tätä yksittäistä väliä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "95 % liittyy menetelmään: noin 95 % samalla tavalla lasketuista väleistä peittää todellisen keskiarvon.",
+          "Yksittäinen väli joko sisältää todellisen keskiarvon tai ei."
+        ],
+        "final": "Menetelmän onnistumisprosentti"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Luottamusväli kuvaa menetelmää: jos otanta toistettaisiin ja väli laskettaisiin samalla tavalla, noin 95 % väleistä peittäisi todellisen arvon. Todellinen arvo on kiinteä luku, ei satunnainen."
+      },
+      "provenance": {
+        "template": "lsta04_mc",
+        "params": {
+          "lo": 12.1,
+          "hi": 13.4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LSTA-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB9.04"
+        ],
+        "g": [
+          "G3",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "cas"
+      },
+      "misconceptions": [
+        "LSTA-04"
+      ],
+      "prompt": {
+        "text": "Kyselyssä 1000 vastaajasta 52 % kannattaa ehdotusta. Mikä on kannatusosuuden 95 %:n virhemarginaali, kun käytetään kaavaa 1,96 · √(p(1 − p)/n)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "±5 %-yksikköä",
+            "misconception": "LSTA-04",
+            "feedback": "95 % on luottamustaso eli menetelmän onnistumisprosentti, ei virhemarginaalin suuruus."
+          },
+          {
+            "id": "b",
+            "text": "±3,1 %-yksikköä",
+            "misconception": null,
+            "feedback": "Oikein: 1,96 · √(0,52 · 0,48 / 1000) ≈ 0,031."
+          },
+          {
+            "id": "c",
+            "text": "±1,5 %-yksikköä",
+            "misconception": null,
+            "feedback": "Tämä on puolet oikeasta virhemarginaalista."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Keskivirhe = √(0,52 · 0,48 / 1000) ≈ 0,0158.",
+          "Virhemarginaali ≈ 1,96 · 0,0158 ≈ 0,031 eli 3,1 %-yksikköä."
+        ],
+        "final": "±3,1 %-yksikköä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Luottamusväli kuvaa menetelmää: jos otanta toistettaisiin ja väli laskettaisiin samalla tavalla, noin 95 % väleistä peittäisi todellisen arvon. Todellinen arvo on kiinteä luku, ei satunnainen."
+      },
+      "provenance": {
+        "template": "lsta04_mc",
+        "params": {
+          "p": 0.52,
+          "n": 1000
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LSTA-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB9.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LSTA-04"
+      ],
+      "prompt": {
+        "text": "Kyselyn otoskoko kasvatetaan 100:sta 400:aan ja muut asiat pysyvät ennallaan. Mitä tapahtuu 95 %:n virhemarginaalille?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Todennäköisyys, että todellinen arvo on välillä, kasvaa 95 %:sta lähelle 100 %:a.",
+            "misconception": "LSTA-04",
+            "feedback": "Luottamustaso pysyy 95 %:ssa. Suurempi otos kapeuttaa väliä, ei muuta menetelmän luottamustasoa."
+          },
+          {
+            "id": "b",
+            "text": "Virhemarginaali puolittuu.",
+            "misconception": null,
+            "feedback": "Oikein: virhemarginaali on verrannollinen lukuun 1/√n ja √(100/400) = 1/2."
+          },
+          {
+            "id": "c",
+            "text": "Virhemarginaali neljännekseen.",
+            "misconception": null,
+            "feedback": "Otoskoko nelinkertaistui, mutta marginaali riippuu neliöjuuresta: √4 = 2."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Virhemarginaali on verrannollinen lukuun 1/√n.",
+          "√(100/400) = 1/2, joten marginaali puolittuu."
+        ],
+        "final": "Puolittuu"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Luottamusväli kuvaa menetelmää: jos otanta toistettaisiin ja väli laskettaisiin samalla tavalla, noin 95 % väleistä peittäisi todellisen arvon. Todellinen arvo on kiinteä luku, ei satunnainen."
+      },
+      "provenance": {
+        "template": "lsta04_mc",
+        "params": {
+          "n1": 100,
+          "n2": 400
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LSTA-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB9.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LSTA-04"
+      ],
+      "prompt": {
+        "text": "Tutkija poimii 40 erillistä satunnaisotosta samasta väestöstä ja laskee jokaisesta 95 %:n luottamusvälin keskiarvolle. Noin kuinka moni välistä sisältää väestön todellisen keskiarvon?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Noin 2",
+            "misconception": null,
+            "feedback": "Tämä on ohi menevien välien määrä (5 %), ei peittävien."
+          },
+          {
+            "id": "b",
+            "text": "Kaikki 40, koska jokaisen välin todennäköisyys on 95 %",
+            "misconception": "LSTA-04",
+            "feedback": "Prosentti kuvaa menetelmän onnistumista toistoissa; noin 5 % väleistä jää todellisen arvon ohi."
+          },
+          {
+            "id": "c",
+            "text": "Noin 38",
+            "misconception": null,
+            "feedback": "Oikein: 0,95 · 40 = 38."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Menetelmä onnistuu noin 95 %:ssa toistoista.",
+          "0,95 · 40 = 38."
+        ],
+        "final": "38"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Luottamusväli kuvaa menetelmää: jos otanta toistettaisiin ja väli laskettaisiin samalla tavalla, noin 95 % väleistä peittäisi todellisen arvon. Todellinen arvo on kiinteä luku, ei satunnainen."
+      },
+      "provenance": {
+        "template": "lsta04_mc",
+        "params": {
+          "k": 40,
+          "conf": 0.95
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LSTA-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB9.04"
+        ],
+        "g": [
+          "G3",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LSTA-04"
+      ],
+      "prompt": {
+        "text": "Kyselyn mukaan 48 % kannattaa ehdotusta, ja 95 %:n virhemarginaali on ±3 %-yksikköä. Voiko todellinen kannatus olla 50 %? Perustele."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei: otoksessa kannatus oli 48 %, ei 50 %.",
+            "misconception": null,
+            "feedback": "Otososuus ja todellinen osuus voivat poiketa toisistaan virhemarginaalin verran."
+          },
+          {
+            "id": "b",
+            "text": "Kyllä: 50 % kuuluu väliin 45–51 %, joten tulos ei sulje sitä pois.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "c",
+            "text": "Ei: todellinen kannatus on alle 50 % 95 %:n todennäköisyydellä.",
+            "misconception": "LSTA-04",
+            "feedback": "Tällainen todennäköisyys todelliselle arvolle ei seuraa luottamusvälistä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Väli on 45–51 %.",
+          "50 % kuuluu väliin, joten se on mahdollinen."
+        ],
+        "final": "Kyllä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Luottamusväli kuvaa menetelmää: jos otanta toistettaisiin ja väli laskettaisiin samalla tavalla, noin 95 % väleistä peittäisi todellisen arvon. Todellinen arvo on kiinteä luku, ei satunnainen."
+      },
+      "provenance": {
+        "template": "lsta04_mc",
+        "params": {
+          "p": 48,
+          "m": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

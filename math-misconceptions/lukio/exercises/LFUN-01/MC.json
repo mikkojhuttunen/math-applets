@@ -1,0 +1,363 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LFUN-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-01"
+      ],
+      "prompt": {
+        "text": "Sääntö on: jokaista lukua x vastaa luku 5. Onko tämä sääntö funktio?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei ole funktio, koska säännössä ei esiinny muuttujaa x",
+            "misconception": "LFUN-01",
+            "feedback": "Funktion ei tarvitse käyttää x:ää. Riittää, että jokaiselle x:lle tulee yksi arvo."
+          },
+          {
+            "id": "b",
+            "text": "On funktio vain, jos arvo muuttuu, kun x muuttuu",
+            "misconception": "LFUN-01",
+            "feedback": "Muuttumattomuus ei estä funktiota: f(−2) = f(0) = f(7) = 5 on sallittua."
+          },
+          {
+            "id": "c",
+            "text": "On funktio: jokaista x:n arvoa vastaa täsmälleen yksi arvo, nimittäin 5",
+            "misconception": null,
+            "feedback": "Oikein: vakiofunktion kuvaaja on vaakasuora suora."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jokaiselle x:lle tulee täsmälleen yksi arvo, 5.",
+          "Siis sääntö on funktio (vakiofunktio)."
+        ],
+        "final": "On funktio"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio on sääntö, joka liittää jokaiseen lähtöarvoon täsmälleen yhden arvon. Kaavojen määrä tai kaavan muoto ei ratkaise."
+      },
+      "provenance": {
+        "template": "lfun01_mc",
+        "params": {
+          "c": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA12.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-01"
+      ],
+      "prompt": {
+        "text": "Funktio f määritellään: f(x) = 2x, kun x < 3, ja f(x) = x + 4, kun x ≥ 3. Mikä on f(3)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "f(3) ei ole määritelty, koska kaavoja on kaksi",
+            "misconception": "LFUN-01",
+            "feedback": "Paloittain määritelty funktio on funktio: jokaista x:ää varten ehto valitsee täsmälleen yhden kaavan."
+          },
+          {
+            "id": "b",
+            "text": "7",
+            "misconception": null,
+            "feedback": "Oikein: x = 3 ei ole alle 3, joten käytetään kaavaa x + 4."
+          },
+          {
+            "id": "c",
+            "text": "6",
+            "misconception": null,
+            "feedback": "Ehto on x < 3, joten x = 3 kuuluu toiseen kaavaan."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Ehto x < 3 ei päde, kun x = 3.",
+          "f(3) = 3 + 4 = 7."
+        ],
+        "final": "7"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio on sääntö, joka liittää jokaiseen lähtöarvoon täsmälleen yhden arvon. Kaavojen määrä tai kaavan muoto ei ratkaise."
+      },
+      "provenance": {
+        "template": "lfun01_mc",
+        "params": {
+          "a": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-01"
+      ],
+      "prompt": {
+        "text": "Taulukossa on x:n arvot 1, 2, 3 ja 4 sekä niitä vastaavat y:n arvot 7, 7, 7 ja 7. Onko y funktio x:n suhteen?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä: jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo",
+            "misconception": null,
+            "feedback": "Oikein: samat y-arvot eri x:ille ovat sallittuja."
+          },
+          {
+            "id": "b",
+            "text": "Ei: taulukossa ei ole kaavaa",
+            "misconception": "LFUN-01",
+            "feedback": "Funktion ei tarvitse olla annettu kaavalla; taulukkokin määrittelee funktion."
+          },
+          {
+            "id": "c",
+            "text": "Ei: y ei muutu, joten y ei voi olla funktio",
+            "misconception": "LFUN-01",
+            "feedback": "Funktio saa antaa saman arvon monelle x:lle. Kielletty on vain se, että yhdelle x:lle tulee kaksi arvoa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jokaista x:ää vastaa täsmälleen yksi y.",
+          "Kaikki y-arvot ovat samat, mikä on sallittua."
+        ],
+        "final": "Kyllä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio on sääntö, joka liittää jokaiseen lähtöarvoon täsmälleen yhden arvon. Kaavojen määrä tai kaavan muoto ei ratkaise."
+      },
+      "provenance": {
+        "template": "lfun01_mc",
+        "params": {
+          "xs": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "ys": [
+            7,
+            7,
+            7,
+            7
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-01"
+      ],
+      "prompt": {
+        "text": "Pysäköinti maksaa 2 € jokaiselta alkavalta tunnilta kolmen ensimmäisen tunnin ajalta ja sen jälkeen 1 € jokaiselta alkavalta tunnilta. Paljonko 4,5 tunnin pysäköinti maksaa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hintaa ei voi laskea, koska se ei noudata yhtä kaavaa",
+            "misconception": "LFUN-01",
+            "feedback": "Kaksiosainen hinnoittelu on paloittain määritelty funktio. Pysäköintiaika määrää hinnan yksikäsitteisesti."
+          },
+          {
+            "id": "b",
+            "text": "10 €",
+            "misconception": null,
+            "feedback": "Kolmen ensimmäisen tunnin jälkeen hinta on 1 € alkavalta tunnilta."
+          },
+          {
+            "id": "c",
+            "text": "8 €",
+            "misconception": null,
+            "feedback": "Oikein: 3 h · 2 € + 2 h · 1 € = 8 €."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "4,5 tuntia on 5 alkavaa tuntia.",
+          "3 · 2 € + 2 · 1 € = 8 €."
+        ],
+        "final": "8 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio on sääntö, joka liittää jokaiseen lähtöarvoon täsmälleen yhden arvon. Kaavojen määrä tai kaavan muoto ei ratkaise."
+      },
+      "provenance": {
+        "template": "lfun01_mc",
+        "params": {
+          "hours": 4.5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA12.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-01"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää: ”f(x) = |x| ei ole funktio, koska sille tarvitaan kaksi kaavaa: x ja −x.” Mikä seuraavista on oikea perustelu väitteen arviointiin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite pitää paikkansa: funktiolla täytyy olla yksi kaava koko määrittelyjoukossa",
+            "misconception": "LFUN-01",
+            "feedback": "Yhden kaavan vaatimus ei kuulu funktion määritelmään."
+          },
+          {
+            "id": "b",
+            "text": "|x| on funktio vain, jos sen kuvaaja on suora",
+            "misconception": "LFUN-01",
+            "feedback": "Kuvaajan muodolla ei ole tekemistä funktion määritelmän kanssa."
+          },
+          {
+            "id": "c",
+            "text": "Funktio vaatii vain, että jokaista x:ää vastaa täsmälleen yksi arvo. Kaava saa olla paloittainen, ja |x| täyttää ehdon.",
+            "misconception": null,
+            "feedback": "Oikein."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Esim. |−3| = 3, |0| = 0, |4| = 4: jokaiselle x:lle tulee yksi arvo.",
+          "Kaavojen määrä ei vaikuta funktion määritelmään."
+        ],
+        "final": "Väite on väärä: |x| on funktio"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio on sääntö, joka liittää jokaiseen lähtöarvoon täsmälleen yhden arvon. Kaavojen määrä tai kaavan muoto ei ratkaise."
+      },
+      "provenance": {
+        "template": "lfun01_mc",
+        "params": {
+          "f": "abs"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}
