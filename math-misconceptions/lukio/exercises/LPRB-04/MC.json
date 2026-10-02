@@ -1,0 +1,355 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Kolikkoa heitetään viisi kertaa. Kumpi tulosjono on todennäköisempi: K L K K L vai K K K K K?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Yhtä todennäköisiä, kummankin todennäköisyys on 1/32",
+            "misconception": null,
+            "feedback": "Oikein: kolikkojonoja on 32, ja ne ovat kaikki yhtä todennäköisiä."
+          },
+          {
+            "id": "b",
+            "text": "K K K K K, koska kolikko on oikeudenmukainen",
+            "misconception": null,
+            "feedback": "Myös K L K K L on tarkalleen yksi jono 32:sta."
+          },
+          {
+            "id": "c",
+            "text": "K L K K L, koska se näyttää satunnaisemmalta",
+            "misconception": "LPRB-04",
+            "feedback": "Näyttö ei ratkaise. Jokainen tietty viiden heiton jono on yhtä todennäköinen, 1/32."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2⁵ = 32, ja ne ovat yhtä todennäköisiä.",
+          "Kumpikin tietty jono on yksi 32:sta."
+        ],
+        "final": "Yhtä todennäköisiä, 1/32"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos jokainen heitto on riippumaton ja tulokset yhtä todennäköisiä. Satunnaisen näköinen jono ei ole todennäköisempi kuin säännöllinen."
+      },
+      "provenance": {
+        "template": "lprb04_mc",
+        "params": {
+          "a": "KLKKL",
+          "b": "KKKKK"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Lotossa arvotaan 7 numeroa 40:stä. Matti pelaa rivin 1, 2, 3, 4, 5, 6, 7 ja Maija rivin 4, 11, 19, 23, 28, 35, 38. Kumman rivin todennäköisyys on suurempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Maijan, koska rivi näyttää satunnaisemmalta",
+            "misconception": "LPRB-04",
+            "feedback": "Arvonta ei ”tiedä” rivin kuviota. Jokainen tietty rivi on yksi mahdollisuus kaikista."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä suuri, kummankin 1/18643560",
+            "misconception": null,
+            "feedback": "Oikein: kaikki 18643560 eri riviä ovat yhtä todennäköisiä."
+          },
+          {
+            "id": "c",
+            "text": "Matin, koska numerot ovat peräkkäin",
+            "misconception": null,
+            "feedback": "Peräkkäisyys ei lisää todennäköisyyttä: rivi on yhtä todennäköinen kuin muutkin."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Eri rivejä on C(40, 7) = 18643560.",
+          "Jokainen niistä on yhtä todennäköinen."
+        ],
+        "final": "Yhtä suuri, 1/18643560"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos jokainen heitto on riippumaton ja tulokset yhtä todennäköisiä. Satunnaisen näköinen jono ei ole todennäköisempi kuin säännöllinen."
+      },
+      "provenance": {
+        "template": "lprb04_mc",
+        "params": {
+          "n": 40,
+          "k": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Noppaa heitetään kuusi kertaa. Kumpi tulosjono on todennäköisempi: 1, 2, 3, 4, 5, 6 vai 3, 1, 6, 2, 6, 4?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Yhtä todennäköisiä, kummankin todennäköisyys on (1/6)⁶",
+            "misconception": null,
+            "feedback": "Oikein: jokainen tietty kuuden heiton jono syntyy todennäköisyydellä (1/6)⁶."
+          },
+          {
+            "id": "b",
+            "text": "Jono 1, 2, 3, 4, 5, 6, koska sen luvut ovat kaikki eri",
+            "misconception": null,
+            "feedback": "Jokainen tietty jono on yhtä todennäköinen."
+          },
+          {
+            "id": "c",
+            "text": "Jono 3, 1, 6, 2, 6, 4, koska se näyttää satunnaiselta",
+            "misconception": "LPRB-04",
+            "feedback": "Satunnaisen näköisiä jonoja on paljon, mutta tietty jono on silti yksi 6⁶:sta."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 6⁶, ja ne ovat yhtä todennäköisiä.",
+          "Kummankin todennäköisyys on 1/6⁶."
+        ],
+        "final": "Yhtä todennäköisiä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos jokainen heitto on riippumaton ja tulokset yhtä todennäköisiä. Satunnaisen näköinen jono ei ole todennäköisempi kuin säännöllinen."
+      },
+      "provenance": {
+        "template": "lprb04_mc",
+        "params": {
+          "sequences": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Kolikkoa heitetään kuusi kertaa. Kumpi on todennäköisempää: KKKKKK vai että kuudesta heitosta täsmälleen kolme on klaavaa (missä järjestyksessä tahansa)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kolme klaavaa on todennäköisempää: 20/64 vs 1/64",
+            "misconception": null,
+            "feedback": "Oikein: kolmen klaavan tapahtumaan kuuluu 20 jonoa, kuutosjonoon vain yksi."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä todennäköisiä, koska kaikki jonot ovat yhtä todennäköisiä",
+            "misconception": "LPRB-04",
+            "feedback": "Tietyt jonot ovat yhtä todennäköisiä, mutta toinen kohta on tapahtuma, johon kuuluu useita jonoja."
+          },
+          {
+            "id": "c",
+            "text": "KKKKKK, koska siinä kaikki heitot ovat samanlaisia",
+            "misconception": null,
+            "feedback": "KKKKKK on vain yksi jono 64:stä, kolmen klaavan tapahtuma 20 jonoa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2⁶ = 64, ja ne ovat yhtä todennäköisiä.",
+          "KKKKKK on 1 jono; täsmälleen 3 klaavaa C(6, 3) = 20 jonoa."
+        ],
+        "final": "20/64 > 1/64"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos jokainen heitto on riippumaton ja tulokset yhtä todennäköisiä. Satunnaisen näköinen jono ei ole todennäköisempi kuin säännöllinen."
+      },
+      "provenance": {
+        "template": "lprb04_mc",
+        "params": {
+          "n": 6,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Perheeseen syntyy kuusi lasta. Anna sanoo: ”Syntymäjärjestys T P T T P T on todennäköisempi kuin T T T T T T, koska jälkimmäinen on niin epätavallinen.” Mikä on oikea perustelu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Anna on oikeassa, koska sekalaiset jonot ovat yleisempiä.",
+            "misconception": "LPRB-04",
+            "feedback": "Sekalaisia jonoja on paljon, mutta tietty sekalainen jono on yhtä harvinainen kuin tietty tasajono."
+          },
+          {
+            "id": "b",
+            "text": "Kumpikin tietty syntymäjärjestys on yhtä todennäköinen, 1/64, jos tytön ja pojan todennäköisyydet ovat yhtä suuret.",
+            "misconception": null,
+            "feedback": "Oikein: tietty jono on aina yksi 64 yhtä todennäköisestä jonosta."
+          },
+          {
+            "id": "c",
+            "text": "Jono T T T T T T on todennäköisempi, koska se on helppo muistaa.",
+            "misconception": null,
+            "feedback": "Muistettavuus ei vaikuta todennäköisyyteen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2⁶ = 64.",
+          "Jokainen tietty jono on yksi niistä, joten todennäköisyys on 1/64."
+        ],
+        "final": "Yhtä todennäköisiä, 1/64"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos jokainen heitto on riippumaton ja tulokset yhtä todennäköisiä. Satunnaisen näköinen jono ei ole todennäköisempi kuin säännöllinen."
+      },
+      "provenance": {
+        "template": "lprb04_mc",
+        "params": {
+          "n": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,303 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Mikä on todennäköisyys, että silmälukujen summa on 9? Anna vastaus supistettuna murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/9"
+        },
+        "wrong": [
+          {
+            "match": "1/11",
+            "misconception": "LPRB-01",
+            "feedback": "1/11 olettaa, että summat 2–12 ovat yhtä todennäköisiä. Laske noppaparit, joiden summa on 9."
+          }
+        ],
+        "input_hint": "esim. 1/6"
+      },
+      "solution": {
+        "steps": [
+          "Noppapareja on 36.",
+          "Summa 9: (3, 6), (4, 5), (5, 4), (6, 3), eli 4 paria.",
+          "P = 4/36 = 1/9."
+        ],
+        "final": "1/9"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Laske alkeistulokset, jotka ovat yhtä todennäköisiä (esimerkiksi noppaparit tai kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_ne",
+        "params": {
+          "sum": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta kolikkoa. Mikä on todennäköisyys, että tulee täsmälleen yksi klaava?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/2"
+        },
+        "wrong": [
+          {
+            "match": "1/3",
+            "misconception": "LPRB-01",
+            "feedback": "1/3 olettaa, että tulokset 0, 1 ja 2 klaavaa ovat yhtä todennäköisiä. Luettele KK, KL, LK, LL."
+          }
+        ],
+        "input_hint": "esim. 1/2"
+      },
+      "solution": {
+        "steps": [
+          "Tulosparit KK, KL, LK, LL ovat yhtä todennäköisiä.",
+          "Täsmälleen yksi klaava: KL ja LK, P = 2/4 = 1/2."
+        ],
+        "final": "1/2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Laske alkeistulokset, jotka ovat yhtä todennäköisiä (esimerkiksi noppaparit tai kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_ne",
+        "params": {
+          "coins": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kolmea kolikkoa. Mikä on todennäköisyys, että täsmälleen kaksi on klaavaa?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "3/8"
+        },
+        "wrong": [
+          {
+            "match": "1/4",
+            "misconception": "LPRB-01",
+            "feedback": "1/4 olettaa, että tulokset 0, 1, 2 ja 3 klaavaa ovat yhtä todennäköisiä. Luettele kaikki 8 jonoa."
+          }
+        ],
+        "input_hint": "esim. 3/8"
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2³ = 8.",
+          "Kaksi klaavaa: KKL, KLK, LKK, P = 3/8 = 3/8."
+        ],
+        "final": "3/8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Laske alkeistulokset, jotka ovat yhtä todennäköisiä (esimerkiksi noppaparit tai kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_ne",
+        "params": {
+          "coins": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Mikä on todennäköisyys, että silmälukujen summa on enintään 4? Anna supistettuna murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/6"
+        },
+        "wrong": [
+          {
+            "match": "3/11",
+            "misconception": "LPRB-01",
+            "feedback": "3/11 laskee summat 2, 3 ja 4 yhtä todennäköisiksi. Laske noppaparit: summa 2 yksi, summa 3 kaksi, summa 4 kolme."
+          }
+        ],
+        "input_hint": "esim. 1/6"
+      },
+      "solution": {
+        "steps": [
+          "Summa 2: (1, 1), summa 3: (1, 2), (2, 1), summa 4: (1, 3), (2, 2), (3, 1).",
+          "Yhteensä 6 paria, P = 6/36 = 1/6."
+        ],
+        "final": "1/6"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Laske alkeistulokset, jotka ovat yhtä todennäköisiä (esimerkiksi noppaparit tai kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_ne",
+        "params": {
+          "max_sum": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G2",
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Mikä on todennäköisyys, että ainakin toisen nopan silmäluku on 6? Tarkista, että tulos on järkevä: se on suurempi kuin yhden nopan todennäköisyys 1/6."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "11/36"
+        },
+        "wrong": [
+          {
+            "match": "1/2",
+            "misconception": "LPRB-01",
+            "feedback": "1/2 olettaa, että ”kuutonen tulee tai ei tule” on tasajakauma. Laske noppaparit: 36 − 25 = 11."
+          }
+        ],
+        "input_hint": "esim. 11/36"
+      },
+      "solution": {
+        "steps": [
+          "Parit, joissa ei kuutosta: 5 · 5 = 25.",
+          "Ainakin yksi kuutonen: 36 − 25 = 11, P = 11/36 = 11/36."
+        ],
+        "final": "11/36"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Laske alkeistulokset, jotka ovat yhtä todennäköisiä (esimerkiksi noppaparit tai kolikkojonot), ja jaa suotuisten määrä kaikkien määrällä."
+      },
+      "provenance": {
+        "template": "lprb01_ne",
+        "params": {
+          "event": "at least one six"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

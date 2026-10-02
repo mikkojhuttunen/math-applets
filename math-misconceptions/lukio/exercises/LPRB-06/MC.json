@@ -1,0 +1,386 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-06",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Oppilaskunnan hallitukseen valitaan 8 ehdokkaasta 3 jäsentä. Kaikilla jäsenillä on samat tehtävät. Montako erilaista hallitusta voidaan valita?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "256",
+            "misconception": null,
+            "feedback": "2^8 laskee kaikki mahdolliset osajoukot, ei vain kolmen hengen joukkoja."
+          },
+          {
+            "id": "b",
+            "text": "56",
+            "misconception": null,
+            "feedback": "Oikein: järjestyksellä ei ole väliä, joten C(8, 3) = 56."
+          },
+          {
+            "id": "c",
+            "text": "24",
+            "misconception": null,
+            "feedback": "Tulo 8 · 3 ei vastaa valintojen määrää."
+          },
+          {
+            "id": "d",
+            "text": "336",
+            "misconception": "LPRB-06",
+            "feedback": "8 · 7 · 6 = 336 laskee myös eri järjestykset. Sama kolmen hengen joukko tulee silloin laskettua 6 kertaa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestyksellä ei ole väliä.",
+          "C(8, 3) = 8·7·6 / 3! = 336 / 6 = 56."
+        ],
+        "final": "56"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jokainen joukko lasketaan vain kerran: jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_mc",
+        "params": {
+          "n": 8,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Pizzaan valitaan 6 täytteen joukosta 2 eri täytettä. Täytteiden järjestyksellä ei ole väliä. Montako erilaista pizzaa voi tehdä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "30",
+            "misconception": "LPRB-06",
+            "feedback": "Laskit pareja järjestyksineen: juusto + sieni ja sieni + juusto ovat sama pizza."
+          },
+          {
+            "id": "b",
+            "text": "15",
+            "misconception": null,
+            "feedback": "Oikein: 6 · 5 = 30 jaetaan kahdella, koska järjestys ei ole väliä. Tulos on 15."
+          },
+          {
+            "id": "c",
+            "text": "36",
+            "misconception": null,
+            "feedback": "6 · 6 sallisi saman täytteen kahdesti."
+          },
+          {
+            "id": "d",
+            "text": "8",
+            "misconception": null,
+            "feedback": "Summa 6 + 2 ei kuvaa valintojen määrää."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Ensimmäinen täyte 6 tavalla, toinen 5 tavalla: 30 järjestettyä paria.",
+          "Jokainen pari on laskettu kahdesti, joten 30 / 2 = 15."
+        ],
+        "final": "15"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jokainen joukko lasketaan vain kerran: jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_mc",
+        "params": {
+          "n": 6,
+          "k": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Juoksukilpailussa on 9 juoksijaa. Kulta-, hopea- ja pronssimitali jaetaan kolmelle nopeimmalle. Montako erilaista mitalijakoa on mahdollista?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "504",
+            "misconception": null,
+            "feedback": "Oikein: järjestyksellä on väliä, koska mitalit ovat erilaisia. 9·8·7 = 504."
+          },
+          {
+            "id": "b",
+            "text": "729",
+            "misconception": null,
+            "feedback": "9³ sallisi saman juoksijan usealle mitalille."
+          },
+          {
+            "id": "c",
+            "text": "84",
+            "misconception": "LPRB-06",
+            "feedback": "C(9, 3) laskee vain kolmen juoksijan joukon. Tässä on väliä sillä, kuka saa kullan, kuka hopean ja kuka pronssin."
+          },
+          {
+            "id": "d",
+            "text": "27",
+            "misconception": null,
+            "feedback": "9 · 3 ei vastaa mitalijakojen määrää."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kullan saa yksi 9:stä, hopean yksi jäljellä olevista 8:sta ja pronssin yksi 7:stä.",
+          "9·8·7 = 504."
+        ],
+        "final": "504"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jokainen joukko lasketaan vain kerran: jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_mc",
+        "params": {
+          "n": 9,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Juhlissa on 12 vierasta, ja jokainen kättelee jokaista toista vierasta tasan kerran. Montako kättelyä juhlissa on yhteensä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "144",
+            "misconception": null,
+            "feedback": "12² laskisi myös kättelyt itsensä kanssa."
+          },
+          {
+            "id": "b",
+            "text": "66",
+            "misconception": null,
+            "feedback": "Oikein: kättely on parin kesken, joten järjestyksellä ei ole väliä. C(12, 2) = 66."
+          },
+          {
+            "id": "c",
+            "text": "24",
+            "misconception": null,
+            "feedback": "12 · 2 olettaa, että jokainen kättelee vain kahta."
+          },
+          {
+            "id": "d",
+            "text": "132",
+            "misconception": "LPRB-06",
+            "feedback": "Jokainen kättely tulee tällä laskulla kahdesti: A kättelee B:tä ja B kättelee A:ta on sama kättely."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jokainen 12 vieraasta kättelee 11 muuta: 132.",
+          "Jokainen kättely on laskettu kahdesti, joten 66."
+        ],
+        "final": "66"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jokainen joukko lasketaan vain kerran: jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_mc",
+        "params": {
+          "n": 12
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Koululla on 10 ehdokasta kolmen hengen toimikuntaan, jossa kaikki ovat samanarvoisia. Aino laskee 10·9·8 = 720 ja sanoo, että toimikuntia on 720. Mikä on virhe?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hän laskee jokaisen kolmen hengen joukon 6 kertaa, joten tulos on jaettava luvulla 6.",
+            "misconception": null,
+            "feedback": "Oikein: 720 laskee jokaisen toimikunnan kaikissa 6 järjestyksessä. Oikea määrä on 720 / 6 = 120."
+          },
+          {
+            "id": "b",
+            "text": "Hänen pitäisi laskea 10 · 3 = 30, koska jokaiselle paikalle on 3 vaihtoehtoa.",
+            "misconception": null,
+            "feedback": "Paikkoja ei ole nimetty, ja ehdokkaita on 10, ei 3."
+          },
+          {
+            "id": "c",
+            "text": "Laskussa ei ole virhettä, koska ensimmäinen jäsen voidaan valita 10 tavalla.",
+            "misconception": "LPRB-06",
+            "feedback": "Valintajärjestys ei kuulu tulokseen: samat kolme henkilöä eri järjestyksessä on sama toimikunta."
+          },
+          {
+            "id": "d",
+            "text": "Hänen pitäisi vähentää tuloksesta 10.",
+            "misconception": null,
+            "feedback": "Vähennyslaskulla ei korjata kertaluvun laskemista monta kertaa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Tulo 10·9·8 laskee henkilöt valintajärjestyksessä.",
+          "Samat kolme henkilöä voidaan valita 6 järjestyksessä, joten 120 erilaista toimikuntaa."
+        ],
+        "final": "120"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jokainen joukko lasketaan vain kerran: jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_mc",
+        "params": {
+          "n": 10,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,299 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-06",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Luokasta, jossa on 10 oppilasta, valitaan 3 edustajaa. Montako erilaista edustajaryhmää voidaan valita?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 120
+        },
+        "wrong": [
+          {
+            "match": 720,
+            "misconception": "LPRB-06",
+            "feedback": "720 on järjestettyjen valintojen määrä. Samat 3 oppilasta eri järjestyksessä ovat sama ryhmä, joten jaa luvulla 3! = 6."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestyksellä ei ole väliä: C(10, 3).",
+          "720 / 6 = 120."
+        ],
+        "final": "120"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_ne",
+        "params": {
+          "n": 10,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Arvonnassa 12 osallistujan joukosta nostetaan 4 voittajaa, jotka saavat saman palkinnon. Montako erilaista voittajajoukkoa on mahdollista?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 495
+        },
+        "wrong": [
+          {
+            "match": 11880,
+            "misconception": "LPRB-06",
+            "feedback": "11880 laskee voittajat nostojärjestyksessä. Palkinto on sama, joten jaa luvulla 4! = 24."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Nostojärjestyksellä ei ole väliä: C(12, 4).",
+          "11880 / 24 = 495."
+        ],
+        "final": "495"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_ne",
+        "params": {
+          "n": 12,
+          "k": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Kisassa on 8 osallistujaa. Kulta, hopea ja pronssi jaetaan kolmelle parhaalle. Montako erilaista palkintojärjestystä on mahdollista?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 336
+        },
+        "wrong": [
+          {
+            "match": 56,
+            "misconception": "LPRB-06",
+            "feedback": "56 laskee vain kolmen hengen joukon. Tässä on väliä, kuka saa minkäkin mitalin, joten järjestystä ei jaeta pois."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Järjestyksellä on väliä: 8·7·6.",
+          "8·7·6 = 336."
+        ],
+        "final": "336"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_ne",
+        "params": {
+          "n": 8,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Ryhmässä on 6 poikaa ja 5 tyttöä. Ryhmästä valitaan kaksi poikaa ja yksi tyttö työryhmään. Montako erilaista työryhmää voidaan valita?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 75
+        },
+        "wrong": [
+          {
+            "match": 150,
+            "misconception": "LPRB-06",
+            "feedback": "150 laskee poikaparin järjestyksineen. Poikapari valitaan C(6, 2) = 15 tavalla."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pojat: C(6, 2) = 15.",
+          "Tytöt: 5 tapaa.",
+          "Tuloperiaate: 15 · 5 = 75."
+        ],
+        "final": "75"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_ne",
+        "params": {
+          "boys": 6,
+          "girls": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-06-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "cas"
+      },
+      "misconceptions": [
+        "LPRB-06"
+      ],
+      "prompt": {
+        "text": "Kerhosta, jossa on 15 jäsentä, valitaan 5 hengen joukkue. Kaisa arvioi, että vaihtoehtoja on yli 360 000. Laske joukkueiden määrä ja tarkista arvio."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 3003
+        },
+        "wrong": [
+          {
+            "match": 360360,
+            "misconception": "LPRB-06",
+            "feedback": "360360 sisältää jokaisen joukkueen 120 järjestyksessä. Jaa luvulla 5! = 120."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "15·14·13·12·11 = 360360.",
+          "Jaetaan 5! = 120: 3003.",
+          "Arvio 360 000 on yli satakertainen."
+        ],
+        "final": "3003"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Kysy ensin, onko järjestyksellä merkitystä. Jos ei ole, jaa järjestettyjen valintojen määrä järjestysten määrällä."
+      },
+      "provenance": {
+        "template": "lprb06_ne",
+        "params": {
+          "n": 15,
+          "k": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

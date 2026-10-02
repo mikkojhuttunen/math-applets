@@ -1,0 +1,295 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Kolikkoa heitetään viisi kertaa, ja jonoja on 32. Montako näistä jonoista on todennäköisempiä kuin KKKKK?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0
+        },
+        "wrong": [
+          {
+            "match": "31",
+            "misconception": "LPRB-04",
+            "feedback": "31 tarkoittaisi, että KKKKK on muita epätodennäköisempi. Jokainen tietty jono on yhtä todennäköinen, joten yksikään ei ole todennäköisempi."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kaikki 32 jonoa ovat yhtä todennäköisiä.",
+          "Yksikään jono ei ole todennäköisempi kuin KKKKK."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos heitot ovat riippumattomia ja tulokset yhtä todennäköisiä. Satunnaisen näköisyys ei lisää todennäköisyyttä."
+      },
+      "provenance": {
+        "template": "lprb04_ne",
+        "params": {
+          "n": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Kolikkoa heitetään kuusi kertaa. Mikä on todennäköisyys, että jono on täsmälleen K L L K L K? Anna murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/64"
+        },
+        "wrong": [
+          {
+            "match": "1/20",
+            "misconception": "LPRB-04",
+            "feedback": "1/20 on tapahtuman ”kolme klaavaa kuudesta” todennäköisyyden suuruusluokkaa, mutta tietty jono on vain yksi 64 jonosta."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jonoja on 2⁶ = 64, ja ne ovat yhtä todennäköisiä.",
+          "Tietyn jonon todennäköisyys on 1/64."
+        ],
+        "final": "1/64"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos heitot ovat riippumattomia ja tulokset yhtä todennäköisiä. Satunnaisen näköisyys ei lisää todennäköisyyttä."
+      },
+      "provenance": {
+        "template": "lprb04_ne",
+        "params": {
+          "n": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Noppaa heitetään neljä kertaa. Montako kertaa todennäköisempi on jono 3, 1, 4, 2 kuin jono 6, 6, 6, 6? Jos yhtä todennäköisiä, vastaa 1."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": "4",
+            "misconception": "LPRB-04",
+            "feedback": "Ensimmäinen jono ei ole todennäköisempi, vaikka se näyttää satunnaisemmalta. Kummankin todennäköisyys on 1/6⁴."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kummankin jonon todennäköisyys on (1/6)⁴.",
+          "Suhde on 1."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos heitot ovat riippumattomia ja tulokset yhtä todennäköisiä. Satunnaisen näköisyys ei lisää todennäköisyyttä."
+      },
+      "provenance": {
+        "template": "lprb04_ne",
+        "params": {
+          "n": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB5.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Kolikkoa heitetään kuusi kertaa. Montako kertaa todennäköisempää on, että täsmälleen kolme heitoista on klaavaa, kuin että jono on KKKKKK?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 20
+        },
+        "wrong": [
+          {
+            "match": "1",
+            "misconception": "LPRB-04",
+            "feedback": "Vastaus 1 pätee kahdelle tietylle jonolle, mutta ”kolme klaavaa” sisältää kaikki jonot, joissa on kolme klaavaa."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jokainen jono on yhtä todennäköinen, 1/64.",
+          "Kolme klaavaa: C(6, 3) = 20 jonoa, KKKKKK: 1 jono.",
+          "Suhde on 20."
+        ],
+        "final": "20"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos heitot ovat riippumattomia ja tulokset yhtä todennäköisiä. Satunnaisen näköisyys ei lisää todennäköisyyttä."
+      },
+      "provenance": {
+        "template": "lprb04_ne",
+        "params": {
+          "n": 6,
+          "k": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-04"
+      ],
+      "prompt": {
+        "text": "Arvonnassa nostetaan 7 numeroa 35:stä. Mikä on todennäköisyys, että rivi on täsmälleen 1, 2, 3, 4, 5, 6, 7? Anna vastaus muodossa 1/n eli kirjoita luku n."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 6724520
+        },
+        "wrong": [
+          {
+            "match": "0",
+            "misconception": "LPRB-04",
+            "feedback": "Todennäköisyys ei ole nolla: ”liian säännöllinen” rivi on yhtä mahdollinen kuin mikä tahansa muu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Eri rivejä on C(35, 7) = 6724520.",
+          "Jokaisen todennäköisyys on 1/6724520, myös rivin 1–7."
+        ],
+        "final": "6724520"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Jokainen tietty tulosjono on yhtä todennäköinen, jos heitot ovat riippumattomia ja tulokset yhtä todennäköisiä. Satunnaisen näköisyys ei lisää todennäköisyyttä."
+      },
+      "provenance": {
+        "template": "lprb04_ne",
+        "params": {
+          "n": 35,
+          "k": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 4
+      }
+    }
+  ]
+}

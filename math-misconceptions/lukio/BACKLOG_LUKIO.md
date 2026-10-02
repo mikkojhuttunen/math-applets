@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 3 |
+| Runs completed | 4 |
 | Last run | 2026-10-02 |
-| Progress | 13 of 151 planned cells in phases 0–2 generated |
+| Progress | 18 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -184,9 +184,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LLIM-01 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LLIM-02 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LDER-04 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
-| LPRB-06 | o | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
-| LPRB-01 | s | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
-| LPRB-04 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
+| LPRB-06 | X | X | o | - | - | - | o | - | - | - | - | - | - | - | - |
+| LPRB-01 | s | X | o | - | - | - | o | - | - | - | - | - | - | - | - |
+| LPRB-04 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LPRB-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LFUN-01 | o | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
 | LSTA-04 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
@@ -255,6 +255,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LLIM-01 | MC | LU-LLIM-01-MC-001…005 | P, T, H, K | none | MAA6.01 | exercises/LLIM-01/MC.json | Draft | Run 3; constant function, removable discontinuity, polynomial limit by substitution, 4/x as x grows, sin x / x justification; MAA only |
 | 2026-10-02 | LLIM-02 | MC | LU-LLIM-02-MC-001…005 | P, T, H, K | none | MAA6.01, MAY1.01 | exercises/LLIM-02/MC.json | Draft | Run 3; 0,999… = 1, 3 · 1/3, 10x − x trick, 0,777… as fraction, plausibility via midpoint; 3 MAB items via MAY1.01 |
 | 2026-10-02 | LDER-04 | MC | LU-LDER-04-MC-001…005 | P, T, H, K | none | MAA6.08, MAB8.03 | exercises/LDER-04/MC.json | Draft | Run 3; sign of f′, maximum of f from f′, plant growth speed, f′ < 0 is not f < 0, justification at x = 3; 2 MAB items |
+| 2026-10-02 | LPRB-06 | MC | LU-LPRB-06-MC-001…005 | P, T | none | MAA8.03, MAB5.07 | exercises/LPRB-06/MC.json | Draft | Run 4; committee 3 of 8, pizza toppings (MAB), medals (order matters), handshakes (MAB), justification of dividing by 3!; 2 MAB items |
+| 2026-10-02 | LPRB-06 | NE | LU-LPRB-06-NE-001…005 | P, T, H | none, cas | MAA8.03, MAB5.07 | exercises/LPRB-06/NE.json | Draft | Run 4; 3 of 10, 4 of 12 (MAB), medals, boys and girls with product principle, plausibility 5 of 15 (cas); 1 MAB item |
+| 2026-10-02 | LPRB-01 | MC | - | - | - | - | - | Failed | Run 4; the seed cell stays `s` (tests require it) and the seed already uses ID LU-LPRB-01-MC-001, so a generated batch would collide; no file kept |
+| 2026-10-02 | LPRB-01 | NE | LU-LPRB-01-NE-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-01/NE.json | Draft | Run 4; sum 9, one head of two (MAB), two heads of three, sum at most 4 (MAB), at least one six with plausibility check; answers rational; 2 MAB items |
+| 2026-10-02 | LPRB-04 | MC | LU-LPRB-04-MC-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-04/MC.json | Draft | Run 4; coin sequences, lotto rows (MAB), dice sequences, sequence vs event (MAB), family justification (MAB); evidence † for the source (kahneman1972subjective), evidence to be checked; 3 MAB items |
+| 2026-10-02 | LPRB-04 | NE | LU-LPRB-04-NE-001…005 | P, T, H | none | MAA8.04, MAB5.06 | exercises/LPRB-04/NE.json | Draft | Run 4; count of more likely sequences, P of a sequence (MAB), ratio of sequences, sequence vs event (MAB), lotto row count; evidence to be checked; 2 MAB items |
 
 ## 7. Coverage and decisions to confirm
 
