@@ -39,7 +39,7 @@ All paths are relative to `math-misconceptions/lukio/`. Edit only files inside t
 ### 1.1 Configuration (edit here)
 
 ```
-ROUTINE_ENABLED: no           # set to yes only when section 2 tasks L-T01..L-T05 are done
+ROUTINE_ENABLED: yes           # set to yes only when section 2 tasks L-T01..L-T05 are done
 ACTIVE_PHASES:   0, 1, 2      # phases whose exercise types may be generated (legend, section 4)
 TOPICS_PER_RUN:  3
 TYPES_PER_TOPIC: 2
