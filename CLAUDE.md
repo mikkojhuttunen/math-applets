@@ -7,14 +7,15 @@ Interactive maths applets for Finnish schools (grades 1-9 and upper secondary), 
 | Pipeline | Files it owns | Instructions | Branch its routine pushes to |
 |---|---|---|---|
 | Applets | `BACKLOG.md`, `INDEX.md`, `index.html`, level folders | `APPLET_SPEC.md`, `SCHEDULED_TASK_PROMPT.md` | `claude/applets` |
-| Misconception exercises, grades 7-9 | `math-misconceptions/` except `grades1-6/` | `math-misconceptions/README.md`, `math-misconceptions/ROUTINE_PROMPT.md` | `claude/exercises` |
+| Misconception exercises, grades 7-9 | `math-misconceptions/` except `grades1-6/` and `lukio/` | `math-misconceptions/README.md`, `math-misconceptions/ROUTINE_PROMPT.md` | `claude/exercises` |
 | Exercises, grades 1-6 | `math-misconceptions/grades1-6/` | `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`, `math-misconceptions/grades1-6/EXPERT_REVIEW_REQUIRED.md` | `claude/exercises-1-6` |
+| Exercises, upper secondary (lukio) | `math-misconceptions/lukio/` | `math-misconceptions/lukio/README.md`, `math-misconceptions/lukio/BACKLOG_LUKIO.md` | `claude/exercises-lukio` (planned; no routine yet) |
 | Practice pages | `harjoittele/` | `harjoittele/BACKLOG_WEB.md` | no routine; manual sessions |
 | Demo site | `demo/` | `demo/README.md` | no routine; manual sessions |
 | Site publishing | `LIVE_BACKLOG.md`, `TESTING.md`, `.nojekyll`, `.github/workflows/pages-live.yml` | `LIVE_BACKLOG.md` | no routine; manual sessions |
 | Telegram bot (paused) | `telegram-bot/` | `telegram-bot/BACKLOG_BOT.md`, `telegram-bot/BOT_ANALYSIS.md` | no routine; paused at B01 |
 
-Work on one pipeline never edits another's files. The practice pages, the demo site and the bot read the other pipelines' files read-only. `math-applets/math/OPS_7-9_oppimistavoitteet.md` is shared read-only reference (curriculum goals S1-S6). The grades 1-6 pipeline reads `math-misconceptions/sources/` (item bank) read-only; its own curriculum goals are in `math-misconceptions/grades1-6/data/curriculum/OPS_1-6_oppimistavoitteet.md`.
+Work on one pipeline never edits another's files. The practice pages, the demo site and the bot read the other pipelines' files read-only. `math-applets/math/OPS_7-9_oppimistavoitteet.md` is shared read-only reference (curriculum goals S1-S6). The grades 1-6 pipeline reads `math-misconceptions/sources/` (item bank) read-only; its own curriculum goals are in `math-misconceptions/grades1-6/data/curriculum/OPS_1-6_oppimistavoitteet.md`. The lukio pipeline reads `math-misconceptions/sources/` and the 7-9 backlog read-only; its curriculum goals (LOPS 2019) are in `math-misconceptions/lukio/data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md`.
 
 ## Layout
 
