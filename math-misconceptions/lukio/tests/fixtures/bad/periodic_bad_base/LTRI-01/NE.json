@@ -1,0 +1,76 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LTRI-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-01"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö sin x = 1/2. Anna kaikki ratkaisut radiaaneina."
+      },
+      "payload": {
+        "answer": {
+          "kind": "periodic",
+          "variable": "x",
+          "reference": "sin(x) = 1/2",
+          "unit": "rad",
+          "base": [
+            "pi/6",
+            "pi/3"
+          ],
+          "period": "2pi"
+        },
+        "wrong": [
+          {
+            "match": "pi/6",
+            "misconception": "LTRI-01",
+            "feedback": "Tämä on vain yksi ratkaisu. Sini toistuu jaksolla 2π, ja yksikköympyrällä sama sinin arvo saadaan kahdessa kohdassa."
+          },
+          {
+            "match": "x = pi/6 + n·2pi",
+            "misconception": "LTRI-01",
+            "feedback": "Toinen ratkaisuhaara puuttuu: myös sin(π − π/6) = 1/2."
+          }
+        ],
+        "input_hint": "esim. x = π/6 + n · 2π tai x = 5π/6 + n · 2π"
+      },
+      "solution": {
+        "steps": [
+          "sin x = 1/2, kun x = π/6 tai x = π − π/6 = 5π/6 välillä [0, 2π).",
+          "Sinin jakso on 2π."
+        ],
+        "final": "x = π/6 + n · 2π tai x = 5π/6 + n · 2π, n ∈ ℤ"
+      },
+      "feedback": {
+        "correct": "Oikein: kaksi ratkaisuhaaraa ja jakso 2π."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

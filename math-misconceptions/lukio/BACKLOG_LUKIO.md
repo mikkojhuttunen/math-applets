@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Version | 2026-10-01 |
+| Version | 2026-10-02 |
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
@@ -53,9 +53,10 @@ BRANCH:          claude/exercises-lukio
 
 0. If `ROUTINE_ENABLED` is `no`, change nothing and report "lukio routine not enabled".
 1. **Read** this file, the curriculum file and, for each selected topic, its row in `data/misconceptions/lukio_misconceptions.md` (for carried-over topics the row in `../sources/math_misconceptions_item_bank.xlsx`, or the 7–9 backlog section 3.2 for `EXT-`).
-2. **Select.** Go through section 3 top to bottom (sorted: priority, then suggested year, then module). For each topic collect its `o` cells in section 5 whose type is in an active phase. Skip cells with two `Failed` rows in the log. Take the first `TOPICS_PER_RUN` topics with at least one such cell, and up to `TYPES_PER_TOPIC` types each, ordered by phase, then by column order.
+2. **Select.** Go through section 3 top to bottom (sorted: priority, then suggested year, then module). For each topic collect its `o` or `s` cells in section 5 whose type is in an active phase. Skip cells with two `Failed` rows in the log. Take the first `TOPICS_PER_RUN` topics with at least one such cell, and up to `TYPES_PER_TOPIC` types each, ordered by phase, then by column order.
 3. **Generate** per selected type a parametrized template and `ITEMS_PER_TYPE` items:
    - write the generator as `generators/<template>.py` with a fixed seed; `provenance.template` is the file name without `.py`;
+   - import the helpers in `generators/gen_common.py` (`base_item`, `mc_options`, `cli`, `frac`, `show`); `generators/example_ltri01_ne.py` is the model, and `tests/fixtures/good/` has a hand-written example of each phase 0–2 type;
    - answers are computed by code (sympy), never written by hand;
    - every distractor, near-miss or injected error carries a misconception ID as its tag;
    - items cover at least two levels of P / T / H / K and state the level and `tools`;
@@ -81,14 +82,14 @@ These are done in manual sessions (Claude Code with the teacher), not by the rou
 | # | Task | Output | Status |
 |---|---|---|---|
 | L-R01 | Read YTL "hyvän vastauksen piirteet" for lyhyt and pitkä 2019–2026 and list recurring errors per module. Needs network access to ylioppilastutkinto.fi. | `data/misconceptions/ytl_error_notes.md`; new or re-rated rows in the catalogue | todo |
-| L-R02 | Check the curriculum file against ePerusteet (module contents, the † rows, MAB6/MAB7 names). Needs access to eperusteet.opintopolku.fi or oph.fi. | Curriculum file version 2 | todo |
+| L-R02 | Check the curriculum file against ePerusteet (module contents, the † rows, MAB6/MAB7 names). Needs access to eperusteet.opintopolku.fi or oph.fi. | Curriculum file version 2 | done 2026-10-02: read from the ePerusteet API; all † resolved; MAB6 = Talousmatematiikan alkeet, MAB7 = Talousmatematiikka (same content as MAA9); MAA9.05 retired; 11 new IDs; change table in curriculum file section 8 |
 | L-R03 | Evidence check of the catalogue as done for grades 1–6: trace each source, confirm the wrong answer, verify DOIs. Start with priority 1 topics. | Ratings and notes updated; bib entries without "unverified" | todo |
 | L-R04 | Decide whether lukio rows go into the shared item bank workbook (owned by the 7–9 pipeline) or stay in the Markdown catalogue. | Decision in section 7 | todo |
-| L-T01 | Schema `schema/item.schema.json`: copy of the 7–9 schema with the lukio `curriculum` block, ID patterns and answer kinds from section 0. | Schema | todo |
-| L-T02 | `scripts/verify.py`: copy of the 7–9 verifier; parse this backlog and the lukio curriculum file; add checks for `antiderivative`, `periodic`, `interval`, `rational`; check `syllabus` against the goal prefix. | Verifier | todo |
-| L-T03 | `tests/run_tests.py` with good and bad fixtures for each new check; one hand-written seed item per phase 0–2 type (log rows `Seed`). | Tests, 7 seed items | todo |
-| L-T04 | `scripts/build_bank.py` for lukio (`build/bank.json`, `build/index.json` grouped by `by_lops`, `by_module`, `by_syllabus`, `by_misconception`, `by_type`). | Build script | todo |
-| L-T05 | `ROUTINE_PROMPT_LUKIO.md` (routine settings and prompt, as the 7–9 `ROUTINE_PROMPT.md`) and a test run with "Run now". | Prompt file, first branch commit | todo |
+| L-T01 | Schema `schema/item.schema.json`: copy of the 7–9 schema with the lukio `curriculum` block, ID patterns and answer kinds from section 0. | Schema | done 2026-10-02: `schema_version` `lukio-1.0`; `curriculum` = `lops`, `g`, `syllabus`, `level`, `tools`; IDs `LU-<Topic>-<Type>-nnn`; NE answer kinds `rational`, `antiderivative`, `periodic`, `interval` added; `e` reserved for Euler's number (variables a–d, f–z) |
+| L-T02 | `scripts/verify.py`: copy of the 7–9 verifier; parse this backlog and the lukio curriculum file; add checks for `antiderivative`, `periodic`, `interval`, `rational`; check `syllabus` against the goal prefix. | Verifier | done 2026-10-02: also rejects retired goal IDs (MAA9.05), knows catalogue IDs as misconception tags, skips sample points outside the real domain. Structural and curriculum checks run on the empty bank (`VERIFY OK`); sympy checks of the new answer kinds probed 2026-10-02 with 38 throwaway items (good and bad per kind and per curriculum rule); two fixes: `ln|x|` was parsed as a product of letters, and d/dx ln|x| was not recognised as 1/x (variable now real). Known leniency: a reference ln(x) for 1/x passes because only x > 0 is evaluated. Fixtures for these go into L-T03 |
+| L-T03 | `tests/run_tests.py` with good and bad fixtures for each new check; one hand-written seed item per phase 0–2 type (log rows `Seed`). | Tests, 7 seed items | done 2026-10-02: 13 good items (7 seeds + 6 for the answer kinds rational, antiderivative incl. ln\|x\|, periodic in degrees, interval incl. empty set), 31 bad fixtures, LOPS and catalogue file checks, backlog cross-check, `--base`; seeds live in `tests/fixtures/good/` and their cells are `s` (step 1.2.2 now selects `o` or `s`, as in 7–9) |
+| L-T04 | `scripts/build_bank.py` for lukio (`build/bank.json`, `build/index.json` grouped by `by_lops`, `by_module`, `by_syllabus`, `by_misconception`, `by_type`). | Build script | done 2026-10-02: adapted copy of `../scripts/build_bank.py`; index also has `by_level`, `by_tools`, `by_g`, `by_topic`; flag `needs_cas` added; approved items only unless `--include-draft`; `build/` git-ignored by `lukio/.gitignore`; tests in `tests/run_tests.py` section 7 |
+| L-T05 | `ROUTINE_PROMPT_LUKIO.md` (routine settings and prompt, as the 7–9 `ROUTINE_PROMPT.md`) and a test run with "Run now". | Prompt file, first branch commit | partly done 2026-10-02: prompt file, `generators/gen_common.py`, reference generator `generators/example_ltri01_ne.py` (tested); local dry run of the prompt with `ROUTINE_ENABLED: yes` on a throwaway branch (LFUN-02 MC, 5 items, 2 MAB) reached `VERIFY OK` and passing tests, nothing committed. Open: the teacher creates the routine and does the two "Run now" tests in `ROUTINE_PROMPT_LUKIO.md` section 1 |
 | L-T06 | CI for lukio (unit tests and verify on pull requests touching `math-misconceptions/lukio/**`). | Workflow file; check with the site-publishing owner | todo |
 | L-T07 | Ask the practice-page pipeline to read lukio items (new `lukio` format in `harjoittele/tools/build_manifest.js`). Request only; that pipeline makes the change. | Row in `harjoittele/BACKLOG_WEB.md` | todo |
 
@@ -141,7 +142,7 @@ Priority: 1 = evidence Strong, 2 = Moderate or carried over from 1–9, 3 = Limi
 | LSTA-03 | Standard deviation as bumpiness or range | Moderate | 2 | MAA8.01 | MAB5.02 | MAA, MAB | G4 | 2→3 | |
 | LSTA-01 | Correlation shows causation | Moderate | 2 | MAA8.02 | MAB5.03 | MAA, MAB | G3, G8 | 2→3 | |
 | LSTA-02 | r ≈ 0 means no relation; r is the slope | Moderate | 2 | MAA8.02 | MAB5.03 | MAA, MAB | G4 | 2→3 | |
-| LPRB-02 | Confusion of the inverse | Moderate | 2 | MAA8.05 | - | MAA | G3, G4 | 2→3 | Conditional probability † in MAA8 |
+| LPRB-02 | Confusion of the inverse | Moderate | 2 | MAA8.05 | - | MAA | G3, G4 | 2→3 | Conditional probability is not named in LOPS 2019 (MAA8 says only "laskusäännöt"); keep items within the multiplication rule or mark them as local extension |
 | LFIN-01 | Compound interest computed as simple | Moderate | 2 | MAA9.03 | MAB7.01 | MAA, MAB | G5, G8 | 2→3 | |
 | LLOG-01 | Implication confused with its converse | Moderate | 2 | MAA11.02 | MAA3.06 | MAA | G3 | 3 | |
 | LDER-05 | Continuous implies differentiable | Moderate | 2 | MAA12.02 | MAA6.02 | MAA | G3 | 3 | Finnish sources |
@@ -149,7 +150,7 @@ Priority: 1 = evidence Strong, 2 = Moderate or carried over from 1–9, 3 = Limi
 | LEXP-04 | Exponential equation solved by dividing by the base | Limited | 3 | MAA5.06 | MAB4.03 | MAA, MAB | G4 | 2 | |
 | LTRI-04 | sin⁻¹ x read as 1/sin x | Limited | 3 | MAA5.04 | - | MAA | G2 | 2 | |
 | LINT-03 | Integral taken factor by factor; power rule for n = −1 | Limited | 3 | MAA7.02 | MAA12.05 | MAA | G2 | 2 | |
-| LFIN-02 | Nominal change taken as real change | Limited | 3 | MAB6.02 | MAA9.05 | MAB, MAA | G8 | 2 | |
+| LFIN-02 | Nominal change taken as real change | Limited | 3 | MAB6.02 | - | MAB | G8 | 2 | Index is MAB6 only (MAA9.05 retired in curriculum v2) |
 | LPRB-05 | Independent and mutually exclusive confused | Limited | 3 | MAA8.05 | - | MAA | G2 | 2→3 | |
 | LFUN-03 | f⁻¹ read as 1/f | Limited | 3 | MAA12.04 | - | MAA | G2 | 3 | |
 
@@ -184,7 +185,7 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LLIM-02 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LDER-04 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
 | LPRB-06 | o | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
-| LPRB-01 | o | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
+| LPRB-01 | s | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
 | LPRB-04 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LPRB-03 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LFUN-01 | o | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
@@ -194,8 +195,8 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | NUM-08 | o | o | - | - | - | - | o | - | - | o | - | - | - | - | - |
 | FUN-05 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | EXT-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
-| LEQU-01 | o | o | o | o | o | - | o | - | - | - | - | - | - | - | o |
-| LEQU-02 | o | o | o | o | o | - | - | - | - | - | - | - | - | - | o |
+| LEQU-01 | o | o | s | o | o | - | s | - | - | - | - | - | - | - | o |
+| LEQU-02 | o | o | o | s | o | - | - | - | - | - | - | - | - | - | o |
 | LEQU-03 | o | o | o | - | o | - | - | - | - | - | - | o | - | - | o |
 | LEQU-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-05 | o | o | o | - | - | - | o | - | - | - | - | o | - | - | - |
@@ -203,9 +204,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LVEC-03 | o | o | o | - | - | - | - | - | - | - | - | - | - | - | - |
 | LTRI-03 | o | o | - | - | - | - | - | - | o | o | - | - | - | - | - |
 | LTRI-02 | o | - | o | - | - | o | - | - | - | - | - | - | - | o | - |
-| LTRI-01 | o | o | o | o | o | - | - | - | - | - | o | - | - | - | o |
+| LTRI-01 | o | s | o | o | o | - | - | - | - | - | o | - | - | - | o |
 | LEXP-02 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
-| LEXP-01 | o | o | o | - | o | o | - | - | - | - | - | - | - | - | - |
+| LEXP-01 | o | o | o | - | o | s | - | - | - | - | - | - | - | - | - |
 | LLIM-03 | o | o | o | - | - | - | - | - | - | - | o | - | - | - | - |
 | LLIM-04 | o | - | - | - | - | - | - | o | - | - | - | - | - | o | - |
 | LDER-01 | o | o | o | o | o | o | - | - | - | - | - | - | - | - | o |
@@ -221,7 +222,7 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LLOG-01 | o | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | LDER-05 | o | - | o | - | - | - | - | - | - | - | - | - | - | o | - |
 | LGEO-01 | o | o | o | - | - | - | - | - | - | - | o | - | - | - | - |
-| LEXP-04 | o | o | o | - | o | - | - | - | - | - | - | - | - | - | - |
+| LEXP-04 | o | o | o | - | s | - | - | - | - | - | - | - | - | - | - |
 | LTRI-04 | o | o | - | - | - | - | - | - | - | - | - | - | - | - | - |
 | LINT-03 | o | o | o | - | - | - | - | - | - | - | - | - | - | - | - |
 | LFIN-02 | o | o | - | - | - | - | - | - | - | - | - | - | - | - | - |
@@ -234,6 +235,13 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 
 | Date | Topic | Type | Item IDs | Levels | Tools | LOPS ID | Location | Status | Note |
 |---|---|---|---|---|---|---|---|---|---|
+| 2026-10-02 | LPRB-01 | MC | LU-LPRB-01-MC-001 | P | none | MAB5.06 | tests/fixtures/good/LPRB-01/MC.json | Seed | Hand-written (L-T03), also a test fixture; Two dice: is sum 7 or sum 12 more likely; MAB item |
+| 2026-10-02 | LTRI-01 | NE | LU-LTRI-01-NE-001 | T | none | MAA5.04 | tests/fixtures/good/LTRI-01/NE.json | Seed | Hand-written (L-T03), also a test fixture; sin x = 1/2, all solutions in radians; answer kind periodic |
+| 2026-10-02 | LEQU-01 | ES | LU-LEQU-01-ES-001 | T | none | MAA2.05 | tests/fixtures/good/LEQU-01/ES.json | Seed | Hand-written (L-T03), also a test fixture; x³ = 4x divided by x, root 0 lost |
+| 2026-10-02 | LEQU-02 | SO | LU-LEQU-02-SO-001 | T | none | MAA2.05 | tests/fixtures/good/LEQU-02/SO.json | Seed | Hand-written (L-T03), also a test fixture; Order the steps of (x − 2)(x − 3) = 6: zero-product rule only after the right side is 0 |
+| 2026-10-02 | LEXP-04 | FS | LU-LEXP-04-FS-001 | P | none | MAB4.03 | tests/fixtures/good/LEXP-04/FS.json | Seed | Hand-written (L-T03), also a test fixture; 3 · 2^x = 48, missing line 2^x = 2^4; MAB item |
+| 2026-10-02 | LEXP-01 | ME | LU-LEXP-01-ME-001 | T | none | MAA5.07 | tests/fixtures/good/LEXP-01/ME.json | Seed | Hand-written (L-T03), also a test fixture; Which equal lg x + lg y; distractors lg(x + y), lg x · lg y |
+| 2026-10-02 | LEQU-01 | RP | LU-LEQU-01-RP-001 | H | none | MAA2.05 | tests/fixtures/good/LEQU-01/RP.json | Seed | Hand-written (L-T03), also a test fixture; Quadratic equation whose only solution is x = 3; x² = 3x listed as invalid |
 
 ## 7. Coverage and decisions to confirm
 

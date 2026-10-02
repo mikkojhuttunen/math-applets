@@ -54,13 +54,13 @@ Keys in the Sources column refer to `math_misconceptions_lukio.bib` in this fold
 | LSTA-03 | Standard deviation as bumpiness or range | a bar chart with uneven bar heights judged to have the larger SD | SD measures spread around the mean | MAA8.01 (MAB5.02) | MAA, MAB | Moderate | delmas2005exploring | |
 | LSTA-04 | Confidence interval read as a probability about the true value | "95 % probability that μ lies in [12,1; 13,4]" | 95 % of intervals built this way contain μ | MAB9.04 | MAB | Strong | hoekstra2014robust, sotos2007students | Adults and researchers; sensitive for lyhyt |
 | LPRB-01 | Equiprobability bias | sums 7 and 12 with two dice equally likely | P(7) = 6/36, P(12) = 1/36 | MAA8.04 (MAB5.06) | MAA, MAB | Strong | lecoutre1992cognitive | Grows with instruction |
-| LPRB-02 | Confusion of the inverse: P(A\|B) = P(B\|A) | positive test ⇒ 99 % sick when the test is 99 % sensitive | depends on the base rate | MAA8.05 | MAA | Moderate | falk1986conditional †, batanero2005high | Conditional probability † in MAA8 |
+| LPRB-02 | Confusion of the inverse: P(A\|B) = P(B\|A) | positive test ⇒ 99 % sick when the test is 99 % sensitive | depends on the base rate | MAA8.05 | MAA | Moderate | falk1986conditional †, batanero2005high | Conditional probability is not named in LOPS 2019 MAA8 (curriculum v2) |
 | LPRB-03 | Conjunction fallacy | P(A and B) judged larger than P(A) | P(A ∩ B) ≤ P(A) | MAA8.05 (MAB5.06) | MAA, MAB | Strong | tversky1983extensional | |
 | LPRB-04 | Representativeness: an "irregular" sequence is more likely | HTHHT more likely than HHHHH | equal, 1/32 each | MAA8.04 (MAB5.06) | MAA, MAB | Strong | kahneman1972subjective †, fischbein1997evolution (*7–9 bib*) | Related to 7–9 PRB-01 |
 | LPRB-05 | Independent and mutually exclusive confused | disjoint events with P > 0 called independent | disjoint events with P > 0 are dependent | MAA8.05 | MAA | Limited | † | |
 | LPRB-06 | Order handled wrongly in counting | committee of 3 from 10 counted as 10·9·8 | C(10, 3) = 120 | MAA8.03 (MAB5.07) | MAA, MAB | Strong | batanero1997effect | |
 | LFIN-01 | Compound interest computed as simple interest | 2 % for 5 years = 10 % | 1,02⁵ − 1 ≈ 10,4 % | MAA9.03 (MAB7.01) | MAA, MAB | Moderate | stango2009exponential | Applied case of LEXP-03 |
-| LFIN-02 | Nominal change taken as real change | wage +3 % with inflation 4 % called a rise in purchasing power | 1,03/1,04 ≈ 0,99, a fall of about 1 % | MAB6.02 (MAA9.05) | MAB, MAA | Limited | † | No study found |
+| LFIN-02 | Nominal change taken as real change | wage +3 % with inflation 4 % called a rise in purchasing power | 1,03/1,04 ≈ 0,99, a fall of about 1 % | MAB6.02 | MAB | Limited | † | No study found; index is MAB6 only (curriculum v2) |
 | LLOG-01 | Implication confused with its converse | "if n is divisible by 6 it is even" ⇒ "if n is even it is divisible by 6" | the converse needs its own proof | MAA11.02 (MAA3.06) | MAA | Moderate | durandguerrier2003which | |
 
 ## 3. Rows from the 1–9 workbook that carry on into lukio

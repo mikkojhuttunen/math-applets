@@ -1,0 +1,97 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEXP-01",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-01-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-01"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin lg x + lg y, kun x > 0 ja y > 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "lg(x) + lg(y)",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "samples": [
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            10,
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "lg(xy)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "lg(x + y)",
+            "equivalent": false,
+            "misconception": "LEXP-01"
+          },
+          {
+            "id": "c",
+            "text": "lg x · lg y",
+            "equivalent": false,
+            "misconception": "LEXP-01"
+          },
+          {
+            "id": "d",
+            "text": "lg(yx)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "lg x + lg y = lg(xy) (tulon logaritmi).",
+          "Summan logaritmille lg(x + y) ei ole vastaavaa sääntöä."
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: logaritmien summa on tulon logaritmi."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}
