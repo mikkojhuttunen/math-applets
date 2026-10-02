@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "note": "Demo plan: school levels, seasons and topics. Written by hand. Topics with `goal` take their exercises from the practice pages' banks (harjoittele/data/manifest.json), optionally limited to one `grade`; topics with `set` take them from demo/data/lukio_items.json. The season split is a proposal for the demo, not a curriculum decision.",
+  "seasons": [
+    { "id": "syksy", "title": "Syksy" },
+    { "id": "talvi", "title": "Talvi" },
+    { "id": "kevat", "title": "Kevät" }
+  ],
+  "levels": [
+    {
+      "id": "1-3",
+      "title": "Luokat 1–3",
+      "seasons": {
+        "syksy": [
+          { "goal": "A12.S2.06", "title": "Kymmenet ja ykköset" },
+          { "goal": "A12.S2.08", "title": "Yhteen- ja vähennyslasku 0–20" }
+        ],
+        "talvi": [
+          { "goal": "A12.S2.09", "title": "Yhteen- ja vähennyslasku 0–100" },
+          { "goal": "A12.S2.12", "title": "Kertotaulut 1–5 ja 10" }
+        ],
+        "kevat": [
+          { "goal": "A36.S2.01", "title": "Paikka-arvo ja suuret luvut" },
+          { "goal": "A36.S2.04", "title": "Yhteen- ja vähennyslasku allekkain" }
+        ]
+      }
+    },
+    {
+      "id": "4-6",
+      "title": "Luokat 4–6",
+      "seasons": {
+        "syksy": [
+          { "goal": "A36.S2.04", "title": "Allekkain laskeminen (kertaus)" },
+          { "goal": "A36.S2.14", "title": "Laskeminen desimaaliluvuilla" }
+        ],
+        "talvi": [
+          { "goal": "A36.S2.11", "title": "Murtolukujen vertailu" },
+          { "goal": "A36.S2.12", "title": "Murtolukujen yhteenlasku" }
+        ],
+        "kevat": [
+          { "goal": "A36.S4.09", "title": "Piiri ja pinta-ala" },
+          { "goal": "A36.S2.01", "title": "Kymmenjärjestelmä (kertaus)" }
+        ]
+      }
+    },
+    {
+      "id": "7-9",
+      "title": "Luokat 7–9",
+      "seasons": {
+        "syksy": [
+          { "goal": "S2.01", "grade": 7, "title": "Negatiiviset luvut ja laskujärjestys" },
+          { "goal": "S2.02", "grade": 7, "title": "Murtolukujen yhteen- ja vähennyslasku" },
+          { "goal": "S2.03", "grade": 7, "title": "Murtolukujen kerto- ja jakolasku" },
+          { "goal": "S2.06", "grade": 7, "title": "Desimaaliluvut" },
+          { "goal": "S2.08", "grade": 8, "title": "Lukujoukot ja lukusuora" },
+          { "goal": "S2.10", "grade": 8, "title": "Prosenttilaskenta" },
+          { "goal": "S2.11", "grade": 8, "title": "Potenssit" },
+          { "goal": "S3.07", "grade": 9, "title": "Epäyhtälöt" },
+          { "goal": "S3.08", "grade": 9, "title": "Vaillinainen toisen asteen yhtälö" }
+        ],
+        "talvi": [
+          { "goal": "S3.01", "grade": 7, "title": "Muuttuja ja lausekkeen arvo" },
+          { "goal": "S3.02", "grade": 7, "title": "Lausekkeiden sieventäminen" },
+          { "goal": "S3.05", "grade": 7, "title": "Ensimmäisen asteen yhtälö" },
+          { "goal": "S1.04", "title": "Sanallisesta tehtävästä laskuksi" },
+          { "goal": "S3.04", "grade": 8, "title": "Polynomit" },
+          { "goal": "S4.05", "grade": 8, "title": "Suora, kulmakerroin ja vakiotermi" },
+          { "goal": "S4.07", "grade": 9, "title": "Kuvaajien tulkinta" }
+        ],
+        "kevat": [
+          { "goal": "S5.03", "grade": 7, "title": "Monikulmiot" },
+          { "goal": "S5.07", "grade": 7, "title": "Monikulmioiden piiri ja pinta-ala" },
+          { "goal": "S5.14", "grade": 7, "title": "Yksikkömuunnokset" },
+          { "goal": "S6.02", "grade": 7, "title": "Keskiarvo ja tyyppiarvo" },
+          { "goal": "S5.05", "grade": 8, "title": "Yhdenmuotoisuus ja mittakaava" },
+          { "goal": "S5.09", "grade": 8, "title": "Pythagoraan lause" },
+          { "goal": "S5.10", "grade": 9, "title": "Trigonometria suorakulmaisessa kolmiossa" },
+          { "goal": "S6.06", "grade": 9, "title": "Todennäköisyys" }
+        ]
+      }
+    },
+    {
+      "id": "pitka",
+      "title": "Lukio, pitkä matematiikka",
+      "short": "Pitkä matikka",
+      "seasons": {
+        "syksy": [
+          { "set": "MAA2-yhtalot", "title": "Paraabeli ja toisen asteen yhtälö", "course": "MAA2", "applets": ["lukio-pitka/paraabeli-toisen-asteen-juuret.html"] }
+        ],
+        "talvi": [
+          { "set": "MAA6-derivaatta", "title": "Derivaatta", "course": "MAA6", "applets": ["lukio-pitka/derivaatta-sekantti-tangentti.html"] },
+          { "set": "MAA7-yksikkoympyra", "title": "Yksikköympyrä ja trigonometria", "course": "MAA7", "applets": ["lukio-pitka/yksikkoympyra-sini-kosini.html"] }
+        ],
+        "kevat": [
+          { "set": "MAA8-eksp-log", "title": "Eksponenttifunktio ja logaritmi", "course": "MAA8", "applets": ["lukio-pitka/eksponentti-logaritmi.html"] },
+          { "set": "MAA9-integraali", "title": "Integraali", "course": "MAA9", "applets": ["lukio-pitka/integraali-riemannin-summa.html"] }
+        ]
+      }
+    },
+    {
+      "id": "lyhyt",
+      "title": "Lukio, lyhyt matematiikka",
+      "short": "Lyhyt matikka",
+      "seasons": {
+        "syksy": [
+          { "set": "MAB-toisen-asteen-malli", "title": "Toisen asteen malli ja yhtälö", "applets": ["lukio-lyhyt/makeishinnoittelu.html"] }
+        ],
+        "talvi": [
+          { "set": "MAB-prosentit-talous", "title": "Prosentit ja talousmatematiikka" }
+        ],
+        "kevat": [
+          { "set": "MAB-todennakoisyys", "title": "Todennäköisyys ja kombinatoriikka", "applets": ["lukio-lyhyt/pokerikasien-todennakoisyydet.html"] }
+        ]
+      }
+    }
+  ]
+}
