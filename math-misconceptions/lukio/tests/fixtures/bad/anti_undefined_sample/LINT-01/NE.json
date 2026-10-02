@@ -1,0 +1,77 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LINT-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LINT-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA7.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LINT-01"
+      ],
+      "prompt": {
+        "text": "Määritä integraalifunktiot: ∫ (3x² + 1/x) dx, kun x ≠ 0."
+      },
+      "payload": {
+        "answer": {
+          "kind": "antiderivative",
+          "variable": "x",
+          "integrand": "3x² + 1/x",
+          "reference": "x³ + ln|x| + C",
+          "constant": "C",
+          "samples": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x³ + ln|x|",
+            "misconception": "LINT-01",
+            "feedback": "Integroimisvakio C puuttuu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "∫ 3x² dx = x³",
+          "∫ 1/x dx = ln|x|"
+        ],
+        "final": "x³ + ln|x| + C"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

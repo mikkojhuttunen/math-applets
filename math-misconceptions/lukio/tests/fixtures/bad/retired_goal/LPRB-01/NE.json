@@ -1,0 +1,69 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04",
+          "MAA9.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta noppaa. Mikä on todennäköisyys, että silmälukujen summa on 7? Anna vastaus murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/6"
+        },
+        "wrong": [
+          {
+            "match": "1/11",
+            "misconception": "LPRB-01",
+            "feedback": "Summia 2–12 on 11, mutta ne eivät ole yhtä todennäköisiä."
+          },
+          {
+            "match": "0,17",
+            "misconception": null,
+            "feedback": "Anna tarkka arvo murtolukuna."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Suotuisia tulospareja 6, kaikkia 36.",
+          "P = 6/36 = 1/6."
+        ],
+        "final": "1/6"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

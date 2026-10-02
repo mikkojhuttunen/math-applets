@@ -2,7 +2,7 @@
 
 Exercise bank for upper secondary mathematics (lukio: MAY1, lyhyt MAB, pitkä MAA), built around documented misconceptions and linked to LOPS 2019 goal IDs. Same idea as the 7–9 pipeline one folder up, with its own files.
 
-**Status (2026-10-02): framework, schema and verifier.** No tests, generators or exercises yet; no routine. `BACKLOG_LUKIO.md` section 2 lists what has to be built before generation starts.
+**Status (2026-10-02): framework, schema, verifier and tests.** Seven hand-written seed items (test fixtures); no generators or exercises yet; no routine. `BACKLOG_LUKIO.md` section 2 lists what has to be built before generation starts.
 
 ```
 math-misconceptions/lukio/
@@ -18,7 +18,10 @@ math-misconceptions/lukio/
   schema/item.schema.json                     item schema (lukio-1.0), adapted copy of ../schema/item.schema.json
   scripts/verify.py                           verifier, adapted copy of ../scripts/verify.py; run from this folder:
                                               python scripts/verify.py --base HEAD --check-backlog
-  (planned) tests/, generators/, exercises/<TopicID>/<TypeCode>.json, scripts/build_bank.py, ROUTINE_PROMPT_LUKIO.md
+  tests/run_tests.py                          self-test of the verifier; run: python tests/run_tests.py
+  tests/fixtures/good/                        seed items (one per phase 0–2 type) and items for the lukio answer kinds
+  tests/fixtures/bad/                         one folder per check, each must be rejected
+  (planned) generators/, exercises/<TopicID>/<TypeCode>.json, scripts/build_bank.py, ROUTINE_PROMPT_LUKIO.md
 ```
 
 ## Rules

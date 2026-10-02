@@ -1,0 +1,153 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LINT-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LINT-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA7.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LINT-01",
+        "ALG-11"
+      ],
+      "prompt": {
+        "text": "Määritä integraalifunktiot: ∫ (5x − (x + 2)) dx."
+      },
+      "payload": {
+        "answer": {
+          "kind": "antiderivative",
+          "variable": "x",
+          "integrand": "5x − (x + 2)",
+          "reference": "2x² − 2x + C",
+          "constant": "C",
+          "samples": [
+            [
+              0
+            ],
+            [
+              1
+            ],
+            [
+              -2
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "2x² − 2x",
+            "misconception": "LINT-01",
+            "feedback": "Integroimisvakio C puuttuu."
+          },
+          {
+            "match": "2x² + 2x + C",
+            "misconception": "ALG-11",
+            "feedback": "Miinus koskee koko sulkua: 5x − (x + 2) = 4x − 2."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "5x − (x + 2) = 4x − 2",
+          "∫ (4x − 2) dx = 2x² − 2x + C"
+        ],
+        "final": "2x² − 2x + C"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LINT-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA7.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LINT-01"
+      ],
+      "prompt": {
+        "text": "Määritä integraalifunktiot: ∫ (3x² + 1/x) dx, kun x ≠ 0."
+      },
+      "payload": {
+        "answer": {
+          "kind": "antiderivative",
+          "variable": "x",
+          "integrand": "3x² + 1/x",
+          "reference": "x³ + ln|x| + C",
+          "constant": "C",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              -1
+            ]
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x³ + ln|x|",
+            "misconception": "LINT-01",
+            "feedback": "Integroimisvakio C puuttuu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "∫ 3x² dx = x³",
+          "∫ 1/x dx = ln|x|"
+        ],
+        "final": "x³ + ln|x| + C"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

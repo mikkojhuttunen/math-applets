@@ -1,0 +1,76 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LPRB-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LPRB-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA8.04"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LPRB-01"
+      ],
+      "prompt": {
+        "text": "Heitetään kahta tavallista noppaa ja lasketaan silmälukujen summa. Kumpi on todennäköisempää: summa 7 vai summa 12?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Summa 7",
+            "misconception": null,
+            "feedback": "Oikein: summaan 7 johtaa 6 tulosparia, summaan 12 vain yksi (6, 6)."
+          },
+          {
+            "id": "b",
+            "text": "Yhtä todennäköisiä, koska kumpikin on yksi mahdollinen summa",
+            "misconception": "LPRB-01",
+            "feedback": "Summat eivät ole yhtä todennäköisiä: laske, monellako tulosparilla kukin summa syntyy."
+          },
+          {
+            "id": "c",
+            "text": "Summa 12",
+            "misconception": null,
+            "feedback": "Summa 12 syntyy vain tulosparista (6, 6). Summaan 7 johtaa kuusi eri tulosparia."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Tulospareja on 6 · 6 = 36, ja ne ovat yhtä todennäköisiä.",
+          "Summa 7: (1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1), eli 6 paria, P = 6/36 = 1/6.",
+          "Summa 12: vain (6, 6), P = 1/36."
+        ],
+        "final": "Summa 7 on kuusi kertaa todennäköisempi."
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}
