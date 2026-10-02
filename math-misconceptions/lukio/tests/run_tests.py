@@ -47,7 +47,8 @@ if req.exists():
     text = req.read_text(encoding="utf-8").lower()
     for pkg in ("sympy", "jsonschema"):
         check(f"requirements.txt lists {pkg}", pkg in text)
-for rel in ("schema/item.schema.json", "scripts/verify.py", "scripts/build_bank.py", "README.md", BACKLOG):
+for rel in ("schema/item.schema.json", "scripts/verify.py", "scripts/build_bank.py", "generators/gen_common.py",
+            "README.md", "ROUTINE_PROMPT_LUKIO.md", BACKLOG):
     check(f"file present: {rel}", (ROOT / rel).exists())
 
 # 1. good fixtures pass
@@ -239,6 +240,18 @@ if shutil.which("git"):
         check("--base: new draft item passes", r.returncode == 0 and f"{GOOD_ITEMS + 1} item(s)" in r.stdout, r.stdout[-400:])
 else:
     print("SKIP  git not available: --base tests skipped")
+
+# 9. the reference generator produces items that pass verification
+with tempfile.TemporaryDirectory() as tmp:
+    gen = subprocess.run([sys.executable, str(ROOT / "generators" / "example_ltri01_ne.py")], capture_output=True, text=True)
+    d = Path(tmp) / "LTRI-01"
+    d.mkdir()
+    (d / "NE.json").write_text(gen.stdout, encoding="utf-8")
+    r = run("--exercises", tmp)
+    check("reference generator output verifies", gen.returncode == 0 and r.returncode == 0 and "5 item(s)" in r.stdout
+          and "not found" not in r.stdout, (gen.stderr + r.stdout)[-400:])
+    gen2 = subprocess.run([sys.executable, str(ROOT / "generators" / "example_ltri01_ne.py")], capture_output=True, text=True)
+    check("reference generator is deterministic", gen.stdout == gen2.stdout)
 
 print()
 if failures:
