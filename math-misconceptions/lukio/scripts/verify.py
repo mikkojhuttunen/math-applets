@@ -62,7 +62,7 @@ class Unsupported(Exception):
 # ----------------------------------------------------------------- parsing
 def norm(s):
     s = s.strip()
-    s = re.sub(r"\|([^|]+)\|", r"Abs(\1)", s)
+    s = re.sub(r"\|([^|]+)\|", r"(Abs(\1))", s)  # parenthesised so that ln|x| -> ln((Abs(x)))
     for a, b in (("−", "-"), ("–", "-"), ("—", "-"), ("×", "*"), ("·", "*"), ("÷", "/"), ("π", "pi"),
                  ("½", "(1/2)"), ("²", "**2"), ("³", "**3"), ("^", "**"), ("≤", "<="), ("≥", ">="), ("°", "")):
         s = s.replace(a, b)
@@ -270,17 +270,19 @@ def check_rational(a, wrong):
 
 def check_antiderivative(a, wrong):
     errs = []
-    x, c = sp.Symbol(a["variable"]), sp.Symbol(a["constant"])
-    f, F = parse(a["integrand"]), parse(a["reference"])
+    c = sp.Symbol(a["constant"])
+    x = sp.Symbol(a["variable"], real=True)  # real, so that d/dx ln|x| = 1/x
+    to_real = {sp.Symbol(a["variable"]): x}
+    f, F = parse(a["integrand"]).subs(to_real), parse(a["reference"]).subs(to_real)
     if c not in F.free_symbols:
         errs.append(f"reference '{a['reference']}' does not contain the constant {a['constant']}")
     if not numeric_equal(sp.diff(F, x), f):
         errs.append(f"the derivative of the reference is not the integrand '{a['integrand']}'")
-    problem = finite_at(F.subs(c, 0), [a["variable"]], a["samples"])
+    problem = finite_at(parse(a["reference"]).subs(c, 0), [a["variable"]], a["samples"])
     if problem:
         errs.append(problem)
     for w in wrong:
-        W = parse(str(w["match"]))
+        W = parse(str(w["match"])).subs(to_real)
         if c in W.free_symbols and numeric_equal(sp.diff(W, x), f):
             errs.append(f"wrong answer '{w['match']}' is a correct antiderivative with the constant")
     return errs
