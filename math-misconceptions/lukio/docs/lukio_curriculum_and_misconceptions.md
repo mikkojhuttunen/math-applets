@@ -29,12 +29,14 @@ The national curriculum for upper secondary school is **Lukion opetussuunnitelma
 
 **Limit of this session.** The cloud environment's network policy blocked oph.fi, eperusteet.opintopolku.fi, peda.net and ylioppilastutkinto.fi, so no page was read in full. The module structure and credits were confirmed from several independent search results and match the national hour allocation (lyhyt 12 op, pitkä 20 op compulsory). The core contents are condensed from search excerpts; uncertain placements are marked † in the curriculum file. To check the wording, either allow those hosts in the environment's network settings or read ePerusteet yourself.
 
+**Update 2026-10-02 (L-R02).** ePerusteet was readable through its API (`eperusteet-service/api/external/peruste/6828810`). The curriculum file was checked against the official text and is now version 2; all † rows are resolved and the changes are listed in its section 8.
+
 ### Structure
 
 | | Lyhyt (MAB) | Pitkä (MAA) |
 | --- | --- | --- |
 | Common module | MAY1 Luvut ja yhtälöt, 2 op | MAY1 Luvut ja yhtälöt, 2 op |
-| Compulsory | MAB2 Lausekkeet ja yhtälöt 2, MAB3 Geometria 2, MAB4 Matemaattisia malleja 2, MAB5 Tilastot ja todennäköisyys 2, MAB6 Talousmatematiikka I 1, MAB7 Talousmatematiikka II 1 | MAA2 Funktiot ja yhtälöt 1 3, MAA3 Geometria 2, MAA4 Analyyttinen geometria ja vektorit 3, MAA5 Funktiot ja yhtälöt 2 2, MAA6 Derivaatta 3, MAA7 Integraalilaskenta 2, MAA8 Tilastot ja todennäköisyys 2, MAA9 Talousmatematiikka 1 |
+| Compulsory | MAB2 Lausekkeet ja yhtälöt 2, MAB3 Geometria 2, MAB4 Matemaattisia malleja 2, MAB5 Tilastot ja todennäköisyys 2, MAB6 Talousmatematiikan alkeet 1, MAB7 Talousmatematiikka 1 | MAA2 Funktiot ja yhtälöt 1 3, MAA3 Geometria 2, MAA4 Analyyttinen geometria ja vektorit 3, MAA5 Funktiot ja yhtälöt 2 2, MAA6 Derivaatta 3, MAA7 Integraalilaskenta 2, MAA8 Tilastot ja todennäköisyys 2, MAA9 Talousmatematiikka 1 |
 | Compulsory total | 12 op | 20 op |
 | National optional | MAB8 Matemaattinen analyysi 2, MAB9 Tilastolliset ja todennäköisyysjakaumat 2 | MAA10 3D-geometria 2, MAA11 Algoritmit ja lukuteoria 2, MAA12 Analyysi ja jatkuva jakauma 2 |
 
@@ -80,5 +82,5 @@ Lukio students are mostly 16–19. In Finland the age limit for a child's own co
 1. **Done: curriculum file.** LOPS 2019 modules with IDs, levels and a proposed year split.
 2. **Done: misconception catalogue, draft.** 45 lukio rows plus 18 rows carried over from the 1–9 workbook and the 7–9 seeds.
 3. **Proposed: backlog and framework.** `../BACKLOG_LUKIO.md`, which starts with the tooling the routine needs.
-4. **To do: verify the curriculum wording** against ePerusteet (task L-R02).
+4. **Done: curriculum wording verified** against ePerusteet (task L-R02, curriculum file version 2).
 5. **To do: evidence check** of the catalogue and a pass through YTL marking notes (L-R01, L-R03).

@@ -2,7 +2,7 @@
 
 | | |
 |---|---|
-| Version | 2026-10-01 |
+| Version | 2026-10-02 |
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
@@ -81,7 +81,7 @@ These are done in manual sessions (Claude Code with the teacher), not by the rou
 | # | Task | Output | Status |
 |---|---|---|---|
 | L-R01 | Read YTL "hyvän vastauksen piirteet" for lyhyt and pitkä 2019–2026 and list recurring errors per module. Needs network access to ylioppilastutkinto.fi. | `data/misconceptions/ytl_error_notes.md`; new or re-rated rows in the catalogue | todo |
-| L-R02 | Check the curriculum file against ePerusteet (module contents, the † rows, MAB6/MAB7 names). Needs access to eperusteet.opintopolku.fi or oph.fi. | Curriculum file version 2 | todo |
+| L-R02 | Check the curriculum file against ePerusteet (module contents, the † rows, MAB6/MAB7 names). Needs access to eperusteet.opintopolku.fi or oph.fi. | Curriculum file version 2 | done 2026-10-02: read from the ePerusteet API; all † resolved; MAB6 = Talousmatematiikan alkeet, MAB7 = Talousmatematiikka (same content as MAA9); MAA9.05 retired; 11 new IDs; change table in curriculum file section 8 |
 | L-R03 | Evidence check of the catalogue as done for grades 1–6: trace each source, confirm the wrong answer, verify DOIs. Start with priority 1 topics. | Ratings and notes updated; bib entries without "unverified" | todo |
 | L-R04 | Decide whether lukio rows go into the shared item bank workbook (owned by the 7–9 pipeline) or stay in the Markdown catalogue. | Decision in section 7 | todo |
 | L-T01 | Schema `schema/item.schema.json`: copy of the 7–9 schema with the lukio `curriculum` block, ID patterns and answer kinds from section 0. | Schema | todo |
@@ -141,7 +141,7 @@ Priority: 1 = evidence Strong, 2 = Moderate or carried over from 1–9, 3 = Limi
 | LSTA-03 | Standard deviation as bumpiness or range | Moderate | 2 | MAA8.01 | MAB5.02 | MAA, MAB | G4 | 2→3 | |
 | LSTA-01 | Correlation shows causation | Moderate | 2 | MAA8.02 | MAB5.03 | MAA, MAB | G3, G8 | 2→3 | |
 | LSTA-02 | r ≈ 0 means no relation; r is the slope | Moderate | 2 | MAA8.02 | MAB5.03 | MAA, MAB | G4 | 2→3 | |
-| LPRB-02 | Confusion of the inverse | Moderate | 2 | MAA8.05 | - | MAA | G3, G4 | 2→3 | Conditional probability † in MAA8 |
+| LPRB-02 | Confusion of the inverse | Moderate | 2 | MAA8.05 | - | MAA | G3, G4 | 2→3 | Conditional probability is not named in LOPS 2019 (MAA8 says only "laskusäännöt"); keep items within the multiplication rule or mark them as local extension |
 | LFIN-01 | Compound interest computed as simple | Moderate | 2 | MAA9.03 | MAB7.01 | MAA, MAB | G5, G8 | 2→3 | |
 | LLOG-01 | Implication confused with its converse | Moderate | 2 | MAA11.02 | MAA3.06 | MAA | G3 | 3 | |
 | LDER-05 | Continuous implies differentiable | Moderate | 2 | MAA12.02 | MAA6.02 | MAA | G3 | 3 | Finnish sources |
@@ -149,7 +149,7 @@ Priority: 1 = evidence Strong, 2 = Moderate or carried over from 1–9, 3 = Limi
 | LEXP-04 | Exponential equation solved by dividing by the base | Limited | 3 | MAA5.06 | MAB4.03 | MAA, MAB | G4 | 2 | |
 | LTRI-04 | sin⁻¹ x read as 1/sin x | Limited | 3 | MAA5.04 | - | MAA | G2 | 2 | |
 | LINT-03 | Integral taken factor by factor; power rule for n = −1 | Limited | 3 | MAA7.02 | MAA12.05 | MAA | G2 | 2 | |
-| LFIN-02 | Nominal change taken as real change | Limited | 3 | MAB6.02 | MAA9.05 | MAB, MAA | G8 | 2 | |
+| LFIN-02 | Nominal change taken as real change | Limited | 3 | MAB6.02 | - | MAB | G8 | 2 | Index is MAB6 only (MAA9.05 retired in curriculum v2) |
 | LPRB-05 | Independent and mutually exclusive confused | Limited | 3 | MAA8.05 | - | MAA | G2 | 2→3 | |
 | LFUN-03 | f⁻¹ read as 1/f | Limited | 3 | MAA12.04 | - | MAA | G2 | 3 | |
 
