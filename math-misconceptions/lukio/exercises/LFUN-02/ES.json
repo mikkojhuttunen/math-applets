@@ -1,0 +1,283 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LFUN-02",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen pihan sivu on x + 2 metriä ja pinta-ala 25 m². Oppilas ratkaisi sivun x näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(x + 2)² = 25",
+          "x² + 4 = 25",
+          "x² = 21",
+          "x = √21 tai x = −√21"
+        ],
+        "error_line": 2,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 neliö on jaettu summan yli: (x + 2)² ≠ x² + 4.",
+          "Oikein: (x + 2)² = x² + 4x + 4, tai otetaan neliöjuuri: x + 2 = 5 tai x + 2 = −5."
+        ],
+        "final": "x = 3 tai x = −7"
+      },
+      "feedback": {
+        "correct": "Oikein: summan neliö ei ole neliöiden summa, keskimmäinen tulo puuttuu.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_es",
+        "params": {
+          "a": 2,
+          "m": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Laatan sivun pituus on 2x + 5 metriä. Sen pinta-alasta vähennetään 25 m². Oppilas sieventi lausekkeen näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(2x + 5)² − 25",
+          "4x² + 25 − 25",
+          "4x²"
+        ],
+        "error_line": 2,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 summan (2x + 5) neliö on laskettu termeittäin.",
+          "Oikein: (2x + 5)² = 4x² + 20x + 25, joten tulos on 4x² + 20x."
+        ],
+        "final": "4x² + 20x"
+      },
+      "feedback": {
+        "correct": "Oikein: binomin neliössä on aina keskimmäinen tulo.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_es",
+        "params": {
+          "p": 2,
+          "q": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.03"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laski sin(π/6 + π/3) tarkan arvon näin. Napauta rivi, jossa on virhe. Vihje: sinin arvo ei ylitä lukua 1."
+      },
+      "payload": {
+        "lines": [
+          "sin(π/6 + π/3)",
+          "sin(π/6) + sin(π/3)",
+          "1/2 + √3/2"
+        ],
+        "error_line": 2,
+        "error_type": "sine_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 sini on jaettu summan yli, vaikka se ei ole lineaarinen.",
+          "Oikein: π/6 + π/3 = π/2, ja sin(π/2) = 1."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: sini ei jaa summaa. Tulos 1/2 + √3/2 ≈ 1,37 olisi myös suurempi kuin 1.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_es",
+        "params": {
+          "a": "pi/6",
+          "b": "pi/3"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön √(x² + 9) = 5 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "√(x² + 9) = 5",
+          "x + 3 = 5",
+          "x = 2"
+        ],
+        "error_line": 2,
+        "error_type": "root_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 neliöjuuri on jaettu summan yli: √(x² + 9) ≠ x + 3.",
+          "Oikein: korotetaan neliöön, x² + 9 = 25, joten x² = 16 ja x = 4 tai x = −4."
+        ],
+        "final": "x = 4 tai x = −4"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuri ei jaa summaa. Tarkista sijoittamalla: √(2² + 9) = √13 ≠ 5.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_es",
+        "params": {
+          "root": "sqrt(x^2+9)=5"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LEXP-01"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen ln(2x) + ln(3x), kun x > 0. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "ln(2x) + ln(3x)",
+          "ln(2x + 3x)",
+          "ln(5x)"
+        ],
+        "error_line": 2,
+        "error_type": "log_sum_as_log_of_sum"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 logaritmien summa on muutettu summan logaritmiksi. Logaritmien summa on tulon logaritmi.",
+          "Oikein: ln(2x) + ln(3x) = ln(2x · 3x) = ln(6x²)."
+        ],
+        "final": "ln(6x²)"
+      },
+      "feedback": {
+        "correct": "Oikein: ln a + ln b = ln(ab), ei ln(a + b).",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_es",
+        "params": {
+          "p": 2,
+          "q": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

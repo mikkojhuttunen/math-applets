@@ -1,0 +1,318 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEXP-03",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Bakteerien määrä kaksinkertaistuu joka tunti. Alussa niitä on 100. Merkitään n = bakteerien määrä 3 tunnin kuluttua. Kirjoita yhtälö, jonka ainoa ratkaisu on n:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "n",
+          "value": 800
+        },
+        "checks": {
+          "valid": [
+            "n = 100*2^3",
+            "n = 100*2*2*2"
+          ],
+          "invalid": [
+            "n = 100 + 100*3",
+            "n = 100*2*3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Jokaisella tunnilla määrä kerrotaan kahdella: n = 100 · 2³ = 800.",
+          "Lisäys 100 bakteeria tunnissa (yhteensä 400) olisi lineaarista kasvua."
+        ],
+        "final": "esim. n = 100 · 2^3 (n = 800)"
+      },
+      "feedback": {
+        "correct": "Oikein: määrä kerrotaan kasvutekijällä joka tunti.",
+        "generic_wrong": "Eksponentiaalisessa kasvussa muutos kerrotaan joka jaksolla samalla kasvutekijällä; se ei ole sama lisäys joka jaksolla."
+      },
+      "provenance": {
+        "template": "lexp03_rp",
+        "params": {
+          "n0": 100,
+          "hours": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02",
+          "MAB7.01"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Talletus 1000 € kasvaa 10 % vuodessa korkoa korolle. Merkitään v = talletuksen arvo 2 vuoden kuluttua. Kirjoita yhtälö, jonka ainoa ratkaisu on v:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "v",
+          "value": 1210
+        },
+        "checks": {
+          "valid": [
+            "v = 1000*(11/10)^2",
+            "v = 1000*(11/10)*(11/10)"
+          ],
+          "invalid": [
+            "v = 1000*(1 + 2*1/10)",
+            "v = 1000*(11/10)*2"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kasvutekijä on 1 + 10/100 = 11/10, joten v = 1000 · (11/10)² = 1210.",
+          "Kahden vuoden 10 %:n lisäys 1000:stä (yhteensä 1200) unohtaa koron koron."
+        ],
+        "final": "esim. v = 1000 · 1,1² (v = 1210)"
+      },
+      "feedback": {
+        "correct": "Oikein: korko lasketaan joka vuosi edellisen vuoden arvosta.",
+        "generic_wrong": "Eksponentiaalisessa kasvussa muutos kerrotaan joka jaksolla samalla kasvutekijällä; se ei ole sama lisäys joka jaksolla."
+      },
+      "provenance": {
+        "template": "lexp03_rp",
+        "params": {
+          "k0": 1000,
+          "years": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Kasvusto muuttuu 3 vuodessa 8-kertaiseksi, ja kasvutekijä q on joka vuosi sama. Kirjoita yhtälö, jonka ainoa ratkaisu on q:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "q",
+          "value": 2
+        },
+        "checks": {
+          "valid": [
+            "q^3 = 8",
+            "q^3 − 8 = 0"
+          ],
+          "invalid": [
+            "3*q = 8",
+            "q = 8^3"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kolmen vuoden kasvutekijä on q · q · q = q³, joten q³ = 8.",
+          "Siis q = 2. Yhtälö 3q = 8 olisi lineaarinen malli."
+        ],
+        "final": "esim. q^3 = 8 (q = 2)"
+      },
+      "feedback": {
+        "correct": "Oikein: kasvutekijät kerrotaan keskenään.",
+        "generic_wrong": "Eksponentiaalisessa kasvussa muutos kerrotaan joka jaksolla samalla kasvutekijällä; se ei ole sama lisäys joka jaksolla."
+      },
+      "provenance": {
+        "template": "lexp03_rp",
+        "params": {
+          "years": 3,
+          "total": 8
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Määrä kaksinkertaistuu joka tunti. Merkitään t = aika tunteina, jonka kuluttua määrä on 32-kertainen alkuarvoon verrattuna. Kirjoita yhtälö, jonka ainoa ratkaisu on t:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "t",
+          "value": 5
+        },
+        "checks": {
+          "valid": [
+            "2^t = 32",
+            "2^t = 2^5"
+          ],
+          "invalid": [
+            "2*t = 32",
+            "t = 32"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Tunnin kuluttua tekijä on 2, t tunnin kuluttua 2^t. Yhtälö 2^t = 32 antaa t = 5.",
+          "Lineaarinen malli 2t = 32 antaisi t = 16, joka on liian pitkä aika."
+        ],
+        "final": "esim. 2^t = 32 (t = 5)"
+      },
+      "feedback": {
+        "correct": "Oikein: viidessä tunnissa kerrotaan kahdella viisi kertaa.",
+        "generic_wrong": "Eksponentiaalisessa kasvussa muutos kerrotaan joka jaksolla samalla kasvutekijällä; se ei ole sama lisäys joka jaksolla."
+      },
+      "provenance": {
+        "template": "lexp03_rp",
+        "params": {
+          "base": 2,
+          "total": 32
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Koneen arvo laskee 50 % joka vuosi. Alussa arvo on 800 €. Merkitään k = arvo 3 vuoden kuluttua. Kirjoita yhtälö, jonka ainoa ratkaisu on k:n oikea arvo, ja tarkista, ettei arvo ole negatiivinen."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 100
+        },
+        "checks": {
+          "valid": [
+            "k = 800*(1/2)^3",
+            "k = 800/2^3"
+          ],
+          "invalid": [
+            "k = 800 − 3*400",
+            "k = 800/(2*3)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Arvo puolittuu joka vuosi: k = 800 · (1/2)³ = 100.",
+          "Vähennys 400 € vuodessa antaisi -400 €, mikä on mahdoton negatiivinen arvo."
+        ],
+        "final": "esim. k = 800 · (1/2)^3 (k = 100)"
+      },
+      "feedback": {
+        "correct": "Oikein: arvo lähestyy nollaa mutta ei muutu negatiiviseksi.",
+        "generic_wrong": "Eksponentiaalisessa kasvussa muutos kerrotaan joka jaksolla samalla kasvutekijällä; se ei ole sama lisäys joka jaksolla."
+      },
+      "provenance": {
+        "template": "lexp03_rp",
+        "params": {
+          "k0": 800,
+          "years": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

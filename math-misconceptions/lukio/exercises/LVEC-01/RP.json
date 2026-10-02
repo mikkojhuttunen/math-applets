@@ -1,0 +1,330 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-01",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit a ja b ovat kohtisuorassa, |a| = 3 ja |b| = 4. Merkitään s = |a + b|². Kirjoita yhtälö, jonka ainoa ratkaisu on s:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "s",
+          "value": 25
+        },
+        "checks": {
+          "valid": [
+            "s = 3^2 + 4^2",
+            "s − 9 = 16"
+          ],
+          "invalid": [
+            "s = (3 + 4)^2",
+            "s = 3 + 4"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kohtisuorassa olevien vektorien summalle pätee Pythagoras: |a + b|² = |a|² + |b|² = 9 + 16 = 25."
+        ],
+        "final": "esim. s = 3² + 4² (s = 25)"
+      },
+      "feedback": {
+        "correct": "Oikein: kohtisuorilla vektoreilla pituuksien neliöt lasketaan yhteen.",
+        "generic_wrong": "Vektorien summan pituus ei yleensä ole pituuksien summa. Laske summavektorin komponenteista tai käytä pistetuloa."
+      },
+      "provenance": {
+        "template": "lvec01_rp",
+        "params": {
+          "p": 3,
+          "q": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-RP-002",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Robotti ajaa 6 m itään ja sitten 8 m pohjoiseen. Merkitään d = (etäisyys lähtöpisteestä)². Kirjoita yhtälö, jonka ainoa ratkaisu on d:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "d",
+          "value": 100
+        },
+        "checks": {
+          "valid": [
+            "d = 6^2 + 8^2",
+            "d = 100"
+          ],
+          "invalid": [
+            "d = (6 + 8)^2",
+            "d = 6 + 8"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Siirtymät ovat kohtisuorassa: d = 6² + 8² = 100.",
+          "Etäisyys on √100 = 10 m, ei 14 m."
+        ],
+        "final": "esim. d = 6² + 8² (d = 100)"
+      },
+      "feedback": {
+        "correct": "Oikein: etäisyys on pituuksien summaa lyhyempi, koska suunta muuttuu.",
+        "generic_wrong": "Vektorien summan pituus ei yleensä ole pituuksien summa. Laske summavektorin komponenteista tai käytä pistetuloa."
+      },
+      "provenance": {
+        "template": "lvec01_rp",
+        "params": {
+          "east": 6,
+          "north": 8
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-RP-003",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit a = (1, 2) ja b = (2, −1). Merkitään w = |a + b|². Kirjoita yhtälö, jonka ainoa ratkaisu on w:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "w",
+          "value": 10
+        },
+        "checks": {
+          "valid": [
+            "w = 3^2 + 1^2",
+            "w = 5 + 5"
+          ],
+          "invalid": [
+            "w = (sqrt(5) + sqrt(5))^2",
+            "w = 2*sqrt(5)"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "a + b = (3, 1), joten |a + b|² = 3² + 1² = 10.",
+          "Pituuksien summan neliö olisi (√5 + √5)² = 20, eli eri luku."
+        ],
+        "final": "esim. w = 3² + 1² (w = 10)"
+      },
+      "feedback": {
+        "correct": "Oikein: lasketaan summavektorin komponenteista.",
+        "generic_wrong": "Vektorien summan pituus ei yleensä ole pituuksien summa. Laske summavektorin komponenteista tai käytä pistetuloa."
+      },
+      "provenance": {
+        "template": "lvec01_rp",
+        "params": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            2,
+            -1
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-RP-004",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07",
+          "MAA4.08"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorien a ja b välinen kulma on 60°, |a| = 3 ja |b| = 5. Merkitään s = |a + b|². Kirjoita yhtälö, jonka ainoa ratkaisu on s:n oikea arvo."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "s",
+          "value": 49
+        },
+        "checks": {
+          "valid": [
+            "s = 3^2 + 5^2 + 2*3*5*cos(pi/3)",
+            "s = 49"
+          ],
+          "invalid": [
+            "s = (3 + 5)^2",
+            "s = 3^2 + 5^2"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "|a + b|² = |a|² + |b|² + 2 a·b, ja a·b = 3·5·cos 60° = 15/2.",
+          "Siis s = 9 + 25 + 15 = 49, ja |a + b| = 7."
+        ],
+        "final": "esim. s = 3² + 5² + 2·3·5·cos 60° (s = 49)"
+      },
+      "feedback": {
+        "correct": "Oikein: kulma otetaan huomioon pistetulon kautta. Pituus 7 on pienempi kuin 3 + 5 = 8.",
+        "generic_wrong": "Vektorien summan pituus ei yleensä ole pituuksien summa. Laske summavektorin komponenteista tai käytä pistetuloa."
+      },
+      "provenance": {
+        "template": "lvec01_rp",
+        "params": {
+          "p": 3,
+          "q": 5,
+          "angle_deg": 60
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-RP-005",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit a = (3, 4) ja b = (−3, −4). Merkitään t = |a + b|². Kirjoita yhtälö, jonka ainoa ratkaisu on t:n oikea arvo, ja mieti, miksi tulos on järkevä."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "t",
+          "value": 0
+        },
+        "checks": {
+          "valid": [
+            "t = (3 − 3)^2 + (4 − 4)^2",
+            "t = 0"
+          ],
+          "invalid": [
+            "t = (5 + 5)^2",
+            "t = 5 + 5"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Summavektori on (3 − 3, 4 − 4) = (0, 0), joten t = 0.",
+          "Vektorit ovat vastakkaiset ja yhtä pitkät, joten ne kumoavat toisensa; pituuksien summa 5 + 5 = 10 ei kerro mitään summavektorin pituudesta."
+        ],
+        "final": "esim. t = (3 − 3)² + (4 − 4)² (t = 0)"
+      },
+      "feedback": {
+        "correct": "Oikein: vastakkaiset vektorit kumoavat toisensa, summan pituus on 0.",
+        "generic_wrong": "Vektorien summan pituus ei yleensä ole pituuksien summa. Laske summavektorin komponenteista tai käytä pistetuloa."
+      },
+      "provenance": {
+        "template": "lvec01_rp",
+        "params": {
+          "a": [
+            3,
+            4
+          ],
+          "b": [
+            -3,
+            -4
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

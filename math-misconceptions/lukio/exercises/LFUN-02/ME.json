@@ -1,0 +1,456 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LFUN-02",
+  "type": "ME",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ME-001",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laatan sivu on x + 4 metriä. Mitkä lausekkeista antavat laatan pinta-alan (m²)? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "(x + 4)^2",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 8x + 16",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "(x + 4)(x + 4)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "c",
+            "text": "x² + 4x + 16",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "d",
+            "text": "x² + 16",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pinta-ala on sivun neliö: (x + 4)² = (x + 4)(x + 4).",
+          "Kerrotaan auki: x² + 4x + 4x + 16 = x² + 8x + 16."
+        ],
+        "final": "a ja b"
+      },
+      "feedback": {
+        "correct": "Oikein: funktio ei jaa summaa, käytä sen omia laskusääntöjä.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Sijoita lukuja ja vertaa."
+      },
+      "provenance": {
+        "template": "lfun02_me",
+        "params": {
+          "reference": "(x + 4)^2"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ME-002",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Pellon sivu on 3x − 2 metriä. Mitkä lausekkeista ovat yhtä suuria kuin pellon pinta-ala? Perustele valintasi sijoittamalla x = 1."
+      },
+      "payload": {
+        "reference": "(3x - 2)^2",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "(3x − 2)(3x − 2)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "9x² − 4",
+            "equivalent": false,
+            "misconception": "ALG-09"
+          },
+          {
+            "id": "c",
+            "text": "9x² + 4",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          },
+          {
+            "id": "d",
+            "text": "9x² − 12x + 4",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kun x = 1, sivu on 1 ja pinta-ala 1.",
+          "9x² + 4 antaa 13 ja 9x² − 4 antaa 5, joten ne eivät kelpaa; 9x² − 12x + 4 antaa 1."
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: funktio ei jaa summaa, käytä sen omia laskusääntöjä.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Sijoita lukuja ja vertaa."
+      },
+      "provenance": {
+        "template": "lfun02_me",
+        "params": {
+          "reference": "(3x - 2)^2"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ME-003",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin sin(2x) kaikilla x:n arvoilla? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "sin(2*x)",
+        "variables": [
+          "x"
+        ],
+        "samples": [
+          [
+            1
+          ],
+          [
+            2
+          ],
+          [
+            3
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "2 sin(x)",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          },
+          {
+            "id": "b",
+            "text": "sin(x) + sin(x)cos(x)",
+            "equivalent": false,
+            "misconception": "LTRI-02"
+          },
+          {
+            "id": "c",
+            "text": "2 sin(x) cos(x)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "sin(x)cos(x) + cos(x)sin(x)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kaksinkertaisen kulman kaava: sin(2x) = 2 sin x cos x.",
+          "Sini ei ole lineaarinen: sin(2x) ≠ 2 sin x. Kokeile x = π/2."
+        ],
+        "final": "c ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: funktio ei jaa summaa, käytä sen omia laskusääntöjä.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Sijoita lukuja ja vertaa."
+      },
+      "provenance": {
+        "template": "lfun02_me",
+        "params": {
+          "reference": "sin(2*x)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ME-004",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin √(x² + y²), kun x > 0 ja y > 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "sqrt(x^2 + y^2)",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "samples": [
+          [
+            3,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            5
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "√(y² + x²)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "b",
+            "text": "√(x²) + √(y²)",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          },
+          {
+            "id": "c",
+            "text": "x + y",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          },
+          {
+            "id": "d",
+            "text": "(x² + y²)^(1/2)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Juuri on potenssi 1/2, joten √(x² + y²) = (x² + y²)^(1/2) ja yhteenlaskun järjestys ei vaikuta.",
+          "Kun x = 3 ja y = 4, arvo on 5, mutta x + y = 7."
+        ],
+        "final": "a ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: funktio ei jaa summaa, käytä sen omia laskusääntöjä.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Sijoita lukuja ja vertaa."
+      },
+      "provenance": {
+        "template": "lfun02_me",
+        "params": {
+          "reference": "sqrt(x^2 + y^2)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-ME-005",
+      "type": "ME",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LEXP-01"
+      ],
+      "prompt": {
+        "text": "Mitkä lausekkeista ovat yhtä suuria kuin ln(xy²), kun x > 0 ja y > 0? Valitse kaikki."
+      },
+      "payload": {
+        "reference": "ln(x*y^2)",
+        "variables": [
+          "x",
+          "y"
+        ],
+        "samples": [
+          [
+            2,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            4,
+            2
+          ]
+        ],
+        "options": [
+          {
+            "id": "a",
+            "text": "ln(x) + ln(y)",
+            "equivalent": false,
+            "misconception": "LEXP-01"
+          },
+          {
+            "id": "b",
+            "text": "ln(x + y²)",
+            "equivalent": false,
+            "misconception": "LFUN-02"
+          },
+          {
+            "id": "c",
+            "text": "ln(x) + ln(y²)",
+            "equivalent": true,
+            "misconception": null
+          },
+          {
+            "id": "d",
+            "text": "ln(x) + 2 ln(y)",
+            "equivalent": true,
+            "misconception": null
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "ln(xy²) = ln x + ln(y²) = ln x + 2 ln y.",
+          "Summan logaritmi ei ole logaritmien summa, ja eksponentti y² tulee mukaan."
+        ],
+        "final": "c ja d"
+      },
+      "feedback": {
+        "correct": "Oikein: funktio ei jaa summaa, käytä sen omia laskusääntöjä.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Sijoita lukuja ja vertaa."
+      },
+      "provenance": {
+        "template": "lfun02_me",
+        "params": {
+          "reference": "ln(x*y^2)"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 2
+      }
+    }
+  ]
+}

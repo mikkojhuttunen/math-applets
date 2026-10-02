@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 1 |
+| Runs completed | 2 |
 | Last run | 2026-10-02 |
-| Progress | 6 of 151 planned cells in phases 0–2 generated |
+| Progress | 10 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -178,9 +178,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 
 | ID | MC | NE | ES | SO | FS | ME | RP | SC | MA | EST | GI | NL | EX | TF | PH |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| LFUN-02 | X | X | o | - | - | o | - | o | - | - | - | - | - | o | - |
-| LVEC-01 | X | X | - | - | - | - | o | - | - | o | o | - | - | - | - |
-| LEXP-03 | X | X | - | - | - | - | o | - | - | o | o | - | o | - | - |
+| LFUN-02 | X | X | X | - | - | X | - | o | - | - | - | - | - | o | - |
+| LVEC-01 | X | X | - | - | - | - | X | - | - | o | o | - | - | - | - |
+| LEXP-03 | X | X | - | - | - | - | X | - | - | o | o | - | o | - | - |
 | LLIM-01 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LLIM-02 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LDER-04 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
@@ -248,6 +248,10 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LVEC-01 | NE | LU-LVEC-01-NE-001…005 | P, T, H | none | MAA4.07 | exercises/LVEC-01/NE.json | Draft | Run 1; coordinates, boat and current, opposite vectors, minimum length |
 | 2026-10-02 | LEXP-03 | MC | LU-LEXP-03-MC-001…005 | P, T, H | none | MAB4.02, MAB7.01, MAA5.06 | exercises/LEXP-03/MC.json | Draft | Run 1; 3 % for 20 years, doubling time, bacteria, 50 % for 4 years, investment estimate; 3 MAB items |
 | 2026-10-02 | LEXP-03 | NE | LU-LEXP-03-NE-001…005 | P, T, H | none, cas | MAB4.02, MAA5.06, MAA9.03 | exercises/LEXP-03/NE.json | Draft | Run 1; item 002 is cas (doubling time at 5 %); 2 MAB items |
+| 2026-10-02 | LFUN-02 | ES | LU-LFUN-02-ES-001…005 | P, T, H | none | MAB2.07, MAA2.01, MAA5.03, MAA5.07 | exercises/LFUN-02/ES.json | Draft | Run 2; square of a sum split (equation and expression, 2 MAB items), sin(π/6 + π/3), √(x² + 9) = 5, ln(2x) + ln(3x); item 003 has a plausibility hint |
+| 2026-10-02 | LFUN-02 | ME | LU-LFUN-02-ME-001…005 | P, T, H | none | MAB2.07, MAA2.01, MAA5.03, MAA5.07 | exercises/LFUN-02/ME.json | Draft | Run 2; (x + 4)², (3x − 2)² (2 MAB items), sin 2x, √(x² + y²), ln(xy²) |
+| 2026-10-02 | LVEC-01 | RP | LU-LVEC-01-RP-001…005 | P, T, H | none | MAA4.07, MAA4.08 | exercises/LVEC-01/RP.json | Draft | Run 2; equation for s = \|a + b\|² (perpendicular, robot, components, 60°, opposite vectors) |
+| 2026-10-02 | LEXP-03 | RP | LU-LEXP-03-RP-001…005 | P, T, H | none | MAB4.02, MAB7.01, MAA5.06 | exercises/LEXP-03/RP.json | Draft | Run 2; doubling bacteria, 10 % interest, growth factor, doubling time, halving value; 3 MAB items; exact fractions used instead of decimals so the verifier can compare solutions |
 
 ## 7. Coverage and decisions to confirm
 
