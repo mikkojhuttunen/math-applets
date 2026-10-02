@@ -2,7 +2,7 @@
 
 Exercise bank for upper secondary mathematics (lukio: MAY1, lyhyt MAB, pitkä MAA), built around documented misconceptions and linked to LOPS 2019 goal IDs. Same idea as the 7–9 pipeline one folder up, with its own files.
 
-**Status (2026-10-02): framework, schema, verifier, build script and tests.** Seven hand-written seed items (test fixtures); no generators or exercises yet; no routine. `BACKLOG_LUKIO.md` section 2 lists what has to be built before generation starts.
+**Status (2026-10-02): framework, schema, verifier, build script, tests and routine prompt.** Seven hand-written seed items (test fixtures), a reference generator; no exercises yet. The routine is not created yet and `ROUTINE_ENABLED` is `no`; see `ROUTINE_PROMPT_LUKIO.md`. `BACKLOG_LUKIO.md` section 2 lists what has to be built before generation starts.
 
 ```
 math-misconceptions/lukio/
@@ -20,10 +20,13 @@ math-misconceptions/lukio/
                                               python scripts/verify.py --base HEAD --check-backlog
   scripts/build_bank.py                       writes build/bank.json and build/index.json for clients (git-ignored);
                                               approved items only, add --include-draft for beta testing
+  generators/gen_common.py                    shared generator helpers (base_item, mc_options, cli, frac, show)
+  generators/example_ltri01_ne.py             reference generator (periodic answers); prints JSON, tested
+  ROUTINE_PROMPT_LUKIO.md                     routine setup, prompt, review and merge steps
   tests/run_tests.py                          self-test of the verifier; run: python tests/run_tests.py
   tests/fixtures/good/                        seed items (one per phase 0–2 type) and items for the lukio answer kinds
   tests/fixtures/bad/                         one folder per check, each must be rejected
-  (planned) generators/, exercises/<TopicID>/<TypeCode>.json, ROUTINE_PROMPT_LUKIO.md
+  (written by the routine) generators/<template>.py, exercises/<TopicID>/<TypeCode>.json
 ```
 
 ## Rules
