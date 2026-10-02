@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Self-test for the lukio verify.py.  Run from anywhere:
+"""Self-test for the lukio verify.py and build_bank.py.  Run from anywhere:
     python tests/run_tests.py
 Copied from ../../tests/run_tests.py (7-9) and adapted. Exit code 0 means
 every check behaved as expected.
@@ -30,8 +30,8 @@ import verify  # noqa: E402
 failures = []
 
 
-def run(*args, cwd=ROOT):
-    return subprocess.run([sys.executable, str(cwd / "scripts" / "verify.py"), *args], capture_output=True, text=True, cwd=cwd)
+def run(*args, cwd=ROOT, script="verify.py"):
+    return subprocess.run([sys.executable, str(cwd / "scripts" / script), *args], capture_output=True, text=True, cwd=cwd)
 
 
 def check(name, ok, detail=""):
@@ -47,7 +47,7 @@ if req.exists():
     text = req.read_text(encoding="utf-8").lower()
     for pkg in ("sympy", "jsonschema"):
         check(f"requirements.txt lists {pkg}", pkg in text)
-for rel in ("schema/item.schema.json", "scripts/verify.py", "README.md", BACKLOG):
+for rel in ("schema/item.schema.json", "scripts/verify.py", "scripts/build_bank.py", "README.md", BACKLOG):
     check(f"file present: {rel}", (ROOT / rel).exists())
 
 # 1. good fixtures pass
@@ -171,7 +171,36 @@ for code, [(tid, iid)] in sorted(seeds.items()):
     check(f"seed {iid}: matrix cell is 's'", rows.get(tid, {}).get(code) == "s", str(rows.get(tid, {}).get(code)))
     check(f"seed {iid}: Seed row in the log", re.search(rf"^\| [0-9-]+ \| {tid} \| {code} \| {iid} \|.*\| Seed \|", raw, re.M) is not None)
 
-# 7. --base: existing items are immutable, new items must be draft (needs git)
+# 7. build_bank: drafts are hidden by default and served with --include-draft
+with tempfile.TemporaryDirectory() as tmp:
+    out = Path(tmp)
+    build = lambda *a: run("--exercises", str(FIX / "good"), "--out", tmp, *a, script="build_bank.py")
+    r = build()
+    bank = json.loads((out / "bank.json").read_text(encoding="utf-8"))
+    check("build_bank serves no drafts by default", r.returncode == 0 and bank["counts"]["items"] == 0
+          and bank["counts"]["skipped_by_status"] == {"draft": GOOD_ITEMS}, r.stdout + r.stderr)
+    r = build("--include-draft")
+    bank = json.loads((out / "bank.json").read_text(encoding="utf-8"))
+    index = json.loads((out / "index.json").read_text(encoding="utf-8"))
+    ids = [i["id"] for i in bank["items"]]
+    check(f"build_bank --include-draft serves {GOOD_ITEMS} items sorted by id", bank["counts"]["items"] == GOOD_ITEMS and ids == sorted(ids), str(ids))
+    check("bank schema_version is lukio-1.0", bank["schema_version"] == "lukio-1.0", bank["schema_version"])
+    check("index has the lukio groups", {"by_lops", "by_module", "by_syllabus", "by_misconception", "by_type"} <= set(index), str(sorted(index)))
+    check("index groups by LOPS goal", index["by_lops"].get("MAA2.05") == ["LU-LEQU-01-ES-001", "LU-LEQU-01-RP-001", "LU-LEQU-02-SO-001"], str(index["by_lops"].get("MAA2.05")))
+    check("index groups by module", index["by_module"].get("MAB4") == ["LU-LEXP-04-FS-001"] and len(index["by_module"].get("MAA2", [])) == 5, str(index["by_module"]))
+    check("index groups by syllabus", index["by_syllabus"].get("MAB") == ["LU-LEXP-04-FS-001", "LU-LPRB-01-MC-001"], str(index["by_syllabus"]))
+    check("index groups by misconception, secondary tags too", index["by_misconception"].get("ALG-11") == ["LU-LINT-01-NE-001"], str(index["by_misconception"].get("ALG-11")))
+    check("index groups by type", len(index["by_type"].get("NE", [])) == 7, str(index["by_type"]))
+    check("index groups by topic without the LU- prefix", "LTRI-01" in index["by_topic"], str(sorted(index["by_topic"])))
+    mc = next(i for i in bank["items"] if i["type"] == "MC")
+    check("MC item gets telegram_poll flag", mc["flags"]["telegram_poll"] is True and mc["flags"]["needs_cas"] is False, str(mc["flags"]))
+    first = (out / "bank.json").read_text(encoding="utf-8")
+    build("--include-draft")
+    check("build_bank output is deterministic", first == (out / "bank.json").read_text(encoding="utf-8"))
+    r = run("--exercises", str(FIX / "bad" / "schema_old_curriculum"), "--out", tmp, "--include-draft", script="build_bank.py")
+    check("build_bank refuses an item that fails the schema", r.returncode != 0 and "fails the schema" in r.stderr, r.stderr[-300:])
+
+# 8. --base: existing items are immutable, new items must be draft (needs git)
 if shutil.which("git"):
     with tempfile.TemporaryDirectory() as tmp:
         work = Path(tmp) / "lukio"
