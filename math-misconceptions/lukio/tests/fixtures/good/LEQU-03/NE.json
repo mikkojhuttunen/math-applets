@@ -1,0 +1,135 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 1/x < 2."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "1/x < 2",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": 0,
+              "lo_closed": false,
+              "hi_closed": false
+            },
+            {
+              "lo": "1/2",
+              "hi": null,
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x > 1/2",
+            "misconception": "LEQU-03",
+            "feedback": "Kertoessasi x:llä oletit, että x > 0. Kun x < 0, epäyhtälö pätee aina."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jos x > 0: 1 < 2x, eli x > 1/2.",
+          "Jos x < 0: 1/x < 0 < 2, joten kaikki negatiiviset x käyvät."
+        ],
+        "final": "x < 0 tai x > 1/2"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² + 1 < 0."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "x² + 1 < 0",
+          "intervals": []
+        },
+        "wrong": [
+          {
+            "match": "x < −1",
+            "misconception": "LEQU-03",
+            "feedback": "x² + 1 ≥ 1 kaikilla x, joten ratkaisuja ei ole."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² ≥ 0, joten x² + 1 ≥ 1 > 0."
+        ],
+        "final": "ei ratkaisuja"
+      },
+      "feedback": {
+        "correct": "Oikein."
+      },
+      "provenance": {
+        "template": "fixture",
+        "params": {
+          "fixture": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-02",
+  "type": "SO",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-SO-001",
+      "type": "SO",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Järjestä rivit niin, että ne ratkaisevat yhtälön (x − 2)(x − 3) = 6 oikein."
+      },
+      "payload": {
+        "lines": [
+          "(x − 2)(x − 3) = 6",
+          "x² − 5x + 6 = 6",
+          "x − 2 = 6",
+          "x(x − 5) = 0"
+        ],
+        "accept": "exact"
+      },
+      "solution": {
+        "steps": [
+          "Tulon nollasääntöä voi käyttää vasta, kun toinen puoli on 0.",
+          "Avaa sulut ja siirrä 6 vasemmalle.",
+          "x(x − 5) = 0, joten x = 0 tai x = 5."
+        ],
+        "final": "x = 0 tai x = 5"
+      },
+      "feedback": {
+        "correct": "Oikein: ensin toinen puoli nollaksi, sitten tulon nollasääntö."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

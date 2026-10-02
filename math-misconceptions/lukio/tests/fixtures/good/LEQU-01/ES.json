@@ -1,0 +1,61 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x³ = 4x näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x³ = 4x",
+          "x² = 4",
+          "x² − 4 = 0",
+          "(x − 2)(x + 2) = 0"
+        ],
+        "error_line": 2,
+        "error_type": "divided_by_zero_expression"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on jaettu x:llä, vaikka x voi olla 0. Ratkaisu x = 0 katoaa.",
+          "Oikein: x³ − 4x = 0, x(x − 2)(x + 2) = 0."
+        ],
+        "final": "x = 0, x = 2 tai x = −2"
+      },
+      "feedback": {
+        "correct": "Oikein: x:llä ei saa jakaa, koska x = 0 on mahdollinen.",
+        "wrong_line": "Tämä rivi seuraa edellisestä oikein. Etsi kohta, jossa jokin ratkaisu katoaa."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

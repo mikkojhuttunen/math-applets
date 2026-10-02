@@ -1,0 +1,67 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-01",
+  "type": "RP",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-01-RP-001",
+      "type": "RP",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-01"
+      ],
+      "prompt": {
+        "text": "Kirjoita toisen asteen yhtälö, jonka ainoa ratkaisu on x = 3."
+      },
+      "payload": {
+        "constraint": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        },
+        "checks": {
+          "valid": [
+            "x² = 3x",
+            "(x − 3)² = 0"
+          ],
+          "invalid": [
+            "x² = 3x",
+            "x² = 9"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Ainoa ratkaisu x = 3 saadaan kaksinkertaisesta juuresta: (x − 3)² = 0.",
+          "Yhtälöllä x² = 3x on myös ratkaisu x = 0, joten se ei kelpaa."
+        ],
+        "final": "esim. (x − 3)² = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: tarkista, ettei yhtälöllä ole muita ratkaisuja."
+      },
+      "provenance": {
+        "template": "seed",
+        "params": {
+          "seed": true
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}
