@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 6 |
+| Runs completed | 7 |
 | Last run | 2026-10-02 |
-| Progress | 28 of 151 planned cells in phases 0–2 generated |
+| Progress | 34 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -190,9 +190,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LPRB-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | LFUN-01 | X | - | - | - | - | - | - | o | - | - | o | - | o | o | - |
 | LSTA-04 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| ALG-09 | X | X | o | - | o | o | - | - | - | - | - | - | - | - | - |
-| EXT-02 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
-| NUM-08 | o | o | - | - | - | - | o | - | - | o | - | - | - | - | - |
+| ALG-09 | X | X | X | - | X | o | - | - | - | - | - | - | - | - | - |
+| EXT-02 | X | X | o | - | - | o | - | - | - | - | - | - | - | - | - |
+| NUM-08 | X | X | - | - | - | - | o | - | - | o | - | - | - | - | - |
 | FUN-05 | o | o | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | EXT-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-01 | o | o | s | o | o | - | s | - | - | - | - | - | - | - | o |
@@ -272,6 +272,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LSTA-04 | MC | LU-LSTA-04-MC-001…005 | P, T, H | none, cas | MAB9.04 | exercises/LSTA-04/MC.json | Draft | Run 6; meaning of 95 %, margin of error (cas), sample size 100→400, 40 intervals, can true support be 50 %; all MAB; items 001, 004, 005 are justification or plausibility checks |
 | 2026-10-02 | ALG-09 | MC | LU-ALG-09-MC-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/MC.json | Draft | Run 6; (x − 6)², (2x + 5)² − (2x − 5)², extended plot (MAB), a² + b² from a + b and ab (MAB), counterexample justification; 2 MAB items; carried over from 1–9 |
 | 2026-10-02 | ALG-09 | NE | LU-ALG-09-NE-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/NE.json | Draft | Run 6; (x − 8)² expression, 47² by (50 − 3)², area increase (MAB), a² + b² (MAB), (a + b)² − (a² + b²) at a = 3, b = 4; 2 MAB items |
+| 2026-10-02 | ALG-09 | ES | LU-ALG-09-ES-001…005 | P, T, H | none | MAB2.07, MAA2.01 | exercises/ALG-09/ES.json | Draft | Run 7; yard area (MAB), ((2x + 6)/2)² − 9, 98² as (100 − 2)², two years of 5 % growth (MAB), equation (x + 2)² = x² + 20 with a substitution hint; 2 MAB items |
+| 2026-10-02 | ALG-09 | FS | LU-ALG-09-FS-001…005 | P, T, H | none | MAA2.01, MAB2.07 | exercises/ALG-09/FS.json | Draft | Run 7; binomial square as a product, (2x − 3)², (1 + 0,04)² (MAB), equation with the square opened, area increase (MAB); 2 MAB items |
+| 2026-10-02 | EXT-02 | MC | LU-EXT-02-MC-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/MC.json | Draft | Run 7; 2⁻³, 3⁰ + 2⁻², 10⁻² m in cm (MAB), 4 · 10⁻³ (MAB), justification of a⁰ = 1; MAB items via MAY1.04; evidence not yet checked (catalogue rating Moderate); verifier allows only G2 for this topic, so item 005 is a justification in content but tagged G2 |
+| 2026-10-02 | EXT-02 | NE | LU-EXT-02-NE-001…005 | P, T, H | none | MAY1.04, MAA5.05 | exercises/EXT-02/NE.json | Draft | Run 7; 2⁻³, 5⁰ + 3⁻², 4 · 10⁻² (MAB), (2/3)⁻², N(−3) for bacteria (MAB); answers rational or number; MAB items via MAY1.04 |
+| 2026-10-02 | NUM-08 | MC | LU-NUM-08-MC-001…005 | P, T, H | none | MAY1.03, MAA9.03, MAB6.01 | exercises/NUM-08/MC.json | Draft | Run 7; +20 % then −20 %, price 50 € +30 % −30 % (MAB), +10 % and +20 % (MAB), −10 % for three years, plausibility check of undoing +25 % (MAB); 3 MAB items |
+| 2026-10-02 | NUM-08 | NE | LU-NUM-08-NE-001…005 | P, T, H | none | MAY1.03, MAA9.03, MAB6.01 | exercises/NUM-08/NE.json | Draft | Run 7; 80 € +15 % −15 %, two 10 % rises (MAB), two 20 % cuts (MAB), +3 % for three years, undoing +20 % (MAB); 3 MAB items |
 
 ## 7. Coverage and decisions to confirm
 

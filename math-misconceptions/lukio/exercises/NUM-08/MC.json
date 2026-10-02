@@ -1,0 +1,401 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "NUM-08",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAA9.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 20 % ja laskee sen jälkeen 20 %. Mikä on kokonaismuutos alkuperäiseen hintaan verrattuna?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0 %",
+            "misconception": "NUM-08",
+            "feedback": "Nousu ja lasku eivät kumoa toisiaan, koska lasku lasketaan jo korotetusta hinnasta."
+          },
+          {
+            "id": "b",
+            "text": "−4 %",
+            "misconception": null,
+            "feedback": "Oikein: 1,2 · 0,8 = 0,96, joten hinta on 4 % alkuhintaa pienempi."
+          },
+          {
+            "id": "c",
+            "text": "+4 %",
+            "misconception": null,
+            "feedback": "Kerroin 0,96 on pienempi kuin 1, joten hinta on laskenut."
+          },
+          {
+            "id": "d",
+            "text": "−2 %",
+            "misconception": null,
+            "feedback": "Muutokset kerrotaan keskenään, niitä ei jaeta tai keskiarvoteta."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kertoimet: 1,20 ja 0,80.",
+          "1,20 · 0,80 = 0,96."
+        ],
+        "final": "−4 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": [
+            20,
+            -20
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Takin hinta on 50 €. Hinta nousee 30 % ja alennetaan sitten 30 %. Mikä on lopullinen hinta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "47,50 €",
+            "misconception": null,
+            "feedback": "Tarkista kertoimet: 1,3 · 0,7 = 0,91."
+          },
+          {
+            "id": "b",
+            "text": "45,50 €",
+            "misconception": null,
+            "feedback": "Oikein: 50 · 1,3 · 0,7 = 45,50."
+          },
+          {
+            "id": "c",
+            "text": "35,00 €",
+            "misconception": null,
+            "feedback": "Tässä molemmat muutokset on laskettu alkuhinnasta: 50 − 15 − 15. Jälkimmäinen lasketaan korotetusta hinnasta."
+          },
+          {
+            "id": "d",
+            "text": "50,00 €",
+            "misconception": "NUM-08",
+            "feedback": "Alennus lasketaan korotetusta hinnasta 65 €, joten lasku on 19,50 €, ei 15 €."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "50 · 1,30 = 65.",
+          "65 · 0,70 = 45,50."
+        ],
+        "final": "45,50 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "price": 50,
+          "p": [
+            30,
+            -30
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Palkka nousee ensin 10 % ja sitten 20 %. Kuinka monta prosenttia palkka on noussut yhteensä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "22 %",
+            "misconception": null,
+            "feedback": "Prosentteja ei lasketa yhteen eikä kerrota keskenään; kerro kertoimet 1,10 ja 1,20."
+          },
+          {
+            "id": "b",
+            "text": "12 %",
+            "misconception": null,
+            "feedback": "Kokonaismuutos lasketaan kertoimista 1,10 · 1,20."
+          },
+          {
+            "id": "c",
+            "text": "30 %",
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät yhdisty laskemalla yhteen: toinen korotus koskee jo korotettua palkkaa."
+          },
+          {
+            "id": "d",
+            "text": "32 %",
+            "misconception": null,
+            "feedback": "Oikein: 1,10 · 1,20 = 1,32."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,10 · 1,20 = 1,32.",
+          "Nousu on 32 %."
+        ],
+        "final": "32 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": [
+            10,
+            20
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAA9.03"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Asukasluku pienenee 10 % vuodessa kolmen vuoden ajan. Kuinka monta prosenttia asukasluku on pienentynyt yhteensä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "27,1 %",
+            "misconception": null,
+            "feedback": "Oikein: 0,9³ = 0,729, joten väheneminen on 27,1 %."
+          },
+          {
+            "id": "b",
+            "text": "30 %",
+            "misconception": "NUM-08",
+            "feedback": "Kolme 10 %:n vähennystä ei ole 30 %, koska jokainen lasketaan edellisen vuoden pienemmästä arvosta."
+          },
+          {
+            "id": "c",
+            "text": "9,0 %",
+            "misconception": null,
+            "feedback": "Kolmen vuoden muutos on 1 − 0,9³."
+          },
+          {
+            "id": "d",
+            "text": "33,1 %",
+            "misconception": null,
+            "feedback": "33,1 % olisi kolmen 10 %:n korotuksen kokonaismuutos (1,1³ − 1)."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 0,90.",
+          "0,9³ = 0,729, joten muutos on −27,1 %."
+        ],
+        "final": "27,1 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": -10,
+          "years": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Arvioi ensin: hinta nousi 25 %. Kuinka monta prosenttia sen on laskettava, jotta se palaa alkuperäiseksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "30 %",
+            "misconception": null,
+            "feedback": "Tarkista: 1,25 · 0,70 = 0,875, eli hinta jäisi alle alkuhinnan."
+          },
+          {
+            "id": "b",
+            "text": "20 %",
+            "misconception": null,
+            "feedback": "Oikein: 1,25 · 0,80 = 1, joten lasku on 20 % korotetusta hinnasta."
+          },
+          {
+            "id": "c",
+            "text": "15 %",
+            "misconception": null,
+            "feedback": "Tarkista: 1,25 · 0,85 ≈ 1,06, eli hinta jäisi yli alkuhinnan."
+          },
+          {
+            "id": "d",
+            "text": "25 %",
+            "misconception": "NUM-08",
+            "feedback": "Lasku lasketaan korotetusta hinnasta, joka on suurempi kuin alkuhinta, joten 25 % veisi liikaa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Haetaan kerroin k, jolle 1,25 · k = 1.",
+          "k = 0,80, joten lasku on 20 %."
+        ],
+        "final": "20 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_mc",
+        "params": {
+          "p": 25
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

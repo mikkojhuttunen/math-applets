@@ -1,0 +1,353 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "ALG-09",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: kirjoita neliö tulona."
+      },
+      "payload": {
+        "lines": [
+          "(x + 7)²",
+          "(x + 7)(x + 7)",
+          "x² + 14x + 49"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "(x + 7)(x + 7)",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(x + 7)² = (x + 7)(x + 7).",
+          "Kerrotaan auki: x² + 7x + 7x + 49 = x² + 14x + 49."
+        ],
+        "final": "(x + 7)(x + 7)"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "b": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: kirjoita binomikaavan kolme termiä."
+      },
+      "payload": {
+        "lines": [
+          "(2x − 3)²",
+          "(2x)² − 2 · 2x · 3 + 3²",
+          "4x² − 12x + 9"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "(2x)² − 2 · 2x · 3 + 3²",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(a − b)² = a² − 2ab + b², kun a = 2x ja b = 3.",
+          "= 4x² − 12x + 9."
+        ],
+        "final": "(2x)² − 2 · 2x · 3 + 3²"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "a": "2x",
+          "b": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Hinta nousee kaksi vuotta peräkkäin 4 % vuodessa. Täydennä puuttuva rivi: kirjoita (1 + 0,04)² binomikaavalla kolmena termenä."
+      },
+      "payload": {
+        "lines": [
+          "(1 + 0,04)²",
+          "1 + 2 · 0,04 + 0,04²",
+          "1,0816"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "1 + 2 · 0,04 + 0,04²",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(1 + 0,04)² = 1² + 2 · 1 · 0,04 + 0,04².",
+          "= 1 + 0,08 + 0,0016 = 1,0816."
+        ],
+        "final": "1 + 2 · 0,04 + 0,04²"
+      },
+      "feedback": {
+        "correct": "Oikein: kokonaiskerroin on 1,0816, eli hinta nousee 8,16 %.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "rate": "4/100"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: kirjoita yhtälö, jossa vasen puoli on kerrottu auki."
+      },
+      "payload": {
+        "lines": [
+          "(x + 3)² = 25",
+          "x² + 6x + 9 = 25",
+          "x² + 6x − 16 = 0",
+          "(x + 8)(x − 2) = 0"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² + 6x + 9 = 25",
+          "variable": "x",
+          "solutions": [
+            -8,
+            2
+          ],
+          "equivalents": [
+            "25 = x² + 6x + 9"
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(x + 3)² = x² + 6x + 9.",
+          "Siirretään 25 vasemmalle: x² + 6x − 16 = 0, joka on (x + 8)(x − 2) = 0."
+        ],
+        "final": "x² + 6x + 9 = 25"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "c": 25
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on x metriä. Sivua pidennetään 5 metrillä. Täydennä puuttuva rivi: kirjoita pinta-alan lisäys ennen supistamista."
+      },
+      "payload": {
+        "lines": [
+          "(x + 5)² − x²",
+          "x² + 10x + 25 − x²",
+          "10x + 25"
+        ],
+        "blank_index": 2,
+        "answer": {
+          "kind": "expression",
+          "variables": [
+            "x"
+          ],
+          "reference": "x² + 10x + 25 − x²",
+          "samples": [
+            [
+              1
+            ],
+            [
+              2
+            ],
+            [
+              3
+            ]
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "(x + 5)² = x² + 10x + 25.",
+          "Lisäys on x² + 10x + 25 − x² = 10x + 25 (m²)."
+        ],
+        "final": "x² + 10x + 25 − x²"
+      },
+      "feedback": {
+        "correct": "Oikein: lisäys 10x + 25 sisältää kaksi suorakaidetta ja pienen neliön.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_fs",
+        "params": {
+          "d": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

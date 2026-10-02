@@ -1,0 +1,329 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-02",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Laske 2⁻³. Anna vastaus murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "1/8"
+        },
+        "wrong": [
+          {
+            "match": "-6",
+            "misconception": "EXT-02",
+            "feedback": "2⁻³ ei ole −3 · 2."
+          },
+          {
+            "match": "-8",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti tarkoittaa käänteislukua, ei negatiivista lukua."
+          }
+        ],
+        "input_hint": "esim. 1/4"
+      },
+      "solution": {
+        "steps": [
+          "2⁻³ = 1/2³.",
+          "= 1/8."
+        ],
+        "final": "1/8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_ne",
+        "params": {
+          "a": 2,
+          "n": -3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Laske 5⁰ + 3⁻². Anna vastaus murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "10/9"
+        },
+        "wrong": [
+          {
+            "match": "-9",
+            "misconception": "EXT-02",
+            "feedback": "5⁰ = 1, ei 0, ja 3⁻² = 1/9, ei −9."
+          },
+          {
+            "match": "1/9",
+            "misconception": "EXT-02",
+            "feedback": "5⁰ = 1, ei 0."
+          }
+        ],
+        "input_hint": "esim. 3/2"
+      },
+      "solution": {
+        "steps": [
+          "5⁰ = 1 ja 3⁻² = 1/3² = 1/9.",
+          "1 + 1/9 = 10/9."
+        ],
+        "final": "10/9"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_ne",
+        "params": {
+          "expr": "5^0+3^-2"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Laske 4 · 10⁻² desimaalilukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.04
+        },
+        "wrong": [
+          {
+            "match": "-400",
+            "misconception": "EXT-02",
+            "feedback": "10⁻² on 1/100, ei −100."
+          },
+          {
+            "match": "-0.04",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee luvusta negatiivista."
+          }
+        ],
+        "input_hint": "Kirjoita desimaaliluku"
+      },
+      "solution": {
+        "steps": [
+          "10⁻² = 1/100 = 0,01.",
+          "4 · 0,01 = 0,04."
+        ],
+        "final": "0,04"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_ne",
+        "params": {
+          "c": 4,
+          "n": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Laske (2/3)⁻². Anna vastaus supistettuna murtolukuna."
+      },
+      "payload": {
+        "answer": {
+          "kind": "rational",
+          "value": "9/4"
+        },
+        "wrong": [
+          {
+            "match": "-4/9",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee tuloksesta negatiivista."
+          },
+          {
+            "match": "4/9",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti kääntää murtoluvun: (2/3)⁻² = (3/2)²."
+          }
+        ],
+        "input_hint": "esim. 5/2"
+      },
+      "solution": {
+        "steps": [
+          "(2/3)⁻² = (3/2)².",
+          "= 9/4."
+        ],
+        "final": "9/4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_ne",
+        "params": {
+          "base": "2/3",
+          "n": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Bakteerien määrä on N(t) = 500 · 2^t, missä t on aika tunteina. Montako bakteeria oli 3 tuntia ennen hetkeä t = 0? Laske N(−3)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 62.5
+        },
+        "wrong": [
+          {
+            "match": "-4000",
+            "misconception": "EXT-02",
+            "feedback": "2⁻³ on 1/8, ei −8."
+          },
+          {
+            "match": "-62.5",
+            "misconception": "EXT-02",
+            "feedback": "Määrä ei voi olla negatiivinen: 2⁻³ = 1/8."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "N(−3) = 500 · 2⁻³.",
+          "= 500 · 1/8 = 62,5."
+        ],
+        "final": "62,5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_ne",
+        "params": {
+          "n0": 500,
+          "t": -3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

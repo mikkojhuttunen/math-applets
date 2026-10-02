@@ -1,0 +1,280 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "ALG-09",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen pihan sivu on x + 3 metriä ja pinta-ala 49 m². Oppilas ratkaisi x:n näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(x + 3)² = 49",
+          "x² + 9 = 49",
+          "x² = 40",
+          "x = √40"
+        ],
+        "error_line": 2,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 summan (x + 3) neliö on laskettu termeittäin: (x + 3)² ≠ x² + 9.",
+          "Oikein: sivu on √49 = 7, joten x + 3 = 7 ja x = 4."
+        ],
+        "final": "x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: binomin neliössä on aina keskimmäinen tulo.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "a": 3,
+          "area": 49
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen ((2x + 6)/2)² − 9 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "((2x + 6)/2)² − 9",
+          "(x + 3)² − 9",
+          "x² + 9 − 9",
+          "x²"
+        ],
+        "error_line": 3,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: (2x + 6)/2 = x + 3.",
+          "Rivillä 3 puuttuu keskimmäinen tulo 2 · x · 3 = 6x.",
+          "Oikein: (x + 3)² − 9 = x² + 6x + 9 − 9 = x² + 6x."
+        ],
+        "final": "x² + 6x"
+      },
+      "feedback": {
+        "correct": "Oikein: binomin neliössä on aina keskimmäinen tulo.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "inner": "(2x+6)/2",
+          "sub": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas laski 98² päässä näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "98²",
+          "(100 − 2)²",
+          "100² − 2²",
+          "9996"
+        ],
+        "error_line": 3,
+        "error_type": "square_of_difference_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 erotuksen neliö on laskettu termeittäin; keskimmäinen tulo −2 · 100 · 2 = −400 puuttuu.",
+          "Oikein: 10000 − 400 + 4 = 9604."
+        ],
+        "final": "9604"
+      },
+      "feedback": {
+        "correct": "Oikein: erotuksen neliössä on keskimmäinen tulo. Tulos 9996 olisi lähes 100², vaikka 98 < 100.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "n": 98
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Hinta nousee kaksi vuotta peräkkäin 5 % vuodessa. Oppilas laski kokonaiskertoimen näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(1 + 0,05)²",
+          "1² + 0,05²",
+          "1,0025"
+        ],
+        "error_line": 2,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 summan (1 + 0,05) neliö on laskettu termeittäin; keskimmäinen tulo 2 · 0,05 = 0,1 puuttuu.",
+          "Oikein: 1 + 0,1 + 0,0025 = 1,1025, eli hinta nousee 10,25 %."
+        ],
+        "final": "1,1025"
+      },
+      "feedback": {
+        "correct": "Oikein: kasvukerroin on 1,05² = 1,1025.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "rate": "5/100",
+          "years": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-ALG-09-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön (x + 2)² = x² + 20 näin. Napauta rivi, jossa on virhe. Vihje: sijoita x = 4 alkuperäiseen yhtälöön."
+      },
+      "payload": {
+        "lines": [
+          "(x + 2)² = x² + 20",
+          "x² + 4 = x² + 20",
+          "4 = 20",
+          "ei ratkaisua"
+        ],
+        "error_line": 2,
+        "error_type": "square_of_sum_split"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 puuttuu keskimmäinen tulo 4x.",
+          "Oikein: x² + 4x + 4 = x² + 20, joten 4x = 16 ja x = 4. Tarkistus: 6² = 36 ja 4² + 20 = 36."
+        ],
+        "final": "x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein: sijoitus x = 4 antaa molemmille puolille 36, joten yhtälöllä on ratkaisu.",
+        "generic_wrong": "(a + b)² on (a + b)(a + b), ja siinä on myös keskimmäinen tulo 2ab. Kokeile lukuarvoilla, esim. a = 1, b = 1."
+      },
+      "provenance": {
+        "template": "alg09_es",
+        "params": {
+          "yhtalo": "(x+2)^2=x^2+20"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

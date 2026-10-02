@@ -1,0 +1,389 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "EXT-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä on 2⁻³?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−6",
+            "misconception": "EXT-02",
+            "feedback": "Eksponentti ei kerro lukua: 2⁻³ ei ole −3 · 2."
+          },
+          {
+            "id": "b",
+            "text": "1/6",
+            "misconception": null,
+            "feedback": "Nimittäjässä on potenssi 2³ = 8, ei tulo 2 · 3."
+          },
+          {
+            "id": "c",
+            "text": "−8",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee tuloksesta negatiivista, vaan tarkoittaa käänteislukua."
+          },
+          {
+            "id": "d",
+            "text": "1/8",
+            "misconception": null,
+            "feedback": "Oikein: 2⁻³ = 1/2³ = 1/8."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a⁻ⁿ = 1/aⁿ.",
+          "2⁻³ = 1/2³ = 1/8."
+        ],
+        "final": "1/8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": 2,
+          "n": -3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Laske 3⁰ + 2⁻²."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−4",
+            "misconception": "EXT-02",
+            "feedback": "3⁰ ei ole 0 vaan 1, ja 2⁻² ei ole −4 vaan 1/4."
+          },
+          {
+            "id": "b",
+            "text": "5/4",
+            "misconception": null,
+            "feedback": "Oikein: 3⁰ = 1 ja 2⁻² = 1/4, summa on 5/4."
+          },
+          {
+            "id": "c",
+            "text": "2",
+            "misconception": null,
+            "feedback": "2⁻² = 1/4, ei 1."
+          },
+          {
+            "id": "d",
+            "text": "1/4",
+            "misconception": "EXT-02",
+            "feedback": "3⁰ = 1, ei 0."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "3⁰ = 1 ja 2⁻² = 1/2² = 1/4.",
+          "1 + 1/4 = 5/4."
+        ],
+        "final": "5/4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "expr": "3^0+2^-2"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä on 10⁻² metriä senttimetreinä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1 cm",
+            "misconception": null,
+            "feedback": "Oikein: 10⁻² m = 1/100 m = 0,01 m = 1 cm."
+          },
+          {
+            "id": "b",
+            "text": "0,1 cm",
+            "misconception": null,
+            "feedback": "10⁻² = 0,01 m, ja 0,01 m = 1 cm."
+          },
+          {
+            "id": "c",
+            "text": "−100 cm",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tarkoita negatiivista lukua vaan käänteislukua: 10⁻² = 1/100."
+          },
+          {
+            "id": "d",
+            "text": "100 cm",
+            "misconception": null,
+            "feedback": "10⁻² on 1/100, ei 100."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10⁻² = 1/10² = 0,01.",
+          "0,01 m = 1 cm."
+        ],
+        "final": "1 cm"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "base": 10,
+          "n": -2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä luku on 4 · 10⁻³ desimaalilukuna?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,04",
+            "misconception": null,
+            "feedback": "Pilkku siirtyy kolme paikkaa vasemmalle, ei kahta."
+          },
+          {
+            "id": "b",
+            "text": "0,004",
+            "misconception": null,
+            "feedback": "Oikein: 10⁻³ = 0,001, joten 4 · 10⁻³ = 0,004."
+          },
+          {
+            "id": "c",
+            "text": "0,0004",
+            "misconception": null,
+            "feedback": "10⁻³ = 0,001: pilkku siirtyy kolme paikkaa vasemmalle, ei neljää."
+          },
+          {
+            "id": "d",
+            "text": "−4000",
+            "misconception": "EXT-02",
+            "feedback": "Negatiivinen eksponentti ei tee luvusta negatiivista. 10⁻³ on 1/1000."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10⁻³ = 1/10³ = 0,001.",
+          "4 · 0,001 = 0,004."
+        ],
+        "final": "0,004"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "c": 4,
+          "n": -3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-EXT-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.04",
+          "MAA5.05"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "EXT-02"
+      ],
+      "prompt": {
+        "text": "Mikä perustelu osoittaa oikein, että a⁰ = 1 (a ≠ 0)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nollakertainen kertominen on 0, joten a⁰ = 0.",
+            "misconception": "EXT-02",
+            "feedback": "a⁰ ei ole ”a kerrottuna nollalla”. Potenssi aⁿ on n tekijää a, ja tyhjä tulo on 1."
+          },
+          {
+            "id": "b",
+            "text": "Se on pelkkä sopimus, eikä sille ole perustelua.",
+            "misconception": null,
+            "feedback": "Sopimukselle on perustelu: se pitää potenssisäännöt voimassa."
+          },
+          {
+            "id": "c",
+            "text": "a⁰ = a, koska eksponentti 0 ei muuta lukua.",
+            "misconception": null,
+            "feedback": "Eksponentti 1 jättää luvun ennalleen: a¹ = a. Eksponentti 0 antaa 1."
+          },
+          {
+            "id": "d",
+            "text": "a³/a³ = 1, ja potenssien jakosäännön mukaan a³/a³ = a³⁻³ = a⁰.",
+            "misconception": null,
+            "feedback": "Oikein: jakosääntö ja jakolasku a/a = 1 antavat yhdessä a⁰ = 1."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a³/a³ = 1.",
+          "Jakosäännöllä a³/a³ = a⁰, joten a⁰ = 1."
+        ],
+        "final": "a⁰ = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua: a⁻ⁿ = 1/aⁿ."
+      },
+      "provenance": {
+        "template": "ext02_mc",
+        "params": {
+          "a": "a",
+          "n": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}

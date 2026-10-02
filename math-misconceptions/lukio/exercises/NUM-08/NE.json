@@ -1,0 +1,326 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "NUM-08",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAA9.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Takin hinta on 80 €. Hinta nousee 15 % ja laskee sen jälkeen 15 %. Laske lopullinen hinta euroina."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 78.2,
+          "tolerance": 0.01,
+          "unit": "€"
+        },
+        "wrong": [
+          {
+            "match": 80,
+            "misconception": "NUM-08",
+            "feedback": "Lasku lasketaan korotetusta hinnasta 92 €, joten hinta ei palaa alkuarvoon."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "80 · 1,15 = 92.",
+          "92 · 0,85 = 78,20."
+        ],
+        "final": "78,20 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "price": 80,
+          "p": [
+            15,
+            -15
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Vuokra nousee kaksi vuotta peräkkäin 10 % vuodessa. Kuinka monta prosenttia vuokra on noussut yhteensä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 21,
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 20,
+            "misconception": "NUM-08",
+            "feedback": "Toinen korotus koskee jo korotettua vuokraa, joten kokonaisnousu on enemmän kuin 20 %."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1,10 · 1,10 = 1,21.",
+          "Nousu on 21 %."
+        ],
+        "final": "21 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": [
+            10,
+            10
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Tuotteen hintaa alennetaan 20 % ja sitten vielä 20 %. Kuinka monta prosenttia hinta on laskenut yhteensä?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 36,
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 40,
+            "misconception": "NUM-08",
+            "feedback": "Toinen alennus lasketaan jo alennetusta hinnasta, joten kokonaislasku on pienempi kuin 40 %."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "0,80 · 0,80 = 0,64.",
+          "Lasku on 100 % − 64 % = 36 %."
+        ],
+        "final": "36 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": [
+            -20,
+            -20
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAA9.03"
+        ],
+        "g": [
+          "G4",
+          "G8"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Palkka nousee 3 % vuodessa kolmen vuoden ajan. Kuinka monta prosenttia palkka on noussut yhteensä? Anna vastaus kahden desimaalin tarkkuudella."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 9.27,
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 9,
+            "misconception": "NUM-08",
+            "feedback": "Kolme 3 %:n korotusta ei ole 9 %, koska korotukset kertautuvat."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,03.",
+          "1,03³ ≈ 1,0927, joten nousu on noin 9,27 %."
+        ],
+        "final": "9,27 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": 3,
+          "years": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-NUM-08-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.03",
+          "MAB6.01"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 20 %. Kuinka monta prosenttia sen on sen jälkeen laskettava, jotta hinta palaa alkuperäiseksi? Anna vastaus kahden desimaalin tarkkuudella."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 16.67,
+          "tolerance": 0.01,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 20,
+            "misconception": "NUM-08",
+            "feedback": "Lasku lasketaan korotetusta hinnasta, joka on suurempi kuin alkuhinta, joten 20 % veisi liikaa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Haetaan k, jolle 1,20 · k = 1.",
+          "k = 1/1,2 ≈ 0,8333, joten lasku on noin 16,67 %."
+        ],
+        "final": "16,67 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Peräkkäiset prosenttimuutokset kerrotaan keskenään: jokainen lasketaan edellisen muutoksen jälkeisestä arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": 20
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 7
+      }
+    }
+  ]
+}
