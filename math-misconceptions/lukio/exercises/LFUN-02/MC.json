@@ -1,0 +1,361 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LFUN-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Mikä on lausekkeen (x + 5)² sievennetty muoto?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² + 5x + 25",
+            "misconception": null,
+            "feedback": "Keskimmäinen termi on 2ab, ei ab."
+          },
+          {
+            "id": "b",
+            "text": "x² + 25",
+            "misconception": "LFUN-02",
+            "feedback": "Neliö ei jaa summaan: puuttuu keskimmäinen tulo 2ab. Kokeile x = 1."
+          },
+          {
+            "id": "c",
+            "text": "x² + 10x + 25",
+            "misconception": null,
+            "feedback": "Oikein: (x + 5)² = (x + 5)(x + 5), joten keskimmäinen tulo 2ab on mukana."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x + 5)² = (x + 5)(x + 5)",
+          "= x² + 10x + 25"
+        ],
+        "final": "x² + 10x + 25"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_mc",
+        "params": {
+          "expr": "x + 5"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laatan sivun pituus on 2x + 3 metriä. Mikä lauseke antaa laatan pinta-alan (m²)?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "4x² + 9",
+            "misconception": "LFUN-02",
+            "feedback": "Neliö ei jaa summaan: puuttuu keskimmäinen tulo 2ab. Kokeile x = 1."
+          },
+          {
+            "id": "b",
+            "text": "4x² + 12x + 9",
+            "misconception": null,
+            "feedback": "Oikein: (2x + 3)² = (2x + 3)(2x + 3), joten keskimmäinen tulo 2ab on mukana."
+          },
+          {
+            "id": "c",
+            "text": "4x² + 6x + 9",
+            "misconception": null,
+            "feedback": "Keskimmäinen termi on 2ab, ei ab."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(2x + 3)² = (2x + 3)(2x + 3)",
+          "= 4x² + 12x + 9"
+        ],
+        "final": "4x² + 12x + 9"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_mc",
+        "params": {
+          "expr": "2*x + 3"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB2.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "ALG-09"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisesta pellosta (sivu x metriä) otetaan pois 4 metrin kaista. Uuden neliön sivu on x − 4 metriä. Mikä on sen pinta-ala?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² − 4x + 16",
+            "misconception": null,
+            "feedback": "Keskimmäinen termi on 2ab, ei ab."
+          },
+          {
+            "id": "b",
+            "text": "x² + 16",
+            "misconception": "LFUN-02",
+            "feedback": "Neliö ei jaa summaan: puuttuu keskimmäinen tulo 2ab. Kokeile x = 1."
+          },
+          {
+            "id": "c",
+            "text": "x² − 8x + 16",
+            "misconception": null,
+            "feedback": "Oikein: (x − 4)² = (x − 4)(x − 4), joten keskimmäinen tulo 2ab on mukana."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "(x − 4)² = (x − 4)(x − 4)",
+          "= x² − 8x + 16"
+        ],
+        "final": "x² − 8x + 16"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_mc",
+        "params": {
+          "expr": "x - 4"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.03"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Mikä on sin(π/6 + π/3) tarkka arvo? Tarkista vastauksesi järkevyys: sinin arvot ovat välillä −1…1."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1/2 + √3/2",
+            "misconception": "LFUN-02",
+            "feedback": "Sini ei jaa summaa. Lisäksi sini ei koskaan ylitä lukua 1, mutta tämä arvo on yli 1."
+          },
+          {
+            "id": "b",
+            "text": "√3/4",
+            "misconception": null,
+            "feedback": "Tulo ei tule tästäkään säännöstä: laske ensin kulma π/6 + π/3."
+          },
+          {
+            "id": "c",
+            "text": "1",
+            "misconception": null,
+            "feedback": "Oikein: sin(π/6 + π/3) = sin(π/2) = 1."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "π/6 + π/3 = π/2.",
+          "sin(π/2) = 1."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_mc",
+        "params": {
+          "a": "pi/6",
+          "b": "pi/3"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LFUN-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.01",
+          "MAA5.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LFUN-02",
+        "LEXP-01"
+      ],
+      "prompt": {
+        "text": "Laske lg 20 + lg 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2",
+            "misconception": null,
+            "feedback": "Oikein: lg 20 + lg 5 = lg(20 · 5) = lg 100 = 2."
+          },
+          {
+            "id": "b",
+            "text": "lg 25 ≈ 1,4",
+            "misconception": "LFUN-02",
+            "feedback": "Logaritmien summa on tulon logaritmi, ei summan logaritmi."
+          },
+          {
+            "id": "c",
+            "text": "lg 20 · lg 5 ≈ 0,91",
+            "misconception": "LEXP-01",
+            "feedback": "Logaritmien summaa ei lasketa kertomalla logaritmeja keskenään."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "lg a + lg b = lg(ab).",
+          "lg 20 + lg 5 = lg 100 = 2."
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Funktio ei yleensä jaa summaa: f(a + b) on eri asia kuin f(a) + f(b). Kokeile lukuarvoilla."
+      },
+      "provenance": {
+        "template": "lfun02_mc",
+        "params": {
+          "p": 20,
+          "q": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

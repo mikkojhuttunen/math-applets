@@ -1,0 +1,379 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-01",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (3, 0) ja b = (0, 4). Mikä on summavektorin a + b pituus?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5",
+            "misconception": null,
+            "feedback": "Oikein: a + b = (3, 4) ja |a + b| = √(9 + 16) = 5."
+          },
+          {
+            "id": "b",
+            "text": "1",
+            "misconception": null,
+            "feedback": "1 on pituuksien erotus. Laske vektorin (3, 4) pituus."
+          },
+          {
+            "id": "c",
+            "text": "7",
+            "misconception": "LVEC-01",
+            "feedback": "7 on pituuksien summa |a| + |b|. Summavektorin pituus lasketaan summavektorin koordinaateista."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = (3, 4).",
+          "|a + b| = √(3² + 4²) = 5."
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_mc",
+        "params": {
+          "a": [
+            3,
+            0
+          ],
+          "b": [
+            0,
+            4
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Kappaleeseen vaikuttaa 6 N:n voima itään ja 8 N:n voima pohjoiseen. Kuinka suuri on kokonaisvoima?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "10 N",
+            "misconception": null,
+            "feedback": "Oikein: voimat ovat kohtisuorassa, joten pituus on √(6² + 8²) = 10."
+          },
+          {
+            "id": "b",
+            "text": "2 N",
+            "misconception": null,
+            "feedback": "2 N olisi voimien erotus, kun ne vetävät vastakkain."
+          },
+          {
+            "id": "c",
+            "text": "14 N",
+            "misconception": "LVEC-01",
+            "feedback": "Voimien suuruudet eivät summaudu, kun suunnat ovat eri. Käytä Pythagoraan lausetta."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Voimat ovat kohtisuorassa: F = √(6² + 8²) = 10."
+        ],
+        "final": "10 N"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_mc",
+        "params": {
+          "f1": 6,
+          "f2": 8
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (1, 2) ja b = (3, −2). Mikä on |a + b|?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "√18 ≈ 4,2",
+            "misconception": null,
+            "feedback": "√(5 + 13) toimii vain, kun vektorit ovat kohtisuorassa. Laske ensin a + b."
+          },
+          {
+            "id": "b",
+            "text": "4",
+            "misconception": null,
+            "feedback": "Oikein: a + b = (4, 0), joten |a + b| = 4."
+          },
+          {
+            "id": "c",
+            "text": "√5 + √13 ≈ 5,8",
+            "misconception": "LVEC-01",
+            "feedback": "Tämä on |a| + |b|. Summavektorin pituus lasketaan summavektorin koordinaateista."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = (4, 0).",
+          "|a + b| = 4."
+        ],
+        "final": "4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_mc",
+        "params": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            3,
+            -2
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Millä ehdolla |a + b| = |a| + |b|?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kun vektorit ovat samansuuntaiset",
+            "misconception": null,
+            "feedback": "Oikein: vain silloin vektorit asettuvat peräkkäin samaa suuntaa, ja pituudet lasketaan yhteen."
+          },
+          {
+            "id": "b",
+            "text": "Kun vektorit ovat kohtisuorassa",
+            "misconception": null,
+            "feedback": "Silloin |a + b| = √(|a|² + |b|²), mikä on pienempi kuin |a| + |b|."
+          },
+          {
+            "id": "c",
+            "text": "Ei koskaan",
+            "misconception": null,
+            "feedback": "Samansuuntaisille vektoreille yhtälö pätee, esim. (2, 0) ja (3, 0)."
+          },
+          {
+            "id": "d",
+            "text": "Aina",
+            "misconception": "LVEC-01",
+            "feedback": "Kokeile kohtisuoria vektoreita (3, 0) ja (0, 4): |a + b| = 5, mutta |a| + |b| = 7."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Piirrä vektorit peräkkäin. Summavektori on yhtä pitkä kuin pituuksien summa vain, jos reitti on suora.",
+          "Muuten kolmioepäyhtälö |a + b| < |a| + |b| pätee."
+        ],
+        "final": "Vain samansuuntaisille vektoreille"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_mc",
+        "params": {
+          "case": "equality"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorien pituudet ovat |a| = 5 ja |b| = 2. Mikä seuraavista ei voi olla |a + b|?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "8",
+            "misconception": null,
+            "feedback": "Oikein: |a + b| on enintään 5 + 2 = 7."
+          },
+          {
+            "id": "b",
+            "text": "3",
+            "misconception": "LVEC-01",
+            "feedback": "3 on mahdollinen: vektorit vastakkaissuuntaiset, 5 − 2 = 3. Summavektorin pituus ei ole aina 7."
+          },
+          {
+            "id": "c",
+            "text": "7",
+            "misconception": null,
+            "feedback": "7 on mahdollinen: vektorit samansuuntaiset."
+          },
+          {
+            "id": "d",
+            "text": "5",
+            "misconception": "LVEC-01",
+            "feedback": "5 on mahdollinen, esimerkiksi kun vektorit ovat sopivassa kulmassa. Summavektorin pituus ei ole aina 7."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kolmioepäyhtälö: 3 ≤ |a + b| ≤ 7.",
+          "Luku 8 on suurempi kuin 7."
+        ],
+        "final": "8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_mc",
+        "params": {
+          "la": 5,
+          "lb": 2
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

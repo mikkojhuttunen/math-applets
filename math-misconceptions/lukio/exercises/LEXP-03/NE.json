@@ -1,0 +1,307 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEXP-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 3 % vuodessa 20 vuotta. Kuinka monta prosenttia hinta on noussut yhteensä? Pyöristä kokonaisprosenttiin."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 81,
+          "tolerance": 0.5,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 60,
+            "misconception": "LEXP-03",
+            "feedback": "60 % olettaa saman euromääräisen nousun joka vuosi. Käytä kerrointa 1,03^20."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,03.",
+          "1,03^20 ≈ 1,81, joten nousu on noin 81 %."
+        ],
+        "final": "81 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_ne",
+        "params": {
+          "rate": "3/100",
+          "years": 20
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "cas"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Sijoituksen arvo kasvaa 5 % vuodessa. Kuinka monta vuotta kestää, kunnes arvo on kaksinkertainen? Pyöristä lähimpään kokonaislukuun."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 14,
+          "tolerance": 0.5,
+          "unit": "vuotta"
+        },
+        "wrong": [
+          {
+            "match": 20,
+            "misconception": "LEXP-03",
+            "feedback": "100 / 5 = 20 olettaa lineaarisen kasvun. Ratkaise yhtälö 1,05^t = 2."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1,05^t = 2.",
+          "t = ln 2 / ln 1,05 ≈ 14,2."
+        ],
+        "final": "14 vuotta"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_ne",
+        "params": {
+          "rate": "1/20"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA9.03"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Talletat 1000 € tilille, jonka vuosikorko on 2 %. Korko liitetään pääomaan joka vuosi. Paljonko tilillä on 5 vuoden kuluttua (€)?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1104.08,
+          "tolerance": 0.01,
+          "unit": "€"
+        },
+        "wrong": [
+          {
+            "match": 1100.0,
+            "misconception": "LEXP-03",
+            "feedback": "1100 € olettaa, että korkoa maksetaan vain alkupääomalle. Käytä kerrointa 1,02^5."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,02.",
+          "1000 · 1,02^5 = 1104,08."
+        ],
+        "final": "1104,08 €"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_ne",
+        "params": {
+          "p": 1000,
+          "rate": "1/50",
+          "years": 5
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.06"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Tartuntojen määrä kaksinkertaistuu 3 päivän välein. Aluksi tartuntoja on 10. Montako tartuntaa on 12 päivän kuluttua?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 160
+        },
+        "wrong": [
+          {
+            "match": 50,
+            "misconception": "LEXP-03",
+            "feedback": "Tämä lisää saman määrän joka jakso. Kaksinkertaistuminen kertoo määrän luvulla 2."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "12 päivää on 4 kaksinkertaistumista.",
+          "10 · 2^4 = 160."
+        ],
+        "final": "160"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_ne",
+        "params": {
+          "n0": 10,
+          "d": 3,
+          "t": 12
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA9.03"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Asunnon hinta nousee 4 % vuodessa. Kollega arvioi, että 10 vuodessa hinta nousee 40 %. Laske todellinen nousu prosentteina kokonaisprosentiksi pyöristettynä ja tarkista, onko arvio järkevä."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 48,
+          "tolerance": 0.5,
+          "unit": "%"
+        },
+        "wrong": [
+          {
+            "match": 40,
+            "misconception": "LEXP-03",
+            "feedback": "40 % on lineaarinen arvio, 10 · 4 %. Kasvu kertautuu: käytä kerrointa 1,04^10."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,04.",
+          "1,04^10 ≈ 1,48, joten nousu on noin 48 %.",
+          "Arvio 40 % on liian pieni."
+        ],
+        "final": "48 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_ne",
+        "params": {
+          "rate": "1/25",
+          "years": 10
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

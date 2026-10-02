@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 0 |
-| Last run | - |
-| Progress | 0 of 151 planned cells in phases 0–2 generated |
+| Runs completed | 1 |
+| Last run | 2026-10-02 |
+| Progress | 6 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -178,9 +178,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 
 | ID | MC | NE | ES | SO | FS | ME | RP | SC | MA | EST | GI | NL | EX | TF | PH |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
-| LFUN-02 | o | o | o | - | - | o | - | o | - | - | - | - | - | o | - |
-| LVEC-01 | o | o | - | - | - | - | o | - | - | o | o | - | - | - | - |
-| LEXP-03 | o | o | - | - | - | - | o | - | - | o | o | - | o | - | - |
+| LFUN-02 | X | X | o | - | - | o | - | o | - | - | - | - | - | o | - |
+| LVEC-01 | X | X | - | - | - | - | o | - | - | o | o | - | - | - | - |
+| LEXP-03 | X | X | - | - | - | - | o | - | - | o | o | - | o | - | - |
 | LLIM-01 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LLIM-02 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
 | LDER-04 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
@@ -242,6 +242,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LEXP-04 | FS | LU-LEXP-04-FS-001 | P | none | MAB4.03 | tests/fixtures/good/LEXP-04/FS.json | Seed | Hand-written (L-T03), also a test fixture; 3 · 2^x = 48, missing line 2^x = 2^4; MAB item |
 | 2026-10-02 | LEXP-01 | ME | LU-LEXP-01-ME-001 | T | none | MAA5.07 | tests/fixtures/good/LEXP-01/ME.json | Seed | Hand-written (L-T03), also a test fixture; Which equal lg x + lg y; distractors lg(x + y), lg x · lg y |
 | 2026-10-02 | LEQU-01 | RP | LU-LEQU-01-RP-001 | H | none | MAA2.05 | tests/fixtures/good/LEQU-01/RP.json | Seed | Hand-written (L-T03), also a test fixture; Quadratic equation whose only solution is x = 3; x² = 3x listed as invalid |
+| 2026-10-02 | LFUN-02 | MC | LU-LFUN-02-MC-001…005 | P, T, H | none | MAA2.01, MAA5.03, MAA5.07, MAB2.07 | exercises/LFUN-02/MC.json | Draft | Run 1; (x + a)², sin(a + b), lg a + lg b; 2 MAB items; items 004 and 005 are justification or plausibility checks |
+| 2026-10-02 | LFUN-02 | NE | LU-LFUN-02-NE-001…005 | P, T, H | none | MAA2.01, MAA5.03, MAB2.07 | exercises/LFUN-02/NE.json | Draft | Run 1; √(a² + b²), expanding squares (expression), sin(π/6 + π/3) plausibility; 2 MAB items |
+| 2026-10-02 | LVEC-01 | MC | LU-LVEC-01-MC-001…005 | P, T, H | none | MAA4.07 | exercises/LVEC-01/MC.json | Draft | Run 1; perpendicular and general sums, equality condition, possible lengths |
+| 2026-10-02 | LVEC-01 | NE | LU-LVEC-01-NE-001…005 | P, T, H | none | MAA4.07 | exercises/LVEC-01/NE.json | Draft | Run 1; coordinates, boat and current, opposite vectors, minimum length |
+| 2026-10-02 | LEXP-03 | MC | LU-LEXP-03-MC-001…005 | P, T, H | none | MAB4.02, MAB7.01, MAA5.06 | exercises/LEXP-03/MC.json | Draft | Run 1; 3 % for 20 years, doubling time, bacteria, 50 % for 4 years, investment estimate; 3 MAB items |
+| 2026-10-02 | LEXP-03 | NE | LU-LEXP-03-NE-001…005 | P, T, H | none, cas | MAB4.02, MAA5.06, MAA9.03 | exercises/LEXP-03/NE.json | Draft | Run 1; item 002 is cas (doubling time at 5 %); 2 MAB items |
 
 ## 7. Coverage and decisions to confirm
 

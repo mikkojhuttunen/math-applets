@@ -1,0 +1,308 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-01",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (8, 0) ja b = (0, 15). Laske |a + b|."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 17
+        },
+        "wrong": [
+          {
+            "match": 23,
+            "misconception": "LVEC-01",
+            "feedback": "23 on pituuksien summa |a| + |b|. Laske summavektorin (8, 15) pituus."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = (8, 15).",
+          "|a + b| = √(8² + 15²) = 17."
+        ],
+        "final": "17"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_ne",
+        "params": {
+          "a": [
+            8,
+            0
+          ],
+          "b": [
+            0,
+            15
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vene kulkee tyynessä vedessä 4 m/s itään. Virta kuljettaa sitä 3 m/s pohjoiseen. Kuinka nopeasti vene liikkuu rantaan nähden (m/s)?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5,
+          "unit": "m/s"
+        },
+        "wrong": [
+          {
+            "match": 7,
+            "misconception": "LVEC-01",
+            "feedback": "7 m/s on nopeuksien summa. Nopeudet ovat kohtisuorassa, joten käytä Pythagoraan lausetta."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "v = √(4² + 3²) = 5 m/s."
+        ],
+        "final": "5 m/s"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_ne",
+        "params": {
+          "v1": 4,
+          "v2": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorien pituudet ovat |a| = 7 ja |b| = 7, ja b = −a. Laske |a + b|."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0
+        },
+        "wrong": [
+          {
+            "match": 14,
+            "misconception": "LVEC-01",
+            "feedback": "14 on pituuksien summa. Kun b = −a, vektorit kumoavat toisensa."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = a − a = 0.",
+          "Nollavektorin pituus on 0."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_ne",
+        "params": {
+          "m": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorien pituudet ovat |a| = 9 ja |b| = 4. Mikä on pienin mahdollinen |a + b|?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5
+        },
+        "wrong": [
+          {
+            "match": 13,
+            "misconception": "LVEC-01",
+            "feedback": "13 on suurin mahdollinen arvo, ei pienin. Pienin saadaan vastakkaissuuntaisilla vektoreilla."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pienin arvo saadaan, kun vektorit ovat vastakkaissuuntaiset.",
+          "|a + b| = 9 − 4 = 5."
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_ne",
+        "params": {
+          "la": 9,
+          "lb": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-01-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-01"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (7, 1) ja b = (−4, 3). Laske |a + b|."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 5
+        },
+        "wrong": [
+          {
+            "match": 12.07,
+            "misconception": "LVEC-01",
+            "feedback": "Tämä on |a| + |b|. Summavektorin pituus lasketaan summavektorin koordinaateista."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = (3, 4).",
+          "|a + b| = √(3² + 4²) = 5."
+        ],
+        "final": "5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Summavektorin pituus on yleensä pienempi kuin pituuksien summa. Piirrä vektorit peräkkäin tai laske koordinaateilla."
+      },
+      "provenance": {
+        "template": "lvec01_ne",
+        "params": {
+          "a": [
+            7,
+            1
+          ],
+          "b": [
+            -4,
+            3
+          ]
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}

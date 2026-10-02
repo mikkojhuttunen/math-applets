@@ -1,0 +1,357 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEXP-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 3 % vuodessa. Kuinka monta prosenttia hinta on noussut 20 vuodessa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Noin 81 %",
+            "misconception": null,
+            "feedback": "Oikein: 1,03^20 ≈ 1,81, joten nousu on noin 81 %."
+          },
+          {
+            "id": "b",
+            "text": "60 %",
+            "misconception": "LEXP-03",
+            "feedback": "Tämä olettaa saman euromääräisen nousun joka vuosi. Korko kertautuu: kerroin on 1,03^20."
+          },
+          {
+            "id": "c",
+            "text": "Noin 40 %",
+            "misconception": null,
+            "feedback": "Kerroin 1,03 korotetaan potenssiin 20, ei jaeta."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1 + 0,03 = 1,03.",
+          "20 vuodessa kerroin on 1,03^20 ≈ 1,81."
+        ],
+        "final": "Noin 81 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_mc",
+        "params": {
+          "rate": "3/100",
+          "years": 20
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Väkiluku kasvaa 7 % vuodessa. Noin kuinka monessa vuodessa väkiluku kaksinkertaistuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Noin 7 vuodessa",
+            "misconception": null,
+            "feedback": "Kokeile: 7 vuodessa kerroin on 1,07^7 ≈ 1,6, ei vielä 2."
+          },
+          {
+            "id": "b",
+            "text": "Noin 14 vuodessa",
+            "misconception": "LEXP-03",
+            "feedback": "100 / 7 olettaa lineaarisen kasvun. Kasvu kertautuu, joten aikaa kuluu vähemmän."
+          },
+          {
+            "id": "c",
+            "text": "Noin 10 vuodessa",
+            "misconception": null,
+            "feedback": "Oikein: 1,07^10 ≈ 1,97, joten väkiluku on kymmenessä vuodessa lähes kaksinkertainen."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kokeillaan: 1,07^10 ≈ 1,97 ja 1,07^11 ≈ 2,10."
+        ],
+        "final": "Noin 10 vuodessa"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_mc",
+        "params": {
+          "rate": "7/100"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.06"
+        ],
+        "g": [
+          "G5"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Bakteeriviljelmässä on aluksi 1000 bakteeria, ja määrä kaksinkertaistuu tunnissa. Montako bakteeria on 6 tunnin kuluttua?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "7000",
+            "misconception": "LEXP-03",
+            "feedback": "Tämä lisää saman määrän joka tunti. Kaksinkertaistuminen kertoo määrän luvulla 2 joka tunti."
+          },
+          {
+            "id": "b",
+            "text": "64000",
+            "misconception": null,
+            "feedback": "Oikein: 1000 · 2^6 = 64000."
+          },
+          {
+            "id": "c",
+            "text": "12000",
+            "misconception": null,
+            "feedback": "Kaksinkertaistuminen tunnissa tarkoittaa kerrointa 2^6, ei 2 · 6."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kerroin on 2^6 = 64.",
+          "1000 · 64 = 64000."
+        ],
+        "final": "64000"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_mc",
+        "params": {
+          "n0": 1000,
+          "h": 6
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Yrityksen liikevaihto kasvaa 50 % vuodessa neljä vuotta peräkkäin. Kuinka monta prosenttia liikevaihto on silloin kasvanut yhteensä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "300 %",
+            "misconception": null,
+            "feedback": "Vuosikerroin 1,5 kertautuu: 1,5^4, ei 1 + 4 · 0,5."
+          },
+          {
+            "id": "b",
+            "text": "Noin 406 %",
+            "misconception": null,
+            "feedback": "Oikein: 1,5^4 ≈ 5,06, joten kasvu on noin 406 %."
+          },
+          {
+            "id": "c",
+            "text": "200 %",
+            "misconception": "LEXP-03",
+            "feedback": "4 · 50 % olettaa lineaarisen kasvun. Joka vuosi 50 % lasketaan jo kasvaneesta liikevaihdosta."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,5.",
+          "1,5^4 = 5,0625, joten kasvu on 4,0625 eli noin 406 %."
+        ],
+        "final": "Noin 406 %"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_mc",
+        "params": {
+          "rate": "1/2",
+          "years": 4
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEXP-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB4.02",
+          "MAB7.01"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEXP-03"
+      ],
+      "prompt": {
+        "text": "Sijoitat 2000 € vuosikorolla 4 %, ja korko liitetään pääomaan joka vuosi. Arvioit 25 vuoden päästä, että pääoma on kaksinkertaistunut (4000 €). Mitä arviostasi voi sanoa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Arvio on liian pieni, koska korkoa saa myös aiemmin kertyneelle korolle",
+            "misconception": null,
+            "feedback": "Oikein: 2000 · 1,04^25 ≈ 5330 €."
+          },
+          {
+            "id": "b",
+            "text": "Arvio on oikea, koska 25 · 4 % = 100 %",
+            "misconception": "LEXP-03",
+            "feedback": "Tämä olettaa, että korkoa maksetaan vain alkupääomalle. Kun korko liitetään pääomaan, kasvu kertautuu."
+          },
+          {
+            "id": "c",
+            "text": "Arvio on liian suuri, koska korko pienenee ajan myötä",
+            "misconception": null,
+            "feedback": "Korkoprosentti ei pienene. Korkoa lasketaan kasvavalle pääomalle."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Vuosikerroin on 1,04.",
+          "1,04^25 ≈ 2,67, joten pääoma on noin 5330 €."
+        ],
+        "final": "Arvio on liian pieni"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Prosentuaalinen kasvu kertautuu: joka vuosi muutos lasketaan edellisen vuoden arvosta, ei alkuarvosta."
+      },
+      "provenance": {
+        "template": "lexp03_mc",
+        "params": {
+          "p": 2000,
+          "rate": "1/25",
+          "years": 25
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 1
+      }
+    }
+  ]
+}
