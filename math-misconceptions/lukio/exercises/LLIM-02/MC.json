@@ -1,0 +1,352 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LLIM-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LLIM-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA6.01",
+          "MAY1.01"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LLIM-02"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista väitteistä on oikein?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,999… < 1, koska luvusta puuttuu aina vähän",
+            "misconception": "LLIM-02",
+            "feedback": "Mikään äärellinen määrä ysejä ei ole 1, mutta päättymätön desimaaliesitys on määritelmän mukaan raja-arvo, joka on 1."
+          },
+          {
+            "id": "b",
+            "text": "0,999… = 1",
+            "misconception": null,
+            "feedback": "Oikein: 0,999… = 9/10 + 9/100 + … on geometrinen sarja, jonka summa on 1."
+          },
+          {
+            "id": "c",
+            "text": "0,999… on lähes 1 mutta ei sama luku",
+            "misconception": "LLIM-02",
+            "feedback": "Reaaliluvuilla ei ole 'ääretöntä pientä väliä' lukujen 0,999… ja 1 välillä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "0,999… = 9/10 + 9/100 + 9/1000 + …",
+          "Geometrinen sarja a₁/(1 − q) = (9/10)/(1 − 1/10) = 1."
+        ],
+        "final": "0,999… = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Desimaaliesitys 0,999… tarkoittaa päättymätöntä summaa, jonka arvo on tasan 1. Se ei ole luku, joka vain lähestyy ykköstä."
+      },
+      "provenance": {
+        "template": "llim02_mc",
+        "params": {
+          "d": 9
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LLIM-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.01"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LLIM-02"
+      ],
+      "prompt": {
+        "text": "Koska 1/3 = 0,333…, saadaan 3 · 1/3 = 3 · 0,333… = 0,999…. Toisaalta 3 · 1/3 = 1. Onko tämä päättely kelvollinen osoittamaan, että 0,999… = 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä: 3 · 1/3 = 1, ja 1/3 = 0,333…, joten 0,999… = 1",
+            "misconception": null,
+            "feedback": "Oikein. Sama luku voidaan kirjoittaa kahdella tavalla."
+          },
+          {
+            "id": "b",
+            "text": "Ei: kertolasku ei toimi päättymättömillä desimaaliluvuilla",
+            "misconception": "LLIM-02",
+            "feedback": "Kertolasku toimii, kun desimaaliluku ymmärretään sarjan summana."
+          },
+          {
+            "id": "c",
+            "text": "Ei: 0,333… on vain likiarvo luvusta 1/3, joten tulos on 0,999…",
+            "misconception": "LLIM-02",
+            "feedback": "Päättymätön esitys 0,333… on täsmälleen 1/3, ei likiarvo."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1/3 = 0,333… täsmälleen.",
+          "3 · 0,333… = 0,999… ja 3 · 1/3 = 1."
+        ],
+        "final": "Kyllä, 0,999… = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Desimaaliesitys 0,999… tarkoittaa päättymätöntä summaa, jonka arvo on tasan 1. Se ei ole luku, joka vain lähestyy ykköstä."
+      },
+      "provenance": {
+        "template": "llim02_mc",
+        "params": {
+          "digit": 3
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LLIM-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.01"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LLIM-02"
+      ],
+      "prompt": {
+        "text": "Olkoon x = 0,999…. Silloin 10x = 9,999…. Mitä saadaan, kun lasketaan 10x − x, ja mikä on x?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "10x = 9,99…0, joten x = 0,9",
+            "misconception": "LLIM-02",
+            "feedback": "Päättymättömässä esityksessä ei ole viimeistä numeroa."
+          },
+          {
+            "id": "b",
+            "text": "10x − x = 9, joten x = 1",
+            "misconception": null,
+            "feedback": "Oikein: 10x = 9,999… ja x = 0,999…, joten vähennys antaa 9x = 9."
+          },
+          {
+            "id": "c",
+            "text": "10x − x = 8,999…, joten x on hiukan alle 1",
+            "misconception": "LLIM-02",
+            "feedback": "10x = 9,999… ja x = 0,999…: päättymättömät ysit kumoavat toisensa täsmälleen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "10x − x = 9,999… − 0,999… = 9.",
+          "9x = 9, joten x = 1."
+        ],
+        "final": "x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Desimaaliesitys 0,999… tarkoittaa päättymätöntä summaa, jonka arvo on tasan 1. Se ei ole luku, joka vain lähestyy ykköstä."
+      },
+      "provenance": {
+        "template": "llim02_mc",
+        "params": {
+          "x": "0.999..."
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LLIM-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA6.01"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LLIM-02"
+      ],
+      "prompt": {
+        "text": "Kirjoita jaksollinen desimaaliluku 0,777… murtolukuna. Mikä on sen arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "7/10 + 7/100 = 77/100",
+            "misconception": "LLIM-02",
+            "feedback": "Äärellinen summa ei ole päättymätön desimaaliesitys."
+          },
+          {
+            "id": "b",
+            "text": "7/10",
+            "misconception": "LLIM-02",
+            "feedback": "Tämä on vain ensimmäinen termi; sarjassa on päättymätön määrä lisättäviä termejä."
+          },
+          {
+            "id": "c",
+            "text": "7/9",
+            "misconception": null,
+            "feedback": "Oikein: 0,777… = 7/10 + 7/100 + … = 7/9."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Geometrinen sarja a₁ = 7/10, q = 1/10.",
+          "S = (a₁)/(1 − q) = 7/9."
+        ],
+        "final": "7/9"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Desimaaliesitys 0,999… tarkoittaa päättymätöntä summaa, jonka arvo on tasan 1. Se ei ole luku, joka vain lähestyy ykköstä."
+      },
+      "provenance": {
+        "template": "llim02_mc",
+        "params": {
+          "d": 7
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LLIM-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAY1.01"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAB",
+        "level": "K",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LLIM-02"
+      ],
+      "prompt": {
+        "text": "Väite: 0,999… ja 1 ovat eri luvut, koska 0,999… < 1. Tarkista väite: onko lukujen 0,999… ja 1 väliin mahdollista löytää jokin toinen luku?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kyllä: esimerkiksi luku 0,999…5 mahtuu väliin",
+            "misconception": "LLIM-02",
+            "feedback": "Päättymättömässä desimaaliesityksessä ei ole viimeistä numeroa, joten tällaista lukua ei ole."
+          },
+          {
+            "id": "b",
+            "text": "Ei: jos vielä 0,999… < 1, niin lukujen väliin mahtuisi toinen luku, mutta sitä ei ole",
+            "misconception": null,
+            "feedback": "Oikein: kahden eri reaaliluvun välissä on aina toinen luku, mutta 0,999… ja 1 välissä ei ole mitään."
+          },
+          {
+            "id": "c",
+            "text": "Kyllä: lukujen välissä on ääretön pieni väli",
+            "misconception": "LLIM-02",
+            "feedback": "Reaaliluvuissa ei ole äärettömän pieniä väliä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kahden eri reaaliluvun keskiarvo on aina niiden välissä.",
+          "Lukujen 0,999… ja 1 väliin ei voi sijoittaa mitään lukua.",
+          "Siis luvut ovat sama luku."
+        ],
+        "final": "Ei; luvut ovat sama"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Desimaaliesitys 0,999… tarkoittaa päättymätöntä summaa, jonka arvo on tasan 1. Se ei ole luku, joka vain lähestyy ykköstä."
+      },
+      "provenance": {
+        "template": "llim02_mc",
+        "params": {},
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}

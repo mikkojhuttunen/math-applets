@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 2 |
+| Runs completed | 3 |
 | Last run | 2026-10-02 |
-| Progress | 10 of 151 planned cells in phases 0–2 generated |
+| Progress | 13 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -181,9 +181,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LFUN-02 | X | X | X | - | - | X | - | o | - | - | - | - | - | o | - |
 | LVEC-01 | X | X | - | - | - | - | X | - | - | o | o | - | - | - | - |
 | LEXP-03 | X | X | - | - | - | - | X | - | - | o | o | - | o | - | - |
-| LLIM-01 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| LLIM-02 | o | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| LDER-04 | o | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
+| LLIM-01 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
+| LLIM-02 | X | - | - | - | - | - | - | - | - | - | - | - | o | o | - |
+| LDER-04 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
 | LPRB-06 | o | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
 | LPRB-01 | s | o | o | - | - | - | o | - | - | - | - | - | - | - | - |
 | LPRB-04 | o | o | - | - | - | - | - | - | - | - | - | - | - | o | - |
@@ -252,6 +252,9 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LFUN-02 | ME | LU-LFUN-02-ME-001…005 | P, T, H | none | MAB2.07, MAA2.01, MAA5.03, MAA5.07 | exercises/LFUN-02/ME.json | Draft | Run 2; (x + 4)², (3x − 2)² (2 MAB items), sin 2x, √(x² + y²), ln(xy²) |
 | 2026-10-02 | LVEC-01 | RP | LU-LVEC-01-RP-001…005 | P, T, H | none | MAA4.07, MAA4.08 | exercises/LVEC-01/RP.json | Draft | Run 2; equation for s = \|a + b\|² (perpendicular, robot, components, 60°, opposite vectors) |
 | 2026-10-02 | LEXP-03 | RP | LU-LEXP-03-RP-001…005 | P, T, H | none | MAB4.02, MAB7.01, MAA5.06 | exercises/LEXP-03/RP.json | Draft | Run 2; doubling bacteria, 10 % interest, growth factor, doubling time, halving value; 3 MAB items; exact fractions used instead of decimals so the verifier can compare solutions |
+| 2026-10-02 | LLIM-01 | MC | LU-LLIM-01-MC-001…005 | P, T, H, K | none | MAA6.01 | exercises/LLIM-01/MC.json | Draft | Run 3; constant function, removable discontinuity, polynomial limit by substitution, 4/x as x grows, sin x / x justification; MAA only |
+| 2026-10-02 | LLIM-02 | MC | LU-LLIM-02-MC-001…005 | P, T, H, K | none | MAA6.01, MAY1.01 | exercises/LLIM-02/MC.json | Draft | Run 3; 0,999… = 1, 3 · 1/3, 10x − x trick, 0,777… as fraction, plausibility via midpoint; 3 MAB items via MAY1.01 |
+| 2026-10-02 | LDER-04 | MC | LU-LDER-04-MC-001…005 | P, T, H, K | none | MAA6.08, MAB8.03 | exercises/LDER-04/MC.json | Draft | Run 3; sign of f′, maximum of f from f′, plant growth speed, f′ < 0 is not f < 0, justification at x = 3; 2 MAB items |
 
 ## 7. Coverage and decisions to confirm
 

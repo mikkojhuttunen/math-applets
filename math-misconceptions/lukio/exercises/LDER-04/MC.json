@@ -1,0 +1,355 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LDER-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LDER-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA6.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LDER-04"
+      ],
+      "prompt": {
+        "text": "Funktion f derivaatta on f′(x) = 9 − x². Mitä tiedät f:stä kohdassa x = 1?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "f on positiivinen kohdassa x = 1",
+            "misconception": "LDER-04",
+            "feedback": "f′:n merkki ei kerro f:n merkkiä. Päättele vain kasvusta tai vähenemisestä."
+          },
+          {
+            "id": "b",
+            "text": "f on kasvava kohdassa x = 1",
+            "misconception": null,
+            "feedback": "Oikein: f′(1) = 8 > 0, joten f kasvaa."
+          },
+          {
+            "id": "c",
+            "text": "f on vähenevä kohdassa x = 1",
+            "misconception": "LDER-04",
+            "feedback": "Positiivinen f′ ei tarkoita laskevaa funktiota. Derivaatan merkki kertoo kasvun suunnan."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f′(1) = 9 − 1 = 8.",
+          "f′ > 0, joten f on kasvava."
+        ],
+        "final": "f kasvaa kohdassa x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Derivaatan kuvaaja kertoo funktion kulmakertoimen: f′ > 0 tarkoittaa, että f kasvaa, ja f′ < 0, että f vähenee. Se ei kerro f:n korkeutta."
+      },
+      "provenance": {
+        "template": "lder04_mc",
+        "params": {
+          "x": 1
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LDER-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA6.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LDER-04"
+      ],
+      "prompt": {
+        "text": "Funktion f derivaatta on f′(x) = 4x − x². Derivaatan kuvaaja on alaspäin aukeava paraabeli, jonka huippu on kohdassa x = 2. Millä x:n arvolla f:llä on suurin arvo?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 2",
+            "misconception": "LDER-04",
+            "feedback": "Kohdassa x = 2 derivaatta on suurimmillaan, eli f kasvaa nopeimmin, mutta f ei ole vielä suurimmillaan."
+          },
+          {
+            "id": "b",
+            "text": "x = 4",
+            "misconception": null,
+            "feedback": "Oikein: f′ vaihtaa merkkiä plussasta miinukseen kohdassa x = 4, joten f:llä on siinä suurin arvo."
+          },
+          {
+            "id": "c",
+            "text": "x = 0",
+            "misconception": null,
+            "feedback": "Kohdassa x = 0 derivaatta vaihtaa merkkiä miinuksesta plussaan, joten f:llä on siinä pienin arvo."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f′(x) = x(4 − x), nollakohdat 0 ja 4.",
+          "f′ > 0, kun 0 < x < 4, ja f′ < 0, kun x > 4.",
+          "f saa suurimman arvonsa kohdassa x = 4."
+        ],
+        "final": "x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Derivaatan kuvaaja kertoo funktion kulmakertoimen: f′ > 0 tarkoittaa, että f kasvaa, ja f′ < 0, että f vähenee. Se ei kerro f:n korkeutta."
+      },
+      "provenance": {
+        "template": "lder04_mc",
+        "params": {
+          "fprime": "-x**2 + 4*x"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LDER-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB8.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LDER-04"
+      ],
+      "prompt": {
+        "text": "Kasvin korkeuden muutosnopeus (cm/vrk) on f′(t) = 6 − t, kun 0 ≤ t ≤ 5. Kuvaaja on laskeva suora, mutta pysyy x-akselin yläpuolella. Mitä tämä kertoo kasvin korkeudesta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kasvi lakkaa kasvamasta päivänä 5",
+            "misconception": "LDER-04",
+            "feedback": "Päivänä 5 kasvunopeus on 1 cm/vrk, joten kasvi kasvaa yhä."
+          },
+          {
+            "id": "b",
+            "text": "Kasvi on päivänä 5 korkeampi kuin päivänä 4",
+            "misconception": null,
+            "feedback": "Oikein: nopeus on koko ajan positiivinen, joten korkeus kasvaa joka päivä, vaikka kasvunopeus pienenee."
+          },
+          {
+            "id": "c",
+            "text": "Kasvi on päivänä 5 matalampi kuin päivänä 4, koska kuvaaja laskee",
+            "misconception": "LDER-04",
+            "feedback": "Laskeva kuvaaja kertoo, että kasvunopeus pienenee, ei että kasvin korkeus pienenee."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f′(t) = 6 − t ≥ 1 > 0 koko välillä.",
+          "Siis korkeus kasvaa joka päivä; vain kasvun nopeus hidastuu."
+        ],
+        "final": "Korkeus kasvaa joka päivä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Derivaatan kuvaaja kertoo funktion kulmakertoimen: f′ > 0 tarkoittaa, että f kasvaa, ja f′ < 0, että f vähenee. Se ei kerro f:n korkeutta."
+      },
+      "provenance": {
+        "template": "lder04_mc",
+        "params": {
+          "fprime": "6 - t"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LDER-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAB8.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAB",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LDER-04"
+      ],
+      "prompt": {
+        "text": "Funktion f derivaatta on f′(x) = x² − 4. Välillä −2 < x < 2 derivaatan kuvaaja on x-akselin alapuolella. Mikä väite pitää paikkansa?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "f on vähenevä välillä −2 < x < 2, mutta f:n arvot voivat olla positiivisia",
+            "misconception": null,
+            "feedback": "Oikein: f′ < 0 kertoo vain, että f vähenee. Funktion arvo voi silti olla positiivinen."
+          },
+          {
+            "id": "b",
+            "text": "f on kasvava välillä −2 < x < 2",
+            "misconception": "LDER-04",
+            "feedback": "f′ < 0 tarkoittaa vähenevää funktiota."
+          },
+          {
+            "id": "c",
+            "text": "f saa negatiivisia arvoja välillä −2 < x < 2",
+            "misconception": "LDER-04",
+            "feedback": "f′:n merkki ei kerro f:n merkkiä. Esimerkiksi f(x) = x³/3 − 4x + 20 on aina positiivinen tällä välillä."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f′(x) = x² − 4 < 0, kun −2 < x < 2.",
+          "Siis f on vähenevä tällä välillä; f:n arvojen merkistä ei voi sanoa mitään."
+        ],
+        "final": "f on vähenevä"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Derivaatan kuvaaja kertoo funktion kulmakertoimen: f′ > 0 tarkoittaa, että f kasvaa, ja f′ < 0, että f vähenee. Se ei kerro f:n korkeutta."
+      },
+      "provenance": {
+        "template": "lder04_mc",
+        "params": {
+          "fprime": "x**2 - 4"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LDER-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA6.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "K",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LDER-04",
+        "LDER-03"
+      ],
+      "prompt": {
+        "text": "Funktion f derivaatta on f′(x) = 2x − 6. Perustele, mitä f:lle tapahtuu kohdassa x = 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "f:llä on pienin arvo kohdassa x = 3, koska f′ vaihtaa merkkiä miinuksesta plussaan",
+            "misconception": null,
+            "feedback": "Oikein: f′ < 0, kun x < 3, ja f′ > 0, kun x > 3, joten f vähenee ja sitten kasvaa."
+          },
+          {
+            "id": "b",
+            "text": "f:llä on suurin arvo kohdassa x = 3, koska f′ on siinä nollassa",
+            "misconception": "LDER-03",
+            "feedback": "Nollakohta ei yksin kerro, onko kyse suurimmasta vai pienimmästä arvosta; tarkista merkinvaihto."
+          },
+          {
+            "id": "c",
+            "text": "f on nolla kohdassa x = 3, koska f′(3) = 0",
+            "misconception": "LDER-04",
+            "feedback": "f′(3) = 0 kertoo vaakasuoran tangentin, ei sitä että f(3) = 0."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "f′(x) = 2(x − 3), nollakohta x = 3.",
+          "x < 3: f′ < 0, f vähenee. x > 3: f′ > 0, f kasvaa.",
+          "Kohdassa x = 3 f:llä on pienin arvo."
+        ],
+        "final": "Pienin arvo kohdassa x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Derivaatan kuvaaja kertoo funktion kulmakertoimen: f′ > 0 tarkoittaa, että f kasvaa, ja f′ < 0, että f vähenee. Se ei kerro f:n korkeutta."
+      },
+      "provenance": {
+        "template": "lder04_mc",
+        "params": {
+          "fprime": "2*x - 6"
+        },
+        "generated": "2026-10-02",
+        "verified": true,
+        "run": 3
+      }
+    }
+  ]
+}
