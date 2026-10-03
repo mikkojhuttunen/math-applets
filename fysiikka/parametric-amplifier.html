@@ -571,6 +571,41 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   }
   function tickLabel(v, st) { var d = Math.max(0, -Math.floor(Math.log10(st) + 1e-9)); return fmt(v, d); }
 
+  function powLabel(W) {
+    var u = [[1e6, "MW"], [1e3, "kW"], [1, "W"], [1e-3, "mW"], [1e-6, "µW"], [1e-9, "nW"], [1e-12, "pW"], [1e-15, "fW"]];
+    for (var k = 0; k < u.length; k++) if (W >= u[k][0] * 0.9999) return String(+(W / u[k][0]).toPrecision(3)) + " " + u[k][1];
+    var e = Math.round(Math.log10(W)); return "10" + sup(e) + " W";
+  }
+  // Ticks for a log power axis given a dBm range: decades, or 1-2-5 / 1..9 mantissas when the range is narrow
+  function powerTicks(d0, d1, nmax) {
+    var span = d1 - d0, out = [], mant;
+    if (span > 1e4 || !isFinite(span)) return out;
+    if (span >= 20) {
+      var dec = Math.max(1, Math.ceil(span / 10 / nmax));
+      for (var e = Math.ceil(d0 / 10); e * 10 <= d1; e++) {
+        var major = e % dec === 0;
+        out.push({ dbm: e * 10, major: major, label: major ? powLabel(1e-3 * Math.pow(10, e)) : "" });
+      }
+      return out;
+    }
+    var sets = [[1], [1, 2, 5], [1, 2, 3, 4, 5, 6, 7, 8, 9]];
+    for (var si = 0; si < sets.length; si++) {
+      out = [];
+      for (var e2 = Math.floor(d0 / 10) - 1; e2 * 10 <= d1 + 10; e2++) sets[si].forEach(function (mv) {
+        var db = 10 * e2 + 10 * Math.log10(mv);
+        if (db >= d0 && db <= d1) out.push({ dbm: db, major: mv === 1, label: powLabel(1e-3 * mv * Math.pow(10, e2)) });
+      });
+      if (out.length >= 3) break;
+    }
+    if (out.length < 3) {
+      // very narrow range: linear ticks in power
+      var p0 = 1e-3 * Math.pow(10, d0 / 10), p1 = 1e-3 * Math.pow(10, d1 / 10), tk = ticks(p0, p1, 4);
+      out = tk.v.filter(function (v) { return v > 0; }).map(function (v) { return { dbm: 10 * Math.log10(v / 1e-3), major: true, label: powLabel(v) }; });
+    }
+    if (out.length > nmax) { var stp = Math.ceil(out.length / nmax); out.forEach(function (t, i) { if (i % stp) t.label = ""; }); }
+    return out;
+  }
+
   function setupCanvas(cv) {
     var r = cv.getBoundingClientRect(), dpr = window.devicePixelRatio || 1;
     var W = Math.max(10, Math.round(r.width * dpr)), H = Math.max(10, Math.round(r.height * dpr));
@@ -581,7 +616,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
   function drawPlot(cv, o) {
     var S = setupCanvas(cv), ctx = S.ctx, w = S.w, h = S.h;
-    var m = { l: 56, r: 14, t: 10, b: 40 };
+    var m = { l: 56, r: o.y2 ? 70 : 14, t: 10, b: 40 };
     var pw = w - m.l - m.r, ph = h - m.t - m.b;
     var X = function (x) { return m.l + (x - o.xlim[0]) / (o.xlim[1] - o.xlim[0]) * pw; };
     var Y = function (y) { return m.t + (1 - (y - o.ylim[0]) / (o.ylim[1] - o.ylim[0])) * ph; };
@@ -598,6 +633,17 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     ctx.fillStyle = cMuted; ctx.textAlign = "center"; ctx.textBaseline = "bottom";
     ctx.fillText(o.xlabel, m.l + pw / 2, h - 2);
     ctx.save(); ctx.translate(12, m.t + ph / 2); ctx.rotate(-Math.PI / 2); ctx.textBaseline = "middle"; ctx.fillText(o.ylabel, 0, 0); ctx.restore();
+    if (o.y2) {
+      // right axis: absolute power, left value + offset = dBm
+      var off = o.y2.offset, pt = powerTicks(o.ylim[0] + off, o.ylim[1] + off, Math.max(3, Math.floor(ph / 40)));
+      ctx.strokeStyle = cMuted; ctx.fillStyle = cMuted; ctx.textAlign = "left"; ctx.textBaseline = "middle";
+      pt.forEach(function (t) {
+        var y = Y(t.dbm - off);
+        ctx.beginPath(); ctx.moveTo(m.l + pw, y); ctx.lineTo(m.l + pw + (t.major ? 5 : 3), y); ctx.stroke();
+        if (t.label) ctx.fillText(t.label, m.l + pw + 7, y);
+      });
+      ctx.save(); ctx.translate(w - 8, m.t + ph / 2); ctx.rotate(Math.PI / 2); ctx.textAlign = "center"; ctx.textBaseline = "middle"; ctx.fillText(o.y2.label, 0, 0); ctx.restore();
+    }
     ctx.save(); ctx.beginPath(); ctx.rect(m.l, m.t, pw, ph); ctx.clip();
     (o.bands || []).forEach(function (bd) {
       ctx.fillStyle = css("--accent"); ctx.globalAlpha = bd.alpha;
@@ -780,7 +826,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       { x: r.z, y: ys, color: css("--signal"), width: 2.4 }
     ];
     if (yMode !== "dbm") series.splice(0, 2);
-    zGeom = drawPlot($("cz"), { xlim: [0, p.L], ylim: ylim, xlabel: "z (m)", ylabel: ylabel, series: series, vlines: vl, cursor: zCursor });
+    zGeom = drawPlot($("cz"), { xlim: [0, p.L], ylim: ylim, xlabel: "z (m)", ylabel: ylabel, series: series, vlines: vl, cursor: zCursor,
+      y2: yMode === "dbm" ? { offset: 0, label: "power" } : null });
   }
 
   function hoverZ(z) {
@@ -903,6 +950,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var bands = bandS && bandS.lo != null && bandS.hi != null ? [{ x0: bandS.lo, x1: bandS.hi, alpha: 0.18 }] : [];
     sGeom = drawPlot($("cs"), {
       xlim: xl, ylim: [bot - pad, top + pad], xlabel: "signal wavelength (nm)", ylabel: "signal gain (dB)", bands: bands,
+      y2: { offset: dBm(P.Ps), label: "signal output power" },
       series: [
         { x: sp.lam, y: sp.ga, color: css("--muted"), dash: [6, 5], width: 1.5 },
         { x: n ? n.lam : [], y: n ? n.gn : [], color: css("--signal"), width: 2.2 }
@@ -920,7 +968,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var ser = [{ x: sp.lamI, y: sp.igA, color: css("--muted"), dash: [6, 5], width: 1.2 },
                { x: n ? n.lamI : [], y: n ? n.ig : [], color: css("--idler"), width: 2.2 }];
     if (P.lm !== "none") ser.push({ x: n ? n.lamI : [], y: n ? n.io : [], color: css("--idler"), dash: [5, 4], width: 1.8 });
-    iGeom = drawPlot($("ci"), { xlim: xi, ylim: [itop - 45, itop + 5], xlabel: "idler wavelength (nm)", ylabel: "idler power (dBm)", bands: ib, series: ser,
+    iGeom = drawPlot($("ci"), { xlim: xi, ylim: [itop - 45, itop + 5], xlabel: "idler wavelength (nm)", ylabel: "idler power (dBm)", bands: ib, series: ser, y2: { offset: 0, label: "idler power" },
       vlines: [{ x: P.li * 1e9, color: css("--accent"), width: 1, dash: [2, 3] }] });
     var rows = [["Idler band, " + B.src, [
       ["Centre (at λ<sub>s</sub>)", fmt(P.li * 1e9, 2) + " nm"],
@@ -981,6 +1029,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var pad = Math.max(1, 0.06 * (top - bot));
     gGeom = drawPlot($("cg"), {
       xlim: [-R, R], ylim: [bot - pad, top + pad], xlabel: "Δk (rad/m)", ylabel: "signal gain (dB)",
+      y2: { offset: dBm(P.Ps), label: "signal output power" },
       series: [
         { x: scan.dka, y: scan.ga, color: css("--muted"), dash: [6, 5], width: 1.5 },
         { x: scan.dk, y: scan.gn, color: css("--signal"), width: 2.2 }
