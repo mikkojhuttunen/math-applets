@@ -1,0 +1,352 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-04",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² < 4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "x² < 4",
+          "intervals": [
+            {
+              "lo": "-2",
+              "hi": "2",
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x < 2",
+            "misconception": "LEQU-04",
+            "feedback": "Esimerkiksi x = −5 toteuttaa epäyhtälön x < 2, mutta (−5)² = 25, joka ei ole pienempi kuin 4."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 4 < 0, eli (x − 2)(x + 2) < 0.",
+          "Tulo on negatiivinen, kun tekijät ovat erimerkkiset: −2 < x < 2."
+        ],
+        "final": "−2 < x < 2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_ne",
+        "params": {
+          "a": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² > 9."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "x² > 9",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": "-3",
+              "lo_closed": false,
+              "hi_closed": false
+            },
+            {
+              "lo": "3",
+              "hi": null,
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x > 3",
+            "misconception": "LEQU-04",
+            "feedback": "Myös x = −4 toteuttaa epäyhtälön: (−4)² = 16 > 9. Tämä ratkaisu puuttuu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 9 > 0, eli (x − 3)(x + 3) > 0.",
+          "Tulo on positiivinen, kun molemmat tekijät ovat samanmerkkiset: x < −3 tai x > 3."
+        ],
+        "final": "x < −3 tai x > 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_ne",
+        "params": {
+          "a": 9
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² ≤ 25. Tarkista tulos sijoittamalla x = −4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "x² ≤ 25",
+          "intervals": [
+            {
+              "lo": "-5",
+              "hi": "5",
+              "lo_closed": true,
+              "hi_closed": true
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x ≤ 5",
+            "misconception": "LEQU-04",
+            "feedback": "Epäyhtälöä x ≤ 5 toteuttaa myös x = −10, mutta (−10)² = 100 > 25. Alaraja −5 puuttuu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 25 ≤ 0, eli (x − 5)(x + 5) ≤ 0.",
+          "−5 ≤ x ≤ 5.",
+          "Tarkistus: (−4)² = 16 ≤ 25."
+        ],
+        "final": "−5 ≤ x ≤ 5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_ne",
+        "params": {
+          "a": 25
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö (x − 1)² < 4."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "(x − 1)² < 4",
+          "intervals": [
+            {
+              "lo": "-1",
+              "hi": "3",
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x < 3",
+            "misconception": "LEQU-04",
+            "feedback": "Epäyhtälö (x − 1)² < 4 tarkoittaa |x − 1| < 2, eli myös x − 1 > −2. Esimerkiksi x = −5: (−6)² = 36 > 4."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Merkitse t = x − 1: t² < 4, joten −2 < t < 2.",
+          "Siis −2 < x − 1 < 2, eli −1 < x < 3."
+        ],
+        "final": "−1 < x < 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_ne",
+        "params": {
+          "shift": 1,
+          "a": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 2x² ≥ 18."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "2x² ≥ 18",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": "-3",
+              "lo_closed": false,
+              "hi_closed": true
+            },
+            {
+              "lo": "3",
+              "hi": null,
+              "lo_closed": true,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x ≥ 3",
+            "misconception": "LEQU-04",
+            "feedback": "Myös x = −5 toteuttaa epäyhtälön: 2 · 25 = 50 ≥ 18. Ratkaisu x ≤ −3 puuttuu."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jaa kahdella: x² ≥ 9, eli (x − 3)(x + 3) ≥ 0.",
+          "Tulo on ei-negatiivinen, kun x ≤ −3 tai x ≥ 3."
+        ],
+        "final": "x ≤ −3 tai x ≥ 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_ne",
+        "params": {
+          "c": 2,
+          "a": 18
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

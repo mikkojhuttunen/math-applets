@@ -1,0 +1,391 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 5/x > 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0 < x < 5/2",
+            "misconception": null,
+            "feedback": "Oikein: murtoluku on positiivinen vain, kun x > 0."
+          },
+          {
+            "id": "b",
+            "text": "x < 5/2",
+            "misconception": "LEQU-03",
+            "feedback": "Kertoessasi x:llä oletit x > 0. Kokeile x = −1: 5/(−1) = −5, ei suurempi kuin 2."
+          },
+          {
+            "id": "c",
+            "text": "x > 5/2",
+            "misconception": null,
+            "feedback": "Epäyhtälön suunta kääntyi väärin. Kokeile x = 3: 5/3 < 2."
+          },
+          {
+            "id": "d",
+            "text": "x < 0 tai x > 5/2",
+            "misconception": null,
+            "feedback": "Kokeile x = −1: 5/(−1) = −5, ei suurempi kuin 2."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 2 vasemmalle: (5 − 2x)/x > 0.",
+          "Samanmerkkiset osoittaja ja nimittäjä: 0 < x < 5/2."
+        ],
+        "final": "0 < x < 5/2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle ja tutki merkit."
+      },
+      "provenance": {
+        "template": "lequ03_mc",
+        "params": {
+          "a": 5,
+          "b": 2
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö −6/x < 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x > −2",
+            "misconception": "LEQU-03",
+            "feedback": "Kertoessasi x:llä oletit x > 0, mutta silloin pätee −6 < 3x vain x > −2 ja x > 0. Kokeile x = −1: −6/(−1) = 6, ei pienempi kuin 3."
+          },
+          {
+            "id": "b",
+            "text": "−2 < x < 0",
+            "misconception": null,
+            "feedback": "Kokeile x = −1: −6/(−1) = 6, ei pienempi kuin 3."
+          },
+          {
+            "id": "c",
+            "text": "x < −2 tai x > 0",
+            "misconception": null,
+            "feedback": "Oikein: kun x > 0, vasen puoli on negatiivinen ja siis pienempi kuin 3; kun x < 0, tarvitaan x < −2."
+          },
+          {
+            "id": "d",
+            "text": "x < −2",
+            "misconception": null,
+            "feedback": "Tapaus x > 0 puuttuu: x = 1 antaa −6 < 3."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 3 vasemmalle: (−6 − 3x)/x < 0, eli (x + 2)/x > 0.",
+          "Samanmerkkiset: x < −2 tai x > 0."
+        ],
+        "final": "x < −2 tai x > 0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle ja tutki merkit."
+      },
+      "provenance": {
+        "template": "lequ03_mc",
+        "params": {
+          "a": -6,
+          "b": 3
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön 1/x < 2 kertomalla molemmat puolet x:llä ja sai 1 < 2x. Mikä on tämän vaiheen ongelma?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Vaihe on aina oikein, koska molemmille puolille tehdään sama kertolasku.",
+            "misconception": "LEQU-03",
+            "feedback": "Kertominen negatiivisella luvulla kääntää epäyhtälön suunnan."
+          },
+          {
+            "id": "b",
+            "text": "Epäyhtälöä ei saa kertoa millään lausekkeella.",
+            "misconception": null,
+            "feedback": "Kertominen on sallittu, kun lausekkeen merkki tiedetään."
+          },
+          {
+            "id": "c",
+            "text": "Kertominen x:llä onnistuu vain, jos x on kokonaisluku.",
+            "misconception": null,
+            "feedback": "Kokonaisuudella ei ole tässä merkitystä, vaan merkillä."
+          },
+          {
+            "id": "d",
+            "text": "Kun x < 0, epäyhtälön suunta kääntyy, joten tapaukset x > 0 ja x < 0 on käsiteltävä erikseen.",
+            "misconception": null,
+            "feedback": "Oikein."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x:n merkkiä ei tiedetä.",
+          "Jos x < 0, epäyhtälö kääntyy: 1 > 2x."
+        ],
+        "final": "Tapaukset x > 0 ja x < 0 erikseen"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle ja tutki merkit."
+      },
+      "provenance": {
+        "template": "lequ03_mc",
+        "params": {
+          "a": 1,
+          "b": 2
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön 4/x > 1 ja sai x < 4. Mikä päätelmä on oikea?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ratkaisu on väärä: x = −1 toteuttaa epäyhtälön x < 4, mutta 4/(−1) = −4 ei ole suurempi kuin 1.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "Ratkaisu on oikea, koska x = 2 antaa 4/2 = 2 > 1.",
+            "misconception": "LEQU-03",
+            "feedback": "Yksi toimiva testiluku ei riitä. Kokeile myös negatiivista lukua."
+          },
+          {
+            "id": "c",
+            "text": "Ratkaisu on väärä, koska oikea ratkaisu on x > 4.",
+            "misconception": null,
+            "feedback": "x = 8 antaa 4/8 < 1. Oikea ratkaisu on 0 < x < 4."
+          },
+          {
+            "id": "d",
+            "text": "Ratkaisu on oikea, koska x = 0 antaa 4/0 > 1.",
+            "misconception": null,
+            "feedback": "Nollalla ei voi jakaa."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = −1: 4/(−1) = −4, ei > 1.",
+          "Oikea ratkaisu: (4 − x)/x > 0, eli 0 < x < 4."
+        ],
+        "final": "Ratkaisu on väärä; oikea on 0 < x < 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle ja tutki merkit."
+      },
+      "provenance": {
+        "template": "lequ03_mc",
+        "params": {
+          "a": 4,
+          "b": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 6/(x² + 1) > 1."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−5 < x < 5",
+            "misconception": null,
+            "feedback": "Epäyhtälöstä saadaan x² < 5, ei x² < 25."
+          },
+          {
+            "id": "b",
+            "text": "x < √5",
+            "misconception": "LEQU-04",
+            "feedback": "x² < 5 tarkoittaa |x| < √5, ei vain x < √5."
+          },
+          {
+            "id": "c",
+            "text": "−√5 < x < √5",
+            "misconception": null,
+            "feedback": "Oikein: x² + 1 > 0 aina, joten kertominen ei muuta suuntaa: 6 > x² + 1."
+          },
+          {
+            "id": "d",
+            "text": "x < −√5 tai x > √5",
+            "misconception": "LEQU-03",
+            "feedback": "Kerroit suunnan kääntäen, vaikka x² + 1 on aina positiivinen."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² + 1 > 0, joten saa kertoa: 6 > x² + 1.",
+          "x² < 5, joten −√5 < x < √5."
+        ],
+        "final": "−√5 < x < √5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle ja tutki merkit."
+      },
+      "provenance": {
+        "template": "lequ03_mc",
+        "params": {
+          "a": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

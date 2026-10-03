@@ -1,0 +1,280 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-02",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön (x − 4)(x + 1) = 6 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(x − 4)(x + 1) = 6",
+          "x − 4 = 6",
+          "x = 10"
+        ],
+        "error_line": 2,
+        "error_type": "zero_product_nonzero"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on käytetty nollasääntöä, vaikka tulo on 6. Tulo 6 saadaan monella tavalla.",
+          "Oikein: x² − 3x − 4 = 6, x² − 3x − 10 = 0, (x − 5)(x + 2) = 0, x = 5 tai x = −2."
+        ],
+        "final": "x = 5 tai x = −2"
+      },
+      "feedback": {
+        "correct": "Oikein: tulon nollasääntö ei päde, kun tulo on muu kuin 0.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_es",
+        "params": {
+          "a": -4,
+          "b": 1,
+          "k": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x(x + 3) = 10 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x(x + 3) = 10",
+          "x + 3 = 10",
+          "x = 7"
+        ],
+        "error_line": 2,
+        "error_type": "zero_product_nonzero"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on jätetty tekijä x pois, vaikka tulo on 10.",
+          "Oikein: x² + 3x − 10 = 0, (x + 5)(x − 2) = 0, x = −5 tai x = 2."
+        ],
+        "final": "x = −5 tai x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: tulon nollasääntö ei päde, kun tulo on muu kuin 0.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_es",
+        "params": {
+          "a": 3,
+          "k": 10
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x² − 4x = 12 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² − 4x = 12",
+          "x(x − 4) = 12",
+          "x − 4 = 12"
+        ],
+        "error_line": 3,
+        "error_type": "zero_product_nonzero"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein, mutta rivillä 3 nollasääntöä on käytetty, vaikka tulo on 12.",
+          "Oikein: x² − 4x − 12 = 0, (x − 6)(x + 2) = 0, x = 6 tai x = −2."
+        ],
+        "final": "x = 6 tai x = −2"
+      },
+      "feedback": {
+        "correct": "Oikein: tulon nollasääntö ei päde, kun tulo on muu kuin 0.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_es",
+        "params": {
+          "b": -4,
+          "k": 12
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön (x + 2)(x + 3) = 12 näin. Napauta rivi, jossa on virhe. Vihje: sijoita x = 10 alkuperäiseen yhtälöön."
+      },
+      "payload": {
+        "lines": [
+          "(x + 2)(x + 3) = 12",
+          "x + 2 = 12",
+          "x = 10"
+        ],
+        "error_line": 2,
+        "error_type": "zero_product_nonzero"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 nollasääntöä on käytetty, vaikka tulo on 12.",
+          "Tarkistus: (10 + 2)(10 + 3) = 156 ≠ 12.",
+          "Oikein: x² + 5x − 6 = 0, (x + 6)(x − 1) = 0, x = −6 tai x = 1."
+        ],
+        "final": "x = −6 tai x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein: tulon nollasääntö ei päde, kun tulo on muu kuin 0.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_es",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "k": 12
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön x(x − 1)(x − 2) = 6 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x(x − 1)(x − 2) = 6",
+          "x − 1 = 6",
+          "x = 7"
+        ],
+        "error_line": 2,
+        "error_type": "zero_product_nonzero"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 nollasääntöä on käytetty kolmen tekijän tuloon, joka on 6, ei 0.",
+          "Tarkistus: 7 · 6 · 5 = 210 ≠ 6.",
+          "Oikein: yhtälön ratkaisu on x = 3, sillä 3 · 2 · 1 = 6."
+        ],
+        "final": "x = 3"
+      },
+      "feedback": {
+        "correct": "Oikein: tulon nollasääntö ei päde, kun tulo on muu kuin 0.",
+        "generic_wrong": "Tulon nollasääntö toimii vain, kun tulo on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_es",
+        "params": {
+          "k": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

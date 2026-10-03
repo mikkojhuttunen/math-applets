@@ -1,0 +1,367 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 1/x > 3."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "1/x > 3",
+          "intervals": [
+            {
+              "lo": "0",
+              "hi": "1/3",
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x < 1/3",
+            "misconception": "LEQU-03",
+            "feedback": "Kertoessasi x:llä oletit, että x > 0. Kokeile x = −1: 1/(−1) = −1, joka ei ole suurempi kuin 3."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 3 vasemmalle: 1/x − 3 > 0, eli (1 − 3x)/x > 0.",
+          "Osoittajan ja nimittäjän on oltava samanmerkkiset: 0 < x < 1/3."
+        ],
+        "final": "0 < x < 1/3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle, sievennä yhdeksi murtolausekkeeksi ja tutki tekijöiden merkit."
+      },
+      "provenance": {
+        "template": "lequ03_ne",
+        "params": {
+          "a": 1,
+          "b": 3
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 2/(x − 1) < 1."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "2/(x − 1) < 1",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": "1",
+              "lo_closed": false,
+              "hi_closed": false
+            },
+            {
+              "lo": "3",
+              "hi": null,
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x > 3",
+            "misconception": "LEQU-03",
+            "feedback": "Kertominen x − 1:llä käänsi suunnan vain kun x − 1 < 0. Tapaus x < 1 puuttuu: esimerkiksi x = 0 antaa 2/(−1) = −2 < 1."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 1 vasemmalle: (3 − x)/(x − 1) < 0.",
+          "Merkki on negatiivinen, kun osoittaja ja nimittäjä ovat erimerkkiset: x < 1 tai x > 3."
+        ],
+        "final": "x < 1 tai x > 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle, sievennä yhdeksi murtolausekkeeksi ja tutki tekijöiden merkit."
+      },
+      "provenance": {
+        "template": "lequ03_ne",
+        "params": {
+          "a": 2,
+          "b": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 4/x ≤ 1. Tarkista tulos sijoittamalla x = −2."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "4/x ≤ 1",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": "0",
+              "lo_closed": false,
+              "hi_closed": false
+            },
+            {
+              "lo": "4",
+              "hi": null,
+              "lo_closed": true,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x ≥ 4",
+            "misconception": "LEQU-03",
+            "feedback": "Kun x < 0, 4/x on negatiivinen ja siten pienempi kuin 1. Esimerkiksi x = −2 antaa −2 ≤ 1."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 1 vasemmalle: (4 − x)/x ≤ 0.",
+          "Murtoluku on ei-positiivinen, kun x < 0 tai x ≥ 4 (x = 0 ei kelpaa).",
+          "Tarkistus: x = −2 antaa 4/(−2) = −2 ≤ 1."
+        ],
+        "final": "x < 0 tai x ≥ 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle, sievennä yhdeksi murtolausekkeeksi ja tutki tekijöiden merkit."
+      },
+      "provenance": {
+        "template": "lequ03_ne",
+        "params": {
+          "a": 4,
+          "b": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö 3/(x + 1) > 1."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "3/(x + 1) > 1",
+          "intervals": [
+            {
+              "lo": "-1",
+              "hi": "2",
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x < 2",
+            "misconception": "LEQU-03",
+            "feedback": "Kertominen x + 1:llä on sallittu vain, kun x + 1 > 0. Silloin x > −1, ja ratkaisu on −1 < x < 2."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 1 vasemmalle: (2 − x)/(x + 1) > 0.",
+          "Osoittaja ja nimittäjä samanmerkkiset: −1 < x < 2."
+        ],
+        "final": "−1 < x < 2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle, sievennä yhdeksi murtolausekkeeksi ja tutki tekijöiden merkit."
+      },
+      "provenance": {
+        "template": "lequ03_ne",
+        "params": {
+          "a": 3,
+          "b": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06",
+          "MAA2.07"
+        ],
+        "g": [
+          "G3"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-03"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x/(x − 2) < 3."
+      },
+      "payload": {
+        "answer": {
+          "kind": "interval",
+          "variable": "x",
+          "reference": "x/(x − 2) < 3",
+          "intervals": [
+            {
+              "lo": null,
+              "hi": "2",
+              "lo_closed": false,
+              "hi_closed": false
+            },
+            {
+              "lo": "3",
+              "hi": null,
+              "lo_closed": false,
+              "hi_closed": false
+            }
+          ]
+        },
+        "wrong": [
+          {
+            "match": "x > 3",
+            "misconception": "LEQU-03",
+            "feedback": "Kertominen x − 2:lla antaa vain tapauksen x > 2. Tapaus x < 2 puuttuu: x = 0 antaa 0 < 3."
+          }
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirrä 3 vasemmalle: (x − 3(x − 2))/(x − 2) < 0, eli (6 − 2x)/(x − 2) < 0.",
+          "Merkit ovat erilaiset, kun x < 2 tai x > 3."
+        ],
+        "final": "x < 2 tai x > 3"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Epäyhtälön saa kertoa puolittain vain lausekkeella, jonka merkki tiedetään. Siirrä kaikki vasemmalle, sievennä yhdeksi murtolausekkeeksi ja tutki tekijöiden merkit."
+      },
+      "provenance": {
+        "template": "lequ03_ne",
+        "params": {
+          "a": 1,
+          "b": 2,
+          "c": 3
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

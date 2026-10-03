@@ -1,0 +1,383 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-04",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² < 16."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−4 < x < 4",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "b",
+            "text": "x < 16",
+            "misconception": null,
+            "feedback": "Kokeile x = 10: 100 ei ole pienempi kuin 16."
+          },
+          {
+            "id": "c",
+            "text": "x < 4",
+            "misconception": "LEQU-04",
+            "feedback": "Kokeile x = −5: (−5)² = 25, ei pienempi kuin 16."
+          },
+          {
+            "id": "d",
+            "text": "x < −4 tai x > 4",
+            "misconception": null,
+            "feedback": "Kokeile x = 5: 25 ei ole pienempi kuin 16."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 16 < 0, eli (x − 4)(x + 4) < 0.",
+          "−4 < x < 4."
+        ],
+        "final": "−4 < x < 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "√(x²) = |x|, ei x. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_mc",
+        "params": {
+          "a": 16
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö x² > 49."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x > 49",
+            "misconception": null,
+            "feedback": "Kokeile x = 10: 100 > 49, mutta 10 < 49."
+          },
+          {
+            "id": "b",
+            "text": "−7 < x < 7",
+            "misconception": null,
+            "feedback": "Kokeile x = 0: 0 ei ole suurempi kuin 49."
+          },
+          {
+            "id": "c",
+            "text": "x > 7",
+            "misconception": "LEQU-04",
+            "feedback": "Myös x = −8 toteuttaa epäyhtälön: (−8)² = 64 > 49."
+          },
+          {
+            "id": "d",
+            "text": "x < −7 tai x > 7",
+            "misconception": null,
+            "feedback": "Oikein."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x² − 49 > 0, eli (x − 7)(x + 7) > 0.",
+          "x < −7 tai x > 7."
+        ],
+        "final": "x < −7 tai x > 7"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "√(x²) = |x|, ei x. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_mc",
+        "params": {
+          "a": 49
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Ratkaise epäyhtälö (x + 2)² ≤ 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "−3 ≤ x ≤ 3",
+            "misconception": null,
+            "feedback": "Tämä ratkaisee epäyhtälön x² ≤ 9, ei (x + 2)² ≤ 9."
+          },
+          {
+            "id": "b",
+            "text": "−1 ≤ x ≤ 5",
+            "misconception": null,
+            "feedback": "Siirto meni väärään suuntaan: x + 2 on välillä −3...3."
+          },
+          {
+            "id": "c",
+            "text": "x ≤ 1",
+            "misconception": "LEQU-04",
+            "feedback": "Esimerkiksi x = −10: (−8)² = 64 > 9."
+          },
+          {
+            "id": "d",
+            "text": "−5 ≤ x ≤ 1",
+            "misconception": null,
+            "feedback": "Oikein: |x + 2| ≤ 3."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Merkitse t = x + 2: t² ≤ 9, joten −3 ≤ t ≤ 3.",
+          "−5 ≤ x ≤ 1."
+        ],
+        "final": "−5 ≤ x ≤ 1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "√(x²) = |x|, ei x. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_mc",
+        "params": {
+          "shift": 2,
+          "a": 9
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön x² < 9 ja sai x < 3. Millä testiluvulla virhe paljastuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Mikään testiluku ei paljasta virhettä, koska x < 3 on oikea ratkaisu.",
+            "misconception": "LEQU-04",
+            "feedback": "Oppilaan vastaus päästää läpi esimerkiksi luvun −5, jonka neliö on 25."
+          },
+          {
+            "id": "b",
+            "text": "x = −5, sillä −5 < 3, mutta (−5)² = 25 ei ole pienempi kuin 9.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "c",
+            "text": "x = 2, sillä 2² = 4 < 9.",
+            "misconception": null,
+            "feedback": "Tämä luku toteuttaa sekä epäyhtälön että oppilaan vastauksen, joten se ei paljasta virhettä."
+          },
+          {
+            "id": "d",
+            "text": "x = 0, sillä 0 < 9.",
+            "misconception": null,
+            "feedback": "Tämä luku toteuttaa sekä epäyhtälön että oppilaan vastauksen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x = −5 toteuttaa x < 3.",
+          "(−5)² = 25 > 9, joten −5 ei ole ratkaisu."
+        ],
+        "final": "x = −5"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "√(x²) = |x|, ei x. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_mc",
+        "params": {
+          "a": 9
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas otti epäyhtälön x² < 4 molemmilta puolilta neliöjuuren ja sai x < 2. Mikä on virheen perustelu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "√4 = ±2, joten ratkaisu on x < 2 tai x < −2.",
+            "misconception": "LEQU-04",
+            "feedback": "√4 = 2. Ratkaisu on |x| < 2, eli −2 < x < 2."
+          },
+          {
+            "id": "b",
+            "text": "Oikea ratkaisu on x < −2 tai x > 2.",
+            "misconception": null,
+            "feedback": "Kokeile x = 3: 9 ei ole pienempi kuin 4."
+          },
+          {
+            "id": "c",
+            "text": "√(x²) = |x|, ei x, joten saadaan |x| < 2 eli −2 < x < 2.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "d",
+            "text": "Neliöjuurta ei saa ottaa epäyhtälön molemmilta puolilta lainkaan.",
+            "misconception": null,
+            "feedback": "Se on sallittu, kun molemmat puolet ovat ei-negatiivisia, mutta tulos on |x| < 2."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "√(x²) = |x|.",
+          "|x| < 2, joten −2 < x < 2."
+        ],
+        "final": "|x| < 2, eli −2 < x < 2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "√(x²) = |x|, ei x. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_mc",
+        "params": {
+          "a": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

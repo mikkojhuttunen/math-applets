@@ -1,0 +1,334 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-02",
+  "type": "FS",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-FS-001",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: siirrä oikea puoli vasemmalle, jotta tulo voidaan tulkita nollaksi."
+      },
+      "payload": {
+        "lines": [
+          "(x − 5)(x + 1) = 7",
+          "x² − 4x − 5 = 7",
+          "x² − 4x − 12 = 0",
+          "(x − 6)(x + 2) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² − 4x − 12 = 0",
+          "variable": "x",
+          "solutions": [
+            -2,
+            6
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerro auki: x² − 4x − 5 = 7.",
+          "Siirrä 7 vasemmalle: x² − 4x − 12 = 0.",
+          "x = −2 tai x = 6."
+        ],
+        "final": "x² − 4x − 12 = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: nyt toisella puolella on 0 ja tulon nollasääntöä voi käyttää.",
+        "generic_wrong": "Tulon nollasääntöä voi käyttää vasta, kun toisella puolella on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_fs",
+        "params": {
+          "a": -5,
+          "b": 1,
+          "k": 7
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-FS-002",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: tekijöi vasen puoli."
+      },
+      "payload": {
+        "lines": [
+          "x(x + 2) = 8",
+          "x² + 2x = 8",
+          "x² + 2x − 8 = 0",
+          "(x + 4)(x − 2) = 0"
+        ],
+        "blank_index": 4,
+        "answer": {
+          "kind": "equation",
+          "reference": "(x + 4)(x − 2) = 0",
+          "variable": "x",
+          "solutions": [
+            -4,
+            2
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerro auki ja siirrä 8 vasemmalle: x² + 2x − 8 = 0.",
+          "Tekijöi: (x + 4)(x − 2) = 0.",
+          "x = −4 tai x = 2."
+        ],
+        "final": "(x + 4)(x − 2) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: nyt toisella puolella on 0 ja tulon nollasääntöä voi käyttää.",
+        "generic_wrong": "Tulon nollasääntöä voi käyttää vasta, kun toisella puolella on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_fs",
+        "params": {
+          "a": 2,
+          "k": 8
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-FS-003",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: tekijöi vasen puoli, jotta nollasääntöä voi käyttää."
+      },
+      "payload": {
+        "lines": [
+          "(x + 2)(x − 4) = 16",
+          "x² − 2x − 8 = 16",
+          "x² − 2x − 24 = 0",
+          "(x − 6)(x + 4) = 0"
+        ],
+        "blank_index": 4,
+        "answer": {
+          "kind": "equation",
+          "reference": "(x − 6)(x + 4) = 0",
+          "variable": "x",
+          "solutions": [
+            -4,
+            6
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerro auki: x² − 2x − 8 = 16.",
+          "Siirrä 16 vasemmalle: x² − 2x − 24 = 0.",
+          "Tekijöi: (x − 6)(x + 4) = 0.",
+          "x = −4 tai x = 6."
+        ],
+        "final": "(x − 6)(x + 4) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: nyt toisella puolella on 0 ja tulon nollasääntöä voi käyttää.",
+        "generic_wrong": "Tulon nollasääntöä voi käyttää vasta, kun toisella puolella on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_fs",
+        "params": {
+          "a": 2,
+          "b": -4,
+          "k": 16
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-FS-004",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi: tekijöi vasen puoli."
+      },
+      "payload": {
+        "lines": [
+          "(x + 1)(x + 4) = 10",
+          "x² + 5x + 4 = 10",
+          "x² + 5x − 6 = 0",
+          "(x + 6)(x − 1) = 0"
+        ],
+        "blank_index": 4,
+        "answer": {
+          "kind": "equation",
+          "reference": "(x + 6)(x − 1) = 0",
+          "variable": "x",
+          "solutions": [
+            -6,
+            1
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerro auki: x² + 5x + 4 = 10.",
+          "Siirrä 10 vasemmalle: x² + 5x − 6 = 0.",
+          "Tekijöi: (x + 6)(x − 1) = 0.",
+          "x = −6 tai x = 1."
+        ],
+        "final": "(x + 6)(x − 1) = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: nyt toisella puolella on 0 ja tulon nollasääntöä voi käyttää.",
+        "generic_wrong": "Tulon nollasääntöä voi käyttää vasta, kun toisella puolella on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_fs",
+        "params": {
+          "a": 1,
+          "b": 4,
+          "k": 10
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-02-FS-005",
+      "type": "FS",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.05"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-02"
+      ],
+      "prompt": {
+        "text": "Täydennä puuttuva rivi. Perustele itsellesi, miksi 20:n siirtäminen vasemmalle on välttämätöntä ennen tekijöihin jakoa."
+      },
+      "payload": {
+        "lines": [
+          "(x − 2)(x − 3) = 20",
+          "x² − 5x + 6 = 20",
+          "x² − 5x − 14 = 0",
+          "(x − 7)(x + 2) = 0"
+        ],
+        "blank_index": 3,
+        "answer": {
+          "kind": "equation",
+          "reference": "x² − 5x − 14 = 0",
+          "variable": "x",
+          "solutions": [
+            -2,
+            7
+          ]
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerro auki: x² − 5x + 6 = 20.",
+          "Siirrä 20 vasemmalle: x² − 5x − 14 = 0.",
+          "Tekijöi: (x − 7)(x + 2) = 0.",
+          "x = −2 tai x = 7."
+        ],
+        "final": "x² − 5x − 14 = 0"
+      },
+      "feedback": {
+        "correct": "Oikein: nyt toisella puolella on 0 ja tulon nollasääntöä voi käyttää.",
+        "generic_wrong": "Tulon nollasääntöä voi käyttää vasta, kun toisella puolella on 0. Siirrä ensin kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ02_fs",
+        "params": {
+          "a": -2,
+          "b": -3,
+          "k": 20
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 11
+      }
+    }
+  ]
+}

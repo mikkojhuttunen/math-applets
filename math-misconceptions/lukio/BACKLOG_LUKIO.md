@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 10 |
-| Last run | 2026-10-02 |
-| Progress | 49 of 151 planned cells in phases 0–2 generated |
+| Runs completed | 11 |
+| Last run | 2026-10-03 |
+| Progress | 55 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -196,9 +196,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | FUN-05 | X | X | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | EXT-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-01 | X | X | s | X | X | - | s | - | - | - | - | - | - | - | o |
-| LEQU-02 | X | X | o | s | o | - | - | - | - | - | - | - | - | - | o |
-| LEQU-03 | o | o | o | - | o | - | - | - | - | - | - | o | - | - | o |
-| LEQU-04 | o | o | o | - | - | - | - | - | - | - | - | o | - | - | - |
+| LEQU-02 | X | X | X | s | X | - | - | - | - | - | - | - | - | - | o |
+| LEQU-03 | X | X | o | - | o | - | - | - | - | - | - | o | - | - | o |
+| LEQU-04 | X | X | o | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-05 | o | o | o | - | - | - | o | - | - | - | - | o | - | - | - |
 | LVEC-02 | o | - | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | LVEC-03 | o | o | o | - | - | - | - | - | - | - | - | - | - | - | - |
@@ -295,6 +295,13 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-02 | LEQU-01 | FS | LU-LEQU-01-FS-001…005 | T, H | none | MAA2.05, MAB2.04, MAA2.04 | exercises/LEQU-01/FS.json | Draft | Run 10; blank is the factoring line: x² = 7x, 3x² = 12x (MAB), x³ = 16x, x(x + 2) = 3x (MAB), common factor x − 3 (G3); 2 MAB items; evidence to be checked |
 | 2026-10-02 | LEQU-02 | MC | LU-LEQU-02-MC-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/MC.json | Draft | Run 10; (x − 2)(x − 3) = 6, x(x + 4) = 5, (2x − 1)(x + 3) = 4, substitution check of x = 13 or 14 (justification), which equation allows the rule directly; MAA only |
 | 2026-10-02 | LEQU-02 | NE | LU-LEQU-02-NE-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/NE.json | Draft | Run 10; larger root of (x − 3)(x − 4) = 12, smaller root of x(x − 5) = 14, larger root of (x + 1)(x − 2) = 10, sum of roots of x(x − 6) = 16, sum of roots of (x − 3)(x + 2) = −6 with a substitution check; MAA only |
+| 2026-10-03 | LEQU-02 | ES | LU-LEQU-02-ES-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/ES.json | Draft | Run 11; (x − 4)(x + 1) = 6, x(x + 3) = 10, x² − 4x = 12 with the error on line 3, (x + 2)(x + 3) = 12 with substitution hint, x(x − 1)(x − 2) = 6; MAA only; evidence Moderate, source vaiyavutjamai2006effects |
+| 2026-10-03 | LEQU-02 | FS | LU-LEQU-02-FS-001…005 | T, H | none | MAA2.05 | exercises/LEQU-02/FS.json | Draft | Run 11; blank is moving the right side to 0 or the factoring line: (x − 5)(x + 1) = 7, x(x + 2) = 8, (x + 2)(x − 4) = 16, (x + 1)(x + 4) = 10, (x − 2)(x − 3) = 20; MAA only |
+| 2026-10-03 | LEQU-02 | SO | - | - | - | - | - | Skipped | Run 11; not selected: the seed cell `s` already uses ID LU-LEQU-02-SO-001, so a batch would collide; ES and FS generated instead |
+| 2026-10-03 | LEQU-03 | MC | LU-LEQU-03-MC-001…005 | T, H | none | MAA2.06, MAA2.07 | exercises/LEQU-03/MC.json | Draft | Run 11; 5/x > 2, −6/x < 3, justification why multiplying 1/x < 2 by x is incomplete (G3), plausibility check of x < 4 for 4/x > 1, 6/(x² + 1) > 1 where multiplying is allowed; MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-03 | NE | LU-LEQU-03-NE-001…005 | T, H | none | MAA2.06, MAA2.07 | exercises/LEQU-03/NE.json | Draft | Run 11; interval answers for 1/x > 3, 2/(x − 1) < 1, 4/x ≤ 1 with check at x = −2, 3/(x + 1) > 1, x/(x − 2) < 3; MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-04 | MC | LU-LEQU-04-MC-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/MC.json | Draft | Run 11; x² < 16, x² > 49, (x + 2)² ≤ 9, test number that exposes x < 3 for x² < 9, justification via √(x²) = \|x\| (G4 only allowed); MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-04 | NE | LU-LEQU-04-NE-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/NE.json | Draft | Run 11; interval answers for x² < 4, x² > 9, x² ≤ 25 with check at x = −4, (x − 1)² < 4, 2x² ≥ 18; MAA only; source † (tsamir2004consistencies), evidence to be checked |
 
 ## 7. Coverage and decisions to confirm
 
