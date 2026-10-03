@@ -266,12 +266,14 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
             <option value="custom">Custom curve (drag points)</option>
           </select>
           <span class="hint" id="customHint" hidden>Edit the curve in the loss profile editor under the gain spectrum.</span>
-          <span class="hint">The strength above is the peak loss. The profile scales it at each idler wavelength; dumps scale their dB attenuation the same way.</span></div>
+          <span class="hint">The strength above is the peak loss. The profile scales it at each idler wavelength; dumps scale their dB attenuation the same way.</span>
+          <label class="switch" id="physWrap" hidden><input type="checkbox" role="switch" id="physLoss"> Loss curve acts on every wave (real filter or absorber)</label>
+          <span class="hint" id="physHint" hidden>On: the band, notch or custom curve also attenuates the signal and the pump at their own wavelengths. This matters when the idler is spectrally close, as for a χ⁽³⁾ pump near 1560 nm. Off: only the idler is attenuated (ideal idler-selective loss). The flat profile is always idler-only.</span></div>
         <div class="ctl" id="ctlBc" hidden><label for="lbc">Band centre</label><output id="lbc_o"></output>
-          <input type="range" id="lbc" min="-500" max="500" step="1" value="0">
-          <span class="hint">Offset from the idler wavelength at λ<sub>s</sub>, ±0.5 nm.</span></div>
+          <input type="range" id="lbc" min="-1000" max="1000" step="1" value="0">
+          <span class="hint">Offset from the idler wavelength at λ<sub>s</sub>; fine near zero, up to ±50 nm.</span></div>
         <div class="ctl" id="ctlBw" hidden><label for="lbw">Band width</label><output id="lbw_o"></output>
-          <input type="range" id="lbw" min="0" max="1000" step="1" value="500" data-log="0.001,10"></div>
+          <input type="range" id="lbw" min="0" max="1000" step="1" value="429" data-log="0.001,100"></div>
         <div class="ctl" id="ctlBe" hidden><label for="lbe">Edge width</label><output id="lbe_o"></output>
           <input type="range" id="lbe" min="0" max="1000" step="1" value="500" data-log="0.0001,0.5">
           <span class="hint">tanh edges: the loss goes from 12 % to 88 % over twice this width.</span>
@@ -629,6 +631,17 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     return pr.type === "pass" ? box : 1 - box;
   }
 
+  // Loss of signal and pump from the same spectral curve (real filter), zero when the switch is off or the profile is flat
+  function waveLoss(prof, lm, aPk, attDb, lamS, lamP) {
+    if (!$("physLoss").checked || lm === "none" || prof.type === "flat") return { aS: 0, aP: 0, tS: 1, tP: 1, TS: 0, TP: 0 };
+    var TS = lossT(prof, lamS * 1e9), TP = lossT(prof, lamP * 1e9);
+    return { aS: aPk * TS, aP: aPk * TP, tS: lm === "lumped" ? Math.pow(10, -attDb * TS / 20) : 1, tP: lm === "lumped" ? Math.pow(10, -attDb * TP / 20) : 1, TS: TS, TP: TP };
+  }
+
+  // band-centre offset slider: sinh scale, 1 pm steps near zero, ±50 nm at the ends
+  function lbcNm(x) { return 0.01 * Math.sinh(x / 1000 * Math.asinh(5000)); }
+  function lbcSlider(nm) { return Math.max(-1000, Math.min(1000, Math.round(1000 * Math.asinh(nm / 0.01) / Math.asinh(5000)))); }
+
   var dkValue = 0;
   function lossMode() { return document.querySelector('input[name="lossmode"]:checked').value; }
 
@@ -657,7 +670,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     }
     var lm = lossMode();
     var alphaDb = sliderVal($("alpha"));
-    var prof = { type: lm === "none" ? "flat" : $("lprof").value, c: li * 1e9 + (+$("lbc").value) / 1000, w: sliderVal($("lbw")), e: sliderVal($("lbe")), fn: customFn };
+    var prof = { type: lm === "none" ? "flat" : $("lprof").value, c: li * 1e9 + lbcNm(+$("lbc").value), w: sliderVal($("lbw")), e: sliderVal($("lbe")), fn: customFn };
     var T0 = lossT(prof, li * 1e9), aPk = lm === "cont" ? alphaDb * Math.LN10 / 10 : 0;
     return {
       ls: ls, li: li, wp: wp, ws: ws, wi: wi, wP: wP, wSum: wSum, wS: wS, wI: wI, deff: deff, n2: n2, theta: theta, Aeff: MODE === "chi3" ? 1 / theta : 1 / (theta * theta),
@@ -665,14 +678,15 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       L: sliderVal($("L")), dk: dkValue, lm: lm, a: fa, dn: fdn,
       alphaDb: alphaDb, alphaPk: aPk, alpha: aPk * T0, prof: prof, T0: T0, refmode: $("refmode").value,
       nf: lm === "lumped" ? +$("nf").value : 0, attDb: +$("att").value,
-      tAmp: Math.pow(10, -(+$("att").value) * T0 / 20)
+      tAmp: Math.pow(10, -(+$("att").value) * T0 / 20),
+      wl: waveLoss(prof, lm, aPk, +$("att").value, ls, LPUMP)
     };
   }
 
   // Full nonlinear RK4 in normalised amplitudes u_j = a_j / sqrt(Fp0)
   function simulate(p, dk, record, maxSteps, sc) {
     if (MODE === "chi3") return simulate3(p, dk, record, maxSteps, sc);
-    var kap = p.kappa, a2 = p.alpha / 2, r0 = p.r0;
+    var kap = p.kappa, a2 = p.alpha / 2, r0 = p.r0, wlz = p.wl || { aS: 0, aP: 0, tS: 1, tP: 1 }, a2s = wlz.aS / 2, a2p = wlz.aP / 2;
     var rate = Math.max(kap * Math.sqrt(1 + r0), Math.abs(dk), a2, sc ? sc.rate : 0, 1e-6);
     var N = Math.ceil(p.L * rate / 0.04);
     N = Math.max(record ? 2000 : 300, Math.min(maxSteps, N));
@@ -691,6 +705,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       xr = pr * sr + pi * si; xi = pi * sr - pr * si;
       yr = xr * c - xi * s; yi = xr * s + xi * c;
       o[4] = -kap * yi - a2 * ir; o[5] = kap * yr - a2 * ii;
+      if (a2s) { o[2] -= a2s * Y[2]; o[3] -= a2s * Y[3]; }
+      if (a2p) { o[0] -= a2p * Y[0]; o[1] -= a2p * Y[1]; }
       if (sc) addScat(sc, z, Y, o); else o[6] = 0;
     }
     var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [], fR: [] } : null;
@@ -712,7 +728,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         z = (sg * nPer + n + 1) * h;
         if (record && (cnt % every === 0 || n === nPer - 1)) push(z, sg);
       }
-      if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; if (record) push(z, sg + 1); }
+      if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; y[2] *= wlz.tS; y[3] *= wlz.tS; y[0] *= wlz.tP; y[1] *= wlz.tP; if (record) push(z, sg + 1); }
     }
     var fp = y[0] * y[0] + y[1] * y[1], fs = y[2] * y[2] + y[3] * y[3], fi = y[4] * y[4] + y[5] * y[5];
     return { rec: rec, fp: fp, fs: fs, fi: fi, xR: y[6], steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + fs - (1 + r0)) / (1 + r0) };
@@ -721,7 +737,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
   // χ3 degenerate FWM with SPM/XPM, power amplitudes normalised to √P_p(0); dkNet = κ = Δβ + 2γ_pP_p(0)
   function simulate3(p, dkNet, record, maxSteps, sc) {
-    var wpf = p.wP, wsf = p.wS, wif = p.wI, np = p.gP, ns = np * wsf / wpf, ni = np * wif / wpf, a2 = p.alpha / 2, r0 = p.r0;
+    var wpf = p.wP, wsf = p.wS, wif = p.wI, np = p.gP, ns = np * wsf / wpf, ni = np * wif / wpf, a2 = p.alpha / 2, r0 = p.r0, wlz = p.wl || { aS: 0, aP: 0, tS: 1, tP: 1 }, a2s = wlz.aS / 2, a2p = wlz.aP / 2;
     var db = dkNet - 2 * np;
     var rate = Math.max(p.kappa * Math.sqrt(1 + r0), Math.abs(db), 3 * np * (1 + r0), a2, sc ? sc.rate : 0, 1e-6);
     var N = Math.ceil(p.L * rate / 0.04);
@@ -746,6 +762,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       o[2] = -ns * Bi; o[3] = ns * Br;
       var Cr = (Pi2 + 2 * Pp2 + 2 * Ps2) * ir + (gr * sr + gi * si), Ci = (Pi2 + 2 * Pp2 + 2 * Ps2) * ii + (gi * sr - gr * si);
       o[4] = -ni * Ci - a2 * ir; o[5] = ni * Cr - a2 * ii;
+      if (a2s) { o[2] -= a2s * Y[2]; o[3] -= a2s * Y[3]; }
+      if (a2p) { o[0] -= a2p * Y[0]; o[1] -= a2p * Y[1]; }
       if (sc) addScat(sc, z, Y, o); else o[6] = 0;
     }
     var cs_ = wpf / wsf, ci_ = wpf / wif;
@@ -768,7 +786,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         z = (sg * nPer + n + 1) * h;
         if (record && (cnt % every === 0 || n === nPer - 1)) push(z, sg);
       }
-      if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; if (record) push(z, sg + 1); }
+      if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; y[2] *= wlz.tS; y[3] *= wlz.tS; y[0] *= wlz.tP; y[1] *= wlz.tP; if (record) push(z, sg + 1); }
     }
     var fp = y[0] * y[0] + y[1] * y[1], fs = (y[2] * y[2] + y[3] * y[3]) * cs_, fi = (y[4] * y[4] + y[5] * y[5]) * ci_;
     return { rec: rec, fp: fp, fs: fs, fi: fi, xR: y[6], steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + 2 * fs - (1 + 2 * r0)) / (1 + 2 * r0) };
@@ -862,13 +880,16 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function cr(x) { return [x, 0]; }
 
   // Undepleted pump: d/dz [s, c] = M [s, c], c = a_i* e^{iΔkz}, M = [[0, iκ], [−iκ, β]], β = iΔk − α/2
-  function expM(kap, beta, z) {
-    var b2 = cm(beta, beta), disc = csq(ca(b2, cr(4 * kap * kap)));
-    var l1 = [(beta[0] + disc[0]) / 2, (beta[1] + disc[1]) / 2], l2 = [(beta[0] - disc[0]) / 2, (beta[1] - disc[1]) / 2];
+  // M = [[as, iκ], [−iκ, β]]; as = −α_s/2 (signal loss from a real filter, usually 0)
+  function expM(kap, beta, z, as) {
+    as = as || 0;
+    var tr = [beta[0] + as, beta[1]], df = [beta[0] - as, beta[1]];
+    var disc = csq(ca(cm(df, df), cr(4 * kap * kap)));
+    var l1 = [(tr[0] + disc[0]) / 2, (tr[1] + disc[1]) / 2], l2 = [(tr[0] - disc[0]) / 2, (tr[1] - disc[1]) / 2];
     if (Math.max(l1[0], l2[0]) * z > 600) return null;
-    var M = [[cr(0), [0, kap]], [[0, -kap], beta]];
+    var M = [[cr(as), [0, kap]], [[0, -kap], beta]];
     if (Math.hypot(disc[0], disc[1]) * z < 1e-7) {
-      var l = [beta[0] / 2, beta[1] / 2], el = ce([l[0] * z, l[1] * z]);
+      var l = [tr[0] / 2, tr[1] / 2], el = ce([l[0] * z, l[1] * z]);
       return [[cm(el, ca(cr(1), cm(cs(M[0][0], l), cr(z)))), cm(el, cm(M[0][1], cr(z)))],
               [cm(el, cm(M[1][0], cr(z))), cm(el, ca(cr(1), cm(cs(M[1][1], l), cr(z))))]];
     }
@@ -884,27 +905,27 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function apply(E, v) { return [ca(cm(E[0][0], v[0]), cm(E[0][1], v[1])), ca(cm(E[1][0], v[0]), cm(E[1][1], v[1]))]; }
 
   function analyticOut(p, dk) {
-    var beta = [-p.alpha / 2, dk], nSeg = p.nf + 1, dz = p.L / nSeg;
-    var E = expM(p.kappa, beta, dz); if (!E) return null;
+    var beta = [-p.alpha / 2, dk], nSeg = p.nf + 1, dz = p.L / nSeg, wl = p.wl || { aS: 0, tS: 1 };
+    var E = expM(p.kappa, beta, dz, -wl.aS / 2); if (!E) return null;
     var v = [cr(Math.sqrt(p.r0)), cr(0)];
     for (var sg = 0; sg < nSeg; sg++) {
       v = apply(E, v);
-      if (sg < nSeg - 1) v[1] = cm(v[1], cr(p.tAmp));
+      if (sg < nSeg - 1) { v[1] = cm(v[1], cr(p.tAmp)); v[0] = cm(v[0], cr(wl.tS)); }
     }
     return { fs: v[0][0] * v[0][0] + v[0][1] * v[0][1], fi: v[1][0] * v[1][0] + v[1][1] * v[1][1] };
   }
   function analyticAlongZ(p, zs, segs) {
-    var beta = [-p.alpha / 2, p.dk], nSeg = p.nf + 1, dz = p.L / nSeg;
-    var starts = [], v = [cr(Math.sqrt(p.r0)), cr(0)], E = expM(p.kappa, beta, dz);
+    var beta = [-p.alpha / 2, p.dk], nSeg = p.nf + 1, dz = p.L / nSeg, wl = p.wl || { aS: 0, tS: 1 }, as = -wl.aS / 2;
+    var starts = [], v = [cr(Math.sqrt(p.r0)), cr(0)], E = expM(p.kappa, beta, dz, as);
     for (var sg = 0; sg < nSeg; sg++) {
       starts.push(v);
       if (!E) break;
-      var w = apply(E, v); w[1] = cm(w[1], cr(p.tAmp)); v = w;
+      var w = apply(E, v); w[1] = cm(w[1], cr(p.tAmp)); w[0] = cm(w[0], cr(wl.tS)); v = w;
     }
     var out = { fs: [], fi: [] };
     for (var k = 0; k < zs.length; k++) {
       var s = segs[k], loc = Math.max(0, Math.min(dz, zs[k] - s * dz));
-      var Ez = starts[s] ? expM(p.kappa, beta, loc) : null;
+      var Ez = starts[s] ? expM(p.kappa, beta, loc, as) : null;
       if (!Ez) { out.fs.push(Infinity); out.fi.push(Infinity); continue; }
       var u = apply(Ez, starts[s]);
       out.fs.push(u[0][0] * u[0][0] + u[0][1] * u[0][1]); out.fi.push(u[1][0] * u[1][0] + u[1][1] * u[1][1]);
@@ -1073,7 +1094,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var t = "Idler at " + fmt(li, 1) + " nm, " + fmt(sep, 1) + " nm from the signal. ";
     if (Math.abs(lp - 1064) < 15) t += "Recommended: Yb fiber lasers and amplifiers deliver tens of watts CW at 1064 nm with narrow linewidth. Since 2ω(1064 nm) = ω(532 nm), the signal–idler pair is the same as in the χ⁽²⁾ case, and the 810 nm idler is far from the signal and easy to absorb or split off. Phase matching such widely spaced bands needs a fiber engineered near its zero-dispersion wavelength at about 1 µm (e.g. a PCF).";
     else if (Math.abs(lp - 1030) < 15) t += "Yb at 1030 nm (high-power fiber and thin-disk sources). Idler near 770 nm; same widely spaced scheme as 1064 nm.";
-    else if (lp > 1500 && lp < 1625) t += "Er/EDFA pumps near the zero dispersion of highly nonlinear fiber give the classic broadband fiber OPA. Signal and idler sit symmetrically around the pump, so the GVM is tiny and the gain band is wide, but the idler is only " + fmt(sep, 1) + " nm away and needs a very sharp filter or absorber.";
+    else if (lp > 1500 && lp < 1625) t += "Er/EDFA pumps near the zero dispersion of highly nonlinear fiber give the classic broadband fiber OPA. Signal and idler sit symmetrically around the pump, so the GVM is tiny and the gain band is wide, but the idler is only " + fmt(sep, 1) + " nm away and needs a very sharp filter or absorber. Turn on \"Loss curve acts on every wave\" to see what a real filter does to the signal and pump: here the idler band overlaps the signal band and the pump.";
     else if (lp > 1900 && lp < 2100) t += "Tm pumps near 2 µm put the idler in the mid-infrared, where silica itself absorbs strongly beyond about 2.5 µm. That gives built-in idler dissipation, but the Sellmeier-based fiber model becomes approximate there.";
     else t += "Choose a pump with a common high-power fiber laser: 1030/1064 nm (Yb), 1560 nm (Er) or 1950 nm (Tm).";
     if (Math.abs(lp - p.ls * 1e9) < 1) t += " The signal is within 1 nm of the pump (degenerate case), which this model does not treat.";
@@ -1120,9 +1141,10 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     $("ctlProf").hidden = $("ctlRef").hidden = p.lm === "none";
     var custom = p.lm !== "none" && p.prof.type === "custom";
     $("ctlBc").hidden = $("ctlBw").hidden = $("ctlBe").hidden = !banded || custom;
+    $("physWrap").hidden = $("physHint").hidden = !banded;
     $("customHint").hidden = !custom;
     $("editorBox").hidden = !custom;
-    $("lbc_o").textContent = fmt(p.prof.c, 3) + " nm";
+    $("lbc_o").textContent = fmt(p.prof.c, 3) + " nm (" + (p.prof.c - p.li * 1e9 >= 0 ? "+" : "") + sig(p.prof.c - p.li * 1e9, 3) + ")";
     $("lbw_o").textContent = sig(p.prof.w, 3) + " nm";
     $("lbe_o").textContent = sig(p.prof.e, 2) + " nm";
     $("ctlLw").hidden = !$("sbsOn").checked; $("srsHint").hidden = !$("srsOn").checked;
@@ -1182,13 +1204,16 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       ]],
       ["Idler dissipation", [
         ["Scheme", lossDescr(p)],
-        ["Loss at λ<sub>i</sub> relative to peak", p.lm === "none" ? "—" : fmt(100 * p.T0, 1) + " %"],
+        ["Loss at λ<sub>i</sub> relative to peak", p.lm === "none" ? "—" : fmt(100 * p.T0, 1) + " %"]].concat($("physLoss").checked && p.lm !== "none" && p.prof.type !== "flat" ? [
+        ["Curve at λ<sub>s</sub> / λ<sub>p</sub> (real filter)", fmt(100 * p.wl.TS, 2) + " % / " + fmt(100 * p.wl.TP, 2) + " %"],
+        ["Signal / pump attenuation from the curve", (p.lm === "cont" ? fmt(p.alphaDb * p.wl.TS * p.L, 2) + " / " + fmt(p.alphaDb * p.wl.TP * p.L, 2) : fmt(p.attDb * p.wl.TS * p.nf, 2) + " / " + fmt(p.attDb * p.wl.TP * p.nf, 2)) + " dB" +
+          (p.alphaDb * p.wl.TS * p.L > 1 || p.attDb * p.wl.TS * p.nf > 1 ? ' <span class="warn">(signal attenuated)</span>' : "")]] : []).concat([
         ["α<sub>i</sub> at λ<sub>i</sub> (power, m⁻¹)", p.lm === "cont" ? sig(p.alpha, 3) + " m⁻¹" : "—"],
         ["α<sub>i</sub>/Γ", p.lm === "cont" ? sig(p.alpha / p.kappa, 3) : "—"],
         ["Adiabatic-limit gain exp(g<sub>s</sub>L)", p.lm === "cont" ? fmtdB(10 * Math.log10(Math.E) * adiab * p.L) : "—"],
         ["Segment length", p.lm === "lumped" ? fmt(p.L / (p.nf + 1), 3) + " m" : "—"],
         ["Total idler attenuation at λ<sub>i</sub>", p.lm === "cont" ? fmt(p.alphaDb * p.T0 * p.L, 1) + " dB (distributed)" : p.lm === "lumped" ? fmt(p.attDb * p.T0 * p.nf, 1) + " dB (lumped)" : "0 dB"]
-      ]]
+      ])]
     ];
     var D = DISP, B = specBands(), lam0 = p.ls * 1e9, gv = Math.abs(D.gvm);
     var estHi = gv > 0 ? 4 * Math.sqrt(p.kappa * Math.LN2 / p.L) / gv / (2 * Math.PI) : Infinity;
@@ -1238,6 +1263,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     }
     $("readouts").innerHTML = groupsHtml(rows);
     var note = "RK4 with " + s.steps.toLocaleString("en-US") + " steps. " + (SC ? "Photon-number check not applicable: scattering removes pump photons. " : "") + (SC ? "" : p.chi3 ? "Photon-number check |Δ(Φ<sub>p</sub> + 2Φ<sub>s</sub>)| / (Φ<sub>p</sub> + 2Φ<sub>s</sub>) = " : "Photon-number check |ΔΦ<sub>p</sub> + ΔΦ<sub>s</sub>| / Φ<sub>total</sub> = ") + (SC ? "" : sig(s.resid, 2) + ".");
+    if (p.wl && p.wl.TP > 1e-4) note += ' <span class="warn">The loss curve also attenuates the pump (' + fmt(100 * p.wl.TP, 1) + ' % of peak). The full numerical solution includes this; the undepleted analytic curves do not.</span>';
     if (s.capped) note += ' <span class="warn">Step count capped; reduce ΓL or Δk·L for higher accuracy.</span>';
     if (s.fp < 0.5) note += " The pump is strongly depleted, so the analytic undepleted curve overestimates the gain.";
     $("numnote").innerHTML = note;
@@ -1306,11 +1332,11 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var ws = p.wS + O, wi = p.wSum - ws;
     var T = lossT(p.prof, 2 * Math.PI * C0 / wi * 1e9);
     return { kappa: p.kappa * Math.sqrt(ws * wi / (p.wS * p.wI)), alpha: p.alphaPk * T, L: p.L, nf: p.nf, tAmp: Math.pow(10, -p.attDb * T / 20), r0: p.Ps / (HB * ws) / p.Fp0, ws: ws, wi: wi, T: T,
-      wS: ws, wI: wi, wP: p.wP, gP: p.gP };
+      wS: ws, wI: wi, wP: p.wP, gP: p.gP, wl: waveLoss(p.prof, p.lm, p.alphaPk, p.attDb, 2 * Math.PI * C0 / ws, LPUMP) };
   }
   function refParams(p, O, Lref) {
     var q = specParams(p, O);
-    q.alpha = 0; q.nf = 0; q.tAmp = 1; q.L = Lref;
+    q.alpha = 0; q.nf = 0; q.tAmp = 1; q.L = Lref; q.wl = null;
     return q;
   }
   // Reference fiber: the current fiber, or a baseline frozen when the optimiser varies fiber geometry or pump power
@@ -1675,6 +1701,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     if (p.lm === "none") { p.alphaPk = 0; p.nf = 0; }
     else { p.alphaPk = p.lm === "cont" ? p.alphaDb * Math.LN10 / 10 : 0; p.nf = p.lm === "lumped" ? base.nf || +$("nf").value : 0; }
     p.T0 = lossT(p.prof, p.li * 1e9); p.alpha = p.alphaPk * p.T0; p.tAmp = Math.pow(10, -p.attDb * p.T0 / 20);
+    p.wl = waveLoss(p.prof, p.lm, p.alphaPk, p.attDb, p.ls, LPUMP);
     return p;
   }
   function evalCfg(p, D, refmode, rb) {
@@ -2169,8 +2196,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     }
     var b = bandEdges(sp.lamI.slice().reverse(), gi.reverse(), 3);
     if (!b || b.lo == null || b.hi == null) return;
-    $("lbc").value = Math.round((0.5 * (b.lo + b.hi) - p.li * 1e9) * 1000);
-    setSlider($("lbw"), Math.max(0.001, Math.min(10, b.hi - b.lo)));
+    $("lbc").value = lbcSlider(0.5 * (b.lo + b.hi) - p.li * 1e9);
+    setSlider($("lbw"), Math.max(0.001, Math.min(100, b.hi - b.lo)));
     setSlider($("lbe"), Math.max(0.0001, Math.min(0.5, 0.05 * (b.hi - b.lo))));
     compute();
   }
@@ -2249,7 +2276,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       var ls = +$("ls").value * 1e-9, md = fiberModes(ls, idlerOf(ls), +$("fa").value * 1e-6, +$("fdn").value);
       o.wp = Math.round(md.wp * 1e8) / 100; o.ws = Math.round(md.ws * 1e8) / 100; o.wimode = "fiber";
     }
-    ["ls", "wp", "ws", "att", "nf", "fa", "fdn", "gvm", "b2", "lbc", "lp"].forEach(function (k) { if (k in o) $(k).value = o[k]; });
+    ["ls", "wp", "ws", "att", "nf", "fa", "fdn", "gvm", "b2", "lp"].forEach(function (k) { if (k in o) $(k).value = o[k]; });
+    if ("lbc" in o) $("lbc").value = lbcSlider(o.lbc);
     ["deff", "n2", "Pp", "Ps", "alpha", "lbw", "lbe", "L"].forEach(function (k) { if (k in o) setSlider($(k), o[k]); });
     if ("wimode" in o) $("wimode").value = o.wimode;
     if ("disp" in o) $("disp").value = o.disp;
