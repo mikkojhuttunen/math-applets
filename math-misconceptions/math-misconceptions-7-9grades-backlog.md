@@ -7,7 +7,7 @@
 | Built from | `sources/math_misconceptions_item_bank.xlsx` (33 misconceptions), `../math-applets/math/OPS_7-9_oppimistavoitteet.md` (S-IDs, T-goals, levels), `sources/FinnMath_Exercise_Types_and_Learning_Analysis.docx` (exercise types, phases, item record) |
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
 | Runs completed | 26 |
-| Last run | 2026-10-02 |
+| Last run | 2026-10-03 |
 | Progress | 137 of 227 planned cells generated |
 
 ## 1. Instructions for the scheduled task (read first)
