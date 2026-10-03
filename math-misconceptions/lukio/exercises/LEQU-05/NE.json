@@ -1,0 +1,319 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-05",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |x − 3| = 5. Kirjoita ratkaisuista pienempi."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -2.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 8.0,
+            "misconception": "LEQU-05",
+            "feedback": "8 on suurempi ratkaisu. Myös x − 3 = −5 toteuttaa yhtälön, koska |−5| = 5."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x − 3 = 5 tai x − 3 = −5.",
+          "x = 8 tai x = −2; pienempi on −2."
+        ],
+        "final": "−2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_ne",
+        "params": {
+          "a": 3,
+          "b": 5
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä |2x − 1| = 7 on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 2.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "LEQU-05",
+            "feedback": "Yhtälöllä on myös negatiivinen tapaus 2x − 1 = −7, joten ratkaisuja on kaksi."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "2x − 1 = 7 antaa x = 4.",
+          "2x − 1 = −7 antaa x = −3.",
+          "Ratkaisuja on 2."
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_ne",
+        "params": {
+          "a": 2,
+          "b": -1,
+          "c": 7
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |x + 4| = 6 ja laske ratkaisujen summa."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -8.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 2.0,
+            "misconception": "LEQU-05",
+            "feedback": "2 on vain toinen ratkaisu. Myös x + 4 = −6 antaa ratkaisun x = −10."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "x + 4 = 6 antaa x = 2.",
+          "x + 4 = −6 antaa x = −10.",
+          "Summa on 2 + (−10) = −8."
+        ],
+        "final": "−8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_ne",
+        "params": {
+          "a": 4,
+          "c": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |3x − 2| = |x + 6|. Kirjoita ratkaisuista pienempi."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -1.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 4.0,
+            "misconception": "LEQU-05",
+            "feedback": "4 saadaan tapauksesta 3x − 2 = x + 6. Myös 3x − 2 = −(x + 6) on mahdollinen."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "3x − 2 = x + 6 antaa x = 4.",
+          "3x − 2 = −(x + 6) antaa 4x = −4, eli x = −1.",
+          "Pienempi ratkaisu on −1."
+        ],
+        "final": "−1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_ne",
+        "params": {
+          "a": 3,
+          "b": -2,
+          "c": 1,
+          "d": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Matti ratkaisi yhtälön |x − 1| = −2 ja sai x = 3. Kuinka monta ratkaisua yhtälöllä oikeasti on? Tarkista Matin vastaus sijoittamalla."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0.0,
+          "tolerance": 0.01
+        },
+        "wrong": [
+          {
+            "match": 1.0,
+            "misconception": "LEQU-05",
+            "feedback": "Matin ratkaisu x = 3 ei kelpaa: |3 − 1| = 2, ei −2. Itseisarvo ei voi olla negatiivinen."
+          },
+          {
+            "match": 2.0,
+            "misconception": "LEQU-05",
+            "feedback": "Sijoita x = 3: |3 − 1| = 2, ei −2. Mikään luku ei anna negatiivista itseisarvoa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Itseisarvo on aina ≥ 0.",
+          "Oikea puoli −2 on negatiivinen, joten ratkaisuja ei ole.",
+          "Tarkistus: |3 − 1| = 2 ≠ −2."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_ne",
+        "params": {
+          "a": -2,
+          "b": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}

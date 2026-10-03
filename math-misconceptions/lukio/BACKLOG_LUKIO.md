@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 11 |
+| Runs completed | 12 |
 | Last run | 2026-10-03 |
-| Progress | 55 of 151 planned cells in phases 0–2 generated |
+| Progress | 59 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -197,9 +197,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | EXT-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-01 | X | X | s | X | X | - | s | - | - | - | - | - | - | - | o |
 | LEQU-02 | X | X | X | s | X | - | - | - | - | - | - | - | - | - | o |
-| LEQU-03 | X | X | o | - | o | - | - | - | - | - | - | o | - | - | o |
-| LEQU-04 | X | X | o | - | - | - | - | - | - | - | - | o | - | - | - |
-| LEQU-05 | o | o | o | - | - | - | o | - | - | - | - | o | - | - | - |
+| LEQU-03 | X | X | X | - | o | - | - | - | - | - | - | o | - | - | o |
+| LEQU-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
+| LEQU-05 | X | X | o | - | - | - | o | - | - | - | - | o | - | - | - |
 | LVEC-02 | o | - | - | - | - | - | - | - | - | - | o | - | - | o | - |
 | LVEC-03 | o | o | o | - | - | - | - | - | - | - | - | - | - | - | - |
 | LTRI-03 | o | o | - | - | - | - | - | - | o | o | - | - | - | - | - |
@@ -302,6 +302,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-03 | LEQU-03 | NE | LU-LEQU-03-NE-001…005 | T, H | none | MAA2.06, MAA2.07 | exercises/LEQU-03/NE.json | Draft | Run 11; interval answers for 1/x > 3, 2/(x − 1) < 1, 4/x ≤ 1 with check at x = −2, 3/(x + 1) > 1, x/(x − 2) < 3; MAA only; source † (tsamir2004consistencies), evidence to be checked |
 | 2026-10-03 | LEQU-04 | MC | LU-LEQU-04-MC-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/MC.json | Draft | Run 11; x² < 16, x² > 49, (x + 2)² ≤ 9, test number that exposes x < 3 for x² < 9, justification via √(x²) = \|x\| (G4 only allowed); MAA only; source † (tsamir2004consistencies), evidence to be checked |
 | 2026-10-03 | LEQU-04 | NE | LU-LEQU-04-NE-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/NE.json | Draft | Run 11; interval answers for x² < 4, x² > 9, x² ≤ 25 with check at x = −4, (x − 1)² < 4, 2x² ≥ 18; MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-03 | ES | LU-LEQU-03-ES-001…005 | T, H | none | MAA2.06, MAA2.07 | exercises/LEQU-03/ES.json | Draft | Run 12; 3/x < 1, 4/(x − 2) > 1, 1/x > −2 with a substitution hint, (x + 1)/x < 2 and 3/(x + 2) < 1 with the error on line 3 (G3 on item 004); MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-03 | FS | - | - | - | - | - | Failed | Run 12; the verifier's FS check accepts only equations with finite solution sets or expression answers, so a blank line that is an inequality cannot be checked (scripts/ is not editable by the routine); no file kept, cell stays `o` |
+| 2026-10-03 | LEQU-04 | ES | LU-LEQU-04-ES-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/ES.json | Draft | Run 12; x² < 16 with √(x²) written out, x² > 36 by factoring, (x + 1)² ≤ 9, 4x² < 25 with a substitution hint, x² + 2 > 11; the dropped absolute value or lost branch is the error; MAA only; source † (tsamir2004consistencies), evidence to be checked |
+| 2026-10-03 | LEQU-05 | MC | LU-LEQU-05-MC-001…005 | T, H | none | MAA4.06, MAY1.02 | exercises/LEQU-05/MC.json | Draft | Run 12; \|x − 3\| = 5, \|x\| = −4 (no solutions), \|2x − 1\| = 7, when \|x\| = −x holds (justification, MAY1.02), \|x − 2\| = \|x + 4\|; MAA only; evidence Moderate, source almog2012absolute |
+| 2026-10-03 | LEQU-05 | NE | LU-LEQU-05-NE-001…005 | T, H | none | MAA4.06 | exercises/LEQU-05/NE.json | Draft | Run 12; smaller root of \|x − 3\| = 5, number of roots of \|2x − 1\| = 7, sum of roots of \|x + 4\| = 6, smaller root of \|3x − 2\| = \|x + 6\|, number of roots of \|x − 1\| = −2 with a substitution check; MAA only |
 
 ## 7. Coverage and decisions to confirm
 

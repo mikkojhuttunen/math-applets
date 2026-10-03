@@ -1,0 +1,386 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-05",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |x − 3| = 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = −2 tai x = 8",
+            "misconception": null,
+            "feedback": "Oikein: x − 3 = 5 tai x − 3 = −5."
+          },
+          {
+            "id": "b",
+            "text": "x = 8",
+            "misconception": "LEQU-05",
+            "feedback": "Itseisarvo ei vain poista miinusmerkkiä: myös x − 3 = −5 toteuttaa yhtälön, koska |−5| = 5."
+          },
+          {
+            "id": "c",
+            "text": "x = −8 tai x = 2",
+            "misconception": null,
+            "feedback": "Tarkista sijoittamalla: |2 − 3| = 1, ei 5."
+          },
+          {
+            "id": "d",
+            "text": "x = 8 tai x = 2",
+            "misconception": null,
+            "feedback": "x = 2 antaa |2 − 3| = 1, ei 5. Negatiivinen tapaus on x − 3 = −5."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x − 3 = 5, joten x = 8.",
+          "x − 3 = −5, joten x = −2."
+        ],
+        "final": "x = −2 tai x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0)."
+      },
+      "provenance": {
+        "template": "lequ05_mc",
+        "params": {
+          "a": 3,
+          "b": 5
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Kuinka monta ratkaisua yhtälöllä |x| = −4 on?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kaksi: x = 4 ja x = −4.",
+            "misconception": "LEQU-05",
+            "feedback": "Sijoita: |4| = 4 ja |−4| = 4, kumpikaan ei ole −4."
+          },
+          {
+            "id": "b",
+            "text": "Ei yhtään, koska itseisarvo ei ole koskaan negatiivinen.",
+            "misconception": null,
+            "feedback": "Oikein."
+          },
+          {
+            "id": "c",
+            "text": "Yksi: x = 4, koska itseisarvo poistaa miinusmerkin.",
+            "misconception": "LEQU-05",
+            "feedback": "Itseisarvo |x| on aina ≥ 0, joten se ei voi olla −4. Sijoita x = 4: |4| = 4, ei −4."
+          },
+          {
+            "id": "d",
+            "text": "Yksi: x = −4.",
+            "misconception": null,
+            "feedback": "Sijoita: |−4| = 4, ei −4."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "|x| ≥ 0 kaikilla x.",
+          "Negatiivinen oikea puoli −4 ei voi olla itseisarvo."
+        ],
+        "final": "Ei yhtään ratkaisua"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0)."
+      },
+      "provenance": {
+        "template": "lequ05_mc",
+        "params": {
+          "a": -4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |2x − 1| = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = −3 tai x = 4",
+            "misconception": null,
+            "feedback": "Oikein: 2x − 1 = 7 tai 2x − 1 = −7."
+          },
+          {
+            "id": "b",
+            "text": "x = 4",
+            "misconception": "LEQU-05",
+            "feedback": "Myös 2x − 1 = −7 on mahdollinen: x = −3, ja |2 · (−3) − 1| = 7."
+          },
+          {
+            "id": "c",
+            "text": "x = −4 tai x = 3",
+            "misconception": null,
+            "feedback": "Sijoita x = −4: |2 · (−4) − 1| = 9, ei 7."
+          },
+          {
+            "id": "d",
+            "text": "x = 4 tai x = 3",
+            "misconception": null,
+            "feedback": "x = 3 antaa |5| = 5, ei 7. Negatiivinen tapaus 2x − 1 = −7 antaa x = −3."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x − 1 = 7, joten x = 4.",
+          "2x − 1 = −7, joten x = −3."
+        ],
+        "final": "x = −3 tai x = 4"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0)."
+      },
+      "provenance": {
+        "template": "lequ05_mc",
+        "params": {
+          "a": 2,
+          "b": -1,
+          "c": 7
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06",
+          "MAY1.02"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Milloin yhtälö |x| = −x pätee? Perustele valintasi."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Kun x < 0, mutta ei kun x = 0.",
+            "misconception": null,
+            "feedback": "Myös x = 0 toteuttaa yhtälön: |0| = 0 = −0."
+          },
+          {
+            "id": "b",
+            "text": "Kun x ≥ 0, koska silloin |x| = x.",
+            "misconception": null,
+            "feedback": "Kun x > 0, −x on negatiivinen ja |x| positiivinen. Yhtälö pätee vain x = 0 tässä joukossa."
+          },
+          {
+            "id": "c",
+            "text": "Kun x ≤ 0, koska silloin −x ≥ 0 on x:n vastaluku ja sama kuin |x|.",
+            "misconception": null,
+            "feedback": "Oikein: esimerkiksi |−3| = 3 = −(−3)."
+          },
+          {
+            "id": "d",
+            "text": "Ei koskaan, koska itseisarvo poistaa miinusmerkin eikä siis voi olla −x.",
+            "misconception": "LEQU-05",
+            "feedback": "|−3| = 3 ja −(−3) = 3, joten yhtälö pätee, kun x on negatiivinen."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Jos x ≥ 0, |x| = x, ja yhtälö x = −x antaa x = 0.",
+          "Jos x < 0, |x| = −x aina.",
+          "Siis yhtälö pätee, kun x ≤ 0."
+        ],
+        "final": "x ≤ 0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0)."
+      },
+      "provenance": {
+        "template": "lequ05_mc",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Ratkaise yhtälö |x − 2| = |x + 4|."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 3",
+            "misconception": null,
+            "feedback": "Sijoita: |3 − 2| = 1, mutta |3 + 4| = 7."
+          },
+          {
+            "id": "b",
+            "text": "Ei ratkaisua, koska x − 2 = x + 4 on mahdoton.",
+            "misconception": "LEQU-05",
+            "feedback": "Itseisarvot ovat yhtä suuret myös, kun lausekkeet ovat toistensa vastalukuja: x − 2 = −(x + 4)."
+          },
+          {
+            "id": "c",
+            "text": "x = 1",
+            "misconception": null,
+            "feedback": "Sijoita: |1 − 2| = 1, mutta |1 + 4| = 5."
+          },
+          {
+            "id": "d",
+            "text": "x = −1",
+            "misconception": null,
+            "feedback": "Oikein: x − 2 = −(x + 4) antaa x = −1."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "x − 2 = x + 4 on mahdoton.",
+          "x − 2 = −(x + 4), joten 2x = −2 ja x = −1."
+        ],
+        "final": "x = −1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0)."
+      },
+      "provenance": {
+        "template": "lequ05_mc",
+        "params": {
+          "a": -2,
+          "b": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}

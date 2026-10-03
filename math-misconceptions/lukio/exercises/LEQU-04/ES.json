@@ -1,0 +1,283 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-04",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön x² < 16 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² < 16",
+          "√(x²) < √16",
+          "x < 4"
+        ],
+        "error_line": 3,
+        "error_type": "root_across_inequality"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein, mutta √(x²) = |x|, ei x.",
+          "Rivillä 3 itseisarvo on pudotettu. Esimerkiksi x = −5 toteuttaa rivin 3, mutta (−5)² = 25 > 16.",
+          "Oikea ratkaisu: −4 < x < 4."
+        ],
+        "final": "−4 < x < 4"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuresta tulee itseisarvo, √(x²) = |x|.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_es",
+        "params": {
+          "a": 16
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön x² > 36 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² > 36",
+          "x² − 36 > 0",
+          "(x − 6)(x + 6) > 0",
+          "x > 6"
+        ],
+        "error_line": 4,
+        "error_type": "root_across_inequality"
+      },
+      "solution": {
+        "steps": [
+          "Rivit 2 ja 3 ovat oikein. Tulo on positiivinen, kun tekijät ovat samanmerkkiset.",
+          "Rivillä 4 toinen tapaus x < −6 puuttuu: x = −7 antaa 49 > 36.",
+          "Oikea ratkaisu: x < −6 tai x > 6."
+        ],
+        "final": "x < −6 tai x > 6"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuresta tulee itseisarvo, √(x²) = |x|.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_es",
+        "params": {
+          "a": 36
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön (x + 1)² ≤ 9 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "(x + 1)² ≤ 9",
+          "|x + 1| ≤ 3",
+          "x + 1 ≤ 3",
+          "x ≤ 2"
+        ],
+        "error_line": 3,
+        "error_type": "root_across_inequality"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: √((x + 1)²) = |x + 1|.",
+          "Rivillä 3 itseisarvo on pudotettu; oikein −3 ≤ x + 1 ≤ 3.",
+          "Oikea ratkaisu: −4 ≤ x ≤ 2."
+        ],
+        "final": "−4 ≤ x ≤ 2"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuresta tulee itseisarvo, √(x²) = |x|.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_es",
+        "params": {
+          "shift": 1,
+          "a": 9
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön 4x² < 25 näin. Napauta rivi, jossa on virhe. Vihje: sijoita x = −3 alkuperäiseen epäyhtälöön ja riviin 3."
+      },
+      "payload": {
+        "lines": [
+          "4x² < 25",
+          "x² < 25/4",
+          "x < 5/2"
+        ],
+        "error_line": 3,
+        "error_type": "root_across_inequality"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: jaetaan 4:llä.",
+          "Rivillä 3 on otettu neliöjuuri ilman itseisarvoa.",
+          "Tarkistus: x = −3 toteuttaa rivin 3, mutta 4 · 9 = 36 > 25.",
+          "Oikea ratkaisu: −5/2 < x < 5/2."
+        ],
+        "final": "−5/2 < x < 5/2"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuresta tulee itseisarvo, √(x²) = |x|.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_es",
+        "params": {
+          "c": 4,
+          "a": 25
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-04-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA2.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-04"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi epäyhtälön x² + 2 > 11 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "x² + 2 > 11",
+          "x² > 9",
+          "x > 3"
+        ],
+        "error_line": 3,
+        "error_type": "root_across_inequality"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: vähennetään 2.",
+          "Rivillä 3 ratkaisu x < −3 puuttuu: x = −4 antaa 18 > 11.",
+          "Oikea ratkaisu: x < −3 tai x > 3."
+        ],
+        "final": "x < −3 tai x > 3"
+      },
+      "feedback": {
+        "correct": "Oikein: neliöjuuresta tulee itseisarvo, √(x²) = |x|.",
+        "generic_wrong": "Neliöjuuri ei säilytä epäyhtälöä näin: √(x²) = |x|. Ratkaise |x| < a tai siirrä kaikki vasemmalle ja tekijöi."
+      },
+      "provenance": {
+        "template": "lequ04_es",
+        "params": {
+          "c": 2,
+          "a": 11
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 12
+      }
+    }
+  ]
+}
