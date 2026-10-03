@@ -88,7 +88,12 @@ h2 { font-family: var(--f-display); font-weight: 600; font-size: 19px; margin: 0
 .band.faint { opacity: .1; }
 .band.prof { background: var(--idler); opacity: .3; }
 h3.sub { font-family: var(--f-display); font-weight: 600; font-size: 16px; margin: 6px 0 0; }
-#idlerBox { display: grid; gap: 10px; }
+#idlerBox, #editorBox { display: grid; gap: 10px; }
+#cp { cursor: crosshair; }
+#cp:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bwline { display: flex; flex-wrap: wrap; gap: 4px 18px; font: 500 12.5px var(--f-mono); font-variant-numeric: tabular-nums; }
+.bwline span { min-width: 0; overflow-wrap: anywhere; }
+.bwline b { font-weight: 600; }
 canvas { display: block; width: 100%; height: 100%; touch-action: none; }
 .hover { font: 12px var(--f-mono); color: var(--muted); min-height: 1.5em; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .toggle { display: inline-flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
@@ -213,7 +218,9 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
             <option value="flat">Flat over all idler wavelengths</option>
             <option value="pass">Loss only inside a band</option>
             <option value="stop">Loss outside a band (lossless notch)</option>
+            <option value="custom">Custom curve (drag points)</option>
           </select>
+          <span class="hint" id="customHint" hidden>Edit the curve in the loss profile editor under the gain spectrum.</span>
           <span class="hint">The strength above is the peak loss. The profile scales it at each idler wavelength; dumps scale their dB attenuation the same way.</span></div>
         <div class="ctl" id="ctlBc" hidden><label for="lbc">Band centre</label><output id="lbc_o"></output>
           <input type="range" id="lbc" min="-500" max="500" step="1" value="0">
@@ -268,7 +275,25 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
           <span id="lgProf" hidden><span class="band prof"></span>idler loss profile</span>
         </div>
         <div class="plotbox short"><canvas id="cs" role="img" aria-label="Signal gain in decibels as a function of signal wavelength"></canvas></div>
+        <div class="bwline" id="bwline"></div>
         <div class="hover" id="hs">CW pump at 532 nm; each signal wavelength is solved separately.</div>
+        <div id="editorBox" hidden>
+          <div class="cardhead"><h3 class="sub">Idler loss profile editor</h3>
+            <div class="legend">
+              <span><span class="sw" style="border-color:var(--idler)"></span>loss, % of peak</span>
+              <span><span class="sw dash" style="border-color:var(--muted)"></span>idler generated, normalised</span>
+              <span><span class="band"></span>signal −3 dB band</span>
+            </div></div>
+          <div class="plotbox short"><canvas id="cp" tabindex="0" role="application" aria-label="Idler loss profile editor. Click to add a point, drag to move, double-click or Delete to remove, arrow keys move the selected point."></canvas></div>
+          <div class="hover" id="hp">Click empty space to add a point · drag to move · double-click or Delete removes · arrow keys nudge the selected point (Shift for larger steps).</div>
+          <div class="presets">
+            <button type="button" id="cpResample">Resample to 9 points</button>
+            <button type="button" id="cpZero">All 0 %</button>
+            <button type="button" id="cpFull">All 100 %</button>
+            <button type="button" id="cpInvert">Invert</button>
+            <button type="button" id="cpCopy">Copy points as CSV</button>
+          </div>
+        </div>
         <div id="idlerBox" hidden>
           <div class="cardhead"><h3 class="sub">Idler spectrum at the fiber output</h3>
             <div class="legend">
@@ -318,7 +343,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         <p>The dashed curves solve the linearised signal–idler pair exactly (2×2 matrix exponential, with lumped dumps applied as jumps). With strong continuous idler loss (α<sub>i</sub> ≫ Γ) the idler follows the signal adiabatically and the signal sees a Lorentzian gain coefficient g<sub>s</sub> = Γ²α<sub>i</sub> / ((α<sub>i</sub>/2)² + Δk²). The gain becomes smaller but much less sensitive to Δk.</p>
         <p><b>Dispersion and bandwidth.</b> For a CW pump, the mismatch seen by a signal at ω<sub>s0</sub> + Ω is Δk(Ω) = Δk + [Δk<sub>D</sub>(ω<sub>s0</sub> + Ω) − Δk<sub>D</sub>(ω<sub>s0</sub>)], where Δk<sub>D</sub>(ω<sub>s</sub>) = k<sub>p</sub>(ω<sub>p</sub>) − k<sub>s</sub>(ω<sub>s</sub>) − k<sub>i</sub>(ω<sub>p</sub> − ω<sub>s</sub>). In the step-index model each k = ω n<sub>eff</sub>/c comes from the exact scalar LP01 eigenvalue equation U J<sub>1</sub>(U)/J<sub>0</sub>(U) = W K<sub>1</sub>(W)/K<sub>0</sub>(W) with a fused-silica Sellmeier core and cladding plus a constant Δn, so material and waveguide dispersion are both included. To first order Δk(Ω) ≈ Δk + (β<sub>1,i</sub> − β<sub>1,s</sub>)Ω − ½(β<sub>2,s</sub> + β<sub>2,i</sub>)Ω². With the gain coefficient Γ, the GVM-limited full width at half maximum is roughly Δω ≈ 4√(Γ ln 2 / L)/|GVM| at high gain and 5.57/(L |GVM|) at low gain. The plotted spectrum is exact within the model.</p>
         <p>The idler band follows from ω<sub>i</sub> = ω<sub>p</sub> − ω<sub>s</sub>. It has the same width as the signal band in frequency, but (λ<sub>i</sub>/λ<sub>s</sub>)² ≈ 0.27 times the width in wavelength. The idler plot shows the generated idler (photons created, equal to the signal photons gained) and the idler that leaves the fiber. The difference is what the loss element must absorb. </p>
-        <p><b>Idler loss engineering.</b> The idler loss can follow a spectral profile T(λ<sub>i</sub>) between 0 and 1: flat, a band with loss inside it, or a lossless notch with loss outside it. Both continuous α<sub>i</sub> and the dB attenuation of each dump scale with T. Outside the lossless phase-matching band (|Δk| &gt; 2Γ) a lossless fiber only oscillates, but a strongly damped idler still gives the signal the gain coefficient Γ²α<sub>i</sub>/((α<sub>i</sub>/2)² + Δk²). That wing gain is about 4Γ²L/α<sub>i</sub>, so it only matters next to a low peak gain. To judge the extension fairly, compare with a lossless fiber of equal peak gain, whose length is L<sub>ref</sub> = arccosh(√G<sub>peak</sub>)/Γ. With the default fiber this comparison gives: flat loss broadens the −3 dB band only once α<sub>i</sub> ≳ 3Γ (about 1.6× at 30 dB/m, but with 10 dB peak gain from 5 m). A lossless notch narrows the band when its edges fall inside the gain band, and changes nothing when all of the loss lies outside it. The reverse works: weak loss (about 3 dB/m) only at the centre of the lossless idler band lowers the peak and flattens the top. At equal peak gain that gives about 1.4× the bandwidth for roughly 4 dB less peak gain than the same fiber without loss (preset "Gain flattening"). Stronger centre loss opens a dip, which the readouts flag. The clearer benefit of a lossy idler is in the depleted regime and in tolerance to Δk: it suppresses back-conversion, so the pump keeps flowing into the signal (compare the photon-flux view with and without loss).</p>
+        <p><b>Idler loss engineering.</b> The idler loss can follow a spectral profile T(λ<sub>i</sub>) between 0 and 1: flat, a band with loss inside it, or a lossless notch with loss outside it. Both continuous α<sub>i</sub> and the dB attenuation of each dump scale with T. Outside the lossless phase-matching band (|Δk| &gt; 2Γ) a lossless fiber only oscillates, but a strongly damped idler still gives the signal the gain coefficient Γ²α<sub>i</sub>/((α<sub>i</sub>/2)² + Δk²). That wing gain is about 4Γ²L/α<sub>i</sub>, so it only matters next to a low peak gain. To judge the extension fairly, compare with a lossless fiber of equal peak gain, whose length is L<sub>ref</sub> = arccosh(√G<sub>peak</sub>)/Γ. With the default fiber this comparison gives: flat loss broadens the −3 dB band only once α<sub>i</sub> ≳ 3Γ (about 1.6× at 30 dB/m, but with 10 dB peak gain from 5 m). A lossless notch narrows the band when its edges fall inside the gain band, and changes nothing when all of the loss lies outside it. The reverse works: weak loss (about 3 dB/m) only at the centre of the lossless idler band lowers the peak and flattens the top. At equal peak gain that gives about 1.4× the bandwidth for roughly 4 dB less peak gain than the same fiber without loss (preset "Gain flattening"). Stronger centre loss opens a dip, which the readouts flag. With "Custom curve", control points (idler wavelength, fraction of peak loss) are joined by a monotone cubic that never overshoots 0–100 %. The points are fixed in absolute idler wavelength, so they stay put when λ<sub>s</sub> or Δk change. The clearer benefit of a lossy idler is in the depleted regime and in tolerance to Δk: it suppresses back-conversion, so the pump keeps flowing into the signal (compare the photon-flux view with and without loss).</p>
         <ul>
           <li>The coupling K uses n = 1.45 for all three waves. Across the spectrum, K scales as √(ω<sub>s</sub>ω<sub>i</sub>) and the mode overlap Θ stays at its value at λ<sub>s</sub>.</li>
           <li>LP01 is the fundamental mode at all three wavelengths. At 532 nm the fiber is usually few-mode (V &gt; 2.405), and other modes are ignored. Mode radii use Marcuse's Gaussian fit w/a = 0.65 + 1.619 V<sup>−3/2</sup> + 2.879 V<sup>−6</sup>.</li>
@@ -452,8 +477,38 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   }
 
   // Spectral idler-loss profile, 0..1, idler wavelength in nm
+  // Custom profile: control points {x: idler nm, y: 0..1}, monotone cubic (Fritsch–Carlson) interpolation
+  var CUSTOM = { pts: [], sel: -1 };
+  function pchip(pts) {
+    var P2 = pts.slice().sort(function (a, b) { return a.x - b.x; }), n = P2.length;
+    var xs = P2.map(function (p) { return p.x; }), ys = P2.map(function (p) { return p.y; }), d = [], m = [], k;
+    for (k = 0; k < n - 1; k++) d.push((ys[k + 1] - ys[k]) / Math.max(1e-15, xs[k + 1] - xs[k]));
+    for (k = 0; k < n; k++) {
+      if (k === 0) m.push(n > 1 ? d[0] : 0);
+      else if (k === n - 1) m.push(d[n - 2]);
+      else m.push(d[k - 1] * d[k] <= 0 ? 0 : (d[k - 1] + d[k]) / 2);
+    }
+    for (k = 0; k < n - 1; k++) {
+      if (d[k] === 0) { m[k] = m[k + 1] = 0; continue; }
+      var a = m[k] / d[k], b = m[k + 1] / d[k], h = a * a + b * b;
+      if (h > 9) { var t = 3 / Math.sqrt(h); m[k] = t * a * d[k]; m[k + 1] = t * b * d[k]; }
+    }
+    return function (x) {
+      if (n === 0) return 0;
+      if (x <= xs[0]) return ys[0];
+      if (x >= xs[n - 1]) return ys[n - 1];
+      var lo = 0, hi = n - 1;
+      while (hi - lo > 1) { var mid = (lo + hi) >> 1; if (xs[mid] > x) hi = mid; else lo = mid; }
+      var hh = xs[hi] - xs[lo], t2 = (x - xs[lo]) / hh, t3 = t2 * t2 * t2, tt = t2 * t2;
+      return (2 * t3 - 3 * tt + 1) * ys[lo] + (t3 - 2 * tt + t2) * hh * m[lo] + (-2 * t3 + 3 * tt) * ys[hi] + (t3 - tt) * hh * m[hi];
+    };
+  }
+  var customFn = pchip([]);
+  function customChanged() { customFn = pchip(CUSTOM.pts); }
+
   function lossT(pr, lamNm) {
     if (pr.type === "flat") return 1;
+    if (pr.type === "custom") return Math.max(0, Math.min(1, customFn(lamNm)));
     var a = pr.c - pr.w / 2, b = pr.c + pr.w / 2;
     var box = 0.5 * (Math.tanh((lamNm - a) / pr.e) - Math.tanh((lamNm - b) / pr.e));
     box = Math.max(0, Math.min(1, box));
@@ -717,8 +772,26 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     ctx.setLineDash([]);
     (o.points || []).forEach(function (pt) { ctx.fillStyle = pt.color; ctx.beginPath(); ctx.arc(X(pt.x), Y(pt.y), 4, 0, 2 * Math.PI); ctx.fill(); });
     if (o.cursor != null) { ctx.strokeStyle = cInk; ctx.globalAlpha = 0.35; ctx.lineWidth = 1; ctx.beginPath(); ctx.moveTo(X(o.cursor), m.t); ctx.lineTo(X(o.cursor), m.t + ph); ctx.stroke(); ctx.globalAlpha = 1; }
+    (o.markers || []).forEach(function (mk) {
+      ctx.fillStyle = css("--panel"); ctx.strokeStyle = mk.color; ctx.lineWidth = mk.sel ? 3 : 2;
+      ctx.beginPath(); ctx.arc(X(mk.x), Y(mk.y), mk.sel ? 7 : 5.5, 0, 2 * Math.PI); ctx.fill(); ctx.stroke();
+    });
     ctx.restore();
-    return { m: m, pw: pw, ph: ph, xlim: o.xlim };
+    (o.annots || []).forEach(function (an) {
+      if (an.x0 == null || an.x1 == null) return;
+      var x0 = Math.max(m.l, X(an.x0)), x1 = Math.min(m.l + pw, X(an.x1)), y = Y(an.y);
+      if (y < m.t || y > m.t + ph) return;
+      ctx.strokeStyle = an.color; ctx.fillStyle = an.color; ctx.lineWidth = 1.4; ctx.setLineDash([]);
+      ctx.beginPath(); ctx.moveTo(x0, y); ctx.lineTo(x1, y); ctx.stroke();
+      [[x0, 1], [x1, -1]].forEach(function (e) { ctx.beginPath(); ctx.moveTo(e[0], y); ctx.lineTo(e[0] + 6 * e[1], y - 3.5); ctx.lineTo(e[0] + 6 * e[1], y + 3.5); ctx.closePath(); ctx.fill(); });
+      ctx.font = "600 11.5px " + css("--f-mono");
+      var tw = ctx.measureText(an.label).width, cx = Math.max(m.l + tw / 2 + 4, Math.min(m.l + pw - tw / 2 - 4, (x0 + x1) / 2));
+      var ty = an.below ? y + 5 : y - 5;
+      ctx.textAlign = "center"; ctx.textBaseline = an.below ? "top" : "bottom";
+      ctx.fillStyle = css("--panel"); ctx.globalAlpha = 0.85; ctx.fillRect(cx - tw / 2 - 3, an.below ? ty - 1 : ty - 14, tw + 6, 15); ctx.globalAlpha = 1;
+      ctx.fillStyle = an.color; ctx.fillText(an.label, cx, ty);
+    });
+    return { m: m, pw: pw, ph: ph, xlim: o.xlim, ylim: o.ylim };
   }
 
   // ---------- state & rendering ----------
@@ -726,7 +799,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   var P, SIM, AZ, AOUT, yMode = "dbm", zGeom = null, gGeom = null, zCursor = null, scan = { dk: [], gn: [], dka: [], ga: [], range: 1 }, scanToken = 0;
 
   function lossDescr(p) {
-    var pf = p.prof.type === "pass" ? ", band" : p.prof.type === "stop" ? ", notch" : "";
+    var pf = p.prof.type === "pass" ? ", band" : p.prof.type === "stop" ? ", notch" : p.prof.type === "custom" ? ", custom curve" : "";
     if (p.lm === "cont") return fmt(p.alphaDb, p.alphaDb < 10 ? 2 : 1) + " dB/m peak" + pf;
     if (p.lm === "lumped") return p.nf + " × " + fmt(p.attDb, 1) + " dB peak" + pf;
     return "none";
@@ -760,7 +833,10 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     }
     var banded = p.lm !== "none" && p.prof.type !== "flat";
     $("ctlProf").hidden = $("ctlRef").hidden = p.lm === "none";
-    $("ctlBc").hidden = $("ctlBw").hidden = $("ctlBe").hidden = !banded;
+    var custom = p.lm !== "none" && p.prof.type === "custom";
+    $("ctlBc").hidden = $("ctlBw").hidden = $("ctlBe").hidden = !banded || custom;
+    $("customHint").hidden = !custom;
+    $("editorBox").hidden = !custom;
     $("lbc_o").textContent = fmt(p.prof.c, 3) + " nm";
     $("lbw_o").textContent = sig(p.prof.w, 3) + " nm";
     $("lbe_o").textContent = sig(p.prof.e, 2) + " nm";
@@ -1035,7 +1111,23 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var pad = Math.max(1, 0.06 * (top - bot));
     var xl = [Math.min(sp.lam[0], sp.lam[sp.lam.length - 1]), Math.max(sp.lam[0], sp.lam[sp.lam.length - 1])];
     var bands = bandS && bandS.lo != null && bandS.hi != null ? [{ x0: bandS.lo, x1: bandS.hi, alpha: 0.18 }] : [];
+    var s10 = n && n.done ? bandEdges(n.lam, n.gn, 10) : bandEdges(sp.lam, sp.ga, 10), refB = B.rN || B.rA;
+    var wl = function (b) { return b && b.lo != null && b.hi != null ? sig(b.hi - b.lo, 3) + " nm" : "> window"; };
+    var annots = [];
+    if (bandS) annots.push({ x0: bandS.lo, x1: bandS.hi, y: bandS.peak - 3, label: "−3 dB  " + wl(bandS), color: css("--signal") });
+    if (s10) annots.push({ x0: s10.lo, x1: s10.hi, y: s10.peak - 10, label: "−10 dB  " + wl(s10), color: css("--signal") });
+    if (refB && P.lm !== "none") annots.push({ x0: refB.lo, x1: refB.hi, y: refB.peak - 3, label: "ref −3 dB  " + wl(refB), color: css("--pump"), below: true });
+    var lam0 = P.ls * 1e9, bw = [];
+    if (DISP.model === "none") bw.push("<span>No dispersion: the gain spectrum is flat over the window.</span>");
+    else {
+      bw.push("<span>Signal −3 dB: <b>" + bandText(bandS, lam0) + "</b></span>");
+      bw.push("<span>−10 dB: <b>" + bandText(s10, lam0) + "</b></span>");
+      if (refB && P.lm !== "none") bw.push("<span style=\"color:var(--pump)\">reference −3 dB: <b>" + bandText(refB, lam0) + "</b> · ratio " + ratioText(bandS, refB) + "</span>");
+      bw.push("<span class=\"note\">" + B.src + "</span>");
+    }
+    $("bwline").innerHTML = bw.join("");
     sGeom = drawPlot($("cs"), {
+      annots: DISP.model === "none" ? [] : annots,
       xlim: xl, ylim: [bot - pad, top + pad], xlabel: "signal wavelength (nm)", ylabel: "signal gain (dB)", bands: bands,
       y2: { offset: dBm(P.Ps), label: "signal output power" },
       series: [
@@ -1046,6 +1138,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       vlines: [{ x: P.ls * 1e9, color: css("--accent"), width: 1, dash: [2, 3] }]
     });
     $("lgRef").hidden = !sp.Lref;
+    drawEditor();
     $("lgProf").hidden = $("lgProf2").hidden = !(P.lm !== "none" && P.prof.type !== "flat");
     if (!showIdler) return;
     $("lgOut").hidden = P.lm === "none";
@@ -1075,6 +1168,99 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     ]]];
     $("idlerReadouts").innerHTML = groupsHtml(rows);
   }
+  var pGeom = null, drag = -1;
+  function editorWindow() {
+    var sp = SPEC; return [Math.min(sp.lamI[0], sp.lamI[sp.lamI.length - 1]), Math.max(sp.lamI[0], sp.lamI[sp.lamI.length - 1])];
+  }
+  function resampleCustom(nPts, fn) {
+    var w = editorWindow(), pts = [];
+    for (var k = 0; k < nPts; k++) { var x = w[0] + (w[1] - w[0]) * k / (nPts - 1); pts.push({ x: x, y: Math.max(0, Math.min(1, fn(x))) }); }
+    CUSTOM.pts = pts; CUSTOM.sel = -1; customChanged();
+  }
+  function drawEditor() {
+    if (!SPEC || $("editorBox").hidden) return;
+    var sp = SPEC, n = sp.num, xw = editorWindow();
+    var src = n && n.done ? { x: n.lamI, y: n.ig } : { x: sp.lamI, y: sp.igA };
+    var mx = Math.max.apply(null, src.y.filter(isFinite).concat([-Infinity]));
+    var guide = src.y.map(function (v) { return isFinite(v) ? 100 * Math.pow(10, (v - mx) / 10) : NaN; });
+    var prof = [], xs = [];
+    for (var k = 0; k <= 400; k++) { var x = xw[0] + (xw[1] - xw[0]) * k / 400; xs.push(x); prof.push(100 * lossT(P.prof, x)); }
+    var B = specBands(), b3 = B.sN || B.sA, bands = [];
+    if (b3 && b3.lo != null && b3.hi != null) {
+      var toI = function (l) { return 1 / (1 / 532 - 1 / l); };
+      bands.push({ x0: Math.min(toI(b3.lo), toI(b3.hi)), x1: Math.max(toI(b3.lo), toI(b3.hi)), alpha: 0.15 });
+    }
+    var peak = P.lm === "cont" ? sig(P.alphaDb, 3) + " dB/m" : fmt(P.attDb, 1) + " dB per dump";
+    pGeom = drawPlot($("cp"), {
+      xlim: xw, ylim: [-4, 108], xlabel: "idler wavelength (nm) · 100 % = " + peak, ylabel: "loss (% of peak)", bands: bands,
+      series: [{ x: src.x, y: guide, color: css("--muted"), dash: [5, 4], width: 1.3 }, { x: xs, y: prof, color: css("--idler"), width: 2.4 }],
+      markers: CUSTOM.pts.map(function (p, i) { return { x: p.x, y: 100 * p.y, color: css("--idler"), sel: i === CUSTOM.sel }; }),
+      vlines: [{ x: P.li * 1e9, color: css("--accent"), width: 1, dash: [2, 3] }]
+    });
+    var outside = CUSTOM.pts.filter(function (p) { return p.x < xw[0] || p.x > xw[1]; }).length;
+    if (CUSTOM.sel >= 0 && CUSTOM.pts[CUSTOM.sel]) {
+      var sp2 = CUSTOM.pts[CUSTOM.sel];
+      $("hp").textContent = "Selected point: λi = " + fmt(sp2.x, 4) + " nm (λs = " + fmt(1 / (1 / 532 - 1 / sp2.x), 3) + " nm) · loss " + fmt(100 * sp2.y, 1) + " % of peak" + (outside ? " · " + outside + " point(s) outside the window" : "");
+    } else $("hp").textContent = outside ? outside + " point(s) lie outside the current window. Use Resample to bring the curve into view." : "Click empty space to add a point · drag to move · double-click or Delete removes · arrow keys nudge the selected point (Shift for larger steps).";
+  }
+  function editorXY(ev) {
+    var rc = $("cp").getBoundingClientRect(), g = pGeom;
+    var px = ev.clientX - rc.left, py = ev.clientY - rc.top;
+    return { px: px, py: py, x: g.xlim[0] + (px - g.m.l) / g.pw * (g.xlim[1] - g.xlim[0]), y: (g.ylim[1] - (py - g.m.t) / g.ph * (g.ylim[1] - g.ylim[0])) / 100 };
+  }
+  function nearestPoint(e, rad) {
+    var g = pGeom, best = -1, bd = rad;
+    CUSTOM.pts.forEach(function (p, i) {
+      var px = g.m.l + (p.x - g.xlim[0]) / (g.xlim[1] - g.xlim[0]) * g.pw, py = g.m.t + (1 - (100 * p.y - g.ylim[0]) / (g.ylim[1] - g.ylim[0])) * g.ph;
+      var d = Math.hypot(px - e.px, py - e.py); if (d < bd) { bd = d; best = i; }
+    });
+    return best;
+  }
+  var editRaf = 0;
+  function editorUpdate() { customChanged(); cancelAnimationFrame(editRaf); editRaf = requestAnimationFrame(compute); }
+  function clampPt(p) { var w = editorWindow(); p.x = Math.max(w[0], Math.min(w[1], p.x)); p.y = Math.max(0, Math.min(1, p.y)); }
+  $("cp").addEventListener("pointerdown", function (ev) {
+    if (!pGeom) return;
+    var e = editorXY(ev), i = nearestPoint(e, ev.pointerType === "touch" ? 22 : 12);
+    if (e.px < pGeom.m.l || e.px > pGeom.m.l + pGeom.pw) return;
+    if (i < 0) { var p = { x: e.x, y: e.y }; clampPt(p); CUSTOM.pts.push(p); i = CUSTOM.pts.length - 1; }
+    CUSTOM.sel = i; drag = i; this.setPointerCapture(ev.pointerId); this.focus(); editorUpdate();
+  });
+  $("cp").addEventListener("pointermove", function (ev) {
+    if (!pGeom) return;
+    var e = editorXY(ev);
+    if (drag < 0) { this.style.cursor = nearestPoint(e, 12) >= 0 ? "grab" : "crosshair"; return; }
+    var p = CUSTOM.pts[drag]; p.x = e.x; p.y = e.y; clampPt(p); this.style.cursor = "grabbing"; editorUpdate();
+  });
+  ["pointerup", "pointercancel"].forEach(function (t) { $("cp").addEventListener(t, function () { drag = -1; }); });
+  $("cp").addEventListener("dblclick", function (ev) {
+    var i = nearestPoint(editorXY(ev), 14);
+    if (i >= 0 && CUSTOM.pts.length > 2) { CUSTOM.pts.splice(i, 1); CUSTOM.sel = -1; editorUpdate(); }
+  });
+  $("cp").addEventListener("keydown", function (ev) {
+    var p = CUSTOM.pts[CUSTOM.sel]; if (!p) return;
+    var w = editorWindow(), big = ev.shiftKey ? 10 : 1, dx = (w[1] - w[0]) / 200 * big, dy = 0.01 * big, used = true;
+    if (ev.key === "ArrowLeft") p.x -= dx; else if (ev.key === "ArrowRight") p.x += dx;
+    else if (ev.key === "ArrowUp") p.y += dy; else if (ev.key === "ArrowDown") p.y -= dy;
+    else if ((ev.key === "Delete" || ev.key === "Backspace") && CUSTOM.pts.length > 2) { CUSTOM.pts.splice(CUSTOM.sel, 1); CUSTOM.sel = -1; }
+    else if (ev.key === "Tab") { used = false; }
+    else if (ev.key === "n" || ev.key === "]") { var o = CUSTOM.pts.slice().sort(function (a, b) { return a.x - b.x; }); CUSTOM.sel = CUSTOM.pts.indexOf(o[(o.indexOf(p) + 1) % o.length]); }
+    else used = false;
+    if (used) { ev.preventDefault(); if (CUSTOM.pts[CUSTOM.sel]) clampPt(CUSTOM.pts[CUSTOM.sel]); editorUpdate(); }
+  });
+  $("cpResample").addEventListener("click", function () { var f = customFn; resampleCustom(9, function (x) { return f(x); }); compute(); });
+  $("cpZero").addEventListener("click", function () { CUSTOM.pts.forEach(function (p) { p.y = 0; }); editorUpdate(); });
+  $("cpFull").addEventListener("click", function () { CUSTOM.pts.forEach(function (p) { p.y = 1; }); editorUpdate(); });
+  $("cpInvert").addEventListener("click", function () { CUSTOM.pts.forEach(function (p) { p.y = 1 - p.y; }); editorUpdate(); });
+  $("cpCopy").addEventListener("click", function () {
+    var pts = CUSTOM.pts.slice().sort(function (a, b) { return a.x - b.x; }), btn = this;
+    var lines = ["idler_nm,signal_nm,loss_fraction_of_peak,loss_" + (P.lm === "cont" ? "dB_per_m" : "dB_per_dump")];
+    pts.forEach(function (p) { lines.push([p.x.toFixed(6), (1 / (1 / 532 - 1 / p.x)).toFixed(6), p.y.toFixed(4), ((P.lm === "cont" ? P.alphaDb : P.attDb) * p.y).toFixed(4)].join(",")); });
+    function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = "Copy points as CSV"; }, 1600); }
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(lines.join("\n")).then(function () { done("Copied"); }, function () { done("Copy blocked by browser"); });
+    else done("Copy not available");
+  });
+
   function hoverSpec(lam, which) {
     var sp = SPEC, arr = which === "s" ? sp.lam : sp.lamI, best = 0;
     for (var k = 0; k < arr.length; k++) if (Math.abs(arr[k] - lam) < Math.abs(arr[best] - lam)) best = k;
@@ -1173,8 +1359,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     compute();
   });
   $("copySpec").addEventListener("click", function () {
-    var sp = SPEC, lines = ["signal_nm,idler_nm,dk_rad_per_m,gain_undepleted_dB,idler_generated_undepleted_dBm,idler_out_undepleted_dBm"];
-    for (var k = 0; k < sp.lam.length; k++) lines.push([sp.lam[k], sp.lamI[k], P.dk + DISP.dkRel(sp.O[k]), sp.ga[k], sp.igA[k], sp.ioA[k]].map(function (v) { return Number(v).toPrecision(8); }).join(","));
+    var sp = SPEC, lines = ["signal_nm,idler_nm,dk_rad_per_m,idler_loss_fraction,gain_undepleted_dB,idler_generated_undepleted_dBm,idler_out_undepleted_dBm"];
+    for (var k = 0; k < sp.lam.length; k++) lines.push([sp.lam[k], sp.lamI[k], P.dk + DISP.dkRel(sp.O[k]), sp.prof[k], sp.ga[k], sp.igA[k], sp.ioA[k]].map(function (v) { return Number(v).toPrecision(8); }).join(","));
     if (sp.num && sp.num.done) {
       lines.push("", "signal_nm,idler_nm,gain_numerical_dB,idler_generated_dBm,idler_out_dBm");
       for (k = 0; k < sp.num.lam.length; k++) lines.push([sp.num.lam[k], sp.num.lamI[k], sp.num.gn[k], sp.num.ig[k], sp.num.io[k]].map(function (v) { return Number(v).toPrecision(8); }).join(","));
@@ -1192,7 +1378,11 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
   var raf = 0;
   $("form").addEventListener("input", function (ev) { if (ev.target.id === "dk" || ev.target.id === "dkn") return; cancelAnimationFrame(raf); raf = requestAnimationFrame(compute); });
-  $("form").addEventListener("change", function (ev) { if (ev.target.name === "lossmode" || ["wimode", "disp", "lprof", "refmode"].indexOf(ev.target.id) >= 0) compute(); });
+  $("form").addEventListener("change", function (ev) { if (ev.target.id === "lprof" && ev.target.value === "custom" && CUSTOM.pts.length === 0 && SPEC) {
+      var prev = Object.assign({}, P.prof, { type: P.prof.type === "custom" ? "flat" : P.prof.type });
+      resampleCustom(15, function (x) { return lossT(prev, x); });
+    }
+    if (ev.target.name === "lossmode" || ["wimode", "disp", "lprof", "refmode"].indexOf(ev.target.id) >= 0) compute(); });
   $("form").addEventListener("submit", function (ev) { ev.preventDefault(); });
 
   $("modeDbm").addEventListener("click", function () { yMode = "dbm"; this.setAttribute("aria-pressed", "true"); $("modeFlux").setAttribute("aria-pressed", "false"); drawZ(); });
