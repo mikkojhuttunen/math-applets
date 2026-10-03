@@ -16,6 +16,8 @@
   --pump: #16884a;
   --signal: #b4164f;
   --idler: #b86400;
+  --sbs: #6a3fc6;
+  --srs: #0b7285;
   --warn: #a3470b;
   --f-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
   --f-body: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -25,14 +27,14 @@
   :root:not([data-theme="light"]) {
     --bg: #0f151a; --panel: #161f26; --ink: #e2e8ed; --muted: #92a1ad; --line: #2a3640;
     --grid: #1f2a33; --accent: #6fb6dd; --accent-soft: #1b2e3a;
-    --pump: #4fd187; --signal: #ff6a9a; --idler: #ffad4a; --warn: #ffa265;
+    --pump: #4fd187; --signal: #ff6a9a; --idler: #ffad4a; --warn: #ffa265; --sbs: #b197fc; --srs: #3bc9db;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0f151a; --panel: #161f26; --ink: #e2e8ed; --muted: #92a1ad; --line: #2a3640;
   --grid: #1f2a33; --accent: #6fb6dd; --accent-soft: #1b2e3a;
-  --pump: #4fd187; --signal: #ff6a9a; --idler: #ffad4a; --warn: #ffa265;
+  --pump: #4fd187; --signal: #ff6a9a; --idler: #ffad4a; --warn: #ffa265; --sbs: #b197fc; --srs: #3bc9db;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
@@ -75,6 +77,11 @@ button { font: 500 12.5px var(--f-body); padding: 6px 10px; border-radius: 6px; 
 button:hover { border-color: var(--accent); }
 button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.switch { display: flex; align-items: center; gap: 10px; font-size: 13px; cursor: pointer; }
+.switch input { appearance: none; -webkit-appearance: none; width: 36px; height: 20px; border-radius: 10px; background: var(--line); position: relative; flex: none; cursor: pointer; transition: background .15s; margin: 0; }
+.switch input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 16px; height: 16px; border-radius: 50%; background: var(--panel); transition: transform .15s; }
+.switch input:checked { background: var(--accent); }
+.switch input:checked::after { transform: translateX(16px); }
 
 .main { display: grid; gap: 18px; min-width: 0; }
 .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 10px; min-width: 0; }
@@ -227,6 +234,16 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       </fieldset>
 
       <fieldset>
+        <legend>Brillouin and Raman scattering</legend>
+        <label class="switch"><input type="checkbox" role="switch" id="sbsOn"> Stimulated Brillouin scattering (SBS)</label>
+        <div class="ctl" id="ctlLw" hidden><label for="lw">Pump linewidth Δν<sub>p</sub></label><output id="lw_o"></output>
+          <input type="range" id="lw" min="0" max="1000" step="1" value="286" data-log="0.01,100000">
+          <span class="hint">Backward Stokes seeded by thermal phonons at the fiber end. Gain g<sub>B</sub> = 5×10⁻¹¹ m/W × Δν<sub>B</sub>/(Δν<sub>B</sub> + Δν<sub>p</sub>). Broadening the pump by phase modulation raises the threshold.</span></div>
+        <label class="switch"><input type="checkbox" role="switch" id="srsOn"> Stimulated Raman scattering (SRS)</label>
+        <p class="note" id="srsHint" hidden>Forward Raman Stokes of the pump seeded by spontaneous noise, plus Raman gain and loss between pump, signal and idler (silica response, peak 1×10⁻¹³ m/W·(1 µm/λ)). Cascaded Stokes orders and backward SRS are not modelled.</p>
+      </fieldset>
+
+      <fieldset>
         <legend>Idler dissipation</legend>
         <div class="seg" role="radiogroup" aria-label="Idler loss scheme">
           <input type="radio" name="lossmode" id="lm0" value="none" checked><label for="lm0">None</label>
@@ -281,7 +298,9 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
           <span><span class="sw" style="border-color:var(--pump)"></span>pump</span>
           <span><span class="sw" style="border-color:var(--signal)"></span>signal</span>
           <span><span class="sw" style="border-color:var(--idler)"></span>idler</span>
-          <span><span class="sw dash" style="border-color:var(--muted)"></span>undepleted-pump analytic</span>
+          <span><span class="sw dash" style="border-color:var(--muted)"></span>undepleted-pump analytic (no scattering)</span>
+          <span id="lgSBS" hidden><span class="sw dash" style="border-color:var(--sbs)"></span>SBS backward Stokes</span>
+          <span id="lgSRS" hidden><span class="sw" style="border-color:var(--srs)"></span>Raman Stokes</span>
         </div>
         <div class="plotbox"><canvas id="cz" role="img" aria-label="Pump, signal and idler power versus position along the fiber"></canvas></div>
         <div class="hover" id="hz">Move the pointer over the plot to read values.</div>
@@ -428,6 +447,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         <ul>
           <li>The coupling K uses n = 1.45 for all three waves. Across the spectrum, K scales as √(ω<sub>s</sub>ω<sub>i</sub>) and the mode overlap Θ stays at its value at λ<sub>s</sub>.</li>
           <li>LP01 is the fundamental mode at all three wavelengths. At 532 nm the fiber is usually few-mode (V &gt; 2.405), and other modes are ignored. Mode radii use Marcuse's Gaussian fit w/a = 0.65 + 1.619 V<sup>−3/2</sup> + 2.879 V<sup>−6</sup>.</li>
+          <li><b>Brillouin and Raman scattering</b> (switches; silica host in both modes). SBS uses the exact CW two-wave solution for pump and backward Stokes (P<sub>p</sub> − P<sub>B</sub> constant, P<sub>B</sub>(L) = thermal seed h ν<sub>p</sub>(kT/hν<sub>B</sub>)Δν<sub>B</sub>, ν<sub>B</sub> = 2nv<sub>A</sub>/λ<sub>p</sub>, Δν<sub>B</sub> = 20 MHz·(1550 nm/λ<sub>p</sub>)²). Its pump loss g<sub>B</sub>P<sub>B</sub>(z)/A<sub>p</sub> is applied in the coupled-wave run. SRS adds a forward Raman Stokes wave of the pump at the gain peak, seeded with hν·1 THz, and photon-conserving Raman terms dP<sub>k</sub>/dz = g<sub>R</sub>(Ω)P<sub>j</sub>P<sub>k</sub>/A<sub>jk</sub> between pump, signal and idler, with A<sub>jk</sub> = π(w<sub>j</sub>² + w<sub>k</sub>²)/2. In the spectral runs the pump loss into both Stokes waves is taken from the main run. The analytic curves and the optimiser leave scattering out.</li>
           <li>Pump and signal are lossless. Without idler seed the gain does not depend on the input phases.</li>
           <li>The sum Φ<sub>p</sub> + Φ<sub>s</sub> is conserved even with idler loss; its drift is reported as the numerical error.</li>
           <li>Step size adapts to max(Γ√(1 + Φ<sub>s</sub>/Φ<sub>p</sub>), |Δk|, α<sub>i</sub>/2). The gain scan uses at most 20 000 steps per point.</li>
@@ -650,15 +670,15 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   }
 
   // Full nonlinear RK4 in normalised amplitudes u_j = a_j / sqrt(Fp0)
-  function simulate(p, dk, record, maxSteps) {
-    if (MODE === "chi3") return simulate3(p, dk, record, maxSteps);
+  function simulate(p, dk, record, maxSteps, sc) {
+    if (MODE === "chi3") return simulate3(p, dk, record, maxSteps, sc);
     var kap = p.kappa, a2 = p.alpha / 2, r0 = p.r0;
-    var rate = Math.max(kap * Math.sqrt(1 + r0), Math.abs(dk), a2, 1e-6);
+    var rate = Math.max(kap * Math.sqrt(1 + r0), Math.abs(dk), a2, sc ? sc.rate : 0, 1e-6);
     var N = Math.ceil(p.L * rate / 0.04);
     N = Math.max(record ? 2000 : 300, Math.min(maxSteps, N));
     var nSeg = p.nf + 1, nPer = Math.ceil(N / nSeg), h = p.L / (nSeg * nPer);
-    var y = new Float64Array([1, 0, Math.sqrt(r0), 0, 0, 0]);
-    var k1 = new Float64Array(6), k2 = new Float64Array(6), k3 = new Float64Array(6), k4 = new Float64Array(6), t = new Float64Array(6);
+    var y = new Float64Array([1, 0, Math.sqrt(r0), 0, 0, 0, sc && sc.trackR ? sc.x0R : 0]);
+    var k1 = new Float64Array(7), k2 = new Float64Array(7), k3 = new Float64Array(7), k4 = new Float64Array(7), t = new Float64Array(7);
     function f(z, Y, o) {
       var c = Math.cos(dk * z), s = Math.sin(dk * z);
       var pr = Y[0], pi = Y[1], sr = Y[2], si = Y[3], ir = Y[4], ii = Y[5], xr, xi, yr, yi;
@@ -671,22 +691,23 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       xr = pr * sr + pi * si; xi = pi * sr - pr * si;
       yr = xr * c - xi * s; yi = xr * s + xi * c;
       o[4] = -kap * yi - a2 * ir; o[5] = kap * yr - a2 * ii;
+      if (sc) addScat(sc, z, Y, o); else o[6] = 0;
     }
-    var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [] } : null;
+    var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [], fR: [] } : null;
     var every = Math.max(1, Math.floor(nSeg * nPer / 900));
-    function push(z, sgi) { rec.z.push(z); rec.seg.push(sgi); rec.fp.push(y[0] * y[0] + y[1] * y[1]); rec.fs.push(y[2] * y[2] + y[3] * y[3]); rec.fi.push(y[4] * y[4] + y[5] * y[5]); }
+    function push(z, sgi) { rec.z.push(z); rec.seg.push(sgi); rec.fp.push(y[0] * y[0] + y[1] * y[1]); rec.fs.push(y[2] * y[2] + y[3] * y[3]); rec.fi.push(y[4] * y[4] + y[5] * y[5]); rec.fR.push(y[6]); }
     var z = 0, cnt = 0, j;
     if (record) push(0, 0);
     for (var sg = 0; sg < nSeg; sg++) {
       for (var n = 0; n < nPer; n++) {
         f(z, y, k1);
-        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k1[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + 0.5 * h * k1[j];
         f(z + 0.5 * h, t, k2);
-        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k2[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + 0.5 * h * k2[j];
         f(z + 0.5 * h, t, k3);
-        for (j = 0; j < 6; j++) t[j] = y[j] + h * k3[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + h * k3[j];
         f(z + h, t, k4);
-        for (j = 0; j < 6; j++) y[j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
+        for (j = 0; j < 7; j++) y[j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
         cnt++;
         z = (sg * nPer + n + 1) * h;
         if (record && (cnt % every === 0 || n === nPer - 1)) push(z, sg);
@@ -694,20 +715,20 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; if (record) push(z, sg + 1); }
     }
     var fp = y[0] * y[0] + y[1] * y[1], fs = y[2] * y[2] + y[3] * y[3], fi = y[4] * y[4] + y[5] * y[5];
-    return { rec: rec, fp: fp, fs: fs, fi: fi, steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + fs - (1 + r0)) / (1 + r0) };
+    return { rec: rec, fp: fp, fs: fs, fi: fi, xR: y[6], steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + fs - (1 + r0)) / (1 + r0) };
   }
 
 
   // χ3 degenerate FWM with SPM/XPM, power amplitudes normalised to √P_p(0); dkNet = κ = Δβ + 2γ_pP_p(0)
-  function simulate3(p, dkNet, record, maxSteps) {
+  function simulate3(p, dkNet, record, maxSteps, sc) {
     var wpf = p.wP, wsf = p.wS, wif = p.wI, np = p.gP, ns = np * wsf / wpf, ni = np * wif / wpf, a2 = p.alpha / 2, r0 = p.r0;
     var db = dkNet - 2 * np;
-    var rate = Math.max(p.kappa * Math.sqrt(1 + r0), Math.abs(db), 3 * np * (1 + r0), a2, 1e-6);
+    var rate = Math.max(p.kappa * Math.sqrt(1 + r0), Math.abs(db), 3 * np * (1 + r0), a2, sc ? sc.rate : 0, 1e-6);
     var N = Math.ceil(p.L * rate / 0.04);
     N = Math.max(record ? 2000 : 300, Math.min(maxSteps, N));
     var nSeg = p.nf + 1, nPer = Math.ceil(N / nSeg), h = p.L / (nSeg * nPer);
-    var y = new Float64Array([1, 0, Math.sqrt(r0 * wsf / wpf), 0, 0, 0]);
-    var k1 = new Float64Array(6), k2 = new Float64Array(6), k3 = new Float64Array(6), k4 = new Float64Array(6), t = new Float64Array(6);
+    var y = new Float64Array([1, 0, Math.sqrt(r0 * wsf / wpf), 0, 0, 0, sc && sc.trackR ? sc.x0R : 0]);
+    var k1 = new Float64Array(7), k2 = new Float64Array(7), k3 = new Float64Array(7), k4 = new Float64Array(7), t = new Float64Array(7);
     function f(z, Y, o) {
       var c = Math.cos(db * z), sn = Math.sin(db * z);
       var pr = Y[0], pi = Y[1], sr = Y[2], si = Y[3], ir = Y[4], ii = Y[5];
@@ -725,23 +746,24 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       o[2] = -ns * Bi; o[3] = ns * Br;
       var Cr = (Pi2 + 2 * Pp2 + 2 * Ps2) * ir + (gr * sr + gi * si), Ci = (Pi2 + 2 * Pp2 + 2 * Ps2) * ii + (gi * sr - gr * si);
       o[4] = -ni * Ci - a2 * ir; o[5] = ni * Cr - a2 * ii;
+      if (sc) addScat(sc, z, Y, o); else o[6] = 0;
     }
     var cs_ = wpf / wsf, ci_ = wpf / wif;
-    var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [] } : null;
+    var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [], fR: [] } : null;
     var every = Math.max(1, Math.floor(nSeg * nPer / 900));
-    function push(z, sgi) { rec.z.push(z); rec.seg.push(sgi); rec.fp.push(y[0] * y[0] + y[1] * y[1]); rec.fs.push((y[2] * y[2] + y[3] * y[3]) * cs_); rec.fi.push((y[4] * y[4] + y[5] * y[5]) * ci_); }
+    function push(z, sgi) { rec.z.push(z); rec.seg.push(sgi); rec.fp.push(y[0] * y[0] + y[1] * y[1]); rec.fs.push((y[2] * y[2] + y[3] * y[3]) * cs_); rec.fi.push((y[4] * y[4] + y[5] * y[5]) * ci_); rec.fR.push(y[6]); }
     var z = 0, cnt = 0, j;
     if (record) push(0, 0);
     for (var sg = 0; sg < nSeg; sg++) {
       for (var n = 0; n < nPer; n++) {
         f(z, y, k1);
-        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k1[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + 0.5 * h * k1[j];
         f(z + 0.5 * h, t, k2);
-        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k2[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + 0.5 * h * k2[j];
         f(z + 0.5 * h, t, k3);
-        for (j = 0; j < 6; j++) t[j] = y[j] + h * k3[j];
+        for (j = 0; j < 7; j++) t[j] = y[j] + h * k3[j];
         f(z + h, t, k4);
-        for (j = 0; j < 6; j++) y[j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
+        for (j = 0; j < 7; j++) y[j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
         cnt++;
         z = (sg * nPer + n + 1) * h;
         if (record && (cnt % every === 0 || n === nPer - 1)) push(z, sg);
@@ -749,7 +771,85 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; if (record) push(z, sg + 1); }
     }
     var fp = y[0] * y[0] + y[1] * y[1], fs = (y[2] * y[2] + y[3] * y[3]) * cs_, fi = (y[4] * y[4] + y[5] * y[5]) * ci_;
-    return { rec: rec, fp: fp, fs: fs, fi: fi, steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + 2 * fs - (1 + 2 * r0)) / (1 + 2 * r0) };
+    return { rec: rec, fp: fp, fs: fs, fi: fi, xR: y[6], steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + 2 * fs - (1 + 2 * r0)) / (1 + 2 * r0) };
+  }
+
+
+  // ---------- stimulated Brillouin and Raman scattering (silica) ----------
+  var KB = 1.380649e-23, HPL = 6.62607015e-34, VAC = 5960, GB0 = 5e-11;
+  // Raman response h(t) = A e^{-t/τ2} sin(t/τ1) (Blow & Wood); gain ∝ Im H(Ω), odd in Ω (Stokes gain, anti-Stokes loss)
+  var RT1 = 12.2e-15, RT2 = 32e-15;
+  function ramanIm(O) { var a = 1 / RT2, b = 1 / RT1, X = a * a + b * b - O * O, Y = 2 * a * O; return 2 * a * b * O / (X * X + Y * Y); }
+  var RAMAN_PEAK = (function () { var best = 0, Ob = 0; for (var k = 1; k < 4000; k++) { var O = 2 * Math.PI * 40e12 * k / 4000, v = ramanIm(O); if (v > best) { best = v; Ob = O; } } return { v: best, O: Ob }; })();
+  // the single-oscillator model has long tails; silica gain is negligible beyond ~40 THz, so roll it off smoothly
+  function ramanShape(O) {
+    var nu = Math.abs(O) / 2 / Math.PI / 1e12, win = nu > 32 ? Math.exp(-Math.pow((nu - 32) / 5, 2)) : 1;
+    return ramanIm(O) / RAMAN_PEAK.v * win;
+  }
+  function gRpeak(lam) { return 1e-13 * (1e-6 / lam); }
+  function scatOn() { return $("sbsOn").checked || $("srsOn").checked; }
+  function brillouin(lamP, lwHz) {
+    var nuB = 2 * NIDX * VAC / lamP, dnuB = 20e6 * Math.pow(1550e-9 / lamP, 2);
+    var g = GB0 * dnuB / (dnuB + lwHz), nth = KB * 293 / (HPL * nuB);
+    return { nuB: nuB, dnuB: dnuB, g: g, seed: HPL * C0 / lamP * nth * dnuB };
+  }
+  // Exact CW two-wave SBS: Pp − PB = C along z, PB(L) = seed. Returns PB(z).
+  function sbsSolve(P0, gA, L, seed) {
+    function pbL(D) { var C = P0 - D, q = D / P0, e = q * Math.exp(-gA * C * L); return C * e / (1 - e); }
+    var lo = Math.log(seed * 1e-6), hi = Math.log(P0 * (1 - 1e-9));
+    for (var it = 0; it < 200; it++) { var m = 0.5 * (lo + hi); if (pbL(Math.exp(m)) > seed) hi = m; else lo = m; }
+    var D = Math.exp(0.5 * (lo + hi)), C = P0 - D, q = D / P0;
+    return { D: D, C: C, PL: C / (1 - q * Math.exp(-gA * C * L)), PB: function (z) { var e = q * Math.exp(-gA * C * z); return C * e / (1 - e); } };
+  }
+  // Build the scattering terms for one solver run. lossTable: pump loss into the Raman Stokes, taken from the main run (spectral runs).
+  function scatBuild(p, q, lossTable) {
+    var sbs = $("sbsOn").checked, srs = $("srsOn").checked;
+    if (!sbs && !srs) return null;
+    var w = [q.wP, q.wS, q.wI], rad = [p.wp, p.ws, p.wi], P0 = p.Pp, Ap = Math.PI * p.wp * p.wp, rate = 0;
+    var sc = { P0: P0, w: w, wt: MODE === "chi3" ? [1, 1, 1] : [1, w[1] / w[0], w[2] / w[0]], pairs: [], trackR: false, sbs: null };
+    if (srs) {
+      [[0, 1], [0, 2], [1, 2]].forEach(function (pr) {
+        var j = w[pr[0]] > w[pr[1]] ? pr[0] : pr[1], k = j === pr[0] ? pr[1] : pr[0];
+        var g = gRpeak(2 * Math.PI * C0 / w[j]) * ramanShape(w[j] - w[k]) / (Math.PI * (rad[j] * rad[j] + rad[k] * rad[k]) / 2);
+        sc.pairs.push({ j: j, k: k, c: g, r: w[j] / w[k] });
+        rate = Math.max(rate, Math.abs(g) * P0 * w[j] / w[k]);
+      });
+      var wR = w[0] - RAMAN_PEAK.O;
+      sc.gRp = gRpeak(2 * Math.PI * C0 / w[0]) / Ap; sc.ratioPR = w[0] / wR; sc.lamR = 2 * Math.PI * C0 / wR;
+      sc.thrR = 16 * Ap / (gRpeak(2 * Math.PI * C0 / w[0]) * p.L);
+      if (!lossTable) { sc.trackR = true; sc.x0R = HPL * wR / (2 * Math.PI) * 1e12 / P0; }
+      rate = Math.max(rate, sc.gRp * P0);
+    }
+    var lossB = null;
+    if (sbs) {
+      var br = brillouin(2 * Math.PI * C0 / w[0], sliderVal($("lw")) * 1e6), gA = br.g / Ap, sol = sbsSolve(P0, gA, p.L, br.seed);
+      sc.sbs = { br: br, sol: sol, gA: gA, thr: 21 * Ap / (br.g * p.L) };
+      lossB = function (z) { return gA * sol.PB(z); };
+      rate = Math.max(rate, gA * sol.D);
+    }
+    var tab = lossTable;
+    sc.lossAt = function (z) {
+      var v = lossB ? lossB(z) : 0;
+      if (tab) {
+        var a = 0, b = tab.z.length - 1;
+        if (z <= tab.z[0]) v += tab.v[0]; else if (z >= tab.z[b]) v += tab.v[b];
+        else { while (b - a > 1) { var m = (a + b) >> 1; if (tab.z[m] > z) b = m; else a = m; } var t = (z - tab.z[a]) / Math.max(1e-30, tab.z[b] - tab.z[a]); v += tab.v[a] + t * (tab.v[b] - tab.v[a]); }
+      }
+      return v;
+    };
+    sc.rate = rate;
+    return sc;
+  }
+  function addScat(sc, z, Y, o) {
+    var P0 = sc.P0, Pw = [P0 * sc.wt[0] * (Y[0] * Y[0] + Y[1] * Y[1]), P0 * sc.wt[1] * (Y[2] * Y[2] + Y[3] * Y[3]), P0 * sc.wt[2] * (Y[4] * Y[4] + Y[5] * Y[5])];
+    for (var n = 0; n < sc.pairs.length; n++) {
+      var pr = sc.pairs[n], j = pr.j, k = pr.k, gk = 0.5 * pr.c * Pw[j], gj = -0.5 * pr.c * pr.r * Pw[k];
+      o[2 * k] += gk * Y[2 * k]; o[2 * k + 1] += gk * Y[2 * k + 1];
+      o[2 * j] += gj * Y[2 * j]; o[2 * j + 1] += gj * Y[2 * j + 1];
+    }
+    var l = sc.lossAt(z);
+    if (sc.trackR) { o[6] = sc.gRp * Pw[0] * Y[6]; l += sc.ratioPR * sc.gRp * P0 * Y[6]; } else o[6] = 0;
+    o[0] -= 0.5 * l * Y[0]; o[1] -= 0.5 * l * Y[1];
   }
 
   // complex helpers [re, im]
@@ -823,7 +923,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function tickLabel(v, st) { var d = Math.max(0, -Math.floor(Math.log10(st) + 1e-9)); return fmt(v, d); }
 
   function powLabel(W) {
-    var u = [[1e6, "MW"], [1e3, "kW"], [1, "W"], [1e-3, "mW"], [1e-6, "µW"], [1e-9, "nW"], [1e-12, "pW"], [1e-15, "fW"]];
+    if (W >= 1e6 * 0.9999) { var e0 = Math.round(Math.log10(W)); return "10" + sup(e0) + " W"; }
+    var u = [[1e3, "kW"], [1, "W"], [1e-3, "mW"], [1e-6, "µW"], [1e-9, "nW"], [1e-12, "pW"], [1e-15, "fW"]];
     for (var k = 0; k < u.length; k++) if (W >= u[k][0] * 0.9999) return String(+(W / u[k][0]).toPrecision(3)) + " " + u[k][1];
     var e = Math.round(Math.log10(W)); return "10" + sup(e) + " W";
   }
@@ -951,6 +1052,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   }
 
   // ---------- state & rendering ----------
+  var SC = null, SCTAB = null;
+  function scatSpec(q) { return scatOn() ? scatBuild(P, q, SCTAB || { z: [0], v: [0] }) : null; }
   var DISP, SPEC = null, specToken = 0, showIdler = false, sGeom = null, iGeom = null;
   var P, SIM, AZ, AOUT, yMode = "dbm", zGeom = null, gGeom = null, zCursor = null, scan = { dk: [], gn: [], dka: [], ga: [], range: 1 }, scanToken = 0;
 
@@ -1022,6 +1125,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     $("lbc_o").textContent = fmt(p.prof.c, 3) + " nm";
     $("lbw_o").textContent = sig(p.prof.w, 3) + " nm";
     $("lbe_o").textContent = sig(p.prof.e, 2) + " nm";
+    $("ctlLw").hidden = !$("sbsOn").checked; $("srsHint").hidden = !$("srsOn").checked;
+    $("lw_o").textContent = (function (v) { return v >= 1000 ? sig(v / 1000, 3) + " GHz" : v >= 1 ? sig(v, 3) + " MHz" : sig(v * 1000, 3) + " kHz"; })(sliderVal($("lw")));
     $("ctlAlpha").hidden = p.lm !== "cont";
     $("ctlAtt").hidden = p.lm !== "lumped";
     $("ctlNf").hidden = p.lm !== "lumped";
@@ -1030,7 +1135,10 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function compute() {
     P = params();
     updateOutputs(P);
-    SIM = simulate(P, P.dk, true, 400000);
+    SC = scatBuild(P, P, null);
+    SIM = simulate(P, P.dk, true, 400000, SC);
+    SCTAB = null;
+    if (SC && SC.trackR) SCTAB = { z: SIM.rec.z, v: SIM.rec.fR.map(function (x) { return SC.ratioPR * SC.gRp * SC.P0 * x; }) };
     AZ = analyticAlongZ(P, SIM.rec.z, SIM.rec.seg);
     AOUT = analyticOut(P, P.dk);
     DISP = dispersion(P);
@@ -1102,8 +1210,34 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       ["GVM estimate, high gain", isFinite(estHi) ? sig(ghzToNm(estHi), 3) + " nm · " + sig(estHi / 1e9, 3) + " GHz" : "—"],
       ["GVM estimate, low gain (sinc²)", isFinite(estLo) ? sig(ghzToNm(estLo), 3) + " nm · " + sig(estLo / 1e9, 3) + " GHz" : "—"]
     ]]);
+    if (SC) {
+      var sr = [], b = SC.sbs;
+      if (b) {
+        sr.push(["Brillouin shift / linewidth Δν<sub>B</sub>", sig(b.br.nuB / 1e9, 3) + " GHz / " + sig(b.br.dnuB / 1e6, 3) + " MHz"]);
+        sr.push(["Effective g<sub>B</sub> (pump linewidth)", sig(b.br.g, 3) + " m/W"]);
+        sr.push(["SBS threshold ≈ 21 A<sub>p</sub>/(g<sub>B</sub>L)", fmtP(b.thr) + (p.Pp > b.thr ? ' <span class="warn">(exceeded)</span>' : "")]);
+        sr.push(["Reflected backward Stokes at z = 0", fmtP(b.sol.D) + " · " + fmt(100 * b.sol.D / p.Pp, 2) + " % of pump"]);
+        sr.push(["Pump left after SBS alone (two-wave)", fmtP(b.sol.PL)]);
+      }
+      if ($("srsOn").checked) {
+        var thrR = 16 * Math.PI * p.wp * p.wp / (gRpeak(LPUMP) * p.L);
+        sr.push(["Raman Stokes of the pump", fmt(SC.lamR * 1e9, 1) + " nm (−" + fmt(RAMAN_PEAK.O / 2 / Math.PI / 1e12, 1) + " THz)"]);
+        sr.push(["SRS threshold ≈ 16 A<sub>p</sub>/(g<sub>R</sub>L)", fmtP(thrR) + (p.Pp > thrR ? ' <span class="warn">(exceeded)</span>' : "")]);
+        sr.push(["Raman Stokes power at z = L", fmtP((SIM.xR || 0) * p.Pp)]);
+        var nm = ["pump", "signal", "idler"];
+        SC.pairs.forEach(function (pr) {
+          var dnu = (SC.w[pr.j] - SC.w[pr.k]) / 2 / Math.PI / 1e12, gdb = 10 / Math.LN10 * pr.c * p.Pp * p.L;
+          if (pr.j === 0 || pr.k === 0) {
+            var other = pr.j === 0 ? pr.k : pr.j, sign = pr.j === 0 ? 1 : -pr.r;
+            sr.push(["Raman " + (sign > 0 ? "gain" : "loss") + " of the " + nm[other] + " from the pump (Δν " + fmt(dnu, 1) + " THz)", fmt(Math.abs(sign) * gdb, 3) + " dB over L, undepleted"]);
+          } else sr.push(["Signal–idler Raman coupling (Δν " + fmt(dnu, 1) + " THz)", sig(pr.c, 3) + " W⁻¹m⁻¹ · " + (Math.abs(dnu) > 40 ? "outside the Raman band" : "inside the Raman band")]);
+        });
+      }
+      sr.push(["Pump depletion, all processes", fmt(100 * (1 - s.fp), 2) + " %"]);
+      rows.push(["Brillouin and Raman scattering", sr]);
+    }
     $("readouts").innerHTML = groupsHtml(rows);
-    var note = "RK4 with " + s.steps.toLocaleString("en-US") + " steps. " + (p.chi3 ? "Photon-number check |Δ(Φ<sub>p</sub> + 2Φ<sub>s</sub>)| / (Φ<sub>p</sub> + 2Φ<sub>s</sub>) = " : "Photon-number check |ΔΦ<sub>p</sub> + ΔΦ<sub>s</sub>| / Φ<sub>total</sub> = ") + sig(s.resid, 2) + ".";
+    var note = "RK4 with " + s.steps.toLocaleString("en-US") + " steps. " + (SC ? "Photon-number check not applicable: scattering removes pump photons. " : "") + (SC ? "" : p.chi3 ? "Photon-number check |Δ(Φ<sub>p</sub> + 2Φ<sub>s</sub>)| / (Φ<sub>p</sub> + 2Φ<sub>s</sub>) = " : "Photon-number check |ΔΦ<sub>p</sub> + ΔΦ<sub>s</sub>| / Φ<sub>total</sub> = ") + (SC ? "" : sig(s.resid, 2) + ".");
     if (s.capped) note += ' <span class="warn">Step count capped; reduce ΓL or Δk·L for higher accuracy.</span>';
     if (s.fp < 0.5) note += " The pump is strongly depleted, so the analytic undepleted curve overestimates the gain.";
     $("numnote").innerHTML = note;
@@ -1149,6 +1283,9 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       { x: r.z, y: yi, color: css("--idler") },
       { x: r.z, y: ys, color: css("--signal"), width: 2.4 }
     ];
+    if (SC && SC.sbs) series.push({ x: r.z, y: r.z.map(function (z) { var v = SC.sbs.sol.PB(z); return yMode === "dbm" ? dBm(v) : v / p.Pp; }), color: css("--sbs"), dash: [6, 4], width: 1.8 });
+    if (SC && SC.trackR) series.push({ x: r.z, y: r.fR.map(function (x) { return yMode === "dbm" ? (x > 0 ? dBm(x * p.Pp) : -Infinity) : x; }), color: css("--srs"), width: 1.8 });
+    $("lgSBS").hidden = !(SC && SC.sbs); $("lgSRS").hidden = !(SC && SC.trackR);
     if (yMode !== "dbm") series.splice(0, 2);
     zGeom = drawPlot($("cz"), { xlim: [0, p.L], ylim: ylim, xlabel: "z (m)", ylabel: ylabel, series: series, vlines: vl, cursor: zCursor,
       y2: yMode === "dbm" ? { offset: 0, label: "power" } : null });
@@ -1159,7 +1296,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var r = SIM.rec, best = 0;
     for (var k = 0; k < r.z.length; k++) if (Math.abs(r.z[k] - z) < Math.abs(r.z[best] - z)) best = k;
     var p = P, Pp = r.fp[best] * p.Fp0 * HB * p.wP, Ps = r.fs[best] * p.Fp0 * HB * p.wS, Pi = r.fi[best] * p.Fp0 * HB * p.wI;
-    $("hz").textContent = "z = " + fmt(r.z[best], 3) + " m · pump " + fmtP(Pp) + " · signal " + fmtP(Ps) + " (" + fmt(10 * Math.log10(r.fs[best] / p.r0), 2) + " dB) · idler " + fmtP(Pi);
+    $("hz").textContent = "z = " + fmt(r.z[best], 3) + " m · pump " + fmtP(Pp) + " · signal " + fmtP(Ps) + " (" + fmt(10 * Math.log10(r.fs[best] / p.r0), 2) + " dB) · idler " + fmtP(Pi) +
+      (SC && SC.sbs ? " · SBS backward " + fmtP(SC.sbs.sol.PB(r.z[best])) : "") + (SC && SC.trackR ? " · Raman Stokes " + fmtP(r.fR[best] * p.Pp) : "");
   }
 
 
@@ -1278,11 +1416,11 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       if (token !== specToken) return;
       var t0 = performance.now();
       while (idx < NN && performance.now() - t0 < 14) {
-        var Om = sp.Olo + (sp.Ohi - sp.Olo) * idx / (NN - 1), q = specParams(p, Om), s = simulate(q, p.dk + D.dkRel(Om), false, 20000);
+        var Om = sp.Olo + (sp.Ohi - sp.Olo) * idx / (NN - 1), q = specParams(p, Om), s = simulate(q, p.dk + D.dkRel(Om), false, 20000, scatSpec(q));
         num.gn[idx] = 10 * Math.log10(s.fs / q.r0);
         num.ig[idx] = dBm(Math.max(1e-300, (s.fs - q.r0) * p.Fp0 * HB * q.wi));
         num.io[idx] = dBm(Math.max(1e-300, s.fi * p.Fp0 * HB * q.wi));
-        if (sp.Lref) { var qr = refQ(p, Om, sp.Lref, sp.rb), sr = simulate(qr, sp.rb.D.dkRel(Om), false, 20000); num.gR[idx] = 10 * Math.log10(sr.fs / qr.r0); }
+        if (sp.Lref) { var qr = refQ(p, Om, sp.Lref, sp.rb), sr = simulate(qr, sp.rb.D.dkRel(Om), false, 20000, scatSpec(qr)); num.gR[idx] = 10 * Math.log10(sr.fs / qr.r0); }
         idx++;
       }
       if (idx >= NN) { num.done = true; renderReadouts(); }
@@ -1974,7 +2112,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       if (token !== scanToken) return;
       var t0 = performance.now();
       while (idx < NN && performance.now() - t0 < 14) {
-        var s = simulate(p, dks[idx], false, 20000);
+        var s = simulate(p, dks[idx], false, 20000, scatSpec(p));
         gn[idx] = 10 * Math.log10(s.fs / p.r0); idx++;
       }
       drawG();
