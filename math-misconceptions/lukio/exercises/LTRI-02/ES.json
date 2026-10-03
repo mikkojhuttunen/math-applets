@@ -1,0 +1,271 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LTRI-02",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen sin 2x / sin x. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "sin(2x)/sin(x)",
+          "2 sin(x)/sin(x)",
+          "2"
+        ],
+        "error_line": 2,
+        "error_type": "sine_coefficient_pulled_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 kerroin 2 on siirretty sinin eteen: sin 2x ≠ 2 sin x.",
+          "Oikein: sin 2x = 2 sin x cos x, joten osamäärä on 2 cos x."
+        ],
+        "final": "2cos(x)"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin sinin sisällä ei siirry sinin eteen.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin kx ≠ k sin x. Käytä kaksoiskulmakaavaa tai kokeile lukuarvolla."
+      },
+      "provenance": {
+        "template": "ltri02_es",
+        "params": {
+          "expr": "sin(2x)/sin(x)"
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas laski sin 2x:n arvon, kun x = π/6. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "sin(2 · π/6)",
+          "2 sin(π/6)",
+          "2 · 1/2",
+          "1"
+        ],
+        "error_line": 2,
+        "error_type": "sine_coefficient_pulled_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 kerroin 2 on siirretty sinin eteen. Sinin sisällä oleva kulma on 2 · π/6 = π/3.",
+          "Oikein: sin(π/3) = √3/2."
+        ],
+        "final": "√3/2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin sinin sisällä ei siirry sinin eteen.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin kx ≠ k sin x. Käytä kaksoiskulmakaavaa tai kokeile lukuarvolla."
+      },
+      "provenance": {
+        "template": "ltri02_es",
+        "params": {
+          "x": "pi/6"
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen sin 2x + 2 sin x. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "sin(2x) + 2 sin(x)",
+          "2 sin(x) + 2 sin(x)",
+          "4 sin(x)"
+        ],
+        "error_line": 2,
+        "error_type": "sine_coefficient_pulled_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 sin 2x on korvattu lausekkeella 2 sin x.",
+          "Oikein: sin 2x + 2 sin x = 2 sin x cos x + 2 sin x = 2 sin x (cos x + 1)."
+        ],
+        "final": "2sin(x)(cos(x)+1)"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin sinin sisällä ei siirry sinin eteen.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin kx ≠ k sin x. Käytä kaksoiskulmakaavaa tai kokeile lukuarvolla."
+      },
+      "provenance": {
+        "template": "ltri02_es",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas sieventi lausekkeen sin 3x / sin x. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "sin(3x)/sin(x)",
+          "3 sin(x)/sin(x)",
+          "3"
+        ],
+        "error_line": 2,
+        "error_type": "sine_coefficient_pulled_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 kerroin 3 on siirretty sinin eteen: sin 3x ≠ 3 sin x.",
+          "Oikein: sin 3x = 3 sin x − 4 sin³ x, joten osamäärä on 3 − 4 sin² x."
+        ],
+        "final": "3 − 4sin(x)^2"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin sinin sisällä ei siirry sinin eteen.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin kx ≠ k sin x. Käytä kaksoiskulmakaavaa tai kokeile lukuarvolla."
+      },
+      "provenance": {
+        "template": "ltri02_es",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Kulmalle x pätee sin x = 0,8 ja cos x = 0,6. Oppilas laski sin 2x:n näin. Napauta rivi, jossa on virhe. Vihje: sinin arvo ei voi ylittää lukua 1."
+      },
+      "payload": {
+        "lines": [
+          "sin(2x)",
+          "2 sin(x)",
+          "2 · 0,8",
+          "1,6"
+        ],
+        "error_line": 2,
+        "error_type": "sine_coefficient_pulled_out"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 kerroin 2 on siirretty sinin eteen. Tulos 1,6 on suurempi kuin 1, joten se ei voi olla sinin arvo.",
+          "Oikein: sin 2x = 2 sin x cos x = 2 · 0,8 · 0,6 = 0,96."
+        ],
+        "final": "0,96"
+      },
+      "feedback": {
+        "correct": "Oikein: kerroin sinin sisällä ei siirry sinin eteen.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin kx ≠ k sin x. Käytä kaksoiskulmakaavaa tai kokeile lukuarvolla."
+      },
+      "provenance": {
+        "template": "ltri02_es",
+        "params": {
+          "sin": 0.8,
+          "cos": 0.6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}

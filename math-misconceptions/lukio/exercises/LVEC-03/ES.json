@@ -1,0 +1,297 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-03",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laski pistetulon a · b, kun a = (2, 3) ja b = (4, 1). Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "2 · 4 + 3 · 1",
+          "8 · 3",
+          "24"
+        ],
+        "error_line": 2,
+        "error_type": "dot_product_as_vector"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 komponenttitulot 8 ja 3 on kerrottu keskenään. Ne lasketaan yhteen.",
+          "Oikein: 8 + 3 = 11."
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein: pistetulo on komponenttitulojen summa.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku. Komponenttien tulot lasketaan yhteen, ne eivät jää erillisiksi."
+      },
+      "provenance": {
+        "template": "lvec03_es",
+        "params": {
+          "a": [
+            2,
+            3
+          ],
+          "b": [
+            4,
+            1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorit a = (k, 3) ja b = (6, −2) ovat kohtisuorassa. Oppilas ratkaisi k:n näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "6k + 3 · (−2) = 0",
+          "6k = 0",
+          "k = 0"
+        ],
+        "error_line": 2,
+        "error_type": "dot_product_as_vector"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 termi 3 · (−2) = −6 on pudotettu pois, ikään kuin pistetulo olisi vektori (6k, −6), jonka vain ensimmäinen komponentti pitäisi nollata.",
+          "Oikein: 6k − 6 = 0, joten k = 1."
+        ],
+        "final": "k = 1"
+      },
+      "feedback": {
+        "correct": "Oikein: pistetulo on komponenttitulojen summa.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku. Komponenttien tulot lasketaan yhteen, ne eivät jää erillisiksi."
+      },
+      "provenance": {
+        "template": "lvec03_es",
+        "params": {
+          "b": [
+            6,
+            -2
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorit a = (k, 3) ja b = (4, −2) ovat kohtisuorassa. Oppilas ratkaisi k:n näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "4k + 3 · (−2) = 0",
+          "4k − 6 = 0",
+          "4k = 0",
+          "k = 0"
+        ],
+        "error_line": 3,
+        "error_type": "dot_product_as_vector"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 luku −6 on pudotettu pois, vaikka pistetulo on yksi luku 4k − 6 ja koko luvun pitää olla nolla.",
+          "Oikein: 4k = 6, joten k = 3/2."
+        ],
+        "final": "k = 3/2"
+      },
+      "feedback": {
+        "correct": "Oikein: pistetulo on komponenttitulojen summa.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku. Komponenttien tulot lasketaan yhteen, ne eivät jää erillisiksi."
+      },
+      "provenance": {
+        "template": "lvec03_es",
+        "params": {
+          "b": [
+            4,
+            -2
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laski pistetulon a · b, kun a = (1, 2) ja b = (3, −1). Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "1 · 3 + 2 · (−1)",
+          "3 · (−2)",
+          "−6"
+        ],
+        "error_line": 2,
+        "error_type": "dot_product_as_vector"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 komponenttitulot 3 ja −2 on kerrottu keskenään. Pistetulossa ne lasketaan yhteen.",
+          "Oikein: 3 + (−2) = 1."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: pistetulo on komponenttitulojen summa.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku. Komponenttien tulot lasketaan yhteen, ne eivät jää erillisiksi."
+      },
+      "provenance": {
+        "template": "lvec03_es",
+        "params": {
+          "a": [
+            1,
+            2
+          ],
+          "b": [
+            3,
+            -1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laski pistetulon a · a, kun a = (−2, 5). Napauta rivi, jossa on virhe. Vihje: a · a on sama kuin |a|²."
+      },
+      "payload": {
+        "lines": [
+          "(−2)^2 + 5^2",
+          "4 + 25",
+          "4 · 25",
+          "100"
+        ],
+        "error_line": 3,
+        "error_type": "dot_product_as_vector"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 3 komponenttien neliöt 4 ja 25 on kerrottu keskenään. Ne lasketaan yhteen.",
+          "Oikein: 4 + 25 = 29, ja tämä on |a|²."
+        ],
+        "final": "29"
+      },
+      "feedback": {
+        "correct": "Oikein: pistetulo on komponenttitulojen summa.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku. Komponenttien tulot lasketaan yhteen, ne eivät jää erillisiksi."
+      },
+      "provenance": {
+        "template": "lvec03_es",
+        "params": {
+          "a": [
+            -2,
+            5
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}

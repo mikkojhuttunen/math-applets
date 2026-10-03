@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 13 |
+| Runs completed | 14 |
 | Last run | 2026-10-03 |
-| Progress | 64 of 151 planned cells in phases 0–2 generated |
+| Progress | 69 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -201,9 +201,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LEQU-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
 | LEQU-05 | X | X | X | - | - | - | X | - | - | - | - | o | - | - | - |
 | LVEC-02 | X | - | - | - | - | - | - | - | - | - | o | - | - | o | - |
-| LVEC-03 | X | X | o | - | - | - | - | - | - | - | - | - | - | - | - |
-| LTRI-03 | o | o | - | - | - | - | - | - | o | o | - | - | - | - | - |
-| LTRI-02 | o | - | o | - | - | o | - | - | - | - | - | - | - | o | - |
+| LVEC-03 | X | X | X | - | - | - | - | - | - | - | - | - | - | - | - |
+| LTRI-03 | X | X | - | - | - | - | - | - | o | o | - | - | - | - | - |
+| LTRI-02 | X | - | X | - | - | o | - | - | - | - | - | - | - | o | - |
 | LTRI-01 | o | s | o | o | o | - | - | - | - | - | o | - | - | - | o |
 | LEXP-02 | o | o | o | - | - | o | - | - | - | - | - | - | - | - | - |
 | LEXP-01 | o | o | o | - | o | s | - | - | - | - | - | - | - | - | - |
@@ -312,6 +312,12 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-03 | LVEC-02 | MC | LU-LVEC-02-MC-001…005 | P, T, H | none | MAA4.07 | exercises/LVEC-02/MC.json | Draft | Run 13; same components from different starting points, tip of a vector from A, sum of vectors drawn from different points, AB and CD from point coordinates, displacement east then north vs north then east (justification); MAA only; evidence Moderate, sources nguyen2003initial, barniol2014test; GI items belong to phase 3 |
 | 2026-10-03 | LVEC-03 | MC | LU-LVEC-03-MC-001…005 | P, T, H | none | MAA4.08, MAA10.02 | exercises/LVEC-03/MC.json | Draft | Run 13; (2, 3) · (4, 1), dot product is a number, perpendicular vectors with a · b = 0, \|a\|\|b\|cos 60° (MAA10.02 also listed), plausibility of a componentwise result; MAA only; evidence Moderate, source barniol2014test |
 | 2026-10-03 | LVEC-03 | NE | LU-LVEC-03-NE-001…005 | P, T, H | none | MAA4.08 | exercises/LVEC-03/NE.json | Draft | Run 13; a · b for (2, 3), (4, 1), number of values in a dot product, a · b = 0 for (4, −2), (1, 2), k for perpendicular (k, 3) and (6, −2), correct a · b for (−3, 5), (2, 1) after a vector answer; MAA only |
+| 2026-10-03 | LVEC-03 | ES | LU-LVEC-03-ES-001…005 | P, T, H | none | MAA4.08 | exercises/LVEC-03/ES.json | Draft | Run 14; component products multiplied instead of added (2, 3)·(4, 1) and (1, 2)·(3, −1), second component dropped in perpendicularity equations (two items, error on line 2 and line 3), a · a with squares multiplied and hint; MAA only; evidence Moderate, source barniol2014test |
+| 2026-10-03 | LTRI-03 | MC | LU-LTRI-03-MC-001…005 | P, T, K | none | MAA5.01 | exercises/LTRI-03/MC.json | Draft | Run 14; 180° in radians, π rad in degrees, calculator in degree mode (sin 2 ≈ 0,035), size of 1 rad, arc length rθ with 2 rad read as 2°; MAA only; evidence Moderate, sources akkoc2008preservice, moore2014quantitative |
+| 2026-10-03 | LTRI-03 | NE | LU-LTRI-03-NE-001…005 | P, T, H | none | MAA5.01 | exercises/LTRI-03/NE.json | Draft | Run 14; 180° in rad, 1 rad in degrees, sin 2 in radians, 270° in rad, arc length with plausibility hint; number answers with tolerance; MAA only |
+| 2026-10-03 | LTRI-02 | MC | LU-LTRI-02-MC-001…005 | P, T, K | none | MAA5.03 | exercises/LTRI-02/MC.json | Draft | Run 14; double-angle identity, sin 2x at x = 30°, justification against sin 3x = 3 sin x (value 1,5 exceeds 1), (sin x)/x not simplifiable, when sin 2x = 2 sin x holds (x = nπ); MAA only; source † (weber2005students), evidence to be checked |
+| 2026-10-03 | LTRI-02 | ES | LU-LTRI-02-ES-001…005 | P, T, H | none | MAA5.03 | exercises/LTRI-02/ES.json | Draft | Run 14; sin 2x / sin x, sin 2x at x = π/6, sin 2x + 2 sin x, sin 3x / sin x, sin 2x with sin x = 0,8 and a size hint; MAA only; source † (weber2005students), evidence to be checked |
+| 2026-10-03 | LEQU-03 | FS | - | - | - | - | - | Skipped | Run 14; not selected: the verifier's FS check cannot verify an inequality blank (Run 12 Failed row), so topics LVEC-03, LTRI-03 and LTRI-02 were taken instead; LEQU-01, LEQU-02 and LPRB-01 skipped for seed ID collisions as in earlier runs |
 
 ## 7. Coverage and decisions to confirm
 

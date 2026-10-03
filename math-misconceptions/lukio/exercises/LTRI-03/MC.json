@@ -1,0 +1,383 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LTRI-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-03"
+      ],
+      "prompt": {
+        "text": "Mikä on kulma 180° radiaaneina?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2π",
+            "misconception": null,
+            "feedback": "2π rad on koko kierros, 360°."
+          },
+          {
+            "id": "b",
+            "text": "π",
+            "misconception": null,
+            "feedback": "Oikein: puolikas kierros on π rad."
+          },
+          {
+            "id": "c",
+            "text": "π/180",
+            "misconception": null,
+            "feedback": "Tämä on yhden asteen suuruus radiaaneina."
+          },
+          {
+            "id": "d",
+            "text": "180",
+            "misconception": "LTRI-03",
+            "feedback": "Luku 180 on kulma asteina. Radiaaneina puolikas kierros on π ≈ 3,14."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Koko kierros on 360° = 2π rad.",
+          "Puolikas kierros on 180° = π rad."
+        ],
+        "final": "π"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "π rad vastaa kulmaa 180°. Radiaani on kulman mitta, ja 1 rad ≈ 57,3°."
+      },
+      "provenance": {
+        "template": "ltri03_mc",
+        "params": {
+          "deg": 180
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-03"
+      ],
+      "prompt": {
+        "text": "Kulma on π radiaania. Kuinka monta astetta se on?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "90°",
+            "misconception": null,
+            "feedback": "90° on π/2 rad."
+          },
+          {
+            "id": "b",
+            "text": "360°",
+            "misconception": null,
+            "feedback": "360° on 2π rad."
+          },
+          {
+            "id": "c",
+            "text": "180°",
+            "misconception": null,
+            "feedback": "Oikein: π rad = 180°."
+          },
+          {
+            "id": "d",
+            "text": "3,14°",
+            "misconception": "LTRI-03",
+            "feedback": "Luku π ≈ 3,14 on radiaanien määrä. Asteina π rad on 180°, ei 3,14°."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "π rad on puolikas kierros.",
+          "Puolikas kierros on 180°."
+        ],
+        "final": "180°"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "π rad vastaa kulmaa 180°. Radiaani on kulman mitta, ja 1 rad ≈ 57,3°."
+      },
+      "provenance": {
+        "template": "ltri03_mc",
+        "params": {
+          "rad": "pi"
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-03"
+      ],
+      "prompt": {
+        "text": "Laskin antaa tulokseksi sin 2 ≈ 0,035, vaikka kulma 2 on annettu radiaaneina. Mikä on todennäköisin syy?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Laskin oli astetilassa ja luki kulman 2°. Radiaaneina sin 2 ≈ 0,909.",
+            "misconception": null,
+            "feedback": "Oikein: asetus ratkaisee, tulkitaanko luku asteiksi vai radiaaneiksi."
+          },
+          {
+            "id": "b",
+            "text": "Laskin oli radiaanitilassa, ja sin 2 on todella 0,035.",
+            "misconception": "LTRI-03",
+            "feedback": "Radiaaneina kulma 2 rad ≈ 114,6°, ja sen sini on lähes 1. Arvo 0,035 on sin 2°."
+          },
+          {
+            "id": "c",
+            "text": "Sinifunktio antaa pieniä arvoja, kun kulma on kokonaisluku.",
+            "misconception": null,
+            "feedback": "Sini vaihtelee välillä −1 ja 1 kokonaislukukulmilla aivan kuten muillakin."
+          },
+          {
+            "id": "d",
+            "text": "Luku 2 on pyöristetty nollaksi.",
+            "misconception": null,
+            "feedback": "Pyöristys ei selitä arvoa: sin 0 = 0, ei 0,035."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2 rad = 2 · 180°/π ≈ 114,6°.",
+          "sin 114,6° ≈ 0,909, kun taas sin 2° ≈ 0,035."
+        ],
+        "final": "Laskin oli astetilassa"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "π rad vastaa kulmaa 180°. Radiaani on kulman mitta, ja 1 rad ≈ 57,3°."
+      },
+      "provenance": {
+        "template": "ltri03_mc",
+        "params": {
+          "x": 2
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-03"
+      ],
+      "prompt": {
+        "text": "Kuinka suuri kulma 1 radiaani on asteina?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1°",
+            "misconception": "LTRI-03",
+            "feedback": "Radiaani ja aste ovat eri yksiköt. Yksi radiaani on paljon suurempi kuin yksi aste."
+          },
+          {
+            "id": "b",
+            "text": "noin 0,017°",
+            "misconception": null,
+            "feedback": "Tämä on 1° radiaaneina (≈ 0,017 rad), ei 1 rad asteina."
+          },
+          {
+            "id": "c",
+            "text": "noin 3,14°",
+            "misconception": null,
+            "feedback": "Luku 3,14 on π eikä kulma asteina."
+          },
+          {
+            "id": "d",
+            "text": "noin 57,3°",
+            "misconception": null,
+            "feedback": "Oikein: 1 rad = 180°/π ≈ 57,3°."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "π rad = 180°, joten 1 rad = 180°/π.",
+          "180°/π ≈ 57,3°."
+        ],
+        "final": "noin 57,3°"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "π rad vastaa kulmaa 180°. Radiaani on kulman mitta, ja 1 rad ≈ 57,3°."
+      },
+      "provenance": {
+        "template": "ltri03_mc",
+        "params": {
+          "rad": 1
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.01"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "K",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-03"
+      ],
+      "prompt": {
+        "text": "Ympyrän sektorin säde on 5 cm ja keskuskulma 2 rad. Mikä on sektorin kaaren pituus?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "10 cm",
+            "misconception": null,
+            "feedback": "Oikein: kaaren pituus b = rθ = 5 · 2 = 10 cm, kun θ on radiaaneina."
+          },
+          {
+            "id": "b",
+            "text": "5π cm",
+            "misconception": null,
+            "feedback": "Tämä on puoliympyrän kaari. Kulma 2 rad ei ole π."
+          },
+          {
+            "id": "c",
+            "text": "noin 0,17 cm",
+            "misconception": "LTRI-03",
+            "feedback": "Tässä keskuskulma 2 luetaan asteiksi. Se on kuitenkin 2 rad ≈ 114,6°."
+          },
+          {
+            "id": "d",
+            "text": "25 cm",
+            "misconception": null,
+            "feedback": "Tämä on sektorin pinta-ala (r²θ/2 = 25 cm²) lukuna, ei kaaren pituus."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kaaren pituus b = rθ, kun θ on radiaaneina.",
+          "b = 5 cm · 2 = 10 cm."
+        ],
+        "final": "10 cm"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "π rad vastaa kulmaa 180°. Radiaani on kulman mitta, ja 1 rad ≈ 57,3°."
+      },
+      "provenance": {
+        "template": "ltri03_mc",
+        "params": {
+          "r": 5,
+          "theta": 2
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}

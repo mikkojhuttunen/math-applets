@@ -1,0 +1,377 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LTRI-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Mikä seuraavista on voimassa kaikilla x?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "sin 2x = 2 sin x cos x",
+            "misconception": null,
+            "feedback": "Oikein: tämä on sinin kaksoiskulmakaava."
+          },
+          {
+            "id": "b",
+            "text": "sin 2x = 2 sin x",
+            "misconception": "LTRI-02",
+            "feedback": "Kerroin 2 ei siirry sinin eteen. Kokeile x = 30°: sin 60° ≈ 0,87, mutta 2 sin 30° = 1."
+          },
+          {
+            "id": "c",
+            "text": "sin 2x = sin² x",
+            "misconception": null,
+            "feedback": "Kokeile x = 90°: vasen puoli on 0, oikea on 1."
+          },
+          {
+            "id": "d",
+            "text": "sin 2x = sin x + 2",
+            "misconception": null,
+            "feedback": "Kokeile x = 0: vasen puoli on 0, oikea on 2."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kaksoiskulmakaava: sin 2x = 2 sin x cos x.",
+          "Tarkistus x = 30°: sin 60° = 2 · (1/2) · (√3/2) = √3/2."
+        ],
+        "final": "sin 2x = 2 sin x cos x"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin 2x ≠ 2 sin x. Kokeile lukuarvolla tai käytä kaksoiskulmakaavaa."
+      },
+      "provenance": {
+        "template": "ltri02_mc",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Kun x = 30°, mikä on sin 2x?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1",
+            "misconception": "LTRI-02",
+            "feedback": "Tämä on 2 sin 30°. Kulma kaksinkertaistuu sinin sisällä, ja sin 60° ≠ 2 · sin 30°."
+          },
+          {
+            "id": "b",
+            "text": "1/4",
+            "misconception": null,
+            "feedback": "Tämä on sin² 30°, ei sin 60°."
+          },
+          {
+            "id": "c",
+            "text": "√3/2 ≈ 0,87",
+            "misconception": null,
+            "feedback": "Oikein: sin 60° = √3/2."
+          },
+          {
+            "id": "d",
+            "text": "√3/4",
+            "misconception": null,
+            "feedback": "Tämä on sin 30° · cos 30°, eli puolet oikeasta arvosta."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "2x = 60°.",
+          "sin 60° = √3/2 ≈ 0,87."
+        ],
+        "final": "√3/2"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin 2x ≠ 2 sin x. Kokeile lukuarvolla tai käytä kaksoiskulmakaavaa."
+      },
+      "provenance": {
+        "template": "ltri02_mc",
+        "params": {
+          "x_deg": 30
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää, että sin 3x = 3 sin x kaikilla x. Kun x = π/6, väite antaisi arvon 3/2. Mikä perustelu osoittaa väitteen vääräksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Väite on väärä vain, koska sin(π/6) on murtoluku.",
+            "misconception": null,
+            "feedback": "Murtoluvulla ei ole merkitystä. Ristiriita syntyy siitä, että tulos ylittää 1."
+          },
+          {
+            "id": "b",
+            "text": "Väite on tosi, koska 3 on vakio ja sen voi siirtää sinin eteen.",
+            "misconception": "LTRI-02",
+            "feedback": "Sinifunktiossa kerroin argumentissa ei ole sinin kerroin. Sinin arvo ei voi olla 1,5."
+          },
+          {
+            "id": "c",
+            "text": "Väite on tosi, jos x on radiaaneina.",
+            "misconception": "LTRI-03",
+            "feedback": "Yksikkö ei muuta asiaa. Sinin arvo on aina välillä −1 ja 1."
+          },
+          {
+            "id": "d",
+            "text": "Sinin arvo on korkeintaan 1, mutta 3 sin(π/6) = 1,5. Siksi väite ei voi päteä.",
+            "misconception": null,
+            "feedback": "Oikein: yksi vastaesimerkki riittää."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin(3 · π/6) = sin(π/2) = 1.",
+          "3 sin(π/6) = 3 · 1/2 = 3/2 > 1, mikä on mahdotonta sinin arvolle."
+        ],
+        "final": "Vastaesimerkki x = π/6"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin 2x ≠ 2 sin x. Kokeile lukuarvolla tai käytä kaksoiskulmakaavaa."
+      },
+      "provenance": {
+        "template": "ltri02_mc",
+        "params": {
+          "x": "pi/6"
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Sievennä lauseke (sin x)/x, kun x ≠ 0."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lauseketta ei voi sieventää: (sin x)/x on sellaisenaan yksinkertaisin muoto.",
+            "misconception": null,
+            "feedback": "Oikein: sin x ei ole tulo sin · x."
+          },
+          {
+            "id": "b",
+            "text": "1",
+            "misconception": "LTRI-02",
+            "feedback": "Tämä olisi tosi vain, jos sin x olisi sama kuin x. Kokeile x = π/2: (sin x)/x = 2/π ≈ 0,64."
+          },
+          {
+            "id": "c",
+            "text": "0",
+            "misconception": null,
+            "feedback": "Kokeile x = π/2: (sin x)/x = 2/π ≠ 0."
+          },
+          {
+            "id": "d",
+            "text": "sin",
+            "misconception": "LTRI-02",
+            "feedback": "Sini ei ole tekijä sin · x, joten x ei supistu pois."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin x on funktion arvo, ei kertoja.",
+          "Tarkistus x = π/2: (sin x)/x = 1/(π/2) = 2/π ≈ 0,64."
+        ],
+        "final": "Ei sievene"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin 2x ≠ 2 sin x. Kokeile lukuarvolla tai käytä kaksoiskulmakaavaa."
+      },
+      "provenance": {
+        "template": "ltri02_mc",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LTRI-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA5.03"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "K",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LTRI-02"
+      ],
+      "prompt": {
+        "text": "Oppilas väittää, että sin 2x = 2 sin x kaikilla x. Millä x:n arvoilla yhtälö todella on tosi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Vain kun x = π/2 + nπ.",
+            "misconception": null,
+            "feedback": "Näissä pisteissä cos x = 0, jolloin sin 2x = 0 mutta 2 sin x = ±2."
+          },
+          {
+            "id": "b",
+            "text": "Vain kun sin x = 0, eli x = nπ (n kokonaisluku).",
+            "misconception": null,
+            "feedback": "Oikein: 2 sin x cos x = 2 sin x pätee, kun sin x = 0 tai cos x = 1, ja kumpikin johtaa arvoihin x = nπ."
+          },
+          {
+            "id": "c",
+            "text": "Kaikilla x.",
+            "misconception": "LTRI-02",
+            "feedback": "Väite pätee vain erikoistapauksissa. Esimerkiksi x = 30°: sin 60° ≈ 0,87, mutta 2 sin 30° = 1."
+          },
+          {
+            "id": "d",
+            "text": "Millään x:n arvolla.",
+            "misconception": null,
+            "feedback": "Esimerkiksi x = 0 toteuttaa yhtälön: sin 0 = 0 = 2 sin 0."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "sin 2x = 2 sin x cos x, joten 2 sin x cos x = 2 sin x.",
+          "2 sin x (cos x − 1) = 0, joten sin x = 0 tai cos x = 1.",
+          "Molemmat johtavat arvoihin x = nπ."
+        ],
+        "final": "x = nπ"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Sini ei ole tekijä, jonka voi jakaa: sin 2x ≠ 2 sin x. Kokeile lukuarvolla tai käytä kaksoiskulmakaavaa."
+      },
+      "provenance": {
+        "template": "ltri02_mc",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 14
+      }
+    }
+  ]
+}
