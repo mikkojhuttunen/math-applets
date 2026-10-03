@@ -1,0 +1,291 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LEQU-05",
+  "type": "ES",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-ES-001",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön |x − 3| = 5 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "|x − 3| = 5",
+          "x − 3 = 5",
+          "x = 8"
+        ],
+        "error_line": 2,
+        "error_type": "negative_case_dropped"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on otettu vain positiivinen tapaus x − 3 = 5.",
+          "Myös x − 3 = −5 toteuttaa yhtälön, koska |−5| = 5.",
+          "Oikea ratkaisu: x = −2 tai x = 8."
+        ],
+        "final": "x = −2 tai x = 8"
+      },
+      "feedback": {
+        "correct": "Oikein: itseisarvoyhtälöllä on kaksi tapausta, positiivinen ja negatiivinen.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_es",
+        "params": {
+          "a": 3,
+          "b": 5
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-ES-002",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön |x + 4| − 2 = 4 näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "|x + 4| − 2 = 4",
+          "|x + 4| = 6",
+          "x + 4 = 6",
+          "x = 2"
+        ],
+        "error_line": 3,
+        "error_type": "negative_case_dropped"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: lisätään 2 molemmille puolille.",
+          "Rivillä 3 negatiivinen tapaus x + 4 = −6 on jäänyt pois.",
+          "Oikea ratkaisu: x = −10 tai x = 2."
+        ],
+        "final": "x = −10 tai x = 2"
+      },
+      "feedback": {
+        "correct": "Oikein: itseisarvoyhtälöllä on kaksi tapausta, positiivinen ja negatiivinen.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_es",
+        "params": {
+          "a": 4,
+          "c": 2,
+          "d": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-ES-003",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön |x − 1| = |x + 5| näin. Napauta rivi, jossa on virhe."
+      },
+      "payload": {
+        "lines": [
+          "|x − 1| = |x + 5|",
+          "x − 1 = x + 5",
+          "−1 = 5",
+          "ei ratkaisua"
+        ],
+        "error_line": 2,
+        "error_type": "negative_case_dropped"
+      },
+      "solution": {
+        "steps": [
+          "Rivillä 2 on otettu vain tapaus, jossa lausekkeet ovat yhtä suuret.",
+          "Itseisarvot ovat yhtä suuret myös, kun lausekkeet ovat vastaluvut: x − 1 = −(x + 5).",
+          "Oikea ratkaisu: x = −2."
+        ],
+        "final": "x = −2"
+      },
+      "feedback": {
+        "correct": "Oikein: itseisarvoyhtälöllä on kaksi tapausta, positiivinen ja negatiivinen.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_es",
+        "params": {
+          "a": -1,
+          "b": 5
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-ES-004",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön |3x + 3| = 6 näin. Napauta rivi, jossa on virhe. Vihje: sijoita x = −3 alkuperäiseen yhtälöön."
+      },
+      "payload": {
+        "lines": [
+          "|3x + 3| = 6",
+          "|x + 1| = 2",
+          "x + 1 = 2",
+          "x = 1"
+        ],
+        "error_line": 3,
+        "error_type": "negative_case_dropped"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: jaetaan 3:lla.",
+          "Rivillä 3 on vain positiivinen tapaus.",
+          "Tarkistus: x = −3 antaa |3 · (−3) + 3| = |−6| = 6, joten se on ratkaisu.",
+          "Oikea ratkaisu: x = −3 tai x = 1."
+        ],
+        "final": "x = −3 tai x = 1"
+      },
+      "feedback": {
+        "correct": "Oikein: itseisarvoyhtälöllä on kaksi tapausta, positiivinen ja negatiivinen.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_es",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "c": 6
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LEQU-05-ES-005",
+      "type": "ES",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.06"
+        ],
+        "g": [
+          "G4"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LEQU-05"
+      ],
+      "prompt": {
+        "text": "Oppilas ratkaisi yhtälön |x − 4| + 5 = 2 näin. Napauta rivi, jossa on virhe. Vihje: voiko itseisarvo olla negatiivinen?"
+      },
+      "payload": {
+        "lines": [
+          "|x − 4| + 5 = 2",
+          "|x − 4| = −3",
+          "x − 4 = −3",
+          "x = 1"
+        ],
+        "error_line": 3,
+        "error_type": "negative_case_dropped"
+      },
+      "solution": {
+        "steps": [
+          "Rivi 2 on oikein: vähennetään 5.",
+          "Rivillä 3 itseisarvo on poistettu, vaikka sen arvo ei voi olla −3.",
+          "Tarkistus: x = 1 antaa |1 − 4| + 5 = 8, ei 2.",
+          "Oikea ratkaisu: ei ratkaisua."
+        ],
+        "final": "ei ratkaisua"
+      },
+      "feedback": {
+        "correct": "Oikein: itseisarvoyhtälöllä on kaksi tapausta, positiivinen ja negatiivinen.",
+        "generic_wrong": "Itseisarvo |a| on luvun a etäisyys nollasta. Yhtälö |f(x)| = a tarkoittaa f(x) = a tai f(x) = −a (kun a ≥ 0). Tarkista sijoittamalla."
+      },
+      "provenance": {
+        "template": "lequ05_es",
+        "params": {
+          "a": -4,
+          "c": 5,
+          "d": 2
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

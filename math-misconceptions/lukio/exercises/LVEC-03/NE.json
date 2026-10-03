@@ -1,0 +1,339 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-03",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Laske pistetulo a · b, kun a = (2, 3) ja b = (4, 1)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 11
+        },
+        "wrong": [
+          {
+            "match": 8,
+            "misconception": "LVEC-03",
+            "feedback": "8 on vain x-komponenttien tulo. Pistetulo on kummankin komponenttiparin tulojen summa, ja tulos on yksi luku."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "a · b = 2 · 4 + 3 · 1.",
+          "= 8 + 3 = 11."
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_ne",
+        "params": {
+          "a": [
+            2,
+            3
+          ],
+          "b": [
+            4,
+            1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Pistetulo a · b lasketaan vektoreille a = (3, 5) ja b = (2, −1). Kuinka monesta luvusta tulos koostuu?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": 2,
+            "misconception": "LVEC-03",
+            "feedback": "Pistetulon tulos on yksi luku, ei kaksikomponenttinen vektori. Tulot a₁b₁ ja a₂b₂ lasketaan yhteen."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Pistetulo a · b = a₁b₁ + a₂b₂.",
+          "Tulos on yksi luku (skalaari)."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_ne",
+        "params": {
+          "a": [
+            3,
+            5
+          ],
+          "b": [
+            2,
+            -1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Laske a · b, kun a = (4, −2) ja b = (1, 2)."
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 0
+        },
+        "wrong": [
+          {
+            "match": 4,
+            "misconception": "LVEC-03",
+            "feedback": "4 on vain x-komponenttien tulo. Lisää y-komponenttien tulo (−2) · 2 = −4."
+          },
+          {
+            "match": -4,
+            "misconception": "LVEC-03",
+            "feedback": "−4 on vain y-komponenttien tulo. Lisää x-komponenttien tulo 4 · 1 = 4."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "a · b = 4 · 1 + (−2) · 2 = 4 − 4 = 0.",
+          "Vektorit ovat kohtisuorassa."
+        ],
+        "final": "0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_ne",
+        "params": {
+          "a": [
+            4,
+            -2
+          ],
+          "b": [
+            1,
+            2
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorit a = (k, 3) ja b = (6, −2) ovat kohtisuorassa. Mikä on k?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "LVEC-03",
+            "feedback": "k = 0 seuraa vain, jos pistetulo ajatellaan vektoriksi (6k, −6). Pistetulo on luku 6k − 6, ja se asetetaan nollaksi."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "Kohtisuorilla vektoreilla a · b = 0.",
+          "a · b = 6k + 3 · (−2) = 6k − 6 = 0.",
+          "Siis k = 1."
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_ne",
+        "params": {
+          "b": [
+            6,
+            -2
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laski vektoreille a = (−3, 5) ja b = (2, 1) tuloksen a · b = (−6, 5). Mikä on a · b oikeasti?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": -1
+        },
+        "wrong": [
+          {
+            "match": -6,
+            "misconception": "LVEC-03",
+            "feedback": "−6 on vain x-komponenttien tulo, ja pistetulo on yksi luku."
+          },
+          {
+            "match": 5,
+            "misconception": "LVEC-03",
+            "feedback": "5 on vain y-komponenttien tulo. Pistetulo on tulojen summa."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "a · b = (−3) · 2 + 5 · 1 = -6 + 5 = -1.",
+          "Oppilaan vastaus oli vektori, mutta pistetulo on luku."
+        ],
+        "final": "−1"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_ne",
+        "params": {
+          "a": [
+            -3,
+            5
+          ],
+          "b": [
+            2,
+            1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

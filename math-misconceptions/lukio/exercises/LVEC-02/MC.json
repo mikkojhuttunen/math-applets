@@ -1,0 +1,425 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-02"
+      ],
+      "prompt": {
+        "text": "Vektori a = (2, 3) piirretään origosta. Vektori b = (2, 3) piirretään pisteestä (4, 1). Ovatko a ja b sama vektori?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Eivät, koska ne alkavat eri pisteistä.",
+            "misconception": "LVEC-02",
+            "feedback": "Alkupiste ei kuulu vektoriin. Vektorin määräävät komponentit, ja ne ovat samat."
+          },
+          {
+            "id": "b",
+            "text": "Ovat vain, jos ne päättyvät samaan pisteeseen.",
+            "misconception": null,
+            "feedback": "Ehto ei ole tarpeen. Samat komponentit riittävät."
+          },
+          {
+            "id": "c",
+            "text": "Eivät, koska ne päättyvät eri pisteisiin.",
+            "misconception": "LVEC-02",
+            "feedback": "Loppupiste riippuu alkupisteestä: b päättyy pisteeseen (6, 4). Vektori kuvaa siirtymän, ei paikkaa."
+          },
+          {
+            "id": "d",
+            "text": "Ovat, koska niillä on samat komponentit eli sama pituus ja suunta.",
+            "misconception": null,
+            "feedback": "Oikein: vektori ei riipu alkupisteestä."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Molempien komponentit ovat (2, 3).",
+          "Samat komponentit tarkoittavat samaa siirtymää, joten vektorit ovat samat."
+        ],
+        "final": "Ovat sama vektori"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Vektori kuvaa siirtymän: sen määräävät suunta ja pituus eli komponentit, ei alkupiste. Samat komponentit tarkoittavat samaa vektoria."
+      },
+      "provenance": {
+        "template": "lvec02_mc",
+        "params": {
+          "a": [
+            2,
+            3
+          ],
+          "start_b": [
+            4,
+            1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-02-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-02"
+      ],
+      "prompt": {
+        "text": "Vektori a = (3, 1) piirretään pisteestä A = (1, 2). Mihin pisteeseen sen kärki osuu?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(3, 1)",
+            "misconception": "LVEC-02",
+            "feedback": "Vektorin komponentit eivät ole kärkipisteen koordinaatit, ellei vektori alku ole origossa."
+          },
+          {
+            "id": "b",
+            "text": "(4, 3)",
+            "misconception": null,
+            "feedback": "Oikein: (1, 2) + (3, 1) = (4, 3)."
+          },
+          {
+            "id": "c",
+            "text": "(3, 2)",
+            "misconception": null,
+            "feedback": "Siirtymä lisätään alkupisteeseen, ei kerrota."
+          },
+          {
+            "id": "d",
+            "text": "(−2, 1)",
+            "misconception": null,
+            "feedback": "Vektori lisätään alkupisteen koordinaatteihin, ei vähennetä."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Kärki = alkupiste + vektori = (1, 2) + (3, 1).",
+          "Kärki on (4, 3)."
+        ],
+        "final": "(4, 3)"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Vektori kuvaa siirtymän: sen määräävät suunta ja pituus eli komponentit, ei alkupiste. Samat komponentit tarkoittavat samaa vektoria."
+      },
+      "provenance": {
+        "template": "lvec02_mc",
+        "params": {
+          "a": [
+            3,
+            1
+          ],
+          "A": [
+            1,
+            2
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-02-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-02"
+      ],
+      "prompt": {
+        "text": "Vektori a = (2, 0) piirretään origosta ja vektori b = (0, 3) pisteestä (5, 5). Mikä on a + b?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(2, 3)",
+            "misconception": null,
+            "feedback": "Oikein: summa lasketaan komponenteista."
+          },
+          {
+            "id": "b",
+            "text": "(0, 0)",
+            "misconception": null,
+            "feedback": "Vektorit lasketaan yhteen komponenteittain, ei kerrota."
+          },
+          {
+            "id": "c",
+            "text": "(7, 8)",
+            "misconception": "LVEC-02",
+            "feedback": "Tässä a:han on lisätty vektorin b kärkipisteen (5, 8) koordinaatit. Vektorin b komponentit ovat (0, 3), riippumatta mistä se piirretään."
+          },
+          {
+            "id": "d",
+            "text": "(5, 8)",
+            "misconception": "LVEC-02",
+            "feedback": "Tämä on vektorin b kärkipiste, ei summa. Vektorin b alkupiste ei vaikuta sen komponentteihin."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a + b = (2, 0) + (0, 3) = (2, 3).",
+          "Alkupisteet eivät vaikuta summaan."
+        ],
+        "final": "(2, 3)"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Vektori kuvaa siirtymän: sen määräävät suunta ja pituus eli komponentit, ei alkupiste. Samat komponentit tarkoittavat samaa vektoria."
+      },
+      "provenance": {
+        "template": "lvec02_mc",
+        "params": {
+          "a": [
+            2,
+            0
+          ],
+          "b": [
+            0,
+            3
+          ],
+          "start_b": [
+            5,
+            5
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-02-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-02"
+      ],
+      "prompt": {
+        "text": "Pisteet ovat A = (1, 1), B = (4, 5), C = (3, 0) ja D = (6, 4). Ovatko vektorit AB ja CD yhtä suuret?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Eivät, koska CD on pidempi.",
+            "misconception": null,
+            "feedback": "Tarkista pituudet: |AB| = |CD| = 5."
+          },
+          {
+            "id": "b",
+            "text": "Ovat, koska molempien komponentit ovat (3, 4).",
+            "misconception": null,
+            "feedback": "Oikein: vektorin määrää siirtymä, ei alku- ja loppupiste."
+          },
+          {
+            "id": "c",
+            "text": "Ne ovat yhtä pitkät mutta eri vektorit, koska ne sijaitsevat eri kohdissa.",
+            "misconception": "LVEC-02",
+            "feedback": "Vektori ei sijaitse missään. Samat komponentit tarkoittavat samaa vektoria, jolloin myös suunta on sama."
+          },
+          {
+            "id": "d",
+            "text": "Eivät, koska alku- ja loppupisteet ovat eri.",
+            "misconception": "LVEC-02",
+            "feedback": "Eri pisteet eivät tee vektoreista erilaisia. AB = (3, 4) ja CD = (3, 4)."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "AB = B − A = (3, 4).",
+          "CD = D − C = (3, 4).",
+          "Komponentit ovat samat, joten vektorit ovat yhtä suuret."
+        ],
+        "final": "Ovat yhtä suuret"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Vektori kuvaa siirtymän: sen määräävät suunta ja pituus eli komponentit, ei alkupiste. Samat komponentit tarkoittavat samaa vektoria."
+      },
+      "provenance": {
+        "template": "lvec02_mc",
+        "params": {
+          "A": [
+            1,
+            1
+          ],
+          "B": [
+            4,
+            5
+          ],
+          "C": [
+            3,
+            0
+          ],
+          "D": [
+            6,
+            4
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-02-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.07"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-02"
+      ],
+      "prompt": {
+        "text": "Anna kulkee 3 km itään ja sitten 4 km pohjoiseen. Eero lähtee samasta paikasta ja kulkee ensin 4 km pohjoiseen ja sitten 3 km itään. Onko heidän kokonaissiirtymänsä sama vektori? Valitse perustelu."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ei ole, koska he kulkevat eri pisteiden kautta.",
+            "misconception": "LVEC-02",
+            "feedback": "Reitti ja välipisteet eivät kuulu kokonaissiirtymään. Vektorin summa a + b on sama kuin b + a."
+          },
+          {
+            "id": "b",
+            "text": "On vain, jos kulkureitti on yhtä pitkä, 7 km.",
+            "misconception": null,
+            "feedback": "Pituus ei yksin ratkaise: vektorien yhtäsuuruus vaatii samat komponentit."
+          },
+          {
+            "id": "c",
+            "text": "Ei ole, koska kokonaissiirtymän täytyy alkaa eri paikasta.",
+            "misconception": "LVEC-02",
+            "feedback": "Siirtymä ei riipu alkupisteestä: molemmat alkavat samasta paikasta, ja silloinkin vektori määräytyisi komponenteista."
+          },
+          {
+            "id": "d",
+            "text": "On, koska molemmilla siirtymä on (3, 4) riippumatta reitistä ja välipisteistä.",
+            "misconception": null,
+            "feedback": "Oikein: a + b = b + a."
+          }
+        ],
+        "correct": [
+          "d"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Siirtymät ovat (3, 0) ja (0, 4).",
+          "Summa on (3, 4) kummassakin järjestyksessä.",
+          "Vektorien yhteenlasku on vaihdannainen."
+        ],
+        "final": "On sama vektori"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Vektori kuvaa siirtymän: sen määräävät suunta ja pituus eli komponentit, ei alkupiste. Samat komponentit tarkoittavat samaa vektoria."
+      },
+      "provenance": {
+        "template": "lvec02_mc",
+        "params": {
+          "east": 3,
+          "north": 4
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

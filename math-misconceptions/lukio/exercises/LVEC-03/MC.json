@@ -1,0 +1,404 @@
+{
+  "schema_version": "lukio-1.0",
+  "topic": "LVEC-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (2, 3) ja b = (4, 1). Mikä on pistetulo a · b?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(6, 4)",
+            "misconception": null,
+            "feedback": "Tämä on summavektori a + b, ei pistetulo."
+          },
+          {
+            "id": "b",
+            "text": "11",
+            "misconception": null,
+            "feedback": "Oikein: 2 · 4 + 3 · 1 = 11."
+          },
+          {
+            "id": "c",
+            "text": "(8, 3)",
+            "misconception": "LVEC-03",
+            "feedback": "Pistetulo on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+          },
+          {
+            "id": "d",
+            "text": "10",
+            "misconception": null,
+            "feedback": "Komponentit kerrotaan keskenään, ei lasketa yhteen."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a · b = 2 · 4 + 3 · 1.",
+          "a · b = 8 + 3 = 11."
+        ],
+        "final": "11"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_mc",
+        "params": {
+          "a": [
+            2,
+            3
+          ],
+          "b": [
+            4,
+            1
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "P",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorien a ja b pistetulo a · b on..."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "luku, jolla ei ole suuntaa.",
+            "misconception": null,
+            "feedback": "Oikein: pistetulo on skalaari."
+          },
+          {
+            "id": "b",
+            "text": "vektori, joka on kohtisuorassa vektoreihin a ja b nähden.",
+            "misconception": null,
+            "feedback": "Näin toimii ristitulo avaruudessa, ei pistetulo."
+          },
+          {
+            "id": "c",
+            "text": "aina positiivinen luku.",
+            "misconception": null,
+            "feedback": "Pistetulo voi olla negatiivinen, esimerkiksi (1, 0) · (−1, 0) = −1."
+          },
+          {
+            "id": "d",
+            "text": "vektori, jonka komponentit ovat vektorien vastinkomponenttien tulot.",
+            "misconception": "LVEC-03",
+            "feedback": "Vektorien komponenttien tulot lasketaan yhteen, ja tulos on luku."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Pistetulo a · b = a₁b₁ + a₂b₂ on yksi luku.",
+          "Luvulla ei ole suuntaa, joten se ei ole vektori."
+        ],
+        "final": "Luku"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_mc",
+        "params": {},
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "T",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorit ovat a = (3, −2) ja b = (2, 3). Mitä pistetulo kertoo niiden asennosta?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "a · b = 0, joten vektorit ovat kohtisuorassa.",
+            "misconception": null,
+            "feedback": "Oikein: 3 · 2 + (−2) · 3 = 0."
+          },
+          {
+            "id": "b",
+            "text": "a · b = 6, joten ne eivät ole kohtisuorassa.",
+            "misconception": null,
+            "feedback": "Komponentit kerrotaan keskenään ja tulot lasketaan yhteen."
+          },
+          {
+            "id": "c",
+            "text": "a · b = (6, −6), joka ei ole nollavektori, joten vektorit eivät ole kohtisuorassa.",
+            "misconception": "LVEC-03",
+            "feedback": "Pistetulo ei ole vektori. Laske komponenttien tulojen summa: se on 0."
+          },
+          {
+            "id": "d",
+            "text": "a · b = 0, joten vektorit ovat yhdensuuntaiset.",
+            "misconception": null,
+            "feedback": "Pistetulo 0 tarkoittaa kohtisuoruutta. Yhdensuuntaisilla vektoreilla pistetulo on pituuksien tulo tai sen vastaluku."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a · b = 3 · 2 + (−2) · 3 = 6 − 6 = 0.",
+          "Pistetulo 0 tarkoittaa, että vektorit ovat kohtisuorassa."
+        ],
+        "final": "Kohtisuorassa"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_mc",
+        "params": {
+          "a": [
+            3,
+            -2
+          ],
+          "b": [
+            2,
+            3
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08",
+          "MAA10.02"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Vektorien pituudet ovat |a| = 3 ja |b| = 4, ja niiden välinen kulma on 60°. Mikä on a · b?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "6",
+            "misconception": null,
+            "feedback": "Oikein: 3 · 4 · cos 60° = 6."
+          },
+          {
+            "id": "b",
+            "text": "vektori, jonka pituus on 12",
+            "misconception": "LVEC-03",
+            "feedback": "Pistetulo on luku |a||b|cos α, ei vektori."
+          },
+          {
+            "id": "c",
+            "text": "6 · √3",
+            "misconception": null,
+            "feedback": "Pistetulossa käytetään kosinia, ei sinia."
+          },
+          {
+            "id": "d",
+            "text": "12",
+            "misconception": null,
+            "feedback": "Tämä unohtaa tekijän cos 60° = 1/2."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a · b = |a||b|cos α = 3 · 4 · cos 60°.",
+          "cos 60° = 1/2, joten a · b = 6."
+        ],
+        "final": "6"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_mc",
+        "params": {
+          "la": 3,
+          "lb": 4,
+          "angle": 60
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    },
+    {
+      "schema_version": "lukio-1.0",
+      "id": "LU-LVEC-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "lops": [
+          "MAA4.08"
+        ],
+        "g": [
+          "G2"
+        ],
+        "syllabus": "MAA",
+        "level": "H",
+        "tools": "none"
+      },
+      "misconceptions": [
+        "LVEC-03"
+      ],
+      "prompt": {
+        "text": "Oppilas laski vektoreille a = (2, −1) ja b = (3, 6) tuloksen a · b = (6, −6). Mikä väite osoittaa tuloksen virheelliseksi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tulos on virheellinen vain siksi, että komponentit on pitänyt laskea yhteen ennen kertomista.",
+            "misconception": "LVEC-03",
+            "feedback": "Komponentit kerrotaan, ja tulot lasketaan yhteen: 2 · 3 + (−1) · 6. Oleellista on, että tulos on luku."
+          },
+          {
+            "id": "b",
+            "text": "Tulos on oikein, koska pistetulo kertoo vektorit komponenteittain.",
+            "misconception": "LVEC-03",
+            "feedback": "Pistetulo ei kerro komponentteja erikseen vaan laskee tulot yhteen: a · b on luku."
+          },
+          {
+            "id": "c",
+            "text": "Pistetulo on luku, joten vastauksen täytyy olla yksi luku. Oikea tulos on 0.",
+            "misconception": null,
+            "feedback": "Oikein: 2 · 3 + (−1) · 6 = 0."
+          },
+          {
+            "id": "d",
+            "text": "Tulos on virheellinen, koska pistetulon täytyy olla positiivinen.",
+            "misconception": null,
+            "feedback": "Pistetulo voi olla negatiivinen tai nolla."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "a · b = 2 · 3 + (−1) · 6 = 6 − 6 = 0.",
+          "Tulos on luku 0, joten vektorit ovat kohtisuorassa."
+        ],
+        "final": "Pistetulo on luku, 0"
+      },
+      "feedback": {
+        "correct": "Oikein.",
+        "generic_wrong": "Pistetulo a · b = a₁b₁ + a₂b₂ on luku, ei vektori. Komponenttien tulot lasketaan yhteen."
+      },
+      "provenance": {
+        "template": "lvec03_mc",
+        "params": {
+          "a": [
+            2,
+            -1
+          ],
+          "b": [
+            3,
+            6
+          ]
+        },
+        "generated": "2026-10-03",
+        "verified": true,
+        "run": 13
+      }
+    }
+  ]
+}

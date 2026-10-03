@@ -6,9 +6,9 @@
 | Purpose | Work queue and progress tracker for exercises about documented misconceptions in lukio mathematics (MAY1, lyhyt MAB, pitkä MAA), linked to LOPS 2019 goal IDs |
 | Built from | `data/curriculum/LOPS_2019_matematiikka_oppimistavoitteet.md` (goal IDs, levels), `data/misconceptions/lukio_misconceptions.md` (topics, typical wrong answers, evidence), `../math-misconceptions-7-9grades-backlog.md` (exercise types, per-run method, item rules; read only) |
 | Status | **Framework only. No routine runs yet.** Generation starts when the tooling tasks in section 2 are done and a human sets `ROUTINE_ENABLED: yes`. |
-| Runs completed | 12 |
+| Runs completed | 13 |
 | Last run | 2026-10-03 |
-| Progress | 59 of 151 planned cells in phases 0–2 generated |
+| Progress | 64 of 151 planned cells in phases 0–2 generated |
 
 ## 0. Framework in one page
 
@@ -199,9 +199,9 @@ Same row order as section 3.1. Planned cells in phases 0–2: 151.
 | LEQU-02 | X | X | X | s | X | - | - | - | - | - | - | - | - | - | o |
 | LEQU-03 | X | X | X | - | o | - | - | - | - | - | - | o | - | - | o |
 | LEQU-04 | X | X | X | - | - | - | - | - | - | - | - | o | - | - | - |
-| LEQU-05 | X | X | o | - | - | - | o | - | - | - | - | o | - | - | - |
-| LVEC-02 | o | - | - | - | - | - | - | - | - | - | o | - | - | o | - |
-| LVEC-03 | o | o | o | - | - | - | - | - | - | - | - | - | - | - | - |
+| LEQU-05 | X | X | X | - | - | - | X | - | - | - | - | o | - | - | - |
+| LVEC-02 | X | - | - | - | - | - | - | - | - | - | o | - | - | o | - |
+| LVEC-03 | X | X | o | - | - | - | - | - | - | - | - | - | - | - | - |
 | LTRI-03 | o | o | - | - | - | - | - | - | o | o | - | - | - | - | - |
 | LTRI-02 | o | - | o | - | - | o | - | - | - | - | - | - | - | o | - |
 | LTRI-01 | o | s | o | o | o | - | - | - | - | - | o | - | - | - | o |
@@ -307,6 +307,11 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K; Tools
 | 2026-10-03 | LEQU-04 | ES | LU-LEQU-04-ES-001…005 | T, H | none | MAA2.06 | exercises/LEQU-04/ES.json | Draft | Run 12; x² < 16 with √(x²) written out, x² > 36 by factoring, (x + 1)² ≤ 9, 4x² < 25 with a substitution hint, x² + 2 > 11; the dropped absolute value or lost branch is the error; MAA only; source † (tsamir2004consistencies), evidence to be checked |
 | 2026-10-03 | LEQU-05 | MC | LU-LEQU-05-MC-001…005 | T, H | none | MAA4.06, MAY1.02 | exercises/LEQU-05/MC.json | Draft | Run 12; \|x − 3\| = 5, \|x\| = −4 (no solutions), \|2x − 1\| = 7, when \|x\| = −x holds (justification, MAY1.02), \|x − 2\| = \|x + 4\|; MAA only; evidence Moderate, source almog2012absolute |
 | 2026-10-03 | LEQU-05 | NE | LU-LEQU-05-NE-001…005 | T, H | none | MAA4.06 | exercises/LEQU-05/NE.json | Draft | Run 12; smaller root of \|x − 3\| = 5, number of roots of \|2x − 1\| = 7, sum of roots of \|x + 4\| = 6, smaller root of \|3x − 2\| = \|x + 6\|, number of roots of \|x − 1\| = −2 with a substitution check; MAA only |
+| 2026-10-03 | LEQU-05 | ES | LU-LEQU-05-ES-001…005 | T, H | none | MAA4.06 | exercises/LEQU-05/ES.json | Draft | Run 13; \|x − 3\| = 5, \|x + 4\| − 2 = 4, \|x − 1\| = \|x + 5\|, \|3x + 3\| = 6 with a substitution hint, \|x − 4\| + 5 = 2 with a plausibility hint (no solutions); the negative case is dropped on the error line; MAA only; evidence Moderate, source almog2012absolute |
+| 2026-10-03 | LEQU-05 | RP | LU-LEQU-05-RP-001…005 | T, H | none | MAA4.06 | exercises/LEQU-05/RP.json | Draft | Run 13; absolute value equation whose only solution is x = 8, 2, −3, 5 (not of the form \|x − 5\| = 0), 4 (with substitution check); invalid examples are two-root equations such as \|x − 3\| = 5; MAA only |
+| 2026-10-03 | LVEC-02 | MC | LU-LVEC-02-MC-001…005 | P, T, H | none | MAA4.07 | exercises/LVEC-02/MC.json | Draft | Run 13; same components from different starting points, tip of a vector from A, sum of vectors drawn from different points, AB and CD from point coordinates, displacement east then north vs north then east (justification); MAA only; evidence Moderate, sources nguyen2003initial, barniol2014test; GI items belong to phase 3 |
+| 2026-10-03 | LVEC-03 | MC | LU-LVEC-03-MC-001…005 | P, T, H | none | MAA4.08, MAA10.02 | exercises/LVEC-03/MC.json | Draft | Run 13; (2, 3) · (4, 1), dot product is a number, perpendicular vectors with a · b = 0, \|a\|\|b\|cos 60° (MAA10.02 also listed), plausibility of a componentwise result; MAA only; evidence Moderate, source barniol2014test |
+| 2026-10-03 | LVEC-03 | NE | LU-LVEC-03-NE-001…005 | P, T, H | none | MAA4.08 | exercises/LVEC-03/NE.json | Draft | Run 13; a · b for (2, 3), (4, 1), number of values in a dot product, a · b = 0 for (4, −2), (1, 2), k for perpendicular (k, 3) and (6, −2), correct a · b for (−3, 5), (2, 1) after a vector answer; MAA only |
 
 ## 7. Coverage and decisions to confirm
 
