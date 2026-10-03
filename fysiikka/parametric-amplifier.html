@@ -63,6 +63,8 @@ legend { font: 600 11px/1 var(--f-mono); letter-spacing: .1em; text-transform: u
 .ctl select, .ctl input[type=number] { grid-column: 1 / -1; font: 13px var(--f-body); padding: 5px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
 .dkrow { grid-column: 1 / -1; display: flex; gap: 6px; align-items: center; }
 .dkrow input[type=number] { flex: 1; min-width: 0; font: 12.5px var(--f-mono); padding: 4px 6px; border-radius: 6px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+.seg.procsw { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 640px; margin-top: 8px; }
+.seg.procsw label { padding: 9px 8px; font-size: 13px; }
 .seg { position: relative; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
 .seg input { position: absolute; opacity: 0; pointer-events: none; }
 .seg label { text-align: center; padding: 7px 4px; font-size: 12.5px; cursor: pointer; border-right: 1px solid var(--line); background: var(--bg); }
@@ -132,11 +134,15 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
 <div class="wrap">
   <header>
-    <span class="eyebrow">χ<sup>(2)</sup> three-wave mixing · coupled-wave solver</span>
+    <span class="eyebrow">χ<sup>(2)</sup> and χ<sup>(3)</sup> parametric amplification · coupled-wave solver</span>
     <h1>Fiber parametric amplifier</h1>
-    <p>A 532 nm pump amplifies a signal near 1550 nm in a second-order nonlinear fiber and creates an idler near 810 nm. The coupled amplitude equations are integrated with RK4, including pump depletion, phase mismatch, Gaussian mode overlap and optional dissipation of the idler.</p>
+    <p id="intro">A 532 nm pump amplifies a signal near 1550 nm in a second-order nonlinear fiber and creates an idler near 810 nm. The coupled amplitude equations are integrated with RK4, including pump depletion, phase mismatch, Gaussian mode overlap and optional dissipation of the idler.</p>
+    <div class="seg procsw" role="radiogroup" aria-label="Nonlinear process">
+      <input type="radio" name="proc" id="proc2" value="chi2" checked><label for="proc2">χ<sup>(2)</sup> OPA · three-wave, ω<sub>p</sub> = ω<sub>s</sub> + ω<sub>i</sub></label>
+      <input type="radio" name="proc" id="proc3" value="chi3"><label for="proc3">χ<sup>(3)</sup> OPA · four-wave, 2ω<sub>p</sub> = ω<sub>s</sub> + ω<sub>i</sub></label>
+    </div>
     <div class="waves">
-      <span class="chip"><span class="dot p"></span>pump 532.0 nm</span>
+      <span class="chip"><span class="dot p"></span>pump <span id="chipP">532.0 nm</span></span>
       <span class="chip"><span class="dot s"></span>signal <span id="chipS">1550.0 nm</span></span>
       <span class="chip"><span class="dot i"></span>idler <span id="chipI">810.0 nm</span></span>
     </div>
@@ -157,14 +163,23 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         <legend>Waves and fiber</legend>
         <div class="ctl"><label for="ls">Signal wavelength λ<sub>s</sub></label><output id="ls_o"></output>
           <input type="range" id="ls" min="1500" max="1600" step="0.5" value="1550"></div>
+        <div class="ctl" id="ctlLp" hidden><label for="lp">Pump wavelength λ<sub>p</sub></label><output id="lp_o"></output>
+          <input type="range" id="lp" min="1000" max="2100" step="0.5" value="1064">
+          <div class="presets">
+            <button type="button" data-lp="1030">1030 Yb</button><button type="button" data-lp="1064">1064 Yb</button><button type="button" data-lp="1560">1560 Er</button><button type="button" data-lp="1950">1950 Tm</button>
+          </div>
+          <span class="hint" id="lpHint"></span></div>
         <div class="ctl"><label for="L">Fiber length <i class="v">L</i></label><output id="L_o"></output>
-          <input type="range" id="L" min="0.5" max="10" step="0.01" value="5"></div>
-        <div class="ctl"><label for="dk">Phase mismatch Δ<i class="v">k</i></label><output id="dk_o"></output>
+          <input type="range" id="L" min="0" max="1000" step="1" value="434" data-log="0.5,200"></div>
+        <div class="ctl"><label for="dk" id="dkLabel">Phase mismatch Δ<i class="v">k</i></label><output id="dk_o"></output>
           <input type="range" id="dk" min="-600" max="600" step="1" value="0">
           <div class="dkrow"><input type="number" id="dkn" step="0.01" value="0" aria-label="Phase mismatch in rad per metre"><span class="note">rad/m</span><button type="button" id="dk0">Δk = 0</button></div>
-          <span class="hint">Δk = k<sub>p</sub> − k<sub>s</sub> − k<sub>i</sub> − K<sub>G</sub> at the signal wavelength λ<sub>s</sub>. With a dispersion model on, the QPM grating K<sub>G</sub> = 2π/Λ is chosen so the mismatch at λ<sub>s</sub> equals this value; other wavelengths follow from the dispersion. Fine near 0, up to ±400 rad/m.</span></div>
-        <div class="ctl"><label for="deff">Effective nonlinearity <i class="v">d</i><sub>eff</sub></label><output id="deff_o"></output>
+          <span class="hint" id="dkHint">Δk = k<sub>p</sub> − k<sub>s</sub> − k<sub>i</sub> − K<sub>G</sub> at the signal wavelength λ<sub>s</sub>. With a dispersion model on, the QPM grating K<sub>G</sub> = 2π/Λ is chosen so the mismatch at λ<sub>s</sub> equals this value; other wavelengths follow from the dispersion. Fine near 0, up to ±400 rad/m.</span></div>
+        <div class="ctl" id="ctlDeff"><label for="deff">Effective nonlinearity <i class="v">d</i><sub>eff</sub></label><output id="deff_o"></output>
           <input type="range" id="deff" min="0" max="1000" step="1" value="491" data-log="0.01,30"></div>
+        <div class="ctl" id="ctlN2" hidden><label for="n2">Nonlinear index <i class="v">n</i><sub>2</sub></label><output id="n2_o"></output>
+          <input type="range" id="n2" min="0" max="1000" step="1" value="138" data-log="1,1000">
+          <span class="hint">Fused silica 2.6×10⁻²⁰ m²/W; chalcogenide or tellurite glasses roughly 50–1000×10⁻²⁰ m²/W. γ = n<sub>2</sub>ω<sub>p</sub>/(c A<sub>eff</sub>).</span></div>
       </fieldset>
 
       <fieldset>
@@ -206,7 +221,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       <fieldset>
         <legend>Input powers</legend>
         <div class="ctl"><label for="Pp">Pump power <i class="v">P</i><sub>p</sub>(0)</label><output id="Pp_o"></output>
-          <input type="range" id="Pp" min="0" max="1000" step="1" value="470" data-log="0.01,20"></div>
+          <input type="range" id="Pp" min="0" max="1000" step="1" value="500" data-log="0.01,100"></div>
         <div class="ctl"><label for="Ps">Signal power <i class="v">P</i><sub>s</sub>(0)</label><output id="Ps_o"></output>
           <input type="range" id="Ps" min="0" max="1000" step="1" value="200" data-log="1e-6,0.1"></div>
       </fieldset>
@@ -289,7 +304,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
         </div>
         <div class="plotbox short"><canvas id="cs" role="img" aria-label="Signal gain in decibels as a function of signal wavelength"></canvas></div>
         <div class="bwline" id="bwline"></div>
-        <div class="hover" id="hs">CW pump at 532 nm; each signal wavelength is solved separately.</div>
+        <div class="hover" id="hs">CW pump; each signal wavelength is solved separately.</div>
         <div id="editorBox" hidden>
           <div class="cardhead"><h3 class="sub">Idler loss profile editor</h3>
             <div class="legend">
@@ -396,6 +411,14 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
           K = 2 d<sub>eff</sub> √( ħ ω<sub>p</sub> ω<sub>s</sub> ω<sub>i</sub> / (2 ε<sub>0</sub> c³ n<sub>p</sub> n<sub>s</sub> n<sub>i</sub>) ) · Θ<br>
           Θ = ∫f<sub>p</sub>f<sub>s</sub>f<sub>i</sub> dA / √(∫f<sub>p</sub>² ∫f<sub>s</sub>² ∫f<sub>i</sub>²) = π / (Σ w<sub>j</sub><sup>−2</sup>) / √((π/2)³ w<sub>p</sub>² w<sub>s</sub>² w<sub>i</sub>²)
         </div>
+        <p><b>χ<sup>(3)</sup> mode (degenerate four-wave mixing, 2ω<sub>p</sub> = ω<sub>s</sub> + ω<sub>i</sub>).</b> With power amplitudes B<sub>j</sub> (|B|² in W), γ<sub>j</sub> = n<sub>2</sub>ω<sub>j</sub>/(c A<sub>eff</sub>), and Δβ = β<sub>s</sub> + β<sub>i</sub> − 2β<sub>p</sub>:</p>
+        <div class="eq">
+          dB<sub>p</sub>/dz = iγ<sub>p</sub>[(|B<sub>p</sub>|² + 2|B<sub>s</sub>|² + 2|B<sub>i</sub>|²)B<sub>p</sub> + 2B<sub>s</sub>B<sub>i</sub>B<sub>p</sub>* e<sup>iΔβz</sup>]<br>
+          dB<sub>s</sub>/dz = iγ<sub>s</sub>[(|B<sub>s</sub>|² + 2|B<sub>p</sub>|² + 2|B<sub>i</sub>|²)B<sub>s</sub> + B<sub>p</sub>² B<sub>i</sub>* e<sup>−iΔβz</sup>]<br>
+          dB<sub>i</sub>/dz = iγ<sub>i</sub>[(|B<sub>i</sub>|² + 2|B<sub>p</sub>|² + 2|B<sub>s</sub>|²)B<sub>i</sub> + B<sub>p</sub>² B<sub>s</sub>* e<sup>−iΔβz</sup>] − (α<sub>i</sub>/2)B<sub>i</sub><br>
+          1/A<sub>eff</sub> = ∫f<sub>p</sub>²f<sub>s</sub>f<sub>i</sub> dA / ((π/2)² w<sub>p</sub>² w<sub>s</sub> w<sub>i</sub>) = π / (2w<sub>p</sub><sup>−2</sup> + w<sub>s</sub><sup>−2</sup> + w<sub>i</sub><sup>−2</sup>) / ((π/2)² w<sub>p</sub>² w<sub>s</sub> w<sub>i</sub>)
+        </div>
+        <p>With γ<sub>j</sub> ∝ ω<sub>j</sub>, two pump photons become one signal and one idler photon exactly, so Φ<sub>p</sub> + 2Φ<sub>s</sub> is conserved even with idler loss. The net mismatch is κ = Δβ + 2γ<sub>p</sub>P<sub>p</sub>, set by the Δk slider at λ<sub>s</sub>. The fiber is taken to be dispersion-engineered (PCF, birefringence or intermodal matching) so that κ at λ<sub>s</sub> has this value; its own linear Δβ is shown in the readouts. For an undepleted pump, the signal–idler pair obeys the same 2×2 system as in χ<sup>(2)</sup> with Γ = γ<sub>p</sub>P<sub>p</sub>√(ω<sub>s</sub>ω<sub>i</sub>)/ω<sub>p</sub> and Δk → κ. The bandwidth physics is therefore the same: the mismatch away from λ<sub>s</sub> again follows the signal–idler GVM (β<sub>1,i</sub> − β<sub>1,s</sub>) and β<sub>2,s</sub> + β<sub>2,i</sub>. Stimulated Raman and Brillouin scattering are not modelled. For narrow-linewidth CW pumps of several watts, Brillouin limits the usable length unless the pump is phase-modulated.</p>
         <p>Here f<sub>j</sub> = exp(−r²/w<sub>j</sub>²) and A<sub>eff</sub> = 1/Θ². The small-signal gain coefficient is Γ = K√Φ<sub>p</sub>(0) with Φ<sub>p</sub> = P<sub>p</sub>/ħω<sub>p</sub>. Without loss and with an undepleted pump, G = 1 + (Γ/g)² sinh²(gL), g² = Γ² − (Δk/2)².</p>
         <p>The dashed curves solve the linearised signal–idler pair exactly (2×2 matrix exponential, with lumped dumps applied as jumps). With strong continuous idler loss (α<sub>i</sub> ≫ Γ) the idler follows the signal adiabatically and the signal sees a Lorentzian gain coefficient g<sub>s</sub> = Γ²α<sub>i</sub> / ((α<sub>i</sub>/2)² + Δk²). The gain becomes smaller but much less sensitive to Δk.</p>
         <p><b>Dispersion and bandwidth.</b> For a CW pump, the mismatch seen by a signal at ω<sub>s0</sub> + Ω is Δk(Ω) = Δk + [Δk<sub>D</sub>(ω<sub>s0</sub> + Ω) − Δk<sub>D</sub>(ω<sub>s0</sub>)], where Δk<sub>D</sub>(ω<sub>s</sub>) = k<sub>p</sub>(ω<sub>p</sub>) − k<sub>s</sub>(ω<sub>s</sub>) − k<sub>i</sub>(ω<sub>p</sub> − ω<sub>s</sub>). In the step-index model each k = ω n<sub>eff</sub>/c comes from the exact scalar LP01 eigenvalue equation U J<sub>1</sub>(U)/J<sub>0</sub>(U) = W K<sub>1</sub>(W)/K<sub>0</sub>(W) with a fused-silica Sellmeier core and cladding plus a constant Δn, so material and waveguide dispersion are both included. To first order Δk(Ω) ≈ Δk + (β<sub>1,i</sub> − β<sub>1,s</sub>)Ω − ½(β<sub>2,s</sub> + β<sub>2,i</sub>)Ω². With the gain coefficient Γ, the GVM-limited full width at half maximum is roughly Δω ≈ 4√(Γ ln 2 / L)/|GVM| at high gain and 5.57/(L |GVM|) at low gain. The plotted spectrum is exact within the model.</p>
@@ -418,6 +441,17 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 (function () {
   "use strict";
   var HB = 1.054571817e-34, C0 = 299792458, EPS0 = 8.8541878128e-12, NIDX = 1.45, LP = 532e-9;
+  // Process: "chi2" (ω_p = ω_s + ω_i, pump 532 nm) or "chi3" (2ω_p = ω_s + ω_i, pump set by the λp slider)
+  var MODE = "chi2", LPUMP = LP;
+  function lamSum() { return MODE === "chi3" ? LPUMP / 2 : LPUMP; }
+  function idlerOf(ls) { return 1 / (1 / lamSum() - 1 / ls); }
+  function SGN() { return MODE === "chi3" ? -1 : 1; }
+  // Coupling overlap 1/√A (χ2, three Gaussian modes) or 1/A_eff (χ3, f_p² f_s f_i)
+  function overlapFor(wp, ws, wi) {
+    if (MODE === "chi3") return (Math.PI / (2 / (wp * wp) + 1 / (ws * ws) + 1 / (wi * wi))) / (Math.pow(Math.PI / 2, 2) * wp * wp * ws * wi);
+    var sumInv = 1 / (wp * wp) + 1 / (ws * ws) + 1 / (wi * wi);
+    return (Math.PI / sumInv) / Math.sqrt(Math.pow(Math.PI / 2, 3) * wp * wp * ws * ws * wi * wi);
+  }
   var $ = function (id) { return document.getElementById(id); };
   var MINUS = "−";
 
@@ -515,19 +549,21 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var model = $("disp").value;
     if (model === "none") return { model: model, dkRel: function () { return 0; }, gvm: 0, b2: 0, KG: NaN };
     if (model === "taylor") {
-      var g = +$("gvm").value * 1e-12, B = +$("b2").value * 1e-27;
-      return { model: model, dkRel: function (O) { return g * O - 0.5 * B * O * O; }, gvm: g, b2: B, KG: NaN };
+      var g = +$("gvm").value * 1e-12, B = +$("b2").value * 1e-27, sg0 = SGN();
+      return { model: model, dkRel: function (O) { return sg0 * (g * O - 0.5 * B * O * O); }, gvm: g, b2: B, KG: NaN };
     }
-    var key = [p.ls, p.a, p.dn].join("|");
+    var key = [MODE, LPUMP, p.ls, p.a, p.dn].join("|");
     if (dispCache.key !== key) {
       var kf = function (w) { return w / C0 * lp01(2 * Math.PI * C0 / w, p.a, p.dn).neff; };
-      var dkD = function (O) { var ws = p.wS + O; return kf(p.wP) - kf(ws) - kf(p.wP - ws); };
+      // χ2: Δk_D = k_p − k_s − k_i ; χ3: Δβ = k_s + k_i − 2k_p (both written as sg·(k_Σ − k_s − k_i))
+      var sg = SGN(), kSum = MODE === "chi3" ? 2 * kf(p.wP) : kf(p.wP);
+      var dkD = function (O) { var ws = p.wS + O; return sg * (kSum - kf(ws) - kf(p.wSum - ws)); };
       var d0 = dkD(0), cheb = chebInterp(function (O) { return dkD(O) - d0; }, -OM_MAX, OM_MAX, 56);
       var h1 = 1e12, h2 = 1e13;
       var b1 = function (w) { return (kf(w + h1) - kf(w - h1)) / (2 * h1); };
       var b2 = function (w) { return (kf(w + h2) - 2 * kf(w) + kf(w - h2)) / (h2 * h2); };
       dispCache = { key: key, val: { model: model, dkRel: cheb, gvm: b1(p.wI) - b1(p.wS), b2: b2(p.wS) + b2(p.wI), dk0: d0,
-        V: [lp01(LP, p.a, p.dn).V, lp01(p.ls, p.a, p.dn).V, lp01(p.li, p.a, p.dn).V] } };
+        V: [lp01(LPUMP, p.a, p.dn).V, lp01(p.ls, p.a, p.dn).V, lp01(p.li, p.a, p.dn).V] } };
     }
     var v = dispCache.val;
     v.KG = v.dk0 - p.dk;
@@ -577,30 +613,36 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function lossMode() { return document.querySelector('input[name="lossmode"]:checked').value; }
 
   function params() {
+    MODE = document.querySelector('input[name="proc"]:checked').value;
+    LPUMP = MODE === "chi3" ? +$("lp").value * 1e-9 : LP;
     var ls = +$("ls").value * 1e-9;
-    var li = 1 / (1 / LP - 1 / ls);
+    var li = idlerOf(ls);
     var wp = +$("wp").value * 1e-6, ws = +$("ws").value * 1e-6, wi;
     var mode = $("wimode").value, fa = +$("fa").value * 1e-6, fdn = +$("fdn").value;
     if (mode === "fiber") wi = lp01(li, fa, fdn).w;
     else if (mode === "pol") wi = 1 / Math.sqrt(1 / (wp * wp) + 1 / (ws * ws));
     else if (mode === "signal") wi = ws;
-    else wi = wp + (ws - wp) * (li - LP) / (ls - LP);
-    var wP = 2 * Math.PI * C0 / LP, wS = 2 * Math.PI * C0 / ls, wI = 2 * Math.PI * C0 / li;
-    var deff = sliderVal($("deff")) * 1e-12;
-    var gam = 2 * deff * Math.sqrt(HB * wP * wS * wI / (2 * EPS0 * C0 * C0 * C0 * NIDX * NIDX * NIDX));
-    var sumInv = 1 / (wp * wp) + 1 / (ws * ws) + 1 / (wi * wi);
-    var theta = (Math.PI / sumInv) / Math.sqrt(Math.pow(Math.PI / 2, 3) * wp * wp * ws * ws * wi * wi);
-    var K = gam * theta;
+    else wi = Math.max(0.5 * Math.min(wp, ws), Math.min(2 * Math.max(wp, ws), wp + (ws - wp) * (li - LPUMP) / (ls - LPUMP)));
+    var wP = 2 * Math.PI * C0 / LPUMP, wSum = 2 * Math.PI * C0 / lamSum(), wS = 2 * Math.PI * C0 / ls, wI = 2 * Math.PI * C0 / li;
+    var deff = sliderVal($("deff")) * 1e-12, n2 = sliderVal($("n2")) * 1e-20;
+    var theta = overlapFor(wp, ws, wi);
     var Pp = sliderVal($("Pp")), Ps = sliderVal($("Ps"));
-    var Fp0 = Pp / (HB * wP), Fs0 = Ps / (HB * wS);
+    var Fp0 = Pp / (HB * wP), Fs0 = Ps / (HB * wS), K, kappa, gP = 0, gammaP = 0;
+    if (MODE === "chi3") {
+      gammaP = n2 * wP / C0 * theta; gP = gammaP * Pp;
+      kappa = gP * Math.sqrt(wS * wI) / wP; K = kappa / Math.sqrt(Fp0);
+    } else {
+      var gam = 2 * deff * Math.sqrt(HB * wP * wS * wI / (2 * EPS0 * C0 * C0 * C0 * NIDX * NIDX * NIDX));
+      K = gam * theta; kappa = K * Math.sqrt(Fp0);
+    }
     var lm = lossMode();
     var alphaDb = sliderVal($("alpha"));
     var prof = { type: lm === "none" ? "flat" : $("lprof").value, c: li * 1e9 + (+$("lbc").value) / 1000, w: sliderVal($("lbw")), e: sliderVal($("lbe")), fn: customFn };
     var T0 = lossT(prof, li * 1e9), aPk = lm === "cont" ? alphaDb * Math.LN10 / 10 : 0;
     return {
-      ls: ls, li: li, wp: wp, ws: ws, wi: wi, wP: wP, wS: wS, wI: wI, deff: deff, theta: theta, Aeff: 1 / (theta * theta),
-      K: K, Pp: Pp, Ps: Ps, Fp0: Fp0, Fs0: Fs0, r0: Fs0 / Fp0, kappa: K * Math.sqrt(Fp0),
-      L: +$("L").value, dk: dkValue, lm: lm, a: fa, dn: fdn,
+      ls: ls, li: li, wp: wp, ws: ws, wi: wi, wP: wP, wSum: wSum, wS: wS, wI: wI, deff: deff, n2: n2, theta: theta, Aeff: MODE === "chi3" ? 1 / theta : 1 / (theta * theta),
+      K: K, Pp: Pp, Ps: Ps, Fp0: Fp0, Fs0: Fs0, r0: Fs0 / Fp0, kappa: kappa, gP: gP, gammaP: gammaP, chi3: MODE === "chi3",
+      L: sliderVal($("L")), dk: dkValue, lm: lm, a: fa, dn: fdn,
       alphaDb: alphaDb, alphaPk: aPk, alpha: aPk * T0, prof: prof, T0: T0, refmode: $("refmode").value,
       nf: lm === "lumped" ? +$("nf").value : 0, attDb: +$("att").value,
       tAmp: Math.pow(10, -(+$("att").value) * T0 / 20)
@@ -609,6 +651,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
   // Full nonlinear RK4 in normalised amplitudes u_j = a_j / sqrt(Fp0)
   function simulate(p, dk, record, maxSteps) {
+    if (MODE === "chi3") return simulate3(p, dk, record, maxSteps);
     var kap = p.kappa, a2 = p.alpha / 2, r0 = p.r0;
     var rate = Math.max(kap * Math.sqrt(1 + r0), Math.abs(dk), a2, 1e-6);
     var N = Math.ceil(p.L * rate / 0.04);
@@ -652,6 +695,61 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     }
     var fp = y[0] * y[0] + y[1] * y[1], fs = y[2] * y[2] + y[3] * y[3], fi = y[4] * y[4] + y[5] * y[5];
     return { rec: rec, fp: fp, fs: fs, fi: fi, steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + fs - (1 + r0)) / (1 + r0) };
+  }
+
+
+  // χ3 degenerate FWM with SPM/XPM, power amplitudes normalised to √P_p(0); dkNet = κ = Δβ + 2γ_pP_p(0)
+  function simulate3(p, dkNet, record, maxSteps) {
+    var wpf = p.wP, wsf = p.wS, wif = p.wI, np = p.gP, ns = np * wsf / wpf, ni = np * wif / wpf, a2 = p.alpha / 2, r0 = p.r0;
+    var db = dkNet - 2 * np;
+    var rate = Math.max(p.kappa * Math.sqrt(1 + r0), Math.abs(db), 3 * np * (1 + r0), a2, 1e-6);
+    var N = Math.ceil(p.L * rate / 0.04);
+    N = Math.max(record ? 2000 : 300, Math.min(maxSteps, N));
+    var nSeg = p.nf + 1, nPer = Math.ceil(N / nSeg), h = p.L / (nSeg * nPer);
+    var y = new Float64Array([1, 0, Math.sqrt(r0 * wsf / wpf), 0, 0, 0]);
+    var k1 = new Float64Array(6), k2 = new Float64Array(6), k3 = new Float64Array(6), k4 = new Float64Array(6), t = new Float64Array(6);
+    function f(z, Y, o) {
+      var c = Math.cos(db * z), sn = Math.sin(db * z);
+      var pr = Y[0], pi = Y[1], sr = Y[2], si = Y[3], ir = Y[4], ii = Y[5];
+      var Pp2 = pr * pr + pi * pi, Ps2 = sr * sr + si * si, Pi2 = ir * ir + ii * ii;
+      // pump: n_p[(|p|²+2|s|²+2|i|²) p + 2 s i p* e^{iΔβz}]
+      var xr = sr * ir - si * ii, xi = sr * ii + si * ir;            // s·i
+      var yr = xr * pr + xi * pi, yi = xi * pr - xr * pi;            // ·p*
+      var er = yr * c - yi * sn, ei = yr * sn + yi * c;              // ·e^{+iΔβz}
+      var Ar = (Pp2 + 2 * Ps2 + 2 * Pi2) * pr + 2 * er, Ai = (Pp2 + 2 * Ps2 + 2 * Pi2) * pi + 2 * ei;
+      o[0] = -np * Ai; o[1] = np * Ar;
+      // p² e^{−iΔβz}
+      var qr = pr * pr - pi * pi, qi = 2 * pr * pi, gr = qr * c + qi * sn, gi = qi * c - qr * sn;
+      // signal: n_s[(|s|²+2|p|²+2|i|²) s + p² i* e^{−iΔβz}]
+      var Br = (Ps2 + 2 * Pp2 + 2 * Pi2) * sr + (gr * ir + gi * ii), Bi = (Ps2 + 2 * Pp2 + 2 * Pi2) * si + (gi * ir - gr * ii);
+      o[2] = -ns * Bi; o[3] = ns * Br;
+      var Cr = (Pi2 + 2 * Pp2 + 2 * Ps2) * ir + (gr * sr + gi * si), Ci = (Pi2 + 2 * Pp2 + 2 * Ps2) * ii + (gi * sr - gr * si);
+      o[4] = -ni * Ci - a2 * ir; o[5] = ni * Cr - a2 * ii;
+    }
+    var cs_ = wpf / wsf, ci_ = wpf / wif;
+    var rec = record ? { z: [], seg: [], fp: [], fs: [], fi: [] } : null;
+    var every = Math.max(1, Math.floor(nSeg * nPer / 900));
+    function push(z, sgi) { rec.z.push(z); rec.seg.push(sgi); rec.fp.push(y[0] * y[0] + y[1] * y[1]); rec.fs.push((y[2] * y[2] + y[3] * y[3]) * cs_); rec.fi.push((y[4] * y[4] + y[5] * y[5]) * ci_); }
+    var z = 0, cnt = 0, j;
+    if (record) push(0, 0);
+    for (var sg = 0; sg < nSeg; sg++) {
+      for (var n = 0; n < nPer; n++) {
+        f(z, y, k1);
+        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k1[j];
+        f(z + 0.5 * h, t, k2);
+        for (j = 0; j < 6; j++) t[j] = y[j] + 0.5 * h * k2[j];
+        f(z + 0.5 * h, t, k3);
+        for (j = 0; j < 6; j++) t[j] = y[j] + h * k3[j];
+        f(z + h, t, k4);
+        for (j = 0; j < 6; j++) y[j] += h / 6 * (k1[j] + 2 * k2[j] + 2 * k3[j] + k4[j]);
+        cnt++;
+        z = (sg * nPer + n + 1) * h;
+        if (record && (cnt % every === 0 || n === nPer - 1)) push(z, sg);
+      }
+      if (sg < nSeg - 1) { y[4] *= p.tAmp; y[5] *= p.tAmp; if (record) push(z, sg + 1); }
+    }
+    var fp = y[0] * y[0] + y[1] * y[1], fs = (y[2] * y[2] + y[3] * y[3]) * cs_, fi = (y[4] * y[4] + y[5] * y[5]) * ci_;
+    return { rec: rec, fp: fp, fs: fs, fi: fi, steps: nSeg * nPer, capped: N === maxSteps, resid: Math.abs(fp + 2 * fs - (1 + 2 * r0)) / (1 + 2 * r0) };
   }
 
   // complex helpers [re, im]
@@ -863,7 +961,33 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     return "none";
   }
 
+  var INTRO = {
+    chi2: "A 532 nm pump amplifies a signal near 1550 nm in a second-order nonlinear fiber and creates an idler near 810 nm. The coupled amplitude equations are integrated with RK4, including pump depletion, phase mismatch, Gaussian mode overlap and optional dissipation of the idler.",
+    chi3: "Two pump photons amplify a signal near 1550 nm by four-wave mixing in a Kerr (χ⁽³⁾) fiber and create an idler at 2ωₚ − ωₛ. The coupled equations include self- and cross-phase modulation, pump depletion, dispersion-engineered phase matching and optional dissipation of the idler."
+  };
+  function lpAdvice(p) {
+    var lp = LPUMP * 1e9, li = p.li * 1e9, sep = Math.abs(li - p.ls * 1e9);
+    var t = "Idler at " + fmt(li, 1) + " nm, " + fmt(sep, 1) + " nm from the signal. ";
+    if (Math.abs(lp - 1064) < 15) t += "Recommended: Yb fiber lasers and amplifiers deliver tens of watts CW at 1064 nm with narrow linewidth. Since 2ω(1064 nm) = ω(532 nm), the signal–idler pair is the same as in the χ⁽²⁾ case, and the 810 nm idler is far from the signal and easy to absorb or split off. Phase matching such widely spaced bands needs a fiber engineered near its zero-dispersion wavelength at about 1 µm (e.g. a PCF).";
+    else if (Math.abs(lp - 1030) < 15) t += "Yb at 1030 nm (high-power fiber and thin-disk sources). Idler near 770 nm; same widely spaced scheme as 1064 nm.";
+    else if (lp > 1500 && lp < 1625) t += "Er/EDFA pumps near the zero dispersion of highly nonlinear fiber give the classic broadband fiber OPA. Signal and idler sit symmetrically around the pump, so the GVM is tiny and the gain band is wide, but the idler is only " + fmt(sep, 1) + " nm away and needs a very sharp filter or absorber.";
+    else if (lp > 1900 && lp < 2100) t += "Tm pumps near 2 µm put the idler in the mid-infrared, where silica itself absorbs strongly beyond about 2.5 µm. That gives built-in idler dissipation, but the Sellmeier-based fiber model becomes approximate there.";
+    else t += "Choose a pump with a common high-power fiber laser: 1030/1064 nm (Yb), 1560 nm (Er) or 1950 nm (Tm).";
+    if (Math.abs(lp - p.ls * 1e9) < 1) t += " The signal is within 1 nm of the pump (degenerate case), which this model does not treat.";
+    return t;
+  }
   function updateOutputs(p) {
+    var c3 = MODE === "chi3";
+    $("intro").textContent = INTRO[MODE];
+    $("chipP").textContent = fmt(LPUMP * 1e9, 1) + " nm" + (c3 ? " (×2)" : "");
+    $("ctlLp").hidden = !c3; $("ctlN2").hidden = !c3; $("ctlDeff").hidden = c3;
+    $("lp_o").textContent = fmt(LPUMP * 1e9, 1) + " nm";
+    if (c3) $("lpHint").textContent = lpAdvice(p);
+    $("n2_o").textContent = sig(p.n2 * 1e20, 3) + "×10⁻²⁰ m²/W · γ " + sig(p.gammaP * 1e3, 3) + " W⁻¹km⁻¹";
+    $("dkLabel").innerHTML = c3 ? "Net phase mismatch κ = Δβ + 2γP" : "Phase mismatch Δ<i class=\"v\">k</i>";
+    $("dkHint").innerHTML = c3 ? "κ = β<sub>s</sub> + β<sub>i</sub> − 2β<sub>p</sub> + 2γ<sub>p</sub>P<sub>p</sub> at λ<sub>s</sub>. The fiber is taken to be dispersion-engineered so that κ at λ<sub>s</sub> has this value; other wavelengths follow from the dispersion model. Gain needs |κ| &lt; 2Γ. Fine near 0, up to ±400 rad/m."
+      : "Δk = k<sub>p</sub> − k<sub>s</sub> − k<sub>i</sub> − K<sub>G</sub> at the signal wavelength λ<sub>s</sub>. With a dispersion model on, the QPM grating K<sub>G</sub> = 2π/Λ is chosen so the mismatch at λ<sub>s</sub> equals this value; other wavelengths follow from the dispersion. Fine near 0, up to ±400 rad/m.";
+    $("dk0").textContent = c3 ? "κ = 0" : "Δk = 0";
     $("ls_o").textContent = fmt(p.ls * 1e9, 1) + " nm";
     $("chipS").textContent = fmt(p.ls * 1e9, 1) + " nm";
     $("chipI").textContent = fmt(p.li * 1e9, 1) + " nm";
@@ -886,7 +1010,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     $("gvm_o").textContent = fmt(+$("gvm").value, 1) + " ps/m";
     $("b2_o").textContent = fmt(+$("b2").value, 1) + " ps²/km";
     if (dm === "fiber") {
-      var mP = lp01(LP, p.a, p.dn), mS = lp01(p.ls, p.a, p.dn), mI = lp01(p.li, p.a, p.dn);
+      var mP = lp01(LPUMP, p.a, p.dn), mS = lp01(p.ls, p.a, p.dn), mI = lp01(p.li, p.a, p.dn);
       $("fhint").textContent = "V = " + fmt(mP.V, 2) + " / " + fmt(mI.V, 2) + " / " + fmt(mS.V, 2) + " and LP01 radius " + fmt(mP.w * 1e6, 2) + " / " + fmt(mI.w * 1e6, 2) + " / " + fmt(mS.w * 1e6, 2) + " µm at pump / idler / signal." + (mS.V > 2.405 ? " Signal is multimode." : "");
     }
     var banded = p.lm !== "none" && p.prof.type !== "flat";
@@ -929,13 +1053,16 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var rows = [
       ["Coupling and phase matching", [
         ["Idler wavelength λ<sub>i</sub>", fmt(p.li * 1e9, 1) + " nm"],
-        ["Mode overlap A<sub>eff</sub> = 1/Θ²", fmt(p.Aeff * 1e12, 1) + " µm²"],
-        ["Small-signal gain coefficient Γ", sig(p.kappa, 3) + " m⁻¹"],
+        [p.chi3 ? "FWM effective area A<sub>eff</sub>" : "Mode overlap A<sub>eff</sub> = 1/Θ²", fmt(p.Aeff * 1e12, 1) + " µm²"]].concat(p.chi3 ? [
+        ["γ at the pump", sig(p.gammaP * 1e3, 3) + " W⁻¹km⁻¹"],
+        ["Nonlinear phase 2γP<sub>p</sub>", sig(2 * p.gP, 3) + " rad/m"],
+        ["Linear Δβ needed at λ<sub>s</sub> (κ − 2γP)", fmt(p.dk - 2 * p.gP, 3) + " rad/m"]] : []).concat([
+        ["Small-signal gain coefficient Γ", sig(p.kappa, 3) + " m⁻¹" + (p.chi3 ? " (γP√(ω<sub>s</sub>ω<sub>i</sub>)/ω<sub>p</sub>)" : "")],
         ["ΓL", sig(p.kappa * p.L, 3)],
         ["ΔkL", fmt(p.dk * p.L, 2) + " rad"],
         ["g = √(Γ² − Δk²/4)", g2 >= 0 ? sig(Math.sqrt(g2), 3) + " m⁻¹" : sig(Math.sqrt(-g2), 3) + "i m⁻¹ (oscillating)"],
         ["Gain band edge |Δk| = 2Γ", sig(2 * p.kappa, 3) + " rad/m"]
-      ]],
+      ])],
       ["Output at z = L", [
         ["Signal power", fmtP(Psout) + " · " + fmt(dBm(Psout), 1) + " dBm"],
         ["Signal gain, full numerical", fmtdB(10 * Math.log10(Gn))],
@@ -961,7 +1088,8 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var ghzToNm = function (hz) { return hz * Math.pow(p.ls, 2) / C0 * 1e9; };
     rows.splice(1, 0, ["Phase-matching bandwidth", [
       ["Dispersion model", D.model === "fiber" ? "step-index LP01" : D.model === "taylor" ? "Taylor" : "none"],
-      ["QPM period Λ", D.model === "fiber" ? fmt(2 * Math.PI / Math.abs(D.KG) * 1e6, 3) + " µm" : "—"],
+      p.chi3 ? ["Step-index fiber's own Δβ at λ<sub>s</sub>", D.model === "fiber" ? sig(D.dk0, 4) + " rad/m (to be compensated by design)" : "—"]
+        : ["QPM period Λ", D.model === "fiber" ? fmt(2 * Math.PI / Math.abs(D.KG) * 1e6, 3) + " µm" : "—"],
       ["GVM β<sub>1,i</sub> − β<sub>1,s</sub>", D.model === "none" ? "—" : fmt(D.gvm * 1e12, 2) + " ps/m"],
       ["β<sub>2,s</sub> + β<sub>2,i</sub>", D.model === "none" ? "—" : fmt(D.b2 * 1e27, 2) + " ps²/km"],
       ["Signal −3 dB width, undepleted", D.model === "none" ? "flat (no dispersion)" : bandText(B.sA, lam0)],
@@ -975,7 +1103,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       ["GVM estimate, low gain (sinc²)", isFinite(estLo) ? sig(ghzToNm(estLo), 3) + " nm · " + sig(estLo / 1e9, 3) + " GHz" : "—"]
     ]]);
     $("readouts").innerHTML = groupsHtml(rows);
-    var note = "RK4 with " + s.steps.toLocaleString("en-US") + " steps. Photon-number check |ΔΦ<sub>p</sub> + ΔΦ<sub>s</sub>| / Φ<sub>total</sub> = " + sig(s.resid, 2) + ".";
+    var note = "RK4 with " + s.steps.toLocaleString("en-US") + " steps. " + (p.chi3 ? "Photon-number check |Δ(Φ<sub>p</sub> + 2Φ<sub>s</sub>)| / (Φ<sub>p</sub> + 2Φ<sub>s</sub>) = " : "Photon-number check |ΔΦ<sub>p</sub> + ΔΦ<sub>s</sub>| / Φ<sub>total</sub> = ") + sig(s.resid, 2) + ".";
     if (s.capped) note += ' <span class="warn">Step count capped; reduce ΓL or Δk·L for higher accuracy.</span>';
     if (s.fp < 0.5) note += " The pump is strongly depleted, so the analytic undepleted curve overestimates the gain.";
     $("numnote").innerHTML = note;
@@ -1037,9 +1165,10 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
 
   // ---------- gain spectrum ----------
   function specParams(p, O) {
-    var ws = p.wS + O, wi = p.wP - ws;
+    var ws = p.wS + O, wi = p.wSum - ws;
     var T = lossT(p.prof, 2 * Math.PI * C0 / wi * 1e9);
-    return { kappa: p.kappa * Math.sqrt(ws * wi / (p.wS * p.wI)), alpha: p.alphaPk * T, L: p.L, nf: p.nf, tAmp: Math.pow(10, -p.attDb * T / 20), r0: p.Ps / (HB * ws) / p.Fp0, ws: ws, wi: wi, T: T };
+    return { kappa: p.kappa * Math.sqrt(ws * wi / (p.wS * p.wI)), alpha: p.alphaPk * T, L: p.L, nf: p.nf, tAmp: Math.pow(10, -p.attDb * T / 20), r0: p.Ps / (HB * ws) / p.Fp0, ws: ws, wi: wi, T: T,
+      wS: ws, wI: wi, wP: p.wP, gP: p.gP };
   }
   function refParams(p, O, Lref) {
     var q = specParams(p, O);
@@ -1049,13 +1178,14 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   // Reference fiber: the current fiber, or a baseline frozen when the optimiser varies fiber geometry or pump power
   var REFFIB = null;
   function refBase(p) {
-    if (!REFFIB) return { kappa: p.kappa, D: p.D || DISP };
+    if (!REFFIB) return { kappa: p.kappa, gP: p.gP, D: p.D || DISP };
     if (REFFIB.a != null && DISP.model === "fiber" && REFFIB.ls !== p.ls) { REFFIB.D = fastDisp(p.ls, REFFIB.a, REFFIB.dn); REFFIB.ls = p.ls; }
-    return { kappa: REFFIB.kappa, D: REFFIB.a != null && DISP.model === "fiber" ? REFFIB.D : DISP };
+    return { kappa: REFFIB.kappa, gP: REFFIB.gP, D: REFFIB.a != null && DISP.model === "fiber" ? REFFIB.D : DISP };
   }
   function refQ(p, O, Lref, rb) {
     var q = refParams(p, O, Lref);
     q.kappa = rb.kappa * Math.sqrt(q.ws * q.wi / (p.wS * p.wI));
+    if (rb.gP != null) q.gP = rb.gP;
     return q;
   }
   function refLength(p, rb, gpkDb) {
@@ -1140,7 +1270,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var num = { lam: [], lamI: [], gn: new Array(NN).fill(NaN), ig: new Array(NN).fill(NaN), io: new Array(NN).fill(NaN), gR: new Array(NN).fill(NaN), done: false };
     for (var k = 0; k < NN; k++) {
       var Om = sp.Olo + (sp.Ohi - sp.Olo) * k / (NN - 1);
-      num.lam.push(2 * Math.PI * C0 / (p.wS + Om) * 1e9); num.lamI.push(2 * Math.PI * C0 / (p.wP - p.wS - Om) * 1e9);
+      num.lam.push(2 * Math.PI * C0 / (p.wS + Om) * 1e9); num.lamI.push(2 * Math.PI * C0 / (p.wSum - p.wS - Om) * 1e9);
     }
     sp.num = num;
     drawSpec();
@@ -1273,7 +1403,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     for (var k = 0; k <= 400; k++) { var x = xw[0] + (xw[1] - xw[0]) * k / 400; xs.push(x); prof.push(100 * lossT(P.prof, x)); }
     var B = specBands(), b3 = B.sN || B.sA, bands = [];
     if (b3 && b3.lo != null && b3.hi != null) {
-      var toI = function (l) { return 1 / (1 / 532 - 1 / l); };
+      var toI = function (l) { return 1 / (1 / (lamSum() * 1e9) - 1 / l); };
       bands.push({ x0: Math.min(toI(b3.lo), toI(b3.hi)), x1: Math.max(toI(b3.lo), toI(b3.hi)), alpha: 0.15 });
     }
     var peak = P.lm === "cont" ? sig(P.alphaDb, 3) + " dB/m" : fmt(P.attDb, 1) + " dB per dump";
@@ -1286,7 +1416,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var outside = CUSTOM.pts.filter(function (p) { return p.x < xw[0] || p.x > xw[1]; }).length;
     if (CUSTOM.sel >= 0 && CUSTOM.pts[CUSTOM.sel]) {
       var sp2 = CUSTOM.pts[CUSTOM.sel];
-      $("hp").textContent = "Selected point: λi = " + fmt(sp2.x, 4) + " nm (λs = " + fmt(1 / (1 / 532 - 1 / sp2.x), 3) + " nm) · loss " + fmt(100 * sp2.y, 1) + " % of peak" + (outside ? " · " + outside + " point(s) outside the window" : "");
+      $("hp").textContent = "Selected point: λi = " + fmt(sp2.x, 4) + " nm (λs = " + fmt(1 / (1 / (lamSum() * 1e9) - 1 / sp2.x), 3) + " nm) · loss " + fmt(100 * sp2.y, 1) + " % of peak" + (outside ? " · " + outside + " point(s) outside the window" : "");
     } else $("hp").textContent = outside ? outside + " point(s) lie outside the current window. Use Resample to bring the curve into view." : "Click empty space to add a point · drag to move · double-click or Delete removes · arrow keys nudge the selected point (Shift for larger steps).";
   }
   function editorXY(ev) {
@@ -1341,7 +1471,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   $("cpCopy").addEventListener("click", function () {
     var pts = CUSTOM.pts.slice().sort(function (a, b) { return a.x - b.x; }), btn = this;
     var lines = ["idler_nm,signal_nm,loss_fraction_of_peak,loss_" + (P.lm === "cont" ? "dB_per_m" : "dB_per_dump")];
-    pts.forEach(function (p) { lines.push([p.x.toFixed(6), (1 / (1 / 532 - 1 / p.x)).toFixed(6), p.y.toFixed(4), ((P.lm === "cont" ? P.alphaDb : P.attDb) * p.y).toFixed(4)].join(",")); });
+    pts.forEach(function (p) { lines.push([p.x.toFixed(6), (1 / (1 / (lamSum() * 1e9) - 1 / p.x)).toFixed(6), p.y.toFixed(4), ((P.lm === "cont" ? P.alphaDb : P.attDb) * p.y).toFixed(4)].join(",")); });
     function done(msg) { btn.textContent = msg; setTimeout(function () { btn.textContent = "Copy points as CSV"; }, 1600); }
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(lines.join("\n")).then(function () { done("Copied"); }, function () { done("Copy blocked by browser"); });
     else done("Copy not available");
@@ -1359,9 +1489,9 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   // ---------- fast fiber dispersion for optimisation loops ----------
   // Quartic Lagrange interpolant of Δk_rel(Ω) through Ω = 0, ±1, ±2 THz·2π (error < 1e-4 rad/m out to ±4 THz)
   function fastDisp(ls, a, dn) {
-    var wS = 2 * Math.PI * C0 / ls, wP = 2 * Math.PI * C0 / LP;
+    var wS = 2 * Math.PI * C0 / ls, wP = 2 * Math.PI * C0 / LPUMP, wSum = 2 * Math.PI * C0 / lamSum(), sg = SGN();
     var kf = function (w) { return w / C0 * lp01(2 * Math.PI * C0 / w, a, dn).neff; };
-    var kp = kf(wP), dkD = function (O) { var ws = wS + O; return kp - kf(ws) - kf(wP - ws); };
+    var kp = (MODE === "chi3" ? 2 : 1) * kf(wP), dkD = function (O) { var ws = wS + O; return sg * (kp - kf(ws) - kf(wSum - ws)); };
     var H = 2 * Math.PI * 1e12, xs = [-2 * H, -H, 0, H, 2 * H], d0 = dkD(0);
     var ys = xs.map(function (x) { return x === 0 ? 0 : dkD(x) - d0; });
     var dkRel = function (O) {
@@ -1369,14 +1499,11 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       for (var i = 0; i < 5; i++) { var t = ys[i]; if (t === 0) continue; for (var j = 0; j < 5; j++) if (j !== i) t *= (O - xs[j]) / (xs[i] - xs[j]); sum += t; }
       return sum;
     };
-    var gvm = (ys[3] - ys[1]) / (2 * H), curv = (ys[3] + ys[1]) / (H * H);
-    return { model: "fiber", dkRel: dkRel, gvm: gvm, b2: -curv, dk0: d0, Vs: lp01(ls, a, dn).V };
+    var gvm = sg * (ys[3] - ys[1]) / (2 * H), curv = (ys[3] + ys[1]) / (H * H);
+    return { model: "fiber", dkRel: dkRel, gvm: gvm, b2: -sg * curv, dk0: d0, Vs: lp01(ls, a, dn).V };
   }
-  function overlapTheta(wp, ws, wi) {
-    var sumInv = 1 / (wp * wp) + 1 / (ws * ws) + 1 / (wi * wi);
-    return (Math.PI / sumInv) / Math.sqrt(Math.pow(Math.PI / 2, 3) * wp * wp * ws * ws * wi * wi);
-  }
-  function fiberModes(ls, li, a, dn) { return { wp: lp01(LP, a, dn).w, ws: lp01(ls, a, dn).w, wi: lp01(li, a, dn).w }; }
+  function overlapTheta(wp, ws, wi) { return overlapFor(wp, ws, wi); }
+  function fiberModes(ls, li, a, dn) { return { wp: lp01(LPUMP, a, dn).w, ws: lp01(ls, a, dn).w, wi: lp01(li, a, dn).w }; }
 
   // ---------- bandwidth optimiser (undepleted analytic spectra) ----------
   function bandContig(x, y, drop) {
@@ -1390,7 +1517,10 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   }
   function derive(base, ov) {
     var p = Object.assign({}, base);
-    if (ov.Pp != null) { var f = ov.Pp / base.Pp; p.Pp = ov.Pp; p.Fp0 = base.Fp0 * f; p.kappa = base.kappa * Math.sqrt(f); p.r0 = base.Fs0 / p.Fp0; }
+    if (ov.Pp != null) {
+      var f = ov.Pp / base.Pp; p.Pp = ov.Pp; p.Fp0 = base.Fp0 * f; p.r0 = base.Fs0 / p.Fp0;
+      if (base.chi3) { p.kappa = base.kappa * f; p.gP = base.gP * f; } else p.kappa = base.kappa * Math.sqrt(f);
+    }
     if (ov.L != null) p.L = ov.L;
     if (ov.dk != null) p.dk = ov.dk;
     if (ov.a != null || ov.dn != null) {
@@ -1398,7 +1528,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
       p.D = fastDisp(p.ls, p.a, p.dn);
       if (ov.follow) {
         var md = fiberModes(p.ls, p.li, p.a, p.dn), th = overlapTheta(md.wp, md.ws, md.wi);
-        p.wp = md.wp; p.ws = md.ws; p.wi = md.wi; p.kappa *= th / base.theta; p.theta = th; p.Aeff = 1 / (th * th);
+        p.wp = md.wp; p.ws = md.ws; p.wi = md.wi; p.kappa *= th / base.theta; p.gP *= th / base.theta; p.theta = th; p.Aeff = base.chi3 ? 1 / th : 1 / (th * th);
       }
     }
     if (ov.lm) p.lm = ov.lm;
@@ -1497,17 +1627,17 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     var lm = base.lm === "none" && (use.loss || use.prof) ? "cont" : base.lm;
     var rb = REFFIB ? refBase(base) : { kappa: base.kappa, D: D };
     if (!REFFIB && (use.a || use.dn || use.Pp)) {
-      REFFIB = { a: DISP.model === "fiber" ? base.a : null, dn: base.dn, kappa: base.kappa, ls: base.ls, D: DISP.model === "fiber" ? fastDisp(base.ls, base.a, base.dn) : null };
+      REFFIB = { a: DISP.model === "fiber" ? base.a : null, dn: base.dn, kappa: base.kappa, gP: base.gP, ls: base.ls, D: DISP.model === "fiber" ? fastDisp(base.ls, base.a, base.dn) : null };
       rb = refBase(base);
     }
     var r0 = evalCfg(derive(base, { lm: "none" }), D, refmode, rb), K = 9, xs = [];
     var span = Math.min(2 * OM_MAX * 0.9, 2.5 * Math.min(target, 20) * r0.Wref);
-    for (var k = 0; k < K; k++) { var Om = (k / (K - 1) - 0.5) * span; xs.push(2 * Math.PI * C0 / (base.wP - base.wS - Om) * 1e9); }
+    for (var k = 0; k < K; k++) { var Om = (k / (K - 1) - 0.5) * span; xs.push(2 * Math.PI * C0 / (base.wSum - base.wS - Om) * 1e9); }
     var vars = [], dkMax = Math.max(10 * base.kappa, 40 / base.L);
     if (use.dk) vars.push({ name: "dk", v: varLin(-dkMax, dkMax), cur: base.dk });
     if (use.loss) vars.push({ name: "loss", v: lm === "lumped" ? varLin(0, 60) : varLog(0.1, 1000), cur: lm === "lumped" ? base.attDb : base.alphaDb });
-    if (use.L) vars.push({ name: "L", v: varLog(0.5, 10), cur: base.L });
-    if (use.Pp) vars.push({ name: "Pp", v: varLog(0.01, 20), cur: base.Pp });
+    if (use.L) vars.push({ name: "L", v: varLog(0.5, 200), cur: base.L });
+    if (use.Pp) vars.push({ name: "Pp", v: varLog(0.01, 100), cur: base.Pp });
     if (use.a) vars.push({ name: "a", v: varLog(1e-6, 8e-6), cur: base.a });
     if (use.dn) vars.push({ name: "dn", v: varLog(0.002, 0.04), cur: base.dn });
     if (use.prof) {
@@ -1700,7 +1830,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     $("disp").value = "fiber";
     $("fa").value = Math.round(a * 1e8) / 100; $("fdn").value = Math.round(dn * 1e4) / 1e4;
     if (follow) {
-      var ls = +$("ls").value * 1e-9, li = 1 / (1 / LP - 1 / ls);
+      var ls = +$("ls").value * 1e-9, li = idlerOf(ls);
       var md = fiberModes(ls, li, +$("fa").value * 1e-6, +$("fdn").value);
       var cl = function (v) { return Math.max(1, Math.min(20, Math.round(v * 1e8) / 100)); };
       $("wp").value = cl(md.wp); $("ws").value = cl(md.ws); $("wimode").value = "fiber";
@@ -1723,7 +1853,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   $("mapRun").addEventListener("click", computeMap);
   function freezeBaseline() {
     if (REFFIB || DISP.model !== "fiber") return;
-    REFFIB = { a: P.a, dn: P.dn, kappa: P.kappa, ls: P.ls, D: fastDisp(P.ls, P.a, P.dn) };
+    REFFIB = { a: P.a, dn: P.dn, kappa: P.kappa, gP: P.gP, ls: P.ls, D: fastDisp(P.ls, P.a, P.dn) };
     refInfo();
   }
   function refInfo() {
@@ -1815,7 +1945,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   function applyOpt(ov, refmode) {
     if (ov.lm) document.querySelector('input[name="lossmode"][value="' + ov.lm + '"]').checked = true;
     if (ov.loss != null) { if (ov.lm === "lumped") $("att").value = Math.round(ov.loss * 2) / 2; else setSlider($("alpha"), ov.loss); }
-    if (ov.L != null) $("L").value = Math.round(ov.L * 100) / 100;
+    if (ov.L != null) setSlider($("L"), ov.L);
     if (ov.Pp != null) setSlider($("Pp"), ov.Pp);
     if (ov.a != null || ov.dn != null) applyFiber(ov.a != null ? ov.a : P.a, ov.dn != null ? ov.dn : P.dn, ov.follow, true);
     if (ov.prof) { $("lprof").value = "custom"; CUSTOM.pts = ov.prof.pts.map(function (p) { return { x: p.x, y: p.y }; }); CUSTOM.sel = -1; customChanged(); }
@@ -1860,7 +1990,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     top = Math.max(top, 1); bot = Math.min(bot, 0);
     var pad = Math.max(1, 0.06 * (top - bot));
     gGeom = drawPlot($("cg"), {
-      xlim: [-R, R], ylim: [bot - pad, top + pad], xlabel: "Δk (rad/m)", ylabel: "signal gain (dB)",
+      xlim: [-R, R], ylim: [bot - pad, top + pad], xlabel: MODE === "chi3" ? "κ (rad/m)" : "Δk (rad/m)", ylabel: "signal gain (dB)",
       y2: { offset: dBm(P.Ps), label: "signal output power" },
       series: [
         { x: scan.dka, y: scan.ga, color: css("--muted"), dash: [6, 5], width: 1.5 },
@@ -1910,7 +2040,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   $("useModes").addEventListener("click", function () {
     var a = +$("fa").value * 1e-6, dn = +$("fdn").value, ls = +$("ls").value * 1e-9;
     var cl = function (v) { return Math.max(1, Math.min(20, Math.round(v * 1e8) / 100)); };
-    $("wp").value = cl(lp01(LP, a, dn).w); $("ws").value = cl(lp01(ls, a, dn).w); $("wimode").value = "fiber";
+    $("wp").value = cl(lp01(LPUMP, a, dn).w); $("ws").value = cl(lp01(ls, a, dn).w); $("wimode").value = "fiber";
     compute();
   });
   $("copySpec").addEventListener("click", function () {
@@ -1953,10 +2083,36 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
   $("modeDbm").addEventListener("click", function () { yMode = "dbm"; this.setAttribute("aria-pressed", "true"); $("modeFlux").setAttribute("aria-pressed", "false"); drawZ(); });
   $("modeFlux").addEventListener("click", function () { yMode = "flux"; this.setAttribute("aria-pressed", "true"); $("modeDbm").setAttribute("aria-pressed", "false"); drawZ(); });
 
+  var CHI3_DEFAULTS = { lp: 1064, n2: 2.6, Pp: 10, L: 30, fa: 1.8, fdn: 0.03, ls: 1550, Ps: 1e-5, disp: "fiber", lm: "none", lprof: "flat", refmode: "same", dk: 0, followModes: true };
+  function setProcess(mode) {
+    document.querySelector('input[name="proc"][value="' + mode + '"]').checked = true;
+    REFFIB = null; MAP.grid = null; OPT.scan = null; $("optResult").innerHTML = ""; refInfo();
+    $("optStatus").textContent = "Process changed: settings reset to the " + (mode === "chi3" ? "χ⁽³⁾" : "χ⁽²⁾") + " defaults.";
+    MODE = mode;
+    applyPreset(Object.assign({}, mode === "chi3" ? CHI3_DEFAULTS : DEFAULTS));
+  }
+  document.querySelectorAll('input[name="proc"]').forEach(function (r) { r.addEventListener("change", function () { setProcess(this.value); }); });
+  document.querySelectorAll("[data-lp]").forEach(function (b) { b.addEventListener("click", function () { $("lp").value = b.dataset.lp; compute(); }); });
+
   var DEFAULTS = { lprof: "flat", refmode: "same", lbc: 0, lbw: 0.05, lbe: 0.003, disp: "fiber", fa: 4.1, fdn: 0.005, gvm: 15, b2: 13, ls: 1550, L: 5, deff: 0.08, wp: 2.5, ws: 5, Pp: 1, Ps: 1e-5, alpha: 10, att: 30, nf: 4, wimode: "lambda", lm: "none", dk: 0 };
   function applyPreset(o) {
-    ["ls", "L", "wp", "ws", "att", "nf", "fa", "fdn", "gvm", "b2", "lbc"].forEach(function (k) { if (k in o) $(k).value = o[k]; });
-    ["deff", "Pp", "Ps", "alpha", "lbw", "lbe"].forEach(function (k) { if (k in o) setSlider($(k), o[k]); });
+    if (o.process) return setProcess(o.process === "reset" ? MODE : o.process);
+    if (MODE === "chi3" && o !== CHI3_DEFAULTS && "deff" in o) {
+      // χ2-tuned presets: keep ΓL and α/Γ, using the current χ3 gain coefficient
+      var G2 = 0.95 * o.deff / 0.08, k3 = P.kappa, L2 = o.L || 5;
+      o.L = L2 * G2 / k3;
+      if ("alpha" in o) o.alpha = o.alpha * k3 / G2;
+      delete o.deff;
+    }
+    if (o === CHI3_DEFAULTS || o.followModes) {
+      o = Object.assign({}, o);
+      ["fa", "fdn", "lp", "ls"].forEach(function (k) { if (k in o) $(k).value = o[k]; });
+      MODE = "chi3"; LPUMP = +$("lp").value * 1e-9;
+      var ls = +$("ls").value * 1e-9, md = fiberModes(ls, idlerOf(ls), +$("fa").value * 1e-6, +$("fdn").value);
+      o.wp = Math.round(md.wp * 1e8) / 100; o.ws = Math.round(md.ws * 1e8) / 100; o.wimode = "fiber";
+    }
+    ["ls", "wp", "ws", "att", "nf", "fa", "fdn", "gvm", "b2", "lbc", "lp"].forEach(function (k) { if (k in o) $(k).value = o[k]; });
+    ["deff", "n2", "Pp", "Ps", "alpha", "lbw", "lbe", "L"].forEach(function (k) { if (k in o) setSlider($(k), o[k]); });
     if ("wimode" in o) $("wimode").value = o.wimode;
     if ("disp" in o) $("disp").value = o.disp;
     if ("lprof" in o) $("lprof").value = o.lprof;
@@ -1967,7 +2123,7 @@ i.v { font-family: var(--f-display); font-size: 1.05em; }
     if (o.fit) fitBand();
   }
   var PRESETS = {
-    reset: DEFAULTS,
+    reset: { process: "reset" },
     lossless: { lm: "none", dk: 0 },
     cont: { lm: "cont", alpha: 40, dk: 0, deff: 0.15, lprof: "flat" },
     flatten: { lm: "cont", alpha: 3, L: 5, dk: 0, deff: 0.08, lprof: "pass", refmode: "gain", fit: true },
