@@ -88,7 +88,7 @@
         "final": "7/10"
       },
       "feedback": {
-        "correct": "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+        "correct": "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -190,7 +190,7 @@
         "final": "5/6"
       },
       "feedback": {
-        "correct": "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+        "correct": "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -292,7 +292,7 @@
         "final": "8/12"
       },
       "feedback": {
-        "correct": "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+        "correct": "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -394,7 +394,7 @@
         "final": "15/18"
       },
       "feedback": {
-        "correct": "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+        "correct": "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -496,7 +496,7 @@
         "final": "28/30"
       },
       "feedback": {
-        "correct": "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+        "correct": "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {

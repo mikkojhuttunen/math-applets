@@ -55,14 +55,14 @@ def make_items(run, date, count=5, start=1):
             lhs, rhs = (n + b) ** 2, n**2 + b**2
             assert lhs != rhs
             options, cid = mc_options(rng, (f"Vasen puoli on ({n} + {b})² = {lhs} ja oikea puoli {rhs}, joten väite on väärä",
-                                            "Oikein: jos lausekkeet olisivat yhtä suuret, niiden arvot olisivat samat."), [
+                                            "Jos lausekkeet olisivat yhtä suuret, niiden arvot olisivat samat."), [
                 (f"Molemmat puolet ovat {rhs}, joten väite on oikein", TID, POW),
                 (f"Vasen puoli on {lhs} ja oikea {rhs}, mutta väite on silti oikein, koska potenssi jakautuu", TID, POW),
                 ("Sijoittamalla ei voi tarkistaa lausekkeiden yhtäsuuruutta", TID, "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret.")])
             payload = {"options": options, "correct": [cid]}
             items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, prompt, payload,
                                    [f"x = {n}: ({n} + {b})² = {lhs}", f"{n}² + {b}² = {rhs}"], f"Arvot {lhs} ja {rhs} eroavat",
-                                   "Oikein: väärä väite paljastuu, kun arvot eivät ole yhtä suuret.", TEMPLATE,
+                                   "Väärä väite paljastuu, kun arvot eivät ole yhtä suuret.", TEMPLATE,
                                    {"b": b, "x": n}, date, run))
             continue
         seen, wl = {fmt(good)}, []
@@ -70,10 +70,10 @@ def make_items(run, date, count=5, start=1):
             if fmt(w) not in seen:
                 seen.add(fmt(w))
                 wl.append((fmt(w), TID, fb))
-        options, cid = mc_options(rng, (fmt(good), "Oikein: (a + b)² = a² + 2ab + b²."), wl)
+        options, cid = mc_options(rng, (fmt(good), "(a + b)² = a² + 2ab + b²."), wl)
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, prompt, payload, steps, fmt(good),
-                               "Oikein: (a + b)² = a² + 2ab + b².", TEMPLATE, {"b": b, "c": c}, date, run))
+                               "(a + b)² = a² + 2ab + b².", TEMPLATE, {"b": b, "c": c}, date, run))
     return items
 
 

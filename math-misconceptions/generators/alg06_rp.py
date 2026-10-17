@@ -59,7 +59,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"constraint": {"type": "solution_equals", "variable": "x", "value": value},
                    "checks": {"valid": valid, "invalid": invalid}}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps,
-                               f"x = {value}", "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku.",
+                               f"x = {value}", "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d, "form": k}, date, run))
     return items
 

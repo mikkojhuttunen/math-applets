@@ -52,7 +52,7 @@
         "final": "x = 6"
       },
       "feedback": {
-        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
         "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
       },
       "provenance": {
@@ -116,7 +116,7 @@
         "final": "x = 15"
       },
       "feedback": {
-        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
         "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
       },
       "provenance": {
@@ -181,7 +181,7 @@
         "final": "x = 0,2"
       },
       "feedback": {
-        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
         "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
       },
       "provenance": {
@@ -246,7 +246,7 @@
         "final": "x = 60"
       },
       "feedback": {
-        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
         "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
       },
       "provenance": {
@@ -310,7 +310,7 @@
         "final": "x = 18"
       },
       "feedback": {
-        "correct": "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
         "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
       },
       "provenance": {

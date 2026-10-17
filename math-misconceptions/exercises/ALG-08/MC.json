@@ -31,7 +31,7 @@
             "id": "a",
             "text": "5x + 15",
             "misconception": null,
-            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+            "feedback": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
           },
           {
             "id": "b",
@@ -64,7 +64,7 @@
         "final": "5x + 15"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
       },
       "provenance": {
         "template": "alg08_mc",
@@ -108,7 +108,7 @@
             "id": "a",
             "text": "3x − 18",
             "misconception": null,
-            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+            "feedback": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
           },
           {
             "id": "b",
@@ -141,7 +141,7 @@
         "final": "3x − 18"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
       },
       "provenance": {
         "template": "alg08_mc",
@@ -196,7 +196,7 @@
             "id": "c",
             "text": "27x + 81",
             "misconception": null,
-            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+            "feedback": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
           },
           {
             "id": "d",
@@ -217,7 +217,7 @@
         "final": "27x + 81"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
       },
       "provenance": {
         "template": "alg08_mc",
@@ -266,7 +266,7 @@
             "id": "b",
             "text": "3x + 15",
             "misconception": null,
-            "feedback": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+            "feedback": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
           },
           {
             "id": "c",
@@ -293,7 +293,7 @@
         "final": "3x + 15"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin."
       },
       "provenance": {
         "template": "alg08_mc",
@@ -342,7 +342,7 @@
             "id": "b",
             "text": "Vasen puoli on 4(1 + 5) = 24 ja oikea puoli 9, joten väite on väärä",
             "misconception": null,
-            "feedback": "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
+            "feedback": "Jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
           },
           {
             "id": "c",
@@ -369,7 +369,7 @@
         "final": "Arvot 24 ja 9 eroavat"
       },
       "feedback": {
-        "correct": "Oikein: väärä sulkujen avaus näkyy arvojen eroavuutena."
+        "correct": "Väärä sulkujen avaus näkyy arvojen eroavuutena."
       },
       "provenance": {
         "template": "alg08_mc",

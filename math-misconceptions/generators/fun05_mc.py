@@ -9,7 +9,7 @@ TEMPLATE = "fun05_mc"
 TID, CODE = "FUN-05", "MC"
 BAD = ("Suora ei välttämättä ole suoraan verrannollisuus. Vain suora y = ax, joka kulkee origon kautta, kaksinkertaistaa "
        "y:n, kun x kaksinkertaistuu. Tarkista laskemalla arvot.")
-GOOD = "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+GOOD = "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
 
 
 def make_items(run, date, count=5, start=1):

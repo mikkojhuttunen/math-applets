@@ -55,7 +55,7 @@ def make_items(run, date, count=5, start=1):
             answer_name = F if n != 1 else S
             wrong_name = S if n != 1 else F
             prompt = f"{head} {tbl} Aika–määrä-kuvaajat leikkaavat, kun t = {t0}. {ask}"
-            ok = (f"{answer_name}", f"Oikein: {answer_name}:n määrä kasvaa {'nopeammin' if n != 1 else 'hitaammin'}. " +
+            ok = (f"{answer_name}", f"{answer_name}:n määrä kasvaa {'nopeammin' if n != 1 else 'hitaammin'}. " +
                   f"A:n nopeus on {(pt('A', q) - pt('A', 0)) // q} ja B:n {(pt('B', q) - pt('B', 0)) // q} {unit}/{tu}.")
             wrongs = [(f"{wrong_name}", "FUN-02", HEIGHT), ("Yhtä nopeasti, koska kuvaajat leikkaavat.", None,
                       "Leikkauspiste kertoo vain, että määrät ovat yhtä suuret sillä hetkellä. Nopeus on kuvaajan jyrkkyys."),
@@ -69,7 +69,7 @@ def make_items(run, date, count=5, start=1):
                       f"Kumpi juoksija on hetkellä t = 1 kauempana lähtöpisteestä ja kumpi juoksee nopeammin?")
             far = S if pt(S, 1) > pt(F, 1) else F
             assert far == S
-            ok = (f"Kauempana on {S}, nopeammin juoksee {F}.", f"Oikein: {S}:n matka on hetkellä t = 1 suurempi, {pt(S, 1)} km, mutta {F}:n nopeus on suurempi, {vF} km/h.")
+            ok = (f"Kauempana on {S}, nopeammin juoksee {F}.", f"{S}:n matka on hetkellä t = 1 suurempi, {pt(S, 1)} km, mutta {F}:n nopeus on suurempi, {vF} km/h.")
             wrongs = [(f"{S} on kauempana ja myös juoksee nopeammin.", "FUN-02", HEIGHT),
                       (f"Kauempana on {F}, nopeammin juoksee {S}.", None, f"Tarkista luvut: t = 1 antaa {S}:lle {pt(S, 1)} km ja {F}:lle {pt(F, 1)} km."),
                       (f"{F} on kauempana ja myös juoksee nopeammin.", None, f"Tarkista luvut: t = 1 antaa {S}:lle {pt(S, 1)} km ja {F}:lle {pt(F, 1)} km.")]
@@ -80,7 +80,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Kahden kohteen matka–aika-kuvaajat leikkaavat, kun t = {t0}. Ennen leikkauspistettä {S}:n kuvaaja on {F}:n kuvaajan yläpuolella. "
                       f"Mikä perustelu on oikea, kun kysytään, kumpi liikkuu nopeammin?")
             ok = (f"Ylempänä oleva {S} on kauempana, mutta nopeutta kuvaa jyrkkyys. {F}:n kuvaaja nousee jyrkemmin, joten {F} liikkuu nopeammin.",
-                  "Oikein: korkeus on matka, jyrkkyys on nopeus.")
+                  "Korkeus on matka, jyrkkyys on nopeus.")
             wrongs = [(f"{S} liikkuu nopeammin, koska sen kuvaaja on ylempänä.", "FUN-02", HEIGHT),
                       (f"{F} liikkuu nopeammin, koska kuvaajat leikkaavat sen kohdalla.", None, "Leikkauspiste ei kerro nopeutta vaan sen, että matkat ovat yhtä suuret."),
                       ("Nopeus on sama, koska kuvaajat kohtaavat.", None, "Kuvaajat voivat leikata, vaikka jyrkkyydet ovat erilaiset.")]
@@ -89,7 +89,7 @@ def make_items(run, date, count=5, start=1):
         options, cid = mc_options(rng, ok, wrongs)
         items.append(base_item(TID, CODE, start + n, ["S4.07"], ["T8", "T15"], 9, level, prompt,
                                {"options": options, "correct": [cid]}, steps, final,
-                               "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus.", TEMPLATE, params, date, run))
+                               "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus.", TEMPLATE, params, date, run))
     return items
 
 

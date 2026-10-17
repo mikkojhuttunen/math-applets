@@ -38,7 +38,7 @@
             "id": "b",
             "text": "9-kertainen",
             "misconception": null,
-            "feedback": "Oikein: pinta-ala muuttuu k²-kertaiseksi, eli 3² = 9."
+            "feedback": "Pinta-ala muuttuu k²-kertaiseksi, eli 3² = 9."
           },
           {
             "id": "c",
@@ -66,7 +66,7 @@
         "final": "9-kertainen"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
       },
       "provenance": {
         "template": "pro01_mc",
@@ -108,7 +108,7 @@
             "id": "a",
             "text": "16-kertainen",
             "misconception": null,
-            "feedback": "Oikein: 20 · 36 = 16 · 45."
+            "feedback": "20 · 36 = 16 · 45."
           },
           {
             "id": "b",
@@ -142,7 +142,7 @@
         "final": "16-kertainen"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
       },
       "provenance": {
         "template": "pro01_mc",
@@ -203,7 +203,7 @@
             "id": "d",
             "text": "200 cm²",
             "misconception": null,
-            "feedback": "Oikein: 50 · 2² = 200."
+            "feedback": "50 · 2² = 200."
           }
         ],
         "correct": [
@@ -218,7 +218,7 @@
         "final": "200 cm²"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
       },
       "provenance": {
         "template": "pro01_mc",
@@ -266,7 +266,7 @@
             "id": "b",
             "text": "9",
             "misconception": null,
-            "feedback": "Oikein: ala on 9-kertainen, joten maalia tarvitaan 1 · 9 = 9 purkkia."
+            "feedback": "Ala on 9-kertainen, joten maalia tarvitaan 1 · 9 = 9 purkkia."
           },
           {
             "id": "c",
@@ -293,7 +293,7 @@
         "final": "9"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
       },
       "provenance": {
         "template": "pro01_mc",
@@ -341,7 +341,7 @@
             "id": "b",
             "text": "Pinta-ala kasvaa sekä leveys- että korkeussuunnassa, joten se on 2² = 4-kertainen.",
             "misconception": null,
-            "feedback": "Oikein: pinta-ala riippuu kahdesta pituudesta."
+            "feedback": "Pinta-ala riippuu kahdesta pituudesta."
           },
           {
             "id": "c",
@@ -368,7 +368,7 @@
         "final": "Pinta-ala kasvaa sekä leveys- että korkeussuunnassa, joten se on 2² = 4-kertainen."
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, pinta-ala kasvaa k²-kertaiseksi."
       },
       "provenance": {
         "template": "pro01_mc",

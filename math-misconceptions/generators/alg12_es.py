@@ -55,7 +55,7 @@ def make_items(run, date, count=5, start=1):
         final = f"Virhe on rivillä {err}"
         items.append(base_item(TID, CODE, start + k, ["S2.01"], ["T10", "T11"], 7, level, intro + ASK, payload,
                                [fix], final,
-                               "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+                               "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
                                TEMPLATE, params, date, run, generic_wrong=GENERIC))
     return items
 

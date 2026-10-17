@@ -61,7 +61,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "error_line": err, "error_type": etype}
         items.append(base_item(TID, CODE, start + k, ["S2.02"], ["T11"], 7, level, prompt, payload, steps,
                                f"Virhe on rivillä {err}",
-                               "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+                               "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
                                TEMPLATE, {"denominators": ds, "numerators": ns, "common": L}, date, run,
                                generic_wrong="Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."))
     return items

@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -97,7 +97,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -151,7 +151,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -205,7 +205,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -258,7 +258,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {

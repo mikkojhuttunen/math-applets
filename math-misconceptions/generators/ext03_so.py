@@ -55,7 +55,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "accept": "exact"}
         items.append(base_item(TID, CODE, start + k, ["S3.07"], ["T14"], 9, level, ctx + ASK, payload,
                                [expl, f"Ratkaisu: {lines[-1]}"], lines[-1],
-                               "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+                               "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
                                TEMPLATE, params, date, run))
     return items
 

@@ -39,7 +39,7 @@
             "id": "b",
             "text": "Mahdollisuus on sama, 3/4",
             "misconception": null,
-            "feedback": "Oikein: molemmissa mustien osuus on 3/4."
+            "feedback": "Molemmissa mustien osuus on 3/4."
           },
           {
             "id": "c",
@@ -66,7 +66,7 @@
         "final": "Yhtä hyvä"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
       },
       "provenance": {
         "template": "prb02_mc",
@@ -110,7 +110,7 @@
             "id": "a",
             "text": "Purkista 2",
             "misconception": null,
-            "feedback": "Oikein: 1/2 > 1/4."
+            "feedback": "1/2 > 1/4."
           },
           {
             "id": "b",
@@ -144,7 +144,7 @@
         "final": "Purkki 2"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
       },
       "provenance": {
         "template": "prb02_mc",
@@ -201,7 +201,7 @@
             "id": "c",
             "text": "Luokalta 8B",
             "misconception": null,
-            "feedback": "Oikein: 7/9 > 7/18."
+            "feedback": "7/9 > 7/18."
           },
           {
             "id": "d",
@@ -223,7 +223,7 @@
         "final": "8B"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
       },
       "provenance": {
         "template": "prb02_mc",
@@ -268,7 +268,7 @@
             "id": "a",
             "text": "Se pienenee: 3/4 → 13/20",
             "misconception": null,
-            "feedback": "Oikein: 13/20 = 13/20 < 3/4."
+            "feedback": "13/20 = 13/20 < 3/4."
           },
           {
             "id": "b",
@@ -301,7 +301,7 @@
         "final": "Pienenee"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
       },
       "provenance": {
         "template": "prb02_mc",
@@ -357,7 +357,7 @@
             "id": "c",
             "text": "Mahdollisuudet ovat samat, koska mustien osuus on molemmissa 3/5",
             "misconception": null,
-            "feedback": "Oikein: 36/60 = 3/5 = 3/5."
+            "feedback": "36/60 = 3/5 = 3/5."
           },
           {
             "id": "d",
@@ -378,7 +378,7 @@
         "final": "Sama osuus"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
       },
       "provenance": {
         "template": "prb02_mc",

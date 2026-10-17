@@ -45,7 +45,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "accept": "exact"}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, ctx + ASK, payload,
                                [expl, f"Sievin muoto: {lines[-1]}"], lines[-1],
-                               "Oikein: (a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+                               "(a + b)² avataan tulona (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
                                TEMPLATE, {"a": a, "b": b, "c": c}, date, run))
     return items
 

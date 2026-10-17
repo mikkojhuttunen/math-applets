@@ -61,7 +61,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"constraint": {"type": "solution_equals", "variable": "x", "value": x},
                    "checks": {"valid": valid, "invalid": invalid}}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, f"x = {x}",
-                               "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+                               "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "e": e, "x": x}, date, run,
                                generic_wrong="Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"))
     return items

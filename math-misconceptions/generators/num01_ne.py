@@ -75,7 +75,7 @@ def make_items(run, date, count=5, start=1):
                    "input_hint": "Kirjoita luku"}
         final = fmt(ans) if isinstance(ans, Decimal) else str(ans)
         items.append(base_item(TID, CODE, start + k, ["S2.06", "S2.08"], tt, 7, level, prompt, payload, steps, final,
-                               "Oikein: desimaaliluvut vertaillaan paikka-arvoittain.", TEMPLATE,
+                               "Desimaaliluvut vertaillaan paikka-arvoittain.", TEMPLATE,
                                {"key": [str(x) for x in (key if isinstance(key, tuple) else [key])]}, date, run))
     return items
 

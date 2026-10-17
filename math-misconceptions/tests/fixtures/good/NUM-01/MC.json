@@ -32,7 +32,7 @@
             "id": "a",
             "text": "0,6",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Hyvin ratkaistu."
           },
           {
             "id": "b",
@@ -58,7 +58,7 @@
         "final": "0,6"
       },
       "feedback": {
-        "correct": "Oikein."
+        "correct": "Hyvin ratkaistu."
       },
       "provenance": {
         "template": "fixture_demo",

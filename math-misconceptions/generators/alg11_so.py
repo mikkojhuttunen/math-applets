@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "accept": "exact"}
         items.append(base_item(TID, CODE, start + k, ["S3.02", "S2.01"], ["T14"], 7, level, ctx + ASK, payload,
                                [expl, f"Sievin muoto: {lines[-1]}"], lines[-1],
-                               "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+                               "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run))
     return items
 

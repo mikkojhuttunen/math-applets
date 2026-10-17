@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
       },
       "provenance": {
@@ -96,7 +96,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
       },
       "provenance": {
@@ -150,7 +150,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
       },
       "provenance": {
@@ -204,7 +204,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
       },
       "provenance": {
@@ -258,7 +258,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Sijoita ratkaisu yhtälöön."
       },
       "provenance": {

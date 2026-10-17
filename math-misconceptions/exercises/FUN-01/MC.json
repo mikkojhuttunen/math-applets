@@ -44,7 +44,7 @@
             "id": "c",
             "text": "Nopeus kasvaa 8 km/h:sta 25 km/h:iin, pysyy vakiona 25 km/h:ssa ja pienenee 25 km/h:sta 6 km/h:iin",
             "misconception": null,
-            "feedback": "Oikein: nopeus muuttuu juuri näin, ja kuvaajan muoto seuraa nopeuden muutosta."
+            "feedback": "Nopeus muuttuu juuri näin, ja kuvaajan muoto seuraa nopeuden muutosta."
           },
           {
             "id": "d",
@@ -66,7 +66,7 @@
         "final": "Nopeus kasvaa 8 km/h:sta 25 km/h:iin, pysyy vakiona 25 km/h:ssa ja pienenee 25 km/h:sta 6 km/h:iin"
       },
       "feedback": {
-        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+        "correct": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
       },
       "provenance": {
         "template": "fun01_mc",
@@ -115,7 +115,7 @@
             "id": "b",
             "text": "Suoraan nouseva kuvaaja: matka kasvaa 15 km joka tunti",
             "misconception": null,
-            "feedback": "Oikein: tasainen vauhti antaa suoran, vaikka tie nousisi ja laskisi."
+            "feedback": "Tasainen vauhti antaa suoran, vaikka tie nousisi ja laskisi."
           },
           {
             "id": "c",
@@ -142,7 +142,7 @@
         "final": "Suoraan nouseva kuvaaja: matka kasvaa 15 km joka tunti"
       },
       "feedback": {
-        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+        "correct": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
       },
       "provenance": {
         "template": "fun01_mc",
@@ -183,7 +183,7 @@
             "id": "a",
             "text": "Vaakasuora jana korkeudella 200 m: matka ei muutu 8 minuuttiin",
             "misconception": null,
-            "feedback": "Oikein: paikallaan seisominen on vaakasuora jana."
+            "feedback": "Paikallaan seisominen on vaakasuora jana."
           },
           {
             "id": "b",
@@ -216,7 +216,7 @@
         "final": "Vaakasuora jana korkeudella 200 m: matka ei muutu 8 minuuttiin"
       },
       "feedback": {
-        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+        "correct": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
       },
       "provenance": {
         "template": "fun01_mc",
@@ -270,7 +270,7 @@
             "id": "c",
             "text": "Seisoo paikallaan, koska matka ei muutu",
             "misconception": null,
-            "feedback": "Oikein: vaakasuora osa tarkoittaa, että suure ei muutu."
+            "feedback": "Vaakasuora osa tarkoittaa, että suure ei muutu."
           },
           {
             "id": "d",
@@ -291,7 +291,7 @@
         "final": "Seisoo paikallaan, koska matka ei muutu"
       },
       "feedback": {
-        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+        "correct": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
       },
       "provenance": {
         "template": "fun01_mc",
@@ -338,7 +338,7 @@
             "id": "a",
             "text": "Ei ole: kuvaaja s = 9t näyttää, miten matka kasvaa ajan kuluessa, ja reitti voi olla mutkainen tai mäkinen",
             "misconception": null,
-            "feedback": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+            "feedback": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
           },
           {
             "id": "b",
@@ -371,7 +371,7 @@
         "final": "Ei ole: kuvaaja s = 9t näyttää, miten matka kasvaa ajan kuluessa, ja reitti voi olla mutkainen tai mäkinen"
       },
       "feedback": {
-        "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
+        "correct": "Kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
       },
       "provenance": {
         "template": "fun01_mc",

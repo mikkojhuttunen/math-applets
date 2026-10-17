@@ -89,7 +89,7 @@
         "final": "x² + 10x + 25"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "correct": "(a + b)² = a² + 2ab + b².",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -190,7 +190,7 @@
         "final": "x² − 18x + 81"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "correct": "(a + b)² = a² + 2ab + b².",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -291,7 +291,7 @@
         "final": "9x² + 12x + 4"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "correct": "(a + b)² = a² + 2ab + b².",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -392,7 +392,7 @@
         "final": "10x + 25"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "correct": "(a + b)² = a² + 2ab + b².",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -493,7 +493,7 @@
         "final": "x² + 12x + 45"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b².",
+        "correct": "(a + b)² = a² + 2ab + b².",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {

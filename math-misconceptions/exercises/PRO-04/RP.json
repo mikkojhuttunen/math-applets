@@ -53,7 +53,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
         "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
       },
       "provenance": {
@@ -119,7 +119,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
         "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
       },
       "provenance": {
@@ -185,7 +185,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
         "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
       },
       "provenance": {
@@ -251,7 +251,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
         "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
       },
       "provenance": {
@@ -317,7 +317,7 @@
         "final": "x = 12"
       },
       "feedback": {
-        "correct": "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
         "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
       },
       "provenance": {

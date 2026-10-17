@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli, num
 
 TEMPLATE = "ext01_me"
 TID, CODE = "EXT-01", "ME"
-GOOD = "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a²."
+GOOD = "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a²."
 GENERIC = "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
 
 

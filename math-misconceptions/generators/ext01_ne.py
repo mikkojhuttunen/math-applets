@@ -52,7 +52,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": float(w), "misconception": "EXT-01", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S2.01", "S2.11"], ["T10", "T11"], 7, "T" if k < 3 else "H", prompt,
-                               payload, steps, num(ans), "Oikein: potenssi lasketaan ennen etumerkkiä.", TEMPLATE, params, date, run))
+                               payload, steps, num(ans), "Potenssi lasketaan ennen etumerkkiä.", TEMPLATE, params, date, run))
     return items
 
 

@@ -59,7 +59,7 @@
         "final": "7x + 35 + 3x"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
       },
       "provenance": {
@@ -131,7 +131,7 @@
         "final": "3x − 6 + 3"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
       },
       "provenance": {
@@ -203,7 +203,7 @@
         "final": "48 + 42x − 3x"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
       },
       "provenance": {
@@ -275,7 +275,7 @@
         "final": "8x + 47"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
       },
       "provenance": {
@@ -347,7 +347,7 @@
         "final": "3x + 21 + 3"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Kerroin kertoo kaikki sulun sisällä olevat termit, ei vain ensimmäistä."
       },
       "provenance": {

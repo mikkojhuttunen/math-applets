@@ -55,7 +55,7 @@ def make_items(run, date, count=5, start=1):
                    for i, (t, e, m) in enumerate(opts)]
         payload = {"reference": ref, "variables": vars_, "samples": samples, "options": options}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, steps[-1],
-                               "Oikein: vain samanmuotoiset termit lasketaan yhteen.", TEMPLATE,
+                               "Vain samanmuotoiset termit lasketaan yhteen.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "d": d}, date, run,
                                generic_wrong="Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."))
     return items

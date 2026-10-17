@@ -53,7 +53,7 @@
         "final": "o = 84"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön ratkaisu on pyydetty luku."
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
       },
       "provenance": {
         "template": "alg10_rp",
@@ -117,7 +117,7 @@
         "final": "p = 108"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön ratkaisu on pyydetty luku."
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
       },
       "provenance": {
         "template": "alg10_rp",
@@ -181,7 +181,7 @@
         "final": "k = 66"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön ratkaisu on pyydetty luku."
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
       },
       "provenance": {
         "template": "alg10_rp",
@@ -245,7 +245,7 @@
         "final": "h = 4"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön ratkaisu on pyydetty luku."
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
       },
       "provenance": {
         "template": "alg10_rp",
@@ -310,7 +310,7 @@
         "final": "k = 28"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön ratkaisu on pyydetty luku."
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
       },
       "provenance": {
         "template": "alg10_rp",

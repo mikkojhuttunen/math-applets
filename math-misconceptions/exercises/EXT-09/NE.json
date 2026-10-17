@@ -51,7 +51,7 @@
         "final": "2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+        "correct": "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
       },
       "provenance": {
         "template": "ext09_ne",
@@ -114,7 +114,7 @@
         "final": "−3"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+        "correct": "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
       },
       "provenance": {
         "template": "ext09_ne",
@@ -176,7 +176,7 @@
         "final": "7"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+        "correct": "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
       },
       "provenance": {
         "template": "ext09_ne",
@@ -244,7 +244,7 @@
         "final": "2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+        "correct": "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
       },
       "provenance": {
         "template": "ext09_ne",
@@ -301,7 +301,7 @@
         "final": "16"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+        "correct": "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
       },
       "provenance": {
         "template": "ext09_ne",

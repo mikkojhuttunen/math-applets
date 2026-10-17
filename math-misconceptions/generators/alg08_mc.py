@@ -58,7 +58,7 @@ def make_items(run, date, count=5, start=1):
             lhs, rhs = expr.subs(x, at), wrong_expr.subs(x, at)
             assert lhs != rhs
             options, cid = mc_options(rng, (f"Vasen puoli on {a}({at} + {b}) = {lhs} ja oikea puoli {rhs}, joten väite on väärä",
-                                            "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."), [
+                                            "Jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."), [
                 (f"Molemmat puolet saavat arvon {lhs}, joten väite on oikein", TID, FIRST),
                 (f"Sijoittamalla ei voi tarkistaa sulkulausekkeen avaamista", TID, "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret."),
                 (f"Vasen puoli on {lhs} ja oikea {rhs}, mutta väite on silti oikein, koska kerroin {a} on molemmissa", TID,
@@ -66,7 +66,7 @@ def make_items(run, date, count=5, start=1):
             payload = {"options": options, "correct": [cid]}
             items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload,
                                    [f"x = {at}: {a}({at} + {b}) = {lhs}", f"{fmt(wrong_expr)} = {rhs}"],
-                                   f"Arvot {lhs} ja {rhs} eroavat", "Oikein: väärä sulkujen avaus näkyy arvojen eroavuutena.",
+                                   f"Arvot {lhs} ja {rhs} eroavat", "Väärä sulkujen avaus näkyy arvojen eroavuutena.",
                                    TEMPLATE, {"a": a, "b": b, "x": at}, date, run))
             continue
         cands = [(w, m, fb) for w, m, fb in wrongs if sp.expand(w - good) != 0]
@@ -75,10 +75,10 @@ def make_items(run, date, count=5, start=1):
             if fmt(w) not in seen:
                 seen.add(fmt(w))
                 wl.append((fmt(w), m, fb))
-        options, cid = mc_options(rng, (fmt(good), "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."), wl)
+        options, cid = mc_options(rng, (fmt(good), "Kerroin kertoo jokaisen sulun sisällä olevan termin."), wl)
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, fmt(good),
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "sign": sign}, date, run,
                                misconceptions=[TID] + (["ALG-11"] if any(o["misconception"] == "ALG-11" for o in options) else [])))
     return items

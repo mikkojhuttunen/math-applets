@@ -65,7 +65,7 @@
         "final": "2x + 6"
       },
       "feedback": {
-        "correct": "Oikein."
+        "correct": "Hyvin ratkaistu."
       },
       "provenance": {
         "template": "fixture_demo",

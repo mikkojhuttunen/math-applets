@@ -8,7 +8,7 @@ from gen_common import base_item, cli
 TEMPLATE = "pro03_rp"
 TID, CODE = "PRO-03", "RP"
 GENERIC = "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
-GOOD = "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle."
+GOOD = "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle."
 
 
 def make_items(run, date, count=5, start=1):

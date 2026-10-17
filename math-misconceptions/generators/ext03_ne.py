@@ -12,7 +12,7 @@ FLIP = {">": "<", "<": ">", "≥": "≤", "≤": "≥"}
 HOLDS = {">": lambda u, v: u > v, "<": lambda u, v: u < v, "≥": lambda u, v: u >= v, "≤": lambda u, v: u <= v}
 BAD = ("Epäyhtälömerkin suunta kääntyy, kun jaetaan negatiivisella luvulla. "
        "Tarkista sijoittamalla muutama luku alkuperäiseen epäyhtälöön.")
-GOOD = "Oikein: negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
+GOOD = "Negatiivisella luvulla jaettaessa merkki kääntyy, ja ratkaisut lasketaan oikealta puolelta rajaa."
 
 
 def make_items(run, date, count=5, start=1):

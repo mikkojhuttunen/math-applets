@@ -32,7 +32,7 @@
             "id": "a",
             "text": "27-kertainen",
             "misconception": null,
-            "feedback": "Oikein: tilavuus muuttuu k³-kertaiseksi, eli 3³ = 27."
+            "feedback": "Tilavuus muuttuu k³-kertaiseksi, eli 3³ = 27."
           },
           {
             "id": "b",
@@ -66,7 +66,7 @@
         "final": "27-kertainen"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
       },
       "provenance": {
         "template": "pro02_mc",
@@ -114,7 +114,7 @@
             "id": "b",
             "text": "64-kertainen",
             "misconception": null,
-            "feedback": "Oikein: 8 · 12 · 16 = 64 · 24."
+            "feedback": "8 · 12 · 16 = 64 · 24."
           },
           {
             "id": "c",
@@ -142,7 +142,7 @@
         "final": "64-kertainen"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
       },
       "provenance": {
         "template": "pro02_mc",
@@ -186,7 +186,7 @@
             "id": "a",
             "text": "160 cm³",
             "misconception": null,
-            "feedback": "Oikein: 20 · 2³ = 160."
+            "feedback": "20 · 2³ = 160."
           },
           {
             "id": "b",
@@ -219,7 +219,7 @@
         "final": "160 cm³"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
       },
       "provenance": {
         "template": "pro02_mc",
@@ -279,7 +279,7 @@
             "id": "d",
             "text": "24 l",
             "misconception": null,
-            "feedback": "Oikein: tilavuus on 8-kertainen, joten 3 · 8 = 24 l."
+            "feedback": "Tilavuus on 8-kertainen, joten 3 · 8 = 24 l."
           }
         ],
         "correct": [
@@ -294,7 +294,7 @@
         "final": "24 l"
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
       },
       "provenance": {
         "template": "pro02_mc",
@@ -348,7 +348,7 @@
             "id": "c",
             "text": "Tilavuudessa on kolme ulottuvuutta: pituus, leveys ja korkeus. Siksi se on 2³ = 8-kertainen.",
             "misconception": null,
-            "feedback": "Oikein: tilavuus riippuu kolmesta pituudesta."
+            "feedback": "Tilavuus riippuu kolmesta pituudesta."
           },
           {
             "id": "d",
@@ -369,7 +369,7 @@
         "final": "Tilavuudessa on kolme ulottuvuutta: pituus, leveys ja korkeus. Siksi se on 2³ = 8-kertainen."
       },
       "feedback": {
-        "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
+        "correct": "Kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."
       },
       "provenance": {
         "template": "pro02_mc",

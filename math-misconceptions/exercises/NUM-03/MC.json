@@ -31,7 +31,7 @@
             "id": "a",
             "text": "8/12",
             "misconception": null,
-            "feedback": "Oikein: nimittäjä pysyy samana ja osoittajat lasketaan yhteen."
+            "feedback": "Nimittäjä pysyy samana ja osoittajat lasketaan yhteen."
           },
           {
             "id": "b",
@@ -64,7 +64,7 @@
         "final": "8/12"
       },
       "feedback": {
-        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+        "correct": "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
       },
       "provenance": {
         "template": "num03_mc",
@@ -106,7 +106,7 @@
             "id": "a",
             "text": "5/6",
             "misconception": null,
-            "feedback": "Oikein: yhteinen nimittäjä on 12, ja 6/12 + 4/12 = 10/12."
+            "feedback": "Yhteinen nimittäjä on 12, ja 6/12 + 4/12 = 10/12."
           },
           {
             "id": "b",
@@ -139,7 +139,7 @@
         "final": "5/6"
       },
       "feedback": {
-        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+        "correct": "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
       },
       "provenance": {
         "template": "num03_mc",
@@ -195,7 +195,7 @@
             "id": "c",
             "text": "29/40 l",
             "misconception": null,
-            "feedback": "Oikein: yhteinen nimittäjä on 40, ja 5/40 + 24/40 = 29/40."
+            "feedback": "Yhteinen nimittäjä on 40, ja 5/40 + 24/40 = 29/40."
           },
           {
             "id": "d",
@@ -216,7 +216,7 @@
         "final": "29/40 l"
       },
       "feedback": {
-        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+        "correct": "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
       },
       "provenance": {
         "template": "num03_mc",
@@ -278,7 +278,7 @@
             "id": "d",
             "text": "Suurempi kuin 1, koska kumpikin yhteenlaskettava on yli puoli",
             "misconception": null,
-            "feedback": "Oikein: molemmat luvut ovat yli 1/2, joten summa on yli 1."
+            "feedback": "Molemmat luvut ovat yli 1/2, joten summa on yli 1."
           }
         ],
         "correct": [
@@ -293,7 +293,7 @@
         "final": "Suurempi kuin 1"
       },
       "feedback": {
-        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+        "correct": "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
       },
       "provenance": {
         "template": "num03_mc",
@@ -343,7 +343,7 @@
             "id": "b",
             "text": "Yhteenlaskettavat ovat yhdessä 5/6, mikä on eri kuin 2/5; yhteenlaskettavat on ensin muutettava samannimisiksi",
             "misconception": null,
-            "feedback": "Oikein: summa on laskettava yhteisellä nimittäjällä."
+            "feedback": "Summa on laskettava yhteisellä nimittäjällä."
           },
           {
             "id": "c",
@@ -370,7 +370,7 @@
         "final": "Summa on laskettava samannimisillä murtoluvuilla"
       },
       "feedback": {
-        "correct": "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
+        "correct": "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä."
       },
       "provenance": {
         "template": "num03_mc",

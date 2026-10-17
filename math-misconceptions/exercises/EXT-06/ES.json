@@ -41,7 +41,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "correct": "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
       },
       "provenance": {
@@ -97,7 +97,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "correct": "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
       },
       "provenance": {
@@ -153,7 +153,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "correct": "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
       },
       "provenance": {
@@ -209,7 +209,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "correct": "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
       },
       "provenance": {
@@ -265,7 +265,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
+        "correct": "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, cos α = viereinen kateetti / hypotenuusa."
       },
       "provenance": {

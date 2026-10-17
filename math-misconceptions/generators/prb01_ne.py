@@ -69,7 +69,7 @@ def make_items(run, date, count=5, start=1):
                    "input_hint": "Kirjoita luku"}
         final = str(int(ans))
         items.append(base_item(TID, CODE, start + k, ["S6.06"], ["T19"], 9, "T" if k < 3 else "H", prompt,
-                               payload, steps, final, "Oikein: satunnaisilla toistoilla ei ole muistia.", TEMPLATE, params, date, run))
+                               payload, steps, final, "Satunnaisilla toistoilla ei ole muistia.", TEMPLATE, params, date, run))
     return items
 
 

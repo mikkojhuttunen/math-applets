@@ -52,7 +52,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -115,7 +115,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 9."
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 9."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -178,7 +178,7 @@
         "final": "x = 6"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 6."
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 6."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -242,7 +242,7 @@
         "final": "x = 4"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 4."
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 4."
       },
       "provenance": {
         "template": "alg02_rp",
@@ -305,7 +305,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 5."
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 5."
       },
       "provenance": {
         "template": "alg02_rp",

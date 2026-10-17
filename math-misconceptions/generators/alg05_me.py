@@ -47,7 +47,7 @@ def make_items(run, date, count=5, start=1):
                    for i, (t, e, m) in enumerate(opts)]
         payload = {"reference": ref, "variables": vars_, "samples": samples, "options": options}
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T15"], 7, level, prompt, payload, steps, steps[0],
-                               "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.", TEMPLATE,
+                               "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.", TEMPLATE,
                                {"c": c, "d": d, "letter": L}, date, run,
                                generic_wrong="Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. "
                                              "Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."))

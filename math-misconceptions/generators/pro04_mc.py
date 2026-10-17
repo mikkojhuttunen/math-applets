@@ -9,7 +9,7 @@ TEMPLATE = "pro04_mc"
 TID, CODE = "PRO-04", "MC"
 BAD = ("Piirin kasvaminen ei tarkoita pinta-alan kasvamista. Ohut ja pitkä suorakulmio voi olla pienempi alaltaan "
        "kuin pienempipiirinen, mutta tasaisempi kuvio.")
-GOOD = "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+GOOD = "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
 
 
 def thin_and_square(rng):
@@ -31,7 +31,7 @@ def make_items(run, date, count=5, start=1):
         if k == 0:
             level = "T"
             prompt = f"Suorakulmion sivut ovat {w} cm ja {h} cm. Neliön sivu on {s} cm. Kummalla kuviolla on suurempi pinta-ala?"
-            ok = (f"Neliöllä: sen ala on {as_} cm² ja suorakulmion {ar} cm²", f"Oikein: {s} · {s} = {as_} cm² ja {w} · {h} = {ar} cm².")
+            ok = (f"Neliöllä: sen ala on {as_} cm² ja suorakulmion {ar} cm²", f"{s} · {s} = {as_} cm² ja {w} · {h} = {ar} cm².")
             wrongs = [(f"Suorakulmiolla, koska sen piiri on {pr} cm ja neliön {ps} cm", TID, BAD),
                       ("Kuvioilla on sama ala", None, f"Alat ovat {ar} cm² ja {as_} cm²."),
                       ("Sitä ei voi tietää, koska muodot ovat erilaiset", None, "Pinta-alat voi laskea ja verrata.")]
@@ -41,7 +41,7 @@ def make_items(run, date, count=5, start=1):
             level = "T"
             prompt = (f"Huone A on {w} m × {h} m ja huone B on {s} m × {s} m. Huoneen A lattian reunalistaa kuluu enemmän. "
                       "Onko huoneen A lattiapinta-ala silloin suurempi?")
-            ok = (f"Ei: huoneen A ala on {ar} m² ja huoneen B {as_} m²", f"Oikein: A:n piiri on suurempi ({pr} m > {ps} m), mutta ala pienempi.")
+            ok = (f"Ei: huoneen A ala on {ar} m² ja huoneen B {as_} m²", f"A:n piiri on suurempi ({pr} m > {ps} m), mutta ala pienempi.")
             wrongs = [("Kyllä, koska sen piiri on suurempi", TID, BAD),
                       ("Kyllä, koska reunalistaa kuluu enemmän ja ala on silloin aina suurempi", TID, BAD),
                       (f"Ei: huoneiden alat ovat yhtä suuret, {ar} m²", None, f"Huoneen B ala on {as_} m².")]
@@ -61,7 +61,7 @@ def make_items(run, date, count=5, start=1):
             level = "H"
             prompt = (f"Kaksi pellon aitausta: suorakulmio {w} m × {h} m ja neliö {s} m × {s} m. Aitausten sisälle kylvetään ruohoa. "
                       "Kummassa aitauksessa on enemmän ruohoa ja kummassa kuluu enemmän aitaa?")
-            ok = (f"Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon", f"Oikein: neliön ala {as_} m² > {ar} m², suorakulmion piiri {pr} m > {ps} m.")
+            ok = (f"Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon", f"Neliön ala {as_} m² > {ar} m², suorakulmion piiri {pr} m > {ps} m.")
             wrongs = [("Suorakulmiossa on enemmän ruohoa ja siihen kuluu enemmän aitaa", TID, BAD),
                       ("Neliössä on enemmän ruohoa ja siihen kuluu enemmän aitaa", None, f"Neliön piiri on {ps} m, suorakulmion {pr} m."),
                       ("Aitausten ruohomäärät ja aitamäärät ovat samat", None, "Sekä alat että piirit eroavat.")]

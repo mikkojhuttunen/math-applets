@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": "FUN-02", "feedback": HEIGHT} for w in wrong],
                    "input_hint": "Kirjoita kokonaisluku"}
         items.append(base_item(TID, CODE, start + n, ["S4.07"], ["T8", "T15"], 9, level, prompt, payload, steps, str(ans),
-                               "Oikein: nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä.", TEMPLATE, params, date, run))
+                               "Nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä.", TEMPLATE, params, date, run))
     return items
 
 

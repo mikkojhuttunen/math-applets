@@ -40,7 +40,7 @@ def make_items(run, date, count=5, start=1):
                 prompt = f"{intro.format(a=fmt(a), b=fmt(b))} {q}"
                 unit = " " + unit
             assert long_ < short and digits(long_) > digits(short)
-            correct = (f"{fmt(short)}{unit}", f"Oikein: {fmt(short)} = {fmt(short)}0 ja sadasosina {fmt(short)}0 > {fmt(long_)}.")
+            correct = (f"{fmt(short)}{unit}", f"{fmt(short)} = {fmt(short)}0 ja sadasosina {fmt(short)}0 > {fmt(long_)}.")
             wrongs = [(f"{fmt(long_)}{unit}", "NUM-01", BAD), ("Luvut ovat yhtä suuret" if not unit else "Ne ovat yhtä suuret", None, SAME),
                       ("Sitä ei voi päätellä", None, UNSURE)]
             options, cid = mc_options(rng, correct, wrongs)
@@ -67,7 +67,7 @@ def make_items(run, date, count=5, start=1):
             rng.shuffle(ordered)
             prompt = intro.format(a=fmt(ordered[0]), b=fmt(ordered[1]), c=fmt(ordered[2]), d=fmt(ordered[3])) + " " + q
             rest = [x for x in vals if x not in (big, trap)]
-            correct = (f"{fmt(big)} {unit}", f"Oikein: {fmt(big)} on suurin, kun luvut vertaillaan samoilla paikka-arvoilla.")
+            correct = (f"{fmt(big)} {unit}", f"{fmt(big)} on suurin, kun luvut vertaillaan samoilla paikka-arvoilla.")
             wrongs = [(f"{fmt(trap)} {unit}", "NUM-01", BAD)] + [
                 (f"{fmt(x)} {unit}", None, "Vertaa ensin kokonaisosia ja sitten desimaaleja.") for x in rest]
             options, cid = mc_options(rng, correct, wrongs)
@@ -83,7 +83,7 @@ def make_items(run, date, count=5, start=1):
                 short, long_ = pair(rng, whole)
             prompt = (f"Kumpi luku on suurempi, {fmt(short)} vai {fmt(long_)}? Valitse oikea perustelu.")
             correct = (f"{fmt(short)} = {fmt(short)}0 eli {int(short * 100)} sadasosaa, ja {int(short * 100)} > {int(long_ * 100)}",
-                       "Oikein: luvut vertaillaan samoissa paikka-arvoissa.")
+                       "Luvut vertaillaan samoissa paikka-arvoissa.")
             wrongs = [(f"{fmt(long_)} on suurempi, koska {int(long_ * 100)} > {int(short * 10)}", "NUM-01", BAD),
                       (f"{fmt(short)} on suurempi, koska siinä on vähemmän numeroita", "NUM-02",
                        "Tulos on oikea, mutta perustelu ei ole: numeroiden määrä ei ratkaise. Muuta luvut samoiksi paikka-arvoiksi."),
@@ -99,7 +99,7 @@ def make_items(run, date, count=5, start=1):
         mis = ["NUM-01"] + (["NUM-02"] if k == 4 else [])
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S2.06", "S2.08"], tt, 7, level, prompt, payload, steps, final,
-                               "Oikein: desimaaliluvut vertaillaan paikka-arvoittain.", TEMPLATE, params, date, run,
+                               "Desimaaliluvut vertaillaan paikka-arvoittain.", TEMPLATE, params, date, run,
                                misconceptions=mis))
     return items
 

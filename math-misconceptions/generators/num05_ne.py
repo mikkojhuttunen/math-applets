@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
                    "input_hint": "Kirjoita luku"}
         final = fmt(ans) if isinstance(ans, Decimal) else str(ans)
         items.append(base_item(TID, CODE, start + k, ["S2.03", "S2.06"], ["T11"], 7, "T" if k < 3 else "H", prompt,
-                               payload, steps, final, "Oikein: jakaja alle 1 suurentaa osamäärää.", TEMPLATE, params, date, run))
+                               payload, steps, final, "Jakaja alle 1 suurentaa osamäärää.", TEMPLATE, params, date, run))
     return items
 
 

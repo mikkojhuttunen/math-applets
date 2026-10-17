@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli
 
 TEMPLATE = "ext09_rp"
 TID, CODE = "EXT-09", "RP"
-GOOD = "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0."
+GOOD = "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0."
 GENERIC = ("Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin "
            "eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0.")
 

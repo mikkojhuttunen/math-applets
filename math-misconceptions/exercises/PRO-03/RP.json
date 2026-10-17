@@ -52,7 +52,7 @@
         "final": "x = 8"
       },
       "feedback": {
-        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
         "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
       },
       "provenance": {
@@ -117,7 +117,7 @@
         "final": "x = 11"
       },
       "feedback": {
-        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
         "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
       },
       "provenance": {
@@ -182,7 +182,7 @@
         "final": "x = 11"
       },
       "feedback": {
-        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
         "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
       },
       "provenance": {
@@ -247,7 +247,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
         "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
       },
       "provenance": {
@@ -312,7 +312,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
         "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
       },
       "provenance": {

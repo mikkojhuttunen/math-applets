@@ -67,7 +67,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "blank_index": blank, "answer": answer}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload,
                                steps + [f"Ratkaisu: x = {x}"], ref,
-                               "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+                               "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "e": e, "x": x}, date, run, generic_wrong=GENERIC))
     return items
 

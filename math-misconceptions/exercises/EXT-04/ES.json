@@ -41,7 +41,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
@@ -92,7 +92,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
@@ -144,7 +144,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
@@ -196,7 +196,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
@@ -249,7 +249,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri."
       },
       "provenance": {

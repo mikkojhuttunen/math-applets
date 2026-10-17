@@ -40,7 +40,7 @@ def make_items(run, date, count=5, start=1):
             a, c = rng.sample(range(1, d // 2), 2)
             s = Fraction(a, d) + Fraction(c, d)
             prompt = f"Laske {a}/{d} + {c}/{d}."
-            correct = (f"{fr(s)}" if s.denominator != d else f"{a + c}/{d}", "Oikein: nimittäjä pysyy samana ja osoittajat lasketaan yhteen.")
+            correct = (f"{fr(s)}" if s.denominator != d else f"{a + c}/{d}", "Nimittäjä pysyy samana ja osoittajat lasketaan yhteen.")
             ctext = f"{a + c}/{d}"
             correct = (ctext, correct[1])
             wrongs = [(f"{a + c}/{2 * d}", "NUM-03", BAD), (f"{a * c}/{d}", None, SAME),
@@ -62,7 +62,7 @@ def make_items(run, date, count=5, start=1):
                 ctext += " l"
             wr = naive(a, b, c, d)
             assert Fraction(a + c, b + d) != s
-            correct = (ctext, f"Oikein: yhteinen nimittäjä on {L}, ja {a * (L // b)}/{L} + {c * (L // d)}/{L} = {num}/{L}.")
+            correct = (ctext, f"Yhteinen nimittäjä on {L}, ja {a * (L // b)}/{L} + {c * (L // d)}/{L} = {num}/{L}.")
             unit = " l" if k == 2 else ""
             wrongs = [(wr + unit, "NUM-03", BAD), (f"{a * c}/{b * d}" + unit, None,
                       "Murtolukuja ei yhteenlaskussa kerrota keskenään. Muuta ne samannimisiksi."),
@@ -82,7 +82,7 @@ def make_items(run, date, count=5, start=1):
                 if s > 1 and Fraction(a + c, b + d) < 1 and b % d and d % b:
                     break
             prompt = f"Laske summa {a}/{b} + {c}/{d} arvioiden. Onko summa suurempi vai pienempi kuin 1?"
-            correct = ("Suurempi kuin 1, koska kumpikin yhteenlaskettava on yli puoli", "Oikein: molemmat luvut ovat yli 1/2, joten summa on yli 1.")
+            correct = ("Suurempi kuin 1, koska kumpikin yhteenlaskettava on yli puoli", "Molemmat luvut ovat yli 1/2, joten summa on yli 1.")
             wrongs = [(f"Pienempi kuin 1, koska {a}/{b} + {c}/{d} = {a + c}/{b + d}", "NUM-03", BAD),
                       ("Täsmälleen 1", None, "Laske arvio: kumpi luku on suurempi kuin 1/2?"),
                       ("Sitä ei voi arvioida ilman laskemista", None, "Arvion voi tehdä vertaamalla lukuja puoleen.")]
@@ -97,7 +97,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Oppilas laskee {a}/{b} + {c}/{d} = {a + c}/{b + d}. Miksi vastaus ei voi olla oikein? Valitse paras perustelu.")
             correct = (f"Yhteenlaskettavat ovat yhdessä {fr(s)}, mikä on eri kuin {a + c}/{b + d}; "
                        f"yhteenlaskettavat on ensin muutettava samannimisiksi",
-                       "Oikein: summa on laskettava yhteisellä nimittäjällä.")
+                       "Summa on laskettava yhteisellä nimittäjällä.")
             assert s != Fraction(a + c, b + d)
             wrongs = [(f"{a + c}/{b + d} on oikea vastaus, koska osoittajat ja nimittäjät lasketaan yhteen", "NUM-03", BAD),
                       (f"Vastaus on oikein, koska {a} + {c} = {a + c} ja {b} + {d} = {b + d}", "NUM-03", BAD),
@@ -112,7 +112,7 @@ def make_items(run, date, count=5, start=1):
         options, cid = mc_options(rng, correct, wrongs)
         items.append(base_item(TID, CODE, start + k, ["S2.02"], ["T11"], 7, level, prompt,
                                {"options": options, "correct": [cid]}, steps, final,
-                               "Oikein: murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä.",
+                               "Murtolukujen yhteenlaskussa osoittajat lasketaan yhteen samannimisinä.",
                                TEMPLATE, params, date, run))
     return items
 

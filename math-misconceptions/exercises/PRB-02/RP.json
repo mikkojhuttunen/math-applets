@@ -55,7 +55,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
         "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
       },
       "provenance": {
@@ -120,7 +120,7 @@
         "final": "x = 40"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
         "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
       },
       "provenance": {
@@ -185,7 +185,7 @@
         "final": "x = 0,3"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
         "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
       },
       "provenance": {
@@ -249,7 +249,7 @@
         "final": "x = 40"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
         "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
       },
       "provenance": {
@@ -315,7 +315,7 @@
         "final": "x = 48"
       },
       "feedback": {
-        "correct": "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
         "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
       },
       "provenance": {

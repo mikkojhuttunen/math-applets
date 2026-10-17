@@ -12,7 +12,7 @@ FLIP = {">": "<", "<": ">", "≥": "≤", "≤": "≥"}
 HOLDS = {">": lambda u, v: u > v, "<": lambda u, v: u < v, "≥": lambda u, v: u >= v, "≤": lambda u, v: u <= v}
 BAD = ("Kun epäyhtälö kerrotaan tai jaetaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy. "
        "Tarkista sijoittamalla: väitetyn ratkaisun luku ei toteuta alkuperäistä epäyhtälöä.")
-GOOD = "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+GOOD = "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
 
 
 def ineq(p, q, rel, rhs, var="x"):
@@ -70,7 +70,7 @@ def make_items(run, date, count=5, start=1):
                       "Mikä perustelu osoittaa, että väite on väärä?")
             correct = (f"Luku x = {num(xt)} toteuttaa väitteen, mutta {num(p * xt)} ei ole {rel} {num(rhs)}; "
                        f"negatiivisella luvulla jaettaessa merkki kääntyy, ja oikea ratkaisu on {sol_text}",
-                       "Oikein: sijoittamalla huomaa, että merkin suunta täytyy kääntää.")
+                       "Sijoittamalla huomaa, että merkin suunta täytyy kääntää.")
             wrongs = [("Väite on oikein, koska jakaminen ei muuta epäyhtälömerkin suuntaa", TID, BAD),
                       (f"Väite on väärä, koska raja-arvo on {num(-rr)} eikä {num(rr)}", None,
                        f"Raja-arvo {num(rr)} on oikein. Virhe on merkin suunnassa."),

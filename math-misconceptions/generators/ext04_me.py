@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli
 
 TEMPLATE = "ext04_me"
 TID, CODE = "EXT-04", "ME"
-GOOD = "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a."
+GOOD = "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a."
 GENERIC = ("Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. "
            "Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a.")
 

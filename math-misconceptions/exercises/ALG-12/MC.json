@@ -44,7 +44,7 @@
             "id": "c",
             "text": "9",
             "misconception": null,
-            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+            "feedback": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
           },
           {
             "id": "d",
@@ -64,7 +64,7 @@
         "final": "9"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
       },
       "provenance": {
         "template": "alg12_mc",
@@ -119,7 +119,7 @@
             "id": "c",
             "text": "−7",
             "misconception": null,
-            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+            "feedback": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
           },
           {
             "id": "d",
@@ -139,7 +139,7 @@
         "final": "−7"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
       },
       "provenance": {
         "template": "alg12_mc",
@@ -182,7 +182,7 @@
             "id": "a",
             "text": "14",
             "misconception": null,
-            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+            "feedback": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
           },
           {
             "id": "b",
@@ -214,7 +214,7 @@
         "final": "14"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
       },
       "provenance": {
         "template": "alg12_mc",
@@ -257,7 +257,7 @@
             "id": "a",
             "text": "Väite on väärin: 4 − (−6) = 10",
             "misconception": null,
-            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+            "feedback": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
           },
           {
             "id": "b",
@@ -290,7 +290,7 @@
         "final": "4 − (−6) = 10"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
       },
       "provenance": {
         "template": "alg12_mc",
@@ -339,7 +339,7 @@
             "id": "b",
             "text": "Koska negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä",
             "misconception": null,
-            "feedback": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+            "feedback": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
           },
           {
             "id": "c",
@@ -365,7 +365,7 @@
         "final": "Negatiivisen luvun vähentäminen on vastaluvun lisäämistä"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
       },
       "provenance": {
         "template": "alg12_mc",

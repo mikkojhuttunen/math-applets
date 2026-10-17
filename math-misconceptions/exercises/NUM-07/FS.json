@@ -49,7 +49,7 @@
         "final": "110/100 · x = 44"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
       },
       "provenance": {
@@ -110,7 +110,7 @@
         "final": "75/100 · x = 90"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
       },
       "provenance": {
@@ -174,7 +174,7 @@
         "final": "x = 240"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
       },
       "provenance": {
@@ -238,7 +238,7 @@
         "final": "x = 160"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
       },
       "provenance": {
@@ -299,7 +299,7 @@
         "final": "150/100 · x = 180"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, joten uusi määrä on (1 ± prosentti) · x."
       },
       "provenance": {

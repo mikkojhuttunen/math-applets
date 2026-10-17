@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
       },
       "provenance": {
@@ -96,7 +96,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
       },
       "provenance": {
@@ -150,7 +150,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
       },
       "provenance": {
@@ -204,7 +204,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
       },
       "provenance": {
@@ -259,7 +259,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+        "correct": "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uuden rivin yhtälöllä sama ratkaisu kuin edellisellä? Prosentti lasketaan alkuperäisestä määrästä x, ei annetusta uudesta määrästä."
       },
       "provenance": {

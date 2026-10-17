@@ -76,7 +76,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": float(w), "misconception": "PRB-02", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S6.06", "S2.02"], ["T11", "T19"], 9, "T" if k < 3 else "H", prompt,
-                               payload, steps, str(ans), "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+                               payload, steps, str(ans), "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
                                TEMPLATE, params, date, run))
     return items
 

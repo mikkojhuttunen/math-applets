@@ -37,7 +37,7 @@
             "id": "b",
             "text": "On, koska jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, nimittäin 3",
             "misconception": null,
-            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+            "feedback": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
           },
           {
             "id": "c",
@@ -64,7 +64,7 @@
         "final": "On funktio"
       },
       "feedback": {
-        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+        "correct": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
       },
       "provenance": {
         "template": "fun04_mc",
@@ -111,7 +111,7 @@
             "id": "b",
             "text": "On: jokaista käyntikertojen määrää vastaa täsmälleen yksi maksu, 20 €",
             "misconception": null,
-            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+            "feedback": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
           },
           {
             "id": "c",
@@ -138,7 +138,7 @@
         "final": "On funktio"
       },
       "feedback": {
-        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+        "correct": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
       },
       "provenance": {
         "template": "fun04_mc",
@@ -191,7 +191,7 @@
             "id": "c",
             "text": "4",
             "misconception": null,
-            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+            "feedback": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
           },
           {
             "id": "d",
@@ -212,7 +212,7 @@
         "final": "4"
       },
       "feedback": {
-        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+        "correct": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
       },
       "provenance": {
         "template": "fun04_mc",
@@ -272,7 +272,7 @@
             "id": "d",
             "text": "Se on funktion kuvaaja: jokaisella x:llä on täsmälleen yksi y:n arvo, 4",
             "misconception": null,
-            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+            "feedback": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
           }
         ],
         "correct": [
@@ -287,7 +287,7 @@
         "final": "Funktion kuvaaja"
       },
       "feedback": {
-        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+        "correct": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
       },
       "provenance": {
         "template": "fun04_mc",
@@ -334,7 +334,7 @@
             "id": "b",
             "text": "Funktio vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y; muuttuminen ei ole vaatimus",
             "misconception": null,
-            "feedback": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+            "feedback": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
           },
           {
             "id": "c",
@@ -361,7 +361,7 @@
         "final": "Muuttuminen ei ole funktion vaatimus"
       },
       "feedback": {
-        "correct": "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+        "correct": "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
       },
       "provenance": {
         "template": "fun04_mc",

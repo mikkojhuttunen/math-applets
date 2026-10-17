@@ -90,7 +90,7 @@
         "final": "−6"
       },
       "feedback": {
-        "correct": "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
+        "correct": "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
       },
       "provenance": {
@@ -191,7 +191,7 @@
         "final": "−70"
       },
       "feedback": {
-        "correct": "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
+        "correct": "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
       },
       "provenance": {
@@ -292,7 +292,7 @@
         "final": "66"
       },
       "feedback": {
-        "correct": "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
+        "correct": "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
       },
       "provenance": {
@@ -394,7 +394,7 @@
         "final": "21"
       },
       "feedback": {
-        "correct": "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
+        "correct": "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
       },
       "provenance": {
@@ -495,7 +495,7 @@
         "final": "11"
       },
       "feedback": {
-        "correct": "Oikein: −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
+        "correct": "−a² = −(a · a), mutta (−a)² = (−a) · (−a) = a².",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että −a² ≠ (−a)²."
       },
       "provenance": {

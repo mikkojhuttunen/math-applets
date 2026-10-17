@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että negatiivisen luvun vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
       },
       "provenance": {
@@ -97,7 +97,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että negatiivisen luvun vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
       },
       "provenance": {
@@ -153,7 +153,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että negatiivisen luvun vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
       },
       "provenance": {
@@ -208,7 +208,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että negatiivisen luvun vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
       },
       "provenance": {
@@ -263,7 +263,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että negatiivisen luvun vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
       },
       "provenance": {

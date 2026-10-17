@@ -9,7 +9,7 @@ TEMPLATE = "geo01_mc"
 TID, CODE = "GEO-01", "MC"
 BAD = ("Kolmio on suljettu kuvio, jolla on kolme suoraa sivua. Kuvion asento, symmetria tai sivujen pituudet "
        "eivät vaikuta siihen, onko se kolmio.")
-GOOD = "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+GOOD = "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
 
 
 def area2(p, q, r):
@@ -78,7 +78,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Koordinaatistoon piirretään kuvio, jonka kärjet ovat {pts_text(ps)}. Pisteet yhdistetään janoilla. "
                       "Onko syntyvä kuvio kolmio?")
             ok = (f"Kyllä: pisteet eivät ole samalla suoralla, ja kuvion ala on {half(a2)} ruutua",
-                  "Oikein: kolme pistettä, jotka eivät ole samalla suoralla, määräävät kolmion, vaikka se olisi vinossa.")
+                  "Kolme pistettä, jotka eivät ole samalla suoralla, määräävät kolmion, vaikka se olisi vinossa.")
             wrongs = [("Ei, koska kolmion täytyy olla symmetrinen", TID, BAD),
                       ("Ei, koska yksikään sivu ei ole vaakasuora ja kolmion pohjan pitää olla alhaalla", TID, BAD),
                       ("Kyllä, mutta vain jos kaikki sivut ovat yhtä pitkät", None, "Kolmion sivut saavat olla eri pituisia.")]
@@ -91,7 +91,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Kuviolla on kolme suoraa sivua ja sen kulmat ovat {a}°, {b}° ja {c}°. "
                       "Onko kuvio kolmio?")
             ok = (f"Kyllä: kulmien summa on {a} + {b} + {c} = 180°",
-                  "Oikein: kolmion yksi kulma saa olla tylppä, kunhan kulmien summa on 180°.")
+                  "Kolmion yksi kulma saa olla tylppä, kunhan kulmien summa on 180°.")
             wrongs = [(f"Ei, koska kolmiossa kaikkien kulmien pitää olla teräviä ja {a}° on tylppä", TID, BAD),
                       ("Ei, koska kolmion kulmat ovat aina yhtä suuret", TID, BAD),
                       ("Kyllä, koska kulmien summa on 360°", None, f"Kulmien summa on {a} + {b} + {c} = 180°.")]
@@ -104,7 +104,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Kukkapenkin reunat ovat suoria ja niiden pituudet ovat {a} m, {b} m ja {c} m. "
                       "Onko penkin muoto kolmio?")
             ok = (f"Kyllä: {a} + {b} = {a + b} > {c}, joten sivuista saa kolmion, vaikka ne ovat eri pituisia",
-                  "Oikein: kolmion sivut saavat olla eri pituisia, kunhan kaksi lyhintä sivua on yhteensä pidempiä kuin pisin.")
+                  "Kolmion sivut saavat olla eri pituisia, kunhan kaksi lyhintä sivua on yhteensä pidempiä kuin pisin.")
             wrongs = [("Ei, koska kolmion kaikkien sivujen pitää olla yhtä pitkät", TID, BAD),
                       ("Ei, koska oikea kolmio on tasakylkinen", TID, BAD),
                       (f"Ei, koska {a} + {b} < {c}", None, f"{a} + {b} = {a + b}, mikä on suurempi kuin {c}.")]
@@ -115,7 +115,7 @@ def make_items(run, date, count=5, start=1):
             line = collinear(rng)
             tri = [tilted_scalene(rng)[0] for _ in range(3)]
             prompt = ("Mikä seuraavista pistejoukoista EI muodosta kolmiota, kun pisteet yhdistetään janoilla?")
-            ok = (f"{pts_text(line)}", f"Oikein: pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny.")
+            ok = (f"{pts_text(line)}", f"Pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny.")
             wrongs = [(pts_text(t), TID, "Nämä pisteet eivät ole samalla suoralla, joten ne muodostavat kolmion, vaikka se näyttää vinolta.")
                       for t in tri]
             wrongs = [(t, m, f) for t, m, f in wrongs]

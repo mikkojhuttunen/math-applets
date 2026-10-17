@@ -51,7 +51,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
       },
       "provenance": {
@@ -116,7 +116,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
       },
       "provenance": {
@@ -181,7 +181,7 @@
         "final": "x = 8"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
       },
       "provenance": {
@@ -247,7 +247,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
       },
       "provenance": {
@@ -313,7 +313,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
       },
       "provenance": {

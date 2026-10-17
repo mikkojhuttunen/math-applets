@@ -26,7 +26,7 @@ def make_items(run, date, count=5, start=1):
             q = n / f
             assert q > n
             prompt = f"Onko osamäärä {n} ÷ {fmt(f)} suurempi vai pienempi kuin {n}?"
-            correct = (f"Suurempi kuin {n}", f"Oikein: {n} ÷ {fmt(f)} = {fmt(q)}, ja {fmt(q)} > {n}.")
+            correct = (f"Suurempi kuin {n}", f"{n} ÷ {fmt(f)} = {fmt(q)}, ja {fmt(q)} > {n}.")
             wrongs = [(f"Pienempi kuin {n}", "NUM-05", BAD), (f"Yhtä suuri kuin {n}", None, f"Jakaja {fmt(f)} ei ole 1, joten osamäärä ei ole {n}."),
                       ("Sitä ei voi tietää laskematta", None, "Jakaja on pienempi kuin 1, joten osamäärän suunnan voi päätellä.")]
             steps = [f"{fmt(f)} < 1", f"{n} ÷ {fmt(f)} = {fmt(q)} > {n}"]
@@ -36,7 +36,7 @@ def make_items(run, date, count=5, start=1):
             q = n / f
             prompt = (f"Nauhaa on {n} metriä. Siitä leikataan {fmt(f)} metrin pituisia pätkiä. "
                       f"Montako pätkää nauhasta saadaan verrattuna lukuun {n}?")
-            correct = (f"{fmt(q)} pätkää, eli enemmän kuin {n}", f"Oikein: {n} ÷ {fmt(f)} = {fmt(q)}.")
+            correct = (f"{fmt(q)} pätkää, eli enemmän kuin {n}", f"{n} ÷ {fmt(f)} = {fmt(q)}.")
             wrongs = [(f"Alle {n} pätkää, koska jakaminen pienentää luvun", "NUM-05", BAD),
                       (f"Tasan {n} pätkää", None, f"Pätkä on lyhyempi kuin 1 metri, joten pätkiä tulee enemmän kuin {n}."),
                       (f"{fmt(n * f)} pätkää", None, "Tämä on kertolasku. Pätkien määrä saadaan jakamalla pituus pätkän pituudella.")]
@@ -48,7 +48,7 @@ def make_items(run, date, count=5, start=1):
             bigs = rng.sample([2, 4, 5], 3)
             prompt = f"Mikä seuraavista osamääristä on suurempi kuin {n}?"
             assert n / small > n and all(Decimal(n) / b < n for b in bigs)
-            correct = (f"{n} ÷ {fmt(small)}", f"Oikein: {n} ÷ {fmt(small)} = {fmt(n / small)} > {n}.")
+            correct = (f"{n} ÷ {fmt(small)}", f"{n} ÷ {fmt(small)} = {fmt(n / small)} > {n}.")
             wrongs = [(f"{n} ÷ {b}", None, f"Jakaja {b} > 1, joten osamäärä {fmt(Decimal(n) / b)} on pienempi kuin {n}.") for b in bigs[:2]]
             wrongs.append((f"Mikään osamäärä ei ole suurempi kuin {n}, koska jakolasku pienentää", "NUM-05", BAD))
             steps = [f"{fmt(small)} < 1, joten {n} ÷ {fmt(small)} > {n}"]
@@ -60,7 +60,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Oppilas laskee {n} ÷ {fmt(f)} = {fmt(q)} ja sanoo: \"Jakolasku pienentää, joten tuloksen piti olla alle {n}. "
                       f"Laskin väärin.\" Mikä väite on oikein?")
             correct = (f"Lasku on oikein: jakaja {fmt(f)} on pienempi kuin 1, joten osamäärä {fmt(q)} on suurempi kuin {n}",
-                       "Oikein: osamäärä on suurempi kuin jaettava, kun jakaja on alle 1.")
+                       "Osamäärä on suurempi kuin jaettava, kun jakaja on alle 1.")
             wrongs = [(f"Lasku on väärin: osamäärän pitää olla pienempi kuin {n}", "NUM-05", BAD),
                       (f"Lasku on väärin: oikea osamäärä on {fmt(n * f)}", None, "Tämä on tulo. Tarkista, mitä lasketaan: jaetaanko vai kerrotaanko?"),
                       ("Osamäärää ei voi tarkistaa arvioimalla", None, "Arvion voi tehdä vertaamalla jakajaa lukuun 1.")]
@@ -70,7 +70,7 @@ def make_items(run, date, count=5, start=1):
             n = rng.choice([3, 6, 9])
             q = Decimal(n) / Decimal("0.25")
             prompt = f"Mikä on oikea perustelu sille, että {n} ÷ 0,25 on suurempi kuin {n}?"
-            correct = (f"Luvussa {n} on {fmt(q)} neljännestä, joten {n} ÷ 0,25 = {fmt(q)}", "Oikein: jakaminen luvulla 0,25 kysyy, montako neljännestä mahtuu lukuun.")
+            correct = (f"Luvussa {n} on {fmt(q)} neljännestä, joten {n} ÷ 0,25 = {fmt(q)}", "Jakaminen luvulla 0,25 kysyy, montako neljännestä mahtuu lukuun.")
             wrongs = [(f"Se ei ole suurempi, koska jakolasku pienentää aina", "NUM-05", BAD),
                       (f"Se on suurempi, koska 0,25 on pienempi kuin {n}", None, "Perustelu ei riitä: ratkaisevaa on, että jakaja on pienempi kuin 1."),
                       (f"Se on yhtä suuri, koska 0,25 on vain desimaalimerkintä", None, "0,25 on neljäsosa, ei ykkönen.")]
@@ -81,7 +81,7 @@ def make_items(run, date, count=5, start=1):
         options, cid = mc_options(rng, correct, wrongs)
         items.append(base_item(TID, CODE, start + k, ["S2.03", "S2.06"], ["T11"], 7, level, prompt,
                                {"options": options, "correct": [cid]}, steps, final,
-                               "Oikein: jakaja alle 1 suurentaa osamäärää.", TEMPLATE, params, date, run))
+                               "Jakaja alle 1 suurentaa osamäärää.", TEMPLATE, params, date, run))
     return items
 
 

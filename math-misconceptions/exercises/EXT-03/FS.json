@@ -59,7 +59,7 @@
         "final": "x < 5"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -131,7 +131,7 @@
         "final": "x ≥ 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -202,7 +202,7 @@
         "final": "t > 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -276,7 +276,7 @@
         "final": "−2x − 6 < −14"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -348,7 +348,7 @@
         "final": "−3x > −9"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {

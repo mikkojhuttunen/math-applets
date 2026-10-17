@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "correct": "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -97,7 +97,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "correct": "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -152,7 +152,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "correct": "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -208,7 +208,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "correct": "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -263,7 +263,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+        "correct": "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {

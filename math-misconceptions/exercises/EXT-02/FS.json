@@ -60,7 +60,7 @@
         "final": "3 · 3 · 3 + 4"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
       },
       "provenance": {
@@ -132,7 +132,7 @@
         "final": "2 · 1 + 6"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
       },
       "provenance": {
@@ -205,7 +205,7 @@
         "final": "1/9 · 27"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
       },
       "provenance": {
@@ -276,7 +276,7 @@
         "final": "1 + 1/4 + 16"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
       },
       "provenance": {
@@ -347,7 +347,7 @@
         "final": "1 · 1/2 · 8"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
       },
       "provenance": {

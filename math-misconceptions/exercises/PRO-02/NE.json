@@ -54,7 +54,7 @@
         "final": "216"
       },
       "feedback": {
-        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+        "correct": "Tilavuus muuttuu kertoimella k³."
       },
       "provenance": {
         "template": "pro02_ne",
@@ -113,7 +113,7 @@
         "final": "256"
       },
       "feedback": {
-        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+        "correct": "Tilavuus muuttuu kertoimella k³."
       },
       "provenance": {
         "template": "pro02_ne",
@@ -179,7 +179,7 @@
         "final": "64"
       },
       "feedback": {
-        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+        "correct": "Tilavuus muuttuu kertoimella k³."
       },
       "provenance": {
         "template": "pro02_ne",
@@ -243,7 +243,7 @@
         "final": "192"
       },
       "feedback": {
-        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+        "correct": "Tilavuus muuttuu kertoimella k³."
       },
       "provenance": {
         "template": "pro02_ne",
@@ -301,7 +301,7 @@
         "final": "4"
       },
       "feedback": {
-        "correct": "Oikein: tilavuus muuttuu kertoimella k³."
+        "correct": "Tilavuus muuttuu kertoimella k³."
       },
       "provenance": {
         "template": "pro02_ne",

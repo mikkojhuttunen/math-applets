@@ -11,7 +11,7 @@ TEMPLATE = "ext06_ne"
 TID, CODE = "EXT-06", "NE"
 BAD = ("Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Tarkista, ettet anna sivun pituutta "
        "etkä käytä viereistä kateettia.")
-GOOD = "Oikein: sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
+GOOD = "Sini lasketaan jakamalla vastainen kateetti hypotenuusalla."
 TRIPLES = [(3, 4, 5), (6, 8, 10), (9, 12, 15), (12, 16, 20), (15, 20, 25), (7, 24, 25)]
 
 

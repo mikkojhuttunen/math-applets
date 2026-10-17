@@ -59,7 +59,7 @@
         "final": "45/15"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
+        "correct": "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
         "generic_wrong": "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
       },
       "provenance": {
@@ -134,7 +134,7 @@
         "final": "(8 + 15)/17"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
+        "correct": "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
         "generic_wrong": "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
       },
       "provenance": {
@@ -209,7 +209,7 @@
         "final": "6 · 10/10"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
+        "correct": "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
         "generic_wrong": "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
       },
       "provenance": {
@@ -284,7 +284,7 @@
         "final": "5/13 · 13/12"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
+        "correct": "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
         "generic_wrong": "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
       },
       "provenance": {
@@ -359,7 +359,7 @@
         "final": "5 · 3/(5 · 5)"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
+        "correct": "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa.",
         "generic_wrong": "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
       },
       "provenance": {

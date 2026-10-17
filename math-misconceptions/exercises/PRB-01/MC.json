@@ -49,7 +49,7 @@
             "id": "d",
             "text": "1/2",
             "misconception": null,
-            "feedback": "Oikein: jokaisella heitolla todennäköisyys on 1/2 riippumatta aiemmista."
+            "feedback": "Jokaisella heitolla todennäköisyys on 1/2 riippumatta aiemmista."
           }
         ],
         "correct": [
@@ -64,7 +64,7 @@
         "final": "1/2"
       },
       "feedback": {
-        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+        "correct": "Satunnaisilla toistoilla ei ole muistia."
       },
       "provenance": {
         "template": "prb01_mc",
@@ -104,7 +104,7 @@
             "id": "a",
             "text": "Kuutosen todennäköisyys on edelleen 1/6",
             "misconception": null,
-            "feedback": "Oikein: nopalla ei ole muistia, todennäköisyys on joka heitolla 1/6."
+            "feedback": "Nopalla ei ole muistia, todennäköisyys on joka heitolla 1/6."
           },
           {
             "id": "b",
@@ -137,7 +137,7 @@
         "final": "1/6"
       },
       "feedback": {
-        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+        "correct": "Satunnaisilla toistoilla ei ole muistia."
       },
       "provenance": {
         "template": "prb01_mc",
@@ -177,7 +177,7 @@
             "id": "a",
             "text": "Numero 7 on yhtä todennäköinen kuin mikä tahansa muu numero",
             "misconception": null,
-            "feedback": "Oikein: arvonta ei muista aiempia kierroksia, joten jokaisella numerolla on sama todennäköisyys."
+            "feedback": "Arvonta ei muista aiempia kierroksia, joten jokaisella numerolla on sama todennäköisyys."
           },
           {
             "id": "b",
@@ -210,7 +210,7 @@
         "final": "Yhtä todennäköinen kuin muut"
       },
       "feedback": {
-        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+        "correct": "Satunnaisilla toistoilla ei ole muistia."
       },
       "provenance": {
         "template": "prb01_mc",
@@ -268,7 +268,7 @@
             "id": "d",
             "text": "Eetu: todennäköisyys on 1/2 kummallekin",
             "misconception": null,
-            "feedback": "Oikein: tasoittuminen tapahtuu vasta pitkässä sarjassa eikä korjaa yksittäistä heittoa."
+            "feedback": "Tasoittuminen tapahtuu vasta pitkässä sarjassa eikä korjaa yksittäistä heittoa."
           }
         ],
         "correct": [
@@ -283,7 +283,7 @@
         "final": "Eetu"
       },
       "feedback": {
-        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+        "correct": "Satunnaisilla toistoilla ei ole muistia."
       },
       "provenance": {
         "template": "prb01_mc",
@@ -329,7 +329,7 @@
             "id": "b",
             "text": "Kolikolla ei ole muistia, joten jokainen heitto on riippumaton aiemmista",
             "misconception": null,
-            "feedback": "Oikein: riippumattomuus on ratkaiseva perustelu."
+            "feedback": "Riippumattomuus on ratkaiseva perustelu."
           },
           {
             "id": "c",
@@ -356,7 +356,7 @@
         "final": "Kolikolla ei ole muistia"
       },
       "feedback": {
-        "correct": "Oikein: satunnaisilla toistoilla ei ole muistia."
+        "correct": "Satunnaisilla toistoilla ei ole muistia."
       },
       "provenance": {
         "template": "prb01_mc",

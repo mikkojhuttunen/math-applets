@@ -59,7 +59,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"constraint": {"type": "solution_equals", "variable": "x", "value": p},
                    "checks": {"valid": valid, "invalid": invalid}}
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T15"], 7, level, prompt, payload, steps,
-                               f"x = {p}", "Oikein: x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = " + str(p) + ".",
+                               f"x = {p}", "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = " + str(p) + ".",
                                TEMPLATE, {"p": p, "c": c, "form": k}, date, run))
     return items
 

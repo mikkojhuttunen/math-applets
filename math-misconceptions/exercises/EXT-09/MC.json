@@ -31,7 +31,7 @@
             "id": "a",
             "text": "2",
             "misconception": null,
-            "feedback": "Oikein: kulmakerroin on x:n kerroin, 2."
+            "feedback": "Kulmakerroin on x:n kerroin, 2."
           },
           {
             "id": "b",
@@ -64,7 +64,7 @@
         "final": "2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
       },
       "provenance": {
         "template": "ext09_mc",
@@ -112,7 +112,7 @@
             "id": "b",
             "text": "−2",
             "misconception": null,
-            "feedback": "Oikein: x:n kerroin on −2, joten suora laskee."
+            "feedback": "x:n kerroin on −2, joten suora laskee."
           },
           {
             "id": "c",
@@ -139,7 +139,7 @@
         "final": "−2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
       },
       "provenance": {
         "template": "ext09_mc",
@@ -193,7 +193,7 @@
             "id": "c",
             "text": "(0, 8)",
             "misconception": null,
-            "feedback": "Oikein: kun x = 0, y = 8."
+            "feedback": "Kun x = 0, y = 8."
           },
           {
             "id": "d",
@@ -213,7 +213,7 @@
         "final": "(0, 8)"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
       },
       "provenance": {
         "template": "ext09_mc",
@@ -261,7 +261,7 @@
             "id": "b",
             "text": "Suora y = 4x + 6, koska sen kulmakerroin 4 on suurempi",
             "misconception": null,
-            "feedback": "Oikein: 4 > 2, joten toinen suora nousee jyrkemmin."
+            "feedback": "4 > 2, joten toinen suora nousee jyrkemmin."
           },
           {
             "id": "c",
@@ -288,7 +288,7 @@
         "final": "y = 4x + 6"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
       },
       "provenance": {
         "template": "ext09_mc",
@@ -342,7 +342,7 @@
             "id": "c",
             "text": "Väite on väärin: jyrkkyyden kertoo kulmakerroin, ja suoran y = 6x + 8 kulmakerroin 6 on suurempi",
             "misconception": null,
-            "feedback": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+            "feedback": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
           },
           {
             "id": "d",
@@ -363,7 +363,7 @@
         "final": "Väite on väärin"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
       },
       "provenance": {
         "template": "ext09_mc",

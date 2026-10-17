@@ -59,7 +59,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "error_line": err, "error_type": "negative_base_square"}
         items.append(base_item(TID, CODE, start + k, ["S2.01", "S2.11"], ["T10", "T11"], 7, level, INTRO + ASK, payload,
                                [fix], f"Virhe on rivillä {err}",
-                               "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+                               "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
                                TEMPLATE, params, date, run, generic_wrong=GENERIC))
     return items
 

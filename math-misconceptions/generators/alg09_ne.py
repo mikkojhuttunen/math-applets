@@ -56,7 +56,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "expression", "variables": ["x"], "reference": fmt(good), "samples": SAMPLES},
                    "wrong": wl, "input_hint": "Kirjoita esim. x² + 6x + 9"}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, prompt, payload, steps, fmt(good),
-                               "Oikein: (a + b)² = a² + 2ab + b².", TEMPLATE, {"b": b, "c": c}, date, run))
+                               "(a + b)² = a² + 2ab + b².", TEMPLATE, {"b": b, "c": c}, date, run))
     return items
 
 

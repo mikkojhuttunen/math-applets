@@ -25,7 +25,7 @@ def make_items(run, date, count=5, start=1):
             p = Fraction(1, 2)
             prompt = (f"Reilua kolikkoa on heitetty {n} kertaa, ja joka kerta on tullut {side}. "
                       f"Mikä on todennäköisyys, että seuraavalla heitolla tulee {other}?")
-            correct = (fr(p), f"Oikein: jokaisella heitolla todennäköisyys on {fr(p)} riippumatta aiemmista.")
+            correct = (fr(p), f"Jokaisella heitolla todennäköisyys on {fr(p)} riippumatta aiemmista.")
             wrongs = [(f"Suurempi kuin {fr(p)}, koska {other} on jo \"vuorossa\"", "PRB-01", BAD),
                       (f"Pienempi kuin {fr(p)}, koska sarja jatkuu samana", None,
                        "Sarja ei jatku sen enempää kuin katkeaakaan: heitot ovat toisistaan riippumattomia."),
@@ -37,7 +37,7 @@ def make_items(run, date, count=5, start=1):
             p = Fraction(1, 6)
             prompt = (f"Reilua noppaa on heitetty {m} kertaa, eikä kuutosta ole tullut kertaakaan. "
                       "Mitä voidaan sanoa seuraavasta heitosta?")
-            correct = (f"Kuutosen todennäköisyys on edelleen {fr(p)}", f"Oikein: nopalla ei ole muistia, todennäköisyys on joka heitolla {fr(p)}.")
+            correct = (f"Kuutosen todennäköisyys on edelleen {fr(p)}", f"Nopalla ei ole muistia, todennäköisyys on joka heitolla {fr(p)}.")
             wrongs = [(f"Kuutosen todennäköisyys on nyt suurempi kuin {fr(p)}, koska kuutonen on myöhässä", "PRB-01", BAD),
                       (f"Kuutosen todennäköisyys on nyt pienempi kuin {fr(p)}", None, "Noppa ei \"kyllästy\" kuutoseen: todennäköisyys ei muutu."),
                       ("Kuutonen tulee varmasti seuraavalla heitolla", "PRB-01", BAD)]
@@ -48,7 +48,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Lotossa numero 7 ei ole tullut arvonnassa {w} viikkoon. "
                       "Mikä väite seuraavasta arvonnasta on oikein?")
             correct = ("Numero 7 on yhtä todennäköinen kuin mikä tahansa muu numero",
-                       "Oikein: arvonta ei muista aiempia kierroksia, joten jokaisella numerolla on sama todennäköisyys.")
+                       "Arvonta ei muista aiempia kierroksia, joten jokaisella numerolla on sama todennäköisyys.")
             wrongs = [("Numero 7 on nyt todennäköisempi kuin muut, koska se on myöhässä", "PRB-01", BAD),
                       ("Numero 7 on nyt epätodennäköisempi kuin muut", None, "Arvonta ei suosi eikä karta numeroa 7."),
                       ("Numero 7 ei voi tulla, koska se ei ole tullut pitkään aikaan", None, "Jokainen numero voi tulla milloin tahansa.")]
@@ -59,7 +59,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Aino ja Eetu heittävät reilua kolikkoa. Kolikko on antanut {n} klaavaa peräkkäin. "
                       "Aino sanoo: \"Nyt kruuna on todennäköisempi, koska tulokset tasoittuvat.\" "
                       "Eetu sanoo: \"Kruuna ja klaava ovat yhtä todennäköisiä.\" Kumpi on oikeassa?")
-            correct = ("Eetu: todennäköisyys on 1/2 kummallekin", "Oikein: tasoittuminen tapahtuu vasta pitkässä sarjassa eikä korjaa yksittäistä heittoa.")
+            correct = ("Eetu: todennäköisyys on 1/2 kummallekin", "Tasoittuminen tapahtuu vasta pitkässä sarjassa eikä korjaa yksittäistä heittoa.")
             wrongs = [("Aino: kruuna on todennäköisempi", "PRB-01", BAD),
                       ("Kumpikaan ei ole oikeassa, klaava on todennäköisempi", None, "Aiemmat heitot eivät muuta kolikon todennäköisyyksiä."),
                       ("Aino, mutta vain jos heittoja on vähintään 10", "PRB-01", BAD)]
@@ -70,7 +70,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Reilulla kolikolla on tullut {n} kruunaa peräkkäin. Mikä perustelu on oikea sille, "
                       "että seuraavalla heitolla klaavan todennäköisyys on 1/2?")
             correct = ("Kolikolla ei ole muistia, joten jokainen heitto on riippumaton aiemmista",
-                       "Oikein: riippumattomuus on ratkaiseva perustelu.")
+                       "Riippumattomuus on ratkaiseva perustelu.")
             wrongs = [("Pitkässä sarjassa kruunia ja klaavoja tulee yhtä paljon, joten klaava on vuorossa", "PRB-01", BAD),
                       ("Vaihtoehtoja on kaksi, joten todennäköisyys on aina 1/2", None,
                        "Kaksi vaihtoehtoa ei riitä: esimerkiksi epäreilulla kolikolla todennäköisyydet eivät ole 1/2."),
@@ -83,7 +83,7 @@ def make_items(run, date, count=5, start=1):
         options, cid = mc_options(rng, correct, wrongs)
         items.append(base_item(TID, CODE, start + k, ["S6.06"], ["T19"], 9, level, prompt,
                                {"options": options, "correct": [cid]}, steps, final,
-                               "Oikein: satunnaisilla toistoilla ei ole muistia.", TEMPLATE, params, date, run))
+                               "Satunnaisilla toistoilla ei ole muistia.", TEMPLATE, params, date, run))
     return items
 
 

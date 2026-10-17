@@ -50,7 +50,7 @@ def make_items(run, date, count=5, start=1):
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, ctx + ask,
                                {"lines": lines, "accept": "exact"}, [expl, f"Alkuperäinen määrä on {fmt(orig)}"],
                                f"x = {fmt(new)} / {fmt(f)} = {fmt(orig)}",
-                               "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+                               "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
                                TEMPLATE, {"orig": fmt(orig), "percent": fmt(p), "form": k}, date, run))
     return items
 

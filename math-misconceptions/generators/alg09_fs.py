@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
                    "answer": {"kind": "expression", "variables": ["x"], "reference": ref, "samples": SAMPLES}}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, prompt, payload,
                                [f"Rivi {blank}: {ref}", f"Lopputulos: {lines[-1]}"], ref,
-                               "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+                               "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
                                TEMPLATE, {"b": b, "c": c, "d": d}, date, run, generic_wrong=GENERIC))
     return items
 

@@ -33,7 +33,7 @@
             "id": "a",
             "text": "−36",
             "misconception": null,
-            "feedback": "Oikein: −6² = −(6 · 6) = −36."
+            "feedback": "−6² = −(6 · 6) = −36."
           },
           {
             "id": "b",
@@ -66,7 +66,7 @@
         "final": "−36"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+        "correct": "Potenssi lasketaan ennen etumerkkiä."
       },
       "provenance": {
         "template": "ext01_mc",
@@ -114,7 +114,7 @@
             "id": "b",
             "text": "(−2)² = 4 ja −2² = −4",
             "misconception": null,
-            "feedback": "Oikein: sulkeet määräävät, kuuluuko miinus potenssin kantalukuun."
+            "feedback": "Sulkeet määräävät, kuuluuko miinus potenssin kantalukuun."
           },
           {
             "id": "c",
@@ -141,7 +141,7 @@
         "final": "(−2)² = 4, −2² = −4"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+        "correct": "Potenssi lasketaan ennen etumerkkiä."
       },
       "provenance": {
         "template": "ext01_mc",
@@ -183,7 +183,7 @@
             "id": "a",
             "text": "On: potenssi lasketaan ensin, joten −3² = −(3 · 3) = −9",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Potenssi lasketaan ennen miinusmerkkiä: −3² = −(3 · 3) = −9."
           },
           {
             "id": "b",
@@ -216,7 +216,7 @@
         "final": "On oikein"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+        "correct": "Potenssi lasketaan ennen etumerkkiä."
       },
       "provenance": {
         "template": "ext01_mc",
@@ -276,7 +276,7 @@
             "id": "d",
             "text": "(−3)²",
             "misconception": null,
-            "feedback": "Oikein: (−3)² = (−3) · (−3) = 9."
+            "feedback": "(−3)² = (−3) · (−3) = 9."
           }
         ],
         "correct": [
@@ -291,7 +291,7 @@
         "final": "(−3)²"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+        "correct": "Potenssi lasketaan ennen etumerkkiä."
       },
       "provenance": {
         "template": "ext01_mc",
@@ -351,7 +351,7 @@
             "id": "d",
             "text": "Potenssi koskee vain lukua 3, joten −3² = −(3 · 3) = −9",
             "misconception": null,
-            "feedback": "Oikein: potenssi lasketaan ennen miinusmerkkiä."
+            "feedback": "Potenssi lasketaan ennen miinusmerkkiä."
           }
         ],
         "correct": [
@@ -366,7 +366,7 @@
         "final": "Potenssi koskee vain lukua 3"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä."
+        "correct": "Potenssi lasketaan ennen etumerkkiä."
       },
       "provenance": {
         "template": "ext01_mc",

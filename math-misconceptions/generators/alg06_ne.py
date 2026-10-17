@@ -50,7 +50,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": m, "feedback": HINT} for w, m in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, str(ans),
-                               "Oikein: puolten arvojen on oltava yhtä suuret.", TEMPLATE,
+                               "Puolten arvojen on oltava yhtä suuret.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "d": d, "form": form}, date, run))
     return items
 

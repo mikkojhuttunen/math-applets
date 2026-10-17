@@ -37,7 +37,7 @@
             "id": "b",
             "text": "Pienempi: 99 % alkuarvosta",
             "misconception": null,
-            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+            "feedback": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
           },
           {
             "id": "c",
@@ -64,7 +64,7 @@
         "final": "99 % alkuarvosta"
       },
       "feedback": {
-        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+        "correct": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
       },
       "provenance": {
         "template": "num08_mc",
@@ -105,7 +105,7 @@
             "id": "a",
             "text": "48 €",
             "misconception": null,
-            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+            "feedback": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
           },
           {
             "id": "b",
@@ -138,7 +138,7 @@
         "final": "48 €"
       },
       "feedback": {
-        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+        "correct": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
       },
       "provenance": {
         "template": "num08_mc",
@@ -186,7 +186,7 @@
             "id": "b",
             "text": "Pienempi: 93,75 % alkuperäisestä",
             "misconception": null,
-            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+            "feedback": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
           },
           {
             "id": "c",
@@ -213,7 +213,7 @@
         "final": "93,75 % alkuperäisestä"
       },
       "feedback": {
-        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+        "correct": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
       },
       "provenance": {
         "template": "num08_mc",
@@ -260,7 +260,7 @@
             "id": "b",
             "text": "Lopulliset hinnat ovat yhtä suuret, ja kumpikin on 91 % alkuhinnasta",
             "misconception": null,
-            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+            "feedback": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
           },
           {
             "id": "c",
@@ -287,7 +287,7 @@
         "final": "Yhtä suuret, 91 % alkuhinnasta"
       },
       "feedback": {
-        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+        "correct": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
       },
       "provenance": {
         "template": "num08_mc",
@@ -328,7 +328,7 @@
             "id": "a",
             "text": "Koska alennus lasketaan korotetusta hinnasta, joka on suurempi kuin alkuperäinen",
             "misconception": null,
-            "feedback": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+            "feedback": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
           },
           {
             "id": "b",
@@ -360,7 +360,7 @@
         "final": "Alennus lasketaan suuremmasta arvosta"
       },
       "feedback": {
-        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+        "correct": "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
       },
       "provenance": {
         "template": "num08_mc",

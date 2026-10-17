@@ -44,7 +44,7 @@
             "id": "c",
             "text": "Ostosten yhteishinnan sentteinä",
             "misconception": null,
-            "feedback": "Oikein: lauseke on yhteishinta."
+            "feedback": "Lauseke on yhteishinta."
           },
           {
             "id": "d",
@@ -66,7 +66,7 @@
         "final": "Yhteishinta sentteinä"
       },
       "feedback": {
-        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+        "correct": "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
       },
       "provenance": {
         "template": "alg01_mc",
@@ -119,7 +119,7 @@
             "id": "b",
             "text": "Ostosten yhteishinnan euroina",
             "misconception": null,
-            "feedback": "Oikein: lauseke on yhteishinta."
+            "feedback": "Lauseke on yhteishinta."
           },
           {
             "id": "c",
@@ -147,7 +147,7 @@
         "final": "Yhteishinta euroina"
       },
       "feedback": {
-        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+        "correct": "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
       },
       "provenance": {
         "template": "alg01_mc",
@@ -212,7 +212,7 @@
             "id": "d",
             "text": "Ostosten yhteishinnan euroina",
             "misconception": null,
-            "feedback": "Oikein: lauseke on yhteishinta."
+            "feedback": "Lauseke on yhteishinta."
           }
         ],
         "correct": [
@@ -228,7 +228,7 @@
         "final": "Yhteishinta euroina"
       },
       "feedback": {
-        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+        "correct": "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
       },
       "provenance": {
         "template": "alg01_mc",
@@ -275,7 +275,7 @@
             "id": "a",
             "text": "Ensimmäisen tuotteen kappalemäärää, eli lukua",
             "misconception": null,
-            "feedback": "Oikein: kirjain on lukumäärä."
+            "feedback": "Kirjain kuvaa lukumäärää."
           },
           {
             "id": "b",
@@ -309,7 +309,7 @@
         "final": "Kappalemäärää, eli lukua"
       },
       "feedback": {
-        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+        "correct": "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
       },
       "provenance": {
         "template": "alg01_mc",
@@ -368,7 +368,7 @@
             "id": "c",
             "text": "Kirjaimet ovat lukuja eli määriä, joten lauseke on hinta eikä tuotteiden lista",
             "misconception": null,
-            "feedback": "Oikein: kirjain edustaa lukua."
+            "feedback": "Kirjain edustaa lukua."
           },
           {
             "id": "d",
@@ -390,7 +390,7 @@
         "final": "Kirjaimet ovat lukuja, joten lauseke kertoo hinnan"
       },
       "feedback": {
-        "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
+        "correct": "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
       },
       "provenance": {
         "template": "alg01_mc",

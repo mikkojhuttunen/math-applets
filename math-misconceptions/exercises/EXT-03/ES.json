@@ -41,7 +41,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -94,7 +94,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -147,7 +147,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -201,7 +201,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
@@ -254,7 +254,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy.",
         "generic_wrong": "Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {

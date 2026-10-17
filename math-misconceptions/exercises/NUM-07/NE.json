@@ -47,7 +47,7 @@
         "final": "200"
       },
       "feedback": {
-        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+        "correct": "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_ne",
@@ -105,7 +105,7 @@
         "final": "160"
       },
       "feedback": {
-        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+        "correct": "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_ne",
@@ -163,7 +163,7 @@
         "final": "40"
       },
       "feedback": {
-        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+        "correct": "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_ne",
@@ -221,7 +221,7 @@
         "final": "120"
       },
       "feedback": {
-        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+        "correct": "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_ne",
@@ -279,7 +279,7 @@
         "final": "6"
       },
       "feedback": {
-        "correct": "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
+        "correct": "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_ne",

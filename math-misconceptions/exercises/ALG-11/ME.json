@@ -89,7 +89,7 @@
         "final": "8 − x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -191,7 +191,7 @@
         "final": "18 − 5x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -293,7 +293,7 @@
         "final": "6x + 6"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -395,7 +395,7 @@
         "final": "−7x − 4"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -497,7 +497,7 @@
         "final": "15 − x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {

@@ -67,7 +67,7 @@
         "final": "x² + 14x + 49"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+        "correct": "(a + b)² = a² + 2ab + b²."
       },
       "provenance": {
         "template": "alg09_ne",
@@ -144,7 +144,7 @@
         "final": "x² − 6x + 9"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+        "correct": "(a + b)² = a² + 2ab + b²."
       },
       "provenance": {
         "template": "alg09_ne",
@@ -221,7 +221,7 @@
         "final": "4x² + 36x + 81"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+        "correct": "(a + b)² = a² + 2ab + b²."
       },
       "provenance": {
         "template": "alg09_ne",
@@ -298,7 +298,7 @@
         "final": "x² + 8x + 16"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+        "correct": "(a + b)² = a² + 2ab + b²."
       },
       "provenance": {
         "template": "alg09_ne",
@@ -375,7 +375,7 @@
         "final": "12x + 36"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² = a² + 2ab + b²."
+        "correct": "(a + b)² = a² + 2ab + b²."
       },
       "provenance": {
         "template": "alg09_ne",

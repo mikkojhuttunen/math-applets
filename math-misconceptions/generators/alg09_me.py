@@ -49,7 +49,7 @@ def make_items(run, date, count=5, start=1):
                    for i, (t, e, m) in enumerate(opts)]
         payload = {"reference": ref, "variables": ["x"], "samples": [[-2], [1], [3]], "options": options}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, prompt, payload, steps,
-                               steps[-1], "Oikein: (a + b)² = a² + 2ab + b².", TEMPLATE,
+                               steps[-1], "(a + b)² = a² + 2ab + b².", TEMPLATE,
                                {"b": b, "c": c, "d": d}, date, run,
                                generic_wrong="Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."))
     return items

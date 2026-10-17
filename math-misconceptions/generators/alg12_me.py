@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli, num
 
 TEMPLATE = "alg12_me"
 TID, CODE = "ALG-12", "ME"
-GOOD = "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+GOOD = "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
 GENERIC = ("Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että "
            "a − (−b) = a + b.")
 

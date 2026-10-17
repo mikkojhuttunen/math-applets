@@ -43,7 +43,7 @@
         "final": "x < −4"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella jaettaessa epäyhtälömerkki kääntyy."
+        "correct": "Negatiivisella jaettaessa epäyhtälömerkki kääntyy."
       },
       "provenance": {
         "template": "fixture_demo",

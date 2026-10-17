@@ -65,7 +65,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "expression", "variables": vars_, "reference": ref, "samples": samples},
                    "wrong": wr, "input_hint": "Kirjoita esim. 5x + 3"}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, ref,
-                               "Oikein: vain samanmuotoiset termit lasketaan yhteen.", TEMPLATE,
+                               "Vain samanmuotoiset termit lasketaan yhteen.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "d": d}, date, run))
     return items
 

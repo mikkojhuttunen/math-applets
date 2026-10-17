@@ -45,7 +45,7 @@ def make_items(run, date, count=5, start=1):
                    "answer": {"kind": "expression", "variables": ["x"], "reference": ref, "samples": SAMPLES}}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload,
                                [f"Rivi {blank}: {ref}", f"Lopputulos: {lines[-1]}"], ref,
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run, generic_wrong=GENERIC))
     return items
 

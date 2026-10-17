@@ -9,7 +9,7 @@ TEMPLATE = "alg03_ne"
 TID, CODE = "ALG-03", "NE"
 BAD = ("Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan "
        "yhtälöstä.")
-GOOD = "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+GOOD = "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
 LETTERS = "kmnptwyd"
 
 

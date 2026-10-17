@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+        "correct": "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."
       },
       "provenance": {
@@ -102,7 +102,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+        "correct": "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."
       },
       "provenance": {
@@ -162,7 +162,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+        "correct": "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."
       },
       "provenance": {
@@ -222,7 +222,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+        "correct": "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."
       },
       "provenance": {
@@ -284,7 +284,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
+        "correct": "Murtolukuja yhteenlaskettaessa nimittäjää ei lasketa yhteen, vaan käytetään yhteistä nimittäjää.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Murtolukujen nimittäjiä ei lasketa yhteen."
       },
       "provenance": {

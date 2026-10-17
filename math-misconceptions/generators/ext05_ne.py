@@ -10,7 +10,7 @@ TEMPLATE = "ext05_ne"
 TID, CODE = "EXT-05", "NE"
 BAD = ("Pythagoraan lause pätee vain suorakulmaisessa kolmiossa. Muissa kolmioissa erotus a² + b² − c² "
        "ei ole nolla. Laske neliöt erikseen.")
-GOOD = "Oikein: neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
+GOOD = "Neliöt lasketaan erikseen, ja vain suorakulmaisessa kolmiossa erotus on nolla."
 
 
 def is_right(a, b, c):

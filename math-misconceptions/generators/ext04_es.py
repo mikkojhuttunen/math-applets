@@ -12,7 +12,7 @@ ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 INTRO = "Oppilas ratkaisee yhtälön rivi riviltä. "
 GENERIC = ("Tarkista rivi kerrallaan, onko uudella rivillä samat ratkaisut kuin edellisellä. "
            "Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0: positiivinen ja negatiivinen juuri.")
-GOOD = "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi."
+GOOD = "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi."
 
 
 def roots(p, q):

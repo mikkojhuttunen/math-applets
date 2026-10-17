@@ -53,7 +53,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "error_line": err, "error_type": "distributes_to_first_term_only"}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, ctx + ASK, payload,
                                [fix], f"Virhe on rivillä {err}",
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run, generic_wrong=GENERIC))
     return items
 

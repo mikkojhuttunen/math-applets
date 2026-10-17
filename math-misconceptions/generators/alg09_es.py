@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "error_line": err, "error_type": etype}
         items.append(base_item(TID, CODE, start + k, ["S3.04", "S3.03"], ["T14"], 8, level, ctx + ASK, payload,
                                [fix], f"Virhe on rivillä {err}",
-                               "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+                               "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
                                TEMPLATE, {"a": a, "b": b, "c": c}, date, run, generic_wrong=GENERIC))
     return items
 

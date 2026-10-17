@@ -37,7 +37,7 @@
             "id": "b",
             "text": "8/17",
             "misconception": null,
-            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+            "feedback": "sin α = vastainen kateetti / hypotenuusa."
           },
           {
             "id": "c",
@@ -63,7 +63,7 @@
         "final": "8/17"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+        "correct": "sin α = vastainen kateetti / hypotenuusa."
       },
       "provenance": {
         "template": "ext06_mc",
@@ -107,7 +107,7 @@
             "id": "a",
             "text": "QR",
             "misconception": null,
-            "feedback": "Oikein: vastainen kateetti on kulmaa vastapäätä oleva sivu, ja kulma α on kärjessä P."
+            "feedback": "Vastainen kateetti on kulmaa vastapäätä oleva sivu, ja kulma α on kärjessä P."
           },
           {
             "id": "b",
@@ -140,7 +140,7 @@
         "final": "QR"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+        "correct": "sin α = vastainen kateetti / hypotenuusa."
       },
       "provenance": {
         "template": "ext06_mc",
@@ -196,7 +196,7 @@
             "id": "c",
             "text": "Sini on suhdeluku: oikea arvo on 3/5, eikä siinä ole yksikköä",
             "misconception": null,
-            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+            "feedback": "sin α = vastainen kateetti / hypotenuusa."
           },
           {
             "id": "d",
@@ -216,7 +216,7 @@
         "final": "Sini on suhdeluku: oikea arvo on 3/5, eikä siinä ole yksikköä"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+        "correct": "sin α = vastainen kateetti / hypotenuusa."
       },
       "provenance": {
         "template": "ext06_mc",
@@ -278,7 +278,7 @@
             "id": "d",
             "text": "Ei, koska kateetti on aina lyhyempi kuin hypotenuusa, joten suhde on pienempi kuin 1",
             "misconception": null,
-            "feedback": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+            "feedback": "sin α = vastainen kateetti / hypotenuusa."
           }
         ],
         "correct": [
@@ -293,7 +293,7 @@
         "final": "Ei, koska kateetti on aina lyhyempi kuin hypotenuusa, joten suhde on pienempi kuin 1"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+        "correct": "sin α = vastainen kateetti / hypotenuusa."
       },
       "provenance": {
         "template": "ext06_mc",
@@ -343,7 +343,7 @@
             "id": "b",
             "text": "Se ei muutu: sin α = 3/5",
             "misconception": null,
-            "feedback": "Oikein: suhde pysyy samana, kun kolmiota suurennetaan."
+            "feedback": "Suhde pysyy samana, kun kolmiota suurennetaan."
           },
           {
             "id": "c",
@@ -370,7 +370,7 @@
         "final": "Se ei muutu: sin α = 3/5"
       },
       "feedback": {
-        "correct": "Oikein: sin α = vastainen kateetti / hypotenuusa."
+        "correct": "sin α = vastainen kateetti / hypotenuusa."
       },
       "provenance": {
         "template": "ext06_mc",

@@ -50,7 +50,7 @@ def make_items(run, date, count=5, start=1):
         steps = [f"{expr} = {common}", f"{common} = {total}"] + ([f"{total} = {lines[3]}"] if len(lines) == 4 else [])
         payload = {"lines": lines, "blank_index": blank, "answer": answer}
         items.append(base_item(TID, CODE, start + k, ["S2.02"], ["T11"], 7, level, prompt, payload, steps, ref,
-                               "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+                               "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
                                TEMPLATE, {"denominators": ds, "numerators": ns, "common": L, "blank": blank}, date, run,
                                generic_wrong="Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."))
     return items

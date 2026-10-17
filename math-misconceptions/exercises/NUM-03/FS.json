@@ -59,7 +59,7 @@
         "final": "2/6 + 3/6"
       },
       "feedback": {
-        "correct": "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+        "correct": "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -137,7 +137,7 @@
         "final": "3/8 + 4/8"
       },
       "feedback": {
-        "correct": "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+        "correct": "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -217,7 +217,7 @@
         "final": "6/8"
       },
       "feedback": {
-        "correct": "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+        "correct": "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -295,7 +295,7 @@
         "final": "2/8 + 4/8 + 1/8"
       },
       "feedback": {
-        "correct": "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+        "correct": "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {
@@ -375,7 +375,7 @@
         "final": "5/6"
       },
       "feedback": {
-        "correct": "Oikein: murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
+        "correct": "Murtoluvut muutetaan samannimisiksi ja vain osoittajat lasketaan yhteen.",
         "generic_wrong": "Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen."
       },
       "provenance": {

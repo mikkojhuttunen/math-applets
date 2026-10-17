@@ -9,7 +9,7 @@ TEMPLATE = "alg12_mc"
 TID, CODE = "ALG-12", "MC"
 BAD = ("Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: "
        "a − (−b) = a + b.")
-GOOD = "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
+GOOD = "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b."
 
 
 def make_items(run, date, count=5, start=1):

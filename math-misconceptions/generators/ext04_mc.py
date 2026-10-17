@@ -9,7 +9,7 @@ TEMPLATE = "ext04_mc"
 TID, CODE = "EXT-04", "MC"
 BAD = ("Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0, koska myös vastaluvun neliö on a. "
        "Tarkista sijoittamalla: negatiivinen luku toteuttaa yhtälön.")
-GOOD = "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+GOOD = "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
 
 
 def roots(p, q):

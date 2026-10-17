@@ -83,7 +83,7 @@ def make_items(run, date, count=5, start=1):
         final = f"Virhe on rivillä {err}"
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, intro + ASK, payload,
                                [fix], final,
-                               "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+                               "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
                                TEMPLATE, params, date, run, generic_wrong=GENERIC))
     return items
 

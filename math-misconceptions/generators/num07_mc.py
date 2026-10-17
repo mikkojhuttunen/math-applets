@@ -16,7 +16,7 @@ TEMPLATE = "num07_mc"
 TID, CODE = "NUM-07", "MC"
 BAD = ("Prosentti on laskettu uudesta määrästä, mutta muutos tapahtui alkuperäisestä määrästä. "
        "Alkuperäinen määrä on se 100 %, josta muutos lasketaan.")
-GOOD = "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+GOOD = "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
 
 
 def make_items(run, date, count=5, start=1):
@@ -33,7 +33,7 @@ def make_items(run, date, count=5, start=1):
         if k == 0:
             new = up
             prompt = (f"Pelin hinta nousi {fmt(p)} % ja on nyt {fmt(new)} €. Mikä hinta oli ennen korotusta?")
-            correct = (f"{fmt(orig)} €", f"Oikein: {fmt(orig)} · {fmt(1 + p / 100)} = {fmt(new)}.")
+            correct = (f"{fmt(orig)} €", f"{fmt(orig)} · {fmt(1 + p / 100)} = {fmt(new)}.")
             wrongs = [(f"{fmt(new * (1 - p / 100))} €", "NUM-07", BAD),
                       (f"{fmt(new * (1 + p / 100))} €", None, "Tämä olisi hinta, jos nykyinen hinta nousisi vielä kerran."),
                       (f"{fmt(new - p)} €", None, f"{fmt(p)} % ei tarkoita {fmt(p)} euroa.")]
@@ -42,7 +42,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 1:
             new = down
             prompt = f"Takin hinta aleni {fmt(p)} % ja se maksaa nyt {fmt(new)} €. Mikä oli takin hinta ennen alennusta?"
-            correct = (f"{fmt(orig)} €", f"Oikein: {fmt(orig)} · {fmt(1 - p / 100)} = {fmt(new)}.")
+            correct = (f"{fmt(orig)} €", f"{fmt(orig)} · {fmt(1 - p / 100)} = {fmt(new)}.")
             wrongs = [(f"{fmt(new * (1 + p / 100))} €", "NUM-07", BAD),
                       (f"{fmt(new * (1 - p / 100))} €", None, "Tämä olisi hinta, jos nykyinen hinta alenisi vielä kerran."),
                       (f"{fmt(new + p)} €", None, f"{fmt(p)} % ei tarkoita {fmt(p)} euroa.")]
@@ -53,7 +53,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Luokan oppilasmäärä kasvoi {fmt(p)} % ja on nyt {fmt(new)}. "
                       f"Kuinka monta oppilasta lisää luokkaan tuli?")
             gain = new - orig
-            correct = (f"{fmt(gain)}", f"Oikein: alkuperäinen määrä oli {fmt(orig)}, ja kasvu on {fmt(new)} {chr(8722)} {fmt(orig)} = {fmt(gain)}.")
+            correct = (f"{fmt(gain)}", f"Alkuperäinen määrä oli {fmt(orig)}, ja kasvu on {fmt(new)} {chr(8722)} {fmt(orig)} = {fmt(gain)}.")
             wrongs = [(f"{fmt(new * p / 100)}", "NUM-07", BAD),
                       (f"{fmt(orig)}", None, "Tämä on alkuperäinen määrä, ei lisäys."),
                       (f"{fmt(p)}", None, f"{fmt(p)} on prosenttiluku, ei oppilaiden määrä.")]

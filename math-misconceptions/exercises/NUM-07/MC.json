@@ -43,7 +43,7 @@
             "id": "c",
             "text": "80 €",
             "misconception": null,
-            "feedback": "Oikein: 80 · 1,1 = 88."
+            "feedback": "80 · 1,1 = 88."
           },
           {
             "id": "d",
@@ -64,7 +64,7 @@
         "final": "80 €"
       },
       "feedback": {
-        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+        "correct": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_mc",
@@ -112,7 +112,7 @@
             "id": "b",
             "text": "60 €",
             "misconception": null,
-            "feedback": "Oikein: 60 · 0,75 = 45."
+            "feedback": "60 · 0,75 = 45."
           },
           {
             "id": "c",
@@ -139,7 +139,7 @@
         "final": "60 €"
       },
       "feedback": {
-        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+        "correct": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_mc",
@@ -199,7 +199,7 @@
             "id": "d",
             "text": "30",
             "misconception": null,
-            "feedback": "Oikein: alkuperäinen määrä oli 60, ja kasvu on 90 − 60 = 30."
+            "feedback": "Alkuperäinen määrä oli 60, ja kasvu on 90 − 60 = 30."
           }
         ],
         "correct": [
@@ -214,7 +214,7 @@
         "final": "30"
       },
       "feedback": {
-        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+        "correct": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_mc",
@@ -256,7 +256,7 @@
             "id": "a",
             "text": "Lasku on väärin: vanha palkka on 120 €, koska 120 · 1,25 = 150",
             "misconception": null,
-            "feedback": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+            "feedback": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
           },
           {
             "id": "b",
@@ -289,7 +289,7 @@
         "final": "120 €"
       },
       "feedback": {
-        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+        "correct": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_mc",
@@ -337,7 +337,7 @@
             "id": "b",
             "text": "Koska 20 % on laskettu vanhasta hinnasta, ja uusi hinta on suurempi, joten 20 % uudesta hinnasta on liian suuri",
             "misconception": null,
-            "feedback": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+            "feedback": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
           },
           {
             "id": "c",
@@ -364,7 +364,7 @@
         "final": "Perusarvo on vanha hinta, ei uusi"
       },
       "feedback": {
-        "correct": "Oikein: muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
+        "correct": "Muutosprosentti lasketaan alkuperäisestä määrästä, joten uusi määrä on 100 % ± muutos."
       },
       "provenance": {
         "template": "num07_mc",

@@ -43,7 +43,7 @@
         "final": "x = −3"
       },
       "feedback": {
-        "correct": "Oikein: −2:lla jaettaessa merkki vaihtuu."
+        "correct": "−2:lla jaettaessa merkki vaihtuu."
       },
       "provenance": {
         "template": "fixture_demo",

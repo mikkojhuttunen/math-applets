@@ -51,7 +51,7 @@
         "final": "x = 0,35"
       },
       "feedback": {
-        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
       },
       "provenance": {
         "template": "num06_rp",
@@ -113,7 +113,7 @@
         "final": "x = 1,95"
       },
       "feedback": {
-        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
       },
       "provenance": {
         "template": "num06_rp",
@@ -175,7 +175,7 @@
         "final": "x = 0,045"
       },
       "feedback": {
-        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
       },
       "provenance": {
         "template": "num06_rp",
@@ -237,7 +237,7 @@
         "final": "x = 0,525"
       },
       "feedback": {
-        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
       },
       "provenance": {
         "template": "num06_rp",
@@ -299,7 +299,7 @@
         "final": "x = 0,81"
       },
       "feedback": {
-        "correct": "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
       },
       "provenance": {
         "template": "num06_rp",

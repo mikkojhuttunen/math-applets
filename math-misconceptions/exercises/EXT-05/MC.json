@@ -49,7 +49,7 @@
             "id": "d",
             "text": "Ei, koska 5² + 6² = 61, mutta 8² = 64",
             "misconception": null,
-            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
           }
         ],
         "correct": [
@@ -65,7 +65,7 @@
         "final": "Ei, koska 5² + 6² = 61, mutta 8² = 64"
       },
       "feedback": {
-        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+        "correct": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
       },
       "provenance": {
         "template": "ext05_mc",
@@ -113,7 +113,7 @@
             "id": "b",
             "text": "Lasku ei kelpaa, koska kulma C ei ole suora kulma",
             "misconception": null,
-            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
           },
           {
             "id": "c",
@@ -140,7 +140,7 @@
         "final": "Lasku ei kelpaa, koska kulma C ei ole suora kulma"
       },
       "feedback": {
-        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+        "correct": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
       },
       "provenance": {
         "template": "ext05_mc",
@@ -194,7 +194,7 @@
             "id": "c",
             "text": "Ei, koska 6² + 7² = 85, mutta 9² = 81",
             "misconception": null,
-            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
           },
           {
             "id": "d",
@@ -216,7 +216,7 @@
         "final": "Ei, koska 6² + 7² = 85, mutta 9² = 81"
       },
       "feedback": {
-        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+        "correct": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
       },
       "provenance": {
         "template": "ext05_mc",
@@ -270,7 +270,7 @@
             "id": "c",
             "text": "Luvut eivät ole yhtä suuret, joten kolmio ei ole suorakulmainen",
             "misconception": null,
-            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
           },
           {
             "id": "d",
@@ -291,7 +291,7 @@
         "final": "Luvut eivät ole yhtä suuret, joten kolmio ei ole suorakulmainen"
       },
       "feedback": {
-        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+        "correct": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
       },
       "provenance": {
         "template": "ext05_mc",
@@ -345,7 +345,7 @@
             "id": "c",
             "text": "Kolmio, jonka sivut ovat 2, 3 ja 4, koska 2² + 3² = 13 ≠ 16",
             "misconception": null,
-            "feedback": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+            "feedback": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
           }
         ],
         "correct": [
@@ -361,7 +361,7 @@
         "final": "Kolmio, jonka sivut ovat 2, 3 ja 4, koska 2² + 3² = 13 ≠ 16"
       },
       "feedback": {
-        "correct": "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+        "correct": "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
       },
       "provenance": {
         "template": "ext05_mc",

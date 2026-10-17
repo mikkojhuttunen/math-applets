@@ -10,7 +10,7 @@ TEMPLATE = "ext07_ne"
 TID, CODE = "EXT-07", "NE"
 BAD = ("Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: "
        "1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm².")
-GOOD = "Oikein: pinta-alan muuntokerroin on pituuden kertoimen neliö."
+GOOD = "Pinta-alan muuntokerroin on pituuden kertoimen neliö."
 M2_CM2, KM2_M2 = 10_000, 1_000_000
 
 

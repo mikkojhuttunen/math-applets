@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
       },
       "provenance": {
@@ -96,7 +96,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
       },
       "provenance": {
@@ -151,7 +151,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
       },
       "provenance": {
@@ -205,7 +205,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
       },
       "provenance": {
@@ -259,7 +259,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös kaksinkertainen tulo 2ab.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Kokeile vaikka x = 1. Muista, että (a + b)² = (a + b)(a + b)."
       },
       "provenance": {

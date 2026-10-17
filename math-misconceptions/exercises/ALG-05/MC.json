@@ -31,7 +31,7 @@
             "id": "a",
             "text": "32",
             "misconception": null,
-            "feedback": "Oikein: 4a = 4 · a = 4 · 8."
+            "feedback": "4a = 4 · a = 4 · 8."
           },
           {
             "id": "b",
@@ -65,7 +65,7 @@
         "final": "32"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
       },
       "provenance": {
         "template": "alg05_mc",
@@ -106,7 +106,7 @@
             "id": "a",
             "text": "20",
             "misconception": null,
-            "feedback": "Oikein: 4m = 4 · m = 4 · 5."
+            "feedback": "4m = 4 · m = 4 · 5."
           },
           {
             "id": "b",
@@ -140,7 +140,7 @@
         "final": "20"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
       },
       "provenance": {
         "template": "alg05_mc",
@@ -187,7 +187,7 @@
             "id": "b",
             "text": "16",
             "misconception": null,
-            "feedback": "Oikein: ensin 5 · 2, sitten + 6."
+            "feedback": "Ensin 5 · 2, sitten + 6."
           },
           {
             "id": "c",
@@ -215,7 +215,7 @@
         "final": "16"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
       },
       "provenance": {
         "template": "alg05_mc",
@@ -268,7 +268,7 @@
             "id": "c",
             "text": "Väärin: 5n tarkoittaa kertolaskua 5 · 9 = 45",
             "misconception": null,
-            "feedback": "Oikein: kirjaimen vieressä oleva luku on kerroin."
+            "feedback": "Kirjaimen vieressä oleva luku on kerroin."
           },
           {
             "id": "d",
@@ -290,7 +290,7 @@
         "final": "5n = 45"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
       },
       "provenance": {
         "template": "alg05_mc",
@@ -331,7 +331,7 @@
             "id": "a",
             "text": "21",
             "misconception": null,
-            "feedback": "Oikein: ab = a · b."
+            "feedback": "ab = a · b."
           },
           {
             "id": "b",
@@ -365,7 +365,7 @@
         "final": "21"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua."
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua."
       },
       "provenance": {
         "template": "alg05_mc",

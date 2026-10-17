@@ -46,7 +46,7 @@
         "final": "3"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+        "correct": "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
       },
       "provenance": {
         "template": "fun03_ne",
@@ -105,7 +105,7 @@
         "final": "3"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+        "correct": "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
       },
       "provenance": {
         "template": "fun03_ne",
@@ -165,7 +165,7 @@
         "final": "4"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+        "correct": "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
       },
       "provenance": {
         "template": "fun03_ne",
@@ -222,7 +222,7 @@
         "final": "10"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+        "correct": "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
       },
       "provenance": {
         "template": "fun03_ne",
@@ -281,7 +281,7 @@
         "final": "4"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+        "correct": "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
       },
       "provenance": {
         "template": "fun03_ne",

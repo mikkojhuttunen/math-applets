@@ -9,7 +9,7 @@ from gen_common import base_item, cli
 
 TEMPLATE = "prb02_rp"
 TID, CODE = "PRB-02", "RP"
-GOOD = "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
+GOOD = "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista."
 GENERIC = "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
 
 

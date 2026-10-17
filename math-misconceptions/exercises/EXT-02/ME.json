@@ -89,7 +89,7 @@
         "final": "14"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -189,7 +189,7 @@
         "final": "7"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -290,7 +290,7 @@
         "final": "49/4"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -391,7 +391,7 @@
         "final": "26/25"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {
@@ -491,7 +491,7 @@
         "final": "5"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
+        "correct": "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
       },
       "provenance": {

@@ -81,7 +81,7 @@ def make_items(run, date, count=5, start=1):
                    "checks": {"valid": valid, "invalid": invalid}}
         items.append(base_item(TID, CODE, start + k, ["S2.03"], ["T11"], 7, level, prompt, payload, steps,
                                f"x = {c(value)}",
-                               "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku.",
+                               "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku.",
                                TEMPLATE, {"p": p, "q": q, "form": k}, date, run))
     return items
 

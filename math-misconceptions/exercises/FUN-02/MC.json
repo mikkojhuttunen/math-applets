@@ -32,7 +32,7 @@
             "id": "a",
             "text": "A",
             "misconception": null,
-            "feedback": "Oikein: A:n määrä kasvaa nopeammin. A:n nopeus on 5 ja B:n 4 km/h."
+            "feedback": "A:n määrä kasvaa nopeammin. A:n nopeus on 5 ja B:n 4 km/h."
           },
           {
             "id": "b",
@@ -65,7 +65,7 @@
         "final": "A"
       },
       "feedback": {
-        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+        "correct": "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
       },
       "provenance": {
         "template": "fun02_mc",
@@ -113,7 +113,7 @@
             "id": "a",
             "text": "B",
             "misconception": null,
-            "feedback": "Oikein: B:n määrä kasvaa hitaammin. A:n nopeus on 3 ja B:n 1 km/h."
+            "feedback": "B:n määrä kasvaa hitaammin. A:n nopeus on 3 ja B:n 1 km/h."
           },
           {
             "id": "b",
@@ -146,7 +146,7 @@
         "final": "B"
       },
       "feedback": {
-        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+        "correct": "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
       },
       "provenance": {
         "template": "fun02_mc",
@@ -212,7 +212,7 @@
             "id": "d",
             "text": "B",
             "misconception": null,
-            "feedback": "Oikein: B:n määrä kasvaa nopeammin. A:n nopeus on 2 ja B:n 4 l/min."
+            "feedback": "B:n määrä kasvaa nopeammin. A:n nopeus on 2 ja B:n 4 l/min."
           }
         ],
         "correct": [
@@ -227,7 +227,7 @@
         "final": "B"
       },
       "feedback": {
-        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+        "correct": "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
       },
       "provenance": {
         "template": "fun02_mc",
@@ -275,7 +275,7 @@
             "id": "a",
             "text": "Kauempana on B, nopeammin juoksee A.",
             "misconception": null,
-            "feedback": "Oikein: B:n matka on hetkellä t = 1 suurempi, 9 km, mutta A:n nopeus on suurempi, 2 km/h."
+            "feedback": "B:n matka on hetkellä t = 1 suurempi, 9 km, mutta A:n nopeus on suurempi, 2 km/h."
           },
           {
             "id": "b",
@@ -308,7 +308,7 @@
         "final": "Kauempana on B, nopeammin juoksee A."
       },
       "feedback": {
-        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+        "correct": "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
       },
       "provenance": {
         "template": "fun02_mc",
@@ -354,7 +354,7 @@
             "id": "a",
             "text": "Ylempänä oleva A on kauempana, mutta nopeutta kuvaa jyrkkyys. B:n kuvaaja nousee jyrkemmin, joten B liikkuu nopeammin.",
             "misconception": null,
-            "feedback": "Oikein: korkeus on matka, jyrkkyys on nopeus."
+            "feedback": "Korkeus on matka, jyrkkyys on nopeus."
           },
           {
             "id": "b",
@@ -387,7 +387,7 @@
         "final": "Ylempänä oleva A on kauempana, mutta nopeutta kuvaa jyrkkyys. B:n kuvaaja nousee jyrkemmin, joten B liikkuu nopeammin."
       },
       "feedback": {
-        "correct": "Oikein: matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
+        "correct": "Matka–aika-kuvaajassa nopeus on jyrkkyys, ei korkeus."
       },
       "provenance": {
         "template": "fun02_mc",

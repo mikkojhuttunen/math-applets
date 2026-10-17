@@ -68,7 +68,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": float(w), "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, prompt, payload, steps, fmt(ans),
-                               "Oikein: perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos.", TEMPLATE,
+                               "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos.", TEMPLATE,
                                {"orig": fmt(orig), "percent": fmt(p), "form": k}, date, run))
     return items
 

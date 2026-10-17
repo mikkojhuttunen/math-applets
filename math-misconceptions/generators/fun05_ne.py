@@ -9,7 +9,7 @@ TEMPLATE = "fun05_ne"
 TID, CODE = "FUN-05", "NE"
 BAD = ("Lineaarinen funktio ei ole aina suoraan verrannollinen: vakiotermi ei kasva x:n mukana. "
        "Laske arvo sijoittamalla x lausekkeeseen tai käytä muutosta.")
-GOOD = "Oikein: arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
+GOOD = "Arvo lasketaan sijoittamalla lausekkeeseen; x:n kaksin- tai kolminkertaistaminen ei kerro y:tä samoin."
 
 
 def make_items(run, date, count=5, start=1):

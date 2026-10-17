@@ -42,7 +42,7 @@
         "final": "x < −3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_so",
@@ -94,7 +94,7 @@
         "final": "x ≥ 4"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_so",
@@ -146,7 +146,7 @@
         "final": "t > 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_so",
@@ -198,7 +198,7 @@
         "final": "x < 3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_so",
@@ -252,7 +252,7 @@
         "final": "x ≤ 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_so",

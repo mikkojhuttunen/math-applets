@@ -37,7 +37,7 @@ def make_items(run, date, count=5, start=1):
         if k < 3:
             level = "T"
             prompt = f"{intro} Mitä lauseke {expr} kertoo?"
-            options, cid = mc_options(rng, (f"Ostosten yhteishinnan {UNIT_ESSIVE[unit]}", "Oikein: lauseke on yhteishinta."), [
+            options, cid = mc_options(rng, (f"Ostosten yhteishinnan {UNIT_ESSIVE[unit]}", "Lauseke on yhteishinta."), [
                 (f"{pa} {ca} ja {pb} {cb}", "ALG-01", BAD),
                 ("Ostettujen tuotteiden yhteismäärän", None, f"Lauseke kertoo hinnan, ei kappalemäärää: {pa}{x} on {x} tuotteen hinta."),
                 ("Yhden kappaleen hinnan molemmista tuotteista", None,
@@ -50,7 +50,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 3:
             level = "H"
             prompt = f"{intro} Mitä kirjain {x} tarkoittaa lausekkeessa {expr}?"
-            options, cid = mc_options(rng, ("Ensimmäisen tuotteen kappalemäärää, eli lukua", "Oikein: kirjain on lukumäärä."), [
+            options, cid = mc_options(rng, ("Ensimmäisen tuotteen kappalemäärää, eli lukua", "Kirjain kuvaa lukumäärää."), [
                 ("Ensimmäistä tuotetta itseään, esinettä", "ALG-01", BAD),
                 ("Ensimmäisen tuotteen hintaa", None, f"Hinta on jo annettu: {pa} {unit}. Kirjain on määrä."),
                 ("Molempien tuotteiden yhteishintaa", None, "Yhteishinta on koko lauseke, ei yksi kirjain."),
@@ -63,7 +63,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"{intro} Aino sanoo: \"Lauseke {expr} tarkoittaa {pa} {ca} ja {pb} {cb}.\" "
                       "Miksi väite on virheellinen?")
             options, cid = mc_options(rng, ("Kirjaimet ovat lukuja eli määriä, joten lauseke on hinta eikä tuotteiden lista",
-                                            "Oikein: kirjain edustaa lukua."), [
+                                            "Kirjain edustaa lukua."), [
                 ("Väite on oikein: kirjain voi lyhentää tuotteen nimeä", "ALG-01", BAD),
                 ("Lausekkeesta puuttuu yhtäsuuruusmerkki", None, "Lauseke ei tarvitse yhtäsuuruusmerkkiä."),
                 ("Kerroin ja kirjain pitäisi kirjoittaa toisin päin", None, f"{pa}{x} ja {x}·{pa} ovat sama asia."),
@@ -74,7 +74,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T4", "T15"] if k == 4 else ["T7", "T15"], 7,
                                level, prompt, payload, steps, final,
-                               "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta.", TEMPLATE, params, date, run))
+                               "Kirjain kertoo määrän, luku hinnan, ja lauseke on hinta.", TEMPLATE, params, date, run))
     return items
 
 

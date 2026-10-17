@@ -43,7 +43,7 @@
             "id": "c",
             "text": "7",
             "misconception": null,
-            "feedback": "Oikein: puolten on oltava yhtä suuret."
+            "feedback": "Puolten on oltava yhtä suuret."
           },
           {
             "id": "d",
@@ -65,7 +65,7 @@
         "final": "7"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+        "correct": "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
       },
       "provenance": {
         "template": "alg06_mc",
@@ -107,7 +107,7 @@
             "id": "a",
             "text": "7",
             "misconception": null,
-            "feedback": "Oikein: puolten on oltava yhtä suuret."
+            "feedback": "Puolten on oltava yhtä suuret."
           },
           {
             "id": "b",
@@ -141,7 +141,7 @@
         "final": "7"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+        "correct": "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
       },
       "provenance": {
         "template": "alg06_mc",
@@ -195,7 +195,7 @@
             "id": "c",
             "text": "10",
             "misconception": null,
-            "feedback": "Oikein: puolten on oltava yhtä suuret."
+            "feedback": "Puolten on oltava yhtä suuret."
           },
           {
             "id": "d",
@@ -217,7 +217,7 @@
         "final": "10"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+        "correct": "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
       },
       "provenance": {
         "template": "alg06_mc",
@@ -271,7 +271,7 @@
             "id": "c",
             "text": "4 + 8 ei ole yhtä suuri kuin 14, vaikka merkintä väittää niin",
             "misconception": null,
-            "feedback": "Oikein: jokaisen '=' molempien puolten on oltava yhtä suuret."
+            "feedback": "Jokaisen '=' molempien puolten on oltava yhtä suuret."
           },
           {
             "id": "d",
@@ -293,7 +293,7 @@
         "final": "Jokaisen yhtäsuuruusmerkin molempien puolten on oltava yhtä suuret"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+        "correct": "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
       },
       "provenance": {
         "template": "alg06_mc",
@@ -341,7 +341,7 @@
             "id": "b",
             "text": "9 kg",
             "misconception": null,
-            "feedback": "Oikein: molempien kuppien painojen on oltava yhtä suuret."
+            "feedback": "Molempien kuppien painojen on oltava yhtä suuret."
           },
           {
             "id": "c",
@@ -369,7 +369,7 @@
         "final": "9 kg"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
+        "correct": "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret."
       },
       "provenance": {
         "template": "alg06_mc",

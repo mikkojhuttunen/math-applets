@@ -50,7 +50,7 @@ def make_items(run, date, count=5, start=1):
                  (f"Oikea tulos: {a}x + {b}" if k == 0 else (f"Oikea tulos: {a}x + {b + d}" if k == 2 else f"Oikea tulos: {a + c}x + {b - d}"))]
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, ctx + ASK, payload, steps,
                                f"Virhe on rivillä {err}",
-                               "Oikein: vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
+                               "Vain samanmuotoiset termit voi laskea yhteen; luku ja x-termi pysyvät erillään.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run,
                                generic_wrong="Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? "
                                              "Kokeile vaikka x = 1."))

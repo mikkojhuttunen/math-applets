@@ -51,7 +51,7 @@
         "final": "x = 12"
       },
       "feedback": {
-        "correct": "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
       },
       "provenance": {
         "template": "num04_rp",
@@ -113,7 +113,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
       },
       "provenance": {
         "template": "num04_rp",
@@ -175,7 +175,7 @@
         "final": "x = 4"
       },
       "feedback": {
-        "correct": "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
       },
       "provenance": {
         "template": "num04_rp",
@@ -238,7 +238,7 @@
         "final": "x = 22,5"
       },
       "feedback": {
-        "correct": "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
       },
       "provenance": {
         "template": "num04_rp",
@@ -301,7 +301,7 @@
         "final": "x = 20"
       },
       "feedback": {
-        "correct": "Oikein: kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
       },
       "provenance": {
         "template": "num04_rp",

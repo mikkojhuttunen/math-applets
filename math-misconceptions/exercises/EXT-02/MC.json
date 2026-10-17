@@ -44,7 +44,7 @@
             "id": "c",
             "text": "27",
             "misconception": null,
-            "feedback": "Oikein: 3³ = 3 · 3 · 3 = 27."
+            "feedback": "3³ = 3 · 3 · 3 = 27."
           },
           {
             "id": "d",
@@ -64,7 +64,7 @@
         "final": "27"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+        "correct": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
       },
       "provenance": {
         "template": "ext02_mc",
@@ -106,7 +106,7 @@
             "id": "a",
             "text": "1",
             "misconception": null,
-            "feedback": "Oikein: jokaisen nollasta eroavan luvun nollas potenssi on 1, joten 7⁰ = 1."
+            "feedback": "Jokaisen nollasta eroavan luvun nollas potenssi on 1, joten 7⁰ = 1."
           },
           {
             "id": "b",
@@ -139,7 +139,7 @@
         "final": "1"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+        "correct": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
       },
       "provenance": {
         "template": "ext02_mc",
@@ -192,7 +192,7 @@
             "id": "c",
             "text": "1/27",
             "misconception": null,
-            "feedback": "Oikein: 3⁻³ = 1/3³ = 1/27."
+            "feedback": "3⁻³ = 1/3³ = 1/27."
           },
           {
             "id": "d",
@@ -213,7 +213,7 @@
         "final": "1/27"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+        "correct": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
       },
       "provenance": {
         "template": "ext02_mc",
@@ -261,7 +261,7 @@
             "id": "b",
             "text": "5⁰ = 1 ja 5⁻² = 1/25",
             "misconception": null,
-            "feedback": "Oikein: nollas potenssi on 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+            "feedback": "Nollas potenssi on 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
           },
           {
             "id": "c",
@@ -288,7 +288,7 @@
         "final": "5⁰ = 1 ja 5⁻² = 1/25"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+        "correct": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
       },
       "provenance": {
         "template": "ext02_mc",
@@ -335,7 +335,7 @@
             "id": "b",
             "text": "Kun eksponentti pienenee yhdellä, tulo jaetaan luvulla 5: 5² = 25, 5¹ = 5, 5⁰ = 5 ÷ 5 = 1",
             "misconception": null,
-            "feedback": "Oikein: potenssit muodostavat jonon, jossa jokaisella askeleella jaetaan kantaluvulla."
+            "feedback": "Potenssit muodostavat jonon, jossa jokaisella askeleella jaetaan kantaluvulla."
           },
           {
             "id": "c",
@@ -363,7 +363,7 @@
         "final": "Jonossa jaetaan kantaluvulla: 5⁰ = 5 ÷ 5 = 1"
       },
       "feedback": {
-        "correct": "Oikein: potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+        "correct": "Potenssi on toistettu kertolasku, a⁰ = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
       },
       "provenance": {
         "template": "ext02_mc",

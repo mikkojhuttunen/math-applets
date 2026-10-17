@@ -44,7 +44,7 @@
             "id": "c",
             "text": "11",
             "misconception": null,
-            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+            "feedback": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
           },
           {
             "id": "d",
@@ -65,7 +65,7 @@
         "final": "11"
       },
       "feedback": {
-        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+        "correct": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
       },
       "provenance": {
         "template": "ext08_mc",
@@ -118,7 +118,7 @@
             "id": "b",
             "text": "27",
             "misconception": null,
-            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+            "feedback": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
           },
           {
             "id": "c",
@@ -145,7 +145,7 @@
         "final": "27"
       },
       "feedback": {
-        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+        "correct": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
       },
       "provenance": {
         "template": "ext08_mc",
@@ -211,7 +211,7 @@
             "id": "d",
             "text": "Luvut järjestetään pienimmästä suurimpaan",
             "misconception": null,
-            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+            "feedback": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
           }
         ],
         "correct": [
@@ -226,7 +226,7 @@
         "final": "Luvut järjestetään pienimmästä suurimpaan"
       },
       "feedback": {
-        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+        "correct": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
       },
       "provenance": {
         "template": "ext08_mc",
@@ -281,7 +281,7 @@
             "id": "b",
             "text": "Mediaani, koska yksi erittäin suuri palkka nostaa keskiarvoa mutta ei muuta keskimmäistä arvoa paljon",
             "misconception": null,
-            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+            "feedback": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
           },
           {
             "id": "c",
@@ -309,7 +309,7 @@
         "final": "Mediaani, koska yksi erittäin suuri palkka nostaa keskiarvoa mutta ei muuta keskimmäistä arvoa paljon"
       },
       "feedback": {
-        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+        "correct": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
       },
       "provenance": {
         "template": "ext08_mc",
@@ -363,7 +363,7 @@
             "id": "b",
             "text": "Väite on väärä: luvut pitää järjestää ensin, ja silloin mediaani on 17",
             "misconception": null,
-            "feedback": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+            "feedback": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
           },
           {
             "id": "c",
@@ -390,7 +390,7 @@
         "final": "Väite on väärä: luvut pitää järjestää ensin, ja silloin mediaani on 17"
       },
       "feedback": {
-        "correct": "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+        "correct": "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
       },
       "provenance": {
         "template": "ext08_mc",

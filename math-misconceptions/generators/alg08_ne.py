@@ -67,7 +67,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "expression", "variables": ["x"], "reference": fmt(good), "samples": SAMPLES},
                    "wrong": wl, "input_hint": "Kirjoita esim. 2x + 6"}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, fmt(good),
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "d": d, "e": e}, date, run))
     return items
 

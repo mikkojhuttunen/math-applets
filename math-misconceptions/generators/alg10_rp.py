@@ -53,7 +53,7 @@ def make_items(run, date, count=5, start=1):
                    "checks": {"valid": valid, "invalid": invalid}}
         final = f"{payload['constraint']['variable']} = {value}"
         items.append(base_item(TID, CODE, start + k, ops, tt, 7 if k < 3 else 8, level, prompt, payload,
-                               steps, final, "Oikein: yhtälön ratkaisu on pyydetty luku.", TEMPLATE,
+                               steps, final, "Yhtälön ratkaisu on pyydetty luku.", TEMPLATE,
                                {"n": n, "q": q, "form": k}, date, run))
     return items
 

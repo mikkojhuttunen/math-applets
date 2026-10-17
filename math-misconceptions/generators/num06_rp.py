@@ -51,7 +51,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"constraint": {"type": "solution_equals", "variable": "x", "value": float(m)},
                    "checks": {"valid": valid, "invalid": invalid}}
         items.append(base_item(TID, CODE, start + k, ["S2.08"], ["T12"], 8, level, prompt, payload, steps,
-                               f"x = {fmt(m)}", "Oikein: lukujen välissä on aina uusia lukuja, ja ne voi laskea.",
+                               f"x = {fmt(m)}", "Lukujen välissä on aina uusia lukuja, ja ne voi laskea.",
                                TEMPLATE, {"a": fmt(a), "b": fmt(b), "form": k}, date, run))
     return items
 

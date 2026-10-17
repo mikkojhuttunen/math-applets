@@ -52,7 +52,7 @@
         "final": "x = 10"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
       },
       "provenance": {
         "template": "alg06_rp",
@@ -117,7 +117,7 @@
         "final": "x = 6"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
       },
       "provenance": {
         "template": "alg06_rp",
@@ -182,7 +182,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
       },
       "provenance": {
         "template": "alg06_rp",
@@ -247,7 +247,7 @@
         "final": "x = 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
       },
       "provenance": {
         "template": "alg06_rp",
@@ -313,7 +313,7 @@
         "final": "x = 6"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
       },
       "provenance": {
         "template": "alg06_rp",

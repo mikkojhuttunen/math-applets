@@ -61,7 +61,7 @@
         "final": "7 − x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_ne",
@@ -134,7 +134,7 @@
         "final": "−6x − 8"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_ne",
@@ -207,7 +207,7 @@
         "final": "10 − 3x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_ne",
@@ -280,7 +280,7 @@
         "final": "4 − 8x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_ne",
@@ -353,7 +353,7 @@
         "final": "15 − x"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_ne",

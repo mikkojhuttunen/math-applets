@@ -31,7 +31,7 @@
             "id": "a",
             "text": "Voi: a = 6 ja b = 6",
             "misconception": null,
-            "feedback": "Oikein: eri kirjaimet saavat olla sama luku."
+            "feedback": "Eri kirjaimet saavat olla sama luku."
           },
           {
             "id": "b",
@@ -65,7 +65,7 @@
         "final": "Voi: a = b = 6"
       },
       "feedback": {
-        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+        "correct": "Eri kirjaimet saavat tarkoittaa samaa lukua."
       },
       "provenance": {
         "template": "alg02_mc",
@@ -109,7 +109,7 @@
             "id": "a",
             "text": "m = 8 ja n = 8 on mahdollinen",
             "misconception": null,
-            "feedback": "Oikein: kirjaimilla saa olla sama arvo."
+            "feedback": "Kirjaimilla saa olla sama arvo."
           },
           {
             "id": "b",
@@ -142,7 +142,7 @@
         "final": "m = n = 8 on mahdollinen"
       },
       "feedback": {
-        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+        "correct": "Eri kirjaimet saavat tarkoittaa samaa lukua."
       },
       "provenance": {
         "template": "alg02_mc",
@@ -186,7 +186,7 @@
             "id": "a",
             "text": "15",
             "misconception": null,
-            "feedback": "Oikein: sijoita kummankin kirjaimen paikalle luku."
+            "feedback": "Sijoita kummankin kirjaimen paikalle luku."
           },
           {
             "id": "b",
@@ -220,7 +220,7 @@
         "final": "15"
       },
       "feedback": {
-        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+        "correct": "Eri kirjaimet saavat tarkoittaa samaa lukua."
       },
       "provenance": {
         "template": "alg02_mc",
@@ -264,7 +264,7 @@
             "id": "a",
             "text": "Ratkaisu kelpaa: 3 + 3 = 6, ja kirjaimet saavat olla yhtä suuret",
             "misconception": null,
-            "feedback": "Oikein: yhtälön toteuttavat kaikki luvut, joilla ehto pätee."
+            "feedback": "Yhtälön toteuttavat kaikki luvut, joilla ehto pätee."
           },
           {
             "id": "b",
@@ -298,7 +298,7 @@
         "final": "Eri kirjaimet saavat olla sama luku"
       },
       "feedback": {
-        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+        "correct": "Eri kirjaimet saavat tarkoittaa samaa lukua."
       },
       "provenance": {
         "template": "alg02_mc",
@@ -354,7 +354,7 @@
             "id": "c",
             "text": "s = t = 7, vaikka kirjaimet ovat eri",
             "misconception": null,
-            "feedback": "Oikein: samaa lukua voi merkitä kahdella kirjaimella."
+            "feedback": "Samaa lukua voi merkitä kahdella kirjaimella."
           },
           {
             "id": "d",
@@ -376,7 +376,7 @@
         "final": "s = t = 7"
       },
       "feedback": {
-        "correct": "Oikein: eri kirjaimet saavat tarkoittaa samaa lukua."
+        "correct": "Eri kirjaimet saavat tarkoittaa samaa lukua."
       },
       "provenance": {
         "template": "alg02_mc",

@@ -88,7 +88,7 @@
         "final": "4n = 4 · n"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
         "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
       },
       "provenance": {
@@ -188,7 +188,7 @@
         "final": "4m = 4 · m"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
         "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
       },
       "provenance": {
@@ -288,7 +288,7 @@
         "final": "5k = 5 · k"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
         "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
       },
       "provenance": {
@@ -392,7 +392,7 @@
         "final": "ab = a · b"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
         "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
       },
       "provenance": {
@@ -480,7 +480,7 @@
         "final": "5 pulloa maksaa 5 · t = 5t euroa"
       },
       "feedback": {
-        "correct": "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
+        "correct": "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.",
         "generic_wrong": "Sijoita kirjaimen paikalle luku, esimerkiksi 3, ja laske lausekkeiden arvot. Vierekkäin kirjoitetut luku ja kirjain eivät ole kymmenet ja ykköset."
       },
       "provenance": {

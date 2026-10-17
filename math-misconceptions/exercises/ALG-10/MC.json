@@ -32,7 +32,7 @@
             "id": "a",
             "text": "o = 6t",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Oppilaita on 6 kertaa niin paljon kuin opettajia, joten o = 6t."
           },
           {
             "id": "b",
@@ -65,7 +65,7 @@
         "final": "o = 6t"
       },
       "feedback": {
-        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+        "correct": "Suuremman määrän kirjain on yhtälön yksin puolella."
       },
       "provenance": {
         "template": "alg10_mc",
@@ -106,7 +106,7 @@
             "id": "a",
             "text": "k = 8t",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Kahvikuppeja on 8 kertaa niin paljon kuin teekuppeja, joten k = 8t."
           },
           {
             "id": "b",
@@ -139,7 +139,7 @@
         "final": "k = 8t"
       },
       "feedback": {
-        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+        "correct": "Suuremman määrän kirjain on yhtälön yksin puolella."
       },
       "provenance": {
         "template": "alg10_mc",
@@ -186,7 +186,7 @@
             "id": "b",
             "text": "p = 3v",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Pelaajia on 3 kertaa niin paljon kuin valmentajia, joten p = 3v."
           },
           {
             "id": "c",
@@ -213,7 +213,7 @@
         "final": "p = 3v"
       },
       "feedback": {
-        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+        "correct": "Suuremman määrän kirjain on yhtälön yksin puolella."
       },
       "provenance": {
         "template": "alg10_mc",
@@ -273,7 +273,7 @@
             "id": "d",
             "text": "k = 3l + 6",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Kirjoja on 3 kertaa niin paljon kuin lehtiä ja lisäksi 6, joten k = 3l + 6."
           }
         ],
         "correct": [
@@ -288,7 +288,7 @@
         "final": "k = 3l + 6"
       },
       "feedback": {
-        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+        "correct": "Suuremman määrän kirjain on yhtälön yksin puolella."
       },
       "provenance": {
         "template": "alg10_mc",
@@ -343,7 +343,7 @@
             "id": "c",
             "text": "k = 4h + 7",
             "misconception": null,
-            "feedback": "Oikein."
+            "feedback": "Kyyhkysiä on 4 kertaa niin paljon kuin harakoita ja lisäksi 7, joten k = 4h + 7."
           },
           {
             "id": "d",
@@ -364,7 +364,7 @@
         "final": "k = 4h + 7"
       },
       "feedback": {
-        "correct": "Oikein: suuremman määrän kirjain on yhtälön yksin puolella."
+        "correct": "Suuremman määrän kirjain on yhtälön yksin puolella."
       },
       "provenance": {
         "template": "alg10_mc",

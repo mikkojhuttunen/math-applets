@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli, lin
 TEMPLATE = "alg11_me"
 TID, CODE = "ALG-11", "ME"
 GENERIC = "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
-GOOD = "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+GOOD = "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
 
 
 def make_items(run, date, count=5, start=1):

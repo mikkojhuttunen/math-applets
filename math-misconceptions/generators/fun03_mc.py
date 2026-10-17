@@ -10,7 +10,7 @@ TEMPLATE = "fun03_mc"
 TID, CODE = "FUN-03", "MC"
 BAD = ("Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: "
        "kulmakerroin = y:n muutos / x:n muutos.")
-GOOD = "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+GOOD = "Kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
 
 
 def fr(x):

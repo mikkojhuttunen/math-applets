@@ -10,7 +10,7 @@ from gen_common import MINUS, base_item, cli
 
 TEMPLATE = "ext02_me"
 TID, CODE = "EXT-02", "ME"
-GOOD = "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+GOOD = "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
 GENERIC = "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista: a^0 = 1 ja a^(−n) = 1/a^n."
 
 

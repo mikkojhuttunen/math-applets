@@ -10,7 +10,7 @@ TEMPLATE = "ext05_mc"
 TID, CODE = "EXT-05", "MC"
 BAD = ("Pythagoraan lause koskee vain suorakulmaista kolmiota. Muissa kolmioissa summa a² + b² ei yleensä ole c². "
        "Kokeile laskea neliöt ja vertaa.")
-GOOD = "Oikein: Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
+GOOD = "Pythagoraan lause pätee vain suorakulmaisessa kolmiossa, ja käänteislause kertoo, milloin kulma on suora."
 
 
 def is_right(a, b, c):

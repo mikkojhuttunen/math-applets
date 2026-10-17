@@ -43,7 +43,7 @@
             "id": "c",
             "text": "Äärettömän monta",
             "misconception": null,
-            "feedback": "Oikein: esimerkiksi 0,55, 0,51 ja 0,501 ovat välissä, ja uusia löytyy aina."
+            "feedback": "Esimerkiksi 0,55, 0,51 ja 0,501 ovat välissä, ja uusia löytyy aina."
           },
           {
             "id": "d",
@@ -64,7 +64,7 @@
         "final": "Äärettömän monta"
       },
       "feedback": {
-        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+        "correct": "Kahden luvun välissä on aina äärettömän monta lukua."
       },
       "provenance": {
         "template": "num06_mc",
@@ -111,7 +111,7 @@
             "id": "b",
             "text": "4,85",
             "misconception": null,
-            "feedback": "Oikein: 4,8 < 4,85 < 4,9."
+            "feedback": "4,8 < 4,85 < 4,9."
           },
           {
             "id": "c",
@@ -138,7 +138,7 @@
         "final": "4,85"
       },
       "feedback": {
-        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+        "correct": "Kahden luvun välissä on aina äärettömän monta lukua."
       },
       "provenance": {
         "template": "num06_mc",
@@ -197,7 +197,7 @@
             "id": "d",
             "text": "Voi, esimerkiksi 4,95 cm, ja tällaisia pituuksia on äärettömän monta",
             "misconception": null,
-            "feedback": "Oikein: 4,9 < 4,95 < 5."
+            "feedback": "4,9 < 4,95 < 5."
           }
         ],
         "correct": [
@@ -211,7 +211,7 @@
         "final": "Voi"
       },
       "feedback": {
-        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+        "correct": "Kahden luvun välissä on aina äärettömän monta lukua."
       },
       "provenance": {
         "template": "num06_mc",
@@ -253,7 +253,7 @@
             "id": "a",
             "text": "Sellaista ei ole, koska lukua lähempänä 0,3 voi aina löytää",
             "misconception": null,
-            "feedback": "Oikein: jos luku on pienempi kuin 0,3, sen ja 0,3 väliltä löytyy suurempi."
+            "feedback": "Jos luku on pienempi kuin 0,3, sen ja 0,3 väliltä löytyy suurempi."
           },
           {
             "id": "b",
@@ -286,7 +286,7 @@
         "final": "Sellaista lukua ei ole"
       },
       "feedback": {
-        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+        "correct": "Kahden luvun välissä on aina äärettömän monta lukua."
       },
       "provenance": {
         "template": "num06_mc",
@@ -326,7 +326,7 @@
             "id": "a",
             "text": "Lasketaan lukujen keskiarvo",
             "misconception": null,
-            "feedback": "Oikein: keskiarvo on aina lukujen välissä."
+            "feedback": "Keskiarvo on aina lukujen välissä."
           },
           {
             "id": "b",
@@ -359,7 +359,7 @@
         "final": "Keskiarvo"
       },
       "feedback": {
-        "correct": "Oikein: kahden luvun välissä on aina äärettömän monta lukua."
+        "correct": "Kahden luvun välissä on aina äärettömän monta lukua."
       },
       "provenance": {
         "template": "num06_mc",

@@ -11,7 +11,7 @@ TEMPLATE = "ext03_fs"
 TID, CODE = "EXT-03", "FS"
 FLIP = {">": "<", "<": ">", "≥": "≤", "≤": "≥"}
 SAMPLES = [[1], [2], [3]]
-GOOD = "Oikein: negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy."
+GOOD = "Negatiivisella luvulla jaettaessa tai kerrottaessa epäyhtälömerkin suunta kääntyy."
 GENERIC = ("Tarkista välivaihe sijoittamalla jokin luku: toteuttaako se sekä edellisen että uuden rivin? "
            "Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy.")
 

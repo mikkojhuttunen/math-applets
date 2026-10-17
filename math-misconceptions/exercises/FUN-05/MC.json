@@ -44,7 +44,7 @@
             "id": "c",
             "text": "Ei: y muuttuu arvosta 5 arvoon 7, eikä 7 ole 10",
             "misconception": null,
-            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+            "feedback": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           },
           {
             "id": "d",
@@ -66,7 +66,7 @@
         "final": "Ei kaksinkertaistu"
       },
       "feedback": {
-        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+        "correct": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
       },
       "provenance": {
         "template": "fun05_mc",
@@ -127,7 +127,7 @@
             "id": "d",
             "text": "Ei: suhde y/x ei ole vakio, sillä 7/1 = 7 mutta 12/2 = 6",
             "misconception": null,
-            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+            "feedback": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           }
         ],
         "correct": [
@@ -142,7 +142,7 @@
         "final": "Ei ole"
       },
       "feedback": {
-        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+        "correct": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
       },
       "provenance": {
         "template": "fun05_mc",
@@ -185,7 +185,7 @@
             "id": "a",
             "text": "16 €",
             "misconception": null,
-            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+            "feedback": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           },
           {
             "id": "b",
@@ -218,7 +218,7 @@
         "final": "16 €"
       },
       "feedback": {
-        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+        "correct": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
       },
       "provenance": {
         "template": "fun05_mc",
@@ -280,7 +280,7 @@
             "id": "d",
             "text": "y = 4x",
             "misconception": null,
-            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+            "feedback": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           }
         ],
         "correct": [
@@ -295,7 +295,7 @@
         "final": "y = 4x"
       },
       "feedback": {
-        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+        "correct": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
       },
       "provenance": {
         "template": "fun05_mc",
@@ -350,7 +350,7 @@
             "id": "c",
             "text": "Kun x = 1, y = 5; kun x = 2, y = 9. Arvo 9 ei ole kaksinkertainen arvoon 5 verrattuna",
             "misconception": null,
-            "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+            "feedback": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           },
           {
             "id": "d",
@@ -372,7 +372,7 @@
         "final": "Suora ei kulje origon kautta"
       },
       "feedback": {
-        "correct": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
+        "correct": "y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
       },
       "provenance": {
         "template": "fun05_mc",

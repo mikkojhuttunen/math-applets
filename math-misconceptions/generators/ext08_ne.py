@@ -11,7 +11,7 @@ TEMPLATE = "ext08_ne"
 TID, CODE = "EXT-08", "NE"
 BAD = ("Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja "
        "valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo.")
-GOOD = "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+GOOD = "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
 
 
 def make_items(run, date, count=5, start=1):

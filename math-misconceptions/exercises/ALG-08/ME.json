@@ -88,7 +88,7 @@
         "final": "3x + 6"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -189,7 +189,7 @@
         "final": "5x − 35"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -289,7 +289,7 @@
         "final": "8 + 10x"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -389,7 +389,7 @@
         "final": "4x + 37"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -489,7 +489,7 @@
         "final": "15x + 9"
       },
       "feedback": {
-        "correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.",
+        "correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {

@@ -49,7 +49,7 @@ def make_items(run, date, count=5, start=1):
                    for i, (t, e, m) in enumerate(opts)]
         payload = {"reference": ref, "variables": ["x"], "samples": [[-2], [1], [3]], "options": options}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, steps[-1],
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin.", TEMPLATE,
                                {"a": a, "b": b, "c": c}, date, run,
                                misconceptions=[TID] + (["ALG-11"] if k == 1 else []),
                                generic_wrong="Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."))

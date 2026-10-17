@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": "NUM-03", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita kokonaisluku"}
         items.append(base_item(TID, CODE, start + k, ["S2.02"], ["T11"], 7, "T" if k < 3 else "H", prompt, payload,
-                               steps, str(ans), "Oikein: samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen.",
+                               steps, str(ans), "Samannimisillä murtoluvuilla lasketaan vain osoittajat yhteen.",
                                TEMPLATE, params, date, run))
     return items
 

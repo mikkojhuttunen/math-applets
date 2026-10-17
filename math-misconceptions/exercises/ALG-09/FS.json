@@ -61,7 +61,7 @@
         "final": "(x + 7)(x + 7)"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
         "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
       },
       "provenance": {
@@ -134,7 +134,7 @@
         "final": "x² − 8x − 8x + 64"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
         "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
       },
       "provenance": {
@@ -207,7 +207,7 @@
         "final": "4x² + 24x + 36"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
         "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
       },
       "provenance": {
@@ -279,7 +279,7 @@
         "final": "x² + 6x + 9 + 7"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
         "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
       },
       "provenance": {
@@ -351,7 +351,7 @@
         "final": "x² + 8x + 16 − x²"
       },
       "feedback": {
-        "correct": "Oikein: (a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
+        "correct": "(a + b)² on tulo (a + b)(a + b), ja siinä on myös keskimmäiset termit 2ab.",
         "generic_wrong": "Muista, että (a + b)² = (a + b)(a + b). Kerro jokainen termi jokaisella termillä, niin saat myös keskimmäiset termit. Tarkista sijoittamalla x = 1."
       },
       "provenance": {

@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli
 
 TEMPLATE = "ext04_fs"
 TID, CODE = "EXT-04", "FS"
-GOOD = "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua."
+GOOD = "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua."
 GENERIC = ("Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku "
            "uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0.")
 

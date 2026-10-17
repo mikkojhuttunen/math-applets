@@ -32,7 +32,7 @@
             "id": "a",
             "text": "10",
             "misconception": null,
-            "feedback": "Oikein: 18 − 8 = 10."
+            "feedback": "18 − 8 = 10."
           },
           {
             "id": "b",
@@ -65,7 +65,7 @@
         "final": "10"
       },
       "feedback": {
-        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+        "correct": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
       },
       "provenance": {
         "template": "alg03_mc",
@@ -121,7 +121,7 @@
             "id": "c",
             "text": "6",
             "misconception": null,
-            "feedback": "Oikein: 24 ÷ 4 = 6."
+            "feedback": "24 ÷ 4 = 6."
           },
           {
             "id": "d",
@@ -142,7 +142,7 @@
         "final": "6"
       },
       "feedback": {
-        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+        "correct": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
       },
       "provenance": {
         "template": "alg03_mc",
@@ -186,7 +186,7 @@
             "id": "a",
             "text": "3",
             "misconception": null,
-            "feedback": "Oikein: -3 + 6 = 3."
+            "feedback": "-3 + 6 = 3."
           },
           {
             "id": "b",
@@ -219,7 +219,7 @@
         "final": "3"
       },
       "feedback": {
-        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+        "correct": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
       },
       "provenance": {
         "template": "alg03_mc",
@@ -275,7 +275,7 @@
             "id": "c",
             "text": "Väite on väärin: yhtälöstä saadaan d = 7",
             "misconception": null,
-            "feedback": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+            "feedback": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
           },
           {
             "id": "d",
@@ -297,7 +297,7 @@
         "final": "d = 7"
       },
       "feedback": {
-        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+        "correct": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
       },
       "provenance": {
         "template": "alg03_mc",
@@ -347,7 +347,7 @@
             "id": "b",
             "text": "Kirjain on tuntematon luku, jonka arvon määrää yhtälö, ei kirjaimen paikka aakkosissa",
             "misconception": null,
-            "feedback": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+            "feedback": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
           },
           {
             "id": "c",
@@ -374,7 +374,7 @@
         "final": "Arvo ratkaistaan yhtälöstä"
       },
       "feedback": {
-        "correct": "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+        "correct": "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
       },
       "provenance": {
         "template": "alg03_mc",

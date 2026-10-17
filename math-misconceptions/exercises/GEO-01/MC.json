@@ -43,7 +43,7 @@
             "id": "c",
             "text": "Kyllä: pisteet eivät ole samalla suoralla, ja kuvion ala on 5 ruutua",
             "misconception": null,
-            "feedback": "Oikein: kolme pistettä, jotka eivät ole samalla suoralla, määräävät kolmion, vaikka se olisi vinossa."
+            "feedback": "Kolme pistettä, jotka eivät ole samalla suoralla, määräävät kolmion, vaikka se olisi vinossa."
           },
           {
             "id": "d",
@@ -65,7 +65,7 @@
         "final": "Kyllä: pisteet eivät ole samalla suoralla, ja kuvion ala on 5 ruutua"
       },
       "feedback": {
-        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+        "correct": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
       },
       "provenance": {
         "template": "geo01_mc",
@@ -125,7 +125,7 @@
             "id": "b",
             "text": "Kyllä: kulmien summa on 126 + 38 + 16 = 180°",
             "misconception": null,
-            "feedback": "Oikein: kolmion yksi kulma saa olla tylppä, kunhan kulmien summa on 180°."
+            "feedback": "Kolmion yksi kulma saa olla tylppä, kunhan kulmien summa on 180°."
           },
           {
             "id": "c",
@@ -152,7 +152,7 @@
         "final": "Kyllä: kulmien summa on 126 + 38 + 16 = 180°"
       },
       "feedback": {
-        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+        "correct": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
       },
       "provenance": {
         "template": "geo01_mc",
@@ -214,7 +214,7 @@
             "id": "d",
             "text": "Kyllä: 5 + 7 = 12 > 8, joten sivuista saa kolmion, vaikka ne ovat eri pituisia",
             "misconception": null,
-            "feedback": "Oikein: kolmion sivut saavat olla eri pituisia, kunhan kaksi lyhintä sivua on yhteensä pidempiä kuin pisin."
+            "feedback": "Kolmion sivut saavat olla eri pituisia, kunhan kaksi lyhintä sivua on yhteensä pidempiä kuin pisin."
           }
         ],
         "correct": [
@@ -229,7 +229,7 @@
         "final": "Kyllä: 5 + 7 = 12 > 8, joten sivuista saa kolmion, vaikka ne ovat eri pituisia"
       },
       "feedback": {
-        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+        "correct": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
       },
       "provenance": {
         "template": "geo01_mc",
@@ -273,7 +273,7 @@
             "id": "a",
             "text": "A(3, 3), B(4, 6), C(5, 9)",
             "misconception": null,
-            "feedback": "Oikein: pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny."
+            "feedback": "Pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny."
           },
           {
             "id": "b",
@@ -306,7 +306,7 @@
         "final": "A(3, 3), B(4, 6), C(5, 9)"
       },
       "feedback": {
-        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+        "correct": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
       },
       "provenance": {
         "template": "geo01_mc",
@@ -403,7 +403,7 @@
             "id": "a",
             "text": "Kolmio on kolmio, kun kolme suoraa sivua sulkee kuvion. Tässä ala on 4,5 ruutua, joten pisteet eivät ole samalla suoralla",
             "misconception": null,
-            "feedback": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+            "feedback": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
           },
           {
             "id": "b",
@@ -437,7 +437,7 @@
         "final": "Kolmio on kolmio, kun kolme suoraa sivua sulkee kuvion. Tässä ala on 4,5 ruutua, joten pisteet eivät ole samalla suoralla"
       },
       "feedback": {
-        "correct": "Oikein: kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
+        "correct": "Kolme suoraa sivua ja suljettu kuvio riittävät, kuvio saa olla vinossa ja epäsymmetrinen."
       },
       "provenance": {
         "template": "geo01_mc",

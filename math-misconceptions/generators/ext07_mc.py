@@ -10,7 +10,7 @@ TEMPLATE = "ext07_mc"
 TID, CODE = "EXT-07", "MC"
 BAD = ("Pinta-alayksiköiden muuntokerroin on pituusyksikön kerroin toiseen potenssiin: "
        "1 m² = 1 m · 1 m = 100 cm · 100 cm = 10 000 cm².")
-GOOD = "Oikein: 1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
+GOOD = "1 m² = 10 000 cm², koska 1 m = 100 cm ja 100 · 100 = 10 000."
 
 
 def big(n):
@@ -49,7 +49,7 @@ def make_items(run, date, count=5, start=1):
             n = rng.choice([3, 5, 7])
             level = "T"
             prompt = f"Mikä on {big(n * 10_000)} cm² neliömetreinä?"
-            correct = (f"{n} m²", "Oikein: 10 000 cm² = 1 m², joten jaetaan luvulla 10 000.")
+            correct = (f"{n} m²", "10 000 cm² = 1 m², joten jaetaan luvulla 10 000.")
             wrongs = [(f"{big(n * 100)} m²", TID, BAD), (f"{d(Decimal(n) / 10)} m²", None, "Jaettiin liian pienellä luvulla: 1 m² on 10 000 cm²."),
                       (f"{big(n * 10)} m²", None, "Suunta on väärä: neliömetri on suurempi yksikkö kuin neliösenttimetri.")]
             steps = ["10 000 cm² = 1 m²", f"{big(n * 10_000)} ÷ 10 000 = {n}"]
@@ -74,7 +74,7 @@ def make_items(run, date, count=5, start=1):
             assert big_cm2 > cm2
             prompt = f"Kumpi on suurempi: {d(n)} m² vai {big(cm2)} cm²?"
             correct = (f"{d(n)} m² on suurempi, koska se on {big(big_cm2)} cm²",
-                       f"Oikein: {d(n)} m² = {big(big_cm2)} cm² > {big(cm2)} cm².")
+                       f"{d(n)} m² = {big(big_cm2)} cm² > {big(cm2)} cm².")
             wrongs = [(f"{big(cm2)} cm² on suurempi, koska {d(n)} m² on vain {d(Decimal(str(n)) * 100)} cm²", TID, BAD),
                       ("Ne ovat yhtä suuret", None, f"{d(n)} m² = {big(big_cm2)} cm², joka ei ole {big(cm2)} cm²."),
                       (f"{big(cm2)} cm² on suurempi, koska luku {big(cm2)} on suurempi kuin {d(n)}", None,

@@ -19,7 +19,7 @@ def make_items(run, date, count=5, start=1):
         if k == 0:
             level = "T"
             prompt = f"Sievennä lauseke {a}x + {b}."
-            options, cid = mc_options(rng, (f"{a}x + {b}", f"Oikein: {a}x ja {b} ovat eri muotoisia termejä, joten lauseke on jo sievin."), [
+            options, cid = mc_options(rng, (f"{a}x + {b}", f"{a}x ja {b} ovat eri muotoisia termejä, joten lauseke on jo sievin."), [
                 (f"{a + b}x", TID, OP),
                 (f"{a * b}x", TID, OP),
                 (f"{a + b}", None, f"Kirjain ei katoa: {a}x ei ole sama kuin {a}."),
@@ -29,7 +29,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 1:
             level = "T"
             prompt = f"Sievennä lauseke {a}x + {b} + {c}x."
-            options, cid = mc_options(rng, (f"{a + c}x + {b}", "Oikein: vain x-termit voi laskea yhteen."), [
+            options, cid = mc_options(rng, (f"{a + c}x + {b}", "Vain x-termit voi laskea yhteen."), [
                 (f"{a + b + c}x", TID, OP),
                 (f"{a + c + b}", None, "Kirjain x ei saa kadota: x-termit pysyvät x-termeinä."),
                 (f"{a * c}x + {b}", None, f"Samanlaiset termit lasketaan yhteen, ei kerrota: {a}x + {c}x."),
@@ -41,7 +41,7 @@ def make_items(run, date, count=5, start=1):
             d = rng.randint(2, 5)
             prompt = f"Mikä lauseke on sama kuin {b} + {a}y {MINUS} {d}?"
             rest = f"+ {b - d}" if b >= d else f"{MINUS} {d - b}"
-            options, cid = mc_options(rng, (f"{a}y {rest}", "Oikein: luvut yhdistetään keskenään, y-termi pysyy omana termin."), [
+            options, cid = mc_options(rng, (f"{a}y {rest}", "Luvut yhdistetään keskenään, y-termi pysyy omana termin."), [
                 (f"{a + b - d}y", TID, OP),
                 (f"{a}y {MINUS} {b + d}", None, "Tarkista vakiotermien merkit: +" + str(b) + f" ja {MINUS}{d}."),
                 (f"{a * b - d}y", TID, OP),
@@ -52,7 +52,7 @@ def make_items(run, date, count=5, start=1):
             level = "H"
             x = 2
             prompt = (f"Oppilas sieventää lausekkeen {a}x + {b} muotoon {a + b}x. Mikä perustelu osoittaa, että sieventäminen on väärin?")
-            options, cid = mc_options(rng, (f"Kun x = {x}, {a}x + {b} = {a * x + b}, mutta {a + b}x = {(a + b) * x}", "Oikein: lausekkeiden arvot eroavat, joten ne eivät ole sama lauseke."), [
+            options, cid = mc_options(rng, (f"Kun x = {x}, {a}x + {b} = {a * x + b}, mutta {a + b}x = {(a + b) * x}", "Lausekkeiden arvot eroavat, joten ne eivät ole sama lauseke."), [
                 (f"Sieventäminen on oikein, koska plusmerkki pyytää laskemaan kaiken yhteen", TID, OP),
                 (f"Väärin, koska vastauksessa ei saa olla kirjainta", None, "Kirjain saa olla vastauksessa, kun alkuperäisessäkin on kirjain."),
                 (f"Väärin, koska luvut pitäisi kertoa keskenään", None, "Kertominen ei kuulu tehtävään."),
@@ -66,7 +66,7 @@ def make_items(run, date, count=5, start=1):
             wrong_val = (2 + c) * price
             prompt = (f"Pizza maksaa x euroa ja juoma {c} euroa. Kaksi pizzaa ja yksi juoma maksaa 2x + {c} euroa. "
                       f"Matti sanoo hinnan olevan {2 + c}x euroa. Mikä on oikea hinta euroina, kun x = {price}?")
-            options, cid = mc_options(rng, (str(base), "Oikein: 2x + " + str(c) + " ei ole sama kuin " + str(2 + c) + "x."), [
+            options, cid = mc_options(rng, (str(base), "2x + " + str(c) + " ei ole sama kuin " + str(2 + c) + "x."), [
                 (str(wrong_val), TID, OP),
                 (str(2 * (price + c)), None, "Juoma ostetaan vain kerran, ei kahta."),
                 (str(price + c), None, "Pizzoja on kaksi."),
@@ -75,7 +75,7 @@ def make_items(run, date, count=5, start=1):
             final = str(base)
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, prompt, payload, steps, final,
-                               "Oikein: eri muotoisia termejä ei voi yhdistää yhdeksi termiksi.", TEMPLATE,
+                               "Eri muotoisia termejä ei voi yhdistää yhdeksi termiksi.", TEMPLATE,
                                {"a": a, "b": b, "c": c}, date, run))
     return items
 

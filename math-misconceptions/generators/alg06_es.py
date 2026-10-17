@@ -53,7 +53,7 @@ def make_items(run, date, count=5, start=1):
                  f"Oikea ratkaisu: x = {s if k != 3 else a - b} {MINUS} {c if k != 3 else d} = {good}"]
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps,
                                f"Virhe on rivillä {err}",
-                               "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.", TEMPLATE,
+                               "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.", TEMPLATE,
                                {"a": a, "b": b, "c": c, "d": d, "form": form}, date, run,
                                generic_wrong="Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? "
                                              "Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."))

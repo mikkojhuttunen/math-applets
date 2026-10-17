@@ -76,7 +76,7 @@ def make_items(run, date, count=5, start=1):
             answer["equivalents"] = equiv
         payload = {"lines": lines, "blank_index": blank, "answer": answer}
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, prompt, payload, steps, ref,
-                               "Oikein: perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
+                               "Perusarvo x on alkuperäinen määrä, ja uusi määrä on (1 ± prosentti) · x.",
                                TEMPLATE, {"orig": fmt(orig), "percent": fmt(p), "form": k}, date, run, generic_wrong=GENERIC))
     return items
 

@@ -10,7 +10,7 @@ TEMPLATE = "num08_mc"
 TID, CODE = "NUM-08", "MC"
 BAD = ("Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. "
        "Esimerkiksi +10 % ja −10 % antaa 1,10 · 0,90 = 0,99.")
-GOOD = "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+GOOD = "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
 
 
 def fmt(x):

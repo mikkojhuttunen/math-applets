@@ -11,7 +11,7 @@ TEMPLATE = "ext08_mc"
 TID, CODE = "EXT-08", "MC"
 BAD = ("Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja "
        "valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo.")
-GOOD = "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
+GOOD = "Luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
 MEANFB = "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
 
 

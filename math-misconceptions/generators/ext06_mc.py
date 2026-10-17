@@ -10,7 +10,7 @@ TEMPLATE = "ext06_mc"
 TID, CODE = "EXT-06", "MC"
 BAD = ("Sini on suhdeluku: vastainen kateetti jaettuna hypotenuusalla. Se ei ole pituus eikä siinä ole yksikköä, "
        "ja viereinen kateetti kuuluu kosinille.")
-GOOD = "Oikein: sin α = vastainen kateetti / hypotenuusa."
+GOOD = "sin α = vastainen kateetti / hypotenuusa."
 TRIPLES = [(3, 4, 5), (6, 8, 10), (5, 12, 13), (8, 15, 17), (7, 24, 25), (9, 12, 15)]
 
 
@@ -40,7 +40,7 @@ def make_items(run, date, count=5, start=1):
             names = rng.choice([("A", "B", "C"), ("P", "Q", "R"), ("K", "L", "M")])
             x, y, z = names
             prompt = (f"Kolmiossa {x}{y}{z} kulma {z} on suora ja α on kulma {x}. Mikä sivu on kulman α vastainen kateetti?")
-            correct = (f"{y}{z}", "Oikein: vastainen kateetti on kulmaa vastapäätä oleva sivu, ja kulma α on kärjessä " + x + ".")
+            correct = (f"{y}{z}", "Vastainen kateetti on kulmaa vastapäätä oleva sivu, ja kulma α on kärjessä " + x + ".")
             wrongs = [(f"{x}{z}", TID, "Sivu " + x + z + " on kulman α viereinen kateetti. Vastainen kateetti on kulmaa vastapäätä."),
                       (f"{x}{y}", None, f"Sivu {x}{y} on suoran kulman vastapäinen sivu eli hypotenuusa, ei kateetti."),
                       (f"{x}{y}{z}", None, "Tämä on koko kolmio, ei sivu.")]
@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
             m = rng.choice([2, 3])
             prompt = (f"Kolmion kateetit ovat {a} cm ja {b} cm ja hypotenuusa {c} cm. Toisen samanmuotoisen kolmion "
                       f"sivut ovat {m} kertaa pidemmät. Mitä tapahtuu sinille sin α?")
-            correct = (f"Se ei muutu: sin α = {fr(sin)}", "Oikein: suhde pysyy samana, kun kolmiota suurennetaan.")
+            correct = (f"Se ei muutu: sin α = {fr(sin)}", "Suhde pysyy samana, kun kolmiota suurennetaan.")
             wrongs = [(f"Se muuttuu {m}-kertaiseksi, koska vastainen kateetti pitenee {m}-kertaiseksi", TID, BAD),
                       (f"Se muuttuu {m} kertaa pienemmäksi", None, "Hypotenuusa ja kateetti kasvavat yhtä paljon, joten suhde ei muutu."),
                       (f"Se on {fr(cos)}, koska viereinen kateetti ei muutu", TID, "Sinin osoittaja on vastainen kateetti, ja kaikki sivut muuttuvat.")]

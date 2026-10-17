@@ -8,7 +8,7 @@ from gen_common import base_item, cli
 TEMPLATE = "pro04_rp"
 TID, CODE = "PRO-04", "RP"
 GENERIC = "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
-GOOD = "Oikein: alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat."
+GOOD = "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat."
 MINUS = chr(8722)
 
 

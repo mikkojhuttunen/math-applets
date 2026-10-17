@@ -88,7 +88,7 @@
         "final": "4x + 6 on jo sievin"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen.",
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -189,7 +189,7 @@
         "final": "12x + 6"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen.",
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -290,7 +290,7 @@
         "final": "4x + 13"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen.",
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -391,7 +391,7 @@
         "final": "4x + 1"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen.",
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {
@@ -486,7 +486,7 @@
         "final": "Kokonaishinta 5x + 7"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen.",
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja."
       },
       "provenance": {

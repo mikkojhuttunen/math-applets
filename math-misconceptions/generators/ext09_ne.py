@@ -9,7 +9,7 @@ TEMPLATE = "ext09_ne"
 TID, CODE = "EXT-09", "NE"
 BAD = ("Kulmakerroin ja vakiotermi menevät sekaisin. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin "
        "ja b on y:n arvo kohdassa x = 0.")
-GOOD = "Oikein: kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
+GOOD = "Kulmakerroin on x:n kerroin, vakiotermi on y:n arvo kohdassa x = 0."
 
 
 def make_items(run, date, count=5, start=1):

@@ -10,7 +10,7 @@ from gen_common import MINUS, base_item, cli
 TEMPLATE = "ext08_so"
 TID, CODE = "EXT-08", "SO"
 ASK = "Järjestä rivit oikeaan järjestykseen niin, että keskiarvon ja mediaanin erotus ratkeaa vaihe vaiheelta."
-GOOD = "Oikein: keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
+GOOD = "Keskiarvo ja mediaani ovat eri asioita; keskiarvo lasketaan kaikista arvoista, mediaani on järjestetyn listan keskimmäinen."
 
 
 def make_items(run, date, count=5, start=1):

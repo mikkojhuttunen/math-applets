@@ -66,7 +66,7 @@
         "final": "7x + 3"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen."
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen."
       },
       "provenance": {
         "template": "alg04_ne",
@@ -144,7 +144,7 @@
         "final": "11x + 3"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen."
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen."
       },
       "provenance": {
         "template": "alg04_ne",
@@ -222,7 +222,7 @@
         "final": "3x + 10"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen."
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen."
       },
       "provenance": {
         "template": "alg04_ne",
@@ -305,7 +305,7 @@
         "final": "9x + 8y"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen."
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen."
       },
       "provenance": {
         "template": "alg04_ne",
@@ -384,7 +384,7 @@
         "final": "7x − 2"
       },
       "feedback": {
-        "correct": "Oikein: vain samanmuotoiset termit lasketaan yhteen."
+        "correct": "Vain samanmuotoiset termit lasketaan yhteen."
       },
       "provenance": {
         "template": "alg04_ne",

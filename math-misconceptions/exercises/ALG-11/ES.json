@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -97,7 +97,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -153,7 +153,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -209,7 +209,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {
@@ -264,7 +264,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen kaikilla x:n arvoilla? Kokeile vaikka x = 1."
       },
       "provenance": {

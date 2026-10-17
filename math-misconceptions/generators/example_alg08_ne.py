@@ -68,7 +68,7 @@ def make_items(run, date, count=5, start=1):
             },
             "solution": {"steps": [f"{a} · {sp.Integer(c) * x if c != 1 else x} + {a} · ({sign * b})", fmt(correct)],
                          "final": fmt(correct)},
-            "feedback": {"correct": "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin."},
+            "feedback": {"correct": "Kerroin kertoo jokaisen sulun sisällä olevan termin."},
             "provenance": {"template": TEMPLATE, "params": {"a": a, "b": b, "c": c, "sign": sign},
                            "generated": date, "verified": True, "run": run},
         })

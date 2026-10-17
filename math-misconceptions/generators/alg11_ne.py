@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "expression", "variables": ["x"], "reference": fmt(good), "samples": SAMPLES},
                    "wrong": wl, "input_hint": "Kirjoita esim. −x + 5"}
         items.append(base_item(TID, CODE, start + k, ["S3.02", "S2.01"], ["T14"], 7, level, prompt, payload, steps, fmt(good),
-                               "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+                               "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run))
     return items
 

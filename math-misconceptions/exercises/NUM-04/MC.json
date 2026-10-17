@@ -50,7 +50,7 @@
             "id": "d",
             "text": "Pienempi kuin 8",
             "misconception": null,
-            "feedback": "Oikein: 0,25 × 8 = 2, ja 2 < 8."
+            "feedback": "0,25 × 8 = 2, ja 2 < 8."
           }
         ],
         "correct": [
@@ -65,7 +65,7 @@
         "final": "Pienempi kuin 8"
       },
       "feedback": {
-        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+        "correct": "Kerroin alle 1 pienentää tuloa."
       },
       "provenance": {
         "template": "num04_mc",
@@ -125,7 +125,7 @@
             "id": "d",
             "text": "Uusi hinta (64 €) on pienempi, koska kerroin 0,8 on alle 1",
             "misconception": null,
-            "feedback": "Oikein: 0,8 × 80 = 64."
+            "feedback": "0,8 × 80 = 64."
           }
         ],
         "correct": [
@@ -140,7 +140,7 @@
         "final": "64 €"
       },
       "feedback": {
-        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+        "correct": "Kerroin alle 1 pienentää tuloa."
       },
       "provenance": {
         "template": "num04_mc",
@@ -182,7 +182,7 @@
             "id": "a",
             "text": "0,9 × 50",
             "misconception": null,
-            "feedback": "Oikein: 0,9 × 50 = 45 < 50."
+            "feedback": "0,9 × 50 = 45 < 50."
           },
           {
             "id": "b",
@@ -214,7 +214,7 @@
         "final": "0,9 × 50"
       },
       "feedback": {
-        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+        "correct": "Kerroin alle 1 pienentää tuloa."
       },
       "provenance": {
         "template": "num04_mc",
@@ -266,7 +266,7 @@
             "id": "b",
             "text": "Lasku on oikein: 0,35 on pienempi kuin 1, joten tulo 14 on pienempi kuin 40",
             "misconception": null,
-            "feedback": "Oikein: tulo on pienempi kuin toinen tekijä, kun kerroin on alle 1."
+            "feedback": "Tulo on pienempi kuin toinen tekijä, kun kerroin on alle 1."
           },
           {
             "id": "c",
@@ -293,7 +293,7 @@
         "final": "14"
       },
       "feedback": {
-        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+        "correct": "Kerroin alle 1 pienentää tuloa."
       },
       "provenance": {
         "template": "num04_mc",
@@ -341,7 +341,7 @@
             "id": "b",
             "text": "0,25 × 4 on neljäsosa luvusta 4, eli 1",
             "misconception": null,
-            "feedback": "Oikein: kertominen luvulla 0,25 ottaa neljäsosan."
+            "feedback": "Kertominen luvulla 0,25 ottaa neljäsosan."
           },
           {
             "id": "c",
@@ -368,7 +368,7 @@
         "final": "1"
       },
       "feedback": {
-        "correct": "Oikein: kerroin alle 1 pienentää tuloa."
+        "correct": "Kerroin alle 1 pienentää tuloa."
       },
       "provenance": {
         "template": "num04_mc",

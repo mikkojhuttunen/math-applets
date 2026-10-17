@@ -44,7 +44,7 @@
             "id": "c",
             "text": "−x + 8",
             "misconception": null,
-            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+            "feedback": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
           },
           {
             "id": "d",
@@ -64,7 +64,7 @@
         "final": "−x + 8"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_mc",
@@ -119,7 +119,7 @@
             "id": "c",
             "text": "−3x − 4",
             "misconception": null,
-            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+            "feedback": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
           },
           {
             "id": "d",
@@ -139,7 +139,7 @@
         "final": "−3x − 4"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_mc",
@@ -194,7 +194,7 @@
             "id": "c",
             "text": "−2x + 14",
             "misconception": null,
-            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+            "feedback": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
           },
           {
             "id": "d",
@@ -215,7 +215,7 @@
         "final": "−2x + 14"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_mc",
@@ -264,7 +264,7 @@
             "id": "b",
             "text": "−x + 14",
             "misconception": null,
-            "feedback": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+            "feedback": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
           },
           {
             "id": "c",
@@ -297,7 +297,7 @@
         "final": "−x + 14"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
         "template": "alg11_mc",
@@ -358,7 +358,7 @@
             "id": "d",
             "text": "Vasen puoli on −(3 − 8) = 5, oikea puoli on −11, joten väite on väärä",
             "misconception": null,
-            "feedback": "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
+            "feedback": "Jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."
           }
         ],
         "correct": [
@@ -373,7 +373,7 @@
         "final": "Arvot 5 ja −11 eroavat"
       },
       "feedback": {
-        "correct": "Oikein: väärä merkkien muutos näkyy arvojen eroavuutena."
+        "correct": "Väärä merkkien muutos näkyy arvojen eroavuutena."
       },
       "provenance": {
         "template": "alg11_mc",

@@ -49,7 +49,7 @@
         "final": "esim. 2x + 1 = 7"
       },
       "feedback": {
-        "correct": "Oikein."
+        "correct": "Hyvin ratkaistu."
       },
       "provenance": {
         "template": "fixture_demo",

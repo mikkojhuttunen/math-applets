@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+        "correct": "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla; jälkimmäinen prosentti lasketaan jo muuttuneesta arvosta."
       },
       "provenance": {
@@ -96,7 +96,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+        "correct": "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla; jälkimmäinen prosentti lasketaan jo muuttuneesta arvosta."
       },
       "provenance": {
@@ -150,7 +150,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+        "correct": "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla; jälkimmäinen prosentti lasketaan jo muuttuneesta arvosta."
       },
       "provenance": {
@@ -204,7 +204,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+        "correct": "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla; jälkimmäinen prosentti lasketaan jo muuttuneesta arvosta."
       },
       "provenance": {
@@ -258,7 +258,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
+        "correct": "Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla, koska jälkimmäinen lasketaan muuttuneesta arvosta.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Peräkkäiset prosenttimuutokset kerrotaan muutoskertoimilla; jälkimmäinen prosentti lasketaan jo muuttuneesta arvosta."
       },
       "provenance": {

@@ -52,7 +52,7 @@
         "final": "5x = 25"
       },
       "feedback": {
-        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
       },
       "provenance": {
@@ -118,7 +118,7 @@
         "final": "4x = 12"
       },
       "feedback": {
-        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
       },
       "provenance": {
@@ -181,7 +181,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
       },
       "provenance": {
@@ -248,7 +248,7 @@
         "final": "5x − 2x = 18 − 6"
       },
       "feedback": {
-        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
       },
       "provenance": {
@@ -314,7 +314,7 @@
         "final": "5x = 30"
       },
       "feedback": {
-        "correct": "Oikein: molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+        "correct": "Molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
         "generic_wrong": "Tarkista vaihe sijoittamalla ratkaisu: onko uudella rivillä sama ratkaisu kuin edellisellä? Siirrettäessä termi toiselle puolelle sen merkki vaihtuu, ja jakaminen tehdään molemmille puolille."
       },
       "provenance": {

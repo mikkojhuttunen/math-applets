@@ -43,7 +43,7 @@
             "id": "c",
             "text": "Neliön ala on 100 cm² ja suorakulmion 96 cm², joten alat eivät ole samat",
             "misconception": null,
-            "feedback": "Oikein: neliön sivu on 40 / 4 = 10 cm, ja ala 10² = 100 cm²."
+            "feedback": "Neliön sivu on 40 / 4 = 10 cm, ja ala 10² = 100 cm²."
           },
           {
             "id": "d",
@@ -65,7 +65,7 @@
         "final": "Neliön ala on 100 cm² ja suorakulmion 96 cm², joten alat eivät ole samat"
       },
       "feedback": {
-        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro03_mc",
@@ -118,7 +118,7 @@
             "id": "c",
             "text": "Neliöön: sen ala on 36 m² ja suorakulmion 27 m²",
             "misconception": null,
-            "feedback": "Oikein: 6 · 6 = 36 m² on enemmän kuin 3 · 9 = 27 m²."
+            "feedback": "6 · 6 = 36 m² on enemmän kuin 3 · 9 = 27 m²."
           },
           {
             "id": "d",
@@ -139,7 +139,7 @@
         "final": "Neliöön: sen ala on 36 m² ja suorakulmion 27 m²"
       },
       "feedback": {
-        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro03_mc",
@@ -187,7 +187,7 @@
             "id": "b",
             "text": "Väite on väärä: alat ovat 32 cm² ja 80 cm²",
             "misconception": null,
-            "feedback": "Oikein: 2 · 16 = 32 ja 8 · 10 = 80."
+            "feedback": "2 · 16 = 32 ja 8 · 10 = 80."
           },
           {
             "id": "c",
@@ -214,7 +214,7 @@
         "final": "Väite on väärä: alat ovat 32 cm² ja 80 cm²"
       },
       "feedback": {
-        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro03_mc",
@@ -257,7 +257,7 @@
             "id": "a",
             "text": "6 m × 6 m",
             "misconception": null,
-            "feedback": "Oikein: ala 36 m² on suurempi kuin muiden vaihtoehtojen alat."
+            "feedback": "Ala 36 m² on suurempi kuin muiden vaihtoehtojen alat."
           },
           {
             "id": "b",
@@ -290,7 +290,7 @@
         "final": "6 m × 6 m"
       },
       "feedback": {
-        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro03_mc",
@@ -350,7 +350,7 @@
             "id": "d",
             "text": "Piiri kertoo vain reunan pituuden, ala riippuu sivujen suhteesta: esimerkiksi 6 × 8 ja 7 × 7 ovat samaa piiriä mutta alat ovat 48 ja 49",
             "misconception": null,
-            "feedback": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+            "feedback": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
           }
         ],
         "correct": [
@@ -365,7 +365,7 @@
         "final": "Piiri kertoo vain reunan pituuden, ala riippuu sivujen suhteesta: esimerkiksi 6 × 8 ja 7 × 7 ovat samaa piiriä mutta alat ovat 48 ja 49"
       },
       "feedback": {
-        "correct": "Oikein: sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Sama piiri ei takaa samaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro03_mc",

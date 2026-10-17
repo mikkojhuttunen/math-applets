@@ -10,7 +10,7 @@ from gen_common import MINUS, base_item, cli
 TEMPLATE = "ext08_fs"
 TID, CODE = "EXT-08", "FS"
 SAMPLES = [[1], [2], [3]]
-GOOD = ("Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. "
+GOOD = ("Keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. "
         "Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.")
 GENERIC = ("Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. "
            "Mediaani on järjestetyn listan keskimmäinen arvo.")

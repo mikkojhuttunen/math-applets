@@ -13,7 +13,7 @@ ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 INTRO = "Oppilas ratkaisee epäyhtälön rivi riviltä. "
 GENERIC = ("Tarkista rivi kerrallaan, onko uusi epäyhtälö sama kuin edellinen. "
            "Kun jaetaan tai kerrotaan negatiivisella luvulla, epäyhtälömerkin suunta kääntyy.")
-GOOD = "Oikein: negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
+GOOD = "Negatiivisella luvulla jaettaessa epäyhtälömerkin suunta kääntyy."
 
 
 def make_items(run, date, count=5, start=1):

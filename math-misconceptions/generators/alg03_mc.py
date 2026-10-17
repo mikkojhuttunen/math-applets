@@ -9,7 +9,7 @@ TEMPLATE = "alg03_mc"
 TID, CODE = "ALG-03", "MC"
 BAD = ("Kirjaimen paikka aakkosissa ei vaikuta sen arvoon. Kirjain on tuntematon luku, jonka arvo ratkaistaan "
        "yhtälöstä.")
-GOOD = "Oikein: kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
+GOOD = "Kirjaimen arvo ratkaistaan yhtälöstä, ei aakkospaikasta."
 LETTERS = "kmnptwyd"
 
 
@@ -31,7 +31,7 @@ def make_items(run, date, count=5, start=1):
         if k == 0:
             c = rng.choice([4, 5, 7, 8])
             prompt = f"{ch} + {c} = {v + c}. Mikä on {ch}?"
-            correct = (str(v), f"Oikein: {v + c} {chr(8722)} {c} = {v}.")
+            correct = (str(v), f"{v + c} {chr(8722)} {c} = {v}.")
             wrongs = [(str(p), TID, BAD), (str(v + 2 * c), None, f"Luku {c} on vähennettävä, ei lisättävä."),
                       (str(v + c), None, "Tämä on yhtälön oikea puoli, ei ratkaisu.")]
             steps = [f"{ch} + {c} = {v + c}", f"{ch} = {v + c} {chr(8722)} {c} = {v}"]
@@ -39,7 +39,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 1:
             c = rng.choice([2, 3, 4])
             prompt = f"{c}{ch} = {c * v}. Mikä on {ch}?"
-            correct = (str(v), f"Oikein: {c * v} ÷ {c} = {v}.")
+            correct = (str(v), f"{c * v} ÷ {c} = {v}.")
             wrongs = [(str(p), TID, BAD), (str(c * v * c), None, f"Kerroin {c} on jaettava pois, ei kerrottava."),
                       (str(c * v - c), None, f"Termi {c}{ch} tarkoittaa tuloa {c} · {ch}.")]
             steps = [f"{c}{ch} = {c * v}", f"{ch} = {c * v} ÷ {c} = {v}"]
@@ -47,7 +47,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 2:
             c = rng.choice([3, 4, 6])
             prompt = f"{ch} {chr(8722)} {c} = {v - c}. Mikä on {ch}?"
-            correct = (str(v), f"Oikein: {v - c} + {c} = {v}.")
+            correct = (str(v), f"{v - c} + {c} = {v}.")
             wrongs = [(str(p), TID, BAD), (num(v - 2 * c), None, f"Luku {c} on lisättävä, ei vähennettävä."),
                       (num(c - (v - c)), None, "Tarkista vastauksen merkki.")]
             steps = [f"{ch} {chr(8722)} {c} = {v - c}", f"{ch} = {v - c} + {c} = {v}"]

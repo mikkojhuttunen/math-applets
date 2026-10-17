@@ -50,7 +50,7 @@
             "id": "d",
             "text": "Suurempi kuin 20",
             "misconception": null,
-            "feedback": "Oikein: 20 ÷ 0,2 = 100, ja 100 > 20."
+            "feedback": "20 ÷ 0,2 = 100, ja 100 > 20."
           }
         ],
         "correct": [
@@ -65,7 +65,7 @@
         "final": "Suurempi kuin 20"
       },
       "feedback": {
-        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+        "correct": "Jakaja alle 1 suurentaa osamäärää."
       },
       "provenance": {
         "template": "num05_mc",
@@ -113,7 +113,7 @@
             "id": "b",
             "text": "12 pätkää, eli enemmän kuin 6",
             "misconception": null,
-            "feedback": "Oikein: 6 ÷ 0,5 = 12."
+            "feedback": "6 ÷ 0,5 = 12."
           },
           {
             "id": "c",
@@ -140,7 +140,7 @@
         "final": "12 pätkää"
       },
       "feedback": {
-        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+        "correct": "Jakaja alle 1 suurentaa osamäärää."
       },
       "provenance": {
         "template": "num05_mc",
@@ -194,7 +194,7 @@
             "id": "c",
             "text": "30 ÷ 0,4",
             "misconception": null,
-            "feedback": "Oikein: 30 ÷ 0,4 = 75 > 30."
+            "feedback": "30 ÷ 0,4 = 75 > 30."
           },
           {
             "id": "d",
@@ -214,7 +214,7 @@
         "final": "30 ÷ 0,4"
       },
       "feedback": {
-        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+        "correct": "Jakaja alle 1 suurentaa osamäärää."
       },
       "provenance": {
         "template": "num05_mc",
@@ -260,7 +260,7 @@
             "id": "a",
             "text": "Lasku on oikein: jakaja 0,6 on pienempi kuin 1, joten osamäärä 15 on suurempi kuin 9",
             "misconception": null,
-            "feedback": "Oikein: osamäärä on suurempi kuin jaettava, kun jakaja on alle 1."
+            "feedback": "Osamäärä on suurempi kuin jaettava, kun jakaja on alle 1."
           },
           {
             "id": "b",
@@ -293,7 +293,7 @@
         "final": "15"
       },
       "feedback": {
-        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+        "correct": "Jakaja alle 1 suurentaa osamäärää."
       },
       "provenance": {
         "template": "num05_mc",
@@ -347,7 +347,7 @@
             "id": "c",
             "text": "Luvussa 3 on 12 neljännestä, joten 3 ÷ 0,25 = 12",
             "misconception": null,
-            "feedback": "Oikein: jakaminen luvulla 0,25 kysyy, montako neljännestä mahtuu lukuun."
+            "feedback": "Jakaminen luvulla 0,25 kysyy, montako neljännestä mahtuu lukuun."
           },
           {
             "id": "d",
@@ -368,7 +368,7 @@
         "final": "12"
       },
       "feedback": {
-        "correct": "Oikein: jakaja alle 1 suurentaa osamäärää."
+        "correct": "Jakaja alle 1 suurentaa osamäärää."
       },
       "provenance": {
         "template": "num05_mc",

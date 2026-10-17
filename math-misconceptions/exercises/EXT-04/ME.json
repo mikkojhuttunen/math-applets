@@ -88,7 +88,7 @@
         "final": "x² − 4 = (x − 2)(x + 2)"
       },
       "feedback": {
-        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "correct": "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
       },
       "provenance": {
@@ -187,7 +187,7 @@
         "final": "2x² − 50 = 2(x − 5)(x + 5)"
       },
       "feedback": {
-        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "correct": "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
       },
       "provenance": {
@@ -286,7 +286,7 @@
         "final": "x² − 49 = (x − 7)(x + 7)"
       },
       "feedback": {
-        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "correct": "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
       },
       "provenance": {
@@ -385,7 +385,7 @@
         "final": "x² − 36 = (x − 6)(x + 6)"
       },
       "feedback": {
-        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "correct": "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
       },
       "provenance": {
@@ -484,7 +484,7 @@
         "final": "2x² − 98 = 2(x − 7)(x + 7)"
       },
       "feedback": {
-        "correct": "Oikein: neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
+        "correct": "Neliöiden erotus x² − a² = (x − a)(x + a), joten lausekkeella on kaksi nollakohtaa, a ja −a.",
         "generic_wrong": "Kokeile sijoittaa x:n paikalle luku, esimerkiksi x = 1, ja vertaa lausekkeiden arvoja. Tulon (x − a)(x + a) nollakohdat ovat sekä a että −a."
       },
       "provenance": {

@@ -42,7 +42,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "correct": "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
       },
       "provenance": {
@@ -98,7 +98,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "correct": "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
       },
       "provenance": {
@@ -154,7 +154,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "correct": "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
       },
       "provenance": {
@@ -211,7 +211,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "correct": "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
       },
       "provenance": {
@@ -268,7 +268,7 @@
         "final": "Virhe on rivillä 4"
       },
       "feedback": {
-        "correct": "Oikein: yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
+        "correct": "Yhtäsuuruusmerkki tarkoittaa, että molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Yhtäsuuruusmerkki ei tarkoita 'tulos tulee seuraavaksi'."
       },
       "provenance": {

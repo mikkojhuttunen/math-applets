@@ -9,7 +9,7 @@ from gen_common import MINUS, base_item, cli, lin, mc_options
 TEMPLATE = "alg11_mc"
 TID, CODE = "ALG-11", "MC"
 FIRST = "Miinusmerkki sulun edessä koskee kaikkia sulun sisällä olevia termejä, ei vain ensimmäistä."
-GOOD = "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
+GOOD = "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
 
 
 def build(rng, good, wrongs):
@@ -63,7 +63,7 @@ def make_items(run, date, count=5, start=1):
             lhs, rhs = -(at - b), -at - b
             assert lhs != rhs
             options, cid = mc_options(rng, (f"Vasen puoli on {MINUS}({at} {MINUS} {b}) = {lhs}, oikea puoli on {rhs}, joten väite on väärä".replace("-", MINUS),
-                                            "Oikein: jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."), [
+                                            "Jos lausekkeet ovat yhtä suuret, niiden arvot ovat samat jokaisella x:n arvolla."), [
                 (f"Molemmat puolet saavat arvon {lhs}, joten väite on oikein".replace("-", MINUS), TID, FIRST),
                 ("Sijoittamalla ei voi tarkistaa merkkien muuttumista", TID, "Sijoittamalla voi tarkistaa, ovatko lausekkeet yhtä suuret."),
                 (f"Arvot {lhs} ja {rhs} eroavat, mutta väite on silti oikein, koska miinus on molemmissa".replace("-", MINUS), TID,
@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
             items.append(base_item(TID, CODE, start + k, ["S3.02", "S2.01"], ["T14"], 7, level, prompt, payload,
                                    [f"x = {at}: {MINUS}({at} {MINUS} {b}) = {lhs}".replace("-", MINUS), f"{MINUS}{at} {MINUS} {b} = {rhs}"],
                                    f"Arvot {lhs} ja {rhs} eroavat".replace("-", MINUS),
-                                   "Oikein: väärä merkkien muutos näkyy arvojen eroavuutena.",
+                                   "Väärä merkkien muutos näkyy arvojen eroavuutena.",
                                    TEMPLATE, {"b": b, "x": at}, date, run))
             continue
         options, cid = build(rng, good, wr)

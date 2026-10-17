@@ -12,7 +12,7 @@ BAD_SLOPE = ("Kulmakerroin on x:n kerroin, ei vakiotermi. Suoralla y = mx + b lu
              "kun x kasvaa yhdellä, ja b on y:n arvo kohdassa x = 0.")
 BAD_STEEP = ("Jyrkkyyden kertoo kulmakerroin, ei se, kumman suoran y-arvot ovat suurempia. Vakiotermi siirtää suoraa "
              "ylös tai alas mutta ei muuta sen jyrkkyyttä.")
-GOOD = "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
+GOOD = "Kulmakerroin on x:n kerroin ja vakiotermi on suoran ja y-akselin leikkauskohta."
 
 
 def eq(m, b):
@@ -29,21 +29,21 @@ def make_items(run, date, count=5, start=1):
             m = -rng.choice([2, 3, 4])
         if k == 0:
             prompt = f"Suoran yhtälö on {eq(m, b)}. Mikä on suoran kulmakerroin?"
-            correct = (num(m), f"Oikein: kulmakerroin on x:n kerroin, {num(m)}.")
+            correct = (num(m), f"Kulmakerroin on x:n kerroin, {num(m)}.")
             wrongs = [(num(b), TID, BAD_SLOPE), (num(m + b), None, "Kulmakerrointa ei saa summaamalla luvuista."),
                       (num(-m), None, "Kulmakerroin on x:n kerroin sellaisenaan.")]
             steps = [f"Yhtälö on muotoa y = mx + b, ja tässä m = {num(m)}", f"Vakiotermi {b} kertoo leikkauskohdan, ei kulmakerrointa"]
             final, level = num(m), "T"
         elif k == 1:
             prompt = f"Suoran yhtälö on y = {b} {MINUS} {abs(m)}x. Mikä on suoran kulmakerroin?"
-            correct = (num(m), f"Oikein: x:n kerroin on {num(m)}, joten suora laskee.")
+            correct = (num(m), f"x:n kerroin on {num(m)}, joten suora laskee.")
             wrongs = [(num(b), TID, BAD_SLOPE), (str(abs(m)), None, "Kulmakertoimen merkki kuuluu x:n kertoimeen: suora laskee."),
                       (num(b - abs(m)), None, "Kulmakerrointa ei saa vähentämällä luvuista.")]
             steps = [f"Kirjoitetaan muotoon y = {num(m)}x + {b}", f"Kulmakerroin on {num(m)}"]
             final, level = num(m), "T"
         elif k == 2:
             prompt = f"Mihin kohtaan suora {eq(m, b)} leikkaa y-akselin?"
-            correct = (f"(0, {b})", f"Oikein: kun x = 0, y = {b}.")
+            correct = (f"(0, {b})", f"Kun x = 0, y = {b}.")
             wrongs = [(f"({m}, 0)", TID, BAD_SLOPE), (f"({b}, 0)", None, "Leikkauspiste y-akselin kanssa on muotoa (0, y)."),
                       (f"(0, {m})", None, "Kun x = 0, termi mx katoaa ja jäljelle jää vakiotermi.")]
             steps = [f"Sijoitetaan x = 0: y = {m} · 0 + {b} = {b}"]
@@ -53,7 +53,7 @@ def make_items(run, date, count=5, start=1):
             b2 = b + rng.choice([4, 5, 6])
             prompt = f"Suorat ovat {eq(m, b2)} ja {eq(m2, b)}. Kumpi suora nousee jyrkemmin?"
             first, second = eq(m, b2), eq(m2, b)
-            correct = (f"Suora {second}, koska sen kulmakerroin {m2} on suurempi", f"Oikein: {m2} > {m}, joten toinen suora nousee jyrkemmin.")
+            correct = (f"Suora {second}, koska sen kulmakerroin {m2} on suurempi", f"{m2} > {m}, joten toinen suora nousee jyrkemmin.")
             wrongs = [(f"Suora {first}, koska sen y-arvot ovat suurempia", TID, BAD_STEEP),
                       ("Suorat nousevat yhtä jyrkästi", None, "Suorien kulmakertoimet ovat eri suuria."),
                       (f"Suora {first}, koska sen vakiotermi {b2} on suurempi", TID, BAD_STEEP)]

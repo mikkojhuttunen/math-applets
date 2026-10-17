@@ -56,7 +56,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "error_line": err, "error_type": etype}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, ctx + ASK, payload,
                                [fix, f"Oikea ratkaisu: x = {x}"], f"Virhe on rivillä {err}",
-                               "Oikein: yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
+                               "Yhtälön molemmille puolille tehdään sama toimitus, ja siirrettäessä termin merkki vaihtuu.",
                                TEMPLATE, {"a": a, "b": b, "x": x}, date, run, generic_wrong=GENERIC))
     return items
 

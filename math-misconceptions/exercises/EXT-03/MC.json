@@ -37,7 +37,7 @@
             "id": "b",
             "text": "x < −4",
             "misconception": null,
-            "feedback": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+            "feedback": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
           },
           {
             "id": "c",
@@ -63,7 +63,7 @@
         "final": "x < −4"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_mc",
@@ -110,7 +110,7 @@
             "id": "b",
             "text": "x ≥ 4",
             "misconception": null,
-            "feedback": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+            "feedback": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
           },
           {
             "id": "c",
@@ -136,7 +136,7 @@
         "final": "x ≥ 4"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_mc",
@@ -189,7 +189,7 @@
             "id": "c",
             "text": "t > 5",
             "misconception": null,
-            "feedback": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+            "feedback": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
           },
           {
             "id": "d",
@@ -210,7 +210,7 @@
         "final": "t > 5"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_mc",
@@ -252,7 +252,7 @@
             "id": "a",
             "text": "x < 2",
             "misconception": null,
-            "feedback": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+            "feedback": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
           },
           {
             "id": "b",
@@ -285,7 +285,7 @@
         "final": "x < 2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_mc",
@@ -345,7 +345,7 @@
             "id": "d",
             "text": "Luku x = −2 toteuttaa väitteen, mutta 4 ei ole > 6; negatiivisella luvulla jaettaessa merkki kääntyy, ja oikea ratkaisu on x < −3",
             "misconception": null,
-            "feedback": "Oikein: sijoittamalla huomaa, että merkin suunta täytyy kääntää."
+            "feedback": "Sijoittamalla huomaa, että merkin suunta täytyy kääntää."
           }
         ],
         "correct": [
@@ -361,7 +361,7 @@
         "final": "x < −3"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
+        "correct": "Negatiivisella luvulla kerrottaessa tai jaettaessa epäyhtälömerkin suunta kääntyy."
       },
       "provenance": {
         "template": "ext03_mc",

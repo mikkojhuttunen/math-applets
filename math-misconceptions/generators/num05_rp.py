@@ -8,7 +8,7 @@ from gen_common import base_item, cli
 
 TEMPLATE = "num05_rp"
 TID, CODE = "NUM-05", "RP"
-GOOD = "Oikein: kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava."
+GOOD = "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava."
 
 
 def c(x):

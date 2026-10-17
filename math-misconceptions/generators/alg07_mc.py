@@ -61,7 +61,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Oppilas ratkaisee yhtälön {a}x + {b} = {c} ja kirjoittaa ensimmäiseksi riviksi {a}x = {c + b}. "
                       f"Mikä virhe rivillä on?")
             options, cid = mc_options(rng, (f"Luku {b} siirrettiin toiselle puolelle, mutta sen merkki ei vaihtunut: pitäisi olla {a}x = {c - b}",
-                                            "Oikein: luku {} on vähennettävä molemmilta puolilta.".format(b)), [
+                                            "Luku {} on vähennettävä molemmilta puolilta.".format(b)), [
                 (f"Yhtälö jaettiin luvulla {a} vain vasemmalta puolelta", None, "Rivillä ei ole jakolaskua."),
                 (f"Luku {b} pitää jättää vasemmalle puolelle, koska sen edessä on plusmerkki", TID, SIGN),
                 (f"Rivi on oikein, koska luku {b} siirtyi sivulta toiselle", TID, SIGN),
@@ -69,14 +69,14 @@ def make_items(run, date, count=5, start=1):
             payload = {"options": options, "correct": [cid]}
             items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload,
                                    [f"{a}x + {b} = {c}", f"Vähennetään {b} molemmilta puolilta: {a}x = {c} {MINUS} {b} = {c - b}"],
-                                   f"{a}x = {c - b}", "Oikein: termin siirto toiselle puolelle vaihtaa sen merkin.", TEMPLATE,
+                                   f"{a}x = {c - b}", "Termin siirto toiselle puolelle vaihtaa sen merkin.", TEMPLATE,
                                    {"a": a, "b": b, "x": x}, date, run))
             continue
-        options, cid = mc_options(rng, (f"x = {f(good)}", "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."),
+        options, cid = mc_options(rng, (f"x = {f(good)}", "Toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."),
                                   [(f"x = {f(v)}", m, fb) for v, m, fb in wrongs if v != good])
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, f"x = {x}",
-                               "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina.", TEMPLATE,
+                               "Yhtälön molempien puolten on pysyttävä yhtä suurina.", TEMPLATE,
                                {"a": a, "b": b, "x": x}, date, run))
     return items
 

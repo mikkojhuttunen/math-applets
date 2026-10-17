@@ -12,7 +12,7 @@ TID, CODE = "EXT-08", "ES"
 ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 GENERIC = ("Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan "
            "keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.")
-GOOD = "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta."
+GOOD = "Luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta."
 
 
 def make_items(run, date, count=5, start=1):

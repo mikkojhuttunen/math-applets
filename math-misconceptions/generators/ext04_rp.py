@@ -8,7 +8,7 @@ from gen_common import MINUS, base_item, cli
 
 TEMPLATE = "ext04_rp"
 TID, CODE = "EXT-04", "RP"
-GOOD = "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0."
+GOOD = "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0."
 GENERIC = ("Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, "
            "joten sen ratkaisu ei ole vain yksi luku.")
 

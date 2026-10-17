@@ -52,7 +52,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
       },
       "provenance": {
@@ -117,7 +117,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
       },
       "provenance": {
@@ -182,7 +182,7 @@
         "final": "x = −3"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
       },
       "provenance": {
@@ -247,7 +247,7 @@
         "final": "x = 3"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
       },
       "provenance": {
@@ -313,7 +313,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
       },
       "provenance": {

@@ -53,7 +53,7 @@
         "final": "x = 23"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
         "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
       },
       "provenance": {
@@ -123,7 +123,7 @@
         "final": "x = 43"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
         "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
       },
       "provenance": {
@@ -188,7 +188,7 @@
         "final": "x = 38"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
         "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
       },
       "provenance": {
@@ -257,7 +257,7 @@
         "final": "x = 24"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
         "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
       },
       "provenance": {
@@ -323,7 +323,7 @@
         "final": "x = 17"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
         "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
       },
       "provenance": {

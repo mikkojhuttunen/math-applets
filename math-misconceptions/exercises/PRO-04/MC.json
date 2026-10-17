@@ -31,7 +31,7 @@
             "id": "a",
             "text": "Neliöllä: sen ala on 25 cm² ja suorakulmion 22 cm²",
             "misconception": null,
-            "feedback": "Oikein: 5 · 5 = 25 cm² ja 11 · 2 = 22 cm²."
+            "feedback": "5 · 5 = 25 cm² ja 11 · 2 = 22 cm²."
           },
           {
             "id": "b",
@@ -64,7 +64,7 @@
         "final": "Neliöllä: sen ala on 25 cm² ja suorakulmion 22 cm²"
       },
       "feedback": {
-        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro04_mc",
@@ -124,7 +124,7 @@
             "id": "d",
             "text": "Ei: huoneen A ala on 32 m² ja huoneen B 36 m²",
             "misconception": null,
-            "feedback": "Oikein: A:n piiri on suurempi (36 m > 24 m), mutta ala pienempi."
+            "feedback": "A:n piiri on suurempi (36 m > 24 m), mutta ala pienempi."
           }
         ],
         "correct": [
@@ -139,7 +139,7 @@
         "final": "Ei: huoneen A ala on 32 m² ja huoneen B 36 m²"
       },
       "feedback": {
-        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro04_mc",
@@ -199,7 +199,7 @@
             "id": "d",
             "text": "Väite on väärä: suorakulmion piiri on 28 cm > 16 cm, mutta ala 13 cm² < 16 cm²",
             "misconception": null,
-            "feedback": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+            "feedback": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
           }
         ],
         "correct": [
@@ -214,7 +214,7 @@
         "final": "Väite on väärä: suorakulmion piiri on 28 cm > 16 cm, mutta ala 13 cm² < 16 cm²"
       },
       "feedback": {
-        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro04_mc",
@@ -256,7 +256,7 @@
             "id": "a",
             "text": "Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon",
             "misconception": null,
-            "feedback": "Oikein: neliön ala 25 m² > 20 m², suorakulmion piiri 24 m > 20 m."
+            "feedback": "Neliön ala 25 m² > 20 m², suorakulmion piiri 24 m > 20 m."
           },
           {
             "id": "b",
@@ -289,7 +289,7 @@
         "final": "Ruohoa on enemmän neliössä, aitaa kuluu enemmän suorakulmioon"
       },
       "feedback": {
-        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro04_mc",
@@ -337,7 +337,7 @@
             "id": "b",
             "text": "Ala riippuu sivujen tulosta: esimerkiksi ohuen 15 × 1 -suorakulmion piiri on 32 ja ala 15, mutta 7 × 7 -neliön piiri on vain 28 ja ala silti 49",
             "misconception": null,
-            "feedback": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+            "feedback": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
           },
           {
             "id": "c",
@@ -364,7 +364,7 @@
         "final": "Ala riippuu sivujen tulosta: esimerkiksi ohuen 15 × 1 -suorakulmion piiri on 32 ja ala 15, mutta 7 × 7 -neliön piiri on vain 28 ja ala silti 49"
       },
       "feedback": {
-        "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
+        "correct": "Suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
       },
       "provenance": {
         "template": "pro04_mc",

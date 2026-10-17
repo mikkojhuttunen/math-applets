@@ -77,7 +77,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S5.07"], ["T18"], 7, level, prompt, payload, steps, str(ans).replace(".", ","),
-                               "Oikein: ala lasketaan kuvion omista sivuista, ei piiristä.", TEMPLATE, params, date, run))
+                               "Ala lasketaan kuvion omista sivuista, ei piiristä.", TEMPLATE, params, date, run))
     return items
 
 

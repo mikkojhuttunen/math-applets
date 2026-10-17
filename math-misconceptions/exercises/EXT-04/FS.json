@@ -50,7 +50,7 @@
         "final": "x² = 16"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
       },
       "provenance": {
@@ -111,7 +111,7 @@
         "final": "(x − 5)(x + 5) = 0"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
       },
       "provenance": {
@@ -172,7 +172,7 @@
         "final": "x² = 9"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
       },
       "provenance": {
@@ -236,7 +236,7 @@
         "final": "x² = 16"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
       },
       "provenance": {
@@ -300,7 +300,7 @@
         "final": "2x² = 50"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten yhtälöllä on kaksi ratkaisua.",
         "generic_wrong": "Tarkista välivaihe sijoittamalla: toteuttavatko sekä positiivinen että negatiivinen luku uuden rivin? Yhtälöllä x² = a on kaksi ratkaisua, kun a > 0."
       },
       "provenance": {

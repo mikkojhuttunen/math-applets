@@ -57,7 +57,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": m, "feedback": f} for w, m, f in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T15", "T7"], 7, level, prompt, payload,
-                               steps, str(answer), "Oikein: sijoita luvut kirjainten paikalle ja laske.",
+                               steps, str(answer), "Sijoita luvut kirjainten paikalle ja laske.",
                                TEMPLATE, {"ca": ca, "cb": cb, "va": va, "vb": vb, "pay": pay}, date, run))
     return items
 

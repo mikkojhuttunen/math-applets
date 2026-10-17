@@ -43,7 +43,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "correct": "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
       },
       "provenance": {
@@ -98,7 +98,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "correct": "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
       },
       "provenance": {
@@ -152,7 +152,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "correct": "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
       },
       "provenance": {
@@ -206,7 +206,7 @@
         "final": "Virhe on rivillä 2"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "correct": "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
       },
       "provenance": {
@@ -260,7 +260,7 @@
         "final": "Virhe on rivillä 3"
       },
       "feedback": {
-        "correct": "Oikein: potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
+        "correct": "Potenssi lasketaan ennen etumerkkiä, ja sulkeet määräävät, kuuluuko miinus kantalukuun.",
         "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Muista, että −a² = −(a · a)."
       },
       "provenance": {

@@ -55,7 +55,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": txt(w), "misconception": TID, "feedback": fb} for w, fb in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, str(x),
-                               "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina.", TEMPLATE,
+                               "Yhtälön molempien puolten on pysyttävä yhtä suurina.", TEMPLATE,
                                {"a": a, "b": b, "x": x}, date, run))
     return items
 

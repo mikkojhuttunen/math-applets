@@ -9,7 +9,7 @@ from gen_common import MINUS, base_item, cli, num
 TEMPLATE = "ext01_fs"
 TID, CODE = "EXT-01", "FS"
 SAMPLES = [[1], [2], [3]]
-GOOD = "Oikein: potenssi lasketaan ennen miinusmerkkiä, ja sulkeissa miinus kuuluu kantalukuun."
+GOOD = "Potenssi lasketaan ennen miinusmerkkiä, ja sulkeissa miinus kuuluu kantalukuun."
 GENERIC = "Muista, että −a² = −(a · a), mutta (−a)² = (−a) · (−a) = a². Tarkista välivaihe laskemalla."
 
 

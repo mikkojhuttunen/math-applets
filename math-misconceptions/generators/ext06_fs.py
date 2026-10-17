@@ -10,7 +10,7 @@ from gen_common import base_item, cli
 TEMPLATE = "ext06_fs"
 TID, CODE = "EXT-06", "FS"
 SAMPLES = [[1], [2], [3]]
-GOOD = "Oikein: sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa."
+GOOD = "sin α = vastainen kateetti / hypotenuusa ja cos α = viereinen kateetti / hypotenuusa."
 GENERIC = "Tarkista, että sinin osoittajassa on vastainen kateetti ja kosinin osoittajassa viereinen kateetti. Jakajana on hypotenuusa."
 TRIPLES = [(3, 4, 5), (6, 8, 10), (5, 12, 13), (8, 15, 17), (7, 24, 25), (9, 12, 15)]
 

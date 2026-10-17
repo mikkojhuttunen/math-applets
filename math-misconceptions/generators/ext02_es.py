@@ -12,7 +12,7 @@ TID, CODE = "EXT-02", "ES"
 ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 INTRO = "Oppilas laskee rivi riviltä. "
 GENERIC = "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
-GOOD = "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
+GOOD = "Potenssi on toistettu kertolasku, a^0 = 1 ja negatiivinen eksponentti tarkoittaa käänteislukua."
 
 
 def make_items(run, date, count=5, start=1):

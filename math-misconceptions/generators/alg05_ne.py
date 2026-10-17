@@ -54,7 +54,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": m, "misconception": t, "feedback": f} for m, t, f in wrong],
                    "input_hint": "Kirjoita luku"}
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T15"], 7, level, prompt, payload, steps, str(answer),
-                               "Oikein: luku ja kirjain vierekkäin tarkoittavat kertolaskua.", TEMPLATE,
+                               "Luku ja kirjain vierekkäin tarkoittavat kertolaskua.", TEMPLATE,
                                {"c": c, "v": v}, date, run))
     return items
 

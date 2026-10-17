@@ -9,7 +9,7 @@ from gen_common import MINUS, base_item, cli, num
 TEMPLATE = "ext02_fs"
 TID, CODE = "EXT-02", "FS"
 SAMPLES = [[1], [2], [3]]
-GOOD = "Oikein: potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
+GOOD = "Potenssi on toistettu kertolasku, a^0 = 1 ja a^(−n) = 1/a^n."
 GENERIC = "Muista, että a^0 = 1 ja a^(−n) = 1/a^n. Tarkista välivaihe laskemalla."
 
 

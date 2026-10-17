@@ -49,7 +49,7 @@ def make_items(run, date, count=5, start=1):
                    "answer": {"kind": "expression", "variables": ["x"], "reference": ref, "samples": SAMPLES}}
         items.append(base_item(TID, CODE, start + k, ["S3.02", "S2.01"], ["T14"], 7, level, prompt, payload,
                                [f"Rivi {blank}: {ref}", f"Lopputulos: {lines[-1]}"], ref,
-                               "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+                               "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "e": e}, date, run, generic_wrong=GENERIC))
     return items
 

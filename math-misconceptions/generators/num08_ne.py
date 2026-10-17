@@ -10,7 +10,7 @@ TEMPLATE = "num08_ne"
 TID, CODE = "NUM-08", "NE"
 BAD = ("Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. "
        "Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99.")
-GOOD = "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+GOOD = "Muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
 
 
 def val(x):

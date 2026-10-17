@@ -12,7 +12,7 @@ TID, CODE = "EXT-06", "ES"
 ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 GENERIC = ("Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Sin α = vastainen kateetti / hypotenuusa, "
            "cos α = viereinen kateetti / hypotenuusa.")
-GOOD = "Oikein: sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla."
+GOOD = "Sini on vastainen kateetti jaettuna hypotenuusalla ja kosini viereinen kateetti jaettuna hypotenuusalla."
 TRIPLES = [(3, 4, 5), (6, 8, 10), (5, 12, 13), (8, 15, 17), (7, 24, 25), (9, 12, 15)]
 
 

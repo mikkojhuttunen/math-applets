@@ -50,7 +50,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
       },
       "provenance": {
@@ -114,7 +114,7 @@
         "final": "x = 8"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
       },
       "provenance": {
@@ -179,7 +179,7 @@
         "final": "x = 8"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
       },
       "provenance": {
@@ -243,7 +243,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
       },
       "provenance": {
@@ -307,7 +307,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
         "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
       },
       "provenance": {

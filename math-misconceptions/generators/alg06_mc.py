@@ -28,7 +28,7 @@ def make_items(run, date, count=5, start=1):
                 steps = [f"Oikea puoli: {a} + {b} = {s}", f"{c} + □ = {s}", f"□ = {s} {MINUS} {c} = {ans}"]
             else:
                 steps = [f"Vasen puoli: {a} + {b} = {s}", f"□ + {c} = {s}", f"□ = {s} {MINUS} {c} = {ans}"]
-            options, cid = mc_options(rng, (str(ans), "Oikein: puolten on oltava yhtä suuret."),
+            options, cid = mc_options(rng, (str(ans), "Puolten on oltava yhtä suuret."),
                                       [(str(v), m, f) for v, m, f in cand if v != ans])
             final = str(ans)
         elif k == 3:
@@ -36,7 +36,7 @@ def make_items(run, date, count=5, start=1):
             d = rng.randint(2, 6)
             t = s + d
             prompt = f"Oppilas kirjoittaa: {a} + {b} = {s} + {d} = {t}. Miksi merkintä on virheellinen?"
-            options, cid = mc_options(rng, (f"{a} + {b} ei ole yhtä suuri kuin {t}, vaikka merkintä väittää niin", "Oikein: jokaisen '=' molempien puolten on oltava yhtä suuret."), [
+            options, cid = mc_options(rng, (f"{a} + {b} ei ole yhtä suuri kuin {t}, vaikka merkintä väittää niin", "Jokaisen '=' molempien puolten on oltava yhtä suuret."), [
                 ("Merkintä on oikein: tulos kirjoitetaan aina yhtäsuuruusmerkin jälkeen", "ALG-06", OP),
                 (f"Luvun {s} pitäisi olla suluissa", None, "Sulut eivät korjaa ongelmaa: väite on epätosi."),
                 ("Yhtäsuuruusmerkkiä ei saa käyttää kahdesti", None, "Merkkiä saa käyttää monta kertaa, jos jokainen väite on tosi."),
@@ -48,7 +48,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Vaa'an vasemmassa kupissa on {a} kg:n ja {b} kg:n painot ja oikeassa kupissa {c} kg:n paino. "
                       f"Paljonko oikeaan kuppiin on lisättävä, jotta vaaka on tasapainossa? ({a} + {b} = {c} + □)")
             ans = s - c
-            options, cid = mc_options(rng, (f"{ans} kg", "Oikein: molempien kuppien painojen on oltava yhtä suuret."), [
+            options, cid = mc_options(rng, (f"{ans} kg", "Molempien kuppien painojen on oltava yhtä suuret."), [
                 (f"{s} kg", "ALG-06", OP),
                 (f"{s + c} kg", "ALG-06", OP),
                 (f"{c} kg", None, "Oikean kupin paino on jo annettu; kysytään lisäystä."),
@@ -57,7 +57,7 @@ def make_items(run, date, count=5, start=1):
             final = f"{ans} kg"
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, final,
-                               "Oikein: yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret.", TEMPLATE,
+                               "Yhtäsuuruusmerkki kertoo, että puolet ovat yhtä suuret.", TEMPLATE,
                                {"a": a, "b": b, "c": c}, date, run))
     return items
 

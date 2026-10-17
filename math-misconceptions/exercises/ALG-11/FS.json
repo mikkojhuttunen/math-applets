@@ -60,7 +60,7 @@
         "final": "13 − x − 5"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
@@ -133,7 +133,7 @@
         "final": "8 − 6x + 3"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
@@ -206,7 +206,7 @@
         "final": "4x + 10 − 3x − 2"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
@@ -279,7 +279,7 @@
         "final": "−4x − 11"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {
@@ -352,7 +352,7 @@
         "final": "8 − x + 5"
       },
       "feedback": {
-        "correct": "Oikein: sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
+        "correct": "Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin.",
         "generic_wrong": "Tarkista rivi sijoittamalla x = 1: onko uuden rivin arvo sama kuin edellisen? Sulun edessä oleva miinus muuttaa jokaisen sulun sisällä olevan termin merkin."
       },
       "provenance": {

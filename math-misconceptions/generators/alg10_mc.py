@@ -29,6 +29,7 @@ def make_items(run, date, count=5, start=1):
             prompt = letters + (f"Koululla on {n} kertaa enemmän {many} kuin {few}." if k == 0 else
                                 f"Tapahtumassa on {n} kertaa enemmän {many} kuin {few}.")
             correct = f"{m} = {n}{f}"
+            good = f"{many.capitalize()} on {n} kertaa niin paljon kuin {few}, joten {correct}."
             wrongs = [(f"{n}{m} = {f}", "ALG-10", REV), (f"{m} = {f} + {n}", None, "Tässä lisätään, mutta 'kertaa enemmän' tarkoittaa kertolaskua."),
                       (f"{m} = {f}/{n}", None, f"{m} on suurempi luku, joten {f}:ää pitää kertoa, ei jakaa.")]
             prompt += " Mikä yhtälö kuvaa tilannetta?"
@@ -42,15 +43,16 @@ def make_items(run, date, count=5, start=1):
             prompt = letters + (f"{many.capitalize()} on {d} enemmän kuin kolminkertainen määrä {few}." .replace("kolminkertainen", {2: "kaksinkertainen", 3: "kolminkertainen", 4: "nelinkertainen"}[c])
                       + " Mikä yhtälö kuvaa tilannetta?")
             correct = f"{m} = {c}{f} + {d}"
+            good = f"{many.capitalize()} on {c} kertaa niin paljon kuin {few} ja lisäksi {d}, joten {correct}."
             wrongs = [(f"{c}{m} + {d} = {f}", "ALG-10", REV), (f"{m} = {c}({f} + {d})", None, f"Nyt {d} lisätään myös kerrottavaan, mutta vain kertolaskun tulokseen lisätään {d}."),
                       (f"{m} = {c}{f} {chr(0x2212)} {d}", None, "'Enemmän' tarkoittaa lisäämistä, ei vähentämistä.")]
             steps = [f"Kerrotaan ensin: {c} · {f}", f"Lisätään {d}: {m} = {c}{f} + {d}"]
             final = correct
             ops, tt = ["S1.04", "S3.05"], ["T14", "T7"]
-        options, cid = mc_options(rng, (correct.replace("*", ""), "Oikein."), wrongs)
+        options, cid = mc_options(rng, (correct.replace("*", ""), good), wrongs)
         payload = {"options": options, "correct": [cid]}
         items.append(base_item(TID, CODE, start + k, ops, tt, 7 if k < 3 else 8, level, prompt, payload, steps, final,
-                               "Oikein: suuremman määrän kirjain on yhtälön yksin puolella.", TEMPLATE,
+                               "Suuremman määrän kirjain on yhtälön yksin puolella.", TEMPLATE,
                                {"n": n} if k < 3 else {"c": c, "d": d}, date, run))
     return items
 

@@ -49,7 +49,7 @@
             "id": "d",
             "text": "x = 9 tai x = −9",
             "misconception": null,
-            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+            "feedback": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
           }
         ],
         "correct": [
@@ -64,7 +64,7 @@
         "final": "x = 9 tai x = −9"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
         "template": "ext04_mc",
@@ -112,7 +112,7 @@
             "id": "b",
             "text": "x = 12 tai x = −12",
             "misconception": null,
-            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+            "feedback": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
           },
           {
             "id": "c",
@@ -139,7 +139,7 @@
         "final": "x = 12 tai x = −12"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
         "template": "ext04_mc",
@@ -181,7 +181,7 @@
             "id": "a",
             "text": "x = 4 tai x = −4",
             "misconception": null,
-            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+            "feedback": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
           },
           {
             "id": "b",
@@ -215,7 +215,7 @@
         "final": "x = 4 tai x = −4"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
         "template": "ext04_mc",
@@ -275,7 +275,7 @@
             "id": "d",
             "text": "x = 3 tai x = −3",
             "misconception": null,
-            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+            "feedback": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
           }
         ],
         "correct": [
@@ -291,7 +291,7 @@
         "final": "x = 3 tai x = −3"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
         "template": "ext04_mc",
@@ -339,7 +339,7 @@
             "id": "b",
             "text": "Myös x = −6 toteuttaa yhtälön, koska (−6)² = 36",
             "misconception": null,
-            "feedback": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+            "feedback": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
           },
           {
             "id": "c",
@@ -366,7 +366,7 @@
         "final": "x = 6 tai x = −6"
       },
       "feedback": {
-        "correct": "Oikein: neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
+        "correct": "Neliö ei erota lukua ja sen vastalukua, joten ratkaisuja on kaksi: positiivinen ja negatiivinen juuri."
       },
       "provenance": {
         "template": "ext04_mc",

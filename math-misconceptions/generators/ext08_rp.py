@@ -9,7 +9,7 @@ from gen_common import base_item, cli
 
 TEMPLATE = "ext08_rp"
 TID, CODE = "EXT-08", "RP"
-GOOD = "Oikein: keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta."
+GOOD = "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta."
 GENERIC = ("Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. "
            "Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä.")
 

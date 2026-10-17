@@ -9,7 +9,7 @@ TEMPLATE = "fun04_mc"
 TID, CODE = "FUN-04", "MC"
 BAD = ("Funktion määritelmä vaatii vain, että jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo. "
        "Arvon ei tarvitse muuttua eikä lausekkeessa tarvitse olla x:ää.")
-GOOD = "Oikein: funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
+GOOD = "Funktiossa jokaista x:n arvoa vastaa täsmälleen yksi y:n arvo, vaikka se olisi aina sama."
 
 
 def make_items(run, date, count=5, start=1):

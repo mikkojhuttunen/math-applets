@@ -51,7 +51,7 @@
         "final": "x = 9"
       },
       "feedback": {
-        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
         "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
       },
       "provenance": {
@@ -113,7 +113,7 @@
         "final": "x = −6"
       },
       "feedback": {
-        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
         "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
       },
       "provenance": {
@@ -175,7 +175,7 @@
         "final": "x = 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
         "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
       },
       "provenance": {
@@ -237,7 +237,7 @@
         "final": "x = 7"
       },
       "feedback": {
-        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
         "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
       },
       "provenance": {
@@ -299,7 +299,7 @@
         "final": "x = 5"
       },
       "feedback": {
-        "correct": "Oikein: yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
         "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
       },
       "provenance": {

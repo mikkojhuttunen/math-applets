@@ -56,7 +56,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": w, "misconception": "PRO-02", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita kokonaisluku"}
         items.append(base_item(TID, CODE, start + n, ["S5.05"], ["T16", "T18"], 8, level, prompt, payload, steps, str(ans),
-                               "Oikein: tilavuus muuttuu kertoimella k³.", TEMPLATE, params, date, run))
+                               "Tilavuus muuttuu kertoimella k³.", TEMPLATE, params, date, run))
     return items
 
 

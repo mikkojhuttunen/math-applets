@@ -88,7 +88,7 @@
         "final": "14"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
       },
       "provenance": {
@@ -189,7 +189,7 @@
         "final": "−2"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
       },
       "provenance": {
@@ -290,7 +290,7 @@
         "final": "23"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
       },
       "provenance": {
@@ -391,7 +391,7 @@
         "final": "6"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
       },
       "provenance": {
@@ -493,7 +493,7 @@
         "final": "5"
       },
       "feedback": {
-        "correct": "Oikein: negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
+        "correct": "Negatiivisen luvun vähentäminen on sen vastaluvun lisäämistä, a − (−b) = a + b.",
         "generic_wrong": "Laske jokaisen vaihtoehdon arvo erikseen ja vertaa viitelausekkeeseen. Muista, että a − (−b) = a + b."
       },
       "provenance": {

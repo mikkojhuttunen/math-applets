@@ -10,7 +10,7 @@ TEMPLATE = "ext07_es"
 TID, CODE = "EXT-07", "ES"
 ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 GENERIC = "Pinta-alan muuntokerroin on pituuden kertoimen neliö: 1 m² = 100 cm · 100 cm = 10 000 cm². Tarkista rivi kerrallaan."
-GOOD = "Oikein: pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö."
+GOOD = "Pinta-alayksiköiden muuntokerroin on pituusyksikön kertoimen neliö."
 
 
 def make_items(run, date, count=5, start=1):

@@ -45,7 +45,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "accept": "exact"}
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, ctx + ASK, payload,
                                [expl, f"Ratkaisu: x = {x}"], f"x = {x}",
-                               "Oikein: jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi.",
+                               "Jokainen toimitus tehdään yhtälön molemmille puolille, joten yhtälö pysyy tosi.",
                                TEMPLATE, {"a": a, "b": b, "x": x}, date, run))
     return items
 

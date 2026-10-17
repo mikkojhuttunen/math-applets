@@ -37,7 +37,7 @@
             "id": "b",
             "text": "x = 4",
             "misconception": null,
-            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+            "feedback": "Toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
           },
           {
             "id": "c",
@@ -64,7 +64,7 @@
         "final": "x = 4"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+        "correct": "Yhtälön molempien puolten on pysyttävä yhtä suurina."
       },
       "provenance": {
         "template": "alg07_mc",
@@ -106,7 +106,7 @@
             "id": "a",
             "text": "x = 8",
             "misconception": null,
-            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+            "feedback": "Toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
           },
           {
             "id": "b",
@@ -139,7 +139,7 @@
         "final": "x = 8"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+        "correct": "Yhtälön molempien puolten on pysyttävä yhtä suurina."
       },
       "provenance": {
         "template": "alg07_mc",
@@ -181,7 +181,7 @@
             "id": "a",
             "text": "x = 2",
             "misconception": null,
-            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+            "feedback": "Toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
           },
           {
             "id": "b",
@@ -214,7 +214,7 @@
         "final": "x = 2"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+        "correct": "Yhtälön molempien puolten on pysyttävä yhtä suurina."
       },
       "provenance": {
         "template": "alg07_mc",
@@ -262,7 +262,7 @@
             "id": "b",
             "text": "x = 3",
             "misconception": null,
-            "feedback": "Oikein: toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
+            "feedback": "Toimitus tehtiin molemmille puolille ja merkit käsiteltiin oikein."
           },
           {
             "id": "c",
@@ -289,7 +289,7 @@
         "final": "x = 3"
       },
       "feedback": {
-        "correct": "Oikein: yhtälön molempien puolten on pysyttävä yhtä suurina."
+        "correct": "Yhtälön molempien puolten on pysyttävä yhtä suurina."
       },
       "provenance": {
         "template": "alg07_mc",
@@ -331,7 +331,7 @@
             "id": "a",
             "text": "Luku 2 siirrettiin toiselle puolelle, mutta sen merkki ei vaihtunut: pitäisi olla 3x = 15",
             "misconception": null,
-            "feedback": "Oikein: luku 2 on vähennettävä molemmilta puolilta."
+            "feedback": "Luku 2 on vähennettävä molemmilta puolilta."
           },
           {
             "id": "b",
@@ -364,7 +364,7 @@
         "final": "3x = 15"
       },
       "feedback": {
-        "correct": "Oikein: termin siirto toiselle puolelle vaihtaa sen merkin."
+        "correct": "Termin siirto toiselle puolelle vaihtaa sen merkin."
       },
       "provenance": {
         "template": "alg07_mc",

@@ -401,6 +401,15 @@ def verify_item(item, tid, code, ctx):
         errs.append("id is too long for a Telegram callback_data payload")
     if not item["provenance"]["verified"]:
         errs.append("provenance.verified is false: only code-verified items may be committed")
+    correct_texts = [("feedback.correct", item["feedback"]["correct"])]
+    payload = item["payload"]
+    for o in payload.get("options", []):
+        if o["id"] in payload.get("correct", []) and o.get("feedback"):
+            correct_texts.append((f"option {o['id']} feedback", o["feedback"]))
+    for where, text in correct_texts:
+        if re.match(r"(Oikein|Väärin)\b", text):
+            errs.append(f"{where}: starts with a verdict word; the app shows 'Oikein!' itself, so start with the "
+                        "explanation (e.g. 'Kirjain kuvaa lukumäärää.')")
     for where, text in pupil_texts(item):
         for aside in bracket_asides(text):
             errs.append(f"{where}: bracketed aside {aside}; write it as part of the sentence "

@@ -58,7 +58,7 @@ def make_items(run, date, count=5, start=1):
         steps = [f"{ref} = {fr(x, L)} + {fr(y, L)}", f"= {fr(x + y, L)}"]
         payload = {"reference": ref, "variables": ["x"], "samples": [[1], [2], [3]], "options": options}
         it = base_item(TID, CODE, start + n, ["S2.02"], ["T11"], 7, level, prompt, payload, steps, f"{fr(x + y, L)}",
-                       "Oikein: lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
+                       "Lausekkeet ovat yhtä suuria, kun ne sieventyvät samaan arvoon samannimisillä murtoluvuilla.",
                        TEMPLATE, {"a": a, "b": b, "c": c, "d": d, "common": L}, date, run,
                        generic_wrong="Nimittäjiä ei lasketa yhteen. Muuta murtoluvut samannimisiksi ja laske vain osoittajat yhteen.")
         items.append(it)

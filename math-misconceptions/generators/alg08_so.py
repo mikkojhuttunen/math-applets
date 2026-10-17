@@ -47,7 +47,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"lines": lines, "accept": "exact"}
         items.append(base_item(TID, CODE, start + k, ["S3.02"], ["T14"], 7, level, ctx + ASK, payload,
                                [expl, f"Sievin muoto: {lines[-1]}"], lines[-1],
-                               "Oikein: kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen.",
+                               "Kerroin kertoo jokaisen sulun sisällä olevan termin, ja sen jälkeen lasketaan samanmuotoiset termit yhteen.",
                                TEMPLATE, {"a": a, "b": b, "c": c, "d": d}, date, run))
     return items
 

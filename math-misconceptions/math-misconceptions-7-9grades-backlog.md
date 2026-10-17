@@ -67,6 +67,7 @@ Each item follows `schema/item.schema.json`. Required fields: `schema_version`, 
 | `curriculum.t` | only T-goals listed for the topic in section 3.1 |
 | `provenance.verified` | `true` only if the answer was recomputed by code in the same run |
 | Text | Finnish, decimal comma; an always-present plain Unicode version (`x²`, `√`); `latex` is optional. No bracketed asides: write units, examples and variable letters into the sentence (`Ostetaan a omenaa`, `Kirjoita luku kilogrammoina`, `Merkitään kirjojen määrää k:lla`); brackets are for mathematics only (`3(x + 2)`, `P(kruuna)`). `verify.py` rejects asides |
+| Correct-answer feedback | `feedback.correct` and the correct option's feedback start with the explanation, not with a verdict word: the app shows "Oikein!" itself, so write `Kirjain kuvaa lukumäärää.`, not `Oikein: kirjain on lukumäärä.` `verify.py` rejects a leading "Oikein" or "Väärin" |
 
 Payload fields per type (details and limits in the schema):
 

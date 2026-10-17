@@ -9,7 +9,7 @@ TEMPLATE = "geo02_mc"
 TID, CODE = "GEO-02", "MC"
 BAD = ("Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, "
        "ja lisäksi sivut ovat yhtä pitkät.")
-GOOD = "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
+GOOD = "Jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
 
 
 def is_rectangle(sides, angles):

@@ -26,7 +26,7 @@ def make_items(run, date, count=5, start=1):
             assert Fraction(a * m, b * m) == p
             prompt = (f"Purkissa 1 on {a * m} mustaa kuulaa {b * m}:stä. Purkissa 2 on {a} mustaa kuulaa {b}:stä. "
                       "Kummasta purkista on parempi mahdollisuus nostaa musta kuula?")
-            correct = (f"Mahdollisuus on sama, {fr(p)}", f"Oikein: molemmissa mustien osuus on {fr(p)}.")
+            correct = (f"Mahdollisuus on sama, {fr(p)}", f"Molemmissa mustien osuus on {fr(p)}.")
             wrongs = [("Purkista 1, koska siinä on enemmän mustia kuulia", "PRB-02", BAD),
                       ("Purkista 2, koska siinä on vähemmän kuulia", None, "Kuulien kokonaismäärä yksin ei ratkaise: vertaa mustien osuutta."),
                       ("Sitä ei voi tietää", None, "Osuudet voidaan laskea ja verrata.")]
@@ -41,7 +41,7 @@ def make_items(run, date, count=5, start=1):
             p1, p2 = Fraction(a1, b1), Fraction(a2, b2)
             prompt = (f"Purkissa 1 on {a1} mustaa kuulaa {b1}:stä. Purkissa 2 on {a2} mustaa kuulaa {b2}:sta. "
                       "Kummasta purkista on parempi mahdollisuus nostaa musta kuula?")
-            correct = ("Purkista 2", f"Oikein: {fr(p2)} > {fr(p1)}.")
+            correct = ("Purkista 2", f"{fr(p2)} > {fr(p1)}.")
             wrongs = [("Purkista 1, koska siinä on enemmän mustia kuulia", "PRB-02", BAD),
                       ("Molemmista yhtä hyvä", None, f"Osuudet ovat {fr(p1)} ja {fr(p2)}, eli eri suuret."),
                       ("Sitä ei voi tietää", None, "Osuudet voidaan laskea ja verrata.")]
@@ -56,7 +56,7 @@ def make_items(run, date, count=5, start=1):
             p1, p2 = Fraction(g1, n1), Fraction(g2, n2)
             prompt = (f"Luokalla 8A on {n1} oppilasta, joista {g1} on pelannut lätkää. Luokalla 8B on {n2} oppilasta, "
                       f"joista {g2} on pelannut lätkää. Kummalta luokalta arvotulla oppilaalla on suurempi todennäköisyys olla lätkänpelaaja?")
-            correct = ("Luokalta 8B", f"Oikein: {fr(p2)} > {fr(p1)}.")
+            correct = ("Luokalta 8B", f"{fr(p2)} > {fr(p1)}.")
             wrongs = [("Luokalta 8A, koska siellä on enemmän lätkänpelaajia", "PRB-02", BAD),
                       ("Todennäköisyydet ovat samat", None, f"Osuudet ovat {fr(p1)} ja {fr(p2)}, eli eri suuret."),
                       ("Luokalta 8A, koska siellä on enemmän oppilaita", None, "Suurempi luokka ei tee osuudesta suurempaa.")]
@@ -69,7 +69,7 @@ def make_items(run, date, count=5, start=1):
             assert p1 < p0
             prompt = (f"Pussissa on {r} punaista ja {w} sinistä kuulaa. Pussiin lisätään {add} punaista ja {add} sinistä kuulaa. "
                       "Mitä tapahtuu todennäköisyydelle nostaa punainen kuula?")
-            correct = (f"Se pienenee: {fr(p0)} → {fr(p1)}", f"Oikein: {r + add}/{r + w + 2 * add} = {fr(p1)} < {fr(p0)}.")
+            correct = (f"Se pienenee: {fr(p0)} → {fr(p1)}", f"{r + add}/{r + w + 2 * add} = {fr(p1)} < {fr(p0)}.")
             wrongs = [("Se kasvaa, koska punaisia kuulia on nyt enemmän", "PRB-02", BAD),
                       ("Se pysyy samana, koska kumpaakin lisättiin saman verran", None, "Lisäys muuttaa osuutta, koska kuulia oli eri määrät."),
                       ("Sitä ei voi päätellä", None, "Uudet osuudet voidaan laskea.")]
@@ -82,7 +82,7 @@ def make_items(run, date, count=5, start=1):
             assert Fraction(a * 4 * m, b * 4 * m) == p
             prompt = (f"Purkissa 1 on {a * 4 * m} mustaa kuulaa {b * 4 * m}:stä. Purkissa 2 on {a} mustaa kuulaa {b}:stä. "
                       "Mikä päättely on oikea?")
-            correct = (f"Mahdollisuudet ovat samat, koska mustien osuus on molemmissa {fr(p)}", f"Oikein: {a * 4 * m}/{b * 4 * m} = {a}/{b} = {fr(p)}.")
+            correct = (f"Mahdollisuudet ovat samat, koska mustien osuus on molemmissa {fr(p)}", f"{a * 4 * m}/{b * 4 * m} = {a}/{b} = {fr(p)}.")
             wrongs = [("Purkki 1 on parempi, koska siinä on enemmän mustia kuulia", "PRB-02", BAD),
                       ("Purkki 2 on parempi, koska siinä on vähemmän kuulia yhteensä", None, "Kokonaismäärä yksin ei ratkaise: vertaa osuuksia."),
                       ("Mahdollisuudet ovat samat, koska mustia on molemmissa yhtä paljon", None, "Mustien määrät ovat eri suuret; samaksi osuudet tekee niiden suhde kaikkiin kuuliin.")]
@@ -94,7 +94,7 @@ def make_items(run, date, count=5, start=1):
         options, cid = mc_options(rng, correct, wrongs)
         items.append(base_item(TID, CODE, start + k, ["S6.06", "S2.02"], ["T11", "T19"], 9, level, prompt,
                                {"options": options, "correct": [cid]}, steps, final,
-                               "Oikein: todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.", TEMPLATE, params, date, run))
+                               "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.", TEMPLATE, params, date, run))
     return items
 
 
