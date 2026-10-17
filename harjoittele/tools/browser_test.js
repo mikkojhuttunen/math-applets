@@ -136,7 +136,7 @@ try {
       check(rightRow === entry.answer, `column view: correct row ${rightRow} is not ${entry.answer}`);
       check((await page.locator('.columns .carry').allTextContents()).join('') !== '', 'column view: no borrow marks after the reveal');
     }
-    await page.click('text=Katso tulos');
+    await page.click('button.primary:text-is("Katso tulos")');
     check((await page.textContent('#app')).includes('Sait 0/1 oikein'), 'single-item summary wrong');
     await commonChecks(page, 'typed item');
     problems.forEach((p) => failures.push(`typed item: ${p}`));
@@ -184,7 +184,7 @@ try {
           await page.fill('#answer', item.answer);
           await page.press('#answer', 'Enter');
         }
-        await page.click('text=Seuraava');
+        await page.click('button.primary:text-is("Seuraava")');
       }
     }
     await page.goBack();
@@ -240,7 +240,7 @@ try {
         await page.press('#answer', 'Enter');
       }
       check((await page.textContent('.feedback')).includes('Oikein'), `item ${item.id} not accepted with ${item.answer}`);
-      await page.click(n === 5 ? 'text=Katso tulos' : 'text=Seuraava');
+      await page.click(`button.primary:text-is("${n === 5 ? 'Katso tulos' : 'Seuraava'}")`);
     }
     const summary = await page.textContent('#app');
     check(summary.includes('Sait 5/5 oikein') && summary.includes('Ensimmäisellä yrityksellä 5/5'), `summary wrong: ${summary}`);
