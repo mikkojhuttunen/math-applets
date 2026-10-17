@@ -1,0 +1,380 @@
+{
+  "schema_version": "1.0",
+  "topic": "FUN-03",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora y = 2x piirretään koordinaatistoon, jossa y-akselin yksikkö on 3 kertaa x-akselin yksikön pituinen. Suora näyttää jyrkemmältä kuin 45°. Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "45",
+            "misconception": null,
+            "feedback": "45° on kulma, ei kulmakerroin."
+          },
+          {
+            "id": "b",
+            "text": "6",
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          },
+          {
+            "id": "c",
+            "text": "2",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+          },
+          {
+            "id": "d",
+            "text": "2/3",
+            "misconception": null,
+            "feedback": "Kulmakerroin luetaan yhtälöstä, ei kuvan mittasuhteista."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Yhtälöstä y = 2x kulmakerroin on 2",
+          "Asteikko venyttää kuvaa mutta ei muuta kulmakerrointa"
+        ],
+        "final": "2"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_mc",
+        "params": {
+          "k": 2,
+          "m": 3,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-MC-002",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Funktion y = 4x + 2 kuvaaja piirretään kahteen koordinaatistoon. Toisessa y-akselin asteikko on tihennetty, ja suora näyttää siinä loivemmalta. Mitä voi sanoa kulmakertoimista?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tihennetyssä kuvassa kulmakerroin on pienempi, koska suora näyttää loivemmalta",
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          },
+          {
+            "id": "b",
+            "text": "Tihennetyssä kuvassa kulmakerroin on suurempi",
+            "misconception": null,
+            "feedback": "Asteikon tihentäminen ei muuta funktiota eikä kulmakerrointa."
+          },
+          {
+            "id": "c",
+            "text": "Ne ovat samat, 4",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+          },
+          {
+            "id": "d",
+            "text": "Kulmakertoimia ei voi vertailla ilman mittaviivainta",
+            "misconception": null,
+            "feedback": "Kulmakerroin voidaan lukea yhtälöstä."
+          }
+        ],
+        "correct": [
+          "c"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Molemmat kuvaajat esittävät funktiota y = 4x + 2",
+          "Kulmakerroin on 4"
+        ],
+        "final": "Samat, 4"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_mc",
+        "params": {
+          "k": 4,
+          "c": 2,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-MC-003",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on 3 kertaa lyhyempi kuin x-akselin yksikkö (1 cm vastaa x-akselilla yhtä yksikköä ja y-akselilla 3 yksikköä). Mikä on suoran kulmakerroin?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "45",
+            "misconception": null,
+            "feedback": "45° on kulma, ei kulmakerroin."
+          },
+          {
+            "id": "b",
+            "text": "3",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+          },
+          {
+            "id": "c",
+            "text": "1",
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          },
+          {
+            "id": "d",
+            "text": "1/3",
+            "misconception": null,
+            "feedback": "Muutos y-suunnassa on suurempi kuin x-suunnassa."
+          }
+        ],
+        "correct": [
+          "b"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "1 cm oikealle on 1 yksikkö, 1 cm ylös on 3 yksikköä",
+          "Kulmakerroin = 3 / 1 = 3"
+        ],
+        "final": "3"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_mc",
+        "params": {
+          "r": 3,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-MC-004",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Suora A on y = 5x ja suora B on y = 2x. Suora A on piirretty koordinaatistoon, jossa y-akselin yksikkö on 4 kertaa lyhyempi kuin x-akselin yksikkö, ja suora B koordinaatistoon, jossa akselien yksiköt ovat yhtä pitkät. Suora B näyttää jyrkemmältä. Kumman kulmakerroin on suurempi?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suoran A (5 > 2)",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+          },
+          {
+            "id": "b",
+            "text": "Suoran B, koska se näyttää jyrkemmältä",
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          },
+          {
+            "id": "c",
+            "text": "Sitä ei voi vertailla, koska asteikot ovat eri",
+            "misconception": null,
+            "feedback": "Kulmakertoimet voi vertailla yhtälöistä."
+          },
+          {
+            "id": "d",
+            "text": "Ne ovat yhtä suuret",
+            "misconception": null,
+            "feedback": "Kulmakertoimet ovat eri suuret: tarkista yhtälöt."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "A: kulmakerroin 5, B: kulmakerroin 2",
+          "5 > 2"
+        ],
+        "final": "Suoran A"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_mc",
+        "params": {
+          "a": 5,
+          "b": 2,
+          "m": 4,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "FUN-03-MC-005",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "FUN-03"
+      ],
+      "prompt": {
+        "text": "Miksi suoran kulmakerrointa ei voi päätellä pelkästä kuvan jyrkkyydestä?"
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Koska jyrkkyys riippuu akselien asteikoista; kulmakerroin lasketaan lukuarvojen muutosten suhteena",
+            "misconception": null,
+            "feedback": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+          },
+          {
+            "id": "b",
+            "text": "Koska kulmakerroin on aina 1",
+            "misconception": null,
+            "feedback": "Eri suorilla on eri kulmakerroin."
+          },
+          {
+            "id": "c",
+            "text": "Koska kulmakerroin mitataan asteina",
+            "misconception": null,
+            "feedback": "Kulmakerroin on suhdeluku, ei kulma."
+          },
+          {
+            "id": "d",
+            "text": "Kuvan jyrkkyys kertoo aina kulmakertoimen",
+            "misconception": "FUN-03",
+            "feedback": "Kuvan jyrkkyys riippuu myös akselien asteikoista. Kulmakerroin lasketaan lukuarvoista: kulmakerroin = y:n muutos / x:n muutos."
+          }
+        ],
+        "correct": [
+          "a"
+        ]
+      },
+      "solution": {
+        "steps": [
+          "Asteikon muuttaminen venyttää kuvaa",
+          "Kulmakerroin = y:n muutos / x:n muutos"
+        ],
+        "final": "Jyrkkyys riippuu asteikoista"
+      },
+      "feedback": {
+        "correct": "Oikein: kulmakerroin = y:n muutos / x:n muutos, eikä se riipu siitä, miltä suora näyttää."
+      },
+      "provenance": {
+        "template": "fun03_mc",
+        "params": {
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    }
+  ]
+}

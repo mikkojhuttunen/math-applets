@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.0",
+  "topic": "NUM-08",
+  "type": "NE",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-NE-001",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 40 % ja laskee sen jälkeen 40 %. Kuinka monta prosenttia alkuperäisestä hinnasta lopullinen hinta on?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 84
+        },
+        "wrong": [
+          {
+            "match": 100,
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "(1 + 40/100) · (1 − 40/100) = 0,84",
+          "Lopullinen hinta on 84 % alkuperäisestä"
+        ],
+        "final": "84"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": 40,
+          "form": 0
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-NE-002",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Takin hinta on 150 €. Hintaa korotetaan 20 %, ja korotettua hintaa alennetaan sen jälkeen 20 %. Mikä on lopullinen hinta euroina?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 144
+        },
+        "wrong": [
+          {
+            "match": 150,
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "150 · (1 + 20/100) · (1 − 20/100) = 144"
+        ],
+        "final": "144"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "price": 150,
+          "q": 20,
+          "form": 1
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-NE-003",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Verkkokaupassa on 1000 kävijää päivässä. Kävijämäärä laskee 30 % ja kasvaa sen jälkeen 30 %. Kuinka monta kävijää päivässä on lopuksi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 910
+        },
+        "wrong": [
+          {
+            "match": 1000,
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "1000 · (1 − 30/100) · (1 + 30/100) = 910"
+        ],
+        "final": "910"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "n": 1000,
+          "q": 30,
+          "form": 2
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-NE-004",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Hinta laskee 10 % ja nousee sen jälkeen 10 %. Kuinka monta prosenttiyksikköä lopullinen hinta on alkuperäistä hintaa pienempi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 1
+        },
+        "wrong": [
+          {
+            "match": 0,
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "(1 − 10/100) · (1 + 10/100) = 0,99",
+          "100 % − 99 % = 1 prosenttiyksikköä"
+        ],
+        "final": "1"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": 10,
+          "form": 3
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-08-NE-005",
+      "type": "NE",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.10"
+        ],
+        "t": [
+          "T13"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-08"
+      ],
+      "prompt": {
+        "text": "Hinta nousee 150 %. Kuinka monta prosenttia korotetun hinnan pitää sen jälkeen laskea, jotta hinta palaa alkuperäiseksi?"
+      },
+      "payload": {
+        "answer": {
+          "kind": "number",
+          "value": 60
+        },
+        "wrong": [
+          {
+            "match": 150,
+            "misconception": "NUM-08",
+            "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
+          }
+        ],
+        "input_hint": "Kirjoita luku"
+      },
+      "solution": {
+        "steps": [
+          "(1 + 150/100) · (1 − x/100) = 1",
+          "x = 60"
+        ],
+        "final": "60"
+      },
+      "feedback": {
+        "correct": "Oikein: muutoskertoimet kerrotaan keskenään, esimerkiksi 1,10 · 0,90 = 0,99."
+      },
+      "provenance": {
+        "template": "num08_ne",
+        "params": {
+          "p": 150,
+          "form": 4
+        },
+        "generated": "2026-10-01",
+        "verified": true,
+        "run": 25
+      }
+    }
+  ]
+}
