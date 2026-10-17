@@ -35,7 +35,7 @@
           },
           {
             "id": "b",
-            "text": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät (3 cm ja 3 cm)",
+            "text": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät, 3 cm ja 3 cm",
             "misconception": null,
             "feedback": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
           },
@@ -61,7 +61,7 @@
           "Kulmat 90°, sivut 3, 3, 3, 3",
           "Suorakulmion ehdot täyttyvät"
         ],
-        "final": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät (3 cm ja 3 cm)"
+        "final": "Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät, 3 cm ja 3 cm"
       },
       "feedback": {
         "correct": "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
@@ -315,7 +315,7 @@
         "GEO-02"
       ],
       "prompt": {
-        "text": "Mikä väite on oikein? Verrataan neliötä (sivu 10 cm) ja suorakulmiota, jonka sivut ovat 14 cm ja 10 cm."
+        "text": "Mikä väite on oikein? Verrataan neliötä, jonka sivu on 10 cm, ja suorakulmiota, jonka sivut ovat 14 cm ja 10 cm."
       },
       "payload": {
         "options": [

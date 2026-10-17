@@ -275,7 +275,7 @@
             "id": "a",
             "text": "Kauempana on B, nopeammin juoksee A.",
             "misconception": null,
-            "feedback": "Oikein: B:n matka on t = 1 suurempi (9 km), mutta A:n nopeus on suurempi (2 km/h)."
+            "feedback": "Oikein: B:n matka on hetkellä t = 1 suurempi, 9 km, mutta A:n nopeus on suurempi, 2 km/h."
           },
           {
             "id": "b",

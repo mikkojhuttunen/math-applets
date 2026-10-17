@@ -83,7 +83,7 @@
       "solution": {
         "steps": [
           "4n = 4 · n",
-          "n · 4 ja n + … + n (4 kertaa) ovat samat"
+          "n · 4 ja n + … + n ovat samat, kun yhteenlaskettavia on 4"
         ],
         "final": "4n = 4 · n"
       },
@@ -183,7 +183,7 @@
       "solution": {
         "steps": [
           "4m = 4 · m",
-          "m · 4 ja m + … + m (4 kertaa) ovat samat"
+          "m · 4 ja m + … + m ovat samat, kun yhteenlaskettavia on 4"
         ],
         "final": "4m = 4 · m"
       },
@@ -475,7 +475,7 @@
       "solution": {
         "steps": [
           "5 pulloa maksaa 5 · t = 5t euroa",
-          "Sama kuin t + … + t (5 kertaa)"
+          "Sama kuin t + … + t, kun yhteenlaskettavia on 5"
         ],
         "final": "5 pulloa maksaa 5 · t = 5t euroa"
       },

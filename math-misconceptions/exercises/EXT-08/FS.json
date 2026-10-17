@@ -101,7 +101,7 @@
         "EXT-08"
       ],
       "prompt": {
-        "text": "Kuuden kävelylenkin pituudet ovat 22, 31, 29, 12, 36, 34 minuuttia. Laske mediaani: järjestä luvut ja laske kahden keskimmäisen keskiarvo (29 ja 31). Kirjoita välivaihe, jossa keskimmäisten summa on laskettu: (29 + 31) / 2 = □ = 30"
+        "text": "Kuuden kävelylenkin pituudet ovat 22, 31, 29, 12, 36, 34 minuuttia. Laske mediaani: järjestä luvut ja laske kahden keskimmäisen luvun 29 ja 31 keskiarvo. Kirjoita välivaihe, jossa keskimmäisten summa on laskettu: (29 + 31) / 2 = □ = 30"
       },
       "payload": {
         "lines": [

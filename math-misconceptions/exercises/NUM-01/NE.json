@@ -36,7 +36,7 @@
           {
             "match": 0.73,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -97,7 +97,7 @@
           {
             "match": 4.47,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -158,12 +158,12 @@
           {
             "match": 1.718,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           },
           {
             "match": 1.71,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -224,7 +224,7 @@
           {
             "match": 9.0,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -285,7 +285,7 @@
           {
             "match": 3.0,
             "misconception": "NUM-01",
-            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi (esimerkiksi 0,6 = 0,60) ja vertaa."
+            "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
         "input_hint": "Kirjoita luku"

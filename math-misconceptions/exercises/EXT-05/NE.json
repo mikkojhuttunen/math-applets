@@ -200,7 +200,7 @@
         "EXT-05"
       ],
       "prompt": {
-        "text": "Tikkaat nojaavat seinää vasten. Kolmion sivut ovat 8 m, 11 m ja 13 m (13 m on pisin). Laske 13² − (8² + 11²)."
+        "text": "Tikkaat nojaavat seinää vasten. Kolmion sivut ovat 8 m, 11 m ja 13 m, joista 13 m on pisin. Laske 13² − (8² + 11²)."
       },
       "payload": {
         "answer": {

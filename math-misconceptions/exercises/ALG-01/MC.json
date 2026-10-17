@@ -24,7 +24,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Omenan hinta on 5 senttiä ja päärynän hinta 7 senttiä. Ostetaan a kpl (omenaa) ja p kpl (päärynää). Mitä lauseke 5a + 7p kertoo?"
+        "text": "Omenan hinta on 5 senttiä ja päärynän hinta 7 senttiä. Ostetaan a omenaa ja p päärynää. Mitä lauseke 5a + 7p kertoo?"
       },
       "payload": {
         "options": [
@@ -42,7 +42,7 @@
           },
           {
             "id": "c",
-            "text": "Ostosten yhteishinnan (senttiä)",
+            "text": "Ostosten yhteishinnan sentteinä",
             "misconception": null,
             "feedback": "Oikein: lauseke on yhteishinta."
           },
@@ -63,7 +63,7 @@
           "7p: p kappaletta, hinta 7 senttiä kappaleelta, yhteensä 7 · p senttiä",
           "Summa 5a + 7p on koko ostoksen hinta"
         ],
-        "final": "Yhteishinta (senttiä)"
+        "final": "Yhteishinta sentteinä"
       },
       "feedback": {
         "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
@@ -186,7 +186,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Vihon hinta on 7 euroa ja kynän hinta 9 euroa. Ostetaan a kpl (vihkoa) ja p kpl (kynää). Mitä lauseke 7a + 9p kertoo?"
+        "text": "Vihon hinta on 7 euroa ja kynän hinta 9 euroa. Ostetaan a vihkoa ja p kynää. Mitä lauseke 7a + 9p kertoo?"
       },
       "payload": {
         "options": [
@@ -210,7 +210,7 @@
           },
           {
             "id": "d",
-            "text": "Ostosten yhteishinnan (euroa)",
+            "text": "Ostosten yhteishinnan euroina",
             "misconception": null,
             "feedback": "Oikein: lauseke on yhteishinta."
           }
@@ -225,7 +225,7 @@
           "9p: p kappaletta, hinta 9 euroa kappaleelta, yhteensä 9 · p euroa",
           "Summa 7a + 9p on koko ostoksen hinta"
         ],
-        "final": "Yhteishinta (euroa)"
+        "final": "Yhteishinta euroina"
       },
       "feedback": {
         "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."
@@ -267,7 +267,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Elokuvalipun hinta on 4 euroa ja karkkipussin hinta 3 euroa. Ostetaan m kpl (elokuvalippua) ja n kpl (karkkipussia). Mitä kirjain m tarkoittaa lausekkeessa 4m + 3n?"
+        "text": "Elokuvalipun hinta on 4 euroa ja karkkipussin hinta 3 euroa. Ostetaan m elokuvalippua ja n karkkipussia. Mitä kirjain m tarkoittaa lausekkeessa 4m + 3n?"
       },
       "payload": {
         "options": [
@@ -304,7 +304,7 @@
         "steps": [
           "Hinta 4 euroa on annettu lukuna",
           "Kertoimena m on se, montako kappaletta ostetaan",
-          "Siksi m on luku (kappalemäärä), ei esine"
+          "Siksi m on luku eli kappalemäärä, ei esine"
         ],
         "final": "Kappalemäärää, eli lukua"
       },
@@ -348,7 +348,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Tarran hinta on 5 senttiä ja kortin hinta 9 senttiä. Ostetaan a kpl (tarraa) ja p kpl (korttia). Aino sanoo: \"Lauseke 5a + 9p tarkoittaa 5 tarraa ja 9 korttia.\" Miksi väite on virheellinen?"
+        "text": "Tarran hinta on 5 senttiä ja kortin hinta 9 senttiä. Ostetaan a tarraa ja p korttia. Aino sanoo: \"Lauseke 5a + 9p tarkoittaa 5 tarraa ja 9 korttia.\" Miksi väite on virheellinen?"
       },
       "payload": {
         "options": [
@@ -366,7 +366,7 @@
           },
           {
             "id": "c",
-            "text": "Kirjaimet ovat lukuja (määriä), joten lauseke on hinta eikä tuotteiden lista",
+            "text": "Kirjaimet ovat lukuja eli määriä, joten lauseke on hinta eikä tuotteiden lista",
             "misconception": null,
             "feedback": "Oikein: kirjain edustaa lukua."
           },

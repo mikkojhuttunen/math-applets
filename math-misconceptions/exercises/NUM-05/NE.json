@@ -35,7 +35,7 @@
           {
             "match": 4.0,
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -93,7 +93,7 @@
           {
             "match": 18.0,
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -151,7 +151,7 @@
           {
             "match": 0.6,
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -208,7 +208,7 @@
           {
             "match": 0.0,
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -273,7 +273,7 @@
           {
             "match": 0.0,
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
         "input_hint": "Kirjoita luku"

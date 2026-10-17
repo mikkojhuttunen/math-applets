@@ -125,7 +125,7 @@
           },
           {
             "id": "d",
-            "text": "Ei: suhde y/x ei ole vakio (7/1 = 7, mutta 12/2 = 6)",
+            "text": "Ei: suhde y/x ei ole vakio, sillä 7/1 = 7 mutta 12/2 = 6",
             "misconception": null,
             "feedback": "Oikein: y = ax + b on suoraan verrannollinen vain, kun b = 0. Muuten x:n kaksinkertaistaminen ei kaksinkertaista y:tä."
           }

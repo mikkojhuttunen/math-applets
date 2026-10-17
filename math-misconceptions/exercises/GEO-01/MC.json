@@ -273,7 +273,7 @@
             "id": "a",
             "text": "A(3, 3), B(4, 6), C(5, 9)",
             "misconception": null,
-            "feedback": "Oikein: pisteet ovat samalla suoralla (ala 0), joten kolmiota ei synny."
+            "feedback": "Oikein: pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny."
           },
           {
             "id": "b",

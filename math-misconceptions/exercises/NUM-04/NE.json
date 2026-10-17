@@ -35,7 +35,7 @@
           {
             "match": 6.0,
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 = 4."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -93,7 +93,7 @@
           {
             "match": 20.0,
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 = 4."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -151,7 +151,7 @@
           {
             "match": 24.0,
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 = 4."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -215,7 +215,7 @@
           {
             "match": 4.0,
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 = 4."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -280,7 +280,7 @@
           {
             "match": 0.0,
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 = 4)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerroin on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 = 4."
           }
         ],
         "input_hint": "Kirjoita luku"

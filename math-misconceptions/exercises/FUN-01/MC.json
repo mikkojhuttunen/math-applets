@@ -38,11 +38,11 @@
             "id": "b",
             "text": "Nopeus pienenee koko ajan",
             "misconception": null,
-            "feedback": "Alamäessä nopeus kasvaa (8 → 25 km/h)."
+            "feedback": "Alamäessä nopeus kasvaa 8 km/h:sta 25 km/h:iin."
           },
           {
             "id": "c",
-            "text": "Nopeus kasvaa (8 → 25 km/h), pysyy vakiona (25 km/h) ja pienenee (25 → 6 km/h)",
+            "text": "Nopeus kasvaa 8 km/h:sta 25 km/h:iin, pysyy vakiona 25 km/h:ssa ja pienenee 25 km/h:sta 6 km/h:iin",
             "misconception": null,
             "feedback": "Oikein: nopeus muuttuu juuri näin, ja kuvaajan muoto seuraa nopeuden muutosta."
           },
@@ -63,7 +63,7 @@
           "Tasainen tie: 25, pysyy samana",
           "Ylämäki: 25 → 6, nopeus pienenee"
         ],
-        "final": "Nopeus kasvaa (8 → 25 km/h), pysyy vakiona (25 km/h) ja pienenee (25 → 6 km/h)"
+        "final": "Nopeus kasvaa 8 km/h:sta 25 km/h:iin, pysyy vakiona 25 km/h:ssa ja pienenee 25 km/h:sta 6 km/h:iin"
       },
       "feedback": {
         "correct": "Oikein: kuvaajan muoto riippuu siitä, miten suure muuttuu ajan funktiona, ei tilanteen ulkonäöstä."
