@@ -84,7 +84,9 @@ export function createRound(items, { size = 5, random = Math.random, feedback = 
     if (check.result === 'correct') {
       results.push({ item, correct: true, attempts: attempt, given });
       finished = true;
-      return { status: 'correct', text: item.feedbackCorrect || TEXT.correct, misconception: null };
+      // Item feedback explains why the answer is right; the verdict word comes from here, not from the item.
+      const text = item.feedbackCorrect ? `${TEXT.correct} ${item.feedbackCorrect}` : TEXT.correct;
+      return { status: 'correct', text, misconception: null };
     }
     if (attempt === 1) {
       attempt = 2;

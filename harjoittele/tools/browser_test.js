@@ -63,12 +63,24 @@ const browser = await chromium.launch();
 const context = await browser.newContext({ permissions: ['clipboard-read', 'clipboard-write'] });
 
 try {
-  // Pupil view: all current items are drafts, so the page says so.
+  // Pupil view: only reviewed items. With none, the page says so; otherwise it offers their topics.
   {
     const { page, problems } = await pageWithGuards(context, origin);
     await page.goto(`${origin}/harjoittele/`);
-    await page.waitForSelector('#app a[href="?luonnokset=1"]');
-    check((await page.textContent('#app')).includes('Tarkistettuja tehtäviä ei ole vielä'), 'pupil view: empty message missing');
+    const reviewed = await page.evaluate(async () => {
+      const { loadItems } = await import('./js/items.js');
+      const { items } = await loadItems(new URL('data/manifest.json', location.href).href, { includeDrafts: false });
+      return items.length;
+    });
+    if (reviewed === 0) {
+      await page.waitForSelector('#app a[href="?luonnokset=1"]');
+      check((await page.textContent('#app')).includes('Tarkistettuja tehtäviä ei ole vielä'), 'pupil view: empty message missing');
+    } else {
+      await page.waitForSelector('.topic');
+      const counts = await page.locator('.topic-count').allTextContents();
+      const shown = counts.reduce((sum, t) => sum + parseInt(t, 10), 0);
+      check(shown === reviewed, `pupil view: topics list ${shown} items, ${reviewed} are reviewed`);
+    }
     check(await page.isHidden('#draft-banner'), 'pupil view: draft banner visible');
     await commonChecks(page, 'pupil view');
     problems.forEach((p) => failures.push(`pupil view: ${p}`));
@@ -144,7 +156,9 @@ try {
     const rightBtn = page.locator('.option', { has: page.locator(`.option-text:text-is("${choice.answer}")`) });
     const letter = await rightBtn.getAttribute('data-letter');
     await page.keyboard.press(letter.toLowerCase());
-    check((await page.textContent('.feedback')).includes('Oikein!'), 'right option not accepted by its letter key');
+    const rightText = await page.textContent('.feedback');
+    check(rightText.includes('Oikein!'), 'right option not accepted by its letter key');
+    check((rightText.match(/Oikein/g) || []).length === 1, `verdict shown more than once: ${rightText}`);
     problems.forEach((p) => failures.push(`choice item: ${p}`));
     await page.close();
   }

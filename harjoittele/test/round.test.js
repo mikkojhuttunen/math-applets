@@ -91,6 +91,13 @@ test('choice items use choose(), item feedback wins over the catalogue', () => {
   assert.deepStrictEqual([r.choose('a').status, r.summary().correct], ['correct', 1]);
 });
 
+test('a correct answer shows the verdict once, followed by the item explanation', () => {
+  const withText = createRound([{ ...entry('e', 4), feedbackCorrect: 'Kirjain kuvaa lukumäärää.' }]);
+  assert.strictEqual(withText.answer('4').text, 'Oikein! Kirjain kuvaa lukumäärää.');
+  const withoutText = createRound([entry('f', 4)]);
+  assert.strictEqual(withoutText.answer('4').text, 'Oikein!');
+});
+
 test('answerText formats every answer kind in Finnish', () => {
   assert.strictEqual(answerText({ kind: 'entry', answer: { kind: 'number', value: -2.5, unit: 'cm' } }), '−2,5 cm');
   assert.strictEqual(answerText({ kind: 'entry', answer: { kind: 'set', values: [3, -3] } }), '3 tai −3');
