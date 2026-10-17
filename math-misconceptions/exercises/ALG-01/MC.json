@@ -105,7 +105,7 @@
         "ALG-01"
       ],
       "prompt": {
-        "text": "Pullan hinta on 5 euroa ja pirtelön hinta 6 euroa. Ostetaan m kpl (pullaa) ja n kpl (pirtelöä). Mitä lauseke 5m + 6n kertoo?"
+        "text": "Pullan hinta on 5 euroa ja pirtelön hinta 6 euroa. Ostetaan m pullaa ja n pirtelöä. Mitä lauseke 5m + 6n kertoo?"
       },
       "payload": {
         "options": [
@@ -117,7 +117,7 @@
           },
           {
             "id": "b",
-            "text": "Ostosten yhteishinnan (euroa)",
+            "text": "Ostosten yhteishinnan euroina",
             "misconception": null,
             "feedback": "Oikein: lauseke on yhteishinta."
           },
@@ -144,7 +144,7 @@
           "6n: n kappaletta, hinta 6 euroa kappaleelta, yhteensä 6 · n euroa",
           "Summa 5m + 6n on koko ostoksen hinta"
         ],
-        "final": "Yhteishinta (euroa)"
+        "final": "Yhteishinta euroina"
       },
       "feedback": {
         "correct": "Oikein: kirjain kertoo määrän, luku hinnan, ja lauseke on hinta."

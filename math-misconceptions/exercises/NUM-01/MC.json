@@ -291,7 +291,7 @@
       },
       "solution": {
         "steps": [
-          "2,14, 2,3, 2,31, 2,5 (pienimmästä suurimpaan)"
+          "Pienimmästä suurimpaan: 2,14, 2,3, 2,31, 2,5"
         ],
         "final": "2,5"
       },

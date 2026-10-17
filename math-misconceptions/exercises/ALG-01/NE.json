@@ -236,7 +236,7 @@
           {
             "match": 27,
             "misconception": "ALG-01",
-            "feedback": "Kirjaimet ovat lukuja (kappalemääriä), ei esineiden nimiä. Laske hinta: 5 · 4 + 3 · 2."
+            "feedback": "Kirjaimet tarkoittavat kappalemääriä eli lukuja, eivät esineiden nimiä. Laske hinta: 5 · 4 + 3 · 2."
           },
           {
             "match": 26,
@@ -302,7 +302,7 @@
           {
             "match": 35,
             "misconception": "ALG-01",
-            "feedback": "Kirjaimet ovat lukuja (kappalemääriä), ei esineiden nimiä. Laske hinta: 2 · 4 + 3 · 3."
+            "feedback": "Kirjaimet tarkoittavat kappalemääriä eli lukuja, eivät esineiden nimiä. Laske hinta: 2 · 4 + 3 · 3."
           },
           {
             "match": 17,

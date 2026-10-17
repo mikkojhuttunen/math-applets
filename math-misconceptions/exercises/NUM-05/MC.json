@@ -32,7 +32,7 @@
             "id": "a",
             "text": "Pienempi kuin 20",
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta."
           },
           {
             "id": "b",
@@ -107,7 +107,7 @@
             "id": "a",
             "text": "Alle 6 pätkää, koska jakaminen pienentää luvun",
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta."
           },
           {
             "id": "b",
@@ -200,7 +200,7 @@
             "id": "d",
             "text": "Mikään osamäärä ei ole suurempi kuin 30, koska jakolasku pienentää",
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta."
           }
         ],
         "correct": [
@@ -272,7 +272,7 @@
             "id": "c",
             "text": "Lasku on väärin: osamäärän pitää olla pienempi kuin 9",
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta."
           },
           {
             "id": "d",
@@ -335,7 +335,7 @@
             "id": "a",
             "text": "Se ei ole suurempi, koska jakolasku pienentää aina",
             "misconception": "NUM-05",
-            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava (esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta)."
+            "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16, koska luvussa 8 on 16 puolikasta."
           },
           {
             "id": "b",

@@ -44,7 +44,7 @@
             "id": "c",
             "text": "Suurempi kuin 8",
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 on puolet luvusta 8."
           },
           {
             "id": "d",
@@ -119,7 +119,7 @@
             "id": "c",
             "text": "Uusi hinta on suurempi, koska kertolasku suurentaa luvun",
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 on puolet luvusta 8."
           },
           {
             "id": "d",
@@ -194,7 +194,7 @@
             "id": "c",
             "text": "Mikään tulo ei ole pienempi kuin 50, koska kertolasku suurentaa",
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 on puolet luvusta 8."
           },
           {
             "id": "d",
@@ -260,7 +260,7 @@
             "id": "a",
             "text": "Lasku on väärin: tulon pitää olla suurempi kuin 40",
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 on puolet luvusta 8."
           },
           {
             "id": "b",
@@ -335,7 +335,7 @@
             "id": "a",
             "text": "Se ei ole pienempi, koska kertolasku suurentaa aina",
             "misconception": "NUM-04",
-            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä (esimerkiksi 0,5 × 8 on puolet luvusta 8)."
+            "feedback": "Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. Esimerkiksi 0,5 × 8 on puolet luvusta 8."
           },
           {
             "id": "b",

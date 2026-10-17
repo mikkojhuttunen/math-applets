@@ -335,7 +335,7 @@
           },
           {
             "id": "b",
-            "text": "Ala riippuu sivujen tulosta: esimerkiksi 15 × 1 (piiri 32, ala 15) on ohut, kun taas 7 × 7 (piiri 28) on alaltaan suurempi, 49",
+            "text": "Ala riippuu sivujen tulosta: esimerkiksi ohuen 15 × 1 -suorakulmion piiri on 32 ja ala 15, mutta 7 × 7 -neliön piiri on vain 28 ja ala silti 49",
             "misconception": null,
             "feedback": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."
           },
@@ -361,7 +361,7 @@
           "15 × 1: piiri 32, ala 15",
           "7 × 7: piiri 28, ala 49"
         ],
-        "final": "Ala riippuu sivujen tulosta: esimerkiksi 15 × 1 (piiri 32, ala 15) on ohut, kun taas 7 × 7 (piiri 28) on alaltaan suurempi, 49"
+        "final": "Ala riippuu sivujen tulosta: esimerkiksi ohuen 15 × 1 -suorakulmion piiri on 32 ja ala 15, mutta 7 × 7 -neliön piiri on vain 28 ja ala silti 49"
       },
       "feedback": {
         "correct": "Oikein: suurempi piiri ei takaa suurempaa alaa, vaan ala lasketaan sivujen tulona."

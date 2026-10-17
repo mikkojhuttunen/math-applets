@@ -346,7 +346,7 @@
           },
           {
             "id": "c",
-            "text": "Tilavuudessa on kolme ulottuvuutta (pituus, leveys, korkeus), joten se on 2³ = 8-kertainen.",
+            "text": "Tilavuudessa on kolme ulottuvuutta: pituus, leveys ja korkeus. Siksi se on 2³ = 8-kertainen.",
             "misconception": null,
             "feedback": "Oikein: tilavuus riippuu kolmesta pituudesta."
           },
@@ -366,7 +366,7 @@
           "Tilavuus = pituus · leveys · korkeus",
           "Kaikki kolme kasvavat 2-kertaisiksi, joten tilavuus kasvaa 2 · 2 · 2 = 8-kertaiseksi"
         ],
-        "final": "Tilavuudessa on kolme ulottuvuutta (pituus, leveys, korkeus), joten se on 2³ = 8-kertainen."
+        "final": "Tilavuudessa on kolme ulottuvuutta: pituus, leveys ja korkeus. Siksi se on 2³ = 8-kertainen."
       },
       "feedback": {
         "correct": "Oikein: kun pituudet kasvavat k-kertaisiksi, tilavuus kasvaa k³-kertaiseksi."

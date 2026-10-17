@@ -179,7 +179,7 @@
         "NUM-07"
       ],
       "prompt": {
-        "text": "Kengät maksavat 10 %:n alennuksen jälkeen 72 €. Järjestä rivit (alkuperäinen määrä x) oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+        "text": "Kengät maksavat 10 %:n alennuksen jälkeen 72 €. Merkitse alkuperäistä määrää x:llä. Järjestä rivit oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
       },
       "payload": {
         "lines": [
@@ -232,7 +232,7 @@
         "NUM-07"
       ],
       "prompt": {
-        "text": "Vuokra nousi 50 % ja on nyt 300 €/kk. Järjestä rivit (alkuperäinen määrä x) oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
+        "text": "Vuokra nousi 50 % ja on nyt 300 €/kk. Merkitse alkuperäistä määrää x:llä. Järjestä rivit oikeaan järjestykseen niin, että alkuperäinen määrä ratkeaa vaihe vaiheelta."
       },
       "payload": {
         "lines": [

@@ -23,7 +23,7 @@
         "PRO-04"
       ],
       "prompt": {
-        "text": "Suorakulmion A sivut ovat 8 cm ja 7 cm. Suorakulmion B yksi sivu on 28 cm. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu (cm), kun suorakulmioiden alat ovat yhtä suuret."
+        "text": "Suorakulmion A sivut ovat 8 cm ja 7 cm. Suorakulmion B yksi sivu on 28 cm. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu senttimetreinä, kun suorakulmioiden alat ovat yhtä suuret."
       },
       "payload": {
         "constraint": {
@@ -89,7 +89,7 @@
         "PRO-04"
       ],
       "prompt": {
-        "text": "Matto on 3 m pitkä ja 8 m leveä. Toinen matto on 12 m pitkä. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen maton leveys (m), kun matoilla on sama pinta-ala."
+        "text": "Matto on 3 m pitkä ja 8 m leveä. Toinen matto on 12 m pitkä. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen maton leveys metreinä, kun matoilla on sama pinta-ala."
       },
       "payload": {
         "constraint": {
@@ -155,7 +155,7 @@
         "PRO-04"
       ],
       "prompt": {
-        "text": "Pelto on 4 m · 5 m. Toisen pellon yksi sivu on 10 m, ja pellot ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen pellon toinen sivu (m)."
+        "text": "Pelto on 4 m · 5 m. Toisen pellon yksi sivu on 10 m, ja pellot ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on toisen pellon toinen sivu metreinä."
       },
       "payload": {
         "constraint": {
@@ -221,7 +221,7 @@
         "PRO-04"
       ],
       "prompt": {
-        "text": "Suorakulmion A sivut ovat 3 cm ja 6 cm. Suorakulmion B sivu on 9 cm, ja B:n piiri on suurempi kuin A:n piiri. Silti suorakulmioiden alat ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu (cm)."
+        "text": "Suorakulmion A sivut ovat 3 cm ja 6 cm. Suorakulmion B sivu on 9 cm, ja B:n piiri on suurempi kuin A:n piiri. Silti suorakulmioiden alat ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = 2 on B:n toinen sivu senttimetreinä."
       },
       "payload": {
         "constraint": {
@@ -287,7 +287,7 @@
         "PRO-04"
       ],
       "prompt": {
-        "text": "Neliön sivu on 6 cm. Suorakulmion yksi sivu on 3 cm, ja sen ala on yhtä suuri kuin neliön ala. Kirjoita yhtälö, jonka ratkaisu x = 12 on suorakulmion toinen sivu (cm)."
+        "text": "Neliön sivu on 6 cm. Suorakulmion yksi sivu on 3 cm, ja sen ala on yhtä suuri kuin neliön ala. Kirjoita yhtälö, jonka ratkaisu x = 12 on suorakulmion toinen sivu senttimetreinä."
       },
       "payload": {
         "constraint": {

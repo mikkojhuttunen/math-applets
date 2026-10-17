@@ -24,7 +24,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Koululla on 6 kertaa enemmän oppilaita (o) kuin opettajia (t). Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään oppilaiden määrää o:lla ja opettajien määrää t:llä. Koululla on 6 kertaa enemmän oppilaita kuin opettajia. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -98,7 +98,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Tapahtumassa on 8 kertaa enemmän kahvikuppeja (k) kuin teekuppeja (t). Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään kahvikuppien määrää k:lla ja teekuppien määrää t:llä. Tapahtumassa on 8 kertaa enemmän kahvikuppeja kuin teekuppeja. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -172,7 +172,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Tapahtumassa on 3 kertaa enemmän pelaajia (p) kuin valmentajia (v). Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään pelaajien määrää p:llä ja valmentajien määrää v:llä. Tapahtumassa on 3 kertaa enemmän pelaajia kuin valmentajia. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -247,7 +247,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Kirjoja (k) on 6 enemmän kuin kolminkertainen määrä lehtiä (l). Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään kirjojen määrää k:lla ja lehtien määrää l:llä. Kirjoja on 6 enemmän kuin kolminkertainen määrä lehtiä. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -323,7 +323,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Kyyhkysiä (k) on 7 enemmän kuin nelinkertainen määrä harakoita (h). Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään kyyhkysten määrää k:lla ja harakoiden määrää h:lla. Kyyhkysiä on 7 enemmän kuin nelinkertainen määrä harakoita. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [

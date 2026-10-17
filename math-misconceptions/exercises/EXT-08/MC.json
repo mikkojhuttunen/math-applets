@@ -50,7 +50,7 @@
             "id": "d",
             "text": "8",
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "correct": [
@@ -130,7 +130,7 @@
             "id": "d",
             "text": "29,5",
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "correct": [
@@ -199,7 +199,7 @@
             "id": "b",
             "text": "Valitaan luettelon keskimmäinen luku sellaisenaan",
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           },
           {
             "id": "c",
@@ -267,7 +267,7 @@
         "EXT-08"
       ],
       "prompt": {
-        "text": "Kuuden hengen yrityksessä kuukausipalkat ovat 13, 16, 17, 21, 198, 20 (luvut ovat satoja euroja). Keskiarvo on 47,5 ja mediaani 18,5. Kumpi kuvaa paremmin tyypillistä palkkaa ja miksi?"
+        "text": "Kuuden hengen yrityksessä kuukausipalkat satoina euroina ovat 13, 16, 17, 21, 198, 20. Keskiarvo on 47,5 ja mediaani 18,5. Kumpi kuvaa paremmin tyypillistä palkkaa ja miksi?"
       },
       "payload": {
         "options": [
@@ -375,7 +375,7 @@
             "id": "d",
             "text": "Väite on oikea, koska mediaani on aina keskimmäinen luku listassa",
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "correct": [

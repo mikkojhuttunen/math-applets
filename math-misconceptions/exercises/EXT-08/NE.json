@@ -36,12 +36,12 @@
           {
             "match": 2.0,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           },
           {
             "match": 6.2,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -105,7 +105,7 @@
           {
             "match": 20.0,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -171,7 +171,7 @@
           {
             "match": 21.0,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -236,7 +236,7 @@
           {
             "match": 13.5,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "input_hint": "Kirjoita luku"
@@ -289,7 +289,7 @@
         "EXT-08"
       ],
       "prompt": {
-        "text": "Seitsemän työntekijän kuukausipalkat ovat 19, 20, 25, 10, 18, 232, 12 (luvut ovat satoja euroja). Mikä on mediaanipalkka sadoissa euroissa?"
+        "text": "Seitsemän työntekijän kuukausipalkat satoina euroina ovat 19, 20, 25, 10, 18, 232, 12. Mikä on mediaanipalkka sadoissa euroissa?"
       },
       "payload": {
         "answer": {
@@ -301,12 +301,12 @@
           {
             "match": 10.0,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           },
           {
             "match": 48.0,
             "misconception": "EXT-08",
-            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo)."
+            "feedback": "Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo."
           }
         ],
         "input_hint": "Kirjoita luku"

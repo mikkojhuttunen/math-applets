@@ -101,7 +101,7 @@
         "FUN-01"
       ],
       "prompt": {
-        "text": "Pyöräilijä ajaa 15 km/h tasaista vauhtia tietä, joka kulkee ensin ylämäkeen, sitten tasaisena ja lopuksi alamäkeen. Kuvaajassa vaaka-akselilla on aika (h) ja pystyakselilla kuljettu matka (km). Matka on 0, 15, 30 ja 45 km, kun aikaa on kulunut 0, 1, 2 ja 3 h. Millainen kuvaaja on?"
+        "text": "Pyöräilijä ajaa 15 km/h tasaista vauhtia tietä, joka kulkee ensin ylämäkeen, sitten tasaisena ja lopuksi alamäkeen. Kuvaajassa vaaka-akselilla on aika tunteina ja pystyakselilla kuljettu matka kilometreinä. Matka on 0, 15, 30 ja 45 km, kun aikaa on kulunut 0, 1, 2 ja 3 h. Millainen kuvaaja on?"
       },
       "payload": {
         "options": [
@@ -175,7 +175,7 @@
         "FUN-01"
       ],
       "prompt": {
-        "text": "Pekka kävelee kotoa kauppaan, ja matka–aika-kuvaajassa vaaka-akseli on aika (min) ja pystyakseli matka kotoa (m). Kaupan edessä hän seisoo 8 minuuttia 200 m:n päässä kotoa. Miltä tämä aikaväli näyttää kuvaajassa?"
+        "text": "Pekka kävelee kotoa kauppaan, ja matka–aika-kuvaajassa vaaka-akselilla on aika minuutteina ja pystyakselilla matka kotoa metreinä. Kaupan edessä hän seisoo 8 minuuttia 200 m:n päässä kotoa. Miltä tämä aikaväli näyttää kuvaajassa?"
       },
       "payload": {
         "options": [
@@ -250,7 +250,7 @@
         "FUN-01"
       ],
       "prompt": {
-        "text": "Matka–aika-taulukko (aika minuutteina, matka metreinä): 0 min: 0, 1 min: 100, 2 min: 400, 3 min: 400, 4 min: 700. Kuvaaja on vaakasuora aikavälillä 2–3 min. Mitä kävelijä tällä välillä tekee?"
+        "text": "Matka–aika-taulukossa aika on minuutteina ja matka metreinä: 0 min: 0, 1 min: 100, 2 min: 400, 3 min: 400, 4 min: 700. Kuvaaja on vaakasuora aikavälillä 2–3 min. Mitä kävelijä tällä välillä tekee?"
       },
       "payload": {
         "options": [

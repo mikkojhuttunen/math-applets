@@ -31,7 +31,7 @@
             "id": "a",
             "text": "20x",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "b",
@@ -43,7 +43,7 @@
             "id": "c",
             "text": "9x",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "d",
@@ -113,7 +113,7 @@
             "id": "b",
             "text": "13x",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "c",
@@ -183,13 +183,13 @@
             "id": "a",
             "text": "3y",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "b",
             "text": "8y",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "c",
@@ -271,7 +271,7 @@
             "id": "c",
             "text": "Sieventäminen on oikein, koska plusmerkki pyytää laskemaan kaiken yhteen",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "d",
@@ -347,7 +347,7 @@
             "id": "c",
             "text": "80",
             "misconception": "ALG-04",
-            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+            "feedback": "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
           },
           {
             "id": "d",

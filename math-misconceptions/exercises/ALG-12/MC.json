@@ -174,7 +174,7 @@
         "ALG-12"
       ],
       "prompt": {
-        "text": "Lämpötila on 6 astetta. Mikä on lämpötilan ja lämpötilan −8 astetta erotus (ensimmäinen miinus toinen)?"
+        "text": "Lämpötila on 6 astetta. Mikä on lämpötilan ja lämpötilan −8 astetta erotus, kun ensimmäisestä vähennetään toinen?"
       },
       "payload": {
         "options": [

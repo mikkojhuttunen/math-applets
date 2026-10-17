@@ -60,7 +60,7 @@
         "final": "88 / 5"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.",
         "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
       },
       "provenance": {
@@ -137,7 +137,7 @@
         "final": "60 / 2"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.",
         "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
       },
       "provenance": {
@@ -215,7 +215,7 @@
         "final": "15 − 14"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.",
         "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
       },
       "provenance": {
@@ -294,7 +294,7 @@
         "final": "130 / 5"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.",
         "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
       },
       "provenance": {
@@ -371,7 +371,7 @@
         "final": "38 / 4"
       },
       "feedback": {
-        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta (parillisella määrällä kahden keskimmäisen keskiarvo).",
+        "correct": "Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.",
         "generic_wrong": "Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. Mediaani on järjestetyn listan keskimmäinen arvo."
       },
       "provenance": {

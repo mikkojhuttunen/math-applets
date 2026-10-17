@@ -86,7 +86,7 @@
         "NUM-02"
       ],
       "prompt": {
-        "text": "Pituushypyssä kaksi hyppyä mitattiin tuloksiksi 1,2 m ja 1,26 m. Kumpi hyppy oli pidempi? Kirjoita suurempi luku (m)."
+        "text": "Pituushypyssä kaksi hyppyä mitattiin tuloksiksi 1,2 m ja 1,26 m. Kumpi hyppy oli pidempi? Kirjoita suurempi luku metreinä."
       },
       "payload": {
         "answer": {
@@ -147,7 +147,7 @@
         "NUM-02"
       ],
       "prompt": {
-        "text": "Kolmen pussin painot ovat 1,82 kg, 1,809 kg ja 1,8 kg. Mikä on painavimman pussin paino? Kirjoita luku (kg)."
+        "text": "Kolmen pussin painot ovat 1,82 kg, 1,809 kg ja 1,8 kg. Mikä on painavimman pussin paino? Kirjoita luku kilogrammoina."
       },
       "payload": {
         "answer": {
@@ -165,7 +165,7 @@
       },
       "solution": {
         "steps": [
-          "1,8, 1,809, 1,82 (pienimmästä suurimpaan)"
+          "Pienimmästä suurimpaan: 1,8, 1,809, 1,82"
         ],
         "final": "1,82"
       },

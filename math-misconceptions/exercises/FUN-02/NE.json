@@ -92,7 +92,7 @@
         "FUN-02"
       ],
       "prompt": {
-        "text": "Juoksijan matka–aika-kuvaaja kulkee pisteiden (1; 12) ja (4; 36) kautta, kun aika on tunteina ja matka kilometreinä. Mikä on juoksijan nopeus (km/h)?"
+        "text": "Juoksijan matka–aika-kuvaaja kulkee pisteiden (1; 12) ja (4; 36) kautta, kun aika on tunteina ja matka kilometreinä. Mikä on juoksijan nopeus kilometreinä tunnissa?"
       },
       "payload": {
         "answer": {

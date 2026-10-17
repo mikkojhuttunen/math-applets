@@ -31,13 +31,13 @@
             "id": "a",
             "text": "Ei yhtään",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "b",
             "text": "Vain yksi, 0,55",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "c",
@@ -49,7 +49,7 @@
             "id": "d",
             "text": "Yhdeksän",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           }
         ],
         "correct": [
@@ -105,7 +105,7 @@
             "id": "a",
             "text": "Mikään ei ole, koska 4,8 ja 4,9 ovat peräkkäiset luvut",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "b",
@@ -179,7 +179,7 @@
             "id": "a",
             "text": "Voi, mutta vain yksi, 4,95 cm",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "b",
@@ -191,7 +191,7 @@
             "id": "c",
             "text": "Ei voi, koska 4,9 ja 5 ovat peräkkäiset luvut",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "d",
@@ -259,19 +259,19 @@
             "id": "b",
             "text": "0,2",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "c",
             "text": "0,299",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "d",
             "text": "0,29",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           }
         ],
         "correct": [
@@ -332,13 +332,13 @@
             "id": "b",
             "text": "Sellaista lukua ei löydy, koska luvut ovat peräkkäiset",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "c",
             "text": "Lisätään lukuun 0,1 pienin mahdollinen desimaali, joten välissä ei ole lukuja",
             "misconception": "NUM-06",
-            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo (0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305)."
+            "feedback": "Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305."
           },
           {
             "id": "d",

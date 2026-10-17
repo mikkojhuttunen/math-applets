@@ -45,7 +45,7 @@
       },
       "feedback": {
         "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
-        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo."
       },
       "provenance": {
         "template": "ext08_es",
@@ -106,7 +106,7 @@
       },
       "feedback": {
         "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
-        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo."
       },
       "provenance": {
         "template": "ext08_es",
@@ -169,7 +169,7 @@
       },
       "feedback": {
         "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
-        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo."
       },
       "provenance": {
         "template": "ext08_es",
@@ -231,7 +231,7 @@
       },
       "feedback": {
         "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
-        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo."
       },
       "provenance": {
         "template": "ext08_es",
@@ -272,7 +272,7 @@
         "EXT-08"
       ],
       "prompt": {
-        "text": "Seitsemän työntekijän kuukausipalkat ovat 15, 26, 12, 24, 13, 23, 216 (luvut ovat satoja euroja). Oppilas laskee mediaanipalkan euroina. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+        "text": "Seitsemän työntekijän kuukausipalkat satoina euroina ovat 15, 26, 12, 24, 13, 23, 216. Oppilas laskee mediaanipalkan euroina. Rivi 1 on laskun alku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
       },
       "payload": {
         "lines": [
@@ -293,7 +293,7 @@
       },
       "feedback": {
         "correct": "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta.",
-        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo."
+        "generic_wrong": "Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo."
       },
       "provenance": {
         "template": "ext08_es",

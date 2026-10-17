@@ -173,7 +173,7 @@
         "FUN-03"
       ],
       "prompt": {
-        "text": "Suora näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on 3 kertaa lyhyempi kuin x-akselin yksikkö (1 cm vastaa x-akselilla yhtä yksikköä ja y-akselilla 3 yksikköä). Mikä on suoran kulmakerroin?"
+        "text": "Suora näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on 3 kertaa lyhyempi kuin x-akselin yksikkö: 1 cm vastaa x-akselilla yhtä yksikköä ja y-akselilla 3 yksikköä. Mikä on suoran kulmakerroin?"
       },
       "payload": {
         "options": [

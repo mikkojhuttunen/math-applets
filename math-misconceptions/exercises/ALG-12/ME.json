@@ -327,7 +327,7 @@
         "ALG-12"
       ],
       "prompt": {
-        "text": "Lämpötila nousee arvosta −4 °C arvoon 2 °C. Valitse kaikki lausekkeet, joiden arvo on lämpötilan muutos asteina (loppu miinus alku). "
+        "text": "Lämpötila nousee arvosta −4 °C arvoon 2 °C. Valitse kaikki lausekkeet, joiden arvo on lämpötilan muutos asteina eli loppulämpötila miinus alkulämpötila. "
       },
       "payload": {
         "reference": "2 − (−4)",

@@ -24,7 +24,7 @@
         "FUN-02"
       ],
       "prompt": {
-        "text": "Kaksi pyöräilijää A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä (km) ajan (h) funktiona: A: t = 0 → 0 km, t = 2 → 10 km. B: t = 0 → 5 km, t = 2 → 13 km. Kuvaajat (aika–määrä) leikkaavat, kun t = 5. Kumpi kulkee nopeammin?"
+        "text": "Kaksi pyöräilijää A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä kilometreinä ajan funktiona, kun aika on tunteina: A: t = 0 → 0 km, t = 2 → 10 km. B: t = 0 → 5 km, t = 2 → 13 km. Aika–määrä-kuvaajat leikkaavat, kun t = 5. Kumpi kulkee nopeammin?"
       },
       "payload": {
         "options": [
@@ -105,7 +105,7 @@
         "FUN-02"
       ],
       "prompt": {
-        "text": "Kaksi juoksijaa A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä (km) ajan (h) funktiona: A: t = 0 → 3 km, t = 2 → 9 km. B: t = 0 → 11 km, t = 2 → 13 km. Kuvaajat (aika–määrä) leikkaavat, kun t = 4. Kumpi kulkee hitaammin?"
+        "text": "Kaksi juoksijaa A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä kilometreinä ajan funktiona, kun aika on tunteina: A: t = 0 → 3 km, t = 2 → 9 km. B: t = 0 → 11 km, t = 2 → 13 km. Aika–määrä-kuvaajat leikkaavat, kun t = 4. Kumpi kulkee hitaammin?"
       },
       "payload": {
         "options": [
@@ -186,7 +186,7 @@
         "FUN-02"
       ],
       "prompt": {
-        "text": "Kaksi vesisäiliötä täyttyy letkuilla. Vettä on säiliöissä (l) ajan (min) funktiona: A: t = 0 → 8 l, t = 2 → 12 l. B: t = 0 → 0 l, t = 2 → 8 l. Kuvaajat (aika–määrä) leikkaavat, kun t = 4. Kumpi täyttyy nopeammin?"
+        "text": "Kaksi vesisäiliötä täyttyy letkuilla. Veden määrä säiliöissä litroina ajan funktiona, kun aika on minuutteina: A: t = 0 → 8 l, t = 2 → 12 l. B: t = 0 → 0 l, t = 2 → 8 l. Aika–määrä-kuvaajat leikkaavat, kun t = 4. Kumpi täyttyy nopeammin?"
       },
       "payload": {
         "options": [
@@ -267,7 +267,7 @@
         "FUN-02"
       ],
       "prompt": {
-        "text": "Kaksi juoksijaa: A:n matka (km) on s = 2t + 3 ja B:n matka s = t + 8, missä t on aika tunteina. Kumpi juoksija on hetkellä t = 1 kauempana lähtöpisteestä ja kumpi juoksee nopeammin?"
+        "text": "Kaksi juoksijaa: A:n matka kilometreinä on s = 2t + 3 ja B:n matka s = t + 8, missä t on aika tunteina. Kumpi juoksija on hetkellä t = 1 kauempana lähtöpisteestä ja kumpi juoksee nopeammin?"
       },
       "payload": {
         "options": [
@@ -303,7 +303,7 @@
       "solution": {
         "steps": [
           "t = 1: B 9 km, A 5 km",
-          "Nopeudet (termin t kerroin): B 1 km/h, A 2 km/h"
+          "Nopeudet ovat termin t kertoimet: B 1 km/h, A 2 km/h"
         ],
         "final": "Kauempana on B, nopeammin juoksee A."
       },

@@ -86,7 +86,7 @@
         "NUM-01"
       ],
       "prompt": {
-        "text": "Kahden pussin painot ovat 4,6 kg ja 4,47 kg. Kumpi pussi on painavampi? Kirjoita suurempi luku (kg)."
+        "text": "Kahden pussin painot ovat 4,6 kg ja 4,47 kg. Kumpi pussi on painavampi? Kirjoita suurempi luku kilogrammoina."
       },
       "payload": {
         "answer": {
@@ -147,7 +147,7 @@
         "NUM-01"
       ],
       "prompt": {
-        "text": "Kolmen pussin painot ovat 1,71 kg, 1,718 kg ja 1,9 kg. Mikä on painavimman pussin paino? Kirjoita luku (kg)."
+        "text": "Kolmen pussin painot ovat 1,71 kg, 1,718 kg ja 1,9 kg. Mikä on painavimman pussin paino? Kirjoita luku kilogrammoina."
       },
       "payload": {
         "answer": {
@@ -170,7 +170,7 @@
       },
       "solution": {
         "steps": [
-          "1,71, 1,718, 1,9 (pienimmästä suurimpaan)"
+          "Pienimmästä suurimpaan: 1,71, 1,718, 1,9"
         ],
         "final": "1,9"
       },

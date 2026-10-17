@@ -43,13 +43,13 @@
             "id": "c",
             "text": "Ei, koska suorakulmion sivujen pitää olla eri pituisia",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "d",
             "text": "Ei, koska neliö ja suorakulmio ovat eri kuviot",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           }
         ],
         "correct": [
@@ -104,7 +104,7 @@
             "id": "a",
             "text": "Ei, koska suorakulmiossa leveys ja korkeus ovat aina eri suuret",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "b",
@@ -116,7 +116,7 @@
             "id": "c",
             "text": "Ei, koska neliö ei ole suorakulmio",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "d",
@@ -177,7 +177,7 @@
             "id": "a",
             "text": "Kaava ei päde neliöön, koska neliö ei ole suorakulmio",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "b",
@@ -256,13 +256,13 @@
             "id": "b",
             "text": "Vain suorakulmio, koska sivut eivät ole eri pituisia",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "c",
             "text": "Vain neliö, koska neliö ei ole suorakulmio",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "d",
@@ -335,13 +335,13 @@
             "id": "c",
             "text": "Neliö ei ole suorakulmio, koska sen sivut ovat yhtä pitkät",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           },
           {
             "id": "d",
             "text": "Neliö ja suorakulmio ovat täysin erilaisia kuvioita, joilla ei ole yhteisiä ominaisuuksia",
             "misconception": "GEO-02",
-            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) ja lisäksi sivut ovat yhtä pitkät."
+            "feedback": "Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, ja lisäksi sivut ovat yhtä pitkät."
           }
         ],
         "correct": [
