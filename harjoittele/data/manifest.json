@@ -175,8 +175,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "approved": 4,
-        "draft": 1
+        "approved": 5
       }
     },
     {
@@ -184,7 +183,8 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 4,
+        "draft": 1
       }
     },
     {
@@ -1271,8 +1271,8 @@
   "totals": {
     "items": 1085,
     "by_status": {
-      "approved": 4,
-      "draft": 1081
+      "approved": 9,
+      "draft": 1076
     },
     "by_goal": {
       "A12.S2.06": 30,
