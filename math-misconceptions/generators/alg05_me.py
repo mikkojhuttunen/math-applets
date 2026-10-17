@@ -20,7 +20,7 @@ def make_items(run, date, count=5, start=1):
             eq = [f"{L} · {c}", " + ".join([L] * c), f"{c} · {L}"]
             bad = [(f"{10 * c} + {L}", TID), (f"{c} + {L}", None), (f"{L}{c}".replace(f"{L}{c}", f"{L}^{c}"), None)]
             prompt = f"Valitse kaikki lausekkeet, joiden arvo on sama kuin {ref}."
-            steps = [f"{c}{L} = {c} · {L}", f"{L} · {c} ja {L} + … + {L} ({c} kertaa) ovat samat"]
+            steps = [f"{c}{L} = {c} · {L}", f"{L} · {c} ja {L} + … + {L} ovat samat, kun yhteenlaskettavia on {c}"]
         elif k == 2:
             level, ref, vars_, samples = "T", f"{c}{L} + {d}", [L], [[-2], [1], [4]]
             eq = [f"{d} + {c}{L}", f"{c} · {L} + {d}", f"{L} · {c} + {d}"]
@@ -39,7 +39,7 @@ def make_items(run, date, count=5, start=1):
             bad = [(f"{10 * c} + {L}", TID), (f"{c} + {L}", None)]
             prompt = (f"Yksi mehupullo maksaa {L} euroa. Ostetaan {c} pulloa. "
                       "Valitse kaikki lausekkeet, jotka kuvaavat hintaa euroina.")
-            steps = [f"{c} pulloa maksaa {c} · {L} = {c}{L} euroa", f"Sama kuin {L} + … + {L} ({c} kertaa)"]
+            steps = [f"{c} pulloa maksaa {c} · {L} = {c}{L} euroa", f"Sama kuin {L} + … + {L}, kun yhteenlaskettavia on {c}"]
         opts = [(t, True, None) for t in eq] + [(t, False, m) for t, m in bad]
         opts = [o for i, o in enumerate(opts) if o[0] not in [p[0] for p in opts[:i]]]
         rng.shuffle(opts)

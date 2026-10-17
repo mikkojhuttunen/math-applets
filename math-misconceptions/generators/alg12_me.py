@@ -38,7 +38,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 3:
             level, ref, val = "H", f"{a} {MINUS} ({MINUS}{b})", a + b
             ctx = (f"Lämpötila nousee arvosta {MINUS}{b} °C arvoon {a} °C. Valitse kaikki lausekkeet, joiden arvo on "
-                   "lämpötilan muutos asteina (loppu miinus alku). ")
+                   "lämpötilan muutos asteina eli loppulämpötila miinus alkulämpötila. ")
             eq = [f"{a} + {b}", f"{b} + {a}", f"{a + b}"]
             bad = [(f"{a} {MINUS} {b}", TID, a - b), (f"{b} {MINUS} {a}", None, b - a), (f"{MINUS}{a} {MINUS} {b}", None, -a - b)]
             steps = [f"Muutos on {a} {MINUS} ({MINUS}{b}) = {a} + {b} = {val}"]

@@ -48,7 +48,7 @@ def make_items(run, date, count=5, start=1):
                       f"hinta euroina on {ca}{la} + {cb}{lb}. Ostetaan {va} kpl ensimmäistä ja {vb} kpl toista, ja maksetaan {pay} euron setelillä. "
                       "Paljonko vaihtorahaa saadaan euroina?")
             answer = pay - value
-            wrong = [(pay - labels, "ALG-01", "Kirjaimet ovat lukuja (kappalemääriä), ei esineiden nimiä. Laske hinta: " + f"{ca} · {va} + {cb} · {vb}."),
+            wrong = [(pay - labels, "ALG-01", "Kirjaimet tarkoittavat kappalemääriä eli lukuja, eivät esineiden nimiä. Laske hinta: " + f"{ca} · {va} + {cb} · {vb}."),
                      (value, None, "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta.")]
             steps = [f"Hinta: {ca} · {va} + {cb} · {vb} = {value}", f"Vaihtoraha: {pay} {chr(0x2212)} {value} = {answer}"]
         assert answer > 0 and all(w[0] != answer for w in wrong)

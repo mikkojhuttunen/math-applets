@@ -28,11 +28,11 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Pyöräilijä ajaa ensin alas mäkeä, sitten tasaista tietä ja lopuksi ylös mäkeä. Hänen nopeutensa on "
                       f"mäen alussa {v0} km/h, tasaisen tien alussa ja lopussa {v1} km/h ja ylämäen lopussa {v2} km/h. "
                       "Millainen nopeus–aika-kuvaaja sopii tilanteeseen?")
-            ok = (f"Nopeus kasvaa ({v0} → {v1} km/h), pysyy vakiona ({v1} km/h) ja pienenee ({v1} → {v2} km/h)",
+            ok = (f"Nopeus kasvaa {v0} km/h:sta {v1} km/h:iin, pysyy vakiona {v1} km/h:ssa ja pienenee {v1} km/h:sta {v2} km/h:iin",
                   "Oikein: nopeus muuttuu juuri näin, ja kuvaajan muoto seuraa nopeuden muutosta.")
             wrongs = [("Kuvaaja laskee, on vaakasuora ja nousee, kuten tien muoto: alas, tasaista, ylös", TID, BAD),
                       (f"Nopeus pysyy koko ajan {v1} km/h", None, f"Nopeus on {v0} km/h mäen alussa ja {v2} km/h lopussa."),
-                      ("Nopeus pienenee koko ajan", None, f"Alamäessä nopeus kasvaa ({v0} → {v1} km/h).")]
+                      ("Nopeus pienenee koko ajan", None, f"Alamäessä nopeus kasvaa {v0} km/h:sta {v1} km/h:iin.")]
             level, params = "T", {"v0": v0, "v1": v1, "v2": v2}
             steps = [f"Alamäki: {v0} → {v1}, nopeus kasvaa", f"Tasainen tie: {v1}, pysyy samana", f"Ylämäki: {v1} → {v2}, nopeus pienenee"]
             final = ok[0]
@@ -42,7 +42,7 @@ def make_items(run, date, count=5, start=1):
             ss = [v * t for t in ts]
             assert all(ss[i + 1] > ss[i] for i in range(3))
             prompt = (f"Pyöräilijä ajaa {v} km/h tasaista vauhtia tietä, joka kulkee ensin ylämäkeen, sitten tasaisena ja lopuksi alamäkeen. "
-                      f"Kuvaajassa vaaka-akselilla on aika (h) ja pystyakselilla kuljettu matka (km). Matka on 0, {ss[1]}, {ss[2]} ja {ss[3]} km, "
+                      f"Kuvaajassa vaaka-akselilla on aika tunteina ja pystyakselilla kuljettu matka kilometreinä. Matka on 0, {ss[1]}, {ss[2]} ja {ss[3]} km, "
                       "kun aikaa on kulunut 0, 1, 2 ja 3 h. Millainen kuvaaja on?")
             ok = (f"Suoraan nouseva kuvaaja: matka kasvaa {v} km joka tunti", "Oikein: tasainen vauhti antaa suoran, vaikka tie nousisi ja laskisi.")
             wrongs = [("Kuvaaja nousee, on vaakasuora ja laskee, kuten tien profiili", TID, BAD),
@@ -54,7 +54,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 2:
             d = rng.randint(2, 6) * 100
             m = rng.randint(3, 8)
-            prompt = (f"Pekka kävelee kotoa kauppaan, ja matka–aika-kuvaajassa vaaka-akseli on aika (min) ja pystyakseli matka kotoa (m). "
+            prompt = (f"Pekka kävelee kotoa kauppaan, ja matka–aika-kuvaajassa vaaka-akselilla on aika minuutteina ja pystyakselilla matka kotoa metreinä. "
                       f"Kaupan edessä hän seisoo {m} minuuttia {d} m:n päässä kotoa. Miltä tämä aikaväli näyttää kuvaajassa?")
             ok = (f"Vaakasuora jana korkeudella {d} m: matka ei muutu {m} minuuttiin", "Oikein: paikallaan seisominen on vaakasuora jana.")
             wrongs = [("Pystysuora jana, koska Pekka seisoo pystyssä", TID, BAD),
@@ -72,7 +72,7 @@ def make_items(run, date, count=5, start=1):
             flat = [i for i in range(4) if ss[i] == ss[i + 1]]
             assert len(flat) == 1
             t0, t1 = flat[0], flat[0] + 1
-            prompt = (f"Matka–aika-taulukko (aika minuutteina, matka metreinä): 0 min: 0, 1 min: {a}, 2 min: {b}, 3 min: {c}, 4 min: {e}. "
+            prompt = (f"Matka–aika-taulukossa aika on minuutteina ja matka metreinä: 0 min: 0, 1 min: {a}, 2 min: {b}, 3 min: {c}, 4 min: {e}. "
                       f"Kuvaaja on vaakasuora aikavälillä {t0}–{t1} min. Mitä kävelijä tällä välillä tekee?")
             ok = ("Seisoo paikallaan, koska matka ei muutu", "Oikein: vaakasuora osa tarkoittaa, että suure ei muutu.")
             wrongs = [("Kävelee tasaista tietä, koska kuvaaja on tasainen", TID, BAD),

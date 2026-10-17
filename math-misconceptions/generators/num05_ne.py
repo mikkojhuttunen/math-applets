@@ -15,8 +15,8 @@ def fmt(d):
 
 TEMPLATE = "num05_ne"
 TID, CODE = "NUM-05", "NE"
-BAD = ("Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava "
-       "(esimerkiksi 8 ÷ 0,5 = 16).")
+BAD = ("Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. "
+       "Esimerkiksi 8 ÷ 0,5 = 16.")
 
 
 def make_items(run, date, count=5, start=1):

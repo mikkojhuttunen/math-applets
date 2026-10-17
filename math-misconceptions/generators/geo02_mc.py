@@ -7,7 +7,7 @@ from gen_common import base_item, cli, mc_options
 
 TEMPLATE = "geo02_mc"
 TID, CODE = "GEO-02", "MC"
-BAD = ("Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet (neljä suoraa kulmaa) "
+BAD = ("Neliö on suorakulmion erikoistapaus: sillä on kaikki suorakulmion ominaisuudet, kuten neljä suoraa kulmaa, "
        "ja lisäksi sivut ovat yhtä pitkät.")
 GOOD = "Oikein: jokainen neliö on myös suorakulmio, koska siinä on neljä suoraa kulmaa."
 
@@ -25,7 +25,7 @@ def make_items(run, date, count=5, start=1):
         assert is_rectangle(*sq)
         if k == 0:
             prompt = f"Neliön sivu on {s} cm ja sen kaikki kulmat ovat 90°. Onko tämä neliö myös suorakulmio?"
-            ok = (f"Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät ({s} cm ja {s} cm)",
+            ok = (f"Kyllä: kulmat ovat 90° ja vastakkaiset sivut ovat yhtä pitkät, {s} cm ja {s} cm",
                   GOOD)
             wrongs = [("Ei, koska suorakulmion sivujen pitää olla eri pituisia", TID, BAD),
                       ("Ei, koska neliö ja suorakulmio ovat eri kuviot", TID, BAD),
@@ -62,7 +62,7 @@ def make_items(run, date, count=5, start=1):
         else:
             w = s + rng.randint(2, 5)
             assert not is_rectangle([w, s, w, s], [90] * 4) is False
-            prompt = (f"Mikä väite on oikein? Verrataan neliötä (sivu {s} cm) ja suorakulmiota, jonka sivut ovat {w} cm ja {s} cm.")
+            prompt = (f"Mikä väite on oikein? Verrataan neliötä, jonka sivu on {s} cm, ja suorakulmiota, jonka sivut ovat {w} cm ja {s} cm.")
             ok = ("Jokainen neliö on suorakulmio, mutta kaikki suorakulmiot eivät ole neliöitä", GOOD)
             wrongs = [("Neliö ei ole suorakulmio, koska sen sivut ovat yhtä pitkät", TID, BAD),
                       ("Jokainen suorakulmio on neliö, koska molemmissa on neljä suoraa kulmaa", None,

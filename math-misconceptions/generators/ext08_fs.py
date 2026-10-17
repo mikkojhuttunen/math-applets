@@ -10,8 +10,8 @@ from gen_common import MINUS, base_item, cli
 TEMPLATE = "ext08_fs"
 TID, CODE = "EXT-08", "FS"
 SAMPLES = [[1], [2], [3]]
-GOOD = ("Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta "
-        "(parillisella määrällä kahden keskimmäisen keskiarvo).")
+GOOD = ("Oikein: keskiarvo on summa jaettuna lukujen määrällä, ja mediaani luetaan järjestetystä listasta. "
+        "Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.")
 GENERIC = ("Tarkista rivi kerrallaan: keskiarvossa lasketaan kaikki luvut yhteen ja jaetaan lukujen määrällä. "
            "Mediaani on järjestetyn listan keskimmäinen arvo.")
 
@@ -36,7 +36,7 @@ def make_items(run, date, count=5, start=1):
                     break
             lines = [f"({a} + {b}) / 2", f"{a + b} / 2", dec(median(vals))]
             intro = (f"Kuuden kävelylenkin pituudet ovat {txt(vals)} minuuttia. Laske mediaani: järjestä luvut ja "
-                     f"laske kahden keskimmäisen keskiarvo ({a} ja {b}).")
+                     f"laske kahden keskimmäisen luvun {a} ja {b} keskiarvo.")
             hint, level = "Kirjoita välivaihe, jossa keskimmäisten summa on laskettu", "T"
             params = {"values": vals}
         elif k == 2:

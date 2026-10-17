@@ -3,13 +3,13 @@
 import random
 from decimal import Decimal
 
-from gen_common import base_item, cli
+from gen_common import UNIT_ESSIVE, base_item, cli
 from gen_decimal import CTX, CTX3, digits, fmt, hundredths, tenths
 
 TEMPLATE = "num01_ne"
 TID, CODE = "NUM-01", "NE"
-BAD = ("Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi "
-       "(esimerkiksi 0,6 = 0,60) ja vertaa.")
+BAD = ("Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, "
+       "esimerkiksi 0,6 = 0,60, ja vertaa.")
 
 
 def pair(rng, whole):
@@ -34,7 +34,7 @@ def make_items(run, date, count=5, start=1):
                 prompt = f"Kirjoita suurempi luvuista {fmt(a)} ja {fmt(b)}."
             else:
                 intro, q, unit = CTX[rng.randrange(len(CTX))]
-                prompt = f"{intro.format(a=fmt(a), b=fmt(b))} {q} Kirjoita suurempi luku ({unit})."
+                prompt = f"{intro.format(a=fmt(a), b=fmt(b))} {q} Kirjoita suurempi luku {UNIT_ESSIVE[unit]}."
             ans, wrong, key = short, [long_], (short, long_)
             steps = [f"{fmt(short)} = {fmt(short)}0", f"{fmt(short)}0 > {fmt(long_)}"]
         elif k == 2:
@@ -46,9 +46,9 @@ def make_items(run, date, count=5, start=1):
             vals = [short, long_, long3]
             rng.shuffle(vals)
             intro, q, unit = CTX3[0]
-            prompt = intro.format(a=fmt(vals[0]), b=fmt(vals[1]), c=fmt(vals[2])) + f" {q} Kirjoita luku ({unit})."
+            prompt = intro.format(a=fmt(vals[0]), b=fmt(vals[1]), c=fmt(vals[2])) + f" {q} Kirjoita luku {UNIT_ESSIVE[unit]}."
             ans, wrong, key = short, [long3, long_], tuple(sorted(vals))
-            steps = [", ".join(fmt(x) for x in sorted(vals)) + " (pienimmästä suurimpaan)"]
+            steps = ["Pienimmästä suurimpaan: " + ", ".join(fmt(x) for x in sorted(vals))]
         elif k == 3:
             short, _ = pair(rng, 0)
             prompt = f"Montako sadasosaa luvussa {fmt(short)} on? Kirjoita luku."

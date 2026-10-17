@@ -5,6 +5,14 @@ from pathlib import Path
 
 MINUS = "−"
 
+# Units written out for running text ("Kirjoita luku kilogrammoina"), so prompts need no bracketed units.
+UNIT_ESSIVE = {"km": "kilometreinä", "h": "tunteina", "m": "metreinä", "min": "minuutteina", "cm": "senttimetreinä",
+               "kg": "kilogrammoina", "g": "grammoina", "l": "litroina", "euroa": "euroina", "senttiä": "sentteinä"}
+
+# Adessive of a letter's Finnish name, for "merkitään määrää k:lla".
+LETTER_ADESSIVE = {"h": "h:lla", "k": "k:lla", "l": "l:llä", "o": "o:lla", "p": "p:llä", "t": "t:llä", "v": "v:llä",
+                   "x": "x:llä"}
+
 
 def num(n):
     """Integer as display text with a proper minus sign."""

@@ -12,8 +12,8 @@ def fmt(d):
 
 TEMPLATE = "num04_mc"
 TID, CODE = "NUM-04", "MC"
-BAD = ("Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä "
-       "(esimerkiksi 0,5 × 8 on puolet luvusta 8).")
+BAD = ("Kertolasku ei aina suurenna. Kun kerrotaan luvulla, joka on pienempi kuin 1, tulo on pienempi kuin toinen tekijä. "
+       "Esimerkiksi 0,5 × 8 on puolet luvusta 8.")
 
 
 def make_items(run, date, count=5, start=1):

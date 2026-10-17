@@ -10,7 +10,7 @@ from gen_common import base_item, cli, mc_options
 TEMPLATE = "ext08_mc"
 TID, CODE = "EXT-08", "MC"
 BAD = ("Mediaani ei ole listan keskimmäinen luku sellaisenaan. Järjestä luvut ensin pienimmästä suurimpaan ja "
-       "valitse sitten keskimmäinen (parillisella määrällä kahden keskimmäisen keskiarvo).")
+       "valitse sitten keskimmäinen. Jos lukuja on parillinen määrä, laske kahden keskimmäisen keskiarvo.")
 GOOD = "Oikein: luvut järjestetään ensin, ja mediaani on keskimmäinen arvo."
 MEANFB = "Tämä on keskiarvo, ei mediaani. Mediaani on järjestetyn aineiston keskimmäinen arvo."
 
@@ -57,7 +57,7 @@ def make_items(run, date, count=5, start=1):
                 if mn.denominator in (1, 2, 4, 5, 10) and mn > 2 * md:
                     break
             level = "H"
-            prompt = (f"Kuuden hengen yrityksessä kuukausipalkat ovat {txt(vals)} (luvut ovat satoja euroja). "
+            prompt = (f"Kuuden hengen yrityksessä kuukausipalkat satoina euroina ovat {txt(vals)}. "
                       f"Keskiarvo on {dec(mn)} ja mediaani {dec(md)}. Kumpi kuvaa paremmin tyypillistä palkkaa ja miksi?")
             correct = ("Mediaani, koska yksi erittäin suuri palkka nostaa keskiarvoa mutta ei muuta keskimmäistä arvoa paljon", GOOD)
             wrongs = [("Keskiarvo, koska se on aina tyypillisin arvo", TID,

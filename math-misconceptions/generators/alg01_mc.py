@@ -6,7 +6,7 @@ Usage: python generators/alg01_mc.py --run 1 --date 2026-09-30 --write
 """
 import random
 
-from gen_common import base_item, cli, mc_options
+from gen_common import UNIT_ESSIVE, base_item, cli, mc_options
 
 TEMPLATE = "alg01_mc"
 TID, CODE = "ALG-01", "MC"
@@ -32,12 +32,12 @@ def make_items(run, date, count=5, start=1):
         x, y = ("a", "p") if k % 2 == 0 else ("m", "n")
         expr = f"{pa}{x} + {pb}{y}"
         intro = (f"{la.capitalize()} hinta on {pa} {unit} ja {lb} hinta {pb} {unit}. "
-                 f"Ostetaan {x} kpl ({ca}) ja {y} kpl ({cb}).")
+                 f"Ostetaan {x} {ca} ja {y} {cb}.")
         params = {"pa": pa, "pb": pb, "vars": [x, y], "context": k + 1}
         if k < 3:
             level = "T"
             prompt = f"{intro} Mitä lauseke {expr} kertoo?"
-            options, cid = mc_options(rng, (f"Ostosten yhteishinnan ({unit})", "Oikein: lauseke on yhteishinta."), [
+            options, cid = mc_options(rng, (f"Ostosten yhteishinnan {UNIT_ESSIVE[unit]}", "Oikein: lauseke on yhteishinta."), [
                 (f"{pa} {ca} ja {pb} {cb}", "ALG-01", BAD),
                 ("Ostettujen tuotteiden yhteismäärän", None, f"Lauseke kertoo hinnan, ei kappalemäärää: {pa}{x} on {x} tuotteen hinta."),
                 ("Yhden kappaleen hinnan molemmista tuotteista", None,
@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
             steps = [f"{pa}{x}: {x} kappaletta, hinta {pa} {unit} kappaleelta, yhteensä {pa} · {x} {unit}",
                      f"{pb}{y}: {y} kappaletta, hinta {pb} {unit} kappaleelta, yhteensä {pb} · {y} {unit}",
                      f"Summa {expr} on koko ostoksen hinta"]
-            final = f"Yhteishinta ({unit})"
+            final = f"Yhteishinta {UNIT_ESSIVE[unit]}"
         elif k == 3:
             level = "H"
             prompt = f"{intro} Mitä kirjain {x} tarkoittaa lausekkeessa {expr}?"
@@ -56,13 +56,13 @@ def make_items(run, date, count=5, start=1):
                 ("Molempien tuotteiden yhteishintaa", None, "Yhteishinta on koko lauseke, ei yksi kirjain."),
             ])
             steps = [f"Hinta {pa} {unit} on annettu lukuna", f"Kertoimena {x} on se, montako kappaletta ostetaan",
-                     f"Siksi {x} on luku (kappalemäärä), ei esine"]
+                     f"Siksi {x} on luku eli kappalemäärä, ei esine"]
             final = "Kappalemäärää, eli lukua"
         else:
             level = "H"
             prompt = (f"{intro} Aino sanoo: \"Lauseke {expr} tarkoittaa {pa} {ca} ja {pb} {cb}.\" "
                       "Miksi väite on virheellinen?")
-            options, cid = mc_options(rng, ("Kirjaimet ovat lukuja (määriä), joten lauseke on hinta eikä tuotteiden lista",
+            options, cid = mc_options(rng, ("Kirjaimet ovat lukuja eli määriä, joten lauseke on hinta eikä tuotteiden lista",
                                             "Oikein: kirjain edustaa lukua."), [
                 ("Väite on oikein: kirjain voi lyhentää tuotteen nimeä", "ALG-01", BAD),
                 ("Lausekkeesta puuttuu yhtäsuuruusmerkki", None, "Lauseke ei tarvitse yhtäsuuruusmerkkiä."),

@@ -28,7 +28,7 @@ def make_items(run, date, count=5, start=1):
             level, (t1, t2) = "T", (1, 4)
             s1, s2 = c + v * t1, c + v * t2
             prompt = (f"Juoksijan matka–aika-kuvaaja kulkee pisteiden ({t1}; {s1}) ja ({t2}; {s2}) kautta, kun aika on tunteina ja matka kilometreinä. "
-                      "Mikä on juoksijan nopeus (km/h)?")
+                      "Mikä on juoksijan nopeus kilometreinä tunnissa?")
             ans, wrong = v, [s2, s1]
             steps = [f"({s2} − {s1}) / ({t2} − {t1}) = {s2 - s1} / {t2 - t1}", f"= {v}"]
             params, unit = {"v": v, "c": c, "t": [t1, t2]}, "km/h"

@@ -2,18 +2,18 @@
 """ALG-10 (reversal error), type MC. Every option equation is built from the same numbers."""
 import random
 
-from gen_common import base_item, cli, mc_options
+from gen_common import LETTER_ADESSIVE, base_item, cli, mc_options
 
 TEMPLATE = "alg10_mc"
 TID, CODE = "ALG-10", "MC"
 REV = "Kirjaimet on kirjoitettu sanojen järjestyksessä. Kerroin kuuluu sen suureen eteen, jota on vähemmän."
-# (many description, few description, letter many, letter few)
+# (many description, few description, letter many, letter few, many genitive plural, few genitive plural)
 CTX = [
-    ("oppilaita", "opettajia", "o", "t"),
-    ("kahvikuppeja", "teekuppeja", "k", "t"),
-    ("pelaajia", "valmentajia", "p", "v"),
-    ("kirjoja", "lehtiä", "k", "l"),
-    ("kyyhkysiä", "harakoita", "k", "h"),
+    ("oppilaita", "opettajia", "o", "t", "oppilaiden", "opettajien"),
+    ("kahvikuppeja", "teekuppeja", "k", "t", "kahvikuppien", "teekuppien"),
+    ("pelaajia", "valmentajia", "p", "v", "pelaajien", "valmentajien"),
+    ("kirjoja", "lehtiä", "k", "l", "kirjojen", "lehtien"),
+    ("kyyhkysiä", "harakoita", "k", "h", "kyyhkysten", "harakoiden"),
 ]
 
 
@@ -21,12 +21,13 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(301)
     items = []
     for k in range(count):
-        many, few, m, f = CTX[k]
+        many, few, m, f, many_gen, few_gen = CTX[k]
+        letters = (f"Merkitään {many_gen} määrää {LETTER_ADESSIVE[m]} ja {few_gen} määrää {LETTER_ADESSIVE[f]}. ")
         n = rng.randint(3, 9)
         if k < 3:
             level = "T"
-            prompt = (f"Koululla on {n} kertaa enemmän {many} ({m}) kuin {few} ({f})." if k == 0 else
-                      f"Tapahtumassa on {n} kertaa enemmän {many} ({m}) kuin {few} ({f}).")
+            prompt = letters + (f"Koululla on {n} kertaa enemmän {many} kuin {few}." if k == 0 else
+                                f"Tapahtumassa on {n} kertaa enemmän {many} kuin {few}.")
             correct = f"{m} = {n}{f}"
             wrongs = [(f"{n}{m} = {f}", "ALG-10", REV), (f"{m} = {f} + {n}", None, "Tässä lisätään, mutta 'kertaa enemmän' tarkoittaa kertolaskua."),
                       (f"{m} = {f}/{n}", None, f"{m} on suurempi luku, joten {f}:ää pitää kertoa, ei jakaa.")]
@@ -38,7 +39,7 @@ def make_items(run, date, count=5, start=1):
             level = "H"
             c = rng.randint(2, 4)
             d = rng.randint(2, 9)
-            prompt = (f"{many.capitalize()} ({m}) on {d} enemmän kuin kolminkertainen määrä {few} ({f})." .replace("kolminkertainen", {2: "kaksinkertainen", 3: "kolminkertainen", 4: "nelinkertainen"}[c])
+            prompt = letters + (f"{many.capitalize()} on {d} enemmän kuin kolminkertainen määrä {few}." .replace("kolminkertainen", {2: "kaksinkertainen", 3: "kolminkertainen", 4: "nelinkertainen"}[c])
                       + " Mikä yhtälö kuvaa tilannetta?")
             correct = f"{m} = {c}{f} + {d}"
             wrongs = [(f"{c}{m} + {d} = {f}", "ALG-10", REV), (f"{m} = {c}({f} + {d})", None, f"Nyt {d} lisätään myös kerrottavaan, mutta vain kertolaskun tulokseen lisätään {d}."),

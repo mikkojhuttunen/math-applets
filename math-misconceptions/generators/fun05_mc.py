@@ -32,7 +32,7 @@ def make_items(run, date, count=5, start=1):
             ratio = f"{ys[1] / 2:g}".replace(".", ",")
             prompt = (f"Taulukossa x = 1, 2, 3 ja y = {ys[0]}, {ys[1]}, {ys[2]}. Taulukon arvot ovat suoralta. "
                       "Onko y suoraan verrannollinen x:ään?")
-            correct = (f"Ei: suhde y/x ei ole vakio ({ys[0]}/1 = {ys[0]}, mutta {ys[1]}/2 = {ratio})", GOOD)
+            correct = (f"Ei: suhde y/x ei ole vakio, sillä {ys[0]}/1 = {ys[0]} mutta {ys[1]}/2 = {ratio}", GOOD)
             wrongs = [("Kyllä, koska arvot ovat suoralta", TID, BAD),
                       ("Kyllä, koska y kasvaa kun x kasvaa", TID, BAD),
                       ("Ei, koska arvot eivät ole suoralta", None, "Arvot ovat suoralta: erotukset ovat yhtä suuret.")]

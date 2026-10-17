@@ -32,7 +32,7 @@ def make_items(run, date, count=5, start=1):
                   (a - b, None, "Tarkista tuloksen merkki.")]
             steps = [f"{MINUS}{a} {MINUS} ({MINUS}{b}) = {MINUS}{a} + {b} = {num(b - a)}"]
         elif k == 2:
-            prompt, level = f"Lämpötila on {a} astetta. Mikä on lämpötilan ja lämpötilan {MINUS}{b} astetta erotus (ensimmäinen miinus toinen)?", "T"
+            prompt, level = f"Lämpötila on {a} astetta. Mikä on lämpötilan ja lämpötilan {MINUS}{b} astetta erotus, kun ensimmäisestä vähennetään toinen?", "T"
             good = a + b
             wr = [(a - b, TID, BAD), (-(a + b), None, "Tulos on väärän merkkinen."), (b, None, "Tarkista laskutoimitus.")]
             steps = [f"{a} {MINUS} ({MINUS}{b}) = {a} + {b} = {a + b}"]

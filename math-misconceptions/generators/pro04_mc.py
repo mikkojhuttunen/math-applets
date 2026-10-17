@@ -70,7 +70,7 @@ def make_items(run, date, count=5, start=1):
         else:
             level = "H"
             prompt = "Miksi kuvion piirin kasvattaminen ei välttämättä kasvata sen pinta-alaa?"
-            ok = (f"Ala riippuu sivujen tulosta: esimerkiksi {w} × {h} (piiri {pr}, ala {ar}) on ohut, kun taas {s} × {s} (piiri {ps}) on alaltaan suurempi, {as_}", GOOD)
+            ok = (f"Ala riippuu sivujen tulosta: esimerkiksi ohuen {w} × {h} -suorakulmion piiri on {pr} ja ala {ar}, mutta {s} × {s} -neliön piiri on vain {ps} ja ala silti {as_}", GOOD)
             wrongs = [("Piiri ja ala kasvavat aina yhtä aikaa, joten kasvattaminen aina kasvattaa alaa", TID, BAD),
                       ("Pinta-alaan vaikuttaa vain kuvion korkeus", None, "Ala riippuu molemmista sivumitoista."),
                       ("Piiri mitataan neliösenteissä, joten sitä ei voi verrata alaan", None, "Piiri mitataan pituusyksiköissä; syy on muussa.")]

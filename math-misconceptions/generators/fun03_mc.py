@@ -44,7 +44,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 2:
             r = rng.choice([2, 3, 4])
             prompt = (f"Suora näyttää kulkevan 45° kulmassa koordinaatistossa, jossa y-akselin yksikkö on {r} kertaa lyhyempi "
-                      f"kuin x-akselin yksikkö (1 cm vastaa x-akselilla yhtä yksikköä ja y-akselilla {r} yksikköä). "
+                      f"kuin x-akselin yksikkö: 1 cm vastaa x-akselilla yhtä yksikköä ja y-akselilla {r} yksikköä. "
                       "Mikä on suoran kulmakerroin?")
             correct = (fr(r), GOOD)
             wrongs = [("1", TID, BAD), (fr(Fraction(1, r)), None, "Muutos y-suunnassa on suurempi kuin x-suunnassa."), ("45", None, "45° on kulma, ei kulmakerroin.")]

@@ -3,7 +3,7 @@
 before the crossing point; the speeds are computed from the tabulated points."""
 import random
 
-from gen_common import base_item, cli, mc_options
+from gen_common import UNIT_ESSIVE, base_item, cli, mc_options
 
 TEMPLATE = "fun02_mc"
 TID, CODE = "FUN-02", "MC"
@@ -48,13 +48,13 @@ def make_items(run, date, count=5, start=1):
                    ("vesisäiliötä", "l", "min", "Kaksi vesisäiliötä täyttyy letkuilla.")][n]
             unit, tu = ctx[1], ctx[2]
             what = "kulkee" if n < 2 else "täyttyy"
-            head = (f"{ctx[3]} A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä ({unit}) ajan ({tu}) funktiona:"
-                    if n < 2 else f"{ctx[3]} Vettä on säiliöissä (l) ajan (min) funktiona:")
+            head = (f"{ctx[3]} A ja B lähtevät samaan aikaan. Etäisyys lähtöpisteestä {UNIT_ESSIVE[unit]} ajan funktiona, kun aika on {UNIT_ESSIVE[tu]}:"
+                    if n < 2 else f"{ctx[3]} Veden määrä säiliöissä litroina ajan funktiona, kun aika on minuutteina:")
             tbl = f"A: t = 0 → {pt('A', 0)} {unit}, t = {q} → {pt('A', q)} {unit}. B: t = 0 → {pt('B', 0)} {unit}, t = {q} → {pt('B', q)} {unit}."
             ask = "Kumpi " + ("kulkee" if n < 2 else "täyttyy") + (" nopeammin?" if n != 1 else " hitaammin?")
             answer_name = F if n != 1 else S
             wrong_name = S if n != 1 else F
-            prompt = f"{head} {tbl} Kuvaajat (aika–määrä) leikkaavat, kun t = {t0}. {ask}"
+            prompt = f"{head} {tbl} Aika–määrä-kuvaajat leikkaavat, kun t = {t0}. {ask}"
             ok = (f"{answer_name}", f"Oikein: {answer_name}:n määrä kasvaa {'nopeammin' if n != 1 else 'hitaammin'}. " +
                   f"A:n nopeus on {(pt('A', q) - pt('A', 0)) // q} ja B:n {(pt('B', q) - pt('B', 0)) // q} {unit}/{tu}.")
             wrongs = [(f"{wrong_name}", "FUN-02", HEIGHT), ("Yhtä nopeasti, koska kuvaajat leikkaavat.", None,
@@ -65,15 +65,15 @@ def make_items(run, date, count=5, start=1):
             final, params = ok[0], {"vF": vF, "cF": cF, "vS": vS, "cS": cS, "t0": t0, "faster": F, "q": q, "context": ctx[0]}
         elif n == 3:
             level = "H"
-            prompt = (f"Kaksi juoksijaa: A:n matka (km) on s = {coef(pos['A'][1])}t + {pos['A'][0]} ja B:n matka s = {coef(pos['B'][1])}t + {pos['B'][0]}, missä t on aika tunteina. "
+            prompt = (f"Kaksi juoksijaa: A:n matka kilometreinä on s = {coef(pos['A'][1])}t + {pos['A'][0]} ja B:n matka s = {coef(pos['B'][1])}t + {pos['B'][0]}, missä t on aika tunteina. "
                       f"Kumpi juoksija on hetkellä t = 1 kauempana lähtöpisteestä ja kumpi juoksee nopeammin?")
             far = S if pt(S, 1) > pt(F, 1) else F
             assert far == S
-            ok = (f"Kauempana on {S}, nopeammin juoksee {F}.", f"Oikein: {S}:n matka on t = 1 suurempi ({pt(S, 1)} km), mutta {F}:n nopeus on suurempi ({vF} km/h).")
+            ok = (f"Kauempana on {S}, nopeammin juoksee {F}.", f"Oikein: {S}:n matka on hetkellä t = 1 suurempi, {pt(S, 1)} km, mutta {F}:n nopeus on suurempi, {vF} km/h.")
             wrongs = [(f"{S} on kauempana ja myös juoksee nopeammin.", "FUN-02", HEIGHT),
                       (f"Kauempana on {F}, nopeammin juoksee {S}.", None, f"Tarkista luvut: t = 1 antaa {S}:lle {pt(S, 1)} km ja {F}:lle {pt(F, 1)} km."),
                       (f"{F} on kauempana ja myös juoksee nopeammin.", None, f"Tarkista luvut: t = 1 antaa {S}:lle {pt(S, 1)} km ja {F}:lle {pt(F, 1)} km.")]
-            steps = [f"t = 1: {S} {pt(S, 1)} km, {F} {pt(F, 1)} km", f"Nopeudet (termin t kerroin): {S} {pos[S][1]} km/h, {F} {vF} km/h"]
+            steps = [f"t = 1: {S} {pt(S, 1)} km, {F} {pt(F, 1)} km", f"Nopeudet ovat termin t kertoimet: {S} {pos[S][1]} km/h, {F} {vF} km/h"]
             final, params = ok[0], {"vF": vF, "cF": cF, "vS": vS, "cS": cS, "faster": F, "q": 1}
         else:
             level = "H"

@@ -6,7 +6,7 @@ from gen_common import MINUS, base_item, cli, mc_options
 
 TEMPLATE = "alg04_mc"
 TID, CODE = "ALG-04", "MC"
-OP = "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä (luku ja x-termi) ei voi laskea yhteen."
+OP = "Plusmerkki ei pyydä yhdistämään kaikkea yhdeksi termiksi. Eri muotoisia termejä, kuten lukua ja x-termiä, ei voi laskea yhteen."
 
 
 def make_items(run, date, count=5, start=1):

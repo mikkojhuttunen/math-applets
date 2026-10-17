@@ -8,8 +8,8 @@ from gen_decimal import fmt as _fmt
 
 TEMPLATE = "num06_mc"
 TID, CODE = "NUM-06", "MC"
-BAD = ("Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo "
-       "(0,3 ja 0,4 välissä ovat esimerkiksi 0,35 ja 0,305).")
+BAD = ("Desimaalilukujen välistä löytyy aina uusia lukuja: lisää desimaali tai laske keskiarvo. "
+       "Esimerkiksi lukujen 0,3 ja 0,4 välissä ovat 0,35 ja 0,305.")
 
 
 def fmt(d):

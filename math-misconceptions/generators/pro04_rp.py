@@ -35,17 +35,17 @@ def make_items(run, date, count=5, start=1):
             a, b, c, x = pick(rng, seen)
             if k == 0:
                 prompt = (f"Suorakulmion A sivut ovat {a} cm ja {b} cm. Suorakulmion B yksi sivu on {c} cm. "
-                          f"Kirjoita yhtälö, jonka ratkaisu x = {x} on B:n toinen sivu (cm), kun suorakulmioiden alat ovat yhtä suuret.")
+                          f"Kirjoita yhtälö, jonka ratkaisu x = {x} on B:n toinen sivu senttimetreinä, kun suorakulmioiden alat ovat yhtä suuret.")
             elif k == 1:
                 prompt = (f"Matto on {a} m pitkä ja {b} m leveä. Toinen matto on {c} m pitkä. Kirjoita yhtälö, "
-                          f"jonka ratkaisu x = {x} on toisen maton leveys (m), kun matoilla on sama pinta-ala.")
+                          f"jonka ratkaisu x = {x} on toisen maton leveys metreinä, kun matoilla on sama pinta-ala.")
             elif k == 2:
                 prompt = (f"Pelto on {a} m · {b} m. Toisen pellon yksi sivu on {c} m, ja pellot ovat yhtä suuret. "
-                          f"Kirjoita yhtälö, jonka ratkaisu x = {x} on toisen pellon toinen sivu (m).")
+                          f"Kirjoita yhtälö, jonka ratkaisu x = {x} on toisen pellon toinen sivu metreinä.")
             else:
                 level = "H"
                 prompt = (f"Suorakulmion A sivut ovat {a} cm ja {b} cm. Suorakulmion B sivu on {c} cm, ja B:n piiri on suurempi kuin A:n piiri. "
-                          f"Silti suorakulmioiden alat ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = {x} on B:n toinen sivu (cm).")
+                          f"Silti suorakulmioiden alat ovat yhtä suuret. Kirjoita yhtälö, jonka ratkaisu x = {x} on B:n toinen sivu senttimetreinä.")
             valid = [f"{c} * x = {a} * {b}", f"x = {a * b} / {c}"]
             invalid = [f"{c} + x = {a} + {b}", f"x = {b}", f"2 * ({c} + x) = 2 * ({a} + {b})"]
             steps = [f"A:n ala {a} · {b} = {a * b} cm²", f"B:n ala {c} · x = {a * b}", f"x = {a * b} / {c} = {x}"]
@@ -62,7 +62,7 @@ def make_items(run, date, count=5, start=1):
             a = rng.choice(divs)
             x = s * s // a
             prompt = (f"Neliön sivu on {s} cm. Suorakulmion yksi sivu on {a} cm, ja sen ala on yhtä suuri kuin neliön ala. "
-                      f"Kirjoita yhtälö, jonka ratkaisu x = {x} on suorakulmion toinen sivu (cm).")
+                      f"Kirjoita yhtälö, jonka ratkaisu x = {x} on suorakulmion toinen sivu senttimetreinä.")
             valid = [f"{a} * x = {s} * {s}", f"x = {s * s} / {a}"]
             invalid = [f"2 * ({a} + x) = {4 * s}", f"x = {s}", f"{a} + x = {2 * s}"]
             steps = [f"Neliön ala {s}² = {s * s} cm²", f"{a} · x = {s * s}", f"x = {x}",

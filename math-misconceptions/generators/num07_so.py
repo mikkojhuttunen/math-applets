@@ -44,7 +44,7 @@ def make_items(run, date, count=5, start=1):
             f"Kengät maksavat {fmt(p)} %:n alennuksen jälkeen {fmt(new)} €. ",
             f"Vuokra nousi {fmt(p)} % ja on nyt {fmt(new)} €/kk. ",
         ][k]
-        ask = ASK if k < 3 else ASK.replace("rivit", "rivit (alkuperäinen määrä x)")
+        ask = ASK if k < 3 else "Merkitse alkuperäistä määrää x:llä. " + ASK
         level = "T" if k < 3 else "H"
         expl = (f"Alkuperäinen määrä x on 100 %, joten uusi määrä on {fmt(f)}x. Jaetaan luvulla {fmt(f)}.")
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, ctx + ask,

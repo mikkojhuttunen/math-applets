@@ -3,7 +3,7 @@
 import random
 from decimal import Decimal
 
-from gen_common import base_item, cli
+from gen_common import UNIT_ESSIVE, base_item, cli
 from gen_decimal import CTX, CTX3, digits, fmt, hundredths, tenths
 
 TEMPLATE = "num02_ne"
@@ -31,7 +31,7 @@ def make_items(run, date, count=5, start=1):
                 prompt = f"Kirjoita suurempi luvuista {fmt(a)} ja {fmt(b)}."
             else:
                 intro, q, unit = CTX[rng.randrange(len(CTX))]
-                prompt = f"{intro.format(a=fmt(a), b=fmt(b))} {q} Kirjoita suurempi luku ({unit})."
+                prompt = f"{intro.format(a=fmt(a), b=fmt(b))} {q} Kirjoita suurempi luku {UNIT_ESSIVE[unit]}."
             ans, wrong, key = long_, [short], (short, long_)
             steps = [f"{fmt(short)} = {fmt(short)}0", f"{fmt(short)}0 < {fmt(long_)}"]
         elif k == 2:
@@ -42,9 +42,9 @@ def make_items(run, date, count=5, start=1):
             vals = [short, long_, long3]
             rng.shuffle(vals)
             intro, q, unit = CTX3[0]
-            prompt = intro.format(a=fmt(vals[0]), b=fmt(vals[1]), c=fmt(vals[2])) + f" {q} Kirjoita luku ({unit})."
+            prompt = intro.format(a=fmt(vals[0]), b=fmt(vals[1]), c=fmt(vals[2])) + f" {q} Kirjoita luku {UNIT_ESSIVE[unit]}."
             ans, wrong, key = long_, [short], tuple(sorted(vals))
-            steps = [", ".join(fmt(x) for x in sorted(vals)) + " (pienimmästä suurimpaan)"]
+            steps = ["Pienimmästä suurimpaan: " + ", ".join(fmt(x) for x in sorted(vals))]
         elif k == 3:
             whole = rng.randint(1, 3)
             short, long_ = pair(rng, whole)

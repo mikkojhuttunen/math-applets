@@ -63,7 +63,7 @@ def make_items(run, date, count=5, start=1):
         else:
             level = "H"
             prompt = f"Kappaleen kaikki pituudet kasvatetaan {k}-kertaisiksi. Miksi tilavuus ei ole silloin {k}-kertainen?"
-            ok = (f"Tilavuudessa on kolme ulottuvuutta (pituus, leveys, korkeus), joten se on {k}³ = {k3}-kertainen.", "Oikein: tilavuus riippuu kolmesta pituudesta.")
+            ok = (f"Tilavuudessa on kolme ulottuvuutta: pituus, leveys ja korkeus. Siksi se on {k}³ = {k3}-kertainen.", "Oikein: tilavuus riippuu kolmesta pituudesta.")
             wrongs = [(f"Tilavuus on aina {k}-kertainen, kun pituudet ovat {k}-kertaiset.", "PRO-02", LIN),
                       ("Tilavuus ei muutu, kun kappaletta suurennetaan.", None, "Suurennettu kappale vie enemmän tilaa."),
                       (f"Tilavuus on {k * k}-kertainen, koska kappale kasvaa kahteen suuntaan.", None, SQ)]

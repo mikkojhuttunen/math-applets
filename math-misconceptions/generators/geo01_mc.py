@@ -115,7 +115,7 @@ def make_items(run, date, count=5, start=1):
             line = collinear(rng)
             tri = [tilted_scalene(rng)[0] for _ in range(3)]
             prompt = ("Mikä seuraavista pistejoukoista EI muodosta kolmiota, kun pisteet yhdistetään janoilla?")
-            ok = (f"{pts_text(line)}", f"Oikein: pisteet ovat samalla suoralla (ala 0), joten kolmiota ei synny.")
+            ok = (f"{pts_text(line)}", f"Oikein: pisteet ovat samalla suoralla, jolloin ala on 0, joten kolmiota ei synny.")
             wrongs = [(pts_text(t), TID, "Nämä pisteet eivät ole samalla suoralla, joten ne muodostavat kolmion, vaikka se näyttää vinolta.")
                       for t in tri]
             wrongs = [(t, m, f) for t, m, f in wrongs]

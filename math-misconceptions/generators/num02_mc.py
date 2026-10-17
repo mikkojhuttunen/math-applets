@@ -65,7 +65,7 @@ def make_items(run, date, count=5, start=1):
             wrongs = [(f"{fmt(trap)} {unit}", "NUM-02", BAD)] + [
                 (f"{fmt(x)} {unit}", None, "Vertaa ensin kokonaisosia ja sitten desimaaleja.") for x in rest]
             options, cid = mc_options(rng, correct, wrongs)
-            steps = [", ".join(fmt(x) for x in sorted(vals)) + " (pienimmästä suurimpaan)"]
+            steps = ["Pienimmästä suurimpaan: " + ", ".join(fmt(x) for x in sorted(vals))]
             params, final, key = {"values": [fmt(x) for x in vals], "context": 1}, fmt(big), tuple(sorted(vals))
         else:
             short, long_ = pair(rng, 0)

@@ -10,7 +10,7 @@ TEMPLATE = "ext09_rp"
 TID, CODE = "EXT-09", "RP"
 GOOD = "Oikein: kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0."
 GENERIC = ("Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin "
-           "(kulmakerroin) ja b on vakiotermi (y:n arvo kohdassa x = 0).")
+           "eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0.")
 
 
 def make_items(run, date, count=5, start=1):

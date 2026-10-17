@@ -27,8 +27,8 @@ def make_items(run, date, count=5, start=1):
             assert not is_right(a, b, c)
             level = "T" if k < 3 else "H"
             if k == 3:
-                prompt = (f"Tikkaat nojaavat seinää vasten. Kolmion sivut ovat {a} m, {b} m ja {c} m "
-                          f"({c} m on pisin). Laske {c}² − ({a}² + {b}²).")
+                prompt = (f"Tikkaat nojaavat seinää vasten. Kolmion sivut ovat {a} m, {b} m ja {c} m, "
+                          f"joista {c} m on pisin. Laske {c}² − ({a}² + {b}²).")
                 ans = c * c - (a * a + b * b)
                 steps = [f"{a}² + {b}² = {a * a + b * b}", f"{c}² = {c * c}", f"{c * c} − {a * a + b * b} = {ans}"]
             else:

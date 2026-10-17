@@ -11,7 +11,7 @@ TEMPLATE = "ext08_es"
 TID, CODE = "EXT-08", "ES"
 ASK = "Missä rivissä on ensimmäinen virhe? Napauta riviä."
 GENERIC = ("Tarkista rivi kerrallaan: onko uusi rivi yhtä suuri kuin edellinen? Mediaani on järjestetyn listan "
-           "keskimmäinen arvo (parillisella määrällä kahden keskimmäisen keskiarvo), ei keskiarvo.")
+           "keskimmäinen arvo, ei keskiarvo. Jos lukuja on parillinen määrä, mediaani on kahden keskimmäisen keskiarvo.")
 GOOD = "Oikein: luvut järjestetään ensin, ja mediaani luetaan järjestetystä listasta."
 
 
@@ -76,7 +76,7 @@ def make_items(run, date, count=5, start=1):
                 med, mn = median(data), mean(data)
                 if mn != med and mn.denominator in (1, 2, 4, 5, 10) and med.denominator in (1, 2):
                     break
-            intro = (f"Seitsemän työntekijän kuukausipalkat ovat {txt(data)} (luvut ovat satoja euroja). Oppilas "
+            intro = (f"Seitsemän työntekijän kuukausipalkat satoina euroina ovat {txt(data)}. Oppilas "
                      f"laskee mediaanipalkan euroina. Rivi 1 on laskun alku.")
             lines = [f"{dec(med)} · 100", f"{dec(mn)} · 100", f"{dec(mn * 100)}"]
             err, etype = 2, "mean_for_median"
