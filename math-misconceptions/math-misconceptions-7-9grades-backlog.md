@@ -8,7 +8,7 @@
 | Not available when built | `math_misconceptions_grades7-9_summary.docx` was not in the project. The xlsx was derived from it, so its content is covered through the xlsx. |
 | Runs completed | 26 |
 | Last run | 2026-10-03 |
-| Progress | 137 of 227 planned cells generated |
+| Progress | 137 of 227 planned cells generated (14 of them RP cells posed as select-all MC) |
 
 ## 1. Instructions for the scheduled task (read first)
 
@@ -73,16 +73,20 @@ Payload fields per type (details and limits in the schema):
 
 | Type | `payload` |
 |---|---|
-| MC | `options[{id, text, misconception, feedback}]` (3-8), `correct[id]` |
+| MC | `options[{id, text, misconception, feedback}]` (3-8), `correct[id]`. Select-all: `"select": "all"` and `correct` lists every correct option (at least one option stays wrong); with `check` (`solution_equals`) the options are equations and `verify.py` solves each one |
 | NE | `answer` (number / expression with `variables` and `samples` / set), `wrong[{match, misconception, feedback}]`. A number answer that is a quantity carries `answer.unit` and `answer_prefix`, so the answer box reads as a sentence: `Hinta on [ ] euroa`, `7 m² on [ ] cm²`, `Todennäköisyys on [ ] %`. Pure numbers (`Laske 4³`, `Mikä on y?`) get neither |
 | ES | `lines` (3-8), `error_line` (from 2), `error_type` |
 | SO | `lines` in correct order, `accept` (`exact` or `dependency`) |
 | FS | `lines`, `blank_index`, `answer` (expression, or equation with `solutions`) |
 | ME | `reference`, `variables`, `samples`, `options[{id, text, equivalent, misconception}]` |
-| RP | `constraint` (`solution_equals`), `checks{valid[], invalid[]}` |
+| RP | `constraint` (`solution_equals`), `checks{valid[], invalid[]}`. Not generated any more: reverse problems are posed as select-all MC (see below) |
 | SC, MA, EST, GI, NL, EX, TF, PH | not yet specified; the schema accepts any object, so define the payload with the user before generating these types |
 
-What `scripts/verify.py` checks: structure, curriculum links, wording (no bracketed asides in pupil-facing text), and the algebra of NE, ES, SO, FS, ME and RP (answers, injected errors and distractors are recomputed with sympy). MC correctness is not machine-checked, so its generator must compute the options from the same numbers. Every new item is reviewed by a human before `approved`.
+What `scripts/verify.py` checks: structure, curriculum links, wording (no bracketed asides in pupil-facing text), and the algebra of NE, ES, SO, FS, ME and RP (answers, injected errors and distractors are recomputed with sympy). MC correctness is not machine-checked unless the item has `check`, so its generator must compute the options from the same numbers. Every new item is reviewed by a human before `approved`.
+
+**Reverse problems as select-all MC.** An open "write an equation whose solution is x = 7" has infinitely many answers, so it is asked as "Valitse kaikki yhtälöt, joiden ratkaisu on x = 7." with 2-3 correct and 3 wrong equations built from the same numbers (`generators/gen_select.py`, templates `*_mcs`). Each option's feedback comes from substituting the value. The items go in the topic's `MC.json`, numbered on from its last item (`--append`).
+
+**Scoring a select-all item** (done by the apps): it is worth 2 points, a single-answer MC 1 point. With C correct and W wrong options, of which the pupil ticks c correct and w wrong, the score is max(0, 2 · (c/C − w/W)). All correct and nothing else gives 2, ticking every option gives 0, ticking only some correct ones gives partial points, and a wrong tick costs points but the score never goes below 0.
 
 ### 1.4 Quality rules
 
@@ -93,7 +97,7 @@ What `scripts/verify.py` checks: structure, curriculum links, wording (no bracke
 
 ## 2. Legend
 
-**Cell codes in section 4:** `o` planned, `s` seed example only (hand-written, still to be generated as a batch), `X` generated batch exists (see log), `-` not suitable for this misconception.
+**Cell codes in section 4:** `o` planned, `s` seed example only (hand-written, still to be generated as a batch), `X` generated batch exists (see log), `-` not suitable for this misconception, `MC` (RP column only) the reverse problems exist as select-all items in the topic's `MC.json` (see log).
 
 | Code | Exercise type | Tier | Checked by | Phase |
 |---|---|---|---|---|
@@ -103,7 +107,7 @@ What `scripts/verify.py` checks: structure, curriculum links, wording (no bracke
 | SO | Step ordering | 1 | Stored sequence | 1 |
 | FS | Fill in the missing step | 1 | Equivalence to removed line | 2 |
 | ME | Multi-select equivalence | 1 | Symbolic comparison | 2 |
-| RP | Reverse problem | 1 | Substitution | 2 |
+| RP | Reverse problem, posed as select-all MC | 1 | Substitution | 2 |
 | SC | Sorting or classifying | 1 | Category label per item | 3 |
 | MA | Matching | 1 | Stored pairs | 3 |
 | EST | Estimation | 2 | Tolerance band | 3 |
@@ -189,41 +193,41 @@ Same row order as section 3.1. Columns are in phase order.
 | ID | MC | NE | ES | SO | FS | ME | RP | SC | MA | EST | GI | NL | EX | TF | PH |
 |---|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | ALG-01 | X | X | - | - | - | - | - | - | o | - | - | - | o | o | - |
-| ALG-06 | X | X | X | - | - | - | X | o | - | - | - | - | - | o | - |
-| ALG-10 | X | - | - | - | - | - | X | - | o | - | - | - | o | - | - |
+| ALG-06 | X | X | X | - | - | - | MC | o | - | - | - | - | - | o | - |
+| ALG-10 | X | - | - | - | - | - | MC | - | o | - | - | - | o | - | - |
 | NUM-01 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
 | NUM-02 | X | X | - | - | - | - | - | o | - | - | - | o | o | - | - |
 | NUM-03 | X | X | X | - | X | X | - | - | - | o | - | - | - | - | - |
-| NUM-04 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
-| NUM-06 | X | - | - | - | - | - | X | - | - | - | - | o | o | o | - |
+| NUM-04 | X | X | - | - | - | - | MC | o | - | o | - | - | - | o | - |
+| NUM-06 | X | - | - | - | - | - | MC | - | - | - | - | o | o | o | - |
 | PRO-01 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | PRO-02 | X | X | - | - | - | - | - | - | o | o | o | - | - | o | - |
 | FUN-02 | X | X | - | - | - | - | - | - | - | - | o | - | o | - | - |
-| ALG-02 | X | - | - | - | - | - | X | - | - | - | - | - | o | o | - |
+| ALG-02 | X | - | - | - | - | - | MC | - | - | - | - | - | o | o | - |
 | ALG-04 | X | X | X | - | - | X | - | o | - | - | - | - | - | - | - |
 | ALG-05 | X | X | - | - | - | X | - | - | - | - | - | - | - | - | - |
-| ALG-07 | X | X | X | X | X | - | X | - | - | - | - | - | o | - | o |
-| ALG-08 | X | X | X | X | X | X | X | - | - | - | - | - | - | - | - |
+| ALG-07 | X | X | X | X | X | - | MC | - | - | - | - | - | o | - | o |
+| ALG-08 | X | X | X | X | X | X | MC | - | - | - | - | - | - | - | - |
 | ALG-09 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | o |
 | ALG-11 | X | X | X | X | X | X | - | - | - | - | - | - | - | - | - |
-| NUM-05 | X | X | - | - | - | - | X | o | - | o | - | - | - | o | - |
+| NUM-05 | X | X | - | - | - | - | MC | o | - | o | - | - | - | o | - |
 | NUM-07 | X | X | X | X | X | - | - | - | - | o | - | - | o | - | o |
-| PRO-03 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
-| PRO-04 | X | X | - | - | - | - | X | - | - | - | o | - | o | o | - |
+| PRO-03 | X | X | - | - | - | - | MC | - | - | - | o | - | o | o | - |
+| PRO-04 | X | X | - | - | - | - | MC | - | - | - | o | - | o | o | - |
 | GEO-01 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | GEO-02 | X | - | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | FUN-01 | X | - | - | - | - | - | - | - | o | - | o | - | o | - | - |
 | PRB-01 | X | X | - | - | - | - | - | - | - | - | - | - | o | o | - |
-| PRB-02 | X | X | - | - | - | - | X | o | - | - | - | - | o | - | - |
+| PRB-02 | X | X | - | - | - | - | MC | o | - | - | - | - | o | - | - |
 | EXT-01 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
 | EXT-02 | X | X | X | - | X | X | - | - | - | - | - | - | - | - | - |
 | EXT-03 | X | X | X | X | X | - | - | - | - | - | - | o | o | - | o |
-| EXT-04 | X | X | X | - | X | X | X | - | - | - | - | - | - | - | o |
+| EXT-04 | X | X | X | - | X | X | MC | - | - | - | - | - | - | - | o |
 | EXT-05 | X | X | - | - | - | - | - | o | - | - | - | - | o | o | - |
 | EXT-06 | X | X | X | - | X | - | - | o | o | o | - | - | - | - | - |
 | EXT-07 | X | X | X | - | - | - | - | - | o | o | - | - | - | - | - |
-| EXT-08 | X | X | X | X | X | - | X | - | - | - | - | - | o | o | - |
-| EXT-09 | X | X | - | - | - | - | X | o | o | - | o | - | - | - | - |
+| EXT-08 | X | X | X | X | X | - | MC | - | - | - | - | - | o | o | - |
+| EXT-09 | X | X | - | - | - | - | MC | o | o | - | o | - | - | - | - |
 | ALG-03 | X | X | - | - | - | - | - | - | - | - | - | - | - | o | - |
 | ALG-12 | X | X | X | - | - | X | - | - | - | - | - | - | - | - | - |
 | NUM-08 | X | X | X | - | - | - | - | - | - | o | - | - | o | o | - |
@@ -378,6 +382,20 @@ One row per generated batch, newest at the bottom. Level is P / T / H / K (OPS s
 | 2026-10-01 | FUN-04 | MC | FUN-04-MC-001..005 | T, T, T, H, H | S4.04 | exercises/FUN-04/MC.json | Draft | Limited; limited evidence, details of the item not verified in the xlsx; item 5 asks to find the flaw in a justification |
 | 2026-10-01 | FUN-05 | MC | FUN-05-MC-001..005 | T, T, T, H, H | S4.03 (S4.05) | exercises/FUN-05/MC.json | Draft | Limited; limited evidence, check full text before relying on it; item 5 asks for a counterexample (justification) |
 | 2026-10-01 | FUN-05 | NE | FUN-05-NE-001..005 | T, T, T, H, H | S4.03 (S4.05) | exercises/FUN-05/NE.json | Draft | Limited; limited evidence, check full text before relying on it; wrong answer scales y with x (proportionality assumed) |
+| 2026-10-17 | ALG-02 | MC | ALG-02-MC-006..010 | T, T, T, H, H | S3.01 | exercises/ALG-02/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces ALG-02-RP-001..005 (RP.json removed), same numbers, template alg02_mcs |
+| 2026-10-17 | ALG-06 | MC | ALG-06-MC-006..010 | T, T, T, H, H | S3.05 | exercises/ALG-06/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces ALG-06-RP-001..005 (RP.json removed), same numbers, template alg06_mcs |
+| 2026-10-17 | ALG-07 | MC | ALG-07-MC-006..010 | T, T, T, H, H | S3.05 | exercises/ALG-07/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces ALG-07-RP-001..005 (RP.json removed), same numbers, template alg07_mcs |
+| 2026-10-17 | ALG-08 | MC | ALG-08-MC-006..010 | T, T, T, H, H | S3.02 | exercises/ALG-08/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces ALG-08-RP-001..005 (RP.json removed), same numbers, template alg08_mcs |
+| 2026-10-17 | ALG-10 | MC | ALG-10-MC-006..010 | T, T, T, H, K | S1.04 | exercises/ALG-10/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces ALG-10-RP-001..005 (RP.json removed), same numbers, template alg10_mcs |
+| 2026-10-17 | EXT-04 | MC | EXT-04-MC-006..010 | T, T, T, H, H | S3.08 | exercises/EXT-04/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces EXT-04-RP-001..005 (RP.json removed), same numbers, template ext04_mcs |
+| 2026-10-17 | EXT-08 | MC | EXT-08-MC-006..010 | T, T, T, H, H | S6.02 (S6.03) | exercises/EXT-08/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces EXT-08-RP-001..005 (RP.json removed), same numbers, template ext08_mcs |
+| 2026-10-17 | EXT-09 | MC | EXT-09-MC-006..010 | T, T, T, H, H | S4.05 | exercises/EXT-09/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces EXT-09-RP-001..005 (RP.json removed), same numbers, template ext09_mcs |
+| 2026-10-17 | NUM-04 | MC | NUM-04-MC-006..010 | T, T, T, H, H | S2.03 | exercises/NUM-04/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces NUM-04-RP-001..005 (RP.json removed), same numbers, template num04_mcs |
+| 2026-10-17 | NUM-05 | MC | NUM-05-MC-006..010 | T, T, T, H, H | S2.03 (S2.06) | exercises/NUM-05/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces NUM-05-RP-001..005 (RP.json removed), same numbers, template num05_mcs |
+| 2026-10-17 | NUM-06 | MC | NUM-06-MC-006..010 | T, T, T, H, H | S2.08 | exercises/NUM-06/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces NUM-06-RP-001..005 (RP.json removed), same numbers, template num06_mcs |
+| 2026-10-17 | PRB-02 | MC | PRB-02-MC-006..010 | T, T, T, H, H | S6.06 (S2.02) | exercises/PRB-02/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces PRB-02-RP-001..005 (RP.json removed), same numbers, template prb02_mcs |
+| 2026-10-17 | PRO-03 | MC | PRO-03-MC-006..010 | T, T, T, H, H | S5.07 | exercises/PRO-03/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces PRO-03-RP-001..005 (RP.json removed), same numbers, template pro03_mcs |
+| 2026-10-17 | PRO-04 | MC | PRO-04-MC-006..010 | T, T, T, H, H | S5.07 | exercises/PRO-04/MC.json | Draft | Reverse problems converted to select-all MC on the teacher's request: pupils tick every equation with the given solution; replaces PRO-04-RP-001..005 (RP.json removed), same numbers, template pro04_mcs |
 
 ## 6. Curriculum coverage
 

@@ -372,6 +372,458 @@
         "verified": true,
         "run": 3
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 0,3 ja 0,4 puolivälissä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 0,35."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 0,3",
+            "misconception": "NUM-06",
+            "feedback": "Kun sijoitat x = 0,35, vasen puoli on 0,35 mutta oikea puoli 0,3."
+          },
+          {
+            "id": "b",
+            "text": "x = 0,4 − 0,3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,35, vasen puoli on 0,35 mutta oikea puoli 0,1."
+          },
+          {
+            "id": "c",
+            "text": "2x = 0,3 + 0,4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,35, molemmat puolet ovat 0,7."
+          },
+          {
+            "id": "d",
+            "text": "x = (0,3 + 0,4) ÷ 2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,35, molemmat puolet ovat 0,35."
+          },
+          {
+            "id": "e",
+            "text": "x = 0,3 + 0,4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,35, vasen puoli on 0,35 mutta oikea puoli 0,7."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.35
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (0,3 + 0,4) / 2",
+          "x = 0,35"
+        ],
+        "final": "x = (0,3 + 0,4) ÷ 2; 2x = 0,3 + 0,4"
+      },
+      "feedback": {
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_mcs",
+        "params": {
+          "a": "0,3",
+          "b": "0,4",
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 1,9 ja 2,0 puolivälissä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 1,95."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = (1,9 + 2,0) ÷ 2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 1,95, molemmat puolet ovat 1,95."
+          },
+          {
+            "id": "b",
+            "text": "2x = 1,9 + 2,0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 1,95, molemmat puolet ovat 3,9."
+          },
+          {
+            "id": "c",
+            "text": "x = 2,0 − 1,9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 1,95, vasen puoli on 1,95 mutta oikea puoli 0,1."
+          },
+          {
+            "id": "d",
+            "text": "x = 1,9",
+            "misconception": "NUM-06",
+            "feedback": "Kun sijoitat x = 1,95, vasen puoli on 1,95 mutta oikea puoli 1,9."
+          },
+          {
+            "id": "e",
+            "text": "x = 1,9 + 2,0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 1,95, vasen puoli on 1,95 mutta oikea puoli 3,9."
+          }
+        ],
+        "correct": [
+          "a",
+          "b"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 1.95
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (1,9 + 2,0) / 2",
+          "x = 1,95"
+        ],
+        "final": "x = (1,9 + 2,0) ÷ 2; 2x = 1,9 + 2,0"
+      },
+      "feedback": {
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_mcs",
+        "params": {
+          "a": "1,9",
+          "b": "2,0",
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on täsmälleen lukujen 0,04 ja 0,05 puolivälissä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 0,045."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = (0,04 + 0,05) ÷ 2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,045, molemmat puolet ovat 0,045."
+          },
+          {
+            "id": "b",
+            "text": "x = 0,04 + 0,05",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,045, vasen puoli on 0,045 mutta oikea puoli 0,09."
+          },
+          {
+            "id": "c",
+            "text": "2x = 0,04 + 0,05",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,045, molemmat puolet ovat 0,09."
+          },
+          {
+            "id": "d",
+            "text": "x = 0,05 − 0,04",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,045, vasen puoli on 0,045 mutta oikea puoli 0,01."
+          },
+          {
+            "id": "e",
+            "text": "x = 0,04",
+            "misconception": "NUM-06",
+            "feedback": "Kun sijoitat x = 0,045, vasen puoli on 0,045 mutta oikea puoli 0,04."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.045
+        }
+      },
+      "solution": {
+        "steps": [
+          "Puoliväli on keskiarvo: x = (0,04 + 0,05) / 2",
+          "x = 0,045"
+        ],
+        "final": "x = (0,04 + 0,05) ÷ 2; 2x = 0,04 + 0,05"
+      },
+      "feedback": {
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_mcs",
+        "params": {
+          "a": "0,04",
+          "b": "0,05",
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on neljäsosan matkan päässä luvusta 0,5 kohti lukua 0,6. Valitse kaikki yhtälöt, joiden ratkaisu on x = 0,525."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 0,5",
+            "misconception": "NUM-06",
+            "feedback": "Kun sijoitat x = 0,525, vasen puoli on 0,525 mutta oikea puoli 0,5."
+          },
+          {
+            "id": "b",
+            "text": "x = 0,5 + (0,6 − 0,5) ÷ 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,525, molemmat puolet ovat 0,525."
+          },
+          {
+            "id": "c",
+            "text": "x = (0,6 − 0,5) ÷ 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,525, vasen puoli on 0,525 mutta oikea puoli 0,025."
+          },
+          {
+            "id": "d",
+            "text": "4x = 4 · 0,5 + 0,6 − 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,525, molemmat puolet ovat 2,1."
+          },
+          {
+            "id": "e",
+            "text": "x = 0,5 + 0,6 ÷ 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,525, vasen puoli on 0,525 mutta oikea puoli 0,65."
+          },
+          {
+            "id": "f",
+            "text": "x = 0,6 − 0,5 ÷ 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,525, vasen puoli on 0,525 mutta oikea puoli 0,475."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.525
+        }
+      },
+      "solution": {
+        "steps": [
+          "Väli on 0,6 − 0,5 = 0,1",
+          "x = 0,5 + 0,1 / 4 = 0,525"
+        ],
+        "final": "x = 0,5 + (0,6 − 0,5) ÷ 4; 4x = 4 · 0,5 + 0,6 − 0,5"
+      },
+      "feedback": {
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_mcs",
+        "params": {
+          "a": "0,5",
+          "b": "0,6",
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 3
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-06-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.08"
+        ],
+        "t": [
+          "T12"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-06"
+      ],
+      "prompt": {
+        "text": "Luku x on kymmenesosan matkan päässä luvusta 0,8 kohti lukua 0,9. Valitse kaikki yhtälöt, joiden ratkaisu on x = 0,81."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 0,8 + 0,9 ÷ 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,81, vasen puoli on 0,81 mutta oikea puoli 0,89."
+          },
+          {
+            "id": "b",
+            "text": "x = 0,8",
+            "misconception": "NUM-06",
+            "feedback": "Kun sijoitat x = 0,81, vasen puoli on 0,81 mutta oikea puoli 0,8."
+          },
+          {
+            "id": "c",
+            "text": "x = (0,9 − 0,8) ÷ 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,81, vasen puoli on 0,81 mutta oikea puoli 0,01."
+          },
+          {
+            "id": "d",
+            "text": "x = 0,8 + (0,9 − 0,8) ÷ 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,81, molemmat puolet ovat 0,81."
+          },
+          {
+            "id": "e",
+            "text": "10x = 10 · 0,8 + 0,9 − 0,8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,81, molemmat puolet ovat 8,1."
+          },
+          {
+            "id": "f",
+            "text": "x = 0,9 − 0,8 ÷ 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,81, vasen puoli on 0,81 mutta oikea puoli 0,82."
+          }
+        ],
+        "correct": [
+          "d",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.81
+        }
+      },
+      "solution": {
+        "steps": [
+          "Väli on 0,9 − 0,8 = 0,1",
+          "x = 0,8 + 0,1 / 10 = 0,81"
+        ],
+        "final": "x = 0,8 + (0,9 − 0,8) ÷ 10; 10x = 10 · 0,8 + 0,9 − 0,8"
+      },
+      "feedback": {
+        "correct": "Lukujen välissä on aina uusia lukuja, ja ne voi laskea."
+      },
+      "provenance": {
+        "template": "num06_mcs",
+        "params": {
+          "a": "0,8",
+          "b": "0,9",
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 3
+      }
     }
   ]
 }

@@ -379,6 +379,452 @@
         "verified": true,
         "run": 19
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joissa x on toiseen potenssiin ja joiden ainoa ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² = 81",
+            "misconception": "EXT-04",
+            "feedback": "x = 9 toteuttaa yhtälön, mutta niin toteuttaa myös x = −9."
+          },
+          {
+            "id": "b",
+            "text": "x² − 81 = 0",
+            "misconception": "EXT-04",
+            "feedback": "x = 9 toteuttaa yhtälön, mutta niin toteuttaa myös x = −9."
+          },
+          {
+            "id": "c",
+            "text": "x² = 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 81 mutta oikea puoli 9."
+          },
+          {
+            "id": "d",
+            "text": "(x − 9)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 0."
+          },
+          {
+            "id": "e",
+            "text": "x² − 18x + 81 = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 0."
+          }
+        ],
+        "correct": [
+          "d",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kaksoisjuuri: (x − 9)² = 0",
+          "Vain x = 9, koska x − 9 = 0"
+        ],
+        "final": "(x − 9)² = 0; x² − 18x + 81 = 0"
+      },
+      "feedback": {
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_mcs",
+        "params": {
+          "a": 9,
+          "p": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joissa x on toiseen potenssiin ja joiden ainoa ratkaisu on x = −6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² = −6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −6, vasen puoli on 36 mutta oikea puoli −6."
+          },
+          {
+            "id": "b",
+            "text": "x² = 36",
+            "misconception": "EXT-04",
+            "feedback": "x = −6 toteuttaa yhtälön, mutta niin toteuttaa myös x = 6."
+          },
+          {
+            "id": "c",
+            "text": "x² − 36 = 0",
+            "misconception": "EXT-04",
+            "feedback": "x = −6 toteuttaa yhtälön, mutta niin toteuttaa myös x = 6."
+          },
+          {
+            "id": "d",
+            "text": "x² + 12x + 36 = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −6, molemmat puolet ovat 0."
+          },
+          {
+            "id": "e",
+            "text": "(x + 6)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −6, molemmat puolet ovat 0."
+          }
+        ],
+        "correct": [
+          "d",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": -6
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kaksoisjuuri: (x + 6)² = 0",
+          "Vain x = −6, koska x + 6 = 0"
+        ],
+        "final": "(x + 6)² = 0; x² + 12x + 36 = 0"
+      },
+      "feedback": {
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_mcs",
+        "params": {
+          "a": 6,
+          "p": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ainoa ratkaisu on x = 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2(x − 3)(x + 3) = 0",
+            "misconception": "EXT-04",
+            "feedback": "x = 3 toteuttaa yhtälön, mutta niin toteuttaa myös x = −3."
+          },
+          {
+            "id": "b",
+            "text": "2x² = 18",
+            "misconception": "EXT-04",
+            "feedback": "x = 3 toteuttaa yhtälön, mutta niin toteuttaa myös x = −3."
+          },
+          {
+            "id": "c",
+            "text": "2(x − 3)(x − 3) = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 0."
+          },
+          {
+            "id": "d",
+            "text": "2(x − 3)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 0."
+          },
+          {
+            "id": "e",
+            "text": "2(x − 3) = 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 0 mutta oikea puoli 9."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan sama tekijä kahdesti: 2(x − 3)² = 0",
+          "Vain x = 3"
+        ],
+        "final": "2(x − 3)² = 0; 2(x − 3)(x − 3) = 0"
+      },
+      "feedback": {
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_mcs",
+        "params": {
+          "a": 3,
+          "p": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ainoa ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x² = 49",
+            "misconception": "EXT-04",
+            "feedback": "x = 7 toteuttaa yhtälön, mutta niin toteuttaa myös x = −7."
+          },
+          {
+            "id": "b",
+            "text": "0 = (x − 7)²",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 0."
+          },
+          {
+            "id": "c",
+            "text": "(x − 7)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 0."
+          },
+          {
+            "id": "d",
+            "text": "(x − 7)² = 49",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 0 mutta oikea puoli 49."
+          },
+          {
+            "id": "e",
+            "text": "(x − 7)² = 1",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 0 mutta oikea puoli 1."
+          },
+          {
+            "id": "f",
+            "text": "(x − 7)² = 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 0 mutta oikea puoli 7."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliö on nolla vain, kun luku itse on nolla",
+          "Oikea puoli on 0, ja x − 7 = 0 antaa x = 7"
+        ],
+        "final": "(x − 7)² = 0; 0 = (x − 7)²"
+      },
+      "feedback": {
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_mcs",
+        "params": {
+          "a": 7,
+          "p": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 21
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-04-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.08"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-04"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ainoa ratkaisu on x = 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3(x − 5)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 0."
+          },
+          {
+            "id": "b",
+            "text": "3(x + 5)² = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 300 mutta oikea puoli 0."
+          },
+          {
+            "id": "c",
+            "text": "3x² = 75",
+            "misconception": "EXT-04",
+            "feedback": "x = 5 toteuttaa yhtälön, mutta niin toteuttaa myös x = −5."
+          },
+          {
+            "id": "d",
+            "text": "3x² − 75 = 0",
+            "misconception": "EXT-04",
+            "feedback": "x = 5 toteuttaa yhtälön, mutta niin toteuttaa myös x = −5."
+          },
+          {
+            "id": "e",
+            "text": "3x² − 30x + 75 = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 0."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        }
+      },
+      "solution": {
+        "steps": [
+          "3(x − 5)² = 0",
+          "x − 5 = 0, joten x = 5"
+        ],
+        "final": "3(x − 5)² = 0; 3x² − 30x + 75 = 0"
+      },
+      "feedback": {
+        "correct": "Yhtälöllä, jonka ainoa ratkaisu on a, täytyy olla kaksoisjuuri, esimerkiksi (x − a)² = 0.",
+        "generic_wrong": "Sijoita x:n paikalle sekä pyydetty luku että sen vastaluku. Yhtälöllä x² = a² on aina kaksi ratkaisua, joten sen ratkaisu ei ole vain yksi luku."
+      },
+      "provenance": {
+        "template": "ext04_mcs",
+        "params": {
+          "a": 5,
+          "p": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 21
+      }
     }
   ]
 }

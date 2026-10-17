@@ -391,6 +391,468 @@
         "verified": true,
         "run": 6
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kaksoset ovat yhtä vanhoja. Toisen ikä on 7 vuotta, ja toisen ikää merkitään x:llä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 7."
+          },
+          {
+            "id": "b",
+            "text": "2x = 14",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 14."
+          },
+          {
+            "id": "c",
+            "text": "x + 6 = 7 + 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 13."
+          },
+          {
+            "id": "d",
+            "text": "x + 1 = 7",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 8 mutta oikea puoli 7."
+          },
+          {
+            "id": "e",
+            "text": "x − 1 = 7",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 6 mutta oikea puoli 7."
+          },
+          {
+            "id": "f",
+            "text": "x = 8",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 7 mutta oikea puoli 8."
+          }
+        ],
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 7",
+          "x + 6 = 7 + 6"
+        ],
+        "final": "x = 7; x + 6 = 7 + 6; 2x = 14"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 7,
+          "c": 6,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kolikoilla x ja y on sama arvo. Kolikon y arvo on 9 senttiä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 6 = 9",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 15 mutta oikea puoli 9."
+          },
+          {
+            "id": "b",
+            "text": "x + 6 = 15",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 15."
+          },
+          {
+            "id": "c",
+            "text": "x = 15",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 9 mutta oikea puoli 15."
+          },
+          {
+            "id": "d",
+            "text": "9 = x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 9."
+          },
+          {
+            "id": "e",
+            "text": "2x = 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 18 mutta oikea puoli 9."
+          },
+          {
+            "id": "f",
+            "text": "3x = 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 27."
+          }
+        ],
+        "correct": [
+          "b",
+          "d",
+          "f"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 9",
+          "x + 6 = 9 + 6 = 15"
+        ],
+        "final": "x + 6 = 15; 9 = x; 3x = 27"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 9."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 9,
+          "c": 6,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvut x ja y ovat yhtä suuret, ja y = 6. Valitse kaikki yhtälöt, joiden ratkaisu on x = 6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 12 = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 18 mutta oikea puoli 12."
+          },
+          {
+            "id": "b",
+            "text": "x + 6 = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 12."
+          },
+          {
+            "id": "c",
+            "text": "x + 5 = 12",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 11 mutta oikea puoli 12."
+          },
+          {
+            "id": "d",
+            "text": "x + 7 = 12",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 13 mutta oikea puoli 12."
+          },
+          {
+            "id": "e",
+            "text": "12 = x + 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 12."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 6",
+          "Sijoita x = 6: 6 + 6 = 12, joten x + 6 = 12 kelpaa"
+        ],
+        "final": "x + 6 = 12; 12 = x + 6"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 6."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 6,
+          "c": 5,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvuille x ja y pätee x + y = 8 ja x = y. Valitse kaikki yhtälöt, joissa on vain tuntematon x ja joiden ratkaisu on x = 4."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x = 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 12 mutta oikea puoli 8."
+          },
+          {
+            "id": "b",
+            "text": "x + 1 = 8",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 5 mutta oikea puoli 8."
+          },
+          {
+            "id": "c",
+            "text": "x = 8",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 4 mutta oikea puoli 8."
+          },
+          {
+            "id": "d",
+            "text": "x + x = 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, molemmat puolet ovat 8."
+          },
+          {
+            "id": "e",
+            "text": "2x = 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, molemmat puolet ovat 8."
+          },
+          {
+            "id": "f",
+            "text": "x = 8 − x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, molemmat puolet ovat 4."
+          }
+        ],
+        "correct": [
+          "d",
+          "e",
+          "f"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 4
+        }
+      },
+      "solution": {
+        "steps": [
+          "x + y = 8, y = x",
+          "x + x = 8",
+          "2x = 8, x = 4"
+        ],
+        "final": "2x = 8; x + x = 8; x = 8 − x"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 4."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 4,
+          "c": 2,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Luvut x ja y ovat yhtä suuret, ja y = 5. Valitse kaikki yhtälöt, joiden ratkaisu on x = 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 7 = 10",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 8 mutta oikea puoli 10."
+          },
+          {
+            "id": "b",
+            "text": "10 = 3x − 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 10."
+          },
+          {
+            "id": "c",
+            "text": "3x − 6 = 10",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 9 mutta oikea puoli 10."
+          },
+          {
+            "id": "d",
+            "text": "3x − 5 = 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 10."
+          },
+          {
+            "id": "e",
+            "text": "3x − 10 = 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 5 mutta oikea puoli 10."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 5",
+          "Sijoita x = 5: 3 · 5 − 5 = 10, joten 3x − 5 = 10 kelpaa"
+        ],
+        "final": "3x − 5 = 10; 10 = 3x − 5"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 5."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 5,
+          "c": 2,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
     }
   ]
 }

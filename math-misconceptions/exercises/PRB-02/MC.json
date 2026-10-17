@@ -392,6 +392,464 @@
         "verified": true,
         "run": 16
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 18 mustaa kuulaa 20:stä. Purkissa 2 on 10 kuulaa, joista x on mustia. Mustan nostamisen todennäköisyys on molemmissa purkeissa sama. Valitse kaikki yhtälöt, joiden ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x/10 = 18/20",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 0,9."
+          },
+          {
+            "id": "b",
+            "text": "x = 18",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 9 mutta oikea puoli 18."
+          },
+          {
+            "id": "c",
+            "text": "x = 18 + 10 − 20",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 9 mutta oikea puoli 8."
+          },
+          {
+            "id": "d",
+            "text": "x/20 = 18/10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 0,45 mutta oikea puoli 1,8."
+          },
+          {
+            "id": "e",
+            "text": "x = 18/20 · 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 9."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Todennäköisyys purkissa 1 on 18/20",
+          "Purkissa 2 on x/10",
+          "x/10 = 18/20",
+          "x = 9"
+        ],
+        "final": "x/10 = 18/20; x = 18/20 · 10"
+      },
+      "feedback": {
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_mcs",
+        "params": {
+          "a": 18,
+          "b": 20,
+          "d": 10
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa on 10 mustaa kuulaa 25:stä. Mustan kuulan nostamisen todennäköisyys prosentteina on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 40."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 25/10 · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 250."
+          },
+          {
+            "id": "b",
+            "text": "x = 10",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 10."
+          },
+          {
+            "id": "c",
+            "text": "x = 10/25 · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, molemmat puolet ovat 40."
+          },
+          {
+            "id": "d",
+            "text": "x = 10/100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 0,1."
+          },
+          {
+            "id": "e",
+            "text": "x/100 = 10/25",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, molemmat puolet ovat 0,4."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 40
+        }
+      },
+      "solution": {
+        "steps": [
+          "Mustien osuus kaikista kuulista on 10/25",
+          "x = 10/25 · 100 = 40"
+        ],
+        "final": "x = 10/25 · 100; x/100 = 10/25"
+      },
+      "feedback": {
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_mcs",
+        "params": {
+          "a": 10,
+          "b": 25,
+          "percent": true
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 3 mustaa ja 7 valkoista kuulaa. Valitse kaikki yhtälöt, joiden ratkaisu on mustan kuulan nostamisen todennäköisyys x = 0,3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 3",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 0,3, vasen puoli on 0,3 mutta oikea puoli 3."
+          },
+          {
+            "id": "b",
+            "text": "x = 3/(3 + 7)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,3, molemmat puolet ovat 0,3."
+          },
+          {
+            "id": "c",
+            "text": "x · (3 + 7) = 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,3, molemmat puolet ovat 3."
+          },
+          {
+            "id": "d",
+            "text": "x = 7/(3 + 7)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,3, vasen puoli on 0,3 mutta oikea puoli 0,7."
+          },
+          {
+            "id": "e",
+            "text": "x = 3/7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,3, vasen puoli on 0,3 mutta oikea puoli 3/7."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.3
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kuulia on yhteensä 3 + 7 = 10",
+          "x = 3/10 = 0,3"
+        ],
+        "final": "x = 3/(3 + 7); x · (3 + 7) = 3"
+      },
+      "feedback": {
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_mcs",
+        "params": {
+          "black": 3,
+          "white": 7
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Pussissa on 2 mustaa kuulaa 8:stä. Pussiin lisätään 2 mustaa kuulaa. Lisäyksen jälkeen mustan kuulan nostamisen todennäköisyys prosentteina on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 40."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = (2 + 2)/8 · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 50."
+          },
+          {
+            "id": "b",
+            "text": "x = (2 + 2)/(8 + 2) · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, molemmat puolet ovat 40."
+          },
+          {
+            "id": "c",
+            "text": "x = 2/(8 + 2) · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 20."
+          },
+          {
+            "id": "d",
+            "text": "x/100 = (2 + 2)/(8 + 2)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 40, molemmat puolet ovat 0,4."
+          },
+          {
+            "id": "e",
+            "text": "x = 2 + 2",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 40, vasen puoli on 40 mutta oikea puoli 4."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 40
+        }
+      },
+      "solution": {
+        "steps": [
+          "Mustia on 4 ja kuulia yhteensä 10",
+          "x = 4/10 · 100 = 40"
+        ],
+        "final": "x = (2 + 2)/(8 + 2) · 100; x/100 = (2 + 2)/(8 + 2)"
+      },
+      "feedback": {
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_mcs",
+        "params": {
+          "a": 2,
+          "b": 8,
+          "add": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 17
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRB-02-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.06",
+          "S2.02"
+        ],
+        "t": [
+          "T11",
+          "T19"
+        ],
+        "grade": 9,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRB-02"
+      ],
+      "prompt": {
+        "text": "Purkissa 1 on 8 mustaa kuulaa 25:stä ja purkissa 2 on 4 mustaa kuulaa 5:sta. Purkin 2 ja purkin 1 mustan nostamisen todennäköisyyksien erotus prosenttiyksikköinä on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 48."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = (4/5 − 8/25) · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 48, molemmat puolet ovat 48."
+          },
+          {
+            "id": "b",
+            "text": "x = 8/25 · 100 − 4/5 · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 48, vasen puoli on 48 mutta oikea puoli −48."
+          },
+          {
+            "id": "c",
+            "text": "x = 4/5 · 100 − 8/25 · 100",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 48, molemmat puolet ovat 48."
+          },
+          {
+            "id": "d",
+            "text": "x = 8 − 4",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 48, vasen puoli on 48 mutta oikea puoli 4."
+          },
+          {
+            "id": "e",
+            "text": "x = 4 − 8",
+            "misconception": "PRB-02",
+            "feedback": "Kun sijoitat x = 48, vasen puoli on 48 mutta oikea puoli −4."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 48
+        }
+      },
+      "solution": {
+        "steps": [
+          "Purkki 1: 8/25 = 32 %",
+          "Purkki 2: 4/5 = 80 %",
+          "x = 80 − 32 = 48"
+        ],
+        "final": "x = 4/5 · 100 − 8/25 · 100; x = (4/5 − 8/25) · 100"
+      },
+      "feedback": {
+        "correct": "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
+        "generic_wrong": "Tarkista sijoittamalla: todennäköisyys on mustien kuulien osuus kaikista kuulista, ei pelkkä mustien kuulien lukumäärä."
+      },
+      "provenance": {
+        "template": "prb02_mcs",
+        "params": {
+          "a1": 8,
+          "b1": 25,
+          "a2": 4,
+          "b2": 5
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 17
+      }
     }
   ]
 }

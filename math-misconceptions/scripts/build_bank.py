@@ -37,7 +37,8 @@ def delivery_flags(item):
         "needs_figure": bool(item["prompt"].get("figure")),
         "telegram_poll": False,
     }
-    if item["type"] == "MC":
+    if item["type"] == "MC" and item["payload"].get("select", "one") == "one":
+        # A Telegram quiz poll has exactly one correct option, so select-all items are not polls.
         opts = item["payload"]["options"]
         flags["telegram_poll"] = (
             flags["text_only"]

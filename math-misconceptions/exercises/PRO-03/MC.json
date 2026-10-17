@@ -377,6 +377,461 @@
         "verified": true,
         "run": 13
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 6 cm. Suorakulmion sivut ovat 4 cm ja x cm, ja sen piiri on yhtä suuri kuin neliön piiri. Valitse kaikki yhtälöt, joiden ratkaisu on x = 8."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "4 + x = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 12."
+          },
+          {
+            "id": "b",
+            "text": "4 + x = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 12 mutta oikea puoli 24."
+          },
+          {
+            "id": "c",
+            "text": "2 · (4 + x) = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 24."
+          },
+          {
+            "id": "d",
+            "text": "x = 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 8 mutta oikea puoli 6."
+          },
+          {
+            "id": "e",
+            "text": "4 · x = 36",
+            "misconception": "PRO-03",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 32 mutta oikea puoli 36."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliön piiri 4 · 6 = 24 cm",
+          "Suorakulmion piiri 2 · (4 + x) = 24",
+          "x = 12 − 4 = 8"
+        ],
+        "final": "2 · (4 + x) = 24; 4 + x = 12"
+      },
+      "feedback": {
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_mcs",
+        "params": {
+          "s": 6,
+          "a": 4,
+          "b": 8,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 4 cm ja 10 cm. Suorakulmion B piiri on sama kuin A:n, ja sen sivut ovat 3 cm ja x cm. Valitse kaikki yhtälöt, joiden ratkaisu on x = 11."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2 · (3 + x) = 2 · (4 + 10)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, molemmat puolet ovat 28."
+          },
+          {
+            "id": "b",
+            "text": "3 · x = 40",
+            "misconception": "PRO-03",
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 33 mutta oikea puoli 40."
+          },
+          {
+            "id": "c",
+            "text": "3 + x = 28",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 14 mutta oikea puoli 28."
+          },
+          {
+            "id": "d",
+            "text": "x = 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 11 mutta oikea puoli 10."
+          },
+          {
+            "id": "e",
+            "text": "3 + x = 14",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, molemmat puolet ovat 14."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 11
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n piiri 2 · (4 + 10) = 28 cm",
+          "B:n piiri 2 · (3 + x) = 28",
+          "x = 14 − 3 = 11"
+        ],
+        "final": "2 · (3 + x) = 2 · (4 + 10); 3 + x = 14"
+      },
+      "feedback": {
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_mcs",
+        "params": {
+          "s": 7,
+          "a": 3,
+          "b": 11,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Neliön muotoisen laidunkarsinan aita on 24 m pitkä. Sama aita riittää suorakulmion muotoiseen karsinaan, jonka leveys on 1 m ja pituus x m. Valitse kaikki yhtälöt, joiden ratkaisu on x = 11."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2 · 1 + x = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 13 mutta oikea puoli 24."
+          },
+          {
+            "id": "b",
+            "text": "2 · (1 + x) = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, molemmat puolet ovat 24."
+          },
+          {
+            "id": "c",
+            "text": "2 · 1 + 2x = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, molemmat puolet ovat 24."
+          },
+          {
+            "id": "d",
+            "text": "x = 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 11 mutta oikea puoli 6."
+          },
+          {
+            "id": "e",
+            "text": "1 · x = 36",
+            "misconception": "PRO-03",
+            "feedback": "Kun sijoitat x = 11, vasen puoli on 11 mutta oikea puoli 36."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 11
+        }
+      },
+      "solution": {
+        "steps": [
+          "Aidan pituus on karsinan piiri: 2 · (1 + x) = 24",
+          "1 + x = 12",
+          "x = 11"
+        ],
+        "final": "2 · (1 + x) = 24; 2 · 1 + 2x = 24"
+      },
+      "feedback": {
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_mcs",
+        "params": {
+          "s": 6,
+          "a": 1,
+          "b": 11,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Nauha on kierretty suorakulmion ympäri, jonka sivut ovat 2 cm ja 12 cm. Nauha avataan ja siitä muotoillaan neliö, jonka sivu on x cm. Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 7 mutta oikea puoli 24."
+          },
+          {
+            "id": "b",
+            "text": "x · x = 24",
+            "misconception": "PRO-03",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 49 mutta oikea puoli 24."
+          },
+          {
+            "id": "c",
+            "text": "4x = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 28 mutta oikea puoli 24."
+          },
+          {
+            "id": "d",
+            "text": "4x = 2 · (2 + 12)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 28."
+          },
+          {
+            "id": "e",
+            "text": "x = (2 + 12) ÷ 2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 7."
+          }
+        ],
+        "correct": [
+          "d",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "Nauhan pituus on suorakulmion piiri 2 · (2 + 12) = 28 cm",
+          "4x = 28",
+          "x = 7"
+        ],
+        "final": "4x = 2 · (2 + 12); x = (2 + 12) ÷ 2"
+      },
+      "feedback": {
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_mcs",
+        "params": {
+          "s": 7,
+          "a": 2,
+          "b": 12,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-03-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-03"
+      ],
+      "prompt": {
+        "text": "Kaksi lasten leikkialuetta on rajattu yhtä pitkällä köydellä. Neliön muotoisen alueen sivu on 4 m, ja suorakulmion muotoisen alueen lyhyempi sivu on 1 m. Pidempi sivu on x m. Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "1 · x = 4 · 4",
+            "misconception": "PRO-03",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 7 mutta oikea puoli 16."
+          },
+          {
+            "id": "b",
+            "text": "x + 1 = 4 · 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 8 mutta oikea puoli 16."
+          },
+          {
+            "id": "c",
+            "text": "2 · (1 + x) = 4 · 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 16."
+          },
+          {
+            "id": "d",
+            "text": "2x = 4 · 4 − 2 · 1",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 14."
+          },
+          {
+            "id": "e",
+            "text": "x = 4 + 1",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 7 mutta oikea puoli 5."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "Köyden pituus 4 · 4 = 16 m",
+          "2 · (1 + x) = 16",
+          "x = 7"
+        ],
+        "final": "2 · (1 + x) = 4 · 4; 2x = 4 · 4 − 2 · 1"
+      },
+      "feedback": {
+        "correct": "Samat piirit antavat yhtälön sivujen summalle, ei alan yhtäsuuruudelle.",
+        "generic_wrong": "Sama piiri ei tarkoita samaa alaa. Piiri on sivujen summa 2 · (pituus + leveys); sijoita x ja tarkista."
+      },
+      "provenance": {
+        "template": "pro03_mcs",
+        "params": {
+          "s": 4,
+          "a": 1,
+          "b": 7,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
     }
   ]
 }

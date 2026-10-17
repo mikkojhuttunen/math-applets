@@ -380,6 +380,458 @@
         "verified": true,
         "run": 11
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 3 jaetaan luvulla 0,5. Valitse kaikki yhtälöt, joiden ratkaisu on osamäärä x = 6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 3 · 0,5",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 6 mutta oikea puoli 1,5."
+          },
+          {
+            "id": "b",
+            "text": "x = 3 ÷ 1,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 6 mutta oikea puoli 2."
+          },
+          {
+            "id": "c",
+            "text": "x = 3 ÷ 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 6."
+          },
+          {
+            "id": "d",
+            "text": "x = 3 − 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 6 mutta oikea puoli 2,5."
+          },
+          {
+            "id": "e",
+            "text": "0,5 · x = 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 3."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        }
+      },
+      "solution": {
+        "steps": [
+          "3 ÷ 0,5 = 6",
+          "x = 3 ÷ 0,5"
+        ],
+        "final": "x = 3 ÷ 0,5; 0,5 · x = 3"
+      },
+      "feedback": {
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_mcs",
+        "params": {
+          "p": "0.5",
+          "q": 3,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Nauhaa on 3 metriä, ja siitä leikataan 0,2 metrin pituisia pätkiä. Pätkien lukumäärä on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 15."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 3 − 0,2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 15, vasen puoli on 15 mutta oikea puoli 2,8."
+          },
+          {
+            "id": "b",
+            "text": "0,2 · x = 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 15, molemmat puolet ovat 3."
+          },
+          {
+            "id": "c",
+            "text": "x = 3 ÷ 0,2",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 15, molemmat puolet ovat 15."
+          },
+          {
+            "id": "d",
+            "text": "x = 3 · 0,2",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 15, vasen puoli on 15 mutta oikea puoli 0,6."
+          },
+          {
+            "id": "e",
+            "text": "x = 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 15, vasen puoli on 15 mutta oikea puoli 3."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 15
+        }
+      },
+      "solution": {
+        "steps": [
+          "Pätkien määrä = nauhan pituus ÷ pätkän pituus = 3 ÷ 0,2",
+          "x = 15"
+        ],
+        "final": "x = 3 ÷ 0,2; 0,2 · x = 3"
+      },
+      "feedback": {
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_mcs",
+        "params": {
+          "p": "0.2",
+          "q": 3,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 12 jaetaan luvulla x, ja osamäärä on 60. Valitse kaikki yhtälöt, jotka kuvaavat tilannetta ja joiden ratkaisu on x = 0,2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 12 ÷ 60",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,2, molemmat puolet ovat 0,2."
+          },
+          {
+            "id": "b",
+            "text": "x = 12 · 60",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,2, vasen puoli on 0,2 mutta oikea puoli 720."
+          },
+          {
+            "id": "c",
+            "text": "12 · x = 60",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 0,2, vasen puoli on 2,4 mutta oikea puoli 60."
+          },
+          {
+            "id": "d",
+            "text": "x = 60 ÷ 12",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 0,2, vasen puoli on 0,2 mutta oikea puoli 5."
+          },
+          {
+            "id": "e",
+            "text": "12 ÷ x = 60",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 0,2, molemmat puolet ovat 60."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 0.2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Osamäärä 60 on suurempi kuin 12, joten jakajan täytyy olla alle 1",
+          "12 ÷ x = 60",
+          "x = 12 ÷ 60 = 0,2"
+        ],
+        "final": "12 ÷ x = 60; x = 12 ÷ 60"
+      },
+      "feedback": {
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_mcs",
+        "params": {
+          "p": "0.2",
+          "q": 12,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Luku 15 jaetaan ensin luvulla 0,5 ja saatu osamäärä jaetaan vielä luvulla 0,5. Lopputulos on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 60."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 15 ÷ 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 60, vasen puoli on 60 mutta oikea puoli 30."
+          },
+          {
+            "id": "b",
+            "text": "x = 15 · 0,5 · 0,5",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 60, vasen puoli on 60 mutta oikea puoli 3,75."
+          },
+          {
+            "id": "c",
+            "text": "x = 15 ÷ 0,5 ÷ 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 60, molemmat puolet ovat 60."
+          },
+          {
+            "id": "d",
+            "text": "x = (15 ÷ 0,5) ÷ 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 60, molemmat puolet ovat 60."
+          },
+          {
+            "id": "e",
+            "text": "x = 15 − 0,5 − 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 60, vasen puoli on 60 mutta oikea puoli 14."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 60
+        }
+      },
+      "solution": {
+        "steps": [
+          "15 ÷ 0,5 = 30",
+          "30 ÷ 0,5 = 60",
+          "x = 15 ÷ 0,5 ÷ 0,5"
+        ],
+        "final": "x = 15 ÷ 0,5 ÷ 0,5; x = (15 ÷ 0,5) ÷ 0,5"
+      },
+      "feedback": {
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_mcs",
+        "params": {
+          "p": "0.5",
+          "q": 15,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 12
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-05-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03",
+          "S2.06"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-05"
+      ],
+      "prompt": {
+        "text": "Pizzoja on 6 kappaletta, ja jokainen annos on 1/3 pizzasta. Annosten lukumäärä on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 18."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 18, vasen puoli on 18 mutta oikea puoli 6."
+          },
+          {
+            "id": "b",
+            "text": "x = 6 ÷ 3",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 18, vasen puoli on 18 mutta oikea puoli 2."
+          },
+          {
+            "id": "c",
+            "text": "x = 6 ÷ (1/3)",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 18, molemmat puolet ovat 18."
+          },
+          {
+            "id": "d",
+            "text": "x = 6 · (1/3)",
+            "misconception": "NUM-05",
+            "feedback": "Kun sijoitat x = 18, vasen puoli on 18 mutta oikea puoli 2."
+          },
+          {
+            "id": "e",
+            "text": "x = 6 · 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 18, molemmat puolet ovat 18."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 18
+        }
+      },
+      "solution": {
+        "steps": [
+          "1/3 < 1, joten annoksia on enemmän kuin 6",
+          "x = 6 ÷ 1/3 = 18"
+        ],
+        "final": "x = 6 ÷ (1/3); x = 6 · 3"
+      },
+      "feedback": {
+        "correct": "Kun jaetaan luvulla, joka on pienempi kuin 1, osamäärä on suurempi kuin jaettava.",
+        "generic_wrong": "Tarkista sijoittamalla: jakolasku luvulla, joka on alle 1, antaa suuremman luvun kuin jaettava."
+      },
+      "provenance": {
+        "template": "num05_mcs",
+        "params": {
+          "p": "1/3",
+          "q": 6,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 12
+      }
     }
   ]
 }

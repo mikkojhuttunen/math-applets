@@ -377,6 +377,468 @@
         "verified": true,
         "run": 7
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5x + 9 = 36",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 54 mutta oikea puoli 36."
+          },
+          {
+            "id": "b",
+            "text": "5x + 9 = 45",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 54 mutta oikea puoli 45."
+          },
+          {
+            "id": "c",
+            "text": "54 = 5x + 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 54."
+          },
+          {
+            "id": "d",
+            "text": "5x + 9 = 72",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 54 mutta oikea puoli 72."
+          },
+          {
+            "id": "e",
+            "text": "5x + 9 = 54",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 54."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 9: 5 · 9 + 9 = 54",
+          "5x + 9 = 54"
+        ],
+        "final": "5x + 9 = 54; 54 = 5x + 9"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
+      },
+      "provenance": {
+        "template": "alg07_mcs",
+        "params": {
+          "a": 5,
+          "b": 9,
+          "c": 54,
+          "e": 0,
+          "x": 9
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 6 = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 0."
+          },
+          {
+            "id": "b",
+            "text": "3x − 6 = 6",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 0 mutta oikea puoli 6."
+          },
+          {
+            "id": "c",
+            "text": "3x − 6 = −12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 0 mutta oikea puoli −12."
+          },
+          {
+            "id": "d",
+            "text": "0 = 3x − 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 0."
+          },
+          {
+            "id": "e",
+            "text": "3x − 6 = 12",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 0 mutta oikea puoli 12."
+          }
+        ],
+        "correct": [
+          "a",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 2: 3 · 2 − 6 = 0",
+          "3x − 6 = 0"
+        ],
+        "final": "3x − 6 = 0; 0 = 3x − 6"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
+      },
+      "provenance": {
+        "template": "alg07_mcs",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 0,
+          "e": 0,
+          "x": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 8."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "8 + 4x = 56",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 40 mutta oikea puoli 56."
+          },
+          {
+            "id": "b",
+            "text": "8 + 4x = 40",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 40."
+          },
+          {
+            "id": "c",
+            "text": "8 + 4x = 24",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 40 mutta oikea puoli 24."
+          },
+          {
+            "id": "d",
+            "text": "8 + 4x = 32",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 40 mutta oikea puoli 32."
+          },
+          {
+            "id": "e",
+            "text": "40 = 8 + 4x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 40."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 8: 8 + 4 · 8 = 40",
+          "8 + 4x = 40"
+        ],
+        "final": "8 + 4x = 40; 40 = 8 + 4x"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
+      },
+      "provenance": {
+        "template": "alg07_mcs",
+        "params": {
+          "a": 4,
+          "b": 8,
+          "c": 40,
+          "e": 0,
+          "x": 8
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2x + 27 = 5x + 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 41."
+          },
+          {
+            "id": "b",
+            "text": "5x + 6 = 2x + 39",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 41 mutta oikea puoli 53."
+          },
+          {
+            "id": "c",
+            "text": "5x + 6 = 2x + 15",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 41 mutta oikea puoli 29."
+          },
+          {
+            "id": "d",
+            "text": "5x + 6 = 2x + 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 41."
+          },
+          {
+            "id": "e",
+            "text": "5x + 6 = 2x + 33",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 41 mutta oikea puoli 47."
+          }
+        ],
+        "correct": [
+          "a",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "Molemmat puolet saavat saman arvon, kun x = 7: 5 · 7 + 6 = 41",
+          "Oikea puoli: 2 · 7 + 27 = 41, joten 5x + 6 = 2x + 27 kelpaa"
+        ],
+        "final": "5x + 6 = 2x + 27; 2x + 27 = 5x + 6"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
+      },
+      "provenance": {
+        "template": "alg07_mcs",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 27,
+          "e": 2,
+          "x": 7
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 9
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-07-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-07"
+      ],
+      "prompt": {
+        "text": "Taksin lähtömaksu on 7 euroa ja kilometrihinta 3 euroa. Matkan hinta oli 22 euroa. Valitse kaikki yhtälöt, joiden ratkaisu x = 5 on ajettujen kilometrien määrä."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x − 7 = 22",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 8 mutta oikea puoli 22."
+          },
+          {
+            "id": "b",
+            "text": "3x = 22 − 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 15."
+          },
+          {
+            "id": "c",
+            "text": "7 + 3x = 22",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 22."
+          },
+          {
+            "id": "d",
+            "text": "3x = 22 + 7",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 15 mutta oikea puoli 29."
+          },
+          {
+            "id": "e",
+            "text": "3x + 7 = 15",
+            "misconception": "ALG-07",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 22 mutta oikea puoli 15."
+          },
+          {
+            "id": "f",
+            "text": "3x + 7 = 22",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 22."
+          }
+        ],
+        "correct": [
+          "b",
+          "c",
+          "f"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        }
+      },
+      "solution": {
+        "steps": [
+          "Hinta = lähtömaksu + kilometrit · 3",
+          "7 + 3x = 22"
+        ],
+        "final": "7 + 3x = 22; 3x + 7 = 22; 3x = 22 − 7"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret?"
+      },
+      "provenance": {
+        "template": "alg07_mcs",
+        "params": {
+          "a": 3,
+          "b": 7,
+          "c": 22,
+          "e": 0,
+          "x": 5
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 9
+      }
     }
   ]
 }

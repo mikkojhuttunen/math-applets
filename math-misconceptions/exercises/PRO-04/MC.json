@@ -377,6 +377,465 @@
         "verified": true,
         "run": 13
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 8 cm ja 7 cm. Suorakulmion B sivut ovat 28 cm ja x cm, ja suorakulmioiden alat ovat yhtä suuret. Valitse kaikki yhtälöt, joiden ratkaisu on x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "28 + x = 8 + 7",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 30 mutta oikea puoli 15."
+          },
+          {
+            "id": "b",
+            "text": "x = 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 2 mutta oikea puoli 7."
+          },
+          {
+            "id": "c",
+            "text": "x = 56 ÷ 28",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 2."
+          },
+          {
+            "id": "d",
+            "text": "28 · x = 8 · 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 56."
+          },
+          {
+            "id": "e",
+            "text": "2 · (28 + x) = 2 · (8 + 7)",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 60 mutta oikea puoli 30."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 8 · 7 = 56 cm²",
+          "B:n ala 28 · x = 56",
+          "x = 56 / 28 = 2",
+          "B:n piiri 60 cm on suurempi kuin A:n piiri 30 cm, mutta alat ovat samat"
+        ],
+        "final": "28 · x = 8 · 7; x = 56 ÷ 28"
+      },
+      "feedback": {
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_mcs",
+        "params": {
+          "a": 8,
+          "b": 7,
+          "c": 28,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Matto on 3 m pitkä ja 8 m leveä. Toinen matto on 12 m pitkä ja x m leveä, ja matoilla on sama pinta-ala. Valitse kaikki yhtälöt, joiden ratkaisu on x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "12 · x = 3 · 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 24."
+          },
+          {
+            "id": "b",
+            "text": "2 · (12 + x) = 2 · (3 + 8)",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 28 mutta oikea puoli 22."
+          },
+          {
+            "id": "c",
+            "text": "x = 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 2 mutta oikea puoli 8."
+          },
+          {
+            "id": "d",
+            "text": "12 + x = 3 + 8",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 14 mutta oikea puoli 11."
+          },
+          {
+            "id": "e",
+            "text": "x = 24 ÷ 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 2."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Ensimmäisen maton ala 3 · 8 = 24 m²",
+          "Toisen maton ala 12 · x = 24",
+          "x = 24 / 12 = 2",
+          "Toisen maton piiri 28 m on suurempi kuin ensimmäisen maton piiri 22 m, mutta alat ovat samat"
+        ],
+        "final": "12 · x = 3 · 8; x = 24 ÷ 12"
+      },
+      "feedback": {
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_mcs",
+        "params": {
+          "a": 3,
+          "b": 8,
+          "c": 12,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Pelto on 4 m · 5 m. Toisen pellon sivut ovat 10 m ja x m, ja pellot ovat yhtä suuret. Valitse kaikki yhtälöt, joiden ratkaisu on x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 2 mutta oikea puoli 5."
+          },
+          {
+            "id": "b",
+            "text": "10 · x = 4 · 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 20."
+          },
+          {
+            "id": "c",
+            "text": "x = 20 ÷ 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 2."
+          },
+          {
+            "id": "d",
+            "text": "10 + x = 4 + 5",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 12 mutta oikea puoli 9."
+          },
+          {
+            "id": "e",
+            "text": "2 · (10 + x) = 2 · (4 + 5)",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 24 mutta oikea puoli 18."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Ensimmäisen pellon ala 4 · 5 = 20 m²",
+          "Toisen pellon ala 10 · x = 20",
+          "x = 20 / 10 = 2",
+          "Toisen pellon piiri 24 m on suurempi kuin ensimmäisen pellon piiri 18 m, mutta alat ovat samat"
+        ],
+        "final": "10 · x = 4 · 5; x = 20 ÷ 10"
+      },
+      "feedback": {
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_mcs",
+        "params": {
+          "a": 4,
+          "b": 5,
+          "c": 10,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Suorakulmion A sivut ovat 3 cm ja 6 cm. Suorakulmion B sivut ovat 9 cm ja x cm, ja B:n piiri on suurempi kuin A:n piiri. Silti suorakulmioiden alat ovat yhtä suuret. Valitse kaikki yhtälöt, joiden ratkaisu on x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "9 + x = 3 + 6",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 11 mutta oikea puoli 9."
+          },
+          {
+            "id": "b",
+            "text": "9 · x = 3 · 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 18."
+          },
+          {
+            "id": "c",
+            "text": "2 · (9 + x) = 2 · (3 + 6)",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 22 mutta oikea puoli 18."
+          },
+          {
+            "id": "d",
+            "text": "x = 18 ÷ 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 2."
+          },
+          {
+            "id": "e",
+            "text": "x = 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 2 mutta oikea puoli 6."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "A:n ala 3 · 6 = 18 cm²",
+          "B:n ala 9 · x = 18",
+          "x = 18 / 9 = 2",
+          "B:n piiri 22 cm on suurempi kuin A:n piiri 18 cm, mutta alat ovat samat"
+        ],
+        "final": "9 · x = 3 · 6; x = 18 ÷ 9"
+      },
+      "feedback": {
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_mcs",
+        "params": {
+          "a": 3,
+          "b": 6,
+          "c": 9,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "PRO-04-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S5.07"
+        ],
+        "t": [
+          "T18"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "PRO-04"
+      ],
+      "prompt": {
+        "text": "Neliön sivu on 6 cm. Suorakulmion sivut ovat 3 cm ja x cm, ja sen ala on yhtä suuri kuin neliön ala. Valitse kaikki yhtälöt, joiden ratkaisu on x = 12."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 36 ÷ 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, molemmat puolet ovat 12."
+          },
+          {
+            "id": "b",
+            "text": "2 · (3 + x) = 24",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 30 mutta oikea puoli 24."
+          },
+          {
+            "id": "c",
+            "text": "3 · x = 6 · 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, molemmat puolet ovat 36."
+          },
+          {
+            "id": "d",
+            "text": "x = 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 12 mutta oikea puoli 6."
+          },
+          {
+            "id": "e",
+            "text": "3 + x = 12",
+            "misconception": "PRO-04",
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 15 mutta oikea puoli 12."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 12
+        }
+      },
+      "solution": {
+        "steps": [
+          "Neliön ala 6² = 36 cm²",
+          "3 · x = 36",
+          "x = 12",
+          "Suorakulmion piiri 30 cm on suurempi kuin neliön piiri 24 cm, mutta alat ovat samat"
+        ],
+        "final": "3 · x = 6 · 6; x = 36 ÷ 3"
+      },
+      "feedback": {
+        "correct": "Alat ovat yhtä suuret, kun pituus · leveys on sama, vaikka piirit eroavat.",
+        "generic_wrong": "Pidempi piiri ei tarkoita suurempaa alaa. Ala on pituus · leveys; sijoita x ja laske molempien alat."
+      },
+      "provenance": {
+        "template": "pro04_mcs",
+        "params": {
+          "s": 6,
+          "a": 3,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 14
+      }
     }
   ]
 }

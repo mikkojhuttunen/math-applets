@@ -380,6 +380,460 @@
         "verified": true,
         "run": 3
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Luku 24 kerrotaan luvulla 0,5. Valitse kaikki yhtälöt, joiden ratkaisu on tulo x = 12."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 24 ÷ 0,5",
+            "misconception": "NUM-04",
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 12 mutta oikea puoli 48."
+          },
+          {
+            "id": "b",
+            "text": "0,5 · 24 = x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, molemmat puolet ovat 12."
+          },
+          {
+            "id": "c",
+            "text": "x = 24 · 1,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 12 mutta oikea puoli 36."
+          },
+          {
+            "id": "d",
+            "text": "x = 24 + 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, vasen puoli on 12 mutta oikea puoli 24,5."
+          },
+          {
+            "id": "e",
+            "text": "x = 24 · 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 12, molemmat puolet ovat 12."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 12
+        }
+      },
+      "solution": {
+        "steps": [
+          "0,5 × 24 = 12",
+          "x = 24 × 0,5"
+        ],
+        "final": "x = 24 · 0,5; 0,5 · 24 = x"
+      },
+      "feedback": {
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+      },
+      "provenance": {
+        "template": "num04_mcs",
+        "params": {
+          "p": 0.5,
+          "q": 24,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Luku 20 kerrotaan murtoluvulla 1/4. Valitse kaikki yhtälöt, joiden ratkaisu on tulo x = 5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 20 · 4",
+            "misconception": "NUM-04",
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 5 mutta oikea puoli 80."
+          },
+          {
+            "id": "b",
+            "text": "x = 20 · 1/4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 5."
+          },
+          {
+            "id": "c",
+            "text": "x = 20 + 1/4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 5 mutta oikea puoli 20,25."
+          },
+          {
+            "id": "d",
+            "text": "x = 20",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, vasen puoli on 5 mutta oikea puoli 20."
+          },
+          {
+            "id": "e",
+            "text": "x = 20 ÷ 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 5, molemmat puolet ovat 5."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 5
+        }
+      },
+      "solution": {
+        "steps": [
+          "20 × 1/4 = 5",
+          "x = 20 × 1/4"
+        ],
+        "final": "x = 20 · 1/4; x = 20 ÷ 4"
+      },
+      "feedback": {
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+      },
+      "provenance": {
+        "template": "num04_mcs",
+        "params": {
+          "p": 0.1,
+          "q": 20,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Kilo omenoita maksaa 8 €. Ostat 0,5 kiloa, ja maksettava hinta on x euroa. Valitse kaikki yhtälöt, joiden ratkaisu on oikea hinta x = 4."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 8 · 1,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 4 mutta oikea puoli 12."
+          },
+          {
+            "id": "b",
+            "text": "x = 0,5 · 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, molemmat puolet ovat 4."
+          },
+          {
+            "id": "c",
+            "text": "x = 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 4 mutta oikea puoli 8."
+          },
+          {
+            "id": "d",
+            "text": "x = 8 · 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, molemmat puolet ovat 4."
+          },
+          {
+            "id": "e",
+            "text": "x = 8 + 0,5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 4 mutta oikea puoli 8,5."
+          },
+          {
+            "id": "f",
+            "text": "x = 8 ÷ 0,5",
+            "misconception": "NUM-04",
+            "feedback": "Kun sijoitat x = 4, vasen puoli on 4 mutta oikea puoli 16."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 4
+        }
+      },
+      "solution": {
+        "steps": [
+          "Hinta = kilohinta × määrä = 8 × 0,5",
+          "x = 4"
+        ],
+        "final": "x = 8 · 0,5; x = 0,5 · 8"
+      },
+      "feedback": {
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+      },
+      "provenance": {
+        "template": "num04_mcs",
+        "params": {
+          "p": 0.5,
+          "q": 8,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Luku 40 kerrotaan ensin luvulla 0,75 ja saatu tulos kerrotaan vielä luvulla 0,75. Lopputulos on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 22,5."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 40 · 0,75 · 0,75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 22,5, molemmat puolet ovat 22,5."
+          },
+          {
+            "id": "b",
+            "text": "x = 40 · 0,75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 22,5, vasen puoli on 22,5 mutta oikea puoli 30."
+          },
+          {
+            "id": "c",
+            "text": "x = 40 ÷ 0,75 ÷ 0,75",
+            "misconception": "NUM-04",
+            "feedback": "Kun sijoitat x = 22,5, vasen puoli on 22,5 mutta oikea puoli 640/9."
+          },
+          {
+            "id": "d",
+            "text": "x = 40 + 0,75 + 0,75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 22,5, vasen puoli on 22,5 mutta oikea puoli 41,5."
+          },
+          {
+            "id": "e",
+            "text": "x = (40 · 0,75) · 0,75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 22,5, molemmat puolet ovat 22,5."
+          },
+          {
+            "id": "f",
+            "text": "x = 40",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 22,5, vasen puoli on 22,5 mutta oikea puoli 40."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 22.5
+        }
+      },
+      "solution": {
+        "steps": [
+          "40 × 0,75 = 30",
+          "30 × 0,75 = 22,5",
+          "x = 40 × 0,75 × 0,75"
+        ],
+        "final": "x = 40 · 0,75 · 0,75; x = (40 · 0,75) · 0,75"
+      },
+      "feedback": {
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+      },
+      "provenance": {
+        "template": "num04_mcs",
+        "params": {
+          "p": 0.75,
+          "q": 40,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 4
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "NUM-04-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S2.03"
+        ],
+        "t": [
+          "T11"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "NUM-04"
+      ],
+      "prompt": {
+        "text": "Kun tuntematon luku x kerrotaan luvulla 0,75, tulos on 15. Valitse kaikki yhtälöt, joiden ratkaisu on x = 20."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0,75 · x = 20",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 20, vasen puoli on 15 mutta oikea puoli 20."
+          },
+          {
+            "id": "b",
+            "text": "0,75 · x = 15",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 20, molemmat puolet ovat 15."
+          },
+          {
+            "id": "c",
+            "text": "x = 15 · 0,75",
+            "misconception": "NUM-04",
+            "feedback": "Kun sijoitat x = 20, vasen puoli on 20 mutta oikea puoli 11,25."
+          },
+          {
+            "id": "d",
+            "text": "x = 15 ÷ 0,75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 20, molemmat puolet ovat 20."
+          },
+          {
+            "id": "e",
+            "text": "x = 15",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 20, vasen puoli on 20 mutta oikea puoli 15."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 20
+        }
+      },
+      "solution": {
+        "steps": [
+          "Tulo on pienempi kuin x, joten x on suurempi kuin 15",
+          "0,75 × x = 15",
+          "x = 15 / 0,75 = 20"
+        ],
+        "final": "0,75 · x = 15; x = 15 ÷ 0,75"
+      },
+      "feedback": {
+        "correct": "Kun kerrotaan luvulla, joka on pienempi kuin 1, tulos on pienempi kuin alkuperäinen luku."
+      },
+      "provenance": {
+        "template": "num04_mcs",
+        "params": {
+          "p": 0.75,
+          "q": 20,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 4
+      }
     }
   ]
 }

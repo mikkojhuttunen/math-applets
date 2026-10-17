@@ -382,6 +382,437 @@
         "verified": true,
         "run": 8
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5(x + 6) = 75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 75."
+          },
+          {
+            "id": "b",
+            "text": "5x + 6 = 75",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 51 mutta oikea puoli 75."
+          },
+          {
+            "id": "c",
+            "text": "5x + 30 = 75",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 75."
+          },
+          {
+            "id": "d",
+            "text": "5(x + 6) = 99",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 75 mutta oikea puoli 99."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 9: 5(9 + 6) = 75",
+          "5(x + 6) = 75"
+        ],
+        "final": "5(x + 6) = 75; 5x + 30 = 75"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_mcs",
+        "params": {
+          "a": 5,
+          "b": 6,
+          "c": 75,
+          "d": 5,
+          "x": 9
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 8."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "4(x − 2) = 30",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 24 mutta oikea puoli 30."
+          },
+          {
+            "id": "b",
+            "text": "4x − 2 = 24",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 30 mutta oikea puoli 24."
+          },
+          {
+            "id": "c",
+            "text": "4(x − 2) = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 24."
+          },
+          {
+            "id": "d",
+            "text": "4x − 8 = 24",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 24."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 8: 4(8 − 2) = 24",
+          "4(x − 2) = 24"
+        ],
+        "final": "4(x − 2) = 24; 4x − 8 = 24"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_mcs",
+        "params": {
+          "a": 4,
+          "b": 2,
+          "c": 24,
+          "d": 5,
+          "x": 8
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 8."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2(x + 4) + 4x = 56",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 56."
+          },
+          {
+            "id": "b",
+            "text": "6x + 4 = 56",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 52 mutta oikea puoli 56."
+          },
+          {
+            "id": "c",
+            "text": "2x + 4 + 4x = 56",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 52 mutta oikea puoli 56."
+          },
+          {
+            "id": "d",
+            "text": "6x + 8 = 56",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, molemmat puolet ovat 56."
+          },
+          {
+            "id": "e",
+            "text": "2(x + 4) + 4x = 62",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 8, vasen puoli on 56 mutta oikea puoli 62."
+          }
+        ],
+        "correct": [
+          "a",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 8
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 8: 2(8 + 4) + 4 · 8 = 56",
+          "2(x + 4) + 4x = 56"
+        ],
+        "final": "2(x + 4) + 4x = 56; 6x + 8 = 56"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_mcs",
+        "params": {
+          "a": 2,
+          "b": 4,
+          "c": 56,
+          "d": 4,
+          "x": 8
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2(3x + 3) = 60",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 60."
+          },
+          {
+            "id": "b",
+            "text": "2(3x + 3) = 63",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 60 mutta oikea puoli 63."
+          },
+          {
+            "id": "c",
+            "text": "6x + 6 = 60",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 60."
+          },
+          {
+            "id": "d",
+            "text": "6x + 3 = 60",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 57 mutta oikea puoli 60."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan x = 9: 2(3 · 9 + 3) = 60",
+          "2(3x + 3) = 60"
+        ],
+        "final": "2(3x + 3) = 60; 6x + 6 = 60"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_mcs",
+        "params": {
+          "a": 2,
+          "b": 3,
+          "c": 60,
+          "d": 3,
+          "x": 9
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 11
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-08-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.02"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-08"
+      ],
+      "prompt": {
+        "text": "Siivooja veloittaa 3 euroa tunnilta. Työ kestää x + 3 tuntia, ja koko työn hinta on 36 euroa. Valitse kaikki yhtälöt, joiden ratkaisu x = 9 on tuntimäärä ilman 3 tunnin lisäosaa."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "3x + 9 = 36",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 36."
+          },
+          {
+            "id": "b",
+            "text": "3x + 3 = 36",
+            "misconception": "ALG-08",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 30 mutta oikea puoli 36."
+          },
+          {
+            "id": "c",
+            "text": "3(x + 3) = 36",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 36."
+          },
+          {
+            "id": "d",
+            "text": "3(x + 3) = 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 36 mutta oikea puoli 27."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Hinta = tuntihinta · tunnit = 3(x + 3)",
+          "3(x + 3) = 36"
+        ],
+        "final": "3(x + 3) = 36; 3x + 9 = 36"
+      },
+      "feedback": {
+        "correct": "Kun x:n paikalle sijoitetaan pyydetty luku, yhtälön molemmat puolet ovat yhtä suuret.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja laske molemmat puolet: ovatko ne yhtä suuret? Muista, että kerroin kertoo koko sulun."
+      },
+      "provenance": {
+        "template": "alg08_mcs",
+        "params": {
+          "a": 3,
+          "b": 3,
+          "c": 36,
+          "d": 5,
+          "x": 9
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 11
+      }
     }
   ]
 }

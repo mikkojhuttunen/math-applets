@@ -376,6 +376,457 @@
         "verified": true,
         "run": 1
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Koululla on 7 kertaa enemmän oppilaita kuin opettajia. Opettajia on 12. Valitse kaikki yhtälöt, joiden ratkaisu on oppilaiden lukumäärä o."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "o = 12/7",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat o = 84, vasen puoli on 84 mutta oikea puoli 12/7."
+          },
+          {
+            "id": "b",
+            "text": "o/7 = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat o = 84, molemmat puolet ovat 12."
+          },
+          {
+            "id": "c",
+            "text": "o = 12 + 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat o = 84, vasen puoli on 84 mutta oikea puoli 19."
+          },
+          {
+            "id": "d",
+            "text": "7o = 12",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat o = 84, vasen puoli on 588 mutta oikea puoli 12."
+          },
+          {
+            "id": "e",
+            "text": "o = 7 · 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat o = 84, molemmat puolet ovat 84."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "o",
+          "value": 84
+        }
+      },
+      "solution": {
+        "steps": [
+          "o on 7 kertaa opettajien määrä",
+          "o = 7 · 12",
+          "o = 84"
+        ],
+        "final": "o = 7 · 12; o/7 = 12"
+      },
+      "feedback": {
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg10_mcs",
+        "params": {
+          "n": 7,
+          "q": 12,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Koululla on 9 kertaa enemmän pelaajia kuin valmentajia. Valmentajia on 12. Valitse kaikki yhtälöt, joiden ratkaisu on pelaajien lukumäärä p."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "p = 12 + 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat p = 108, vasen puoli on 108 mutta oikea puoli 21."
+          },
+          {
+            "id": "b",
+            "text": "p = 9 · 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat p = 108, molemmat puolet ovat 108."
+          },
+          {
+            "id": "c",
+            "text": "p/9 = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat p = 108, molemmat puolet ovat 12."
+          },
+          {
+            "id": "d",
+            "text": "9p = 12",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat p = 108, vasen puoli on 972 mutta oikea puoli 12."
+          },
+          {
+            "id": "e",
+            "text": "p = 12/9",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat p = 108, vasen puoli on 108 mutta oikea puoli 4/3."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "p",
+          "value": 108
+        }
+      },
+      "solution": {
+        "steps": [
+          "p on 9 kertaa valmentajien määrä",
+          "p = 9 · 12",
+          "p = 108"
+        ],
+        "final": "p = 9 · 12; p/9 = 12"
+      },
+      "feedback": {
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg10_mcs",
+        "params": {
+          "n": 9,
+          "q": 12,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T7"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Koululla on 6 kertaa enemmän kirjoja kuin lehtiä. Lehtiä on 11. Valitse kaikki yhtälöt, joiden ratkaisu on kirjojen lukumäärä k."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "k/6 = 11",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 66, molemmat puolet ovat 11."
+          },
+          {
+            "id": "b",
+            "text": "k = 11 + 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 66, vasen puoli on 66 mutta oikea puoli 17."
+          },
+          {
+            "id": "c",
+            "text": "k = 6 · 11",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 66, molemmat puolet ovat 66."
+          },
+          {
+            "id": "d",
+            "text": "6k = 11",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat k = 66, vasen puoli on 396 mutta oikea puoli 11."
+          },
+          {
+            "id": "e",
+            "text": "k = 11/6",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat k = 66, vasen puoli on 66 mutta oikea puoli 11/6."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 66
+        }
+      },
+      "solution": {
+        "steps": [
+          "k on 6 kertaa lehtien määrä",
+          "k = 6 · 11",
+          "k = 66"
+        ],
+        "final": "k = 6 · 11; k/6 = 11"
+      },
+      "feedback": {
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg10_mcs",
+        "params": {
+          "n": 6,
+          "q": 11,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04"
+        ],
+        "t": [
+          "T14",
+          "T4"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Kyyhkysiä on 16, ja se on 4 kertaa enemmän kuin harakoita. Valitse kaikki yhtälöt, joiden ratkaisu on harakoiden lukumäärä h."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "h = 16/4",
+            "misconception": null,
+            "feedback": "Kun sijoitat h = 4, molemmat puolet ovat 4."
+          },
+          {
+            "id": "b",
+            "text": "4h = 16",
+            "misconception": null,
+            "feedback": "Kun sijoitat h = 4, molemmat puolet ovat 16."
+          },
+          {
+            "id": "c",
+            "text": "h/4 = 16",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat h = 4, vasen puoli on 1 mutta oikea puoli 16."
+          },
+          {
+            "id": "d",
+            "text": "h = 4 · 16",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat h = 4, vasen puoli on 4 mutta oikea puoli 64."
+          },
+          {
+            "id": "e",
+            "text": "h + 4 = 16",
+            "misconception": null,
+            "feedback": "Kun sijoitat h = 4, vasen puoli on 8 mutta oikea puoli 16."
+          }
+        ],
+        "correct": [
+          "a",
+          "b"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "h",
+          "value": 4
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kyyhkysiä on 4 · h",
+          "4h = 16",
+          "h = 16 / 4 = 4"
+        ],
+        "final": "4h = 16; h = 16/4"
+      },
+      "feedback": {
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg10_mcs",
+        "params": {
+          "n": 4,
+          "q": 4,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 1
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-10-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S1.04",
+          "S3.05"
+        ],
+        "t": [
+          "T14",
+          "T4"
+        ],
+        "grade": 8,
+        "level": "K"
+      },
+      "misconceptions": [
+        "ALG-10"
+      ],
+      "prompt": {
+        "text": "Kahvikuppeja on 8 enemmän kuin 2-kertainen määrä teekuppeja. Teekuppeja on 10. Valitse kaikki yhtälöt, joiden ratkaisu on kahvikuppien lukumäärä k."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2k + 8 = 10",
+            "misconception": "ALG-10",
+            "feedback": "Kun sijoitat k = 28, vasen puoli on 64 mutta oikea puoli 10."
+          },
+          {
+            "id": "b",
+            "text": "k = 2 · 10 + 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 28, molemmat puolet ovat 28."
+          },
+          {
+            "id": "c",
+            "text": "k = 2 · (10 + 8)",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 28, vasen puoli on 28 mutta oikea puoli 36."
+          },
+          {
+            "id": "d",
+            "text": "k − 8 = 2 · 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 28, molemmat puolet ovat 20."
+          },
+          {
+            "id": "e",
+            "text": "k = 2 · 10 − 8",
+            "misconception": null,
+            "feedback": "Kun sijoitat k = 28, vasen puoli on 28 mutta oikea puoli 12."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "k",
+          "value": 28
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kerrotaan ensin: 2 · 10 = 20",
+          "Lisätään 8: k = 20 + 8",
+          "k = 28"
+        ],
+        "final": "k = 2 · 10 + 8; k − 8 = 2 · 10"
+      },
+      "feedback": {
+        "correct": "Yhtälön ratkaisu on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg10_mcs",
+        "params": {
+          "n": 6,
+          "q": 10,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 1
+      }
     }
   ]
 }

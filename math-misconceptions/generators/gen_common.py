@@ -70,16 +70,27 @@ def cli(make_items, tid, code):
     ap.add_argument("--run", type=int, default=1)
     ap.add_argument("--date", default="2026-09-30")
     ap.add_argument("--count", type=int, default=5)
+    ap.add_argument("--start", type=int, default=1, help="number of the first item")
     ap.add_argument("--write", action="store_true", help=f"write exercises/{tid}/{code}.json")
+    ap.add_argument("--append", action="store_true",
+                    help=f"append to exercises/{tid}/{code}.json, numbering on from its last item")
     a = ap.parse_args()
-    items = make_items(a.run, a.date, a.count)
-    doc = {"schema_version": "1.0", "topic": tid, "type": code, "items": items}
+    out = Path(__file__).resolve().parent.parent / "exercises" / tid / f"{code}.json"
+    start = a.start
+    if a.append:
+        if not out.exists():
+            raise SystemExit(f"{out} does not exist; use --write")
+        doc = json.loads(out.read_text(encoding="utf-8"))
+        start = len(doc["items"]) + 1
+        assert doc["items"][-1]["id"] == f"{tid}-{code}-{start - 1:03d}", "item numbering has gaps"
+        doc["items"] += make_items(a.run, a.date, a.count, start)
+    else:
+        doc = {"schema_version": "1.0", "topic": tid, "type": code, "items": make_items(a.run, a.date, a.count, start)}
     text = json.dumps(doc, ensure_ascii=False, indent=2) + "\n"
-    if a.write:
-        out = Path(__file__).resolve().parent.parent / "exercises" / tid / f"{code}.json"
+    if a.write or a.append:
         out.parent.mkdir(parents=True, exist_ok=True)
-        if out.exists():
-            raise SystemExit(f"{out} exists; appending needs manual numbering")
+        if a.write and out.exists():
+            raise SystemExit(f"{out} exists; use --append")
         out.write_text(text, encoding="utf-8")
     else:
         print(text)

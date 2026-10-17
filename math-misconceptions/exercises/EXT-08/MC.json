@@ -407,6 +407,482 @@
         "verified": true,
         "run": 22
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Viiden oppilaan koepisteistä neljä on 10, 13, 3 ja 6, ja viides on x. Pisteiden keskiarvo on 11. Valitse kaikki yhtälöt, joiden ratkaisu on oikea pistemäärä x = 23."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(10 + 13 + 3 + 6 + x) ÷ 6 = 11",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 23, vasen puoli on 55/6 mutta oikea puoli 11."
+          },
+          {
+            "id": "b",
+            "text": "x = 11",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 23, vasen puoli on 23 mutta oikea puoli 11."
+          },
+          {
+            "id": "c",
+            "text": "(10 + 13 + 3 + 6 + x) ÷ 5 = 11",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 23, molemmat puolet ovat 11."
+          },
+          {
+            "id": "d",
+            "text": "10 + 13 + 3 + 6 + x = 55",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 23, molemmat puolet ovat 55."
+          },
+          {
+            "id": "e",
+            "text": "x ÷ 5 = 11",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 23, vasen puoli on 4,6 mutta oikea puoli 11."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 23
+        }
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo = summa / 5",
+          "(10 + 13 + 3 + 6 + x) / 5 = 11",
+          "x = 55 − 32 = 23"
+        ],
+        "final": "(10 + 13 + 3 + 6 + x) ÷ 5 = 11; 10 + 13 + 3 + 6 + x = 55"
+      },
+      "feedback": {
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
+      },
+      "provenance": {
+        "template": "ext08_mcs",
+        "params": {
+          "values": [
+            10,
+            13,
+            3,
+            6
+          ],
+          "mean": 11,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Kuuden luvun lista on järjestetty pienimmästä suurimpaan, ja kaksi keskimmäistä lukua ovat 23 ja x. Listan mediaani on 33. Valitse kaikki yhtälöt, joiden ratkaisu on x = 43."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "23 + x = 33",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 43, vasen puoli on 66 mutta oikea puoli 33."
+          },
+          {
+            "id": "b",
+            "text": "23 + x = 66",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 43, molemmat puolet ovat 66."
+          },
+          {
+            "id": "c",
+            "text": "(23 + x) ÷ 2 = 33",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 43, molemmat puolet ovat 33."
+          },
+          {
+            "id": "d",
+            "text": "x ÷ 2 = 33",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 43, vasen puoli on 21,5 mutta oikea puoli 33."
+          },
+          {
+            "id": "e",
+            "text": "x = 33",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 43, vasen puoli on 43 mutta oikea puoli 33."
+          }
+        ],
+        "correct": [
+          "b",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 43
+        }
+      },
+      "solution": {
+        "steps": [
+          "Mediaani on kahden keskimmäisen keskiarvo",
+          "(23 + x) / 2 = 33",
+          "x = 66 − 23 = 43"
+        ],
+        "final": "(23 + x) ÷ 2 = 33; 23 + x = 66"
+      },
+      "feedback": {
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
+      },
+      "provenance": {
+        "template": "ext08_mcs",
+        "params": {
+          "p": 23,
+          "median": 33,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Neljän ostoksen hinnoista kolme on 19, 25 ja 26 euroa, ja neljäs on x euroa. Hintojen keskiarvo on 27 euroa. Valitse kaikki yhtälöt, joiden ratkaisu on oikea hinta x = 38."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(19 + 25 + 26 + x) ÷ 4 = 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 38, molemmat puolet ovat 27."
+          },
+          {
+            "id": "b",
+            "text": "x ÷ 4 = 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 38, vasen puoli on 9,5 mutta oikea puoli 27."
+          },
+          {
+            "id": "c",
+            "text": "(19 + 25 + 26 + x) ÷ 5 = 27",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 38, vasen puoli on 21,6 mutta oikea puoli 27."
+          },
+          {
+            "id": "d",
+            "text": "x = 27",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 38, vasen puoli on 38 mutta oikea puoli 27."
+          },
+          {
+            "id": "e",
+            "text": "19 + 25 + 26 + x = 108",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 38, molemmat puolet ovat 108."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 38
+        }
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo = summa / 4",
+          "(19 + 25 + 26 + x) / 4 = 27",
+          "x = 108 − 70 = 38"
+        ],
+        "final": "(19 + 25 + 26 + x) ÷ 4 = 27; 19 + 25 + 26 + x = 108"
+      },
+      "feedback": {
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
+      },
+      "provenance": {
+        "template": "ext08_mcs",
+        "params": {
+          "values": [
+            19,
+            25,
+            26
+          ],
+          "mean": 27,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "5 mittauksen keskiarvo on 6. Kun listaan lisätään yksi uusi mittaus x, keskiarvoksi tulee 9. Valitse kaikki yhtälöt, joiden ratkaisu on x = 24."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "(5 · 6 + x) ÷ 6 = 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 24, molemmat puolet ovat 9."
+          },
+          {
+            "id": "b",
+            "text": "(5 · 6 + x) ÷ 5 = 9",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 24, vasen puoli on 10,8 mutta oikea puoli 9."
+          },
+          {
+            "id": "c",
+            "text": "x = 9",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 24, vasen puoli on 24 mutta oikea puoli 9."
+          },
+          {
+            "id": "d",
+            "text": "5 · 6 + x = 54",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 24, molemmat puolet ovat 54."
+          },
+          {
+            "id": "e",
+            "text": "(6 + x) ÷ 2 = 9",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 24, vasen puoli on 15 mutta oikea puoli 9."
+          }
+        ],
+        "correct": [
+          "a",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 24
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vanhojen summa on 5 · 6 = 30",
+          "(30 + x) / 6 = 9",
+          "x = 54 − 30 = 24"
+        ],
+        "final": "(5 · 6 + x) ÷ 6 = 9; 5 · 6 + x = 54"
+      },
+      "feedback": {
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
+      },
+      "provenance": {
+        "template": "ext08_mcs",
+        "params": {
+          "n": 5,
+          "old_mean": 6,
+          "new_mean": 9,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-08-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S6.02",
+          "S6.03"
+        ],
+        "t": [
+          "T19"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-08"
+      ],
+      "prompt": {
+        "text": "Lukujen 23, 6, 15, 22, 19 ja x keskiarvo on x. Valitse kaikki yhtälöt, joiden ratkaisu on x = 17."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x = 85 ÷ 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 17, vasen puoli on 17 mutta oikea puoli 85/6."
+          },
+          {
+            "id": "b",
+            "text": "x = 15",
+            "misconception": "EXT-08",
+            "feedback": "Kun sijoitat x = 17, vasen puoli on 17 mutta oikea puoli 15."
+          },
+          {
+            "id": "c",
+            "text": "23 + 6 + 15 + 22 + 19 + x = 6x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 17, molemmat puolet ovat 102."
+          },
+          {
+            "id": "d",
+            "text": "(23 + 6 + 15 + 22 + 19 + x) ÷ 6 = x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 17, molemmat puolet ovat 17."
+          },
+          {
+            "id": "e",
+            "text": "(23 + 6 + 15 + 22 + 19) ÷ 5 = x ÷ 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 17, vasen puoli on 17 mutta oikea puoli 3,4."
+          },
+          {
+            "id": "f",
+            "text": "(23 + 6 + 15 + 22 + 19 + x) ÷ 5 = x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 17, vasen puoli on 20,4 mutta oikea puoli 17."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 17
+        }
+      },
+      "solution": {
+        "steps": [
+          "Keskiarvo on x, joten summa on 6x",
+          "23 + 6 + 15 + 22 + 19 + x = 6x",
+          "5x = 85, joten x = 17"
+        ],
+        "final": "(23 + 6 + 15 + 22 + 19 + x) ÷ 6 = x; 23 + 6 + 15 + 22 + 19 + x = 6x"
+      },
+      "feedback": {
+        "correct": "Keskiarvo on kaikkien lukujen summa jaettuna lukujen määrällä; mediaani on järjestetyn listan keskikohta.",
+        "generic_wrong": "Sijoita yhtälöön pyydetty x ja tarkista, tuleeko keskiarvoksi tai mediaaniksi annettu luku. Keskiarvo ei ole yksittäinen puuttuva arvo, vaan kaikkien lukujen summa jaettuna lukujen määrällä."
+      },
+      "provenance": {
+        "template": "ext08_mcs",
+        "params": {
+          "values": [
+            23,
+            6,
+            15,
+            22,
+            19
+          ],
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
     }
   ]
 }

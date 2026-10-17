@@ -376,6 +376,462 @@
         "verified": true,
         "run": 23
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 2x + 8, ja suoran piste on korkeudella y = 26. Valitse kaikki yhtälöt, joiden ratkaisu on pisteen x-koordinaatti x = 9."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "2x = 18",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 18."
+          },
+          {
+            "id": "b",
+            "text": "2x + 8 = 26",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, molemmat puolet ovat 26."
+          },
+          {
+            "id": "c",
+            "text": "8x + 2 = 26",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 74 mutta oikea puoli 26."
+          },
+          {
+            "id": "d",
+            "text": "8x = 26",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 72 mutta oikea puoli 26."
+          },
+          {
+            "id": "e",
+            "text": "2 + 8x = 26",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 9, vasen puoli on 74 mutta oikea puoli 26."
+          }
+        ],
+        "correct": [
+          "a",
+          "b"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 9
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan y = 26: 2x + 8 = 26",
+          "2x = 18",
+          "x = 9"
+        ],
+        "final": "2x + 8 = 26; 2x = 18"
+      },
+      "feedback": {
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_mcs",
+        "params": {
+          "m": 2,
+          "b": 8,
+          "v": 9,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 40 − 4x, ja suoran piste on korkeudella y = 32. Valitse kaikki yhtälöt, joiden ratkaisu on pisteen x-koordinaatti x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "40 − 4x = 32",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 32."
+          },
+          {
+            "id": "b",
+            "text": "40 + 4x = 32",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 48 mutta oikea puoli 32."
+          },
+          {
+            "id": "c",
+            "text": "40 − 32 = 4x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 8."
+          },
+          {
+            "id": "d",
+            "text": "4 − 40x = 32",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on −76 mutta oikea puoli 32."
+          },
+          {
+            "id": "e",
+            "text": "4x = 32",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 8 mutta oikea puoli 32."
+          }
+        ],
+        "correct": [
+          "a",
+          "c"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan y = 32: 40 − 4x = 32",
+          "4x = 8",
+          "x = 2"
+        ],
+        "final": "40 − 4x = 32; 40 − 32 = 4x"
+      },
+      "feedback": {
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_mcs",
+        "params": {
+          "m": -4,
+          "b": 40,
+          "v": 2,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "T"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran yhtälö on y = 4x + 12. Suora leikkaa x-akselin kohdassa, jossa y = 0. Valitse kaikki yhtälöt, joiden ratkaisu on leikkauskohta x = −3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "12x + 4 = 0",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = −3, vasen puoli on −32 mutta oikea puoli 0."
+          },
+          {
+            "id": "b",
+            "text": "4x = −12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −3, molemmat puolet ovat −12."
+          },
+          {
+            "id": "c",
+            "text": "12x = 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −3, vasen puoli on −36 mutta oikea puoli 4."
+          },
+          {
+            "id": "d",
+            "text": "4x = 12",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −3, vasen puoli on −12 mutta oikea puoli 12."
+          },
+          {
+            "id": "e",
+            "text": "4x + 12 = 0",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = −3, molemmat puolet ovat 0."
+          }
+        ],
+        "correct": [
+          "b",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": -3
+        }
+      },
+      "solution": {
+        "steps": [
+          "Sijoitetaan y = 0: 4x + 12 = 0",
+          "4x = −12",
+          "x = −3"
+        ],
+        "final": "4x + 12 = 0; 4x = −12"
+      },
+      "feedback": {
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_mcs",
+        "params": {
+          "m": 4,
+          "b": 12,
+          "v": -3,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suorat y = 5x + 4 ja y = 3x + 10 leikkaavat. Valitse kaikki yhtälöt, joiden ratkaisu on leikkauspisteen x-koordinaatti x = 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5x + 3 = 4x + 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 18 mutta oikea puoli 22."
+          },
+          {
+            "id": "b",
+            "text": "5x + 4 = 10x + 3",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 19 mutta oikea puoli 33."
+          },
+          {
+            "id": "c",
+            "text": "5x + 4 = 3x + 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 19."
+          },
+          {
+            "id": "d",
+            "text": "4x + 5 = 10x + 3",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 17 mutta oikea puoli 33."
+          },
+          {
+            "id": "e",
+            "text": "5x − 3x = 10 − 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 6."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        }
+      },
+      "solution": {
+        "steps": [
+          "Leikkauspisteessä y-arvot ovat yhtä suuret",
+          "5x + 4 = 3x + 10",
+          "x = 3"
+        ],
+        "final": "5x + 4 = 3x + 10; 5x − 3x = 10 − 4"
+      },
+      "feedback": {
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_mcs",
+        "params": {
+          "m1": 5,
+          "b1": 4,
+          "m2": 3,
+          "b2": 10,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "EXT-09-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S4.05"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 8,
+        "level": "H"
+      },
+      "misconceptions": [
+        "EXT-09"
+      ],
+      "prompt": {
+        "text": "Suoran pisteiden taulukossa x = 0, 1, 2 ja y = 6, 11, 16. Suoran piste on korkeudella y = 16. Valitse kaikki yhtälöt, joiden ratkaisu on pisteen x-koordinaatti x = 2."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "6x = 16",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 12 mutta oikea puoli 16."
+          },
+          {
+            "id": "b",
+            "text": "5 + 6x = 16",
+            "misconception": "EXT-09",
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 17 mutta oikea puoli 16."
+          },
+          {
+            "id": "c",
+            "text": "11x = 16",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, vasen puoli on 22 mutta oikea puoli 16."
+          },
+          {
+            "id": "d",
+            "text": "5x = 10",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 10."
+          },
+          {
+            "id": "e",
+            "text": "6 + 5x = 16",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 2, molemmat puolet ovat 16."
+          }
+        ],
+        "correct": [
+          "d",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 2
+        }
+      },
+      "solution": {
+        "steps": [
+          "Kun x = 0, y = 6, ja x:n kasvaessa yhdellä y kasvaa 5",
+          "y = 6 + 5x",
+          "6 + 5x = 16, joten x = 2"
+        ],
+        "final": "6 + 5x = 16; 5x = 10"
+      },
+      "feedback": {
+        "correct": "Kulmakerroin on x:n kerroin ja vakiotermi on y:n arvo kohdassa x = 0.",
+        "generic_wrong": "Sijoita x:n paikalle pyydetty luku ja tarkista tulos. Suoralla y = mx + b luku m on x:n kerroin eli kulmakerroin, ja b on vakiotermi eli y:n arvo kohdassa x = 0."
+      },
+      "provenance": {
+        "template": "ext09_mcs",
+        "params": {
+          "m": 5,
+          "b": 6,
+          "v": 2,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 24
+      }
     }
   ]
 }

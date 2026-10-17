@@ -382,6 +382,464 @@
         "verified": true,
         "run": 1
       }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-006",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 10."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "9 + 5 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 10, vasen puoli on 14 mutta oikea puoli 10."
+          },
+          {
+            "id": "b",
+            "text": "9 + 5 = x − 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 10, vasen puoli on 14 mutta oikea puoli 6."
+          },
+          {
+            "id": "c",
+            "text": "9 + 5 = x + 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 10, molemmat puolet ovat 14."
+          },
+          {
+            "id": "d",
+            "text": "9 + 5 = x + 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 10, vasen puoli on 14 mutta oikea puoli 15."
+          },
+          {
+            "id": "e",
+            "text": "x + 4 = 9 + 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 10, molemmat puolet ovat 14."
+          }
+        ],
+        "correct": [
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 10
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 5 = 14",
+          "Sijoita x = 10: 10 + 4 = 14, joten 9 + 5 = x + 4 kelpaa"
+        ],
+        "final": "9 + 5 = x + 4; x + 4 = 9 + 5"
+      },
+      "feedback": {
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_mcs",
+        "params": {
+          "a": 9,
+          "b": 5,
+          "c": 4,
+          "d": 3,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-007",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 7 = 9 + 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 13."
+          },
+          {
+            "id": "b",
+            "text": "x = 9 + 4",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 6 mutta oikea puoli 13."
+          },
+          {
+            "id": "c",
+            "text": "x + 8 = 9 + 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 14 mutta oikea puoli 13."
+          },
+          {
+            "id": "d",
+            "text": "x + 9 = 4 + 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 15 mutta oikea puoli 11."
+          },
+          {
+            "id": "e",
+            "text": "9 + 4 = x + 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 13."
+          }
+        ],
+        "correct": [
+          "a",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 4 = 13",
+          "Sijoita x = 6: 6 + 7 = 13, joten x + 7 = 9 + 4 kelpaa"
+        ],
+        "final": "x + 7 = 9 + 4; 9 + 4 = x + 7"
+      },
+      "feedback": {
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_mcs",
+        "params": {
+          "a": 9,
+          "b": 4,
+          "c": 7,
+          "d": 4,
+          "form": 1
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-008",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "9 + 5 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 14 mutta oikea puoli 7."
+          },
+          {
+            "id": "b",
+            "text": "9 + 5 = 8 + x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 14 mutta oikea puoli 15."
+          },
+          {
+            "id": "c",
+            "text": "9 + 5 = 7 + x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 14."
+          },
+          {
+            "id": "d",
+            "text": "7 + x = 9 + 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 14."
+          },
+          {
+            "id": "e",
+            "text": "9 + 5 + 7 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 21 mutta oikea puoli 7."
+          }
+        ],
+        "correct": [
+          "c",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 + 5 = 14",
+          "Sijoita x = 7: 7 + 7 = 14, joten 9 + 5 = 7 + x kelpaa"
+        ],
+        "final": "9 + 5 = 7 + x; 7 + x = 9 + 5"
+      },
+      "feedback": {
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_mcs",
+        "params": {
+          "a": 9,
+          "b": 5,
+          "c": 7,
+          "d": 3,
+          "form": 2
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-009",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Valitse kaikki yhtälöt, joiden ratkaisu on x = 3."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "9 − 3 = x − 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 6 mutta oikea puoli 0."
+          },
+          {
+            "id": "b",
+            "text": "9 − 3 = x + 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 6."
+          },
+          {
+            "id": "c",
+            "text": "9 − 3 = x + 4",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 6 mutta oikea puoli 7."
+          },
+          {
+            "id": "d",
+            "text": "x + 3 = 9 − 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 3, molemmat puolet ovat 6."
+          },
+          {
+            "id": "e",
+            "text": "9 − 3 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 3, vasen puoli on 6 mutta oikea puoli 3."
+          }
+        ],
+        "correct": [
+          "b",
+          "d"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 3
+        }
+      },
+      "solution": {
+        "steps": [
+          "9 − 3 = 6",
+          "Sijoita x = 3: 3 + 3 = 6, joten 9 − 3 = x + 3 kelpaa"
+        ],
+        "final": "9 − 3 = x + 3; x + 3 = 9 − 3"
+      },
+      "feedback": {
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_mcs",
+        "params": {
+          "a": 9,
+          "b": 3,
+          "c": 5,
+          "d": 3,
+          "form": 3
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 2
+      }
+    },
+    {
+      "schema_version": "1.0",
+      "id": "ALG-06-MC-010",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.05"
+        ],
+        "t": [
+          "T14"
+        ],
+        "grade": 7,
+        "level": "H"
+      },
+      "misconceptions": [
+        "ALG-06"
+      ],
+      "prompt": {
+        "text": "Vaa'an vasemmassa kupissa on 8 kg:n ja 3 kg:n painot, oikeassa kupissa 5 kg:n paino ja paino x kg. Valitse kaikki yhtälöt, jotka kuvaavat tasapainoa ja joiden ratkaisu on x = 6."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "8 + 3 = 5 + x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 11."
+          },
+          {
+            "id": "b",
+            "text": "8 + 3 = 5 − x",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 11 mutta oikea puoli −1."
+          },
+          {
+            "id": "c",
+            "text": "5 + x = 8 + 3",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 11."
+          },
+          {
+            "id": "d",
+            "text": "8 + 3 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 11 mutta oikea puoli 6."
+          },
+          {
+            "id": "e",
+            "text": "x = 8 + 3 − 5",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 6, molemmat puolet ovat 6."
+          },
+          {
+            "id": "f",
+            "text": "8 + 3 + 5 = x",
+            "misconception": "ALG-06",
+            "feedback": "Kun sijoitat x = 6, vasen puoli on 16 mutta oikea puoli 6."
+          }
+        ],
+        "correct": [
+          "a",
+          "c",
+          "e"
+        ],
+        "select": "all",
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 6
+        }
+      },
+      "solution": {
+        "steps": [
+          "Vasen kuppi: 8 + 3 = 11 kg",
+          "Oikea kuppi: 5 + x",
+          "8 + 3 = 5 + x"
+        ],
+        "final": "8 + 3 = 5 + x; 5 + x = 8 + 3; x = 8 + 3 − 5"
+      },
+      "feedback": {
+        "correct": "Yhtälön molemmat puolet ovat yhtä suuret, kun x on pyydetty luku."
+      },
+      "provenance": {
+        "template": "alg06_mcs",
+        "params": {
+          "a": 8,
+          "b": 3,
+          "c": 5,
+          "d": 4,
+          "form": 4
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 2
+      }
     }
   ]
 }

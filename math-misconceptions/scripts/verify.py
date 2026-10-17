@@ -5,7 +5,8 @@ Checks, in this order:
   1. Wrapper and item structure against schema/item.schema.json
   2. Curriculum links against the backlog topic table and the OPS file
   3. Algebra: recomputes answers, injected errors and distractors with sympy
-     (NE, ES, SO, FS, ME, RP). MC and other types are checked structurally only.
+     (NE, ES, SO, FS, ME, RP, and MC with payload.check). Other MC and other types are checked
+     structurally only.
   4. --base REF:      existing items must be unchanged; new items must be draft
   5. --check-backlog: matrix cells in the backlog must agree with the files
 
@@ -180,16 +181,22 @@ def check_MC(it, tid, topics):
     errs, warns = [], []
     p = it["payload"]
     ids = [o["id"] for o in p["options"]]
+    correct = set(p["correct"])
+    multi = p.get("select") == "all"
     if len(set(ids)) != len(ids):
         errs.append("duplicate option ids")
-    if p["correct"][0] not in ids:
+    if not correct <= set(ids):
         errs.append("correct id is not among the options")
+    if len(correct) > 1 and not multi:
+        errs.append("several correct options need \"select\": \"all\" (the pupil ticks every correct option)")
+    if multi and len(correct) == len(ids):
+        errs.append("select all: at least one option must be wrong")
     texts = [o["text"].strip().lower() for o in p["options"]]
     if len(set(texts)) != len(texts):
         errs.append("two options have the same text")
-    wrong = [o for o in p["options"] if o["id"] != p["correct"][0]]
+    wrong = [o for o in p["options"] if o["id"] not in correct]
     for o in p["options"]:
-        if o["id"] == p["correct"][0] and o["misconception"] is not None:
+        if o["id"] in correct and o["misconception"] is not None:
             errs.append("the correct option must have misconception null")
         if o["misconception"] and o["misconception"] not in topics:
             errs.append(f"option {o['id']}: unknown misconception {o['misconception']}")
@@ -197,7 +204,19 @@ def check_MC(it, tid, topics):
         errs.append(f"no wrong option is tagged with the topic misconception {tid}")
     if any(o["misconception"] is None for o in wrong):
         warns.append("some wrong options carry no misconception tag")
-    warns.append("MC correctness is not machine-checked; rely on the generator script and review")
+    if "check" in p:
+        # Options are equations; the correct ones are exactly those whose solution set is {value}.
+        target = sp.FiniteSet(sp.nsimplify(p["check"]["value"]))
+        for o in p["options"]:
+            kind, e = parse_line(o["text"])
+            e = sp.nsimplify(e, rational=True)  # decimals as exact fractions, like the value
+            if kind != "eq":
+                errs.append(f"option {o['id']} '{o['text']}' is not an equation")
+            elif (solset(kind, e) == target) != (o["id"] in correct):
+                errs.append(f"option {o['id']} '{o['text']}' is marked {'correct' if o['id'] in correct else 'wrong'}"
+                            f" but its solution set is {solset(kind, e)}")
+    else:
+        warns.append("MC correctness is not machine-checked; rely on the generator script and review")
     return errs, warns
 
 

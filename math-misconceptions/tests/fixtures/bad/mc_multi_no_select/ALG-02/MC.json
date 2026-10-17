@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0",
+  "topic": "ALG-02",
+  "type": "MC",
+  "items": [
+    {
+      "schema_version": "1.0",
+      "id": "ALG-02-MC-001",
+      "type": "MC",
+      "status": "draft",
+      "lang": "fi",
+      "curriculum": {
+        "ops": [
+          "S3.01"
+        ],
+        "t": [
+          "T15"
+        ],
+        "grade": 7,
+        "level": "T"
+      },
+      "misconceptions": [
+        "ALG-02"
+      ],
+      "prompt": {
+        "text": "Kaksoset ovat yhtä vanhoja. Toisen ikä on 7 vuotta, ja toisen ikää merkitään x:llä. Valitse kaikki yhtälöt, joiden ratkaisu on x = 7."
+      },
+      "payload": {
+        "options": [
+          {
+            "id": "a",
+            "text": "x + 6 = 7 + 6",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 13."
+          },
+          {
+            "id": "b",
+            "text": "x + 1 = 7",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 8 mutta oikea puoli 7."
+          },
+          {
+            "id": "c",
+            "text": "x = 7",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 7."
+          },
+          {
+            "id": "d",
+            "text": "x − 1 = 7",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 6 mutta oikea puoli 7."
+          },
+          {
+            "id": "e",
+            "text": "x = 8",
+            "misconception": "ALG-02",
+            "feedback": "Kun sijoitat x = 7, vasen puoli on 7 mutta oikea puoli 8."
+          },
+          {
+            "id": "f",
+            "text": "2x = 14",
+            "misconception": null,
+            "feedback": "Kun sijoitat x = 7, molemmat puolet ovat 14."
+          }
+        ],
+        "correct": [
+          "a",
+          "c",
+          "f"
+        ],
+        "check": {
+          "type": "solution_equals",
+          "variable": "x",
+          "value": 7
+        }
+      },
+      "solution": {
+        "steps": [
+          "x = y = 7",
+          "x + 6 = 7 + 6"
+        ],
+        "final": "x = 7; x + 6 = 7 + 6; 2x = 14"
+      },
+      "feedback": {
+        "correct": "x ja y saavat olla sama luku, ja yhtälö toteutuu arvolla x = 7."
+      },
+      "provenance": {
+        "template": "alg02_mcs",
+        "params": {
+          "p": 7,
+          "c": 6,
+          "form": 0
+        },
+        "generated": "2026-10-17",
+        "verified": true,
+        "run": 6
+      }
+    }
+  ]
+}

@@ -129,7 +129,16 @@
             }
           }
         },
-        "correct": {"type": "array", "minItems": 1, "maxItems": 1, "items": {"type": "string", "pattern": "^[a-h]$"}}
+        "correct": {"type": "array", "minItems": 1, "maxItems": 7, "uniqueItems": true, "items": {"type": "string", "pattern": "^[a-h]$"}},
+        "select": {"enum": ["one", "all"]},
+        "check": {
+          "type": "object", "additionalProperties": false, "required": ["type", "variable", "value"],
+          "properties": {
+            "type": {"const": "solution_equals"},
+            "variable": {"type": "string", "pattern": "^[a-z]$"},
+            "value": {"type": "number"}
+          }
+        }
       }
     },
     "payloadNE": {

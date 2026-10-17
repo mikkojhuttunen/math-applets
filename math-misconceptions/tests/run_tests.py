@@ -40,7 +40,7 @@ for rel in ("schema/item.schema.json", "scripts/verify.py", "scripts/build_bank.
 
 # 1. good fixtures pass
 r = run("verify.py", "--exercises", str(FIX / "good"))
-check("good fixtures verify OK", r.returncode == 0 and "VERIFY OK: 9 item(s)" in r.stdout, r.stdout[-300:])
+check("good fixtures verify OK", r.returncode == 0 and "VERIFY OK: 10 item(s)" in r.stdout, r.stdout[-300:])
 
 # 2. every bad fixture fails with its expected message
 EXPECT = {
@@ -58,6 +58,8 @@ EXPECT = {
     "prose_parentheses": "bracketed aside",
     "verdict_in_feedback": "starts with a verdict word",
     "prefix_on_expression": "answer_prefix is only for number answers",
+    "mc_multi_no_select": "several correct options need",
+    "mc_check_wrong": "is marked correct but its solution set",
 }
 for case, needle in EXPECT.items():
     r = run("verify.py", "--exercises", str(FIX / "bad" / case))
@@ -122,14 +124,16 @@ with tempfile.TemporaryDirectory() as tmp:
 with tempfile.TemporaryDirectory() as tmp:
     r = run("build_bank.py", "--exercises", str(FIX / "good"), "--out", tmp)
     bank = json.loads((Path(tmp) / "bank.json").read_text(encoding="utf-8"))
-    check("build_bank serves no drafts by default", r.returncode == 0 and bank["counts"]["items"] == 0 and bank["counts"]["skipped_by_status"] == {"draft": 9}, r.stdout)
+    check("build_bank serves no drafts by default", r.returncode == 0 and bank["counts"]["items"] == 0 and bank["counts"]["skipped_by_status"] == {"draft": 10}, r.stdout)
     r = run("build_bank.py", "--exercises", str(FIX / "good"), "--out", tmp, "--include-draft")
     bank = json.loads((Path(tmp) / "bank.json").read_text(encoding="utf-8"))
     index = json.loads((Path(tmp) / "index.json").read_text(encoding="utf-8"))
     ids = [i["id"] for i in bank["items"]]
-    check("build_bank --include-draft serves 9 items sorted by id", bank["counts"]["items"] == 9 and ids == sorted(ids), str(ids))
-    mc = next(i for i in bank["items"] if i["type"] == "MC")
+    check("build_bank --include-draft serves 10 items sorted by id", bank["counts"]["items"] == 10 and ids == sorted(ids), str(ids))
+    mc = next(i for i in bank["items"] if i["type"] == "MC" and "select" not in i["payload"])
     check("MC item gets telegram_poll flag", mc["flags"]["telegram_poll"] is True, str(mc["flags"]))
+    ms = next(i for i in bank["items"] if i["payload"].get("select") == "all")
+    check("select-all MC is not a Telegram quiz poll", ms["flags"]["telegram_poll"] is False, str(ms["flags"]))
     check("index groups by OPS goal", index["by_ops"]["S3.05"] == ["ALG-07-ES-001", "ALG-07-FS-001", "ALG-07-RP-001"], str(index["by_ops"].get("S3.05")))
     first = (Path(tmp) / "bank.json").read_text(encoding="utf-8")
     run("build_bank.py", "--exercises", str(FIX / "good"), "--out", tmp, "--include-draft")
@@ -172,7 +176,7 @@ if shutil.which("git"):
         new["status"] = "draft"
         p.write_text(json.dumps(doc, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         r = run("verify.py", "--base", "HEAD", cwd=work)
-        check("--base: new draft item passes", r.returncode == 0 and "10 item(s)" in r.stdout, r.stdout[-300:])
+        check("--base: new draft item passes", r.returncode == 0 and "11 item(s)" in r.stdout, r.stdout[-300:])
 else:
     print("SKIP  git not available: --base tests skipped")
 
