@@ -96,7 +96,8 @@ try {
       const { loadItems } = await import('./js/items.js');
       const { answerText } = await import('./js/round.js');
       const { items } = await loadItems(new URL('data/manifest.json', location.href).href, { includeDrafts: true });
-      return items.map((i) => ({ id: i.id, kind: i.kind, stem: i.stem, goals: i.goals, answer: answerText(i), wrong: i.wrong || [], options: i.options || [] }));
+      return items.map((i) => ({ id: i.id, kind: i.kind, stem: i.stem, goals: i.goals, answer: answerText(i), wrong: i.wrong || [], options: i.options || [],
+        prefix: i.answerPrefix || null, unit: (i.answer && i.answer.unit) || null }));
     });
     await page.close();
   }
@@ -195,6 +196,23 @@ try {
     await page.waitForSelector('#app a');
     check((await page.textContent('#app')).includes('ei ole vielä tehtäviä'), 'unknown goal message missing');
     problems.forEach((p) => failures.push(`start screen: ${p}`));
+    await page.close();
+  }
+
+  // A number answer framed as a sentence, "Hinta on [ ] euroa": words on both sides of the box.
+  const framed = data.find((i) => i.kind === 'entry' && i.prefix && i.unit);
+  check(framed, 'no item with answer_prefix and unit in the data');
+  if (framed) {
+    const { page, problems } = await pageWithGuards(context, origin);
+    await page.goto(`${origin}/harjoittele/?luonnokset=1&tehtava=${encodeURIComponent(framed.id)}`);
+    await page.waitForSelector('.answer-sentence #answer');
+    check((await page.textContent('.answer-prefix')) === framed.prefix, `prefix not shown for ${framed.id}`);
+    check((await page.textContent('.answer-unit')) === framed.unit, `unit not shown for ${framed.id}`);
+    await commonChecks(page, 'framed answer');
+    await page.fill('#answer', framed.answer.slice(0, -framed.unit.length).trim());
+    await page.press('#answer', 'Enter');
+    check((await page.textContent('.feedback')).includes('Oikein'), `framed item ${framed.id} not accepted`);
+    problems.forEach((p) => failures.push(`framed answer: ${p}`));
     await page.close();
   }
 

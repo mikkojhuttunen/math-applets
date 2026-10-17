@@ -72,6 +72,9 @@ footer { color: var(--dim); font-size: .85rem; margin-top: 32px; }
 .dot.now { background: var(--link); border-color: var(--link); }
 .stem { font-size: 1.6rem; font-weight: 600; margin: 16px 0; font-variant-numeric: tabular-nums; }
 .answer-row { display: flex; gap: 8px; flex-wrap: wrap; }
+.answer-sentence { flex: 1 1 100%; min-width: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 1.2rem; }
+.answer-sentence .answer { flex: 0 1 6em; min-width: 4em; }
+.answer-hint { color: var(--dim); font-size: .9rem; margin: 6px 0 0; }
 .answer {
   flex: 1 1 160px;
   min-width: 0;

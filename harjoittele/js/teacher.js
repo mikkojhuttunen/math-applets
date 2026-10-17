@@ -125,7 +125,8 @@ function itemCard(item) {
   const body = [head, el('p', { class: 'stem', text: item.stem })];
 
   if (item.kind === 'entry') {
-    body.push(el('p', { class: 'answer-line' }, 'Oikea vastaus: ', el('strong', { text: answerText(item) })));
+    body.push(el('p', { class: 'answer-line' }, 'Oikea vastaus: ', item.answerPrefix ? `${item.answerPrefix} ` : '',
+      el('strong', { text: answerText(item) })));
     if (item.wrong.length) {
       const rows = item.wrong.map((w) =>
         el('tr', {}, el('td', { text: w.match }), el('td', { text: misconceptionLabel(w.misconception) }), feedbackCell(w.misconception, w.feedback)));

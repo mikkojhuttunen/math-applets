@@ -2,6 +2,11 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.14.0 (2026-10-17)
+
+- Number answers framed as a sentence: `answer_prefix`, the box and `answer.unit` on one line ("Hinta on [ ] euroa"); the input hint moves below the row. An answer typed with the item's own unit ("12 euroa") is accepted. The teacher view shows the prefix with the correct answer.
+- Correct answers show "Oikein!" once, before the item's own feedback.
+
 ## 0.13.0 (2026-10-01)
 
 - `testaa.html`: test page with every applet and practice topic per school level (`LIVE_BACKLOG.md` L03).

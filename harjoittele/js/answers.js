@@ -236,8 +236,14 @@ function comparer(answer) {
     }
     case 'number': {
       const tol = Math.max(answer.tolerance || 0, 1e-9);
+      // The item's own unit is shown after the box; accept it typed as well ("12 euroa", "60 %").
+      const unit = answer.unit ? answer.unit.toLowerCase() : null;
+      const parse = (t) => {
+        const s = String(t).trim();
+        return parseNumber(unit && s.toLowerCase().endsWith(unit) ? s.slice(0, s.length - unit.length) : s);
+      };
       return {
-        parse: parseNumber,
+        parse,
         equal: (x) => Math.abs(fracToNumber(x) - answer.value) <= tol,
         same: (x, y) => Math.abs(fracToNumber(x) - fracToNumber(y)) <= tol,
       };

@@ -104,7 +104,8 @@ export function normalize7to9(raw) {
       misconception: w.misconception || null,
       feedback: w.feedback || null,
     }));
-    return { ...base, kind: 'entry', answer: a, wrong };
+    // "Hinta on [ ] euroa": optional words before the box; the unit after it is answer.unit.
+    return { ...base, kind: 'entry', answer: a, wrong, answerPrefix: payload.answer_prefix || null };
   }
   if (raw.type === 'MC') {
     const correct = new Set(payload.correct || []);

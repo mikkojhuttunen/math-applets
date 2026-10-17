@@ -56,6 +56,7 @@ test('7-9 items: NE and MC load, figures and other types are skipped', () => {
   assert.strictEqual(ne.kind, 'entry');
   assert.deepStrictEqual(ne.wrong, [{ match: '4', misconception: 'ALG-08', feedback: 'F' }]);
   assert.strictEqual(ne.grade, 7);
+  assert.strictEqual(ne.answerPrefix, null);
   const mc = normalize7to9({
     id: 'M-1', type: 'MC', prompt: { text: 'Valitse' }, payload: {
       options: [
@@ -104,4 +105,14 @@ test('every item in the real repo loads or is skipped with a reason', async () =
   assert.deepStrictEqual(r.errors, []);
   assert.strictEqual(r.items.length + r.skipped.length, manifest.totals.items);
   assert.ok(r.skipped.every((s) => s.reason));
+});
+
+test('7-9 NE number answers keep the words around the box', () => {
+  const ne = normalize7to9({
+    id: 'N-2', type: 'NE', curriculum: { ops: ['S3.01'], grade: 7, level: 'T' }, prompt: { text: 'Laske hinta.' },
+    payload: { answer: { kind: 'number', value: 12, unit: 'euroa' }, wrong: [], answer_prefix: 'Hinta on' },
+    feedback: { correct: 'Hyvä' }, solution: { steps: ['a'], final: '12' },
+  });
+  assert.strictEqual(ne.answerPrefix, 'Hinta on');
+  assert.strictEqual(ne.answer.unit, 'euroa');
 });

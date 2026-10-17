@@ -97,12 +97,22 @@ function renderQuestion() {
 
   if (item.kind === 'entry') {
     const expression = item.answer.kind === 'expression';
+    const unit = item.answer.kind === 'number' ? item.answer.unit : null;
+    const framed = Boolean(item.answerPrefix || unit);
     const input = el('input', {
       id: 'answer', class: 'answer', type: 'text', autocomplete: 'off', autocapitalize: 'off', spellcheck: 'false',
-      inputmode: expression ? 'text' : 'decimal', placeholder: item.hint || 'Vastaus', 'aria-label': 'Vastaus',
+      inputmode: expression ? 'text' : 'decimal', placeholder: framed ? '' : item.hint || 'Vastaus',
+      'aria-label': framed ? [item.answerPrefix, '…', unit].filter(Boolean).join(' ') : 'Vastaus',
     });
     const check = el('button', { type: 'submit', class: 'primary', text: 'Tarkista' });
-    const form = el('form', { class: 'answer-row' }, input, check);
+    // A framed answer reads as a sentence, "Hinta on [ ] euroa"; the hint moves below the row.
+    const box = framed
+      ? el('span', { class: 'answer-sentence' },
+        item.answerPrefix ? el('span', { class: 'answer-prefix', text: item.answerPrefix }) : null,
+        input,
+        unit ? el('span', { class: 'answer-unit', text: unit }) : null)
+      : input;
+    const form = el('form', { class: 'answer-row' }, box, check);
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       if (round.settled) return;
@@ -112,7 +122,8 @@ function renderQuestion() {
         check.disabled = true;
       }, () => input.select(), { item, given });
     });
-    nodes.push(form, feedback, numberPad(input, expression));
+    nodes.push(form, framed && item.hint ? el('p', { class: 'answer-hint', text: item.hint }) : null, feedback,
+      numberPad(input, expression));
   } else {
     const options = el('div', { class: 'options', role: 'group', 'aria-label': 'Vaihtoehdot' });
     for (const opt of presentOptions(item)) {

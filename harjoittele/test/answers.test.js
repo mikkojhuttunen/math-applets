@@ -133,3 +133,14 @@ test('fixture 7-9 items from the example generator check out too', async () => {
     for (const w of item.wrong) assert.strictEqual(checkAnswer(item, w.match).misconception, w.misconception, raw.id);
   }
 });
+
+test('checkAnswer: a number answer may be typed with its own unit', () => {
+  const price = { answer: { kind: 'number', value: 12, unit: 'euroa' }, wrong: [{ match: 7, misconception: 'ALG-01', feedback: 'F' }] };
+  assert.strictEqual(checkAnswer(price, '12').result, 'correct');
+  assert.strictEqual(checkAnswer(price, '12 euroa').result, 'correct');
+  assert.strictEqual(checkAnswer(price, '7 Euroa').misconception, 'ALG-01');
+  assert.strictEqual(checkAnswer(price, 'euroa').result, 'unreadable');
+  const pct = { answer: { kind: 'number', value: 60, unit: '%' }, wrong: [] };
+  assert.strictEqual(checkAnswer(pct, '60 %').result, 'correct');
+  assert.strictEqual(checkAnswer({ answer: { kind: 'number', value: 60 }, wrong: [] }, '60 %').result, 'unreadable');
+});
