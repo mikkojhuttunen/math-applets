@@ -190,17 +190,9 @@
     {
       "path": "../math-misconceptions/exercises/ALG-02/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/ALG-02/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -286,21 +278,13 @@
     {
       "path": "../math-misconceptions/exercises/ALG-06/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/ALG-06/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/ALG-06/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -326,21 +310,13 @@
     {
       "path": "../math-misconceptions/exercises/ALG-07/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/ALG-07/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/ALG-07/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -374,9 +350,9 @@
     {
       "path": "../math-misconceptions/exercises/ALG-08/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -389,14 +365,6 @@
     },
     {
       "path": "../math-misconceptions/exercises/ALG-08/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/ALG-08/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -462,17 +430,9 @@
     {
       "path": "../math-misconceptions/exercises/ALG-10/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/ALG-10/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -694,9 +654,9 @@
     {
       "path": "../math-misconceptions/exercises/EXT-04/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -709,14 +669,6 @@
     },
     {
       "path": "../math-misconceptions/exercises/EXT-04/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/EXT-04/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -814,21 +766,13 @@
     {
       "path": "../math-misconceptions/exercises/EXT-08/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/EXT-08/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/EXT-08/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -846,21 +790,13 @@
     {
       "path": "../math-misconceptions/exercises/EXT-09/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/EXT-09/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/EXT-09/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -1022,9 +958,9 @@
     {
       "path": "../math-misconceptions/exercises/NUM-04/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -1036,19 +972,11 @@
       }
     },
     {
-      "path": "../math-misconceptions/exercises/NUM-04/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
       "path": "../math-misconceptions/exercises/NUM-05/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -1060,27 +988,11 @@
       }
     },
     {
-      "path": "../math-misconceptions/exercises/NUM-05/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
       "path": "../math-misconceptions/exercises/NUM-06/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/NUM-06/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -1166,21 +1078,13 @@
     {
       "path": "../math-misconceptions/exercises/PRB-02/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/PRB-02/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/PRB-02/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
@@ -1222,9 +1126,9 @@
     {
       "path": "../math-misconceptions/exercises/PRO-03/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
@@ -1236,31 +1140,15 @@
       }
     },
     {
-      "path": "../math-misconceptions/exercises/PRO-03/RP.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
       "path": "../math-misconceptions/exercises/PRO-04/MC.json",
       "format": "grades7-9",
-      "items": 5,
+      "items": 10,
       "by_status": {
-        "draft": 5
+        "draft": 10
       }
     },
     {
       "path": "../math-misconceptions/exercises/PRO-04/NE.json",
-      "format": "grades7-9",
-      "items": 5,
-      "by_status": {
-        "draft": 5
-      }
-    },
-    {
-      "path": "../math-misconceptions/exercises/PRO-04/RP.json",
       "format": "grades7-9",
       "items": 5,
       "by_status": {
