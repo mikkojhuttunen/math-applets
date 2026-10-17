@@ -334,6 +334,51 @@ CHECKERS = {"MC": check_MC, "NE": check_NE, "ES": check_ES, "SO": check_SO,
             "FS": check_FS, "ME": check_ME, "RP": check_RP}
 
 
+# ------------------------------------------------------------- wording
+ASIDE_WORD = re.compile(r"[A-Za-zÅÄÖåäö]{2,}")
+ASIDE_OPERATOR = re.compile(r"\s*[+−\-·×÷=±/<>≤≥→]\s*")
+
+
+def bracket_asides(text):
+    """Bracketed asides in Finnish text, e.g. 'a kpl (omenaa)', 'luku (kg)', '(esimerkiksi 0,5 × 8 = 4)'.
+    Mathematical brackets are allowed: f(x), P(kruuna), 3(x + 2), (x + 7)², (1; 12), (pituus + leveys)."""
+    found = []
+    for m in re.finditer(r"\(([^()]*)\)", text):
+        before = text[:m.start()]
+        if before and (before[-1].isalnum() or before[-1] in ")²³"):
+            continue
+        inner = m.group(1).strip()
+        if re.fullmatch(r"[a-zåäö]", inner):
+            if re.search(r"[A-Za-zÅÄÖåäö]{3,}\s*$", before):
+                found.append(m.group(0))
+            continue
+        if not ASIDE_WORD.search(inner):
+            continue
+        operands = ASIDE_OPERATOR.split(inner)
+        if len(operands) > 1 and all(len(o.split()) <= 1 for o in operands):
+            continue
+        found.append(m.group(0))
+    return found
+
+
+def pupil_texts(item):
+    p = item["payload"]
+    yield "prompt", item["prompt"]["text"]
+    for o in p.get("options", []):
+        yield f"option {o['id']}", o["text"]
+        if o.get("feedback"):
+            yield f"option {o['id']} feedback", o["feedback"]
+    for w in p.get("wrong", []):
+        yield "wrong feedback", w["feedback"]
+    if p.get("input_hint"):
+        yield "input_hint", p["input_hint"]
+    for i, step in enumerate(item["solution"]["steps"], 1):
+        yield f"solution step {i}", step
+    yield "solution final", item["solution"]["final"]
+    for k, v in item["feedback"].items():
+        yield f"feedback.{k}", v
+
+
 # ------------------------------------------------------------- item level
 def verify_item(item, tid, code, ctx):
     errs, warns = [], []
@@ -356,6 +401,10 @@ def verify_item(item, tid, code, ctx):
         errs.append("id is too long for a Telegram callback_data payload")
     if not item["provenance"]["verified"]:
         errs.append("provenance.verified is false: only code-verified items may be committed")
+    for where, text in pupil_texts(item):
+        for aside in bracket_asides(text):
+            errs.append(f"{where}: bracketed aside {aside}; write it as part of the sentence "
+                        "(e.g. 'Ostetaan a omenaa', 'Kirjoita luku kilogrammoina')")
 
     row = ctx["topics"].get(tid)
     if row:

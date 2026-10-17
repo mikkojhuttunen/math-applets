@@ -66,7 +66,7 @@ Each item follows `schema/item.schema.json`. Required fields: `schema_version`, 
 | `curriculum.ops` | must include the topic's main S-ID; other entries only from its "OPS also" column |
 | `curriculum.t` | only T-goals listed for the topic in section 3.1 |
 | `provenance.verified` | `true` only if the answer was recomputed by code in the same run |
-| Text | Finnish, decimal comma; an always-present plain Unicode version (`x²`, `√`); `latex` is optional |
+| Text | Finnish, decimal comma; an always-present plain Unicode version (`x²`, `√`); `latex` is optional. No bracketed asides: write units, examples and variable letters into the sentence (`Ostetaan a omenaa`, `Kirjoita luku kilogrammoina`, `Merkitään kirjojen määrää k:lla`); brackets are for mathematics only (`3(x + 2)`, `P(kruuna)`). `verify.py` rejects asides |
 
 Payload fields per type (details and limits in the schema):
 
@@ -81,7 +81,7 @@ Payload fields per type (details and limits in the schema):
 | RP | `constraint` (`solution_equals`), `checks{valid[], invalid[]}` |
 | SC, MA, EST, GI, NL, EX, TF, PH | not yet specified; the schema accepts any object, so define the payload with the user before generating these types |
 
-What `scripts/verify.py` checks: structure, curriculum links, and the algebra of NE, ES, SO, FS, ME and RP (answers, injected errors and distractors are recomputed with sympy). MC correctness is not machine-checked, so its generator must compute the options from the same numbers. Every new item is reviewed by a human before `approved`.
+What `scripts/verify.py` checks: structure, curriculum links, wording (no bracketed asides in pupil-facing text), and the algebra of NE, ES, SO, FS, ME and RP (answers, injected errors and distractors are recomputed with sympy). MC correctness is not machine-checked, so its generator must compute the options from the same numbers. Every new item is reviewed by a human before `approved`.
 
 ### 1.4 Quality rules
 

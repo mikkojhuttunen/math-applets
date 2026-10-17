@@ -23,7 +23,7 @@
         "NUM-07"
       ],
       "prompt": {
-        "text": "Purkissa on nyt 180 g, mikä on 20 % enemmän kuin viime vuonna. Paljonko purkissa oli viime vuonna (g)?"
+        "text": "Purkissa on nyt 180 g, mikä on 20 % enemmän kuin viime vuonna. Paljonko purkissa oli viime vuonna grammoina?"
       },
       "payload": {
         "answer": {

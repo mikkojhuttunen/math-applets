@@ -55,6 +55,7 @@ EXPECT = {
     "duplicate_id": "duplicate id",
     "unverified": "verified is false",
     "fs_bad_solutions": "answer.solutions does not match",
+    "prose_parentheses": "bracketed aside",
 }
 for case, needle in EXPECT.items():
     r = run("verify.py", "--exercises", str(FIX / "bad" / case))
