@@ -5,7 +5,7 @@ where it differs, the mean."""
 import random
 
 from ext08_common import dec, mean, median, pick_list, txt, written_middle
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "ext08_ne"
 TID, CODE = "EXT-08", "NE"
@@ -18,21 +18,25 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(1801)
     items = []
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             vals = pick_list(rng, 5, 2, 20, want_mean=True)
             level = "T"
             prompt = f"Oppilaat saivat kokeesta pisteet {txt(vals)}. Mikä on pisteiden mediaani?"
             wrong = [written_middle(vals), mean(vals)]
+            fr = ("Mediaani on", "pistettä")
         elif k == 1:
             vals = pick_list(rng, 7, 1, 30)
             level = "T"
             prompt = f"Seitsemän päivän lämpötilat olivat {txt(vals)} astetta. Mikä on lämpötilojen mediaani?"
             wrong = [written_middle(vals)]
+            fr = ("Mediaani on", "astetta")
         elif k == 2:
             vals = pick_list(rng, 6, 3, 40)
             level = "T"
             prompt = f"Kuuden kävelylenkin pituudet olivat {txt(vals)} minuuttia. Mikä on pituuksien mediaani?"
             wrong = [written_middle(vals)]
+            fr = ("Mediaani on", "minuuttia")
         elif k == 3:
             base = pick_list(rng, 5, 5, 25)
             new = rng.choice([v for v in range(26, 40) if v not in base])
@@ -42,6 +46,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Viiden oppilaan lukemat kirjat ovat {txt(base)}. Kuudes oppilas on lukenut {new} kirjaa. "
                       f"Mikä on kaikkien kuuden oppilaan lukemien kirjojen mediaani?")
             wrong = [written_middle(vals)]
+            fr = ("Mediaani on", "kirjaa")
         else:
             n = 7
             while True:
@@ -57,6 +62,7 @@ def make_items(run, date, count=5, start=1):
                       f"Mikä on mediaanipalkka sadoissa euroissa?")
             vals = data
             wrong = [written_middle(data), mean(data)]
+            fr = ("Mediaanipalkka on", "sataa euroa")
         ans = median(vals)
         wrong = [w for w in dict.fromkeys(wrong) if w != ans]
         assert wrong
@@ -67,6 +73,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "number", "value": float(ans), "tolerance": 0},
                    "wrong": [{"match": float(w), "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku" + (" desimaalipilkulla" if ans.denominator != 1 else "")}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S6.02", "S6.03"], ["T19"], 7, level, prompt, payload, steps,
                                dec(ans), GOOD, TEMPLATE, {"values": vals}, date, run))
     return items

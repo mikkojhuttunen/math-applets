@@ -203,7 +203,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 14
+          "value": 14,
+          "unit": "astetta"
         },
         "wrong": [
           {
@@ -212,7 +213,8 @@
             "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Ero on"
       },
       "solution": {
         "steps": [
@@ -261,7 +263,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 13
+          "value": 13,
+          "unit": "m"
         },
         "wrong": [
           {
@@ -270,7 +273,8 @@
             "feedback": "Negatiivisen luvun vähentäminen ei pienennä lukua. Vähentäminen on vastaluvun lisäämistä: a − (−b) = a + b."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Korkeusero on"
       },
       "solution": {
         "steps": [

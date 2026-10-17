@@ -44,7 +44,8 @@
             "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Uuden neliön ala on"
       },
       "solution": {
         "steps": [
@@ -103,7 +104,8 @@
             "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suurennoksen ala on"
       },
       "solution": {
         "steps": [
@@ -163,7 +165,8 @@
             "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Uuden piirroksen ala on"
       },
       "solution": {
         "steps": [
@@ -212,7 +215,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 125
+          "value": 125,
+          "unit": "purkillista"
         },
         "wrong": [
           {
@@ -221,7 +225,8 @@
             "feedback": "Pinta-ala ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, pinta-ala on k²-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Maalia tarvitaan"
       },
       "solution": {
         "steps": [

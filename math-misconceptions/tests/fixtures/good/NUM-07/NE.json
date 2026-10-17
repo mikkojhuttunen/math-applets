@@ -38,7 +38,8 @@
             "misconception": "NUM-07",
             "feedback": "180 g on uusi määrä, ei perusarvo."
           }
-        ]
+        ],
+        "answer_prefix": "Viime vuonna purkissa oli"
       },
       "solution": {
         "steps": [

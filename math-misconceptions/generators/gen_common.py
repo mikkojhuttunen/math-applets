@@ -56,6 +56,15 @@ def base_item(tid, code, n, ops, t, grade, level, prompt, payload, steps, final,
     }
 
 
+def answer_frame(payload, prefix=None, unit=None):
+    """Words around the NE answer box, so the answer reads as a sentence: 'Hinta on [ ] euroa.'
+    A unit the generator already set is kept."""
+    if unit and "unit" not in payload["answer"]:
+        payload["answer"]["unit"] = unit
+    if prefix:
+        payload["answer_prefix"] = prefix
+
+
 def cli(make_items, tid, code):
     ap = argparse.ArgumentParser()
     ap.add_argument("--run", type=int, default=1)

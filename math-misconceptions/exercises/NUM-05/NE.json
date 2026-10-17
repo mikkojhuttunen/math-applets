@@ -145,7 +145,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 15.0
+          "value": 15.0,
+          "unit": "kpl"
         },
         "wrong": [
           {
@@ -154,7 +155,8 @@
             "feedback": "Jakolasku ei aina pienennä. Kun jakaja on pienempi kuin 1, osamäärä on suurempi kuin jaettava. Esimerkiksi 8 ÷ 0,5 = 16."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Pätkiä saadaan"
       },
       "solution": {
         "steps": [

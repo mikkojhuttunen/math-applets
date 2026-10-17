@@ -91,7 +91,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 4.6
+          "value": 4.6,
+          "unit": "kg"
         },
         "wrong": [
           {
@@ -100,7 +101,8 @@
             "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Painavampi pussi painaa"
       },
       "solution": {
         "steps": [
@@ -152,7 +154,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 1.9
+          "value": 1.9,
+          "unit": "kg"
         },
         "wrong": [
           {
@@ -166,7 +169,8 @@
             "feedback": "Desimaaliluvun numeroita ei lueta kokonaislukuna. Muuta luvut samoiksi paikka-arvoiksi, esimerkiksi 0,6 = 0,60, ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Painavin pussi painaa"
       },
       "solution": {
         "steps": [

@@ -3,7 +3,7 @@
 assumes proportionality (y scales with x)."""
 import random
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "fun05_ne"
 TID, CODE = "FUN-05", "NE"
@@ -16,6 +16,7 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(1271)
     items = []
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             a, b = rng.choice([(2, 3), (3, 4), (5, 2)])
             x0 = rng.choice([4, 5, 6])
@@ -30,6 +31,7 @@ def make_items(run, date, count=5, start=1):
                       "Mitä 10 km:n kuljetus maksaa euroina?")
             steps = [f"{b} + {a} · 10 = {ans}"]
             level, params = "T", {"a": a, "b": b, "form": k}
+            fr = ("10 km:n kuljetus maksaa", "euroa")
         elif k == 2:
             a, b = rng.choice([(3, 2), (4, 5), (2, 6)])
             x0 = rng.choice([2, 3])
@@ -54,6 +56,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "number", "value": ans},
                    "wrong": [{"match": wrong, "misconception": TID, "feedback": BAD}],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S4.03"], ["T14", "T15"], 8, level, prompt, payload, steps,
                                str(ans), GOOD, TEMPLATE, params, date, run))
     return items

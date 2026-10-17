@@ -137,7 +137,8 @@
       "properties": {
         "answer": {"oneOf": [{"$ref": "#/$defs/answerNumber"}, {"$ref": "#/$defs/answerExpression"}, {"$ref": "#/$defs/answerSet"}]},
         "wrong": {"type": "array", "items": {"$ref": "#/$defs/wrongEntry"}},
-        "input_hint": {"type": "string"}
+        "input_hint": {"type": "string"},
+        "answer_prefix": {"type": "string", "minLength": 1, "maxLength": 80}
       }
     },
     "payloadES": {

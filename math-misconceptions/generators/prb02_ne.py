@@ -4,7 +4,7 @@ the typical wrong answer is the count (or the other jar's value) that the count-
 import random
 from fractions import Fraction
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "prb02_ne"
 TID, CODE = "PRB-02", "NE"
@@ -21,6 +21,7 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(904)
     items, seen = [], set()
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             while True:
                 b1, b2 = rng.choice([8, 10, 20, 25]), rng.choice([4, 5, 10])
@@ -39,6 +40,7 @@ def make_items(run, date, count=5, start=1):
             prompt = (f"Purkissa on {a} mustaa kuulaa {b}:stä. Kuinka monta prosenttia on todennäköisyys nostaa musta kuula?")
             steps = [f"{a}/{b} = {ans} %"]
             params = {"a": a, "b": b}
+            fr = ("Todennäköisyys on", "%")
         elif k == 2:
             b, d = rng.choice([(12, 8), (20, 10), (15, 10)])
             a = rng.choice([x for x in range(2, b) if (Fraction(x * d, b)).denominator == 1 and x * d // b < d])
@@ -47,6 +49,7 @@ def make_items(run, date, count=5, start=1):
                       "Montako mustaa kuulaa purkissa 2 pitää olla, jotta mustan nostamisen todennäköisyys on sama kuin purkissa 1?")
             steps = [f"{a}/{b} = x/{d}", f"x = {a} · {d} / {b} = {ans}"]
             params = {"a": a, "b": b, "d": d}
+            fr = ("Purkissa 2 pitää olla", "mustaa kuulaa")
         elif k == 3:
             while True:
                 b1, b2 = rng.choice([10, 20, 25, 40]), rng.choice([4, 5, 8, 10])
@@ -59,6 +62,7 @@ def make_items(run, date, count=5, start=1):
                       "Kuinka monta prosenttia on todennäköisyys nostaa musta kuula siitä purkista, josta mahdollisuus on parempi?")
             steps = [f"Purkki 1: {a1}/{b1} = {pct(p1)} %", f"Purkki 2: {a2}/{b2} = {pct(p2)} %", f"Parempi on purkki 2: {ans} %"]
             params = {"a1": a1, "b1": b1, "a2": a2, "b2": b2, "higher_pct": True}
+            fr = ("Todennäköisyys on", "%")
         else:
             a, b, add = rng.choice([(2, 8, 2), (3, 12, 3), (6, 20, 5)])
             assert (a + add) * 100 % (b + add) == 0
@@ -68,6 +72,7 @@ def make_items(run, date, count=5, start=1):
                       "valkoisia ei lisätä. Kuinka monta prosenttia on nyt todennäköisyys nostaa punainen kuula?")
             steps = [f"Punaisia {a + add}, kuulia yhteensä {b + add}", f"{a + add}/{b + add} = {ans} %"]
             params = {"a": a, "b": b, "add": add}
+            fr = ("Todennäköisyys on", "%")
         assert all(w != ans for w in wrong)
         key = str(params)
         assert key not in seen
@@ -75,6 +80,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": {"kind": "number", "value": float(ans)},
                    "wrong": [{"match": float(w), "misconception": "PRB-02", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S6.06", "S2.02"], ["T11", "T19"], 9, "T" if k < 3 else "H", prompt,
                                payload, steps, str(ans), "Todennäköisyys on suotuisten tulosten osuus kaikista tuloksista.",
                                TEMPLATE, params, date, run))

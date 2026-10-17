@@ -28,7 +28,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 50.0
+          "value": 50.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -37,7 +38,8 @@
             "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [
@@ -140,7 +142,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 20.0
+          "value": 20.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -149,7 +152,8 @@
             "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [
@@ -196,7 +200,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 36.0
+          "value": 36.0,
+          "unit": "kpl"
         },
         "wrong": [
           {
@@ -205,7 +210,8 @@
             "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Kruunia odotetaan"
       },
       "solution": {
         "steps": [
@@ -254,7 +260,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 50.0
+          "value": 50.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -263,7 +270,8 @@
             "feedback": "Aiemmat tulokset eivät vaikuta seuraavaan: reilulla kolikolla, nopalla tai pyöräkkeellä ei ole muistia. Todennäköisyys on joka kerralla sama."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [

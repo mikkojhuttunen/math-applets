@@ -20,6 +20,21 @@ CTX4 = [
     ("Neljän ämpärin tilavuudet ovat {a} l, {b} l, {c} l ja {d} l.", "Mikä on suurin tilavuus?", "l"),
 ]
 
+# Lead-in before the NE answer box for each context question: "Painavampi pussi painaa [ ] kg."
+ANSWER_LEAD = {
+    "Kumpi hyppy oli pidempi?": "Pidempi hyppy oli",
+    "Kumpi pussi on painavampi?": "Painavampi pussi painaa",
+    "Kummassa pullossa on enemmän mehua?": "Enemmän mehua sisältävässä pullossa on",
+    "Kummassa kerässä on enemmän lankaa?": "Pidemmässä kerässä on",
+    "Kumpi kasvi on pidempi?": "Pidempi kasvi on",
+    "Mikä on painavimman pussin paino?": "Painavin pussi painaa",
+    "Mikä on pisin tulos?": "Pisin tulos on",
+    "Paljonko mehua on eniten sisältävässä pullossa?": "Eniten mehua sisältävässä pullossa on",
+    "Mikä oli pisin tulos?": "Pisin tulos oli",
+    "Mikä on painavimman pakkauksen paino?": "Painavin pakkaus painaa",
+    "Mikä on suurin tilavuus?": "Suurin tilavuus on",
+}
+
 
 def dec(s):
     return Decimal(s)

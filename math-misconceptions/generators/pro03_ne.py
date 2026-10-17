@@ -3,7 +3,7 @@
 entry repeats the area of the other shape with the same perimeter."""
 import random
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "pro03_ne"
 TID, CODE = "PRO-03", "NE"
@@ -15,6 +15,7 @@ def make_items(run, date, count=5, start=1):
     items = []
     for k in range(count):
         unit = None
+        fr = (None, None)
         if k == 0:
             level = "T"
             while True:
@@ -26,6 +27,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = s * s, [a * b]
             steps = [f"Piiri 2 · ({a} + {b}) = {2 * (a + b)} cm", f"Neliön sivu {s} cm", f"Ala {s}² = {s * s} cm²"]
             params, unit = {"a": a, "b": b}, "cm²"
+            fr = ("Neliön ala on", None)
         elif k == 1:
             level = "T"
             half = rng.choice([8, 10, 12, 14])
@@ -37,6 +39,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = a * b, [s * s]
             steps = [f"Toinen sivu {half} {chr(8722)} {a} = {b} cm", f"Ala {a} · {b} = {a * b} cm²"]
             params, unit = {"half": half, "a": a}, "cm²"
+            fr = ("Suorakulmion ala on", None)
         elif k == 2:
             level = "T"
             half = rng.choice([10, 12, 14, 16])
@@ -48,6 +51,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = a * b, [s * s]
             steps = [f"Toinen sivu {half} {chr(8722)} {a} = {b} cm", f"Ala {a} · {b} = {a * b} cm²"]
             params, unit = {"half": half, "a": a}, "cm²"
+            fr = ("Suorakulmion ala on", None)
         elif k == 3:
             level = "H"
             half = rng.choice([14, 16, 18, 20])
@@ -59,6 +63,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = s * s - a * b, [0]
             steps = [f"Neliön ala {s}² = {s * s} m²", f"Suorakulmion ala {a} · {b} = {a * b} m²", f"{s * s} {chr(8722)} {a * b} = {s * s - a * b}"]
             params, unit = {"half": half, "a": a}, "m²"
+            fr = ("Ero on", None)
         else:
             level = "H"
             half = rng.choice([13, 15, 17])
@@ -69,6 +74,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = abs(a * b - c * d), [0]
             steps = [f"Alat {a} · {b} = {a * b} cm² ja {c} · {d} = {c * d} cm²", f"Erotus {abs(a * b - c * d)} cm²"]
             params, unit = {"a": a, "c": c, "half": half}, "cm²"
+            fr = ("Alojen ero on", None)
         assert all(w != ans for w in wrong)
         answer = {"kind": "number", "value": ans}
         if unit:
@@ -76,6 +82,7 @@ def make_items(run, date, count=5, start=1):
         payload = {"answer": answer,
                    "wrong": [{"match": w, "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S5.07"], ["T18"], 7, level, prompt, payload, steps, str(ans).replace(".", ","),
                                "Ala lasketaan kuvion omista sivuista, ei piiristä.", TEMPLATE, params, date, run))
     return items

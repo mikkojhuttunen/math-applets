@@ -29,7 +29,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 22
+          "value": 22,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -43,7 +44,8 @@
             "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 3p ja 4k."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta on"
       },
       "solution": {
         "steps": [
@@ -96,7 +98,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 29
+          "value": 29,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -110,7 +113,8 @@
             "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 3v ja 5k."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta on"
       },
       "solution": {
         "steps": [
@@ -163,7 +167,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 24
+          "value": 24,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -177,7 +182,8 @@
             "feedback": "Tarkista, kumpi kirjain kuuluu kummankin luvun perään: 5l ja 2p."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta on"
       },
       "solution": {
         "steps": [
@@ -230,7 +236,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 9
+          "value": 9,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -244,7 +251,8 @@
             "feedback": "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Vaihtorahaa saadaan"
       },
       "solution": {
         "steps": [
@@ -296,7 +304,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 23
+          "value": 23,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -310,7 +319,8 @@
             "feedback": "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Vaihtorahaa saadaan"
       },
       "solution": {
         "steps": [

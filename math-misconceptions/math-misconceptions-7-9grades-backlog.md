@@ -74,7 +74,7 @@ Payload fields per type (details and limits in the schema):
 | Type | `payload` |
 |---|---|
 | MC | `options[{id, text, misconception, feedback}]` (3-8), `correct[id]` |
-| NE | `answer` (number / expression with `variables` and `samples` / set), `wrong[{match, misconception, feedback}]` |
+| NE | `answer` (number / expression with `variables` and `samples` / set), `wrong[{match, misconception, feedback}]`. A number answer that is a quantity carries `answer.unit` and `answer_prefix`, so the answer box reads as a sentence: `Hinta on [ ] euroa`, `7 m² on [ ] cm²`, `Todennäköisyys on [ ] %`. Pure numbers (`Laske 4³`, `Mikä on y?`) get neither |
 | ES | `lines` (3-8), `error_line` (from 2), `error_type` |
 | SO | `lines` in correct order, `accept` (`exact` or `dependency`) |
 | FS | `lines`, `blank_index`, `answer` (expression, or equation with `solutions`) |

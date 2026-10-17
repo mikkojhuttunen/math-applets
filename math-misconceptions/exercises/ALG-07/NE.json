@@ -280,7 +280,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 7
+          "value": 7,
+          "unit": "pakkausta"
         },
         "wrong": [
           {
@@ -294,7 +295,8 @@
             "feedback": "Tee jokainen laskutoimitus yhtälön molemmille puolille, myös kaikille termeille."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Asiakas osti"
       },
       "solution": {
         "steps": [

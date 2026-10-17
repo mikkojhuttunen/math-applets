@@ -91,7 +91,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 1.26
+          "value": 1.26,
+          "unit": "m"
         },
         "wrong": [
           {
@@ -100,7 +101,8 @@
             "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Pidempi hyppy oli"
       },
       "solution": {
         "steps": [
@@ -152,7 +154,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 1.82
+          "value": 1.82,
+          "unit": "kg"
         },
         "wrong": [
           {
@@ -161,7 +164,8 @@
             "feedback": "Sadasosat eivät ole suurempia kuin kymmenesosat, mutta luvussa on niitä lisäksi. Muuta luvut samoiksi paikka-arvoiksi (0,4 = 0,40) ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Painavin pussi painaa"
       },
       "solution": {
         "steps": [

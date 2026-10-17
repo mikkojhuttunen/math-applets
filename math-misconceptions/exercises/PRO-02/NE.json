@@ -44,7 +44,8 @@
             "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Uuden kuution tilavuus on"
       },
       "solution": {
         "steps": [
@@ -103,7 +104,8 @@
             "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Uuden laatikon tilavuus on"
       },
       "solution": {
         "steps": [
@@ -169,7 +171,8 @@
             "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Esineen tilavuus on"
       },
       "solution": {
         "steps": [
@@ -233,7 +236,8 @@
             "feedback": "Tilavuus ei kasva samassa suhteessa kuin pituudet. Jos pituudet ovat k-kertaiset, tilavuus on k³-kertainen."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suureen akvaarioon mahtuu"
       },
       "solution": {
         "steps": [

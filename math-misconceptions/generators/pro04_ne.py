@@ -3,7 +3,7 @@
 wrong entry is the area (or perimeter) of the shape with the larger perimeter."""
 import random
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "pro04_ne"
 TID, CODE = "PRO-04", "NE"
@@ -25,18 +25,21 @@ def make_items(run, date, count=5, start=1):
     for k in range(count):
         w, h, s = thin_and_square(rng)
         pr, ps, ar, as_ = 2 * (w + h), 4 * s, w * h, s * s
+        fr = (None, None)
         if k == 0:
             level = "T"
             prompt = (f"Suorakulmion sivut ovat {w} cm ja {h} cm. Neliön sivu on {s} cm. "
                       "Kuinka monta neliösenttimetriä on suuremman alan arvo?")
             ans, wrong, unit = as_, [ar], "cm²"
             steps = [f"Suorakulmion ala {ar} cm², neliön ala {as_} cm²", f"Suurempi on {as_} cm²"]
+            fr = ("Suurempi ala on", None)
         elif k == 1:
             level = "T"
             prompt = (f"Huone A on {w} m × {h} m ja huone B on {s} m × {s} m. "
                       "Kuinka monta neliömetriä on sen huoneen lattian ala, jonka ala on suurempi?")
             ans, wrong, unit = as_, [ar], "m²"
             steps = [f"A: {ar} m², B: {as_} m²", f"Suurempi ala on {as_} m²"]
+            fr = ("Suuremman huoneen ala on", None)
         elif k == 2:
             level = "T"
             c, d = rng.choice([(7, 6), (8, 5), (9, 5), (8, 6), (7, 7)])
@@ -49,22 +52,26 @@ def make_items(run, date, count=5, start=1):
             ans, wrong, unit = c * d, [w2 * h2], "m²"
             steps = [f"A: {w2} · {h2} = {w2 * h2} m², B: {c} · {d} = {c * d} m²", f"Suurempi ala on {c * d} m²"]
             w, h, s = w2, h2, (c, d)
+            fr = ("Suuremman pellon ala on", None)
         elif k == 3:
             level = "H"
             prompt = (f"Kaksi aitausta: suorakulmio {w} m × {h} m ja neliö {s} m × {s} m. "
                       "Kuinka monta metriä aitaa kuluu sen aitauksen ympärille, jonka pinta-ala on suurempi?")
             ans, wrong, unit = ps, [pr], "m"
             steps = [f"Alat: {ar} m² ja {as_} m², suurempi on neliö", f"Neliön piiri 4 · {s} = {ps} m"]
+            fr = ("Aitaa kuluu", None)
         else:
             level = "H"
             prompt = (f"Suorakulmion leveys on {h} cm ja piiri {pr} cm. Neliön piiri on {ps} cm. "
                       "Kuinka monta neliösenttimetriä on suuremman alan arvo?")
             ans, wrong, unit = as_, [ar], "cm²"
             steps = [f"Suorakulmion pituus {pr // 2} {chr(8722)} {h} = {w} cm, ala {ar} cm²", f"Neliön sivu {s} cm, ala {as_} cm²"]
+            fr = ("Suurempi ala on", None)
         assert all(x != ans for x in wrong)
         payload = {"answer": {"kind": "number", "value": ans, "unit": unit},
                    "wrong": [{"match": x, "misconception": TID, "feedback": BAD} for x in wrong],
                    "input_hint": "Kirjoita kokonaisluku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S5.07"], ["T18"], 7, level, prompt, payload, steps, str(ans),
                                "Ala lasketaan sivujen tulona; piirin suuruus ei kerro alasta.", TEMPLATE,
                                {"w": w, "h": h, "s": s}, date, run))

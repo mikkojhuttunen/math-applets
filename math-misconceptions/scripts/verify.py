@@ -222,6 +222,8 @@ def check_NE(it, tid, topics):
         for w in p["wrong"]:
             if float(parse(str(w["match"]))) in a["values"]:
                 errs.append(f"wrong answer '{w['match']}' is one of the correct values")
+    if "answer_prefix" in p and a["kind"] != "number":
+        errs.append("answer_prefix is only for number answers: 'Hinta on [ ] euroa'")
     for w in p["wrong"]:
         if w["misconception"] and w["misconception"] not in topics:
             errs.append(f"unknown misconception {w['misconception']} in wrong list")
@@ -372,6 +374,8 @@ def pupil_texts(item):
         yield "wrong feedback", w["feedback"]
     if p.get("input_hint"):
         yield "input_hint", p["input_hint"]
+    if p.get("answer_prefix"):
+        yield "answer_prefix", p["answer_prefix"]
     for i, step in enumerate(item["solution"]["steps"], 1):
         yield f"solution step {i}", step
     yield "solution final", item["solution"]["final"]

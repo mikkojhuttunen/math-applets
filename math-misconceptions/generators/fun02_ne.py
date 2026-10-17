@@ -3,7 +3,7 @@
 the wrong entries are the heights read from the graph instead of the slope."""
 import random
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "fun02_ne"
 TID, CODE = "FUN-02", "NE"
@@ -16,6 +16,7 @@ def make_items(run, date, count=5, start=1):
     for n in range(count):
         v = rng.randint(2, 9)
         c = rng.randint(0, 6)
+        fr = (None, None)
         if n == 0:
             level, (t1, t2) = "T", (2, 5)
             s1, s2 = c + v * t1, c + v * t2
@@ -24,6 +25,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = v, [s2, s1]
             steps = [f"({s2} − {s1}) / ({t2} − {t1}) = {s2 - s1} / {t2 - t1}", f"= {v}"]
             params, unit = {"v": v, "c": c, "t": [t1, t2]}, "km/h"
+            fr = ("Nopeus on", None)
         elif n == 1:
             level, (t1, t2) = "T", (1, 4)
             s1, s2 = c + v * t1, c + v * t2
@@ -32,6 +34,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = v, [s2, s1]
             steps = [f"({s2} − {s1}) / ({t2} − {t1}) = {s2 - s1} / {t2 - t1}", f"= {v}"]
             params, unit = {"v": v, "c": c, "t": [t1, t2]}, "km/h"
+            fr = ("Nopeus on", None)
         elif n == 2:
             level, q = "T", 3
             v2 = v + rng.randint(1, 3)
@@ -43,6 +46,7 @@ def make_items(run, date, count=5, start=1):
             wrong = [w for w in wrong if w != ans]
             steps = [f"A:n nopeus {v2} km/h, B:n nopeus {v} km/h", f"{v2} − {v} = {v2 - v}"]
             params, unit = {"vA": v2, "cA": c2, "vB": v, "cB": c}, "km/h"
+            fr = ("Nopeusero on", None)
         elif n == 3:
             level, t2 = "H", 3
             l0 = rng.choice([4, 6, 10, 15])
@@ -53,6 +57,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = r, [l2, l0]
             steps = [f"({l2} − {l0}) / {t2} = {l2 - l0} / {t2}", f"= {r}"]
             params, unit = {"start": l0, "rate": r, "t": t2}, "l/min"
+            fr = ("Vettä tulee", None)
         else:
             level = "H"
             t0 = rng.randint(3, 6)
@@ -66,11 +71,13 @@ def make_items(run, date, count=5, start=1):
             wrong = [w for w in wrong if w != ans]
             steps = [f"({sx} − {cA}) / {t0} = {sx - cA} / {t0}", f"= {vA}"]
             params, unit = {"vA": vA, "cA": cA, "cB": cB, "t0": t0}, "km/h"
+            fr = ("A:n nopeus on", None)
         wrong = [w for i, w in enumerate(wrong) if w != ans and w not in wrong[:i] and w > 0]
         assert wrong
         payload = {"answer": {"kind": "number", "value": ans, "unit": unit},
                    "wrong": [{"match": w, "misconception": "FUN-02", "feedback": HEIGHT} for w in wrong],
                    "input_hint": "Kirjoita kokonaisluku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + n, ["S4.07"], ["T8", "T15"], 9, level, prompt, payload, steps, str(ans),
                                "Nopeus on kuvaajan jyrkkyys eli matkan muutos aikayksikössä.", TEMPLATE, params, date, run))
     return items

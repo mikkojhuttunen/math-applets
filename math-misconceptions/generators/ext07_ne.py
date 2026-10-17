@@ -4,7 +4,7 @@
 import random
 from decimal import Decimal
 
-from gen_common import base_item, cli, num
+from gen_common import answer_frame, base_item, cli, num
 
 TEMPLATE = "ext07_ne"
 TID, CODE = "EXT-07", "NE"
@@ -27,24 +27,28 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(1807)
     items, seen = [], set()
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             n = rng.choice([2, 3, 4, 6, 7])
             ans, wrong, level = n * M2_CM2, n * 100, "T"
             prompt = f"Muunna {n} m² neliösenttimetreiksi. Kirjoita vastaus ilman yksikköä."
             steps = [f"1 m² = 10 000 cm²", f"{n} · 10 000 = {big(ans)}"]
             params = {"n": n}
+            fr = (f"{n} m² on", "cm²")
         elif k == 1:
             n = Decimal(rng.choice(["1.5", "2.5", "0.5", "3.5"]))
             ans, wrong, level = int(n * M2_CM2), int(n * 100), "T"
             prompt = f"Muunna {d(n)} m² neliösenttimetreiksi. Kirjoita vastaus ilman yksikköä."
             steps = ["1 m² = 10 000 cm²", f"{d(n)} · 10 000 = {big(ans)}"]
             params = {"n": str(n)}
+            fr = (f"{d(n)} m² on", "cm²")
         elif k == 2:
             n = rng.choice([2, 3, 5, 8])
             ans, wrong, level = n, n * 100, "T"
             prompt = f"Muunna {big(n * M2_CM2)} cm² neliömetreiksi. Kirjoita vastaus ilman yksikköä."
             steps = ["10 000 cm² = 1 m²", f"{big(n * M2_CM2)} ÷ 10 000 = {n}"]
             params = {"cm2": n * M2_CM2}
+            fr = (f"{big(n * M2_CM2)} cm² on", "m²")
         elif k == 3:
             w, l, t = rng.choice([(4, 5, 20), (3, 5, 25), (4, 6, 30)])
             area_cm2 = w * l * M2_CM2
@@ -58,18 +62,21 @@ def make_items(run, date, count=5, start=1):
             steps = [f"Lattia: {w} · {l} = {w * l} m² = {big(area_cm2)} cm²", f"Laatta: {t} · {t} = {tile} cm²",
                      f"{big(area_cm2)} ÷ {tile} = {ans}"]
             params = {"floor": [w, l], "tile": t}
+            fr = ("Laattoja tarvitaan", "kpl")
         else:
             n = rng.choice([2, 3, 5])
             ans, wrong, level = n * KM2_M2, n * 1000, "H"
             prompt = f"Järven pinta-ala on {n} km². Kuinka monta neliömetriä se on? Kirjoita vastaus ilman yksikköä."
             steps = ["1 km = 1 000 m, joten 1 km² = 1 000 · 1 000 m² = 1 000 000 m²", f"{n} · 1 000 000 = {big(ans)}"]
             params = {"km2": n}
+            fr = (f"{n} km² on", "m²")
         assert wrong != ans
         assert (k, str(params)) not in seen
         seen.add((k, str(params)))
         payload = {"answer": {"kind": "number", "value": ans},
                    "wrong": [{"match": wrong, "misconception": TID, "feedback": BAD}],
                    "input_hint": "Kirjoita luku ilman välilyöntejä"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S5.14"], ["T18"], 7, level, prompt, payload, steps,
                                big(ans), GOOD, TEMPLATE, params, date, run))
     return items

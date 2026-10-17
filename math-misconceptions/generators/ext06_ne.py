@@ -5,7 +5,7 @@ length given as the sine, or the ratio taken with the adjacent leg."""
 import random
 from fractions import Fraction
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "ext06_ne"
 TID, CODE = "EXT-06", "NE"
@@ -31,6 +31,7 @@ def make_items(run, date, count=5, start=1):
         assert a * a + b * b == h * h
         sin, cos = Fraction(a, h), Fraction(b, h)
         assert sin != cos
+        fr = (None, None)
         if k == 0:
             level = "T"
             prompt = (f"Suorakulmaisen kolmion kateetit ovat {a} cm ja {b} cm ja hypotenuusa {h} cm. "
@@ -61,11 +62,13 @@ def make_items(run, date, count=5, start=1):
                       f"Kuinka monta senttimetriä pitkä on kulman α vastainen kateetti?")
             ans, wrong = Fraction(a), [(b, "viereinen"), (sin, "sini")]
             steps = [f"vastainen = sin α · hypotenuusa = {c(sin)} · {h}", f"= {a}"]
+            fr = ("Vastainen kateetti on", "cm")
         assert all(Fraction(w[0]) != ans for w in wrong)
         payload = {"answer": {"kind": "number", "value": float(ans), "tolerance": 0},
                    "wrong": [{"match": float(Fraction(w[0])), "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku" + (" desimaalipilkulla" if ans.denominator != 1 else "")}
         final = c(ans)
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S5.10"], ["T17"], 9, level, prompt, payload, steps, final,
                                GOOD, TEMPLATE, {"legs": [a, b], "hyp": h}, date, run))
     return items

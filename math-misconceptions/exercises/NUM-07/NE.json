@@ -28,7 +28,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 200.0
+          "value": 200.0,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -37,7 +38,8 @@
             "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta ennen nousua oli"
       },
       "solution": {
         "steps": [
@@ -86,7 +88,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 160.0
+          "value": 160.0,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -95,7 +98,8 @@
             "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta ennen alennusta oli"
       },
       "solution": {
         "steps": [
@@ -144,7 +148,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 40.0
+          "value": 40.0,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -153,7 +158,8 @@
             "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Alennus oli"
       },
       "solution": {
         "steps": [
@@ -202,7 +208,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 120.0
+          "value": 120.0,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -211,7 +218,8 @@
             "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Vuokra nousi"
       },
       "solution": {
         "steps": [
@@ -260,7 +268,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 6.0
+          "value": 6.0,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -269,7 +278,8 @@
             "feedback": "Prosentti on laskettava alkuperäisestä määrästä, ei annetusta uudesta määrästä. Alkuperäinen määrä on 100 %, ja uusi määrä on 100 % ± muutos."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinta ennen alennusta oli"
       },
       "solution": {
         "steps": [

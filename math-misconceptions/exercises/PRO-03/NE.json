@@ -38,7 +38,8 @@
             "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Neliön ala on"
       },
       "solution": {
         "steps": [
@@ -97,7 +98,8 @@
             "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Suorakulmion ala on"
       },
       "solution": {
         "steps": [
@@ -155,7 +157,8 @@
             "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Suorakulmion ala on"
       },
       "solution": {
         "steps": [
@@ -213,7 +216,8 @@
             "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Ero on"
       },
       "solution": {
         "steps": [
@@ -272,7 +276,8 @@
             "feedback": "Sama piiri ei tarkoita samaa alaa. Laske pinta-ala kuvion omista sivuista: ala = pituus · leveys."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Alojen ero on"
       },
       "solution": {
         "steps": [

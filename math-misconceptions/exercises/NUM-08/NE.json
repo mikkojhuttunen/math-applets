@@ -28,7 +28,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 84
+          "value": 84,
+          "unit": "% alkuperäisestä"
         },
         "wrong": [
           {
@@ -37,7 +38,8 @@
             "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Lopullinen hinta on"
       },
       "solution": {
         "steps": [
@@ -85,7 +87,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 144
+          "value": 144,
+          "unit": "euroa"
         },
         "wrong": [
           {
@@ -94,7 +97,8 @@
             "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Lopullinen hinta on"
       },
       "solution": {
         "steps": [
@@ -142,7 +146,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 910
+          "value": 910,
+          "unit": "päivässä"
         },
         "wrong": [
           {
@@ -151,7 +156,8 @@
             "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Lopuksi kävijöitä on"
       },
       "solution": {
         "steps": [
@@ -199,7 +205,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 1
+          "value": 1,
+          "unit": "prosenttiyksikköä"
         },
         "wrong": [
           {
@@ -208,7 +215,8 @@
             "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Ero on"
       },
       "solution": {
         "steps": [
@@ -256,7 +264,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 60
+          "value": 60,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -265,7 +274,8 @@
             "feedback": "Prosentit eivät kumoa toisiaan: jälkimmäinen prosentti lasketaan muuttuneesta arvosta, ei alkuperäisestä. Käytä muutoskertoimia, esimerkiksi 1,10 · 0,90 = 0,99."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Hinnan pitää laskea"
       },
       "solution": {
         "steps": [

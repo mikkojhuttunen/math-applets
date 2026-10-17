@@ -3,7 +3,7 @@
 import random
 from fractions import Fraction
 
-from gen_common import MINUS, base_item, cli
+from gen_common import MINUS, answer_frame, base_item, cli
 
 TEMPLATE = "alg07_ne"
 TID, CODE = "ALG-07", "NE"
@@ -21,6 +21,7 @@ def make_items(run, date, count=5, start=1):
     items = []
     for k in range(count):
         a, b, x = rng.randint(2, 6), rng.randint(2, 9), rng.randint(2, 9)
+        fr = (None, None)
         if k == 0:
             level, c = "T", a * x + b
             prompt = f"Ratkaise yhtälö {a}x + {b} = {c}. Kirjoita x:n arvo."
@@ -50,10 +51,12 @@ def make_items(run, date, count=5, start=1):
                       f"Asiakas maksoi {c} euroa. Montako pakkausta x hän osti? Yhtälö on {a}x + {b} = {c}.")
             wrong = [(Fraction(c + b, a), SIGN), (c - b, ONE)]
             steps = [f"{a}x = {c} {MINUS} {b} = {c - b}", f"x = {c - b} / {a} = {x}"]
+            fr = ("Asiakas osti", "pakkausta")
         assert all(Fraction(w) != x for w, _ in wrong) and len({Fraction(w) for w, _ in wrong}) == 2
         payload = {"answer": {"kind": "number", "value": x},
                    "wrong": [{"match": txt(w), "misconception": TID, "feedback": fb} for w, fb in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S3.05"], ["T14"], 7, level, prompt, payload, steps, str(x),
                                "Yhtälön molempien puolten on pysyttävä yhtä suurina.", TEMPLATE,
                                {"a": a, "b": b, "x": x}, date, run))

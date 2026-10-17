@@ -292,7 +292,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 6
+          "value": 6,
+          "unit": "kg"
         },
         "wrong": [
           {
@@ -306,7 +307,8 @@
             "feedback": "Yhtäsuuruusmerkki kertoo, että molemmat puolet ovat yhtä suuret. Laske ensin se puoli, jossa ei ole laatikkoa."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Oikeaan kuppiin lisätään"
       },
       "solution": {
         "steps": [

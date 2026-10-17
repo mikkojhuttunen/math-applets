@@ -4,7 +4,7 @@ treats a rise and a fall of the same percentage as cancelling (or subtracts the 
 import random
 from fractions import Fraction
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "num08_ne"
 TID, CODE = "NUM-08", "NE"
@@ -22,6 +22,7 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(1222)
     items = []
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             p = rng.choice([10, 20, 30, 40])
             f = (1 + Fraction(p, 100)) * (1 - Fraction(p, 100))
@@ -30,6 +31,7 @@ def make_items(run, date, count=5, start=1):
                       "lopullinen hinta on?")
             steps = [f"(1 + {p}/100) · (1 − {p}/100) = {float(f)}".replace(".", ","), f"Lopullinen hinta on {val(ans)} % alkuperäisestä".replace(".", ",")]
             level, params = "T", {"p": p, "form": k}
+            fr = ("Lopullinen hinta on", "% alkuperäisestä")
         elif k == 1:
             price, q = rng.choice([(80, 25), (200, 10), (50, 20), (150, 20)])
             ans = price * (1 + Fraction(q, 100)) * (1 - Fraction(q, 100))
@@ -39,6 +41,7 @@ def make_items(run, date, count=5, start=1):
                       "Mikä on lopullinen hinta euroina?")
             steps = [f"{price} · (1 + {q}/100) · (1 − {q}/100) = {val(ans)}"]
             level, params = "T", {"price": price, "q": q, "form": k}
+            fr = ("Lopullinen hinta on", "euroa")
         elif k == 2:
             n, q = rng.choice([(400, 25), (500, 20), (1000, 30)])
             ans = n * (1 - Fraction(q, 100)) * (1 + Fraction(q, 100))
@@ -48,6 +51,7 @@ def make_items(run, date, count=5, start=1):
                       "Kuinka monta kävijää päivässä on lopuksi?")
             steps = [f"{n} · (1 − {q}/100) · (1 + {q}/100) = {val(ans)}"]
             level, params = "T", {"n": n, "q": q, "form": k}
+            fr = ("Lopuksi kävijöitä on", "päivässä")
         elif k == 3:
             p = rng.choice([10, 20, 30, 40])
             f = (1 - Fraction(p, 100)) * (1 + Fraction(p, 100))
@@ -56,6 +60,7 @@ def make_items(run, date, count=5, start=1):
                       "alkuperäistä hintaa pienempi?")
             steps = [f"(1 − {p}/100) · (1 + {p}/100) = {float(f)}".replace(".", ","), f"100 % − {val(f * 100)} % = {val(ans)} prosenttiyksikköä".replace(".", ",")]
             level, params = "H", {"p": p, "form": k}
+            fr = ("Ero on", "prosenttiyksikköä")
         else:
             p = rng.choice([25, 100, 150, 300])
             ans, wrong = Fraction(100 * p, 100 + p), [Fraction(p)]
@@ -64,10 +69,12 @@ def make_items(run, date, count=5, start=1):
             steps = [f"(1 + {p}/100) · (1 − x/100) = 1", f"x = {val(ans)}"]
             level, params = "H", {"p": p, "form": k}
             assert Fraction(ans) != Fraction(p) and Fraction(ans).denominator == 1
+            fr = ("Hinnan pitää laskea", "%")
         wrong = [w for w in dict.fromkeys(wrong) if w != ans]
         payload = {"answer": {"kind": "number", "value": val(ans)},
                    "wrong": [{"match": val(w), "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, prompt, payload, steps,
                                str(val(ans)).replace(".", ","), GOOD, TEMPLATE, params, date, run))
     return items

@@ -6,7 +6,7 @@ gives the sum of the coefficients. All numbers computed, fixed seed.
 """
 import random
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 
 TEMPLATE = "alg01_ne"
 TID, CODE = "ALG-01", "NE"
@@ -34,6 +34,7 @@ def make_items(run, date, count=5, start=1):
         value = ca * va + cb * vb
         labels = ca + cb            # label reading: 'ca apples + cb pears'
         swapped = ca * vb + cb * va  # coefficients paired with the wrong letter
+        fr = (None, None)
         if k < 3:
             level, pay = "T", 0
             prompt = (f"Kaupassa {na} maksaa {ca} euroa ja {nb} {cb} euroa. Ostetaan {la} kpl ensimmäistä ja {lb} kpl toista tuotetta, "
@@ -42,6 +43,7 @@ def make_items(run, date, count=5, start=1):
             wrong = [(labels, "ALG-01", f"Kirjaimet ovat lukuja, ei esineiden nimiä. Sijoita {la} = {va} ja {lb} = {vb}: {ca} · {va} + {cb} · {vb}."),
                      (swapped, None, f"Tarkista, kumpi kirjain kuuluu kummankin luvun perään: {ca}{la} ja {cb}{lb}.")]
             steps = [f"{ca}{la} + {cb}{lb} = {ca} · {va} + {cb} · {vb}", f"= {ca * va} + {cb * vb}", f"= {value}"]
+            fr = ("Hinta on", "euroa")
         else:
             level, pay = "H", 20 + 5 * k
             prompt = (f"Kaupassa {na} maksaa {ca} euroa ja {nb} {cb} euroa. Kun ostetaan {la} kpl ensimmäistä ja {lb} kpl toista tuotetta, "
@@ -51,11 +53,13 @@ def make_items(run, date, count=5, start=1):
             wrong = [(pay - labels, "ALG-01", "Kirjaimet tarkoittavat kappalemääriä eli lukuja, eivät esineiden nimiä. Laske hinta: " + f"{ca} · {va} + {cb} · {vb}."),
                      (value, None, "Tämä on ostosten hinta. Vaihtoraha on maksettu summa miinus hinta.")]
             steps = [f"Hinta: {ca} · {va} + {cb} · {vb} = {value}", f"Vaihtoraha: {pay} {chr(0x2212)} {value} = {answer}"]
+            fr = ("Vaihtorahaa saadaan", "euroa")
         assert answer > 0 and all(w[0] != answer for w in wrong)
         assert len({w[0] for w in wrong}) == len(wrong)
         payload = {"answer": {"kind": "number", "value": answer},
                    "wrong": [{"match": w, "misconception": m, "feedback": f} for w, m, f in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S3.01"], ["T15", "T7"], 7, level, prompt, payload,
                                steps, str(answer), "Sijoita luvut kirjainten paikalle ja laske.",
                                TEMPLATE, {"ca": ca, "cb": cb, "va": va, "vb": vb, "pay": pay}, date, run))

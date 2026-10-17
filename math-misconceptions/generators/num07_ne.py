@@ -4,7 +4,7 @@ answer applies the percentage to the new (given) amount."""
 import random
 from decimal import Decimal
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 from gen_decimal import fmt as _fmt
 
 
@@ -32,30 +32,35 @@ def make_items(run, date, count=5, start=1):
                 break
         seen.add((orig, p))
         up, down = orig * (1 + p / 100), orig * (1 - p / 100)
+        fr = (None, None)
         if k == 0:
             new = up
             ans, wrong = orig, [new * (1 - p / 100)]
             prompt = f"Polkupyörän hinta nousi {fmt(p)} % ja on nyt {fmt(new)} €. Mikä hinta oli ennen nousua? Kirjoita hinta euroina."
             steps = [f"{fmt(new)} € on {fmt(100 + p)} % vanhasta hinnasta", f"{fmt(new)} ÷ {fmt(1 + p / 100)} = {fmt(orig)}"]
             level = "T"
+            fr = ("Hinta ennen nousua oli", "euroa")
         elif k == 1:
             new = down
             ans, wrong = orig, [new * (1 + p / 100)]
             prompt = f"Kengät maksavat alennuksen {fmt(p)} % jälkeen {fmt(new)} €. Mikä oli hinta ennen alennusta? Kirjoita hinta euroina."
             steps = [f"{fmt(new)} € on {fmt(100 - p)} % vanhasta hinnasta", f"{fmt(new)} ÷ {fmt(1 - p / 100)} = {fmt(orig)}"]
             level = "T"
+            fr = ("Hinta ennen alennusta oli", "euroa")
         elif k == 2:
             new = down
             ans, wrong = orig - new, [new * p / 100]
             prompt = f"Reppu maksaa {fmt(p)} %:n alennuksen jälkeen {fmt(new)} €. Montako euroa alennus oli?"
             steps = [f"{fmt(new)} ÷ {fmt(1 - p / 100)} = {fmt(orig)}", f"{fmt(orig)} {chr(8722)} {fmt(new)} = {fmt(orig - new)}"]
             level = "T"
+            fr = ("Alennus oli", "euroa")
         elif k == 3:
             new = up
             ans, wrong = new - orig, [new * p / 100]
             prompt = f"Vuokra nousi {fmt(p)} % ja on nyt {fmt(new)} €/kk. Kuinka monta euroa vuokra nousi kuukaudessa?"
             steps = [f"{fmt(new)} ÷ {fmt(1 + p / 100)} = {fmt(orig)}", f"{fmt(new)} {chr(8722)} {fmt(orig)} = {fmt(new - orig)}"]
             level = "H"
+            fr = ("Vuokra nousi", "euroa")
         else:
             new = down
             prompt = (f"Jäätelön hinta aleni {fmt(p)} %. Nyt se maksaa {fmt(new / 20)} €. "
@@ -63,10 +68,12 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = orig / 20, [new / 20 * (1 + p / 100)]
             steps = [f"{fmt(new / 20)} € on {fmt(100 - p)} % vanhasta hinnasta", f"{fmt(new / 20)} ÷ {fmt(1 - p / 100)} = {fmt(ans)}"]
             level = "H"
+            fr = ("Hinta ennen alennusta oli", "euroa")
         assert all(w != ans for w in wrong)
         payload = {"answer": {"kind": "number", "value": float(ans)},
                    "wrong": [{"match": float(w), "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S2.10"], ["T13"], 8, level, prompt, payload, steps, fmt(ans),
                                "Perusarvona on alkuperäinen määrä, ja uusi määrä on 100 % ± muutos.", TEMPLATE,
                                {"orig": fmt(orig), "percent": fmt(p), "form": k}, date, run))

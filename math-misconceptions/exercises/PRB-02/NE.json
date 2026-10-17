@@ -92,7 +92,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 68.0
+          "value": 68.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -101,7 +102,8 @@
             "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [
@@ -150,7 +152,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 3.0
+          "value": 3.0,
+          "unit": "mustaa kuulaa"
         },
         "wrong": [
           {
@@ -159,7 +162,8 @@
             "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Purkissa 2 pitää olla"
       },
       "solution": {
         "steps": [
@@ -210,7 +214,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 25.0
+          "value": 25.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -219,7 +224,8 @@
             "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [
@@ -273,7 +279,8 @@
       "payload": {
         "answer": {
           "kind": "number",
-          "value": 44.0
+          "value": 44.0,
+          "unit": "%"
         },
         "wrong": [
           {
@@ -282,7 +289,8 @@
             "feedback": "Todennäköisyys ei riipu pelkästä mustien kuulien lukumäärästä vaan niiden osuudesta kaikista kuulista."
           }
         ],
-        "input_hint": "Kirjoita luku"
+        "input_hint": "Kirjoita luku",
+        "answer_prefix": "Todennäköisyys on"
       },
       "solution": {
         "steps": [

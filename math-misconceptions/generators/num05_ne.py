@@ -5,7 +5,7 @@ import random
 from decimal import Decimal
 from fractions import Fraction
 
-from gen_common import base_item, cli
+from gen_common import answer_frame, base_item, cli
 from gen_decimal import fmt as _fmt
 
 
@@ -23,6 +23,7 @@ def make_items(run, date, count=5, start=1):
     rng = random.Random(702)
     items, seen = [], set()
     for k in range(count):
+        fr = (None, None)
         if k == 0:
             n, f = rng.choice([8, 12, 15]), Decimal(rng.choice(["0.5", "0.25", "0.2"]))
             ans, wrong = n / f, [n * f]
@@ -42,6 +43,7 @@ def make_items(run, date, count=5, start=1):
             prompt = f"Nauhaa on {n} metriä. Siitä leikataan {fmt(f)} metrin pituisia pätkiä. Montako pätkää saadaan?"
             steps = [f"{n} ÷ {fmt(f)} = {fmt(ans)}"]
             params = {"n": n, "piece": fmt(f)}
+            fr = ("Pätkiä saadaan", "kpl")
         elif k == 3:
             n = 12
             ds = [Decimal(x) for x in rng.sample(["0.5", "0.25", "2", "3", "0.4", "4"], 4)]
@@ -71,6 +73,7 @@ def make_items(run, date, count=5, start=1):
                    "wrong": [{"match": float(w), "misconception": "NUM-05", "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
         final = fmt(ans) if isinstance(ans, Decimal) else str(ans)
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S2.03", "S2.06"], ["T11"], 7, "T" if k < 3 else "H", prompt,
                                payload, steps, final, "Jakaja alle 1 suurentaa osamäärää.", TEMPLATE, params, date, run))
     return items

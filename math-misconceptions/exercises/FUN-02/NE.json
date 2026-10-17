@@ -44,7 +44,8 @@
             "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Nopeus on"
       },
       "solution": {
         "steps": [
@@ -112,7 +113,8 @@
             "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Nopeus on"
       },
       "solution": {
         "steps": [
@@ -180,7 +182,8 @@
             "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Nopeusero on"
       },
       "solution": {
         "steps": [
@@ -246,7 +249,8 @@
             "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Vettä tulee"
       },
       "solution": {
         "steps": [
@@ -311,7 +315,8 @@
             "feedback": "Kuvaajan korkeus kertoo matkan, ei nopeutta. Nopeus on kuvaajan jyrkkyys: matkan muutos jaettuna ajan muutoksella."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "A:n nopeus on"
       },
       "solution": {
         "steps": [

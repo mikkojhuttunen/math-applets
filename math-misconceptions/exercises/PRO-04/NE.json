@@ -38,7 +38,8 @@
             "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suurempi ala on"
       },
       "solution": {
         "steps": [
@@ -97,7 +98,8 @@
             "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suuremman huoneen ala on"
       },
       "solution": {
         "steps": [
@@ -156,7 +158,8 @@
             "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suuremman pellon ala on"
       },
       "solution": {
         "steps": [
@@ -218,7 +221,8 @@
             "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Aitaa kuluu"
       },
       "solution": {
         "steps": [
@@ -277,7 +281,8 @@
             "feedback": "Suurempi piiri ei tarkoita suurempaa alaa. Laske kummankin kuvion ala sivujen tulona ja vertaa."
           }
         ],
-        "input_hint": "Kirjoita kokonaisluku"
+        "input_hint": "Kirjoita kokonaisluku",
+        "answer_prefix": "Suurempi ala on"
       },
       "solution": {
         "steps": [

@@ -57,6 +57,7 @@ EXPECT = {
     "fs_bad_solutions": "answer.solutions does not match",
     "prose_parentheses": "bracketed aside",
     "verdict_in_feedback": "starts with a verdict word",
+    "prefix_on_expression": "answer_prefix is only for number answers",
 }
 for case, needle in EXPECT.items():
     r = run("verify.py", "--exercises", str(FIX / "bad" / case))

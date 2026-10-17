@@ -3,7 +3,7 @@
 answer subtracts the absolute value of the negative number."""
 import random
 
-from gen_common import MINUS, base_item, cli, num
+from gen_common import MINUS, answer_frame, base_item, cli, num
 
 TEMPLATE = "alg12_ne"
 TID, CODE = "ALG-12", "NE"
@@ -21,6 +21,7 @@ def make_items(run, date, count=5, start=1):
             if a != b and (a, b) not in seen:
                 break
         seen.add((a, b))
+        fr = (None, None)
         if k == 0:
             prompt, level = f"Laske {a} {MINUS} ({MINUS}{b}).", "T"
             ans, wrong = a + b, [a - b]
@@ -39,16 +40,19 @@ def make_items(run, date, count=5, start=1):
             level = "H"
             ans, wrong = a + b, [a - b]
             steps = [f"Erotus on {a} {MINUS} ({MINUS}{b}) = {a} + {b} = {a + b}"]
+            fr = ("Ero on", "astetta")
         else:
             prompt = (f"Sukeltaja on syvyydessä {MINUS}{a} m ja lokki korkeudella {b} m merenpinnasta. "
                       f"Mikä on lokin ja sukeltajan korkeusero metreinä?")
             level = "H"
             ans, wrong = a + b, [b - a]
             steps = [f"{b} {MINUS} ({MINUS}{a}) = {b} + {a} = {a + b}"]
+            fr = ("Korkeusero on", "m")
         wrong = [w for w in dict.fromkeys(wrong) if w != ans]
         payload = {"answer": {"kind": "number", "value": ans},
                    "wrong": [{"match": w, "misconception": TID, "feedback": BAD} for w in wrong],
                    "input_hint": "Kirjoita luku"}
+        answer_frame(payload, *fr)
         items.append(base_item(TID, CODE, start + k, ["S2.01"], ["T10", "T11"], 7, level, prompt, payload, steps,
                                num(ans), GOOD, TEMPLATE, {"a": a, "b": b, "form": k}, date, run))
     return items
