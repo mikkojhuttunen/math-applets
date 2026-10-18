@@ -7,7 +7,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-ME-001",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -107,7 +107,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-ME-002",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -207,7 +207,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-ME-003",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -307,7 +307,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-ME-004",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -411,7 +411,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-ME-005",
       "type": "ME",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [

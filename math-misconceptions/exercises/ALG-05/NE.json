@@ -7,7 +7,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-NE-001",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -70,7 +70,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-NE-002",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -133,7 +133,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-NE-003",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -196,7 +196,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-NE-004",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -258,7 +258,7 @@
       "schema_version": "1.0",
       "id": "ALG-05-NE-005",
       "type": "NE",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
