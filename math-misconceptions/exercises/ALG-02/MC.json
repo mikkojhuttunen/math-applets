@@ -7,7 +7,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-001",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -85,7 +85,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-002",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -162,7 +162,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-003",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -240,7 +240,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-004",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -318,7 +318,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-005",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -396,7 +396,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-006",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -491,7 +491,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-007",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -586,7 +586,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-008",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -674,7 +674,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-009",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [
@@ -770,7 +770,7 @@
       "schema_version": "1.0",
       "id": "ALG-02-MC-010",
       "type": "MC",
-      "status": "draft",
+      "status": "approved",
       "lang": "fi",
       "curriculum": {
         "ops": [

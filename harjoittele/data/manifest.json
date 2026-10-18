@@ -183,8 +183,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "approved": 4,
-        "draft": 1
+        "approved": 5
       }
     },
     {
@@ -192,7 +191,7 @@
       "format": "grades7-9",
       "items": 10,
       "by_status": {
-        "draft": 10
+        "approved": 10
       }
     },
     {
@@ -200,7 +199,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 5
       }
     },
     {
@@ -208,7 +207,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 5
       }
     },
     {
@@ -216,7 +215,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 5
       }
     },
     {
@@ -224,7 +223,7 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 5
       }
     },
     {
@@ -232,7 +231,8 @@
       "format": "grades7-9",
       "items": 5,
       "by_status": {
-        "draft": 5
+        "approved": 2,
+        "draft": 3
       }
     },
     {
@@ -1159,8 +1159,8 @@
   "totals": {
     "items": 1085,
     "by_status": {
-      "approved": 9,
-      "draft": 1076
+      "approved": 42,
+      "draft": 1043
     },
     "by_goal": {
       "A12.S2.06": 30,
