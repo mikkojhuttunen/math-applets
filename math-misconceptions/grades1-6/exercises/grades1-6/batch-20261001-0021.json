@@ -234,7 +234,7 @@
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Aino laski helmiä: 3 kymmenen helmen nauhaa ja 7 helmeä erikseen. Montako helmeä on?",
+  "stem_fi": "Aino laski helmiä. Hänellä oli 3 kymmenen helmen nauhaa ja 7 erillistä helmeä. Montako helmeä oli yhteensä?",
   "answer": "37",
   "answer_expr": "3 * 10 + 7",
   "workbook": [
