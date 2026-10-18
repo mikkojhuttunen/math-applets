@@ -147,7 +147,7 @@
     "goal": "A12.S2.09",
     "level": "S",
     "type": "numeric_entry",
-    "stem_fi": "Kirjastossa oli 85 kirjaa. Lainaan lähti 37 kirjaa. Montako kirjaa jäi?",
+    "stem_fi": "Kirjastossa oli 85 kirjaa. Kirjastosta lainattiin 37 kirjaa. Montako kirjaa jäi kirjastoon?",
     "answer": "48",
     "answer_expr": "85 - 37",
     "workbook": [],
