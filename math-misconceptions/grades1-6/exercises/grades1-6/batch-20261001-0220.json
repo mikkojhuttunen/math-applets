@@ -44,7 +44,7 @@
   "goal": "A36.S2.01",
   "level": "P",
   "type": "numeric_entry",
-  "stem_fi": "Mikä on 7,8 · 10?",
+  "stem_fi": "Paljonko on 7,8 · 10?",
   "answer": "78",
   "answer_expr": "7.8 * 10",
   "workbook": [
@@ -104,7 +104,7 @@
   "goal": "A36.S2.01",
   "level": "P",
   "type": "numeric_entry",
-  "stem_fi": "Mikä on 1,9 · 10?",
+  "stem_fi": "Paljonko on 1,9 · 10?",
   "answer": "19",
   "answer_expr": "1.9 * 10",
   "workbook": [
@@ -144,7 +144,7 @@
   "goal": "A36.S2.01",
   "level": "T",
   "type": "numeric_entry",
-  "stem_fi": "Mikä on 0,35 · 10?",
+  "stem_fi": "Paljonko on 0,35 · 10?",
   "answer": "3,5",
   "answer_expr": "0.35 * 10",
   "workbook": [
@@ -204,7 +204,7 @@
   "goal": "A36.S2.01",
   "level": "T",
   "type": "numeric_entry",
-  "stem_fi": "Mikä on 0,8 · 100?",
+  "stem_fi": "Paljonko on 0,8 · 100?",
   "answer": "80",
   "answer_expr": "0.8 * 100",
   "workbook": [
@@ -284,7 +284,7 @@
   "goal": "A36.S2.01",
   "level": "H",
   "type": "numeric_entry",
-  "stem_fi": "Mikä on 0,5 · 1000?",
+  "stem_fi": "Paljonko on 0,5 · 1000?",
   "answer": "500",
   "answer_expr": "0.5 * 1000",
   "workbook": [
