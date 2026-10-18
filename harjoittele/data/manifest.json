@@ -7,7 +7,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -15,7 +15,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -23,7 +23,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -31,7 +31,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -39,7 +39,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -47,7 +47,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -55,7 +55,7 @@
       "format": "grades1-6",
       "items": 10,
       "by_status": {
-        "draft": 10
+        "reviewed": 10
       }
     },
     {
@@ -63,7 +63,8 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "draft": 2,
+        "reviewed": 18
       }
     },
     {
@@ -71,7 +72,7 @@
       "format": "grades1-6",
       "items": 10,
       "by_status": {
-        "draft": 10
+        "reviewed": 10
       }
     },
     {
@@ -79,7 +80,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -87,7 +88,7 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "reviewed": 20
       }
     },
     {
@@ -95,7 +96,8 @@
       "format": "grades1-6",
       "items": 20,
       "by_status": {
-        "draft": 20
+        "draft": 13,
+        "reviewed": 7
       }
     },
     {
@@ -281,7 +283,8 @@
       "format": "grades7-9",
       "items": 10,
       "by_status": {
-        "draft": 10
+        "approved": 8,
+        "draft": 2
       }
     },
     {
@@ -1160,8 +1163,9 @@
   "totals": {
     "items": 1085,
     "by_status": {
-      "approved": 68,
-      "draft": 1017
+      "approved": 76,
+      "draft": 804,
+      "reviewed": 205
     },
     "by_goal": {
       "A12.S2.06": 30,

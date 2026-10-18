@@ -17,7 +17,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-002",
@@ -37,7 +37,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-003",
@@ -57,7 +57,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-004",
@@ -77,7 +77,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-005",
@@ -97,7 +97,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-006",
@@ -117,7 +117,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-007",
@@ -137,7 +137,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-008",
@@ -157,7 +157,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-009",
@@ -177,7 +177,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-010",
@@ -197,7 +197,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-011",
@@ -217,7 +217,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-012",
@@ -237,7 +237,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-013",
@@ -257,7 +257,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-014",
@@ -277,7 +277,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-015",
@@ -297,7 +297,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-016",
@@ -317,7 +317,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-017",
@@ -337,7 +337,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-018",
@@ -357,7 +357,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-019",
@@ -377,7 +377,7 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A36.S2.14-mult-below1-20261001-0321-020",
@@ -397,6 +397,6 @@
       }
     },
     "source": "human",
-    "status": "draft"
+    "status": "reviewed"
   }
 ]
