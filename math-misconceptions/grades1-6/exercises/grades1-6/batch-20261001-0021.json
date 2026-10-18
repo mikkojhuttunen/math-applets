@@ -192,7 +192,7 @@
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Kaupassa on 7 kymmenen munan laatikkoa ja 2 yksittäistä munaa. Montako munaa on?",
+  "stem_fi": "Kaupassa on 7 kymmenen munan laatikkoa ja 2 yksittäistä munaa. Montako munaa kaupassa on yhteensä?",
   "answer": "72",
   "answer_expr": "7 * 10 + 2",
   "workbook": [
