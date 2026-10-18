@@ -66,7 +66,7 @@ export function textProblems(text) {
   const problems = [];
   const cleaned = text
     .replace(/\s+/g, ' ')
-    .replace(/\S*\bS\d\.\d{2}\S*/g, ' ') // curriculum ids and item ids
+    .replace(/\S*\b[A-Z]\d\.\d{2}\S*/g, ' ') // curriculum ids and item ids
     .replace(/\S+\.(?:html|json|md|js|css)\b/g, ' ') // file names
     .replace(/https?:\/\/\S+/g, ' ');
   if (/\bNaN\b/.test(cleaned)) problems.push('NaN on screen');
