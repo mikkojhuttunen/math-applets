@@ -1,0 +1,37 @@
+{
+  "versio": 1,
+  "aanet": {
+    "klikkaus": null,
+    "oikein": null,
+    "vaarin": null,
+    "kierros_valmis": null,
+    "vihje": null
+  },
+  "kuvat": {
+    "logo": null,
+    "hahmo_neutraali": null,
+    "hahmo_oikein": null,
+    "hahmo_vaarin": null,
+    "hahmo_juhla": null
+  },
+  "ikonit": {
+    "aanet_paalla": null,
+    "aanet_pois": null,
+    "vihje": null,
+    "nollaa": null,
+    "seuraava": null,
+    "oikein": null,
+    "vaarin": null
+  },
+  "fontit": {
+    "leipa": null,
+    "leipa_lihava": null,
+    "otsikko": null
+  },
+  "sovelluskuvake": {
+    "favicon": null,
+    "kuvake_192": null,
+    "kuvake_512": null,
+    "kuvake_maskable": null
+  }
+}

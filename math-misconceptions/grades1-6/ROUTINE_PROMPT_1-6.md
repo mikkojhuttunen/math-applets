@@ -71,6 +71,7 @@ Write the first `n` of those, unchanged, to `exercises/grades1-6/batch-$STAMP.js
 
 1. Choose a goal id from the OPS file and a level that fits the grade band.
 2. Write the task in Finnish. Use a decimal comma. Keep it short and concrete. For grades 1–2 use very short texts that can be read aloud.
+   Place-value terms: a number (*luku*) consists of digits (*numerot*); a number can have one or more digits. The place units (*lukuyksiköt*: tuhannet, sadat, kymmenet, ykköset) tell a digit's place in the number. Write "Luvussa on 9 kymmentä ja 1 ykkönen", "numero 4 on kymmenten paikalla", "Mikä on numeron 4 arvo luvussa 47?". Do not describe numbers through manipulatives in the task text (no "kymmenkanta", "ykköskuutio"); those belong in teacher notes.
 3. Put the calculation in `answer_expr` with plain arithmetic (decimals with a point inside `answer_expr` only). Set `answer` to the result as a pupil would type it (decimal comma, fractions as `a/b`).
 4. If the backlog row names a misconception, add the wrong answer the misconception produces under `misconceptions`, with the item bank id as tag. Take the wrong answer from the item bank row and compute it, do not guess.
 5. Vary the numbers and the contexts. No two stems may be the same, also across earlier batches.

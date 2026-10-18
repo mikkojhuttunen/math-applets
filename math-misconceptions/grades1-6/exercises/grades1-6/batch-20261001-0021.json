@@ -206,7 +206,7 @@
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Kymmenkantoja on 5 ja ykkösiä 8. Mikä luku on kyseessä?",
+  "stem_fi": "Luvussa on 5 kymmentä ja 8 ykköstä. Mikä luku se on?",
   "answer": "58",
   "answer_expr": "5 * 10 + 8",
   "workbook": [
@@ -220,7 +220,7 @@
   "goal": "A12.S2.06",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Lukua kuvaa 9 kymmenkantaa ja 1 ykköskuutiota. Mikä luku se on?",
+  "stem_fi": "Luvussa on 9 kymmentä ja 1 ykkönen. Mikä luku se on?",
   "answer": "91",
   "answer_expr": "9 * 10 + 1",
   "workbook": [
