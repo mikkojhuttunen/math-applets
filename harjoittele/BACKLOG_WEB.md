@@ -43,6 +43,12 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - State: done (2026-09-30, recommendation accepted)
 - Recommendation: `harjoittele/` (URL `.../math-applets/harjoittele/`), practice page `index.html`, teacher view `opettaja.html`.
 
+### WD4 Own sounds, pictures and fonts
+- State: proposed
+- Question: may the pages load the teacher's own sound, image and font files from `teema/` on this same site? The ground rules now allow fetching only JSON files.
+- Why it matters: the files stay on the same site, so nothing is sent anywhere and no other site is contacted; but sounds in a classroom need a sensible default, and the page check must keep passing when a slot is empty.
+- Recommendation: **yes, same site only.** Extend the ground rule to "JSON, audio, image and font files from this same site". Sounds off by default, on with a button or `?aanet=1`, not remembered (WD1). Only slots that are set in `teema/teema.json` are requested.
+
 ## Tasks
 
 ### W01 Skeleton
@@ -155,6 +161,14 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 - Done:
 - Notes:
 
+### W15 Own theme: colours, sounds, pictures
+- State: todo
+- Needs: W14, WD4
+- What: read `teema/teema.json` and `teema/teema.css` (see `teema/README.md`). `css/style.css` takes its colours and font from `teema.css`. A sound module `js/sounds.js` plays the slots `klikkaus`, `oikein`, `vaarin`, `kierros_valmis`, `vihje` with the Web Audio API after the first tap, with an "Äänet" toggle in the header (off by default, `?aanet=1` turns it on). Pictures `logo` and `hahmo_*` and icons appear where set; an empty slot (`null`) leaves today's look and requests nothing. Fonts via `@font-face` from `teema/fontit/`. `prefers-reduced-motion` turns off any celebration animation.
+- Test: unit test for reading `teema.json` (all `null`, some set, a missing file listed). Page check passes with the placeholder `teema.json` (all `null`) and with a test theme in `test/fixtures/` that sets every slot. Browser test: sound toggle, `?aanet=1`, a correct and a wrong answer play their slot (checked through a stubbed audio call, not by ear).
+- Done:
+- Notes:
+
 ## Later
 
 - **W20 Progress on the device** (needs WD1 reopened after the expert review): remember finished items in `localStorage` on that device only, with a clear "Tyhjennä" button.
@@ -193,3 +207,4 @@ Published at `https://mikkojhuttunen.github.io/math-applets/harjoittele/` once m
 | 2026-10-01 | W12 | Front page link to harjoittele/ (own commit, index.html only) |
 | 2026-10-01 | W13 | Page check, self-test, CI workflows harjoittele and harjoittele-content, v0.12.0 |
 | 2026-10-01 | merge | `main` merged in: 143 files, 1010 items (all draft), 740 showable on 36 goals; 270 grades 7-9 items of types ES, RP, FS, ME, SO skipped (tasks L06-L10 in `LIVE_BACKLOG.md`). Pupil titles for 33 new goals in `data/topics_fi.json`. Fix: the column view matched a subtraction inside other questions (`9 − 3 = □ + 5`, `y = 8 − 3x`); `parseSubtraction` now accepts only a bare subtraction |
+| 2026-10-18 | WD4, W15 | Proposed: own sounds, pictures and fonts from `teema/`; placeholder folder `teema/` added |

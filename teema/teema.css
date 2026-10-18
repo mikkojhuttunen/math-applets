@@ -1,0 +1,58 @@
+/* Oma teema: värit ja fontti.
+   Tämä on paikkamerkki. Arvot ovat sivuston nykyiset oletusvärit; vaihda ne omiksi.
+   Mikään sivu ei vielä lataa tätä tiedostoa: harjoitussivut ottavat sen käyttöön
+   tehtävässä W15 (harjoittele/BACKLOG_WEB.md), appletit kopioivat applettiosan arvot
+   omaan teema-lohkoonsa (APPLET_SPEC.md, kohta 8). Ohje: teema/README.md. */
+
+/* Sivusto: etusivu index.html ja harjoittele/ */
+:root {
+  --bg: #fbfaf7;      /* sivun tausta */
+  --card: #ffffff;    /* kortit ja paneelit */
+  --text: #1d1d1f;    /* leipäteksti */
+  --dim: #6b6b70;     /* toissijainen teksti */
+  --line: #d6d6dc;    /* reunaviivat */
+  --link: #5b3fc4;    /* linkit, korostusväri, painikkeet */
+  --ok: #2b8a3e;      /* oikea vastaus */
+  --bad: #c92a2a;     /* väärä vastaus */
+  --font: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #16161a;
+    --card: #1e1e24;
+    --text: #ececef;
+    --dim: #9a9aa2;
+    --line: #3a3a42;
+    --link: #a996ff;
+    --ok: #69db7c;
+    --bad: #ff8787;
+  }
+}
+
+/* Appletit: pohjavärit, jotka jokainen applet kirjoittaa teema-lohkoonsa.
+   Kuvaajien omat värit (käyrät, pisteet) pysyvät appletin omina. */
+:root {
+  --a-bg: #fafafa;     /* --bg */
+  --a-card: #ffffff;   /* --card */
+  --a-fg: #1c1e21;     /* --fg */
+  --a-muted: #5b6068;  /* --muted */
+  --a-line: #d0d4da;   /* --line */
+  --a-grid: #e6e8ec;   /* --grid, ruudukko ja akselit */
+  --a-acc: #1a5fb4;    /* --acc, painikkeet ja ensimmäinen kuvaajaväri */
+  --a-warn: #fff4d6;   /* --warn, Varo virhekäsitystä -laatikon tausta */
+  --a-warnbd: #e0b040; /* --warnbd, saman laatikon reuna */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --a-bg: #15171a;
+    --a-card: #1e2126;
+    --a-fg: #e8eaed;
+    --a-muted: #a0a6ae;
+    --a-line: #3a3f46;
+    --a-grid: #2a2e34;
+    --a-acc: #6ea8fe;
+    --a-warn: #3a3218;
+    --a-warnbd: #8a6d1c;
+  }
+}
