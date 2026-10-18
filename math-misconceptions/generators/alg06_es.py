@@ -46,7 +46,7 @@ def make_items(run, date, count=5, start=1):
         elif k == 3:
             ctx = ""
         else:
-            ctx = f"Vaa'an vasemmassa kupissa on {a} kg:n ja {b} kg:n painot, oikeassa {c} kg:n paino ja painolla x. "
+            ctx = f"Vaa'an vasemmassa kupissa on {a} kg:n ja {b} kg:n painot. Oikeassa kupissa on {c} kg:n paino sekä paino, jonka massa on x kg. "
         prompt = f"{ctx}Oppilas ratkaisee yhtälön rivi riviltä. {ASK}"
         payload = {"lines": lines, "error_line": err, "error_type": etype}
         steps = [f"Rivi {err - 1} on oikein: molempien puolten arvojen on oltava yhtä suuret.",

@@ -248,7 +248,7 @@
         "ALG-06"
       ],
       "prompt": {
-        "text": "Vaa'an vasemmassa kupissa on 9 kg:n ja 3 kg:n painot, oikeassa 7 kg:n paino ja painolla x. Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
+        "text": "Vaa'an vasemmassa kupissa on 9 kg:n ja 3 kg:n painot. Oikeassa kupissa on 7 kg:n paino sekä paino, jonka massa on x kg. Oppilas ratkaisee yhtälön rivi riviltä. Kirjaimella x on merkitty laatikon tilalle tuntematon luku. Missä rivissä on ensimmäinen virhe? Napauta riviä."
       },
       "payload": {
         "lines": [
