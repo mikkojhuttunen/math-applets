@@ -186,7 +186,7 @@
   "goal": "A12.S2.08",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Sofia ui maanantaina 12 pituutta ja tiistaina 8 pituutta. Montako pituutta hän ui yhteensä?",
+  "stem_fi": "Sofia ui maanantaina 12 altaanväliä ja tiistaina 8 altaanväliä. Montako altaanväliä hän ui yhteensä?",
   "answer": "20",
   "answer_expr": "12 + 8",
   "workbook": [],
