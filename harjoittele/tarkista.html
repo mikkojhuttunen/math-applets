@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tehtävien tarkistus</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+<link rel="stylesheet" href="css/review.css">
+</head>
+<body>
+<main class="wide review">
+  <a class="back" href="opettaja.html">&larr; Opettajan näkymä</a> · <a class="back" href="index.html">Harjoittele</a>
+  <h1>Tehtävien tarkistus</h1>
+  <p class="lead">Käy luonnostehtävät läpi yksi kerrallaan ja anna kullekin arvio. Arviot pysyvät vain tässä selaimessa. Lopuksi tallennat ne tiedostoksi ja lähetät tiedoston tarkistuksen kokoajalle.</p>
+
+  <details class="help">
+    <summary>Näin tarkistat</summary>
+    <ol>
+      <li>Kirjoita nimesi. Se tulee tulostiedostoon, jotta kokoaja näkee, kuka arvioi.</li>
+      <li>Lue tehtävä, oikea vastaus, vaihtoehdot ja palautteet. Laske vastaus itse. <em>Kokeile oppilaana</em> avaa tehtävän oppilaan näkymässä.</li>
+      <li><em>Hyväksy</em> vaatii, että rastitat neljä tarkistusta. <em>Korjattava</em> ja <em>Hylkää</em> vaativat lyhyen kommentin.</li>
+      <li>Pikanäppäimet, kun kursori ei ole kentässä: <kbd>A</kbd> hyväksy, <kbd>K</kbd> korjattava, <kbd>H</kbd> hylkää, <kbd>1</kbd>–<kbd>4</kbd> rastit, nuolet siirtyvät tehtävästä toiseen.</li>
+      <li>Paina <em>Lataa tiedostoksi</em> ja lähetä tiedosto kokoajalle. Älä luota pelkästään selaimen muistiin: tyhjennys tai toinen laite poistaa arviot.</li>
+    </ol>
+  </details>
+
+  <div class="tabs" role="tablist">
+    <button role="tab" id="tab-review" aria-selected="true" aria-controls="panel-review">Tarkista</button>
+    <button role="tab" id="tab-merge" aria-selected="false" aria-controls="panel-merge">Yhdistä (kokoaja)</button>
+  </div>
+
+  <section id="panel-review" role="tabpanel" aria-labelledby="tab-review">
+    <form class="filters" id="setup" autocomplete="off">
+      <label>Nimesi <input name="reviewer" type="text" maxlength="60" placeholder="esim. Maija M."></label>
+      <label>Luokat <select name="band">
+        <option value="">Kaikki</option><option value="1-6">1–6</option><option value="7-9">7–9</option>
+      </select></label>
+      <label>Aihe <select name="topic"><option value="">Kaikki</option></select></label>
+      <label>Tyyppi <select name="kind">
+        <option value="">Kaikki</option><option value="valinta">Monivalinta</option><option value="vastaus">Kirjoitettava vastaus</option>
+      </select></label>
+      <label>Näytä <select name="mode">
+        <option value="unjudged">Vielä arvioimattomat</option><option value="all">Kaikki luonnokset</option>
+      </select></label>
+    </form>
+    <p class="status share">Linkki tähän rajaukseen kollegalle: <a id="share-link"></a></p>
+
+    <div class="progress-box" aria-live="polite">
+      <progress id="progress" max="1" value="0"></progress>
+      <p id="progress-text" class="status"></p>
+    </div>
+
+    <div id="card-area"></div>
+    <p id="load-status" class="status">Ladataan&hellip;</p>
+
+    <section class="export-bar" aria-label="Tulokset">
+      <h2>Tulokset</h2>
+      <p id="store-text" class="status"></p>
+      <div class="toolbar">
+        <button type="button" id="download" class="primary">Lataa tiedostoksi</button>
+        <button type="button" id="copy-results">Kopioi leikepöydälle</button>
+        <label class="file-button">Tuo oma tiedosto <input type="file" id="import-own" accept=".json,application/json" hidden></label>
+        <button type="button" id="clear-all">Tyhjennä arviot</button>
+      </div>
+      <p id="export-message" class="status" aria-live="polite"></p>
+      <textarea id="copy-fallback" readonly hidden aria-label="Tulokset tekstinä"></textarea>
+    </section>
+  </section>
+
+  <section id="panel-merge" role="tabpanel" aria-labelledby="tab-merge" hidden>
+    <p class="lead">Yhdistä kollegojen tiedostot yhdeksi tulokseksi. Mitään ei lähetetä minnekään: tiedostot luetaan tässä selaimessa.</p>
+    <div class="toolbar">
+      <label class="file-button">Lisää tiedostoja <input type="file" id="merge-files" accept=".json,application/json" multiple hidden></label>
+      <button type="button" id="add-own">Lisää omat arvioni</button>
+      <label class="inline">Hyväksyntöjä vaaditaan <select id="min-approvals">
+        <option value="1">1</option><option value="2">2</option><option value="3">3</option>
+      </select></label>
+    </div>
+    <p class="status">Tehtävä on valmis hyväksyttäväksi, kun vaadittu määrä tarkastajia on hyväksynyt sen eikä kukaan ole merkinnyt sitä korjattavaksi tai hylätyksi.</p>
+    <p id="merge-message" class="status" aria-live="polite"></p>
+    <ul id="merge-files-list" class="file-list"></ul>
+    <div id="merge-result"></div>
+  </section>
+</main>
+<script type="module" src="js/review_page.js"></script>
+</body>
+</html>

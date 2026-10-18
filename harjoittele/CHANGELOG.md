@@ -2,6 +2,13 @@
 
 `version` in `package.json` follows the same rules as the bot: MAJOR when a page changes behaviour or is removed, MINOR for a new page or feature, PATCH for fixes.
 
+## 0.15.0 (2026-10-18)
+
+- `tarkista.html`: review page for vetting draft items one at a time, with approve / fix / reject verdicts, a four-point checklist, results as a file per reviewer, and a merge tab for the collector (`js/review.js`, `js/review_page.js`). Page check and browser test cover it.
+- Merge tab downloads the updated exercise files and manifest as one zip (`js/status_edit.js`, `js/zip.js`), identical to what `tools/set_status.js` writes.
+- `tools/set_status.js`: sets items to `approved` (grades 7-9) or `reviewed` (grades 1-6) from a list of ids.
+- Browser test: the pupil start page lists an item under each of its goals, so the topic counts are compared with the number of goal links, not with the number of items.
+
 ## 0.14.0 (2026-10-17)
 
 - Number answers framed as a sentence: `answer_prefix`, the box and `answer.unit` on one line ("Hinta on [ ] euroa"); the input hint moves below the row. An answer typed with the item's own unit ("12 euroa") is accepted. The teacher view shows the prefix with the correct answer.

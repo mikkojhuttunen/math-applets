@@ -44,6 +44,15 @@ export const PAGES = [
       await page.uncheck('input[name=used]');
     },
   },
+  { url: 'harjoittele/tarkista.html', wait: '.review-card' },
+  {
+    url: 'harjoittele/tarkista.html?lk=7-9&aihe=ALG-04&kaikki=1',
+    label: 'review tab merge',
+    prepare: async (page) => {
+      await page.waitForSelector('.review-card');
+      await page.click('#tab-merge');
+    },
+  },
   { url: 'harjoittele/tavoitteet.html', wait: '.goal' },
   { url: 'harjoittele/testaa.html', wait: '.level' },
 ];

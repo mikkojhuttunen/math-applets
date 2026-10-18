@@ -5,8 +5,10 @@
 
 import http from 'node:http';
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { readZip } from '../js/zip.js';
 import { fileURLToPath } from 'node:url';
 
 const require = createRequire(import.meta.url);
@@ -67,10 +69,11 @@ try {
   {
     const { page, problems } = await pageWithGuards(context, origin);
     await page.goto(`${origin}/harjoittele/`);
-    const reviewed = await page.evaluate(async () => {
+    // An item with several goals is listed under each of them, so the topic counts add up to the goal links.
+    const { reviewed, goalLinks } = await page.evaluate(async () => {
       const { loadItems } = await import('./js/items.js');
       const { items } = await loadItems(new URL('data/manifest.json', location.href).href, { includeDrafts: false });
-      return items.length;
+      return { reviewed: items.length, goalLinks: items.reduce((n, i) => n + i.goals.length, 0) };
     });
     if (reviewed === 0) {
       await page.waitForSelector('#app a[href="?luonnokset=1"]');
@@ -79,7 +82,7 @@ try {
       await page.waitForSelector('.topic');
       const counts = await page.locator('.topic-count').allTextContents();
       const shown = counts.reduce((sum, t) => sum + parseInt(t, 10), 0);
-      check(shown === reviewed, `pupil view: topics list ${shown} items, ${reviewed} are reviewed`);
+      check(shown === goalLinks, `pupil view: topics list ${shown} items, expected ${goalLinks} (${reviewed} reviewed items)`);
     }
     check(await page.isHidden('#draft-banner'), 'pupil view: draft banner visible');
     await commonChecks(page, 'pupil view');
@@ -311,6 +314,88 @@ try {
     await commonChecks(page, 'goal browser');
     problems.forEach((p) => failures.push(`goal browser: ${p}`));
     await page.close();
+  }
+  // Review page: verdicts need their checks or comments, persist across a
+  // reload, export as a file, and merge with a colleague's file.
+  {
+    const { page, problems } = await pageWithGuards(context, origin);
+    await page.goto(`${origin}/harjoittele/tarkista.html?lk=7-9&kaikki=1`);
+    await page.waitForSelector('#progress-text');
+    if ((await page.locator('.review-card .item-head').count()) === 0) {
+      await page.close();
+    } else {
+      const firstId = (await page.textContent('.review-card .item-head strong')).trim();
+      await page.fill('input[name=reviewer]', 'Testi Tarkastaja');
+
+      await page.click('button.approve');
+      check((await page.textContent('#problem')).includes('Rastita'), 'review: approve without checks was not refused');
+      await page.click('button.fix');
+      check((await page.textContent('#problem')).includes('kommentti'), 'review: fix without comment was not refused');
+      check((await page.textContent('#progress-text')).includes('Arvioitu 0 /'), 'review: a refused verdict was counted');
+
+      for (let i = 1; i <= 4; i++) await page.check(`fieldset.checks label:nth-child(${i + 1}) input`);
+      await page.click('button.approve');
+      await page.waitForFunction(() => document.querySelector('#progress-text').textContent.includes('Arvioitu 1 /'));
+      const secondId = (await page.textContent('.review-card .item-head strong')).trim();
+      check(secondId !== firstId, 'review: did not move to the next item');
+
+      await page.fill('#comment', 'Vaihtoehto C on myös oikein.');
+      await page.click('button.fix');
+      await page.waitForFunction(() => document.querySelector('#progress-text').textContent.includes('korjattavia 1'));
+
+      const [download] = await Promise.all([page.waitForEvent('download'), page.click('#download')]);
+      const ownPath = path.join(os.tmpdir(), `tarkistus-own-${process.pid}.json`);
+      await download.saveAs(ownPath);
+      const own = JSON.parse(fs.readFileSync(ownPath, 'utf8'));
+      check(own.reviewer === 'Testi Tarkastaja' && own.verdicts.length === 2, `review: exported file wrong: ${JSON.stringify(own).slice(0, 200)}`);
+      check(download.suggestedFilename().startsWith('tarkistus-testi-tarkastaja-'), 'review: file name wrong');
+
+      await page.reload();
+      await page.waitForSelector('#progress-text');
+      check((await page.textContent('#progress-text')).includes('Arvioitu 2 /'), 'review: verdicts lost on reload');
+
+      await page.click('#tab-merge');
+      const colleague = { ...own, reviewer: 'Kollega', verdicts: [{ id: firstId, verdict: 'approve', comment: '' }, { id: secondId, verdict: 'approve', comment: '' }] };
+      const colleaguePath = path.join(os.tmpdir(), `tarkistus-colleague-${process.pid}.json`);
+      fs.writeFileSync(colleaguePath, JSON.stringify(colleague));
+      await page.setInputFiles('#merge-files', [ownPath, colleaguePath]);
+      await page.waitForSelector('#merge-result details');
+      const merged = await page.textContent('#merge-result');
+      check(merged.includes('Valmiit hyväksyttäväksi (1)'), `review merge: ready count wrong: ${merged.slice(0, 300)}`);
+      check(merged.includes('ristiriitaisia 1'), 'review merge: conflict not found');
+      await page.selectOption('#min-approvals', '3');
+      await page.waitForFunction(() => document.querySelector('#merge-result').textContent.includes('Valmiit hyväksyttäväksi (0)'));
+      await page.selectOption('#min-approvals', '1');
+      const [approvedFile] = await Promise.all([page.waitForEvent('download'), page.click('text=Lataa tunnisteet (.txt)')]);
+      const approvedPath = path.join(os.tmpdir(), `hyvaksytyt-${process.pid}.txt`);
+      await approvedFile.saveAs(approvedPath);
+      const approvedText = fs.readFileSync(approvedPath, 'utf8');
+      check(approvedText.includes(firstId) && !approvedText.includes(secondId), 'review merge: approved list wrong');
+
+      const [zipDownload] = await Promise.all([page.waitForEvent('download'), page.click('button:has-text("Lataa päivitetyt tiedostot")')]);
+      const zipPath = path.join(os.tmpdir(), `paivitys-${process.pid}.zip`);
+      await zipDownload.saveAs(zipPath);
+      const zipEntries = readZip(new Uint8Array(fs.readFileSync(zipPath)));
+      const itemFile = zipEntries.find((e) => e.text.includes(`"id": "${firstId}"`));
+      const statusIn = (text, id) => JSON.parse(text).items.find((i) => i.id === id).status;
+      check(Boolean(itemFile) && statusIn(itemFile.text, firstId) === 'approved', 'review zip: item not approved in the file');
+      const secondInZip = zipEntries.find((e) => e.text.includes(`"id": "${secondId}"`));
+      check(!secondInZip || statusIn(secondInZip.text, secondId) !== 'approved', 'review zip: the fix item was approved');
+      const manifestEntry = zipEntries.find((e) => e.name === 'harjoittele/data/manifest.json');
+      check(Boolean(manifestEntry) && JSON.parse(manifestEntry.text).totals.by_status.approved >= 1, 'review zip: manifest missing or not updated');
+      // The zip must reproduce what the repository's own tools would write.
+      if (itemFile) {
+        const before = fs.readFileSync(path.join(REPO, itemFile.name), 'utf8');
+        const changedLines = before.split('\n').filter((line, n) => line !== itemFile.text.split('\n')[n]);
+        check(changedLines.length === 1, `review zip: ${changedLines.length} lines differ, expected 1`);
+      }
+      fs.rmSync(zipPath, { force: true });
+
+      await commonChecks(page, 'review merge');
+      problems.forEach((p) => failures.push(`review page: ${p}`));
+      for (const f of [ownPath, colleaguePath, approvedPath]) fs.rmSync(f, { force: true });
+      await page.close();
+    }
   }
 } finally {
   await context.close();
