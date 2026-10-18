@@ -45,7 +45,7 @@ def make_items(run, date, count=5, start=1):
             ans, wrong = v, [p]
             steps = [f"{ch} = {v - c} + {c} = {v}"]
         elif k == 3:
-            prompt, level = f"Luvun {ch} kaksinkertainen on {2 * v}. Mikä on luku {ch}?", "H"
+            prompt, level = f"Kun luku {ch} kerrotaan kahdella, tulokseksi saadaan {2 * v}. Mikä on luku {ch}?", "H"
             ans, wrong = v, [p]
             steps = [f"2{ch} = {2 * v}", f"{ch} = {v}"]
         else:

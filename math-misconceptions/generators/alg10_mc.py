@@ -40,7 +40,7 @@ def make_items(run, date, count=5, start=1):
             level = "H"
             c = rng.randint(2, 4)
             d = rng.randint(2, 9)
-            prompt = letters + (f"{many.capitalize()} on {d} enemmän kuin kolminkertainen määrä {few}." .replace("kolminkertainen", {2: "kaksinkertainen", 3: "kolminkertainen", 4: "nelinkertainen"}[c])
+            prompt = letters + (f"{many.capitalize()} on {d} enemmän kuin {({2: 'kaksi', 3: 'kolme', 4: 'neljä'}[c])} kertaa {few_gen} määrä."
                       + " Mikä yhtälö kuvaa tilannetta?")
             correct = f"{m} = {c}{f} + {d}"
             good = f"{many.capitalize()} on {c} kertaa niin paljon kuin {few} ja lisäksi {d}, joten {correct}."

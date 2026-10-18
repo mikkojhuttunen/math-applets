@@ -247,7 +247,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Merkitään kirjojen määrää k:lla ja lehtien määrää l:llä. Kirjoja on 6 enemmän kuin kolminkertainen määrä lehtiä. Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään kirjojen määrää k:lla ja lehtien määrää l:llä. Kirjoja on 6 enemmän kuin kolme kertaa lehtien määrä. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -323,7 +323,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Merkitään kyyhkysten määrää k:lla ja harakoiden määrää h:lla. Kyyhkysiä on 7 enemmän kuin nelinkertainen määrä harakoita. Mikä yhtälö kuvaa tilannetta?"
+        "text": "Merkitään kyyhkysten määrää k:lla ja harakoiden määrää h:lla. Kyyhkysiä on 7 enemmän kuin neljä kertaa harakoiden määrä. Mikä yhtälö kuvaa tilannetta?"
       },
       "payload": {
         "options": [
@@ -759,7 +759,7 @@
         "ALG-10"
       ],
       "prompt": {
-        "text": "Kahvikuppeja on 8 enemmän kuin 2-kertainen määrä teekuppeja. Teekuppeja on 10. Valitse kaikki yhtälöt, joiden ratkaisu on kahvikuppien lukumäärä k."
+        "text": "Kahvikuppeja on 8 enemmän kuin kaksi kertaa teekuppien määrä. Teekuppeja on 10. Valitse kaikki yhtälöt, joiden ratkaisu on kahvikuppien lukumäärä k."
       },
       "payload": {
         "options": [

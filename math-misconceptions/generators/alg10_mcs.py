@@ -47,7 +47,7 @@ def make_items(run, date, count=5, start=1):
             level, ops, tt = "K", ["S1.04", "S3.05"], ["T14", "T4"]
             c, d = rng.randint(2, 4), rng.randint(2, 9)
             value = c * q + d
-            prompt = (f"{many.capitalize()} on {d} enemmän kuin {c}-kertainen määrä {few}. {few.capitalize()} on {q}. "
+            prompt = (f"{many.capitalize()} on {d} enemmän kuin {({2: 'kaksi', 3: 'kolme', 4: 'neljä'}[c])} kertaa {few_gen} määrä. {few.capitalize()} on {q}. "
                       f"Valitse kaikki yhtälöt, joiden ratkaisu on {many_gen} lukumäärä {m}.")
             valid = [f"{m} = {c} * {q} + {d}", f"{m} - {d} = {c} * {q}"]
             invalid = [(f"{c}{m} + {d} = {q}", TID), (f"{m} = {c} * ({q} + {d})", None), (f"{m} = {c} * {q} - {d}", None)]

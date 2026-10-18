@@ -201,7 +201,7 @@
         "ALG-03"
       ],
       "prompt": {
-        "text": "Luvun w kaksinkertainen on 8. Mikä on luku w?"
+        "text": "Kun luku w kerrotaan kahdella, tulokseksi saadaan 8. Mikä on luku w?"
       },
       "payload": {
         "answer": {
