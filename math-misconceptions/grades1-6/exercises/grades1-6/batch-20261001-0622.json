@@ -173,7 +173,7 @@
   "goal": "A12.S2.08",
   "level": "S",
   "type": "numeric_entry",
-  "stem_fi": "Akvaariossa oli 14 kalaa. Siitä siirrettiin 6 kalaa toiseen akvaarioon. Montako kalaa jäi?",
+  "stem_fi": "Akvaariossa oli 14 kalaa. Siitä siirrettiin 6 kalaa toiseen akvaarioon. Montako kalaa jäi alkuperäiseen akvaarioon?",
   "answer": "8",
   "answer_expr": "14 - 6",
   "workbook": [],
