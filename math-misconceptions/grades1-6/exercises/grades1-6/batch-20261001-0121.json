@@ -17,7 +17,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-002",
@@ -37,7 +37,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-003",
@@ -57,7 +57,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-004",
@@ -77,7 +77,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-005",
@@ -97,7 +97,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-006",
@@ -117,7 +117,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-007",
@@ -137,7 +137,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-008",
@@ -157,7 +157,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-009",
@@ -177,7 +177,7 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   },
   {
     "id": "A12.S2.06-place-20261001-0121-010",
@@ -197,6 +197,6 @@
       }
     },
     "source": "generated",
-    "status": "draft"
+    "status": "reviewed"
   }
 ]
