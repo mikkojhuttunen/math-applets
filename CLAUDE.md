@@ -34,7 +34,7 @@ Work on one pipeline never edits another's files. The practice pages, the demo s
 ## Exercise work
 
 - Grades 7-9: follow `math-misconceptions/README.md`. Run `python tests/run_tests.py` and `python scripts/verify.py` from `math-misconceptions/` before committing.
-- Grades 1-6: follow `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`. From `math-misconceptions/grades1-6/` run `python -m unittest discover -s tools/buggy_rules`, `python -m unittest discover -s tools/exercise_pipeline` and `python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"` before committing. Batches go in `exercises/grades1-6/` inside that folder, never in `math-misconceptions/exercises/`, which the 7-9 scripts read. No pupil data, ever; see `EXPERT_REVIEW_REQUIRED.md`.
+- Grades 1-6: follow `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`. From `math-misconceptions/grades1-6/` run `python -m unittest discover -s tools/buggy_rules`, `python -m unittest discover -s tools/exercise_pipeline` and `python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"` before committing (a new batch file must also pass without `--allow-reviewed`). Batches go in `exercises/grades1-6/` inside that folder, never in `math-misconceptions/exercises/`, which the 7-9 scripts read. No pupil data, ever; see `EXPERT_REVIEW_REQUIRED.md`.
 
 ## Git
 

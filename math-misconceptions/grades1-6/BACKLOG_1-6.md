@@ -19,3 +19,8 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | 11 | A12.S2.12 | none | numeric_entry with `answer_expr` | 60 | 60 | done | Multiplication tables 1–5 and 10. |
 | 12 | A36.S4.04 | GEO-03 | choice | 10 | 0 | hold | Evidence Limited in the item bank. A human decides whether to proceed. |
 | 13 | A36.S4.11 | MEA-02 | numeric_entry with `answer_expr` | 10 | 0 | hold | No study found for the misconception. Do not generate until a human decides. |
+| 14 | A12.S3.05 | none | numeric_entry with `answer_expr` | 20 | 20 | done | Lengths, masses and volumes in m, cm, kg, g, l, dl; no figures. Added 2026-10-19 at the teacher's request. |
+| 15 | A12.S3.06 | none | numeric_entry with `answer_expr` | 20 | 20 | done | Durations in minutes, hours, days and weeks; answers are amounts, not clock times. |
+| 16 | A36.S4.03 | GEO-01, GEO-02 | choice true/false, or numeric_entry | 16 | 16 | done | Square is a rectangle (GEO-02); a turned shape keeps its name (GEO-01). Without figures, so statements only. |
+| 17 | A36.S4.09 | MEA-01 | numeric_entry with `answer_expr` | 20 | 20 | done | Perimeter and area of rectangles and squares from side lengths. Area items tag MEA-01a (sides added). |
+| 18 | A36.S4.10 | none | numeric_entry with `answer_expr` | 20 | 20 | done | Volume of a rectangular box and a cube; dm³ = litra. |

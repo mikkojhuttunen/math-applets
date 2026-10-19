@@ -86,10 +86,11 @@ Write the first `n` of those, unchanged, to `exercises/grades1-6/batch-$STAMP.js
 ```bash
 python -m unittest discover -s tools/buggy_rules
 python -m unittest discover -s tools/exercise_pipeline
-python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"
+python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"
+python tools/exercise_pipeline/verify_items.py exercises/grades1-6/batch-<your stamp>.json
 ```
 
-All three must pass. Fix your items, not the tools.
+All four must pass. Earlier batches contain items a teacher marked `reviewed`, so the full check needs `--allow-reviewed`; your new file is checked without it and must contain drafts only. Fix your items, not the tools.
 
 ## Update the backlog
 

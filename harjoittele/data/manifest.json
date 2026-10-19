@@ -173,6 +173,46 @@
       }
     },
     {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0357.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0358.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0359.json",
+      "format": "grades1-6",
+      "items": 16,
+      "by_status": {
+        "draft": 16
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0400.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0401.json",
+      "format": "grades1-6",
+      "items": 20,
+      "by_status": {
+        "draft": 20
+      }
+    },
+    {
       "path": "../math-misconceptions/exercises/ALG-01/MC.json",
       "format": "grades7-9",
       "items": 5,
@@ -1161,10 +1201,10 @@
     }
   ],
   "totals": {
-    "items": 1085,
+    "items": 1181,
     "by_status": {
       "approved": 76,
-      "draft": 804,
+      "draft": 900,
       "reviewed": 205
     },
     "by_goal": {
@@ -1172,12 +1212,16 @@
       "A12.S2.08": 90,
       "A12.S2.09": 60,
       "A12.S2.12": 60,
+      "A12.S3.05": 20,
+      "A12.S3.06": 20,
       "A36.S2.01": 20,
       "A36.S2.04": 40,
       "A36.S2.11": 20,
       "A36.S2.12": 40,
       "A36.S2.14": 20,
-      "A36.S4.09": 20,
+      "A36.S4.03": 16,
+      "A36.S4.09": 40,
+      "A36.S4.10": 20,
       "S1.04": 10,
       "S2.01": 75,
       "S2.02": 40,
@@ -1235,9 +1279,9 @@
       "FUN-03": 10,
       "FUN-04": 5,
       "FUN-05": 10,
-      "GEO-01": 5,
-      "GEO-02": 5,
-      "MEA-01": 20,
+      "GEO-01": 7,
+      "GEO-02": 7,
+      "MEA-01": 27,
       "NUM-01": 11,
       "NUM-02": 11,
       "NUM-03": 65,

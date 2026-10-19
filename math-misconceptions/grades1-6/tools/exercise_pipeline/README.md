@@ -14,7 +14,7 @@ From the repository root:
 python -m unittest discover -s tools/exercise_pipeline
 python tools/exercise_pipeline/from_buggy_rules.py --n 12 --seed 20261001 --stamp 20261001 \
     --out exercises/grades1-6/batch-20261001-0600.json
-python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"
+python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"
 ```
 
 `from_buggy_rules.py` skips any stem that already exists in `exercises/grades1-6/*.json` (change with `--avoid-glob`), so a later batch never repeats an earlier task.
