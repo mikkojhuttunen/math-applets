@@ -78,6 +78,7 @@ Write the first `n` of those, unchanged, to `exercises/grades1-6/batch-$STAMP.js
 4. If the backlog row names a misconception, add the wrong answer the misconception produces under `misconceptions`, with the item bank id as tag. Take the wrong answer from the item bank row and compute it, do not guess.
 5. Vary the numbers and the contexts. No two stems may be the same, also across earlier batches.
 6. Avoid tasks with two reasonable readings. If unsure, leave the item out.
+7. Question mix (see `CLAUDE.md`, "Question mix"): write `choice` items by default, with 3 options for grades 1–2 and 4 for grades 3–6. The right answer is one option; the others are the wrong answers the backlog row's misconception produces (tag them under `misconceptions`) and, if needed, one plausible slip. Write `numeric_entry` only when the backlog row asks for it or typing the answer is the point; keep those to about a fifth of a batch.
 
 **Evidence.** If the item bank row has evidence `Limited`, add a `notes` entry: "Evidence for this misconception is limited; reviewer to confirm".
 

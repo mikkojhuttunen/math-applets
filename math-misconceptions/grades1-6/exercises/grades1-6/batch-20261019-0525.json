@@ -1,0 +1,302 @@
+[
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-001",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 903 − 440. Valitse oikea vastaus.",
+    "answer": "463",
+    "options": [
+      "543",
+      "563",
+      "443",
+      "463"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "543"
+      },
+      "NUM-10b": {
+        "answer": "443"
+      },
+      "NUM-10c": {
+        "answer": "563"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-002",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 423 − 327. Valitse oikea vastaus.",
+    "answer": "96",
+    "options": [
+      "96",
+      "104",
+      "14",
+      "106"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "104"
+      },
+      "NUM-10b": {
+        "answer": "14"
+      },
+      "NUM-10c": {
+        "answer": "106"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-003",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 781 − 662. Valitse oikea vastaus.",
+    "answer": "119",
+    "options": [
+      "111",
+      "129",
+      "121",
+      "119"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "121"
+      },
+      "NUM-10b": {
+        "answer": "111"
+      },
+      "NUM-10c": {
+        "answer": "129"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-004",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 441 − 115. Valitse oikea vastaus.",
+    "answer": "326",
+    "options": [
+      "334",
+      "326",
+      "324",
+      "336"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "334"
+      },
+      "NUM-10b": {
+        "answer": "324"
+      },
+      "NUM-10c": {
+        "answer": "336"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-005",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 980 − 453. Valitse oikea vastaus.",
+    "answer": "527",
+    "options": [
+      "533",
+      "527",
+      "537",
+      "523"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "533"
+      },
+      "NUM-10b": {
+        "answer": "523"
+      },
+      "NUM-10c": {
+        "answer": "537"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-006",
+    "goal": "A36.S2.04",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Laske 662 − 444. Valitse oikea vastaus.",
+    "answer": "218",
+    "options": [
+      "228",
+      "222",
+      "218",
+      "212"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "222"
+      },
+      "NUM-10b": {
+        "answer": "212"
+      },
+      "NUM-10c": {
+        "answer": "228"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-007",
+    "goal": "A36.S2.04",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Laske 800 − 702. Valitse oikea vastaus.",
+    "answer": "98",
+    "options": [
+      "92",
+      "102",
+      "98",
+      "108"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "102"
+      },
+      "NUM-10b": {
+        "answer": "92"
+      },
+      "NUM-10c": {
+        "answer": "108"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-008",
+    "goal": "A36.S2.04",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Laske 610 − 443. Valitse oikea vastaus.",
+    "answer": "167",
+    "options": [
+      "167",
+      "143",
+      "277",
+      "233"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "233"
+      },
+      "NUM-10b": {
+        "answer": "143"
+      },
+      "NUM-10c": {
+        "answer": "277"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-009",
+    "goal": "A36.S2.04",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Laske 780 − 181. Valitse oikea vastaus.",
+    "answer": "599",
+    "options": [
+      "599",
+      "511",
+      "609",
+      "601"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "601"
+      },
+      "NUM-10b": {
+        "answer": "511"
+      },
+      "NUM-10c": {
+        "answer": "609"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.04-subchoice-20261019-0525-010",
+    "goal": "A36.S2.04",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Laske 905 − 360. Valitse oikea vastaus.",
+    "answer": "545",
+    "options": [
+      "665",
+      "545",
+      "645",
+      "565"
+    ],
+    "workbook": [
+      "NUM-10"
+    ],
+    "misconceptions": {
+      "NUM-10a": {
+        "answer": "665"
+      },
+      "NUM-10b": {
+        "answer": "565"
+      },
+      "NUM-10c": {
+        "answer": "645"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]
