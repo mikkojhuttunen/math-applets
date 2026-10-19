@@ -39,10 +39,10 @@
     },
     "ALG-06": {
       "name_fi": "Yhtäsuuruusmerkki luetaan ”vastaus tulee tähän”",
-      "pupil": "Yhtäsuuruusmerkki tarkoittaa, että molemmilla puolilla on yhtä paljon. Laske ensin vasen puoli. Mikä luku oikealla tekee siitä yhtä suuren?",
+      "pupil": "Merkki = tarkoittaa, että molemmilla puolilla on yhtä paljon. Laske ensin vasen puoli. Mieti sitten, mikä luku tekee oikeasta puolesta yhtä suuren. Esimerkiksi 3 + 2 = □ + 1: vasen puoli on 5, joten □ on 4.",
       "teacher": "Oppilas lukee =-merkin kehotuksena kirjoittaa tulos (8 + 4 = □ + 5 → 12). Vaaka- eli tasapainomalli auttaa: kummallakin puolella on sama määrä.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "ALG-07": {
       "name_fi": "Etumerkki ei vaihdu siirrossa",
@@ -88,10 +88,10 @@
     },
     "ALG-13": {
       "name_fi": "Laskun pitää olla ennen yhtäsuuruusmerkkiä",
-      "pupil": "Yhtäsuuruusmerkki ei tarkoita ”vastaus tulee tähän”. Se kertoo, että molemmilla puolilla on yhtä paljon, joten lasku voi olla kummalla puolella tahansa.",
+      "pupil": "Merkki = tarkoittaa, että molemmilla puolilla on yhtä paljon. Lasku voi olla kummalla puolella tahansa. Esimerkiksi 7 = 3 + 4 on yhtä totta kuin 3 + 4 = 7.",
       "teacher": "Oppilas hyväksyy vain muodon ”lasku = vastaus”, joten 8 = 5 + 3 on hänestä väärin. Harjoittele yhtälöitä, joissa lasku on oikealla tai molemmilla puolilla.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "EXT-01": {
       "name_fi": "Negatiivisen luvun neliö: −3² luetaan 9:ksi",
@@ -216,10 +216,10 @@
     },
     "MEA-01": {
       "name_fi": "Ruudut lasketaan yhteen eikä riveinä",
-      "pupil": "Ruudut ovat riveissä, ja jokaisessa rivissä on yhtä monta ruutua. Montako riviä on ja montako ruutua yhdessä rivissä? Kertolasku kertoo, montako ruutua on kaikkiaan.",
+      "pupil": "Jokaisella rivillä on yhtä monta ruutua. Laske rivien määrä ja yhden rivin ruudut, ja kerro ne keskenään. Esimerkiksi 2 riviä, joilla kummallakin on 3 ruutua, on yhteensä 2 · 3 = 6 ruutua.",
       "teacher": "Rivien ja sarakkeiden rakennetta ei nähdä, joten luvut lasketaan yhteen (3 riviä, 5 saraketta → 8). Piirrä rivit näkyviin ja laske rivi kerrallaan: 5 + 5 + 5.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "MEA-02": {
       "name_fi": "Pinta-alayksiköt muunnetaan pituuden kertoimella",
@@ -244,12 +244,12 @@
     },
     "NUM-03": {
       "name_fi": "Osoittajat ja nimittäjät yhteen erikseen",
-      "pupil": "Nimittäjä kertoo osien koon, eikä se muutu yhteenlaskussa. Samannimisissä murtoluvuissa lasketaan yhteen vain osoittajat. Jos nimittäjät ovat eri, lavenna ensin samannimisiksi.",
+      "pupil": "Nimittäjä kertoo, moneenko yhtä suureen osaan kokonainen on jaettu. Nimittäjiä ei lasketa yhteen: 1/5 + 2/5 = 3/5. Jos nimittäjät ovat erilaiset, lavenna murtoluvut ensin samannimisiksi.",
       "teacher": "Osoittajat ja nimittäjät lasketaan yhteen erikseen (1/8 + 1/8 → 2/16). Tarkistus: 2/16 = 1/8, eli summa olisi yhtä suuri kuin yhteenlaskettava.",
       "applets": [
         "luokat-1-6/fraction_addition_applet.html"
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     "NUM-04": {
       "name_fi": "Kertolasku suurentaa aina",
@@ -293,17 +293,17 @@
     },
     "NUM-09": {
       "name_fi": "Numerot luetaan ilman paikka-arvoa",
-      "pupil": "Numeron arvo riippuu sen paikasta luvussa. Onko numero ykkösten, kymmenten vai satojen paikalla? Satojen paikalla oleva 7 tarkoittaa seitsemää sataa.",
+      "pupil": "Numeron arvo riippuu sen paikasta luvussa. Katso, onko numero ykkösten, kymmenten vai satojen paikalla. Esimerkiksi luvussa 52 numero 5 on kymmenten paikalla, joten sen arvo on 50.",
       "teacher": "Moninumeroinen luku käsitellään erillisinä numeroina (luvussa 706 numeron 7 arvo on oppilaasta 7). Käytä satalevyjä, kymppitankoja ja ykköskuutioita sekä paikkajärjestelmätaulukkoa.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "NUM-10": {
       "name_fi": "Vähennetään pienempi numero suuremmasta",
-      "pupil": "Jokaisessa sarakkeessa vähennetään alempi numero ylemmästä, ei toisin päin. Jos ylempi numero on pienempi, lainaa kymmenen vasemmalla olevasta sarakkeesta.",
+      "pupil": "Vähennä jokaisessa sarakkeessa alempi numero ylemmästä. Jos ylempi numero on pienempi, lainaa vasemmalta eli vaihda yksi kymmenen kymmeneksi ykköseksi. Muista vähentää lainattu yksi siitä sarakkeesta, josta lainasit.",
       "teacher": "Sarakkeessa, jossa ylempi numero on pienempi, vähennetään pienempi suuremmasta eikä lainata (453 − 127 → 334). Muunnelmat NUM-10a–c. Vaihda kymppitanko kymmeneksi ykköskuutioksi.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "NUM-10a": {
       "name_fi": "Ei lainausta: pienempi numero suuremmasta",
@@ -328,26 +328,26 @@
     },
     "NUM-11": {
       "name_fi": "Kerroin alle 1 johtaa jakolaskuun",
-      "pupil": "Kertolasku sopii myös silloin, kun toinen luku on pienempi kuin 1. Arvioi ensin: pitäisikö vastauksen olla suurempi vai pienempi kuin lähtöluku?",
+      "pupil": "Kun luku kerrotaan luvulla, joka on pienempi kuin 1, tulos pienenee. Puoli metriä maksaa puolet metrin hinnasta: 0,5 · 20 € = 10 €. Arvioi ensin, pitäisikö vastauksen olla suurempi vai pienempi.",
       "teacher": "Kertolasku nähdään vain toistettuna yhteenlaskuna, joten alle 1:n kerroin tuntuu vaativan jakolaskua (0,5 m, 4 €/m → 4 : 0,5 = 8 €). Taulukoi hinta pituuksille 3 m, 2 m, 1 m ja 0,5 m.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "NUM-12": {
       "name_fi": "Suurempi nimittäjä, suurempi murtoluku",
-      "pupil": "Nimittäjä kertoo, moneenko yhtä suureen osaan kokonainen on jaettu. Mitä useampaan osaan jaetaan, sitä pienempiä osat ovat.",
+      "pupil": "Nimittäjä kertoo, moneenko yhtä suureen osaan kokonainen on jaettu. Mitä useampaan osaan kokonainen jaetaan, sitä pienempiä osat ovat. Siksi 1/3 on suurempi kuin 1/6.",
       "teacher": "Kokonaislukujen järjestys siirretään nimittäjiin (1/8 > 1/4, koska 8 > 4). Pizza- tai palkkimalli näyttää osien koon.",
       "applets": [
         "luokat-1-6/fraction_addition_applet.html"
       ],
-      "status": "draft"
+      "status": "reviewed"
     },
     "NUM-13": {
       "name_fi": "Kymmenellä kertominen lisää nollan",
-      "pupil": "Kun luku kerrotaan kymmenellä, jokainen numero siirtyy yhden paikan vasemmalle. Desimaaliluvun loppuun lisätty nolla ei muuta luvun arvoa.",
+      "pupil": "Kun luku kerrotaan kymmenellä, jokainen numero siirtyy yhden paikan vasemmalle: 2,7 · 10 = 27. Nolla desimaaliluvun lopussa ei muuta lukua: 2,70 on sama kuin 2,7.",
       "teacher": "Sääntö ”lisää nolla” sovelletaan kirjoitettuihin numeroihin (3,5 · 10 → 3,50). Paikkajärjestelmätaulukossa numerot siirtyvät ja pilkku pysyy paikallaan.",
       "applets": [],
-      "status": "draft"
+      "status": "reviewed"
     },
     "PRB-01": {
       "name_fi": "Pelurin harhaluulo",
