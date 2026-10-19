@@ -1,18 +1,31 @@
-# Runs the unit tests and the exercise verifier on every pull request that touches exercises or tools.
-# Check that the action versions below are current before relying on them.
+# Runs the grades 1-6 unit tests and the exercise verifier on pull requests and pushes to main
+# that touch the grades 1-6 exercises or tools.
 name: verify-exercises
 on:
   pull_request:
     paths:
-      - "exercises/**"
-      - "tools/**"
-      - "data/curriculum/**"
-      - "BACKLOG_1-6.md"
+      - "math-misconceptions/grades1-6/exercises/**"
+      - "math-misconceptions/grades1-6/tools/**"
+      - "math-misconceptions/grades1-6/data/curriculum/**"
+      - "math-misconceptions/grades1-6/BACKLOG_1-6.md"
+      - ".github/workflows/verify-exercises.yml"
+  push:
+    branches: [main]
+    paths:
+      - "math-misconceptions/grades1-6/exercises/**"
+      - "math-misconceptions/grades1-6/tools/**"
+      - "math-misconceptions/grades1-6/data/curriculum/**"
+      - ".github/workflows/verify-exercises.yml"
 jobs:
   verify:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: math-misconceptions/grades1-6
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -20,5 +33,13 @@ jobs:
         run: python -m unittest discover -s tools/buggy_rules
       - name: Unit tests, exercise pipeline
         run: python -m unittest discover -s tools/exercise_pipeline
+      # Items a teacher has reviewed carry "reviewed"; the verifier accepts them only with --allow-reviewed.
       - name: Verify every exercise file
-        run: python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"
+        run: python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"
+      # New batch files must still be drafts: only a human sets "reviewed", and never in a new batch.
+      - name: New batch files are drafts only
+        if: github.event_name == 'pull_request'
+        run: |
+          added=$(git diff --name-only --relative --diff-filter=A "origin/${{ github.base_ref }}...HEAD" -- exercises/grades1-6/ | grep '\.json$' || true)
+          if [ -z "$added" ]; then echo "No new batch files."; exit 0; fi
+          python tools/exercise_pipeline/verify_items.py $added

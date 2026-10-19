@@ -3,7 +3,7 @@
 > **EXPERT REVIEW REQUIRED BEFORE USE WITH PUPILS. NOT LEGAL ADVICE.** These files are exercise *content* only. No data about pupils is stored here and none may be added. Do not put these items in front of pupils until a teacher has reviewed them and the sign-off in `docs/privacy/expert_review_signoff_template.md` is complete. See `EXPERT_REVIEW_REQUIRED.md`.
 
 - One JSON array per file, named `batch-<date>-<time>.json`. Never edit an existing batch file from an automated run; add a new one.
-- Every item is checked by `python tools/exercise_pipeline/verify_items.py "exercises/grades1-6/*.json"`.
+- Every item is checked by `python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"` (`--allow-reviewed` because earlier batches contain reviewed items; a new batch is checked without it and must be all drafts). The GitHub workflow `verify-exercises` runs both checks.
 - Automated runs write `"status": "draft"`. Only a human reviewer changes it to `"reviewed"` (then verify with `--allow-reviewed`).
 
 ## Item fields
