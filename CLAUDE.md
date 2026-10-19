@@ -36,6 +36,13 @@ Work on one pipeline never edits another's files. The practice pages, the demo s
 - Grades 7-9: follow `math-misconceptions/README.md`. Run `python tests/run_tests.py` and `python scripts/verify.py` from `math-misconceptions/` before committing.
 - Grades 1-6: follow `math-misconceptions/grades1-6/ROUTINE_PROMPT_1-6.md`. From `math-misconceptions/grades1-6/` run `python -m unittest discover -s tools/buggy_rules`, `python -m unittest discover -s tools/exercise_pipeline` and `python tools/exercise_pipeline/verify_items.py --allow-reviewed "exercises/grades1-6/*.json"` before committing (a new batch file must also pass without `--allow-reviewed`). Batches go in `exercises/grades1-6/` inside that folder, never in `math-misconceptions/exercises/`, which the 7-9 scripts read. No pupil data, ever; see `EXPERT_REVIEW_REQUIRED.md`.
 
+## Question mix
+
+Teacher's principle (2026-10-19) for all exercise pipelines: most questions are multiple choice with one correct option, whose wrong options are typical mistakes (item bank misconceptions); about 0–20 % are open (typed answer) and about 0–20 % of the multiple-choice questions have several correct options. Open and multi-answer questions are the harder ones and come last in a round. The percentages are a direction, not a quota: some topics and types do not fit. The matikkapuri app builds its rounds this way; details in `mikkojhuttunen/matikkapuri`, `docs/QUESTION_MIX.md`.
+
+- Grades 1-6: write `choice` items by default (see `ROUTINE_PROMPT_1-6.md`). The grades 1-6 format has no multi-answer type yet.
+- Grades 7-9: `MC` items may have several entries in `correct`; the type plan itself is in section 1 of the 7-9 backlog, which only the teacher changes.
+
 ## Git
 
 - Merge `claude/*` branches into `main` with a merge commit, never squash: the routines merge `main` back every run.
