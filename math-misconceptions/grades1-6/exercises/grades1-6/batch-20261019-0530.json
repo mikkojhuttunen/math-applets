@@ -1,0 +1,194 @@
+[
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-001",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 7 cm ja 4 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "28 cm²",
+    "options": [
+      "11 cm²",
+      "28 cm²",
+      "22 cm²",
+      "56 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "11 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-002",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 8 cm ja 3 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "24 cm²",
+    "options": [
+      "24 cm²",
+      "22 cm²",
+      "11 cm²",
+      "48 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "11 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-003",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 6 cm ja 5 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "30 cm²",
+    "options": [
+      "11 cm²",
+      "30 cm²",
+      "22 cm²",
+      "60 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "11 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-004",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 9 cm ja 2 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "18 cm²",
+    "options": [
+      "18 cm²",
+      "11 cm²",
+      "36 cm²",
+      "22 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "11 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-005",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 5 cm ja 4 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "20 cm²",
+    "options": [
+      "20 cm²",
+      "18 cm²",
+      "40 cm²",
+      "9 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "9 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-006",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 10 cm ja 6 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "60 cm²",
+    "options": [
+      "60 cm²",
+      "32 cm²",
+      "120 cm²",
+      "16 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "16 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-007",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 7 cm ja 6 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "42 cm²",
+    "options": [
+      "42 cm²",
+      "13 cm²",
+      "26 cm²",
+      "84 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "13 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-areachoice-20261019-0530-008",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Suorakulmion sivut ovat 12 cm ja 3 cm. Kuinka suuri on suorakulmion pinta-ala?",
+    "answer": "36 cm²",
+    "options": [
+      "36 cm²",
+      "15 cm²",
+      "72 cm²",
+      "30 cm²"
+    ],
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "15 cm²"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]

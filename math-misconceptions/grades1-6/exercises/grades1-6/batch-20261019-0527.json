@@ -1,0 +1,262 @@
+[
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-001",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 7 + 5 = □ + 4",
+    "answer": "8",
+    "options": [
+      "12",
+      "16",
+      "8"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12"
+      },
+      "ALG-06b": {
+        "answer": "16"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-002",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 9 + 3 = □ + 6",
+    "answer": "6",
+    "options": [
+      "6",
+      "18",
+      "12"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12"
+      },
+      "ALG-06b": {
+        "answer": "18"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-003",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 6 + 6 = □ + 2",
+    "answer": "10",
+    "options": [
+      "14",
+      "10",
+      "12"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12"
+      },
+      "ALG-06b": {
+        "answer": "14"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-004",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 8 + 5 = □ + 7",
+    "answer": "6",
+    "options": [
+      "13",
+      "20",
+      "6"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13"
+      },
+      "ALG-06b": {
+        "answer": "20"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-005",
+    "goal": "A12.S2.08",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 4 + 9 = □ + 5",
+    "answer": "8",
+    "options": [
+      "8",
+      "13",
+      "18"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "13"
+      },
+      "ALG-06b": {
+        "answer": "18"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-006",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 5 + 7 = □ + 3",
+    "answer": "9",
+    "options": [
+      "12",
+      "9",
+      "15"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "12"
+      },
+      "ALG-06b": {
+        "answer": "15"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-007",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 9 + 6 = □ + 8",
+    "answer": "7",
+    "options": [
+      "15",
+      "23",
+      "7"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "15"
+      },
+      "ALG-06b": {
+        "answer": "23"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-008",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 3 + 8 = □ + 4",
+    "answer": "7",
+    "options": [
+      "15",
+      "7",
+      "11"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "11"
+      },
+      "ALG-06b": {
+        "answer": "15"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-009",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 7 + 7 = □ + 5",
+    "answer": "9",
+    "options": [
+      "19",
+      "9",
+      "14"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "14"
+      },
+      "ALG-06b": {
+        "answer": "19"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.08-eqchoice-20261019-0527-010",
+    "goal": "A12.S2.08",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Mikä luku sopii laatikkoon? 6 + 8 = □ + 9",
+    "answer": "5",
+    "options": [
+      "14",
+      "5",
+      "23"
+    ],
+    "workbook": [
+      "ALG-06"
+    ],
+    "misconceptions": {
+      "ALG-06a": {
+        "answer": "14"
+      },
+      "ALG-06b": {
+        "answer": "23"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]

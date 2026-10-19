@@ -1,0 +1,232 @@
+[
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-001",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 64 numero 6 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "60",
+    "options": [
+      "64",
+      "60",
+      "6"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-002",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 52 numero 5 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "50",
+    "options": [
+      "50",
+      "5",
+      "52"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-003",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 39 numero 3 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "30",
+    "options": [
+      "30",
+      "3",
+      "39"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "3"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-004",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 87 numero 8 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "80",
+    "options": [
+      "8",
+      "87",
+      "80"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-005",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 26 numero 2 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "20",
+    "options": [
+      "20",
+      "26",
+      "2"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "2"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-006",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 71 numero 7 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "70",
+    "options": [
+      "70",
+      "71",
+      "7"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-007",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 45 numero 4 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "40",
+    "options": [
+      "45",
+      "4",
+      "40"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "4"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-008",
+    "goal": "A12.S2.06",
+    "level": "V",
+    "type": "choice",
+    "stem_fi": "Luvussa 93 numero 9 on kymmenten paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "90",
+    "options": [
+      "93",
+      "9",
+      "90"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "9"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-009",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Luvussa 358 numero 3 on satojen paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "300",
+    "options": [
+      "3",
+      "30",
+      "300"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "3"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A12.S2.06-placechoice-20261019-0526-010",
+    "goal": "A12.S2.06",
+    "level": "S",
+    "type": "choice",
+    "stem_fi": "Luvussa 724 numero 7 on satojen paikalla. Mikä on sen arvo? Valitse oikea vastaus.",
+    "answer": "700",
+    "options": [
+      "70",
+      "7",
+      "700"
+    ],
+    "workbook": [
+      "NUM-09"
+    ],
+    "misconceptions": {
+      "NUM-09a": {
+        "answer": "7"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]

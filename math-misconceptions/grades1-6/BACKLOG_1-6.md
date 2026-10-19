@@ -24,3 +24,9 @@ An automated run takes the first row whose status is `todo` or `in progress` and
 | 16 | A36.S4.03 | GEO-01, GEO-02 | choice true/false, or numeric_entry | 16 | 16 | done | Square is a rectangle (GEO-02); a turned shape keeps its name (GEO-01). Without figures, so statements only. |
 | 17 | A36.S4.09 | MEA-01 | numeric_entry with `answer_expr` | 20 | 20 | done | Perimeter and area of rectangles and squares from side lengths. Area items tag MEA-01a (sides added). |
 | 18 | A36.S4.10 | none | numeric_entry with `answer_expr` | 20 | 20 | done | Volume of a rectangular box and a cube; dm³ = litra. |
+| 19 | A36.S2.04 | NUM-10 | choice, wrong options from `buggy_rules.subtraction_answers` | 10 | 10 | done | Question mix (2026-10-19): the three NUM-10 bugs are the three wrong options. |
+| 20 | A12.S2.06 | NUM-09 | choice, 3 options | 10 | 10 | done | Value of a digit; wrong options the digit itself (NUM-09a) and the whole number. |
+| 21 | A12.S2.08 | ALG-06 | choice, 3 options | 10 | 10 | done | `a + b = □ + c`; wrong options ALG-06a (left sum) and ALG-06b (left sum + c). |
+| 22 | A36.S2.01 | NUM-13 | choice, 4 options | 10 | 10 | done | Decimal × 10; wrong options 3,50 (NUM-13a), × 100 and the number unchanged. |
+| 23 | A36.S2.14 | NUM-11 | choice, 4 options | 8 | 8 | done | Price of 0,5 units; wrong option from dividing (NUM-11a). |
+| 24 | A36.S4.09 | MEA-01 | choice, 4 options | 8 | 8 | done | Area of a rectangle; wrong options sides added (MEA-01a), perimeter, double area. |

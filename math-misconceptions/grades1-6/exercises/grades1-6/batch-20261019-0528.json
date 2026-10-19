@@ -1,0 +1,242 @@
+[
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-001",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 4,6 · 10? Valitse oikea vastaus.",
+    "answer": "46",
+    "options": [
+      "4,6",
+      "46",
+      "4,60",
+      "460"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "4,60"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-002",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 2,3 · 10? Valitse oikea vastaus.",
+    "answer": "23",
+    "options": [
+      "230",
+      "2,3",
+      "2,30",
+      "23"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "2,30"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-003",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 7,8 · 10? Valitse oikea vastaus.",
+    "answer": "78",
+    "options": [
+      "7,80",
+      "780",
+      "7,8",
+      "78"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "7,80"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-004",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 1,9 · 10? Valitse oikea vastaus.",
+    "answer": "19",
+    "options": [
+      "1,9",
+      "190",
+      "1,90",
+      "19"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "1,90"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-005",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 5,4 · 10? Valitse oikea vastaus.",
+    "answer": "54",
+    "options": [
+      "540",
+      "5,4",
+      "54",
+      "5,40"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "5,40"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-006",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 6,2 · 10? Valitse oikea vastaus.",
+    "answer": "62",
+    "options": [
+      "62",
+      "6,20",
+      "620",
+      "6,2"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "6,20"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-007",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 8,7 · 10? Valitse oikea vastaus.",
+    "answer": "87",
+    "options": [
+      "870",
+      "87",
+      "8,70",
+      "8,7"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "8,70"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-008",
+    "goal": "A36.S2.01",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Paljonko on 3,1 · 10? Valitse oikea vastaus.",
+    "answer": "31",
+    "options": [
+      "310",
+      "3,10",
+      "31",
+      "3,1"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "3,10"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-009",
+    "goal": "A36.S2.01",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Paljonko on 0,45 · 10? Valitse oikea vastaus.",
+    "answer": "4,5",
+    "options": [
+      "45",
+      "4,5",
+      "0,045",
+      "0,450"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "0,450"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.01-x10choice-20261019-0528-010",
+    "goal": "A36.S2.01",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Paljonko on 0,72 · 10? Valitse oikea vastaus.",
+    "answer": "7,2",
+    "options": [
+      "7,2",
+      "0,720",
+      "0,072",
+      "72"
+    ],
+    "workbook": [
+      "NUM-13"
+    ],
+    "misconceptions": {
+      "NUM-13a": {
+        "answer": "0,720"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]

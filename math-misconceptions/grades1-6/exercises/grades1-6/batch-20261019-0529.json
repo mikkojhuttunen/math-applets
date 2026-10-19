@@ -1,0 +1,194 @@
+[
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-001",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Metri kangasta maksaa 8 €. Paljonko maksaa 0,5 m kangasta? Valitse oikea hinta euroina.",
+    "answer": "4",
+    "options": [
+      "16",
+      "8",
+      "7",
+      "4"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "16"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-002",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Metri nauhaa maksaa 12 €. Paljonko maksaa 0,5 m nauhaa? Valitse oikea hinta euroina.",
+    "answer": "6",
+    "options": [
+      "24",
+      "11",
+      "12",
+      "6"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "24"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-003",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Litra mehua maksaa 6 €. Paljonko maksaa 0,5 l mehua? Valitse oikea hinta euroina.",
+    "answer": "3",
+    "options": [
+      "3",
+      "6",
+      "5",
+      "12"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "12"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-004",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Kilo juustoa maksaa 10 €. Paljonko maksaa 0,5 kg juustoa? Valitse oikea hinta euroina.",
+    "answer": "5",
+    "options": [
+      "9",
+      "10",
+      "5",
+      "20"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "20"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-005",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Metri köyttä maksaa 14 €. Paljonko maksaa 0,5 m köyttä? Valitse oikea hinta euroina.",
+    "answer": "7",
+    "options": [
+      "13",
+      "7",
+      "14",
+      "28"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "28"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-006",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Litra maitoa maksaa 4 €. Paljonko maksaa 0,5 l maitoa? Valitse oikea hinta euroina.",
+    "answer": "2",
+    "options": [
+      "4",
+      "2",
+      "8",
+      "3"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-007",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Kilo kahvia maksaa 16 €. Paljonko maksaa 0,5 kg kahvia? Valitse oikea hinta euroina.",
+    "answer": "8",
+    "options": [
+      "16",
+      "15",
+      "32",
+      "8"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "32"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S2.14-halfchoice-20261019-0529-008",
+    "goal": "A36.S2.14",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Metri lankaa maksaa 20 €. Paljonko maksaa 0,5 m lankaa? Valitse oikea hinta euroina.",
+    "answer": "10",
+    "options": [
+      "40",
+      "19",
+      "20",
+      "10"
+    ],
+    "workbook": [
+      "NUM-11"
+    ],
+    "misconceptions": {
+      "NUM-11a": {
+        "answer": "40"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  }
+]
