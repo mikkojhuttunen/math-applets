@@ -1,0 +1,311 @@
+[
+  {
+    "id": "A36.S4.09-perim-20261019-0400-001",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 6 cm ja 4 cm. Laske suorakulmion pinta-ala. Vastaa neliösenttimetreinä.",
+    "answer": "24",
+    "answer_expr": "6 * 4",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "10",
+        "answer_expr": "6 + 4"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-002",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 7 cm ja 3 cm. Laske suorakulmion pinta-ala. Vastaa neliösenttimetreinä.",
+    "answer": "21",
+    "answer_expr": "7 * 3",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "10",
+        "answer_expr": "7 + 3"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-003",
+    "goal": "A36.S4.09",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 9 cm ja 5 cm. Laske suorakulmion pinta-ala. Vastaa neliösenttimetreinä.",
+    "answer": "45",
+    "answer_expr": "9 * 5",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "14",
+        "answer_expr": "9 + 5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-004",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 6 cm ja 4 cm. Laske suorakulmion piiri. Vastaa senttimetreinä.",
+    "answer": "20",
+    "answer_expr": "2 * 6 + 2 * 4",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-005",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 8 cm ja 5 cm. Laske suorakulmion piiri. Vastaa senttimetreinä.",
+    "answer": "26",
+    "answer_expr": "2 * 8 + 2 * 5",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-006",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion sivut ovat 10 cm ja 3 cm. Laske suorakulmion piiri. Vastaa senttimetreinä.",
+    "answer": "26",
+    "answer_expr": "2 * 10 + 2 * 3",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-007",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön sivu on 5 cm. Laske neliön piiri. Vastaa senttimetreinä.",
+    "answer": "20",
+    "answer_expr": "4 * 5",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-008",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön sivu on 9 cm. Laske neliön piiri. Vastaa senttimetreinä.",
+    "answer": "36",
+    "answer_expr": "4 * 9",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-009",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön sivu on 6 cm. Laske neliön pinta-ala. Vastaa neliösenttimetreinä.",
+    "answer": "36",
+    "answer_expr": "6 * 6",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "12",
+        "answer_expr": "6 + 6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-010",
+    "goal": "A36.S4.09",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön sivu on 8 cm. Laske neliön pinta-ala. Vastaa neliösenttimetreinä.",
+    "answer": "64",
+    "answer_expr": "8 * 8",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "16",
+        "answer_expr": "8 + 8"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-011",
+    "goal": "A36.S4.09",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Huoneen lattia on suorakulmio, jonka sivut ovat 4 m ja 5 m. Montako neliömetriä lattiaa on?",
+    "answer": "20",
+    "answer_expr": "4 * 5",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "9",
+        "answer_expr": "4 + 5"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-012",
+    "goal": "A36.S4.09",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Kasvimaa on suorakulmio, jonka sivut ovat 7 m ja 6 m. Montako neliömetriä kasvimaata on?",
+    "answer": "42",
+    "answer_expr": "7 * 6",
+    "workbook": [
+      "MEA-01"
+    ],
+    "misconceptions": {
+      "MEA-01a": {
+        "answer": "13",
+        "answer_expr": "7 + 6"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-013",
+    "goal": "A36.S4.09",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön piiri on 28 cm. Kuinka pitkä on neliön sivu? Vastaa senttimetreinä.",
+    "answer": "7",
+    "answer_expr": "28 / 4",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-014",
+    "goal": "A36.S4.09",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Neliön piiri on 36 cm. Kuinka pitkä on neliön sivu? Vastaa senttimetreinä.",
+    "answer": "9",
+    "answer_expr": "36 / 4",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-015",
+    "goal": "A36.S4.09",
+    "level": "H",
+    "type": "numeric_entry",
+    "stem_fi": "Valokuva on 15 cm leveä ja 10 cm korkea. Kuvan ympärille liimataan nauha. Montako senttimetriä nauhaa tarvitaan?",
+    "answer": "50",
+    "answer_expr": "2 * 15 + 2 * 10",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-016",
+    "goal": "A36.S4.09",
+    "level": "K",
+    "type": "numeric_entry",
+    "stem_fi": "Kasvimaa on suorakulmio, jonka sivut ovat 12 m ja 8 m. Kasvimaan ympärille rakennetaan aita. Montako metriä aitaa tarvitaan?",
+    "answer": "40",
+    "answer_expr": "2 * 12 + 2 * 8",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-017",
+    "goal": "A36.S4.09",
+    "level": "K",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion piiri on 30 cm ja yksi sivu on 9 cm. Kuinka pitkä on toinen sivu? Vastaa senttimetreinä.",
+    "answer": "6",
+    "answer_expr": "(30 - 2 * 9) / 2",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-018",
+    "goal": "A36.S4.09",
+    "level": "K",
+    "type": "numeric_entry",
+    "stem_fi": "Suorakulmion pinta-ala on 48 cm² ja yksi sivu on 6 cm. Kuinka pitkä on toinen sivu? Vastaa senttimetreinä.",
+    "answer": "8",
+    "answer_expr": "48 / 6",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-019",
+    "goal": "A36.S4.09",
+    "level": "K",
+    "type": "numeric_entry",
+    "stem_fi": "Pihan nurmikko on suorakulmio, jonka sivut ovat 10 m ja 8 m. Nurmikosta 20 neliömetriä kaivetaan kukkapenkiksi. Montako neliömetriä nurmikkoa jää jäljelle?",
+    "answer": "60",
+    "answer_expr": "10 * 8 - 20",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.09-perim-20261019-0400-020",
+    "goal": "A36.S4.09",
+    "level": "K",
+    "type": "numeric_entry",
+    "stem_fi": "Pienen neliön sivu on 3 cm ja ison neliön sivu 6 cm. Montako kertaa niin suuri ison neliön pinta-ala on kuin pienen neliön pinta-ala?",
+    "answer": "4",
+    "answer_expr": "(6 * 6) / (3 * 3)",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  }
+]

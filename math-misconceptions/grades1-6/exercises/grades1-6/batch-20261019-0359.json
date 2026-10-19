@@ -1,0 +1,273 @@
+[
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-001",
+    "goal": "A36.S4.03",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Jokainen neliö on suorakulmio.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "GEO-02"
+    ],
+    "misconceptions": {
+      "GEO-02": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-002",
+    "goal": "A36.S4.03",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Jokainen suorakulmio on neliö.",
+    "answer": "Tarua",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-003",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Neliössä on neljä suoraa kulmaa.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-004",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Suorakulmiossa on neljä suoraa kulmaa.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-005",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Neliön kaikki sivut ovat yhtä pitkiä.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-006",
+    "goal": "A36.S4.03",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Suorakulmion kaikki sivut ovat aina yhtä pitkiä.",
+    "answer": "Tarua",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-007",
+    "goal": "A36.S4.03",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Neliö on nelikulmio.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-008",
+    "goal": "A36.S4.03",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Jokainen nelikulmio on suorakulmio.",
+    "answer": "Tarua",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-009",
+    "goal": "A36.S4.03",
+    "level": "H",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Neliö on yhä neliö, vaikka se käännetään kärjelleen.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "GEO-01"
+    ],
+    "misconceptions": {
+      "GEO-01": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-010",
+    "goal": "A36.S4.03",
+    "level": "T",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Kolmio on yhä kolmio, vaikka sen kärki osoittaa alaspäin.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "GEO-01"
+    ],
+    "misconceptions": {
+      "GEO-01": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-011",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Kolmiossa on kolme sivua ja kolme kulmaa.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-012",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Ympyrässä on kulmia.",
+    "answer": "Tarua",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-013",
+    "goal": "A36.S4.03",
+    "level": "K",
+    "type": "choice",
+    "stem_fi": "Totta vai tarua: Neliö on suorakulmio, jonka kaikki sivut ovat yhtä pitkiä.",
+    "answer": "Totta",
+    "options": [
+      "Totta",
+      "Tarua"
+    ],
+    "workbook": [
+      "GEO-02"
+    ],
+    "misconceptions": {
+      "GEO-02": {
+        "answer": "Tarua"
+      }
+    },
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-014",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Montako sivua kuusikulmiossa on?",
+    "answer": "6",
+    "answer_expr": "6",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-015",
+    "goal": "A36.S4.03",
+    "level": "P",
+    "type": "numeric_entry",
+    "stem_fi": "Montako kulmaa viisikulmiossa on?",
+    "answer": "5",
+    "answer_expr": "5",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  },
+  {
+    "id": "A36.S4.03-shapes-20261019-0359-016",
+    "goal": "A36.S4.03",
+    "level": "T",
+    "type": "numeric_entry",
+    "stem_fi": "Montako suoraa kulmaa neliössä on?",
+    "answer": "4",
+    "answer_expr": "4",
+    "workbook": [],
+    "misconceptions": {},
+    "source": "generated",
+    "status": "draft"
+  }
+]
