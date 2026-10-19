@@ -213,6 +213,54 @@
       }
     },
     {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0525.json",
+      "format": "grades1-6",
+      "items": 10,
+      "by_status": {
+        "draft": 10
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0526.json",
+      "format": "grades1-6",
+      "items": 10,
+      "by_status": {
+        "draft": 10
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0527.json",
+      "format": "grades1-6",
+      "items": 10,
+      "by_status": {
+        "draft": 10
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0528.json",
+      "format": "grades1-6",
+      "items": 10,
+      "by_status": {
+        "draft": 10
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0529.json",
+      "format": "grades1-6",
+      "items": 8,
+      "by_status": {
+        "draft": 8
+      }
+    },
+    {
+      "path": "../math-misconceptions/grades1-6/exercises/grades1-6/batch-20261019-0530.json",
+      "format": "grades1-6",
+      "items": 8,
+      "by_status": {
+        "draft": 8
+      }
+    },
+    {
       "path": "../math-misconceptions/exercises/ALG-01/MC.json",
       "format": "grades7-9",
       "items": 5,
@@ -1201,26 +1249,26 @@
     }
   ],
   "totals": {
-    "items": 1181,
+    "items": 1237,
     "by_status": {
       "approved": 76,
-      "draft": 900,
+      "draft": 956,
       "reviewed": 205
     },
     "by_goal": {
-      "A12.S2.06": 30,
-      "A12.S2.08": 90,
+      "A12.S2.06": 40,
+      "A12.S2.08": 100,
       "A12.S2.09": 60,
       "A12.S2.12": 60,
       "A12.S3.05": 20,
       "A12.S3.06": 20,
-      "A36.S2.01": 20,
-      "A36.S2.04": 40,
+      "A36.S2.01": 30,
+      "A36.S2.04": 50,
       "A36.S2.11": 20,
       "A36.S2.12": 40,
-      "A36.S2.14": 20,
+      "A36.S2.14": 28,
       "A36.S4.03": 16,
-      "A36.S4.09": 40,
+      "A36.S4.09": 48,
       "A36.S4.10": 20,
       "S1.04": 10,
       "S2.01": 75,
@@ -1257,7 +1305,7 @@
       "ALG-03": 10,
       "ALG-04": 20,
       "ALG-05": 15,
-      "ALG-06": 43,
+      "ALG-06": 53,
       "ALG-07": 30,
       "ALG-08": 35,
       "ALG-09": 30,
@@ -1281,7 +1329,7 @@
       "FUN-05": 10,
       "GEO-01": 7,
       "GEO-02": 7,
-      "MEA-01": 27,
+      "MEA-01": 35,
       "NUM-01": 11,
       "NUM-02": 11,
       "NUM-03": 65,
@@ -1290,11 +1338,11 @@
       "NUM-06": 10,
       "NUM-07": 25,
       "NUM-08": 15,
-      "NUM-09": 30,
-      "NUM-10": 40,
-      "NUM-11": 20,
+      "NUM-09": 40,
+      "NUM-10": 50,
+      "NUM-11": 28,
       "NUM-12": 20,
-      "NUM-13": 20,
+      "NUM-13": 30,
       "PRB-01": 10,
       "PRB-02": 15,
       "PRO-01": 10,
